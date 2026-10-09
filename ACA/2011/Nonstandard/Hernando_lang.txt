@@ -1,0 +1,27 @@
+A natural language for implementing algebraically expert systems
+
+Antonio Hernando, Roberto Maestre Martínez, Jesús Bobadilla, Eugenio
+Roanes-Lozano
+
+Key words: Expert Systems, Groebner basis, Knowledge representation
+
+According to previous mathematical results, expert systems can be quickly
+and easily implemented on specialized mathematical software (`Computer
+Algebra Systems').  These mathematical results provide two equivalent
+different approaches to implement algebraically expert systems: one based on
+propositional Boolean logic and another based on the `concept-attribute-value'
+representation paradigm.  Both approaches are equivalent in the sense that
+every expert system implemented through one algebraic approach can be also
+implemented on the other algebraic approach.
+
+However, the performance of these algebraic approaches depend on the specific
+expert system, and therefore, the  expert system must be implemented in both
+algebraic approaches in order to compare their performances.  In this paper we
+have designed a natural language to implement algebraically expert systems
+which provides these three main advantages: we can implement directly any
+expert system in both algebraic approach since our language is independent
+of the algebraic approach used; we can use any computer algebra system
+since our language is independent of the computer algebra system used;
+and we do not need to be acquainted with specialized abstract mathematical
+concepts like Groebner basis or normal forms since our language is natural
+and does not make use of these concepts.

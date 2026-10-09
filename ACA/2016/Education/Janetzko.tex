@@ -1,0 +1,131 @@
+%    Latex Template for ACA 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS BELOW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{url}
+
+
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS ABOVE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\vspace{-0.8cm}
+\begin{flushleft}
+\Large \textbf{\noindent
+%%% PLEASE INSERT THE TITLE OF YOUR TALK HERE %%%%%%%
+The GUI CATO -- how natural usage of CAS with CATO modified the mathematical lectures and the interface itself}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5cm}
+\normalsize
+ %%%%%%             NAMES OF AUTHORS         %%%%%%
+ %%%%%% NAME OF SPEAKER SHOULD BE UNDERLINED %%%%%%%%%
+\normalsize{
+ %%%%%% FOR EXAMPLE %%%%%
+ H.-D. Janetzko$^1$, 
+ %%%%%%%%%%%%%%%%%%%%%%%%
+} \\
+\vspace{5mm}
+\textit{\footnotesize
+ %%%%%% AFFILIATION OF AUTHORS %%%%%%
+$^1$ Mathematikbüro Janetzko, Lübeck, Germany, formerly HTWG Konstanz, janetzko@mathematikbuero.de
+\\
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+\end{flushleft}
+
+CATO is a German user interface for different computer algebra systems written in Java. The author develops CATO as a response to the significant difficulties faced by those engineers and students who only sporadically use computer algebra systems. The usage of CAS in mathematical lectures should be an integral part of mathematical instructions. However, difficulties arise for students when lecturers employ CAS only once or twice a week in their lecture. In the author's experience, the usage of CAS is often perceived by the students as an unnecessary further burden. Using CATO, the general user interface for CAS, there are no obstacles for the students, also for the weaker. The author describes some experiences using CATO linked with Mathematica, Maxima or the mathematical toolbox of MATLAB.
+\subsection*{Previous approaches and considerations}
+ There are many reasons for the usage of a computer algebra system in teaching mathematics (see, for example [1] or general [3]. But the usage of CAS in a mathematical lecture can distract from the mathematics itself, for example [4]. 
+
+  The demand for better designs of user interfaces for computer algebra systems is almost as old as the systems themselves. Kajler has described and developed his ideas for a perfect user interface in various works and elaborated these in further works (for example [5]).
+Kajler has postulated that well-designed computer algebra interfaces should afford intuitive access. As such, they should enable the entry of commands with more than one parameter by a two-dimensional layout. This prevents syntactic and structural errors. In addition, all templates and masks should follow the convention of operating from left to right.
+Intuitive interfaces should also apply conventional mathematical notations, and decouple the surface from the computer algebra systems. The interface should be serviced independently, and regularly developed and updated. Ideally, it should understand a range of computer algebra systems.
+
+The author himself has used various computer algebra systems in his mathematics courses at the University of Applied Sciences (HTWG) in Konstanz, beginning with Maple, followed by Mathematica, and finally Maxima. His experiences of students' occasional usage of CAS in mathematics courses are complex; he has observed that the experience is not necessarily positive for all students. Only some students are fascinated by the usage of a CAS, and independently explore its potential. A larger proportion of students accepts CAS, but learns only those commands it considers necessary to prepare for upcoming examinations. Enough students treat the learning of the vocabulary, syntax and grammar required for the usage of CAS as an unwelcome burden, and consequently gives up on mathematics. The majority, therefore, never see the opportunities provided by computer algebra as a mathematical aid, [2].
+
+The author wants to balance the difficulties of learning to use a computer algebra system with the benefits of using it. He has developed an interface to use a computer algebra system without distraction from mathematics, called the Computer Algebra Taschenrechner (Calculator) Oberfläche (surface) or CATO for short. In his intention, students should be able to successfully use CATO, even if their knowledge of mathematics was limited. 
+\subsection*{The usage of CATO}
+The author uses CATO in the courses Mathematics One and Two in the Bachelor of Electrical Information Technology degree program. The University of Applied Sciences does not offer a general ``Introduction to Computer Algebra'' course. Consequently, the author introduces students to the use of CATO in his first lecture, after describing what a computer algebra system is, and why it makes sense to use it. His students use CATO in the computer lab during the first week of lectures to calculate three examples: differentiating, solving an equation, and plot a function. Once they have done this, they grasp the concept and the structure of CATO, and are able to use CATO without explicitly learning it (for example Janetzko 2015). The students (including the weaker ones) are confident that CAS with CATO is no further obstacle to pass the exam. They believe the structures of CATO create no additional difficulties to use CAS.
+
+Launching CATO, the student sees a surface like a graphical pocket calculator with an input and an output window on the left hand. Below them there are several menus. All commands can be selected via packages and menus. The commands are grouped in packages or sub-packages. The packages group related commands together: 
+The menu with all packages is located at the bottom left. If one package is selected, the commands of the selected package will be loaded in the menu right next to it. For example, if the student selects the package ``statistics'' on the highest hierarchy level, several statistic related subpackages will be shown in the menu right next to the first one. After selecting a subpackage like ``normal distribution'' or ``descriptive statistics'', the commands of this one will be loaded in the third menu at the bottom right next to the second menu.
+
+After selecting a command with more than one parameter, the student gets a new input window with one row for every parameter. Each multi-parameter command has its own input window. 
+
+For example, the window of the command ``n-th derivative'' has three input lines: ``function'', ``variable'', ``n =''. The order of the input line is always independent of the used CAS. CATO itself sorts the input according to the respective CAS. (Additional a short description of the command is a part of this extra window.)
+\subsection*{Other concepts realized in CATO}
+In writing CATO, the author has developed, adopted, and implemented many ideas and concepts for ease-of-use. Some ideas can be found in the papers of Kajler. As the author's primary aim was to allow casual use of computer algebra in his lectures, he has also integrated changes based upon his teaching experience with Maple, Mathematica, and Maxima. Additional modifications have been the result of student feedback. 
+
+When the author developed the basic concepts of CATO, he envisioned some commands being contained in more than one package. For example, the command ``definition of a vector'' is contained in the package ``definitions'' and in the package ``linear algebra''. Some years ago, CATO was enabled to collect the last 20, the last 50, or the last 100 commands residing in a new package. (There was no modification to the internal structures of CATO needed, because of the possibility of one command being member in more the one package.) The author believed it would be a simplification to repeat the same command. But the students meant it was too complicated. So the author extended CATO with the menu and package ``chronicle'', it collects all command during a session. The menu ``chronicle'' is a part of CATO since the change to version 1.2.
+
+Later, the students wanted to save, export and later to import (with a new name) the package ``chronicle'' at the exam. Their desire was to win some seconds at the exam having a list of all previously used commands.
+
+Like a CAS, CATO has a log containing all command executions and corresponding results. In some cases, students wanted to have more extensive descriptions of the commands in the detailed input window and the log. For commands with more than one parameter, the description in the log and in the input window is usually more extensive than its name in the package. In contrast to normal CAS, in CATO there is a difference in the usage -- selection -- and the application -- input of the parameters -- of a command. The author could satisfy all requests for better or more extensive descriptions without modifying the internal structures of CATO and furthermore without modifying the command in the package menus.
+\subsection*{Modification in the lessons}
+The exam in the computer lab consists of two parts: Part one is without any aid. The students receive it at first and when one of them believe, he has solved all tasks, he submits this part. Part two is with aid (naturally with documents), the student can and should use CATO with one CAS at the PC. Of course, there is no connection to the Internet.
+
+Using CATO, teaching has been modified in the desired way. The author can use CAS for more and more illustrative examples, often examples helping to answer some comprehension questions. Furthermore, very long calculations can be shorted to the crucial parts. Priorities are newly settled as shown in the following old exercise:
+
+\textit{
+We consider a bottling plant for milk. The milk in the bottles can described by normal distribution with $\mu =1001\;ml$ and $\sigma = 1.3\;ml$. Describe the probability to get a bottle with less than $998\;ml$!}
+
+Without CAS you need the quantil of the N(0,1) distribution from a table and the transformation rule of Gauß. But applying CAS the solution is only one (correct) command. Consequently, we need a new exercise:
+
+\textit{
+We can describe the bottling plant for milk in the following way: 5 \% of the bottles content less than $997.5\;ml$ and 2.8 \% content more than $1002.3\;ml$. Determine $\mu$ and $\sigma$! 
+}
+
+To solve this new kind of exercises, students need a deeper understanding of quantiles and can solve more realistic exercises.
+
+\subsection*{Some changes in students' behaviour}
+After the eighth to tenth week of lecture, most students explored themselves independently the possibilities of CATO connected with a CAS. This never occurred  previously by using a CAS without CATO. The author was able to note the fact; the students questioned the command set of CATO or the cryptic results of the CAS.
+
+The author has of course always questioned in his lectures the potential and the limits of CA by appropriate examples. Only since using CATO there were reactions of students. 
+
+Sometimes there are moments in which the teacher must presuppose something and some students have knowledge gaps. The reaction of these students was: ``CATO schafft es schon!'' (``CATO makes it!''). They are apparently confident that such issues would be assessed only in the exam part with aids and they could bridge their knowledge gaps by CATO commands.
+
+By allowing CATO with a CAS in the exam part with aids, students were able to succeed the exam in Mathematics II despite of significant gaps in Mathematics I. Whether this is in general useful, you have to consider yourself in dependence of the lecture goals.
+\subsection*{Conclusions}
+In the author's experience, it makes sense to teach mathematics integrating occasional usage of computer algebra systems. The author can only reflect his own experience and describe similar experiences of other teachers, who also used CATO in connection with a CAS. There were no evaluations on student achievement using CATO and a CAS compared with other students for various reasons. The author was the only teacher in this field, who allowed CAS as an aid. The author was an external lecturer. Therefore, there was possibility for parallel lectures, one with CATO and CAS, even without CATO and CAs. Additionally, it would be inappropriate to compare with the lectures before CATO existed, since the usage of CAS highly increased and the content of the lecture changed accordingly. There remains only the usual lecture evaluations in comparison to evaluations of lectures organized by other faculty members, but obviously there are too many other influencing factors.
+
+Currently there are approximately 550 commands for Maxima, 550 commands for Mathematica (version 4.0 or higher), 450 commands for the Mathematical toolbox of MATLAB, 300 commands for Maple (version 9.5 or higher), 350 commands for MuPAD 3, 250 commands for Yacas and 150 commands for MATLAB. In addition, there are more than 50 CATO internal commands. Currently, the German CATO is translated to English and French.
+Free trial versions of CATO can be downloaded from the author's website at any time, http://www.computeralgebra.biz (also some links or references to articles about CATO).
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{00}
+\addcontentsline{toc}{chapter}{References}
+\setlength{\itemsep}{-1mm}
+\footnotesize
+\bibitem{BB} B. Barzel,  \textit{Establishing conditions for Computeralgebra as an additional value in mathematics teaching}, in \textit{The 11th International Conference on Technology in Mathematics}, Conference Proceedings, University of Bari, pp. 71- 76 (2013).
+\bibitem{HR} H. P. Hornæs and O. Røyrvik  \textit{Aptitude, Gender, and Computer Algebra Systems}, 
+ Journal of Engineering Education,   Volume 89, Issue 3, pp. 323-330 (2000) 
+\bibitem{NK} N. Kajler,  \textit{Computer-human interaction in symbolic computation}, Springer (1998).
+\bibitem{JL} J. Lagrange, \textit{Techniques and Concepts in pre-calculus Using CAS: A Two Year Classroom Experiment with the TI-92}, in \textit{International Journal of Computer Algebra in Mathematical Education}, vol 6, no 2, pp 143-165, (1999).
+\bibitem{SCK} K. Stacey, K. H. Chick and M. Kendal, M. \textit{The Future of the Teaching and Learning of Algebra: The 12th ICMI Study},  Springer, (2004).
+%\bibitem{KR} B. Keller and I. Reiten, \textit{Cluster-titled algebras are Gorenstein and stably Calabi-Yau}, Adv. Math. \textbf{211}, 1, pp. 123-151 (2007).
+%\bibitem{WK} S. Washito and K. Karabashi, \textit{Use This Template}, in \textit{Proceedings of the 5th
+%International Conference on Photon Interaction} (ICPI-2012), San Francisco, USA, ed. A. Chen, pp. 22-24 (2012).
+%\bibitem{ABS} A.B. Smith, \textit{Describing the style for the AMMCS-CAIMS-2015 book of abstracts}, in C.D. Science (ed.), General Book of Wisdom, 2\textsuperscript{nd} ed., University of Queensland, pp. 23-42 (2011).
+\end{thebibliography}
+\normalsize
+\end{document} 

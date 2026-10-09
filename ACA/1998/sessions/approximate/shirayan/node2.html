@@ -1,0 +1,268 @@
+
+<H1><A NAME="SECTION00020000000000000000"><tex2html_anchor_invisible_mark></A><A NAME="aas"><tex2html_anchor_mark></A><BR>
+Automatic algorithm stabilization
+</H1>
+We describe the techniques for automatic algorithm stabilization
+for the following class of algorithms:
+<DL COMPACT>
+<DT><#2884#>1.<#2884#>
+<DD>The input data, intermediate data and output data are from the 
+polynomial ring <tex2html_verbatim_mark>#math2#<tex2html_image_mark>#tex2html_wrap_inline1121#, where <I>R</I> is a subfield of the real numbers.
+<DT><#2885#>2.<#2885#>
+<DD><A NAME="enum:operations"><tex2html_anchor_mark></A> Operations on data are:  addition, subtraction, multiplication, 
+and polynomial division with remainder.
+<DT><#2886#>3.<#2886#>
+<DD>Predicates on data have <#96#><I>zero discontinuity</I><#96#>.
+</DL>
+<P>
+Here polynomial division with remainder means computing the remainder 
+of a <#98#><I>dividend</I><#98#> polynomial modulo a <#99#><I>divisor</I><#99#> polynomial as well
+as computing the <#100#><I>quotient</I><#100#> polynomial which gives that remainder.  
+In one variable this is accomplished by the usual polynomial division 
+algorithm.  
+The only division between coefficients in the field <I>R</I> are divisions
+of the coefficients of the dividend polynomial by the coefficient of 
+the lead term -- i.e. the non-zero term of highest degree -- of the 
+divisor polynomial.  In more than one variable the notion of 
+<#101#><I>term order</I><#101#> is required to obtain suitable lead terms. 
+
+<P>
+Next let us explain the discontinuity set of a predicate.
+Predicates map polynomials to the set of two elements: 
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math3#
+
+<tex2html_image_mark>#displaymath1061#
+</DIV><BR CLEAR="ALL">
+<P></P> 
+A predicate <I>p</I> is discontinuous at <tex2html_verbatim_mark>#math4#<tex2html_image_mark>#tex2html_wrap_inline1129# if
+there exists a sequence <tex2html_image_mark>#tex2html_wrap_inline1131# in <tex2html_verbatim_mark>#math5#<tex2html_image_mark>#tex2html_wrap_inline1133# where <tex2html_verbatim_mark>#math6#<tex2html_image_mark>#tex2html_wrap_inline1135#but <tex2html_verbatim_mark>#math7#<tex2html_image_mark>#tex2html_wrap_inline1137# (i.e. for any <I>M</I> there is <tex2html_image_mark>#tex2html_wrap_inline1141#s.t. <tex2html_verbatim_mark>#math8#<tex2html_image_mark>#tex2html_wrap_inline1143#). Here <tex2html_verbatim_mark>#math9#<tex2html_image_mark>#tex2html_wrap_inline1145# means that
+<I>f</I><SUB><I>i</I></SUB> converges <#105#><I>coefficientwise</I><#105#> to <I>f</I>, where convergence in
+the coefficient field <I>R</I> is defined from the usual topology in the real
+numbers. 
+A predicate is said to have <#106#><I>zero discontinuity</I><#106#> if the only 
+discontinuous point of the predicate is <#107#><I>zero</I><#107#>, i.e. the polynomial 
+all of whose coefficients are 0, or the predicate has no discontinuous
+points -- i.e. it is continuous.
+
+<P>
+Let us call the class of algorithms which satisfy the above three 
+conditions, <#108#><I>algebraic algorithms with zero discontinuity</I><#108#>. 
+Many algorithms in computational algebra are (or may be transformed 
+into) algebraic algorithms with zero discontinuity. 
+For example, the predicate which tests if ``<I>X</I> = 3'' may be 
+transformed into two steps, the first being the operation 
+(assignment to a new variable) ``<I>Y</I> = <I>X</I> - 3'' and the second being 
+the predicate which tests if ``<I>Y</I> = 0''.  This latter predicate
+has zero discontinuity.
+
+<P>
+For simplicity and clarity of description we have chosen an extremely 
+limited set of permissible operations at (<A HREF=<tex2html_cr_mark>#enum:operations#109><tex2html_cr_mark></A>).
+Nevertheless this still applies to a wide class of algorithms.
+We could permit other functions such as square root,
+differentiation, etc, and this is discussed in [#SS#<tex2html_cite_mark>#1##<tex2html_cite_mark>#].
+
+<P>
+Let <tex2html_image_mark>#tex2html_wrap_inline1161# be an algebraic algorithm with zero discontinuity.
+If <tex2html_image_mark>#tex2html_wrap_inline1163# actually has a predicate with a discontinuity,
+<tex2html_image_mark>#tex2html_wrap_inline1165# may be unstable with respect to limited precision
+computation.  For example, let <tex2html_image_mark>#tex2html_wrap_inline1167# be the following algorithm:
+
+<P>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER">Initialize:</TD>
+<TD ALIGN="CENTER">(<I>X</I>)</TD>
+</TR>
+<TR><TD ALIGN="CENTER">step_1:</TD>
+<TD ALIGN="CENTER"><I>Y</I> = 3<I>X</I>-1</TD>
+</TR>
+<TR><TD ALIGN="CENTER">step_2:</TD>
+<TD ALIGN="CENTER">goto step_4 if <tex2html_image_mark>#tex2html_wrap_inline1173#</TD>
+</TR>
+<TR><TD ALIGN="CENTER">step_3:</TD>
+<TD ALIGN="CENTER">stop (0)</TD>
+</TR>
+<TR><TD ALIGN="CENTER">step_4:</TD>
+<TD ALIGN="CENTER">stop (1)</TD>
+</TR>
+</TABLE></DIV>
+<P>
+Namely, given an input <I>X</I>, <tex2html_image_mark>#tex2html_wrap_inline1181# returns 1 if <tex2html_verbatim_mark>#math10#<tex2html_image_mark>#tex2html_wrap_inline1185#, 
+and 0 otherwise.
+Consider the input <I>X</I>=1/3. <tex2html_verbatim_mark>#math11#<tex2html_image_mark>#tex2html_wrap_inline1191# returns 1. However,
+with <#119#><I>any high</I><#119#> precision <tex2html_image_mark>#tex2html_wrap_inline1195#, floating point approximation <tex2html_image_mark>#tex2html_wrap_inline1197#of 1/3 is <tex2html_verbatim_mark>#math12#<tex2html_image_mark>#tex2html_wrap_inline1201#, and hence 
+<tex2html_verbatim_mark>#math13#<tex2html_image_mark>#tex2html_wrap_inline1203# always returns 0. This is unstable behavior:
+<tex2html_verbatim_mark>#math14#<tex2html_image_mark>#tex2html_wrap_inline1207# but <tex2html_verbatim_mark>#math15#<tex2html_image_mark>#tex2html_wrap_inline1209#.
+Note that <tex2html_image_mark>#tex2html_wrap_inline1211# has the predicate ``if <tex2html_image_mark>#tex2html_wrap_inline1213#'' whose discontinuity
+set is <tex2html_image_mark>#tex2html_wrap_inline1215# and is an algebraic algorithm with zero discontinuity.
+The discontinuity causes the algorithm to be unstable.<A NAME="tex2html5"
+ HREF="footnode.html#foot720"><SUP>4</SUP></A>
+
+<P>
+Automatic algorithm stabilization is done by interpreting an
+algorithm with modified semantics. The syntax of the algorithm is
+unchanged. Under the modified semantics the original coefficients
+are replaced by coefficient-pairs.  Think of the new coefficient-pairs 
+as intervals where the first component specifies the <#128#><I>center</I><#128#> of 
+the interval and the second component -- also called the error bound --
+specifies the <#129#><I>radius</I><#129#> of the interval<A NAME="tex2html6"
+ HREF="footnode.html#foot130"><SUP>5</SUP></A>.
+We shall refer to the coefficient-pairs as <#131#><I>interval-coefficients</I><#131#>.
+Where the original algorithm specifies arithmetic operations on
+coefficients they are extended as interval operations to
+the new interval-coefficients.  Immediately preceding evaluating 
+predicates, <#132#><I>zero rewriting</I><#132#> is done. Zero rewriting changes 
+certain interval-coefficients and leaves others unchanged.  If 0 
+lies within the interval delineated by an interval-coefficient, the 
+interval-coefficient may be rewritten or changed to the 
+interval-coefficient with center 0 and radius 0.  Once zero 
+rewriting is done, the predicate is then 
+evaluated on the first component or center of the interval-coefficient.
+The key property of zero rewriting is that it preserves convergence of 
+a sequence of interval-coefficients and if the sequence converges to 
+zero, then rewriting causes the sequence to <#133#><I>reach zero after a 
+finite number of steps</I><#133#>. Hence the predicate will actually be evaluated
+at the discontinuity
+point zero. Without rewriting, the predicate may never get evaluated
+at the discontinuity point, and since it is discontinuous there, 
+the algorithm may never have the original behavior<A NAME="tex2html7"
+ HREF="footnode.html#foot721"><SUP>6</SUP></A>.
+
+<P>
+Let us summarize the techniques for automatic algorithm stabilization.
+Given <tex2html_image_mark>#tex2html_wrap_inline1229#, an algebraic algorithm with zero discontinuity,
+let <tex2html_verbatim_mark>#math17#<tex2html_image_mark>#tex2html_wrap_inline1231# be the stabilized algorithm for <tex2html_image_mark>#tex2html_wrap_inline1233#.
+<tex2html_verbatim_mark>#math18#<tex2html_image_mark>#tex2html_wrap_inline1235# has the following features:
+
+<P>
+<DL>
+<DT><STRONG><#2954#>Interval Domain<#2954#></STRONG>
+<DD>The domain is a set of polynomials having interval-coefficients as 
+coefficients.  An interval-coefficient is <tex2html_verbatim_mark>#math19#<tex2html_image_mark>#tex2html_wrap_inline1237#,
+where <tex2html_image_mark>#tex2html_wrap_inline1239# and <tex2html_image_mark>#tex2html_wrap_inline1241# is a non-negative real number.
+<tex2html_verbatim_mark>#math20#<tex2html_image_mark>#tex2html_wrap_inline1243# should be thought of as
+<tex2html_verbatim_mark>#math21#<tex2html_image_mark>#tex2html_wrap_inline1245#.
+<DT><STRONG><#2955#>Interval Arithmetic<#2955#></STRONG>
+<DD>Employ interval arithmetic (see [#AH#<tex2html_cite_mark>#1##<tex2html_cite_mark>#])
+for addition, subtraction, multiplication, and division between 
+interval-coefficients.
+For binary operation <tex2html_verbatim_mark>#math22#<tex2html_image_mark>#tex2html_wrap_inline1247#, 
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math23#
+<tex2html_image_mark>#displaymath1062#
+</DIV><BR CLEAR="ALL">
+<P></P>
+where <tex2html_verbatim_mark>#math24#<tex2html_image_mark>#tex2html_wrap_inline1249# is defined so as to satisfy:
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math25#
+
+<tex2html_image_mark>#displaymath1063#
+</DIV><BR CLEAR="ALL">
+<P></P>
+and
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math26#
+
+<tex2html_image_mark>#displaymath1064#
+</DIV><BR CLEAR="ALL">
+<P></P>
+<DT><STRONG><#2956#>Zero Rewriting<#2956#></STRONG>
+<DD>Immediately preceding evaluating every predicate which has a discontinuity
+at zero, do zero rewriting: 
+
+<P>
+For each interval-coefficient <tex2html_verbatim_mark>#math27#<tex2html_image_mark>#tex2html_wrap_inline1251#, 
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math28#
+
+<tex2html_image_mark>#displaymath1065#
+</DIV><BR CLEAR="ALL">
+<P></P></DL>
+<P>
+<tex2html_verbatim_mark>#math29#<tex2html_image_mark>#tex2html_wrap_inline1253# accepts interval polynomials as input and 
+disseminates interval polynomials as output where <#147#><I>interval
+polynomials</I><#147#> are polynomial with interval-coefficient coefficients.
+Usually the original input <tex2html_verbatim_mark>#math30#<tex2html_image_mark>#tex2html_wrap_inline1255#<A NAME="tex2html8"
+ HREF="footnode.html#foot148"><SUP>7</SUP></A>
+for <tex2html_image_mark>#tex2html_wrap_inline1259# 
+is approximated by a sequence of interval polynomials <tex2html_verbatim_mark>#math32#<tex2html_image_mark>#tex2html_wrap_inline1261#.
+More specifically, let <I>f</I> be 
+<tex2html_verbatim_mark>#math33#<tex2html_image_mark>#tex2html_wrap_inline1265#.
+Then <I>Int</I>(<I>f</I>)<SUB><I>j</I></SUB> is defined to be 
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math34#
+
+<tex2html_image_mark>#displaymath1066#
+</DIV><BR CLEAR="ALL">
+<P></P> where 
+<tex2html_verbatim_mark>#math35#<tex2html_image_mark>#tex2html_wrap_inline1269#for each <I>j</I> and <tex2html_verbatim_mark>#math36#<tex2html_image_mark>#tex2html_wrap_inline1273# as 
+<tex2html_verbatim_mark>#math37#<tex2html_image_mark>#tex2html_wrap_inline1275# for all <tex2html_verbatim_mark>#math38#<tex2html_image_mark>#tex2html_wrap_inline1277#. 
+Let us call such <tex2html_verbatim_mark>#math39#<tex2html_image_mark>#tex2html_wrap_inline1279#, an <#162#><I>approximation sequence</I><#162#> for <I>f</I>.
+In this case, we often write <tex2html_verbatim_mark>#math40#<tex2html_image_mark>#tex2html_wrap_inline1283#.
+For each <I>j</I>, we invoke <tex2html_verbatim_mark>#math41#<tex2html_image_mark>#tex2html_wrap_inline1287# on <I>Int</I>(<I>f</I>)<SUB><I>j</I></SUB> 
+and obtain the output <tex2html_verbatim_mark>#math42#<tex2html_image_mark>#tex2html_wrap_inline1291#. 
+
+<P>
+The following theorem states a property of <tex2html_verbatim_mark>#math43#<tex2html_image_mark>#tex2html_wrap_inline1293#.
+<P><DIV><B>Theorem  1</B> (Coefficientwise convergence, [#SS#<tex2html_cite_mark>#1##<tex2html_cite_mark>#])  &nbsp; 
+
+<A NAME="th:coeff-conv"><tex2html_anchor_mark></A>Suppose that <tex2html_image_mark>#tex2html_wrap_inline1295# terminates normally 
+when evaluated with input <tex2html_verbatim_mark>#math44#<tex2html_image_mark>#tex2html_wrap_inline1297#.
+Suppose that we have a sequence of polynomials with interval-coefficient
+<tex2html_verbatim_mark>#math45#<tex2html_image_mark>#tex2html_wrap_inline1299# where <tex2html_verbatim_mark>#math46#<tex2html_image_mark>#tex2html_wrap_inline1301#.
+Then, there exists <I>n</I> such that for <tex2html_image_mark>#tex2html_wrap_inline1305# 
+<tex2html_verbatim_mark>#math47#<tex2html_image_mark>#tex2html_wrap_inline1307# terminates normally on input <I>Int</I>(<I>f</I>)<SUB><I>j</I></SUB>, and
+we have:
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math48#
+
+<tex2html_image_mark>#displaymath1067#
+</DIV><BR CLEAR="ALL">
+<P></P></DIV><P></P>
+
+<P>
+In many cases, however, 
+coefficientwise convergence is not sufficient for the 
+purpose of obtaining the correct ``shape''<A NAME="tex2html9"
+ HREF="footnode.html#foot169"><SUP>8</SUP></A>
+of an algebraic object.
+<#170#><I>Final zero rewriting</I><#170#> insures we will reach the correct shape
+for the output after a finite number of approximations.
+Namely, we do zero rewriting for each interval-coefficient of the output 
+<tex2html_verbatim_mark>#math49#<tex2html_image_mark>#tex2html_wrap_inline1311#. We then take 
+the first component of each interval-coefficient of the rewritten output
+to coerce it back 
+to the original real coefficient polynomials.
+We refer to the algorithm -- <tex2html_verbatim_mark>#math50#<tex2html_image_mark>#tex2html_wrap_inline1313# with final zero rewriting and 
+coercing the output back to the <I>R</I> polynomials -- as <tex2html_verbatim_mark>#math51#<tex2html_image_mark>#tex2html_wrap_inline1317#.
+
+<P>
+The effect of the final zero rewriting is that it
+converts coefficientwise convergence into a stronger convergence
+called <#171#><I>supportwise convergence</I><#171#>.  The <#172#><I>support</I><#172#> of a polynomial 
+<tex2html_verbatim_mark>#math52#<tex2html_image_mark>#tex2html_wrap_inline1319#is the set of power products 
+<tex2html_verbatim_mark>#math53#<tex2html_image_mark>#tex2html_wrap_inline1321#,
+denoted <I>Supp</I>(<I>f</I>). Similarly, for an interval polynomial <I>F</I>,
+<I>Supp</I>(<I>F</I>) is the set of power products of <I>F</I>having interval-coefficient not equal to [0,0]. 
+<#180#><I>Supportwise convergence</I><#180#> is coefficientwise convergence with 
+the added feature that coefficients which converge to zero must do 
+so in a finite number of steps.  Equivalently, <tex2html_verbatim_mark>#math54#<tex2html_image_mark>#tex2html_wrap_inline1333#<#182#><I>supportwise</I><#182#> if <tex2html_verbatim_mark>#math55#<tex2html_image_mark>#tex2html_wrap_inline1335# <#184#><I>coefficientwise</I><#184#> and
+there exists <I>N</I> such that for <tex2html_image_mark>#tex2html_wrap_inline1339#:  <tex2html_verbatim_mark>#math56#<I>Supp</I>(<I>f</I><SUB><I>j</I></SUB>) = <I>Supp</I>(<I>f</I>).  With
+<#185#><I>supportwise convergence</I><#185#> the ``<I>f</I><SUB><I>j</I></SUB>'s'' take the shape of ``<I>f</I>''
+after a finite number of steps.
+
+<P>
+Here is a stability property of <tex2html_verbatim_mark>#math57#<tex2html_image_mark>#tex2html_wrap_inline1347#.<P><DIV><B>Theorem  2</B> (Supportwise convergence, [#SS#<tex2html_cite_mark>#1##<tex2html_cite_mark>#])  &nbsp; 
+
+<A NAME="th:support-conv"><tex2html_anchor_mark></A>Under the hypotheses of Theorem~<A HREF=<tex2html_cr_mark>#th:coeff-conv#189><tex2html_cr_mark></A>,
+there exists <I>n</I> such that for <tex2html_image_mark>#tex2html_wrap_inline1351# 
+<tex2html_verbatim_mark>#math58#<tex2html_image_mark>#tex2html_wrap_inline1353# terminates normally on input <I>Int</I>(<I>f</I>)<SUB><I>j</I></SUB>and we have:
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math59#
+
+<tex2html_image_mark>#displaymath1068#
+</DIV><BR CLEAR="ALL">
+<P></P></DIV><P></P>
+From now on we emphasize <tex2html_verbatim_mark>#math60#<tex2html_image_mark>#tex2html_wrap_inline1357# rather than <tex2html_verbatim_mark>#math61#<tex2html_image_mark>#tex2html_wrap_inline1359#.

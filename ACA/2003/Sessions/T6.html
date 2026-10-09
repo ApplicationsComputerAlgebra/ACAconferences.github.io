@@ -1,0 +1,326 @@
+<html><head><title>ACA 2003 T6: Interval Computation</title></head>
+
+<body>
+
+
+<h1> T6: Interval Computation</h1>
+
+ACA 2003:  
+<a href="http://math.unm.edu/ACA/2003/2003.html">Home</a>,
+<a href="http://math.unm.edu/ACA/2003/Sessions.html">Sessions</a> 
+
+
+<h2>Organizers</h2>
+<ul>
+
+<li><a href="mailto:nedialk@mcmaster.ca">Ned Nedialkov</a>
+       (McMaster University, Canada)
+
+</li><li> <a href="mailto:George.Corliss@marquette.edu">George Corliss</a>
+	(Marquette University, USA)
+
+
+</li></ul>
+
+
+<h2>Overview</h2>
+<ul>
+
+<p>
+Interval numerical methods compute bounds that contain mathematically correct results. These methods take into
+account round off and truncation errors, and can also include modelling errors. The bounds produced by an interval
+method can be used, for example, to prove a theorem, to ensure that critical calculations are reliable, or to verify the
+accuracy of a floating-point computation.
+</p>
+
+<p>
+Symbolic and interval validated techniques are natural allies. Symbolic techniques attempt to compute exact
+answers. When exact answers are not available, a symbolic environment must resort to numerical techniques. It
+would seem that the guarantees of interval techniques are more philosophically satisfying than standard
+approximate techniques. Further, interval techniques tend to draw on the tools of symbolic computations more
+heavily than approximate techniques.
+</p>
+
+<p>
+This session attempts to build bridges between symbolic and interval researchers. We provide a survey of interval
+techniques and present some recent developments in interval computing we think may be useful in the context of
+symbolic algorithms. We also present some interval research challenges for which symbolic techniques may provide
+answers.
+</p>
+</ul>
+
+<h2>Talks/Abstracts</h2>
+<ul>
+
+<li><h3>Introduction to Interval Numerical Methods</h3>
+    <a href="mailto:nedialk@mcmaster.ca">Ned Nedialkov</a> (McMaster University, Hamilton, Ontario, Canada)<br> 
+    <p>
+    <strong>Abstract</strong>: 
+Interval methods produce bounds that are guaranteed to
+contain mathematically correct results.  Such bounds enclose
+truncation, rounding, and often modeling errors. Simply replacing
+reals by intervals in a point numerical method usually leads to a
+``naive'' interval method, which computes bounds that are
+generally too wide to be useful. To compute sufficiently tight
+bounds, an interval method normally involves specific ``interval''
+machinery. This talk presents interval arithmetic and techniques
+commonly used in interval methods.
+
+</p><p>
+We discuss interval arithmetic and some of its properties.  Bounding
+ranges of functions is central to interval computing. We illustrate
+popular approaches, such as the mean-value form, the slope form, and
+Taylor series, for bounding ranges of functions.
+
+</p><p>
+A contractive mapping theorem is frequently the basis of an efficient
+interval algorithm. We show how contractive mapping (and other
+approaches) are employed when enclosing the solution of a nonlinear
+system of equations, using an interval Newton method,  and when enclosing
+the solution of a linear system of equations.
+
+</p><p>
+We also discuss briefly several popular interval-arithmetic packages.
+
+
+</p><p>
+</p></li><li><h3>Mapping Expressions to Functions in Cset Interval Arithmetic</h3>
+    <a href="mailto:J.D.Pryce@rmcs.cranfield.ac.uk">John D. Pryce</a> (Cranfield University, RMCS Shrivenham, UK)
+    <p>
+    <strong>Abstract</strong>: 
+Csets (containment-sets) are a way of giving expressions
+a value even at arguments that give rise to division by zero or
+other ``illegal'' operation. The definition for evaluation over
+the reals is that, if <img width="41" height="37" align="middle" border="0" src="T6_files/img1.gif" alt="$f(x)$"> is a function of <img width="16" height="16" align="bottom" border="0" src="T6_files/img2.gif" alt="$n$"> variables (so <!-- MATH
+ $x
+= (x_1, \ldots, x_n)$
+ -->
+<img width="135" height="37" align="middle" border="0" src="T6_files/img3.gif" alt="$x
+= (x_1, \ldots, x_n)$">) then its cset at a point <img width="50" height="16" align="bottom" border="0" src="T6_files/img4.gif" alt="$x=a$"> is the set
+of all limits, in the extended reals <!-- MATH
+ $[-\infty, +\infty]$
+ -->
+<img width="91" height="37" align="middle" border="0" src="T6_files/img5.gif" alt="$[-\infty, +\infty]$"> of
+sequences of values <img width="89" height="37" align="middle" border="0" src="T6_files/img6.gif" alt="$y_j = f(x_j)$"> where the sequence <img width="37" height="37" align="middle" border="0" src="T6_files/img7.gif" alt="$(x_j)$">
+converges to <img width="14" height="16" align="bottom" border="0" src="T6_files/img8.gif" alt="$a$">. Thus, regarding <img width="33" height="37" align="middle" border="0" src="T6_files/img9.gif" alt="$1/0$"> as the value of <img width="34" height="37" align="middle" border="0" src="T6_files/img10.gif" alt="$x/y$"> at
+<img width="50" height="16" align="bottom" border="0" src="T6_files/img11.gif" alt="$x=1$">, and <img width="49" height="33" align="middle" border="0" src="T6_files/img12.gif" alt="$y=0$"> one has in the cset sense
+  <!-- MATH
+ $1/0 = \{-\infty, +\infty\}$
+ -->
+<img width="153" height="37" align="middle" border="0" src="T6_files/img13.gif" alt="$ 1/0 = \{-\infty, +\infty\} $">,
+similarly
+  <!-- MATH
+ $\sin(+\infty) = [-1,+1]$
+ -->
+<img width="168" height="37" align="middle" border="0" src="T6_files/img14.gif" alt="$ \sin(+\infty) = [-1,+1] $">,
+and so on. This leads to an arithmetic system in which exceptions
+do not occur, but where point inputs can produce set outputs.
+
+</p><p>
+There are subtle difficulties associated with this programme. How
+
+are set-valued constants to be interpreted? For instance, does it
+make sense to define a function <img width="41" height="37" align="middle" border="0" src="T6_files/img1.gif" alt="$f(x)$"> by <!-- MATH
+ $f(x) = \frac{[1,2]}{x +
+[1,2]}$
+ -->
+<img width="113" height="46" align="middle" border="0" src="T6_files/img15.gif" alt="$f(x) = \frac{[1,2]}{x +
+[1,2]}$"> ?  When we see the expression <img width="33" height="37" align="middle" border="0" src="T6_files/img9.gif" alt="$1/0$">, how do we know to
+interpret it as the function <img width="114" height="37" align="middle" border="0" src="T6_files/img16.gif" alt="$f(x,y) = x/y$"> evaluated at <img width="50" height="16" align="bottom" border="0" src="T6_files/img11.gif" alt="$x=1$">,
+and <img width="49" height="33" align="middle" border="0" src="T6_files/img12.gif" alt="$y=0$"> ?
+
+</p><p>
+The talk will address these and related issues.
+
+
+    </p><p>        
+
+
+</p><p>  
+</p></li><li><h3>Multiple Precision Interval Arithmetic and
+  Application to Linear Systems</h3>
+    <a href="mailto:%20Nathalie.Revol@ens-lyon.fr">Nathalie Revol</a> (INRIA, LIP, École Normale Supérieure de Lyon,
+   France)
+    <p>
+    <strong>Abstract</strong>: 
+<em>Introduction to MPFI.</em> Interval arithmetic provides
+guaranteed results: it encloses every value or result in an
+interval, and it computes with these intervals.  However, the
+resulting intervals may grow as the computations proceed. To
+obviate this swelling, contracting iterative methods are favoured.
+With such methods, the computing precision becomes a limiting
+factor. This observation led us to propose a library for arbitrary
+precision interval arithmetic, Multiple Precision Floating-point
+Interval (MPFI) arithmetic library, built upon Multiple Precision
+Floating-point Reliable arithmetic (MPFR, <tt><a name="tex2html1" href="http://www.mpfr.org/">www.mpfr.org</a></tt>).
+MPFI is developed by N. Revol and F. Rouillier in C and can be
+freely downloaded from <tt><a name="tex2html2" href="http://www.ens-lyon.fr/%7Enrevol/">www.ens-lyon.fr/~nrevol/</a></tt>.
+
+</p><p>
+<em>Applications.</em> Some algorithms have been developed using
+MPFI. A first algorithm isolates the real roots of a polynomial
+using a multiple precision interval arithmetic in the Uspensky (or
+rather Vincent) algorithm to avoid time-consuming exact
+computations. A second one is the adaptation of the interval
+Newton algorithm to this arithmetic. The Interval Newton algorithm
+encloses the real roots of a function and may also determine the
+existence and uniqueness of these roots in the returned enclosing
+intervals. The proposed algorithm additionally allows to enclose
+the roots with arbitrary accuracy.
+
+</p><p>
+
+
+<em>Linear systems.</em> Solving a linear system <!-- MATH
+ $\mathbfit{A}x =
+\mathbfit{b}$
+ -->
+<img width="69" height="17" align="bottom" border="0" src="T6_files/img17.gif" alt="$\mathbfit{A}x =
+\mathbfit{b}$"> with a matrix <img width="21" height="16" align="bottom" border="0" src="T6_files/img18.gif" alt="$\mathbfit{A}$"> and a vector <img width="16" height="17" align="bottom" border="0" src="T6_files/img19.gif" alt="$\mathbfit{b}$">,
+both with interval components, amounts to determining an
+enclosure of <!-- MATH
+ $\{ x : \exists A \in \mathbfit{A} \mbox{ and }
+\exists b \in \mathbfit{b} \mbox{ such that } Ax=b \}$
+ -->
+<img width="357" height="37" align="middle" border="0" src="T6_files/img20.gif" alt="$\{ x : \exists A \in \mathbfit{A} \mbox{ and }
+\exists b \in \mathbfit{b} \mbox{ such that } Ax=b \}$">.
+Gauss-Seidel iteration, applied to the pre-processed system <!-- MATH
+ $C
+\mathbfit{A} x = C \mathbfit{b}$
+ -->
+<img width="98" height="17" align="bottom" border="0" src="T6_files/img21.gif" alt="$C
+\mathbfit{A} x = C \mathbfit{b}$"> with <img width="19" height="16" align="bottom" border="0" src="T6_files/img22.gif" alt="$C$"> a point matrix, is often
+used.  This method is called the Hansen-Sengupta algorithm. When this
+iteration can be made contracting, it is a method of choice for
+interval arithmetic and also for arbitrary precision interval
+arithmetic. Another linear system comes from signal
+processing: determine the dynamics of an IIR filter. This problem
+can be written as an iteration similar to Gauss-Seidel. We will
+present some preliminary results on this problem.
+</p><p>
+This type of iteration may be comparable with the technique of
+elimination of division as presented in Strassen, 1973, which is
+classical in symbolic computations.
+</p><p>
+</p></li><li><h3>From Intervals to Taylor Models:
+  A Numeric-Symbolic Approach to Validated Computation</h3>
+    <a href="mailto:markus.neher@math.uni-karlsruhe.de">Markus Neher</a> (Universität Karlsruhe, Germany)
+    <p>
+    <strong>Abstract</strong>: 
+
+
+Interval arithmetic has been widely used in enclosure methods for
+almost 40 years. Today, it is a well established tool for the
+calculation of rigorous error bounds for many problems in numerical
+analysis.
+
+</p><p>
+However, interval arithmetic suffers from two drawbacks: the dependency
+problem and the so-called wrapping effect. Both can cause an overestimation
+of the solution set of a given problem, so that the computed error bounds
+may become over-pessimistic in practical calculations.
+
+</p><p>
+To reduce the overestimation of the true error, Taylor models have
+been developed by Berz and his group since the 1990s. A Taylor model
+of a function f on an interval X consists of the Taylor polynomial p
+of order n of f and an interval remainder term I, which encloses the
+approximation error f-p on X. In computations that involve f, the
+function is then replaced by p+I.  The polynomial part is propagated
+by symbolic calculations, whereas the interval remainder term encloses
+all truncation and roundoff errors that appear in the
+computation. Thus, Taylor models can be regarded as a symbiosis of a
+computer algebra method and interval arithmetic.
+</p><p>
+Software implementations of Taylor models have been applied to a variety of
+problems, such as global optimization problems, validated multidimensional
+integration, or the solution of ODEs and DAEs.
+</p><p>
+Our talk will present an introduction to Taylor models and discuss some open
+problems.
+
+
+</p><p>
+
+</p></li><li><h3>Pictures from Proofs: Sound Graphing Algorithms</h3>
+    <a href="mailto:tupper@peda.com">Jeff Tupper</a> (University of Toronto, Canada)
+    <p>
+    <strong>Abstract</strong>: 
+Given just a picture of a relation, what can we deduce
+about the relation?  If the picture was produced by a typical equation
+graphing program then almost nothing can be deduced as such pictures
+contain, by themselves, very little useful information.  This clearly
+could be improved upon.&nbsp; I begin by offering some simple semantics for
+pictures of relations.&nbsp; After discussing some of the limitations of
+these semantics, I will outline some algorithms.  Much of this work is
+embodied in GrafEq, which is available from <tt><a name="tex2html3" href="http://www.peda.com/grafeq">www.peda.com/grafeq</a></tt>.    
+    </p><p>        
+
+</p></li><li><h3>Interval Arithmetic in the Multibody Modeling System MOBILE</h3>
+    <a href="mailto:%20auer@informatik.uni-duisburg.de">Ekaterina Auer</a> (University of Duisburg-Essen)
+    <p>
+    <strong>Abstract</strong>: 
+    We show how a variety of interval algorithms found their
+use in an important area of applied physics, multibody systems'
+modeling, and in particular, in the multibody modeling program
+MOBILE. The talk acquaints the audience with the key features of
+this open source software (e.g. its object-oriented approach
+resulting in usage of state objects and transmission elements for
+modeling of arbitrary mechanical systems), outlines the main
+advantages of applying interval arithmetic concepts to it (e.g. an
+opportunity to implement new kinds of transmission elements), and
+concentrates on interval modeling of dynamics, which is an
+inherent part of almost all multibody simulations. In the latter
+case, the strategies to overcome difficulties with integration of
+an interval initial value problem solver into MOBILE are described
+and as a result, its interval extension enhanced with such a
+solver (based on VNODE) is presented. The functionality of the
+above ways of intervals' application is shown on some examples. We
+provide insight into techniques used to enhance already existing
+modeling software with interval arithmetic concepts. 
+    </p><p>        
+
+
+
+</p></li><li><h3>ALIAS: A Library Mixing Interval Analysis and Computer Algebra</h3>
+    <a href="mailto:Yves.Papegay@sophia.inria.fr">Yves Papegay</a> (INRIA Sophia Antipolis, France)<br> 
+    <p>
+    <strong>Abstract</strong>: 
+   ALIAS is a C++ library of algorithms that deal with systems
+of equations and inequalities. Most of these algorithms are
+based on interval analysis, but some of them are related to constraint
+programming methods, and a few others perform symbolic computations.
+The scope of ALIAS includes algebraic expressions and also expressions
+involving intervals. The library provides tools for a wide range of
+problems including finding an approximation of the real roots of a
+0-dimensional system, giving bounds of the roots of an univariate
+polynomial, and performing global optimization of a function with
+interval coefficients.
+    </p><p>         
+
+
+</p></li><li><h3>The Role of Symbolic Computation in the SIAM/Oxford
+       100-Digit Challenge</h3>
+    <a href="mailto:%20wagon@macalester.edu">Stan Wagon</a> (Macalester College, St. Paul, MN, USA)
+    <p>
+    <strong>Abstract</strong>: 
+The challenge of the title consisted of ten computing
+problems (available from
+<tt><a name="tex2html4" href="http://www.siam.org/siamnews/01-02/challenge.pdf">www.siam.org/siamnews/01-02/challenge.pdf</a></tt>) posed by L. N.
+Trefethen, who offered a cash prize for the best solutions. The
+event attracted 94 teams from 25 countries. The problems were
+numerical in nature, but symbolic computing was able to play an
+important, and sometimes surprising, role in about half of them.
+Interval arithmetic provides both an algorithm and verification
+for the global optimization problem of problem 4; intervals are
+also useful for problem 2, as a way to control the exposure to
+excessive rounding error. For problem 9, computer integration
+plays a surprising role. Symbolic work yielded interesting results
+in several of the other problems too, such as 6, 7, and 10. The
+important moral is that symbolic computation and interval methods
+can be very important in work on problems that are ostensibly
+purely numerical.
+
+</p></li></ul>
+
+</body></html>

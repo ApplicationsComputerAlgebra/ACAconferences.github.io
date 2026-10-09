@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>High Performance Symbolic Computing</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (X11; I; SunOS 5.5 sun4m) [Netscape]">
+   <META NAME="Author" CONTENT="Laurent Bernardin">
+</HEAD>
+<BODY bgcolor=white>
+
+<H1 ALIGN=CENTER>
+<HR WIDTH="100%">High Performance Symbolic Computing and Challenges of Computer Algebra
+<HR WIDTH="100%"></H1>
+
+<CENTER><P><B>Data-flow multithreaded parallelism in computer algebra algorithms</B></P></CENTER>
+
+<UL>
+<P>
+This talk introduces the mechanism of on-the-fly data-flow analysis in
+order to exploit the inherent parallelism in most algebraic algorithms.
+We present results necessary to guarantee efficient parallel execution
+with respect to time and space on various distributed architectures, SMP
+or networks of workstations. We propose a programming model based on a
+depth-first evaluation ordering.
+</P>
+
+<P>
+The talk is illustrated with two classical computer algebra algorithms,
+both having a high degree of parallelism and take advantage of ordering
+mechanism that may depend on the target architecture:
+<UL>
+<LI>The Cantor-Zassenhaus algorithm for the factorization of polynomials
+over finite fields</LI>
+<LI>The Gaussian Elimination algorithm for rank calculations of sparse 
+matrices with entries from a finite field</LI>
+</UL>
+
+<P>Jean-Louis Roch<BR>
+ENSIMAG-INPG<BR>
+<A HREF="mailto:Jean-Louis.Roch@imag.fr">Jean-Louis.Roch@imag.fr</A>
+</P>
+
+<P>Joint work with: Thierry Gautier, Jean-Guillaume Dumas and Gilles Villard</P>
+
+</UL>
+<HR>
+<P><A HREF="../highper.html">Back
+to the session homepage</A></P>
+<HR>
+<P>
+<!--
+<HR WIDTH="100%"><I>Last update: June, 22, 1998</I> 
+<HR WIDTH="100%"></P>
+-->
+
+</BODY>
+<ADDRESS>
+<A HREF=../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</HTML>

@@ -1,0 +1,1046 @@
+ %*********************************************
+% Basic Algorithms for Specialization         *
+% in Groebner Bases                           *
+% Antonio Montes                              *
+% revised version for Jsc. Version: 19-5-99   *
+%**********************************************
+% Changes: bibliographie, introduction, notations
+
+\documentstyle{jsc}
+%\usepackage{amsfonts,amssymb,latexsym}
+%\usepackage[active]{srcltx} % SRC Specials: DVI [Inverse] Search
+\input amssymb.sty
+
+%\font\nums=msbm10 scaled \magstep1
+
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\ent}{\mathbb{Z}}
+\newcommand{\rac}{\hbox{\rm Quot}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\Q}{\hbox{\rm Quot}}
+%\newcommand{\real}{\matbb{R}}
+%\newcommand{\complex}{\mathbb{C}}
+%\newcommand{\complex}{C\!\!\!\!C}
+%\newcommand{\cosfin}{\mathbb{F}}
+\newcommand{\hs}{\hspace{7mm}}
+\newcommand{\vs}{\vspace{5mm}}
+\newcommand{\ox}{\overline{x}}
+\newcommand{\oa}{\overline{a}}
+\newcommand{\lm}{\hbox{\rm lm}}
+\newcommand{\lc}{\hbox{\rm lc}}
+\newcommand{\lpp}{\hbox{\rm lpp}}
+\newcommand{\Gr}{Gr\"obner }
+%\newcommand{\We}{Weispfenning}
+
+\newtheorem{prop}{Proposition}
+\newtheorem{defi}[prop]{Definition}
+\newtheorem{teo}[prop]{Theorem}
+
+\newtheorem{lemma}{Lemma}
+
+
+\title[Specialization in \Gr Basis]{Basic Algorithms
+for Specialization in \Gr Bases}
+\author[A. Montes]{{A. MONTES
+\thanks{Partially supported by Proyecto DGES-MEC
+PB96-0005-C02-02 }} \\ $^{\dagger}$ Dep. Matem\`atica Aplicada 2.,
+Universitat
+Polit\`ecnica de Catalunya, E.} %e-mail: montes@grec.upc.es}
+
+\date{28 January 1999}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\ccite{Weis92} proves the existence of comprehensive \Gr bases
+that specialize for any values of the parameters, and provides an
+algorithm to compute one of them. But when using this algorithm
+for the discussion of polynomial systems, a large set of cases is
+often obtained, many of them representing repeated and/or
+inconsistent cases.
+
+The aim of our work is to obtain a new algorithm for dealing with
+\Gr bases with parameters which outputs only the properly
+different reduced \Gr bases, or in any case a reduced set of
+cases.
+
+In this paper, the basic algorithms used in the new approach are
+given. The complete algorithm is studied in a forthcoming paper.
+\end{abstract}
+
+
+\section{Introduction.}
+
+ Let $F=\{f_1,\dots,f_s\} \subseteq R[x_1,\dots,x_n;a_1,\dots,a_m]=R[\ox,\oa]$
+ be a set of polynomials in the variables $\ox$
+ and the parameters $\oa$, where $R$
+ is a unique factorization domain (UFD) with unity.
+ We can consider $F$ as a polynomial set in the variables $\ox$
+ with coefficients in $R[\oa]$.
+
+In many applications it is required to determine the reduced \Gr
+basis of the ideal $\langle F \rangle$ when the parameters $\oa$
+are substituted in some extension field $K$ of $R$, for different
+concrete values $\oa_0 \in K^m$. For example, in order to
+determine the conditions for a family of curves to have a singular
+point, to determine conditions on the magnitudes of a robot
+configuration with certain degrees of freedom, to obtain a formula
+to solve the load-flow problem for a given network and any
+injected power \cite{Montes95, Montes98} in automatic theorem
+proving, and so on.
+
+This problem has been studied and solved by \ccite{Weis92} who
+introduced the concept of comprehensive \Gr basis {\sc
+CGB}($\langle F\rangle$), and gave an algorithm to compute one. A
+{\sc CGB}($\langle F \rangle$) is a \Gr basis for $F$ embedded in
+$R(\oa)[\ox]$, that continues to be a \Gr basis
+in $K[\ox]$ for every substitution of the parameters $\oa
+\rightarrow \oa_{0} \in K^m$, in $F$. The algorithm also
+determines sets of conditions on the parameters and the
+corresponding \Gr bases. Its goal is a {\sc CGB}, and the output
+is not easy to be analyzed for discussing systems in applications,
+as it consists of a large set of cases many of them not compatible
+or non disjoint. This algorithm has been implemented by V.
+Weispfenning and M. Pesch.
+
+I am grateful to V. Weispfenning for his remark about the
+convenience of using his algorithm and software for the load-flow
+problem \cite{Montes95}. His comments induced me to work on the
+improvement of the algorithm.
+
+For this purpose, instead of focusing our interest on the {\sc
+CGB} --it is not the important object in applications-- we are
+concerned with obtaining the essential different reduced \Gr
+basis, without repetition of cases.
+
+Under this perspective, a case is a set of polynomial equalities
+and inequalities over the parameters $\oa$. It would be desirable
+to distinguish cases only when its corresponding reduced
+\Gr bases have different leading monomials sets in the variables
+$\ox$. This is perhaps an excessive requirement, but we have this
+target in mind.
+
+ The problem of specialization of \Gr bases has been actually studied
+ by many authors. The general basic problem can be formulated in the following way.
+ Let $R,R'$ be Noetherian commutative rings with
+ identity, and $\sigma: R \rightarrow R'$ be a ring homomorphism.
+ When does a \Gr basis of an ideal $I \subseteq
+ R[\ox]$ map to a \Gr basis of $\langle
+ \sigma(I)\rangle$ under the natural extension $\sigma: R[\ox]
+ \rightarrow R'[\ox]$.
+ Given a monomial
+ order $\succ$, obviously it suffices to have
+ \begin{equation}
+  \langle \sigma(\lm(I)) \rangle = \langle \lm(\sigma(I))
+ \rangle \label{condspec}
+ \end{equation}
+ In \cite{Kalk97} are reviewed conditions obtained by different authors
+ for this question \cite{Gianni87,BGS91,Pauer92,Grabe93,Assi94}.
+ \ccite{Kalk97} also proves  a necessary and
+ sufficient condition for \ref{condspec} when $R'$ is a field.
+ Let $\{g_1,\dots,g_s\}$
+ be a \Gr basis of $I \subseteq R[\ox]$ with respect to a monomial
+ order $\succ$, and assume that the $g_i's$ are ordered in
+ such a way that $\lc(g_1),\dots\lc(g_r) \not\in \hbox{\rm
+ ker}(\sigma)$. Then (\ref{condspec}) holds for $I,\succ$ iff the
+ the polynomials $\sigma(g_{r+1}),\dots,\sigma(g_s)$ can be
+ reduced to 0 modulo $\{\sigma(g_1),\dots,\sigma(g_r)\}$. In
+ formula
+  \begin{equation}
+  \sigma(g_i) \longrightarrow_{\{\sigma(g_1),\dots,\sigma(g_r)\}} 0
+   \ \ \ \hbox{for } \ r < i \le s \label{Kcond}
+  \end{equation}
+ The practical interesting case in which we are interested
+ occurs when we take as original ring
+ a polynomial ring $R[\oa]$ over a domain $R$ with unity and for
+ $R'$ some extension field $K$ of $R$. The variables $\oa$ are
+ considered as parameters. We restrict ourselves to
+ this case. In this case $R[\oa]$ can be embedded in the quotient field $R(\oa)$
+ and we do not need the general algorithm for
+ computing \Gr basis over rings given in \cite{Moll88}, but only the
+ classical Buchberger algorithm over fields. When doing so, we
+ cannot use the sufficient condition obtained from
+ (\ref{Kcond}) for $r=s$, as we can extend $\sigma$ to act on
+ the local ring $R[\oa]_{\hbox{\rm ker}(\sigma)}$ but not on
+ $R(\oa)$. Acting so we must compute \Gr basis in the local ring and we
+ want to avoid it.
+
+ In this paper, the basic tools for improving Weispfenning algorithm
+ in the restricted case, working in $R(\oa)[\ox]$, are given.
+ The complete algorithm is given in a forthcoming paper.
+
+First of all, we prove that the ordinary division algorithm
+specializes when all the leading coefficients of the divisors do
+not become zero, and we give a specific {\sc NORMALFORM} algorithm
+that outputs polynomials without denominators on the parameters.
+We then construct \Gr basis of $\langle F \rangle$ in
+$R(\oa)[\ox]$ for which we are able to give a sufficient condition
+on the parameters that ensures automatic specialization. The
+algorithm {\sc PGB0} outputs such a \Gr basis from which we
+immediately obtain the sufficient condition in the form of a
+variety $W$, that we call the {\em singular variety}, outside of
+which the \Gr basis specializes. This singular variety consists of
+the union of irreducible varieties defined by one polynomial. We
+minimize and reduce it and obtain the reduced \Gr basis that
+specializes outside $W$. But the singular variety $W$ obtained is
+not determined by the input ideal and depends on the path followed
+by {\sc PGB0} algorithm. In order to minimize the singular variety
+where specialization does not hold, we introduce a new generalized
+Gaussian elimination algorithm {\sc GGE} that transforms a given
+basis of an ideal into a particular triangular form with the
+minimum number of leading coefficients containing parameters. We
+apply {\sc GGE} algorithm before {\sc PGB0} to minimize the
+singular variety. We include all these steps in the algorithm {\sc
+PGB}. It outputs a reduced singular variety $W$ and the unique
+reduced \Gr basis in $R(\oa)[\ox]$ that surely specializes outside
+$W$. Finally we provide some illustrative examples.
+
+We use the following notations. A power product in the variables
+$\ox$ is denoted $x^{\alpha}$. A monomial is a product of a
+coefficient in the coefficient ring or field  and a power product
+of the variables. Given a monomial order $\succ$ the leading
+monomial, coefficient and power product are denoted:
+  \[\lm_{\ox}(f)=c\,x^\alpha, \ \
+  \lc_{\ox}(f)=c, \ \
+  \lpp_{\ox}(f)=x^\alpha.\]
+The subindex $_{\ox}$ will be omitted when it clearly refers to
+the set of variables ${\ox}$, as this is the most usual case in
+this paper.
+
+ \section{Specialization and Buchberger algorithm}
+
+ We restrict ourselves to specializations coming from replacement
+ of parameters. The corresponding ring homomorphism is:
+ \begin{equation}
+ \label{spec}
+ \sigma:  R[\oa]  \longrightarrow  K
+ \end{equation}
+ where $K$ is any field extension of $R$ (a UFD) and $\sigma \vert R = Id$.
+ To provide a specialization is equivalent to choose
+  $\oa_0 \in K^m$, and setting $\sigma(\oa)= \oa_0$. We will denote
+  also by $\sigma$ the natural extension $\sigma' : R[\oa][\ox]
+  \longrightarrow K[\ox]$ which is the identity on $\ox$.
+
+  Sometimes (see section \ref{div}) we extend $\sigma$ for certain elements of $R(\oa)$
+  (more precisely to the local ring $R[\oa]_{\hbox{\rm
+  ker}(\sigma)}$). When we say that $\sigma(f)$ makes sense for $f
+  \in R(\oa)[\ox]$ it has to be understood that $f \in
+  R[\oa]_{\hbox{\rm ker}(\sigma)}[\ox]$.
+
+Let us denote $F_0=\sigma(F) \subset K[\ox]$
+the polynomial set where the specialization
+is performed.
+
+As the coefficients of $F$ can be embedded in the fraction field
+$R(\oa)$, we can use classical Buchberger's algorithm to compute
+its \Gr basis. We shall modify it in order to obtain a ``well
+normalized" polynomial set $G$ without denominators in $R[\oa]$.
+Thus, the resulting $G$ belongs to $R[\oa][\ox]$. We can also use
+the algorithm to compute a \Gr basis of $F_0$, its coefficients
+being in the field $K$. As it is well known, the specialization of
+$G$, say $G_0=\sigma(G)$, has not to be necessarily a \Gr basis of
+$\langle F_0\rangle$.
+
+%So the diagram
+
+%\begin{center}
+%\begin{picture}(120,96)(8,16)
+%\put (16,16){$G$}
+%\put (16,96){$F$}
+%\put (32,20){\vector(1,0){80}}
+%\put (32,100){\vector(1,0){80}}
+%\put (24,88){\vector(0,-1){60}}
+%\put (116,88){\vector(0,-1){60}}
+%\put (110,58){\line(1,1){10}}
+%\put (110,62){\line(1,1){10}}
+%\put (116,16){$G_0$}
+%\put (116,96){$F_0$}
+%\put (70,24){$\sigma$}
+%\put (70,108){$\sigma$}
+%\put (-4,56){GB}
+%\put (125,56){GB}
+%\end{picture}
+%\vs
+
+%Fig. 1. Specialization diagram
+%\end{center}
+%\vs
+
+%\noindent does not commute in general. Weispfenning's C.G.B. make it
+%commutative for any $\sigma$, in the sense that
+%$\sigma(\hbox{C.G.B.}(\langle F\rangle))$ is also a G.B. of
+%$\langle F_0\rangle$. Instead, our first objective is determining
+% which specializations $\sigma$ make the diagram non-commutative.
+
+Weispfenning's C.G.B. commutes with specialization in the sense
+that $\sigma(\hbox{C.G.B.}(\langle F\rangle))$ is also a \Gr basis
+of $\langle F_0\rangle$. Instead, our first objective is
+determining for which specializations $\sigma$ we cannot ensure
+that the reduced \Gr basis commutes with the specialization. Our
+goal is to compute a sufficient set of conditions on $\oa_0$, that
+make the algorithm acting on $F$ to be automatically translatable
+by specialization into the algorithm acting on $F_0$, and
+consequently ensuring that, if $G$ is any \Gr basis of $\langle F
+\rangle$, then  $G_0$ is a \Gr basis of $\langle F_0 \rangle$.
+
+As we shall see, the sufficient condition can be described by a
+variety $W \subset K^m$ which is the union of a set of $m-1$
+dimensional varieties irreducible in $\rac(R)$, outside of which
+specialization commutes.
+
+In what follows we assume that an $\ox$ monomial order $\succeq$
+is given. In some algorithms we need also a monomial order
+involving all variables $[\ox,\oa]$. Then we must use a compatible
+elimination product order~\cite{BaSt} $\succ_{[\ox,\oa]}$, in
+which all $\ox$ are greater than all $\oa$. More precisely, if we
+denote by $\succ_{\ox}$ and $\succ_{\oa}$ the restriction of the
+ordering to the $\ox$ variables (resp. to the $\oa$ variables),
+then $\succ_{[\ox,\oa]}$ has to satisfy the following condition:
+For all $\alpha,\gamma \in {\ent}^n_{\ge 0}$ and $\beta,\delta \in
+{\ent}^m_{\ge 0}$
+\[ \ox^\alpha \oa^\beta \succ_{[\ox,\oa]} \ox^\gamma \oa^\delta
+\Longleftrightarrow \left\{ \ox^\alpha \succ_{\ox} \ox^\gamma \ \
+\hbox{ or } \ \ \left( \ox^\alpha = \ox^\gamma \ \hbox{ and } \
+\oa^\beta \succ_{\oa} \oa^\delta \right)\right\}.
+\]
+
+We want to modify Buchberger's algorithm acting on $F$ in order to
+provide the variety $W \subset K^m$ outside of which
+specialization works. We also intend to produce only polynomials
+with coefficients in $R[\oa]$, without denominators.
+
+Denominators of $R[\oa]$ appear in the ordinary algorithm
+when computing $S$-poly\-no\-mials and by performing divisions.
+
+For the purpose we begin redefining $S$-polynomials without
+denominators as follows:
+  \begin{equation} \label{spol}
+  S(f,g) = \frac{\Gamma\, x^{\gamma}}{\lm(f)}\, f
+  - \frac{\Gamma\, x^{\gamma}}{\lm(g)}\,  g
+  \end{equation}
+  where
+  \begin{eqnarray*}
+  \Gamma&=&\hbox{lcm}(\lc(f),\lc(g)) \nonumber\\
+  x^{\gamma}&=&\hbox{lcm}(\lpp(f),\lpp(g)) \nonumber\\
+  \end{eqnarray*}
+with a slightly different normalization than usual, which does not
+affect its nature but produces a result in $R[\oa][\ox]$. (Compare
+with the modification given by \ccite{Weis92}, which uses as
+$\Gamma$ the product instead of the less common multiple. We use
+that $R$ is an UFD).
+
+  \section{Modified division algorithm: NORMALFORM} \label{div}
+
+We now study division under specialization and prove the following
+
+\begin{prop} \label{propdiv}
+ Let $f, g_1,...,g_s \in R[\oa][\ox]$.
+ Let $\succ$ be an $\ox$-monomial order and $\sigma$ a specialization
+ (\ref{spec}), satisfying the conditions
+ \[\sigma(\lc(g_i)) \ne 0 \ \ \hbox{ for all } \ \ 1 \le i \le
+  s .\]
+ Let $q_1, \dots,q_s \in R(\oa)[\ox]$ and $r \in R(\oa)[\ox]$ be
+ the quotients and remainder of the division of $f$ by $g_1,\dots,g_s$
+ in $R(\oa)[\ox]$. Then $\sigma(q_1),\dots,\sigma(q_s)$ and $\sigma(r)$
+ make sense and they are the corresponding quotients and remainders for the division
+ of $\sigma(f)$ by $\sigma(g_1), \dots, \sigma(g_s)$ in $K[\ox]$.
+
+\end{prop}
+
+ In other words, considering the division of $f$
+ by $g_1,...,g_s$, if no leading coefficients of the divisors
+ vanish under the specialization, then division and specialization commute properly.
+ This condition is equivalent to the fact that the leading monomials $\lpp(g_i)$
+ and $\lpp(\sigma(g_i))$ are the same.
+
+\begin{proof}
+ We prove the result by induction on the division
+step. Call $(p^{(j)},{q_1}^{(j)},\dots,{q_s}^{(j)})$ and
+$(p'^{(k)},{q'_1}^{(k)},\dots,{q'_s}^{(k)})$ the partial
+(remainders, quotients) at steps $j$ and $k$ respectively of the
+divisions in $R(\oa)[\ox]$ and in $K[\ox]$. We want to prove that
+for each $j$ there is some $k$ so that $\sigma(p^{(j)})=p'^{(k)}$
+and $\sigma(q_i^{(j)})=q_i'^{(k)}$ for $i=1,\dots,s$. It is true,
+by construction for $j=0$ by picking $k=0$. Suppose we are at some
+step $j$ in the division in $R(\oa)[\ox]$, and assume induction
+hypothesis. Let $i_j$ be the first index for which $\lpp(g_{i_j})$
+divides $\lpp(p^{(j)})$. The new partial quotient to add and the
+new partial remainder will be
+\begin{eqnarray}
+ \psi_{i_j} &=&
+\frac{\lm(p^{(j)})}{\lm(g_{i_j})} \nonumber \\ p^{(j+1)} &=&
+p^{(j)}-\psi_{i_j}g_{i_j}. \label{pardiva} \\ \nonumber
+\end{eqnarray}
+Observe that by hypothesis, $\sigma$ makes sense on $\psi_{i_j}$
+and $p^{(j+1)}$. So, specializing, two cases can occur:
+
+Case 1: $\sigma(\lc(p^{(j)}))=0$. In this case, also
+$\sigma(\psi_{i_j})=0$ and $\sigma(p^{(j+1)})=\sigma(p^{(j)})$,
+and the same is true for the partial quotients. So the same $k$
+applies to $j+1$.
+
+Case 2. $\sigma(\lc(p^{(j)})) \ne 0$. Then $\sigma(\psi_{i_j}) \ne
+0$. As by hypothesis all $\lpp(g_i)$ remain stable under
+specialization, $i_j$ is the first index for which
+$\lpp(\sigma(g_{i_j}))$ divides $\lpp(p'^{(k)})$, so
+\begin{eqnarray*}
+\psi'_{i_j} &=& \frac{\lm(p'^{(k)})}{\lm(\sigma(g_{i_j}))}\\
+p'^{(k+1)} &=& p'^{(k)}-\psi'_{i_j}\sigma(g_{i_j}).\\
+\end{eqnarray*}
+
+
+Using the induction hypothesis for $j$ and specializing equations
+(\ref{pardiva}) yields:
+\begin{eqnarray*}
+\sigma(\psi_{i_j}) &=&
+\frac{\sigma(\lm(p^{(j)}))}{\sigma(\lm(g_{i_j}))} =
+\frac{\lm(p'^{(k)})}{\lm(\sigma(g_{i_j}))} = \psi'_{i_j}\\
+\sigma(p^{(j+1)}) &=& p'^{(k)}-\psi'_{i_j}
+\sigma(g_{i_j})=p'^{(k+1)},\\
+\end{eqnarray*}
+so in this case we pick $k+1$. Note that the partial quotients
+also remain stable.
+%As the remainders in the divisions are the last partial remainders, the proposition is proved.
+\end{proof}
+
+The division in $R(\oa)[\ox]$ introduces coefficients with
+denominators in $R[\oa]$. But these denominators arise only from
+leading coefficients of the divisors $g_1,\dots, g_s$, and are
+divisors of a product of powers of them. Under the hypothesis of
+proposition \ref{propdiv}, we can still multiply $f$ by a
+convenient factor $\mu$ in $R[\oa]$. This will only change the
+normalization of $f$ by a non-vanishing factor under
+specialization.
+ Let
+ \[ \mu=\hbox{\rm lcm}(\hbox{\rm LC}(\hbox{\rm denom}(
+ q_1)),\dots,\hbox{\rm LC}(\hbox{\rm denom}(q_s)),\hbox{\rm
+ LC}(\hbox{\rm denom}(
+ r))).\]
+
+Writing $q'_i=\mu\,q_i$ and $r'=\mu\, r$, we have
+\begin{equation} \label{diveq}
+ \mu \, f = \sum_{i=1}^s q'_i g_i + r'.
+\end{equation}
+
+The result will be a division with quotients $q'_i$ and remainder
+$r'$ in $R[\oa][\ox]$. This algorithm is usually denoted as {\sc
+NORMALFORM}.
+
+If the condition on the leading monomials is satisfied,
+proposition (\ref{propdiv}) guarantees that {\sc NORMALFORM} can
+be specialized automatically and $\sigma(\mu) \ne 0$.
+
+In general we are not interested in the quotients and we only need
+that the remainder is in $R[\oa][\ox]$. So we can take $
+\mu=\hbox{\rm denom}(r)$.
+
+Moreover, if the content, $\hbox{cont}_{\ox}(r') \in R[\oa]$, is
+not 1, we can further reduce the division. Let $\lambda$ be the
+maximum divisor of $\hbox{cont}(r')$ that is also a product of
+powers of divisors of some $\lc(g_i)$. As, by hypothesis, these
+factors do not cancel in the specialization, the result can be
+modified dividing the remainder $r$, and correspondingly the
+quotients $q_1,\dots,q_s$ and $\mu$ by $\lambda$. This will be our
+version of {\sc NORMALFORM}. Finally
+\[ \mu=\frac{\hbox{\rm denom}(r) }{\lambda}. \]
+
+With this value of $\mu$ the quotients can be in  $R(\oa)[\ox]$
+instead then in $R[\oa][\ox]$, and also $\mu$ can be in $R(\oa)$
+instead then in $R[\oa]$, but the remainder is still in
+$R[\oa][\ox]$.
+
+In actual programming, we can eliminate denominators at each
+division step in order to only operate with polynomials without
+denominators.
+
+\section{The lc-condition and PGB0 algorithm}
+
+We are now able to give a modified Buchberger's algorithm. Given
+$F \subset R[\oa][\ox]$, it outputs a \Gr basis $G \subset
+R[\oa][\ox]$ of $\langle F_{R[\oa]} \rangle$, the ideal generated
+by $F$ in $R(\oa)[\ox]$. Then we define the {\em singular variety}
+\begin{equation} \label{singvar}
+W:=\bigcup_{g \in G} {\V}(\lc(g)).
+\end{equation}
+Outside $W$ specialization is certainly allowed. The algorithm is
+almost the same as the classical one \cite{CLO'S} except that
+$S$-polynomials are defined by equation {\rm (\ref{spol})} and
+divisions are performed by {\sc NORMALFORM}.
+
+\subsection{Modified Buchberger algorithm, PGB0}
+
+\begin{tabular}{lp{10.5cm}}
+Input: & $F=\{f_1,\dots,f_s\} \subset R[\oa][\ox]$, \\
+ & $\succ$: an $\ox$-monomial order. \\
+Output: & $G=\{g_1,\dots,g_t\} $, a \Gr basis of $\langle F
+\rangle$, with $F \subset G$
+\end{tabular}
+
+\hs $G:=F$; $G'=\phi$
+
+\hs WHILE $G \ne G'$
+
+\hs \hs $G':=G$
+
+\hs \hs FOR each pair $\{p,q\}$, $p \ne q$ in $G'$ DO
+
+\hs \hs \hs $S:=\overline{S(p,q)}^{G'}$ \ ({\bf using definition
+({\rm \ref{spol}}) and {\sc NORMALFORM})}
+
+\hs \hs \hs IF $S \ne 0$ THEN
+
+\hs \hs \hs \hs $G:=G \cup \{S\}$.
+
+%\hs UNTIL $G=G'$
+
+We claim the following
+
+\begin{prop}
+ Let $G$  be the output of \ {\sc PGB0}, and $W$ given
+ by equation {\rm (\ref{singvar})}.  Then
+ \begin{itemize}
+ \item[{\rm (i)}] $G=$ is a \Gr basis of $\langle F_{R(\oa)} \rangle$,
+ the ideal generated by $F$ in $R(\oa)[{\ox}]$, with $F \subset G$.
+ \item[{\rm (ii)}] $G \subset R[\oa][\ox]$
+ \item[{\rm (iii)}] If $\sigma$ is determined by $\oa_0$, and $\oa_0 \not\in
+ W$, then $\sigma(G)$ is a \Gr basis of $\langle \sigma(F) \rangle$.
+ \end{itemize}
+\end{prop}
+
+We refer to the condition in (iii) as the lc-condition. Observe
+that if we decompose every $\lc(g)$, for $g \in G$ in irreducible
+factors, $W$ may be written as the union of the varieties defined
+by each one of the irreducible factors, and this provides the
+decomposition of $W$ into irreducible components when we factor in
+the algebraic closure of $K$.
+
+\begin{proof}
+(i) is obvious, as the only changes with respect to the classical
+{\sc GB} algorithm are multiplication by factors in $R[\oa]$,
+which are elements of the coefficient field $R(\oa)$.
+
+(ii) is true by the definition (\ref{spol}) of $S$-polynomials and
+{\sc NORMALFORM}.
+
+(iii) Finally we prove that lc-condition is a sufficient condition
+to ensure that $\sigma(G)$ is a \Gr basis of $\sigma(\langle
+F\rangle)$. lc-condition (iii) is also ``necessary" in the sense
+that otherwise we cannot guarantee automatic translation: if $F$
+is at the depart a \Gr basis and lc-condition is not satisfied,
+then $F$ and $F_0=\sigma(F)$ will not have the same set of leading
+monomials. So translation is not automatic, even if specialization
+can possibly hold. On the other side, by (i)
+\[\langle \lpp(\langle F \rangle) \rangle = \langle \lpp(g_1), \dots,
+  \lpp(g_t) \rangle\]
+and if lc-condition is satisfied, then
+\[\langle \lpp(g_1), \dots, \lpp(g_t) \rangle
+ = \langle \lpp(\sigma(g_1)), \dots, \lpp(\sigma(g_t)) \rangle.\]
+We need only to prove now that
+\[\langle \lpp(\sigma(g_1)), \dots, \lpp(\sigma(g_t)) \rangle
+=\langle \lpp(\langle \sigma(F) \rangle) \rangle = \langle
+\lpp(\langle F_0 \rangle) \rangle
+\]
+in order to finish the proof of (iv).
+
+Let us write $G=\{f_1,\dots,f_s,g_{s+1},\dots,g_t\}$. So the first
+$s$ elements of $\sigma(G)$ are the elements of $\sigma(F)$, and
+if lc-condition holds, they have the same leading monomials. The
+remaining elements, $s+1$ till $t$, are the specialization of the
+non-vanishing residues of the $S$-polynomials of any two previous
+elements of $G$.
+
+We now follow the steps of the algorithm. Take any $S$-polynomial
+$S(g_i,g_j)$ of two elements in $G'$. If lc-condition is satisfied
+until this step, then $\sigma(S(g_i,g_j))$ is equal to the
+ordinary $S$-polynomial $S(\sigma(g_i),\sigma(g_j))$ up to
+non-vanishing $K$ factors (constants), as the definitions of
+$S$-polynomials only involves leading terms. By proposition
+\ref{propdiv}, if the residue $\overline{S(g_i,g_j)}^{G'}$ using
+{\sc NORMALFORM} vanishes, then the ordinary residue
+$\overline{\sigma(S(g_i,g_j))}^{\sigma(G')}$ vanishes too. If it
+doesn't vanish it will be added to the list. But if lc-condition
+still holds, then $S(\sigma(g_i),\sigma(g_j))$ doesn't vanish
+either, as its leading monomial coincides, up to $K$ factors, with
+that of $\sigma(S(g_i,g_j))$. So the algorithm continues to be
+translatable by specialization. As a consequence $G$ specializes
+to a \Gr basis of $F_0$.
+\end{proof}
+
+\section{Minimal and reduced \Gr basis}
+
+It is now very simple to prove that under the lc-conditions the
+\Gr basis obtained can be minimized and reduced. The classical
+improvements of Buchberger's algorithm are also easily proved in
+our case. Nevertheless, the singular variety cannot be reduced by
+considering only the leading coefficients of the minimal or of the
+reduced basis. For this purpose we shall use a different
+technique.
+
+Minimal \Gr basis is obtained by discarding from a \Gr basis those
+polynomials whose leading monomials can be divided by the leading
+monomial of any other polynomial in the basis. If $G$ is a \Gr
+basis, it is a basis of the ideal, and so, if $p \in G $ is such
+that $\lm(p) \in \langle \lm(G-\{p\} ) \rangle $, then $\langle
+\lm(G-\{p\} ) \rangle = \langle \lm(G) \rangle $. It follows that
+is $G - \{p\}$ is also a \Gr basis of $\langle F \rangle$. The
+minimal \Gr basis $G'$ so obtained will continue to specialize
+outside the variety $W$ obtained by {\sc PGB} algorithm, and
+$\lpp(G') \subset \lpp(G)$.
+
+The minimal \Gr basis $G'$ can also be reduced and continue to
+specialize outside $W$, as the leading coefficients of the actual
+$G'$ do not become zero by specialization outside $W$, and so we
+can divide each polynomial $p$ in $G'$ by $G' - \{p\}$, and the
+result will be a reduced \Gr basis $G"$. We only need to normalize
+it adequately.
+
+Finally we normalize the polynomials. As $\hbox{cont}(p)$ is
+always a divisor of $\lc(p)$ and for $a_0 \not\in W$ it does not
+vanish by specialization, we can divide $p$ by its content. The
+polynomial obtained has only a $R$-unity ambiguity. If $R$ is
+$\ent$, we can drop this ambiguity by taking positive
+$\lc_{\ox\oa}(p)$. The resulting reduced \Gr basis is unique in
+$R[\ox,\oa]$, and specializes to a reduced \Gr basis in $K[\ox]$
+outside $W$, except that it has to be normalized after
+specializing.
+
+\section{Reduction of the singular variety:
+generalized Gaussian elimination GGE and PGB} \label{redvar}
+
+If we compute the singular variety of an ideal using {\sc PGB0},
+and then minimize, reduce and normalize the basis, it is clear,
+that the resulting reduced \Gr basis is unique. But the computed
+singular variety depends on the development of {\sc PGB0}
+algorithm and is not uniquely determined by the ideal, as the
+algorithm can follow different paths. In any case, we obtain a
+sufficient condition for the \Gr basis to specialize, but this
+condition is algorithm depending (see Example 1). It is very
+important to reduce the variety so much as possible.
+
+ For this purpose we introduce a generalized Gaussian
+elimination algorithm ({\sc GGE}) to transform the initial basis
+$F$ of the ideal to a more simple basis $F'$.
+
+\subsection{Generalized Gaussian Elimination, GGE}
+
+\begin{tabular}{lp{10.5cm}}
+Input: & $F=[f_1,\dots,f_s] \subset R[\ox,\oa]$,  \ ($\ox$ and
+$\oa$ as variables)  \\ & $\succ_{[\ox,\oa]}$: a compatible
+$[\ox,\oa]$ elimination order.
+\\ Output: & $F'$ a new basis of $\langle F \rangle$.
+\\
+\end{tabular}
+
+\hs $G:=F$; \ $ G'=\phi$
+
+\hs WHILE  $G \ne G'$
+
+\hs \hs FOR $i$ from $1$ to \#G DO
+
+\hs \hs \hs $G':=G$
+
+%\hs \hs \hs $lc:=\lc(g'_i)$; \ ($g'_i$ is the $i$-th element
+%of $G'$)
+
+%\hs \hs \hs IF $lc \in R$ THEN
+
+\hs \hs \hs $G:=\phi$
+
+\hs \hs \hs FOR $k$ from $1$ to \#G' DO
+
+\hs \hs \hs \hs IF $k \ne i$ THEN
+
+\hs \hs \hs \hs \hs $f:=\hbox{\sc
+NORMALFORM}(g'_k,[g'_i],[\ox,\oa],\succ_{[\ox,\oa]})$ (ordinary
+division)
+
+\hs \hs \hs \hs \hs $G:=G \cup [f]$
+
+\hs \hs \hs \hs ELSE $G:=G \cup [g'_i]$
+
+%\hs \hs \hs \hs  \hs ENDIF
+
+%\hs \hs \hs \hs ENDFOR
+
+%\hs \hs \hs ENDIF
+
+%\hs \hs ENDFOR
+
+%\hs ENDREPEAT
+
+\hs $F':=G / \hbox{cont}_{[\ox,\oa]}(G).$
+
+\vs
+
+The idea of the algorithm comes from ordinary Gaussian
+elimination.
+
+Taking $F'$ as input for {\sc PGB0}, the algorithm is simplified
+and we expect that only the strict real special cases will occur
+in the singular variety when an adequate order of the variables is
+chosen. In the examples it is shown that we are able to achieve
+this goal. Nevertheless, the process is sensitive to the variable
+order chosen, and we cannot ensure, in general, complete
+minimality of the singular variety obtained. It is important to
+choose the variables in an order for which there are leading terms
+in $[\ox,\oa]$ not containing the parameters, and dividing other
+leading terms.
+
+We defined {\sc GGE} algorithm considering all variables $\ox$ and
+parameters $\oa$ as variables. More generally we can define the
+algorithm separating them. In this case it is necessary to
+consider as divisors only those polynomials with constant leading
+coefficients. But the best elimination is obtained using all
+$[\ox,\oa]$ as variables.
+
+\begin{prop} \label{ggex}
+ Let $F \subset R[\oa][\ox]$, and $F':=\hbox{\sc GGE}\,(F,[\ox,\oa],\succ_{[\ox,\oa]})$,
+ where $\succ_{[\ox,\oa]}$ is a compatible $[\ox,\oa]$ elimination
+ order,
+ \ i.e. using $\ox$ and $\oa$ as variables in the divisions. Then
+ \begin{itemize}
+ \item[{\rm (i)}] $F'$ is a new basis of $\langle F \rangle \subset
+ \Q(R)[\ox,\oa]$ that has less or equal number of elements than
+ $F$. Moreover $\langle \lpp_{[\ox,\oa]}(F) \rangle \subset
+ \langle \lpp_{[\ox,\oa]}(F') \rangle$, and also
+ $\langle \lpp_{\ox}(F) \rangle \subset
+ \langle \lpp_{\ox}(F') \rangle$.
+ \item[{\rm (ii)}] $F'$ specializes, i.e. $\sigma(F')$ is also a basis of $\langle
+ \sigma(F) \rangle $.
+ \item[{\rm (iii)}] The algorithm terminates.
+ \item[{\rm (iv)}] Each $p \in F'$, is the residue of dividing $p$ by
+ $F' - \{p\}$ with respect to the given $[\ox,\oa]$-order. We
+ say that $F'$ is reduced for this order.
+ \end{itemize}
+\end{prop}
+
+ \begin{proof}
+
+ (i) At each division in the algorithm we substitute in
+ a given $F$-basis two polynomials in $R[\oa][\ox]$, say $\{f,g\}$ by
+ $\{g,r\}$,  where $f=g\,h+r$.
+ As we can express $f$ and $g$ as a
+ linear combination  of $g$ and $r$ with coefficients in $\Q(R)$, then  $\{g,r\}$
+ is a new basis of $\langle f,g \rangle$, and consequently $\{g,r\}$ can
+ substitute $\{f,g\}$ to form a new basis of $F$. This is the only
+ repeated action in computing the {\sc GGE}.
+ Observe also, that the final
+ number of polynomials is less or equal than the number of
+ polynomials in $F$, as we substitute at each step two polynomials
+ by two or one (when the residue is 0) polynomials.
+ The proposition when we only consider the $\ox$ as variables is a
+ consequence of $\succ_{[\ox,\oa]}$ being a compatible elimination
+ order.
+
+ (ii) Note that even if the
+ algorithm is used considering the $\oa$ as parameters, no
+ denominators of $R[\oa]$ appear, as we only divide by polynomials
+ with constant leading coefficients in $R$.
+
+ (iii) We have to prove that the
+ algorithm finishes. Let $F_i$ be the base after the $i^{\hbox{\rm th}}$ loop.
+ Define
+ \[ d_i=\sum_{f \in F_i} \hbox{\rm multideg}_{[\ox,\oa]}(f).\]
+ As $\#F_i \le \#F_{i-1}$ and for every division in the algorithm,
+ whenever the leading term is divisible, the multideg of the
+ remainder is strictly smaller then that of the dividend,
+ necessarily $d_i \preceq_{[\ox,\oa]} d_{i-1}$. If $d_i=d_{i-1}$
+ then no leading monomial has changed in the loop $i$. So, no
+ monomial of a $f \in F_i$ is divisible by any leading monomial of
+ an element of $F_i$ (with constant leading coefficient, when we
+ only consider the $\ox$ as variables), as all
+ possible divisions have been performed in loop $i$. So the
+ algorithm stops in this case.
+ As $\succ_{[\ox,\oa]}$ is a well-order, $d_i$ necessarily stabilize,
+ and the algorithm effectively terminates.
+ {\sc GGE} works in the direction of the reduced \Gr
+ basis, even if it need not reach it, as not all S-polynomials
+ are constructed and tested.
+
+ (iv) As all leading coefficients
+are constants of $R$, all polynomials in $F'$ have been considered
+as divisors of the others, and no polynomial will be divisible by
+the remaining. (iv) is the triangulation property of {\sc GGE}.
+ It only applies when variables and parameters are taken as variables.
+ \end{proof}
+
+We incorporate {\sc GGE} as a previous step of {\sc PGB}
+algorithm, before calling {\sc PGB0}, in order to transform the
+initial basis. The resulting singular variety will now be smaller,
+and if we choose a suitable order of the variables, in practice we
+are often able to obtain the minimal singular variety.
+
+{\sc GGE} algorithm is remarkable for being used with linear
+systems with parameters. If we apply it only with respect to the
+variables, but not to the parameters, it reduces to the ordinary
+Gaussian elimination carried out with care, i.e. using only pivots
+not depending on the parameters. But if we apply it with respect
+to variables and parameters, it goes further, and provides a
+perfect first step for a reduced case discussion, as can be seen
+in the example in the next section.
+
+Let us give finally the {\sc PGB} algorithm:
+
+\subsection{PGB algorithm}
+
+\begin{tabular}{lp{10.5cm}}
+Input: & $F=\{f_1,\dots,f_s\} \subset R[\ox,\oa]$, \\ &
+$\succ_{[\ox,\oa]}$ : a compatible elimination
+$[\ox,\oa]$-monomial order. \\ Output: & $G$ the reduced \Gr basis
+of $\langle F \rangle$, with respect to $[\ox]$.
+\\ & $W$: The singular variety outside of which the basis specializes.\\
+\end{tabular}
+
+\hs $G_1:=\hbox{\sc GGE}(F,[\ox,\oa],\succ_{[\ox,\oa]})$
+
+\hs $G_2:=\hbox{\sc PGB0}(G_1,[\ox],\succ_{\ox})$
+
+\hs $W:=\bigcup_{g \in G_2} {\V}(\lc_{\ox}(g))$
+
+\hs $G_3:=\hbox{Minimal}(G_2,[\ox],\succ_{\ox})$
+
+\hs $G_4:=\hbox{Reduce}(G_3,[\ox],\succ_{\ox})$
+
+\hs $G:=\hbox{Normalize}(G_4,[\ox],[\oa],\succ_{[\ox,\oa]}).$
+
+\section{Examples}
+
+{\bf Example 1.} Consider the following linear system in the
+variables $\{x,y,z,u\}$ with the parameters $\{a,b\}$.
+
+\[
+\begin{array}{lcl}
+F &:=& [a\,x+2\,y+3\,z+u-6, x+3\,y-z+2\,u-b, \\
+ & & 3\,x-a\,y+z-2, 5\,x+4\,y+3\,z+3\,u-9] \\
+\end{array}
+\]
+
+We take $F$ to be the basis of an ideal in ${\ent}[x,y,z,u,a,b]$
+and compute the a new basis with the {\sc GGE} algorithm given in
+section \ref{redvar}, relative to all the variables and parameters
+$[x,y,z,u,a,b]$ in lex order. The result is:
+
+\[
+\begin{array}{lcl}
+F' &:=& \hbox{\sc GGE}(F,\hbox{lex}(x,y,z,u,a,b)) \\
+&&[756\,x-39\,a\,b-4\,b-155-117\,a+(117\,a+51)\,u, \\ &&
+-189\,y-6\,a\,b+107+43\,b-18\,a+(18\,a-123)\,u, \\ &&
+-756\,z+1439-236\,b-99\,a-33\,a\,b+(-15+99\,a)\,u, \\ &&
+(30\,a-21-9\,a^2)\,u+9\,a^2+3\,a^2\,b-11\,a\,b-22\,a+49-28\,b,]\\
+\end{array}
+\]
+
+As we see, the new basis is completely Gaussian reduced:
+\begin{itemize}
+\item The new basis is triangular: each leading monomial is different when we consider as
+variables all $x,y,z,u,a,b$. In this case, it is also true if we
+consider only as variables $x,y,z,u$.
+\item The pivots (leading coefficients) of the variables $x,y,z$ are
+constants and only the last leading coefficient in the variable $u$ is a polynomial in
+the parameters and is essentially the singular variety:
+$30\,a-21-9\,a^2=-3\,(a-1)\,(3\,a-7)$, or the value of the
+determinant.
+\item Instead, the variable $u$ is not eliminated in the equations
+giving $x,y,z$.
+\item In this form, the system is very simple to be discussed.
+\item The result is, in this case, a minimal \Gr basis, but not the reduced
+one.
+\item Moreover, in this example, $F'$ is itself a comprehensive
+\Gr basis.
+\end{itemize}
+
+
+Now we compute the reduced \Gr basis using {\sc PGB} algorithm and
+obtain
+\[
+\begin{array}{lll}
+G &:=& \hbox{\sc PGB}(F',\hbox{lex}(x,y,z,u),\hbox{lex}(a,b),'W')
+=
+\\ && (9\,a^2-30\,a+21)\,x-6\,a\,b+9\,a-2\,b-1, \\
+&&(9\,a^2-30\,a+21)\,y+3\,a\,b+20-23\,b, \\
+&&(9\,a^2-30\,a+21)\,z+53\,a-5\,a\,b-18\,a^2+3\,a^2\,b-39+6\,b,\\
+&& (9\,a^2-30\,a+21)\,u-9\,a^2-3\,a^2\,b+11\,a\,b+22\,a-49+28\,b]
+ \\
+\end{array}
+\]
+and the singular variety
+\[W={\V}(a-1) \cup {\V}( 3\,a-7) \]
+that, in this example, is the minimal variety where the linear
+system has different kinds of solutions.
+We do not go deeper in the general discussion of all cases
+as this is the object of a forthcoming paper.
+
+
+If we compute the \Gr basis using {\sc PGB} algorithm without
+previous reduction of $F$ to $F'$, the basis $G$ is the same, but
+the variety becomes $W_1={\V}(a) \cup {\V}(a^2+35) \cup
+{\V}(3\,a-2) \cup {\V}(a-1) \cup {\V}( 3\,a-7)$.
+
+It is interesting to compare $G$ and $F'$. It is not true, in
+general, that $F'$ is a \Gr basis, but it is triangular in
+$x,y,z,u,a,b$. The reduced \Gr basis $G$ is now triangular with
+respect to the variables $x,y,z,u$. Instead, its leading
+coefficients are not constants, though all variables are isolated
+($u$ does not appear in the equations defining $x,y,z$).
+
+Note: If we compute the {\sc GGE} with respect only to the
+variables and not to the parameters, the result is the ordinary
+Gaussian elimination using constant pivots, and the singular
+variety increases. The result is in this case:
+\[
+\begin{array}{lcl}
+F' &:=& \hbox{\sc GGE}(F,\hbox{lex}(x,y,z,u)) = \\ &&[11\,x +
+13\,z + u + 4\,b - 27, -11\,y + 8\,z - 7\,u - 9 + 5\,b, \\ &&(-3 -
+a)\,u + (49 - 13\,a)\,z - 4\,a\,b + 27\,a + 10\,b   -84, \\ &&(-3
++ 7\,a)\,u + (-28 - 8\,a)\,z - 5\,a\,b + 9\,a- 12\,b   +59 \\
+\end{array}
+\]
+%\vs
+
+{\bf Example 2.} Take now the general cubic in Weierstrass form
+given by
+\[f:=y^2+a_1\,x\,y+a_3\,y-x^3-a_2\,x^2-a_4\,x-a_6\]
+and search the conditions for $f$ to have singular points.
+The system is given by:
+\[
+\begin{array}{lll}
+H &:=& [y^2+a_1\,x\,y+a_3\,y-x^3-a_2\,x^2-a_4\,x-a_6, \\
+&& a_1\,y-3\,x^2-2\,a_2\,x-a_4, 2\,y+a_1\,x+a_3] \\
+\end{array}
+\]
+
+Applying {\sc GGE} we obtain:
+\[
+\begin{array}{lll}
+H_1 &:=& \hbox{\sc GGE}(H,\hbox{lex}(y,x,a_6,a_2,a_4,a_3,a_1))=
+\\ && [(16\,a_2^2+8\,a_1^2\,a_2+a_1^4-24\,a_1\,a_3-48\,a_4)\,x \\
+&&-72\,a_6-18\,a_3^2+8\,a_2\,a_4+4\,a_1\,a_2\,a_3+2\,a_1^2\,a_4+a_1^3\,a_3,\\
+&& 6\,x^2-(-4\,a_2-a_1^2)\,x+2\,a_4+a_1\,a_3,2\,y+a_1\,x+a_3]. \\
+\end{array}
+\]
+Computing the {\sc PGB} we obtain $G=[1]$ and the singular variety
+$W={\V}(f_1) \cup {\V}(f_2)$, where
+\[
+\begin{array}{lcl}
+f_1&=&12\,a_2\,a_1^4\,a_6-16\,a_2^2\,a_4^2+64\,a_4^3-36\,a_2\,a_1\,a_3^3+432\,a_6^2-288\,a_2\,a_4\,a_6+64\,a_2^3\,a_6\\
+&&+27\,a_3^4-16\,a_1\,a_4\,a_2^2\,a_3+96\,a_1\,a_4^2\,a_3-8\,a_4^2\,a_2\,a_1^2-a_4^2\,a_1^4+a_2\,a_1^4\,a_3^2+8\,a_1^2\,a_2^2\,a_3^2\\
+&&+30\,a_1^2\,a_4\,a_3^2-72\,a_2\,a_4\,a_3^2+216\,a_3^2\,a_6-36\,a_1^3\,a_6\,a_3-a_1^5\,a_4\,a_3-8\,a_2\,a_1^3\,a_4\,a_3\\
+&&-144\,a_1\,a_6\,a_2\,a_3+48\,a_1^2\,a_6\,a_2^2+16\,a_2^3\,a_3^2+a_1^6\,a_6-72\,a_1^2\,a_6\,a_4-a_1^3\,a_3^3\\
+\\
+f_2&=&16\,a_2^2+8\,a_1^2\,a_2+a_1^4-24\,a_1\,a_3-48\,a_4\\
+\end{array}
+\]
+The singular variety provides a very simply discussion of the
+solutions. As we shall see in the next paper, where the general
+discussion for polynomial systems will be provided, $f_1=0$
+reveals itself as the condition for the existence of solutions of
+$G$, i.e. for the existence of singular points. The condition
+$f_2=0$ is responsible for the nature of the \Gr basis, i.e., for
+the nature of the singular points. In this example, if we do not
+use {\sc GGE}, we also obtain bigger singular varieties.
+
+\begin{thebibliography}{99}
+
+  \bibitem[\protect\citeauthoryear{Adams, Boyle}{1992}]{AdBo92}
+     Adams, W.W., Boyle, A.K. (1992). Some Results on
+     Gr\"obner Bases over Commutative Rings.
+     {\em Jour. Symb. Comp.} {\bf 13}, 473-484.
+
+  \bibitem[\protect\citeauthoryear{Assi}{1994}]{Assi94}
+     Assi A. (1994). On Flatness of Generic Projections.
+     {\em Jour. Symb. Comp.} {\bf 18}, 447-462.
+
+  \bibitem[\protect\citeauthoryear{Bayer and Stillman}{1987}]{BaSt}
+     Bayer, D., Stillman, M. (1987). A theorem on refining
+     division orders by the reverse lexicographic order.
+     {\em Duke J.\ Math.\/} {\bf 55}, 321-328.
+
+  \bibitem[\protect\citeauthoryear{Bayer, Galligo, Stillman}{1991}]{BGS91}
+     Bayer, D., Galligo, A., Stillman, M. (1991). Gr\"obner Bases and
+     extension of scalars.
+     Computational algebraic geometry and commutative algebra
+     (Cortona, 1991) p 198-215.
+     {\em Sympos. Math, XXXIV}, Cambridge Univ. Press, Cambridge, 1993.
+
+  \bibitem[\protect\citeauthoryear{Becker}{1994}]{Beck94}
+     Becker, T. (1994). On Gr\"obner bases under specialization.
+     {\em Appl. Algebra Engrg. Comm. Comput,} {\bf 5}, num. 1, 1-8.
+
+  \bibitem[\protect\citeauthoryear{Cox, Little \& O'Shea}{1992}]{CLO'S}
+     Cox, D., Little, J., O'Shea, D. (1992). Ideals,
+     Varieties and Algorithms. Springer. New-York.
+
+  \bibitem[\protect\citeauthoryear{Gebauer, Moller}{1987}]{GeMo87}
+     Gebauer, R., M\"oller, H.M., (1987).
+     On an installation of Buchberger's Algorithm.
+     Springer.
+
+  \bibitem[\protect\citeauthoryear{Gianni}{1987}]{Gianni87}
+     Gianni, P. (1987). Properties of Gr\"obner Bases
+     under Specializations, in EUROCAL'87
+     A theorem on refining division orders by the reverse
+     lexicographic order.
+     J.H. Davenport Ed., Springer
+     LNCS vol 378, 293-297.
+
+  \bibitem[\protect\citeauthoryear{Gianni, Mora}{1987}]{GiaMo87}
+     Gianni, P., Mora T. (1987). Algebraic Solutions of Systems of
+     Polynomial Equations using Gr\"obner Bases.
+     {\em Applied algebra, algebraic algorithms and error-correcting
+     Codes}. (Menorca,1987), p. 247-257.
+     {\em. Lecture Notes in Comut. Sci, 356}, Springer, Berlin,
+     1989.
+
+  \bibitem[\protect\citeauthoryear{Gianni, Trager, Zacharias}{1988}]{GTZ88}
+     Gianni, P., Trager, B., Zacharias, G. (1988). Gr\"obner Bases and Primary
+     Decomposition of Polynomial Ideals.
+     {\em Jour. Symb. Comp.} {\bf 6}, 149-167.
+
+  \bibitem[\protect\citeauthoryear{Gr\"abe}{1993}]{Grabe93}
+     Gr\"abe, H.G. (1993). On Lucky Primes.
+     {\em Jour. Symb. Comp.} {\bf 15}, 199-209.
+
+  \bibitem[\protect\citeauthoryear{Kalkbrener}{1987}]{Kalk87}
+     Kalkbrener, M. (1987). Solving systems of algebraic aquations by
+     using Gr\"obner Bases. In: Davenport, J.H. (ed.) EUROCAL'87,
+     European Conference on Computer Algebra. Lecture Notes in
+     Computer Science, 378, p 282-292. Springer.
+
+  \bibitem[\protect\citeauthoryear{Kalkbrener}{1997}]{Kalk97}
+     Kalkbrener, M. (1997). On the stability of Gr\"obner Bases
+     under specializations.
+     {\em Jour. Symb. Comp.} {\bf 24}, num. 1, 51-58.
+
+  \bibitem[\protect\citeauthoryear{Miller}{1996}]{Mill96}
+     Miller, J.L. (1996). Analogs of Gr\"obner Bases in Polynomial
+     Rings over a Ring.
+     {\em Jour. Symb. Comp.} {\bf 21}, 139-153.
+
+  \bibitem[\protect\citeauthoryear{M\"oller}{1988}]{Moll88}
+     M\"oller, H.M. (1988). On the construction of Gr\"obner Bases
+     using syzygies.
+     {\em Jour. Symb. Comp.} {\bf 6}/2,3, p. 345-359.
+
+  \bibitem[\protect\citeauthoryear{Montes}{1995}]{Montes95}
+     Montes, A. (1995). Solving the load flow problem using
+     \Gr bases, {\em SIGSAM Bull.\/} {\bf 29}, 1-13.
+
+  \bibitem[\protect\citeauthoryear{Montes}{1998}]{Montes98}
+     Montes, A. (1998). Algebraic solution of the load-flow
+     problem for a 4-nodes electrical network, {\em Math.\/ and
+     Comp.\/ in Simul.\/} {\bf 45}, 163-174.
+
+  \bibitem[\protect\citeauthoryear{Pauer}{1992}]{Pauer92}
+     Pauer, F. (1992). On Lucky Ideals for Gr\"obner Basis Computations.
+     {\em Jour. Symb. Comp.} {\bf 14}, 471-482.
+
+  \bibitem[\protect\citeauthoryear{Weispfenning}{1992}]{Weis92}
+     Weispfenning V. (1992). Comprehensive Gr\"obner Bases.
+     {\em Jour. Symb. Comp.} {\bf 14}, 1-29.
+
+\end{thebibliography}
+
+\end{document}
+

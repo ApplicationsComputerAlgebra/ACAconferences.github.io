@@ -1,0 +1,17 @@
+Title:  Stanley Decompositions and Involutive Bases 
+
+Author: Apel, Joachim 
+
+Affiliation: MSRI Berkeley, California
+
+Abstract: In 1982 Richard P. Stanley conjectured that a graded module M over a
+graded k-algebra R can be decomposed in a particular way in a direct sum of
+finitely many free modules over suitable subalgebras of R.  Besides homogeneity
+conditions the most important restriction which such a decomposition has to
+satisfy is that the subalgebras must have at least dimension depth(M). For
+monomial ideals I of a polynomial ring R such Stanley decompositions of M1=I
+and M2=R/I are strongly related to decompositions of the set of derivatives
+occurring in the Riquier/Janet method for solving systems of PDE's.  We will
+show how general involutive bases may be applied in order to prove some
+particular cases of Stanley's conjecture and to provide algorithms for the
+computation of Stanley decompositions.

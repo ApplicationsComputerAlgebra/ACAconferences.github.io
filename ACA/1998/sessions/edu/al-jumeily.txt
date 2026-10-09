@@ -1,0 +1,26 @@
+"Should students do algebra when computer algebra systems can do it for them?"
+
+Paul Strickland & Dhiya Al-Jumeily (*)
+Liverpool John Moores University
+School of Computing and mathematical sciences, Byron street
+Liverpool JM University, L3 3AF
+United Kingdom
+E-mail:D.Aljumeily@livjm.ac.uk
+
+
+
+Conventional hand-held calculators, available widely in schools and  
+universities from the 1970s, extended the range of numerical calculation 
+that could be attempted in mathematics nd science teaching. However, in the 
+UK at least, it has been seen as necessary to ensure that children are able 
+to calculate for themselves before they become reliant on electronic devices. 
+Teaching using computer algebra systems (CAS) enables us to give students 
+access to harder, more life-like, problems; if a CAS is directed 
+appropriately (for example getting DERIVE to add a value to both sides of an 
+equation, or perform an integration), the learner can find solutions even if 
+they cannot themselves perform the underlying manipulations.
+We ask the questions who should learn basic algebraic manipulation? And how 
+can computer algebra systems be utilized in the teaching of traditional 
+algebra skills? We also present evaluative work based on our own CAS, 
+TREEFROG, which enables drill-and-practice examples to be attempted with 
+immediate, and ultimately intelligent, feedback.

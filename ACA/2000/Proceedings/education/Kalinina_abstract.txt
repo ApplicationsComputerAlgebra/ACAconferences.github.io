@@ -1,0 +1,12 @@
+Nina Alekseevna Kalinina* (kalinina@ccmath.nsu.ru), Lidija Vasilievna
+Gorodnjaja (Gorod@iis.nsk.su) (Russia) 
+
+Computer Algebra and Functional Programming in Mathematics Education
+
+In this paper we describe the experience of study, development and application
+of computer algebra systems and teaching of functional programming in
+educational courses of programming department of math faculty of Novosibirsk
+State University.  Moreover, the experience of the course "Programming
+paradigmes"is reflected.  The paper reports on the experience, on the problems
+encountered, and some suggestions for future developments.  This work is
+partitially supported by the RFBR grant N 00-07-90322.

@@ -1,0 +1,26 @@
+ "A Normal Form Algorithm for Matrices over k[x,y]/<xy>".
+  Reinhard Laubenbacher
+  rlaubenb@nmsu.edu
+
+
+Reinhard Laubenbacher
+New Mexico State University
+Department of Mathematical Sciences
+Las Cruces, NM 88003-0001 USA
+
+
+ABSTRACT: The classification of finitely generated modules over a principal
+ideal domain is one of the fundamental results of algebra.  Every such module
+can be written uniquely, up to order of summands, as a direct sum of
+indecomposable modules which are either copies of the ring or are quotients of
+the ring modulo a power of a prime ideal.  If the module is presented as the
+cokernel of a matrix then one can find this decomposition by computing the
+Smith normal form of the matrix.  In this talk the Smith normal form algorithm
+is generalized to the ring  k[x,y]/<xy>  of polynomials in  x  and y  without
+mixed terms.
+
+As an application one obtains an algorithmic classification of finitely
+generated modules over  k[x,y]/<xy>, and related rings such as certain types
+of group rings.  Looking at the problem from a different point of view, one
+obtains an algorithmic classification of pairs of mutually annihilating linear
+operators on a finite dimensional vector space.

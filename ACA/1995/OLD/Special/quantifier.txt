@@ -1,0 +1,47 @@
+            Quantifier Elimination and its Applications
+
+Session organizers: 
+                    Richard Liska <liska@siduri.fjfi.cvut.cz>
+                    Michael Jahn  <jahn@math.unm.edu>
+
+Abstract:
+
+An algorithm for quantifier elimination (QE) over real closed fields 
+(in particular, the reals R) has been known for quite a long time, but 
+its first and only fully practical implementation, using the partial 
+cylindrical algebraic decomposition algorithm developed by Collins and 
+Hong, appeared only several years ago.  It is known that this general QE 
+procedure will terminate in a finite number of steps for any quantifier 
+elimination problem.  However, its time complexity is double exponential, 
+so the applicability of this procedure is limited to rather small sized
+problems.  
+
+Recently, several specialized procedures solving quantifier elimination 
+problems of a particular type have appeared. These specialized algorithms 
+allow treatment of more complicated problems, in particular, the inclusion 
+of more free, unquantified variables.  The QE method has been applied to 
+inverse kinematics, optimization, stability, geometric theorem proving and 
+other problems.  However, its potential for applications has not yet been 
+fully revealed due to the ongoing development of specialized algorithms 
+for restricted types of QE problems (to address the limitation of high 
+time complexity for the general QE method). 
+
+The session will concentrate on special QE methods and applications of QE.
+The aim of this session is to bring together two groups of people, the 
+first one working on QE, and the second one interested in QE applications 
+in different branches of science.
+
+
+Tentative list of speakers to be invited:
+
+G. Collins
+H. Hong
+J. Johnson
+R. Liska
+S. McCallum
+S. Steinberg
+V. Weispfenning
+L. Gonzales-Vega
+T. Recio
+J. Renegar
+M.F. Roy

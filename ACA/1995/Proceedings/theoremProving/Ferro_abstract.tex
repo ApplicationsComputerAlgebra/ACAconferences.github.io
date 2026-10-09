@@ -1,0 +1,104 @@
+\documentstyle[11pt]{article}
+
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6in}
+\setlength{\headheight}{0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\oddsidemargin}{-.5in}
+
+
+
+\title{Probabilistic Verification of Elementary\\
+       Geometry Statements\thanks{Preliminary Abstract}}
+
+\author{\parbox[b]{1.9in}{\begin{center} \normalsize
+			%
+                        {Giuseppa Carr\`a Ferro}\\%
+			%
+			Dip. di Matematica\\ 
+                        Universit\'{a} di Catania\\
+                        {\tt carra@dipmat.unict.it}
+                        \end{center}}
+        \parbox[b]{1.9in}{\begin{center} \normalsize
+			%
+                        {Giovanni Gallo}\\%
+			%
+			Dip. di Matematica\\ 
+                        Universit\'{a} di Catania\\
+                        {\tt gallo@dipmat.unict.it}
+                        \end{center}}
+        \parbox[b]{1.9in}{\begin{center} \normalsize
+			%
+                        {Rosario Gennaro}\\%
+			%
+			Lab. for Computer Science\\
+                        M.I.T.\\
+                        {\tt rosario@lcs.mit.edu} 
+                        \end{center}}
+	}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\noindent
+One of the very first principles that we all learn in High School while 
+approaching Euclid's Geometry is: `Examples teach us nothing'. In reality, 
+for most Geometry theorems, examples provide the bases to conjecture a 
+statement and encourage the learner to look for a rigourous proof of it.
+In this presentation we address the question: {\em How much should we trust an 
+example?} A way to answer quantitatively such a question 
+is to use the language of probability. The question could be hence 
+reformulated in {\em What is the probability that a property verified for 
+$N$ examples is a theorem?}
+
+\medskip
+\noindent
+In 1980 J.T.Schwartz in a now classical paper answered an analogous question 
+about polynomial identities: {\em If two polynomials agree on a set of $N$ 
+points what is the probability that they are identical?} 
+
+\medskip
+\noindent
+Wu's procedure to prove geometrical statements provide a quick way to transfer 
+Schwartz' results to the above question. Indeed the truth 
+(or, better, the generic truth) of a statement turns out, in Wu's formulation, 
+to be equivalent to the vanishing of a polynomial.
+If an example verifies a given statement, it corresponds to a  
+zero of a certain polynomial. In presence of a large enough number of such 
+positive examples (or, equivalently, of a large enough number of zeroes of 
+the polynomial) it is possible to estimate the probability that the theorem 
+is generically true.
+
+\medskip
+\noindent
+The idea sketched above is quite well known, by now, to the community of 
+people interested to algebraic methods for theorem proving. We do 
+not know, however, of any quantitative analysis similar to the one 
+reported here. We use the bounds of Gallo and Mishra on the degree of
+Wu-Ritt's characteristic sets to give an accurate estimate of the probability 
+that a given statement is a theorem after $N$ positive examples have been 
+observed.
+
+\medskip
+\noindent
+Our results could be summarized as follows. Let $B=c_1 C^{c_2(C+P)^2}$ 
+where $c_i$ are constants and $P,C$ denote respectively the number of 
+points and the number of circle or straight line constructions in a 
+statement of plane Euclidean Geometry. Let $h$ be the number of indipendent 
+parameters needed to completely specify an example.
+Let $I$ be a set of $2B$ elements in an algebraically closed field $k$. 
+Choose $N$ examples by sampling $N$ random points from $I^h$. 
+If this $N$ examples verify the statement, then, with probability 
+greater than $1 - 2^{-N}$, the statement is generically true.  
+
+\medskip
+\noindent
+We make use of Wu's procedure to get a probability estimate but it should be 
+observed that once the statement under consideration has been formalized in a 
+set of polynomial equations our probabilistic estimate applies even when the 
+verification of the examples is done with techniques other than Wu's.           
+
+
+\end{document}

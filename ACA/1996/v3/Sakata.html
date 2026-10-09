@@ -1,0 +1,223 @@
+<HTML>
+<HEADER>
+<TITLE>IMACS ACA '96
+</TITLE>
+</HEADER>
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<h1 align="center"> Coding Theory and Cryptology </h1>
+
+<h3> Organizer </h3>
+<I>
+Shojiro Sakata (<A HREF="mailto:sakata@cs.uec.ac.jp">sakata@cs.uec.ac.jp</A>)
+<br>
+University of Electro-Communications
+<br>
+Faculty of Electro-Communications
+<br>
+Department of Computer Science and Information Mathematics
+<br>
+1-5-1 Chofugaoka, Chofu-shi, Tokyo 182, JAPAN
+<br>
+Tel: 81-424-83-2161 (ext. 4386)
+<br>
+Fax: 81-424-87-9104
+</I><P>
+
+<h3> Description  </h3>
+<P>
+The session is devoted to providing a forum for exchange of ideas and
+research results related to computer algebra (software and/or hardware)
+systems and algorithmic treatment of all kinds of symbolic objects in
+application to coding theory and cryptography. Nowadays error-correcting
+codes  and cryptographic systems are important from both theoretical and
+practical reasons,  and there have been done many interesting
+investigations on them recently. We notice that Computer Algebra, i.e.
+constructive algebraic methods and algebraic computations with developments
+and applications of computational tools and systems are indispensable to
+theoretical and practical works also in the field of coding theory and
+cryptology. 
+<P>
+
+<h3> Talks  </h3>
+<P>
+<OL>
+<li> IDEAS: A Computer-algebra-based Chip Design Environment for Algebraic
+Computation, Coding and Signal Processing
+<br> <a href="../participants.html#Nueckel">Armin Nueckel </a>
+<br> <I> Abstract: </I>
+In general, commercial synthesis products are 
+only able to generate quite inefficient gate level netlists 
+based on boolean functions or so called RT-level models.
+Motivated by the observation, that problems in 
+very large areas of engineering are specified in terms of mathematical
+expressions,
+the IAKS (Institut f&uuml;r Algorithmen und Kognitive Systeme, Prof. Beth)
+started a long 
+term research project called IDEAS (Intelligent Designs Environment for
+Algorithms and 
+Systems). The main goal of this project was the development of algebraic
+algorithm and 
+optimization methods, very comparable to the principle of boolean
+optimization. As a result
+of this project, the first fully integrated design environment for
+algebraic algorithm 
+engineering based on computer algebra systems was implemented at the IAKS.
+The talk will 
+describe the general structure of the design environment and demonstrates
+the design style
+based on some application examples. 
+
+<P>
+<li> Algebra for Optical Computing and Quantum Computing 
+<br> <a href="../participants.html#Beth">Thomas Beth</a>,
+     <a href="../participants.html#Grassl">Markus Grassl</a> and 
+     <a href="../participants.html#Mueller-Quade">Joern Mueller-Quade</a>
+<br> <I> Abstract: </I> 
+
+Optical and quantum mechanical systems enjoy a great intrinsic
+parallelism that can be used to speed-up computations. As both types
+of systems are linear, designing these systems leads to the problem of
+factoring a given matrix into matrices corresponding to the
+computational primitives of the physical system.
+<br>
+We present an algebraic approach to this "programming" problem for
+optical computing and quantum computing.
+<br>
+For optical systems, the computational primitives are diffractive
+elements corresponding to diagonal matrices and wave propagation
+modelled by the Fresnel transformation. We show that, in principle,
+any linear transformation can be realized optically up to a scalar
+factor, but possibly with many diffractive elements. In practice,
+optical setups with a small number of diffractive elements are of
+interest. We present a divide and conquer algorithm for the design of
+8f-systems, i. e., systems with up to four lenses and three arbitrary
+diffractive elements.
+<br>
+Computations in quantum mechanical systems are specified by unitary
+matrices acting on a Hilbert space which is a tensor product of
+smaller subspaces. The computational primitives are unitary
+transformations acting on these subspaces. In principle, any unitary
+transformation can be factored into such basic transformations. For
+complexity reasons we are interested in a factorization with a small
+number of factors. We present an algebraic approach to find a
+"factorization" similar to that for optical systems.
+<br>
+Solving the equations arising in the design problem is equivalent to
+computing the inverse of a rational mapping. For this mapping, a
+decomposition can be derived from a tower of unirational function
+fields. We discuss how to compute the intermediate fields using
+Groebner bases and primary decomposition. Algorithms using such a
+functional decomposition solve the nonlinear equations faster than
+more universal methods.
+
+<P>
+<li> Cryptographic Aspects Of Real Quadratic Congruence Function Fields
+<br> <a href="../participants.html#Stein">Andreas Stein</a>
+<br> <I> Abstract: </I> 
+We show how the theory of real quadratic congruence
+function fields can be used to produce a secure key 
+distribution protocol. The technique is similar to that
+advocated by Diffie and Hellman in 1976, but 
+instead of making use of a group for its underlying
+structure, makes use of a structure which is ``almost''
+a group. The method is an extension of the recent
+ideas of Scheidler, Buchmann and Williams, but,
+because it is implemented in these function fields,
+several of the difficulties with their protocol
+can be eliminated. A description of the protocol
+is provided, together with a discussion of the 
+difficulty of the so-called discrete logarithm problem
+(DLP) in real quadratic congruence function fields.
+In this context, we will point out that  
+the DLP for real quadratic congruence function
+fields of genus one is equivalent to the DLP for elliptic curves over 
+finite fields.
+<P>
+<li>
+On Certain Torsion Subgroups of Jacobians of Decomposable Curves of
+Genus 2 
+and Its Applications to Symbolic Integration and Primality Proving
+<br>
+<a href="../participants.html#Leprevost">Franck Leprevost</a>
+<br> <I> Abstract: </I>
+Given two elliptic curves $E_1$ and $E_2$ defined over a number field $K$, 
+we construct under some assumptions a curve $C$ of genus 2 defined over $K$ 
+such that its jacobian is $K$-isogenous to the product $E_1 \times E_2$ 
+(following Serre, one says that the jacobian of a curve of genus $g$ is 
+decomposable if its jacobian is isogenous to a product of $g$ elliptic
+curves). If $E_1$ and $E_2$ have a non-trivial rational torsion subgroup,
+this method 
+allows to produce some curves of genus 2 with a ``big'' rational torsion 
+group. We achieve this in the case $K=\Q$ (the field of rational numbers),
+and break the previous record for 
+the order of a rational torsion subgroup of the jacobian of a curve of genus 
+2, and produce by the way a minoration of the conjectural bound in 
+the dimension 2 case. The conjecture we refer to is  
+<I> the uniform boundness conjecture for the order of the torsion groups 
+of abelian varieties.  </I>  Thanks to a theorem of Risch, by-products take
+place 
+in the problem of the integration of algebraic functions. 
+Another more cryptographical application is connected with ``primality
+proving''. 
+
+    <P>
+    <center>(short break)</center>
+    <p>
+    
+<li> Groebner Basis: A Bridge between Coding Theory and Computer Algebra
+<br> <a href="../participants.html#Sakata">Shojiro Sakata</a>
+<br> <I> Abstract: </I>
+In this talk we give a survey of
+<OL>
+<li> when the concept of Groebner basis has been introduced  into the world
+of coding theory;
+<li> how the concept of Groebner basis has been applied to construction and
+decoding of error-correcting codes, 
+</OL>
+and discuss some important roles of Groebner basis in recent development of
+coding theory. It is emphasized that Buchberger's algorithm and  its
+relatives take their parts just at the point of contact of coding theory
+with system theory and that Groebner basis is a key not only to full
+decoding of the most frequently used error-correcting codes such as
+Reed-Solomon and Bose-Chaudhuri-Hocquenghem codes but also to construction
+and efficient decoding method of the next generation of error-correcting
+codes called algebraic-geometry codes. 
+<P>
+<li> Computing Groebner Bases for Finding Codewords of Small Weight
+<br>  <a href="../participants.html#Augot">Daniel Augot </a>
+<br> <I> Abstract:  </I>
+We describe a relationship between codewords of small weight in
+codes and algebraic systems of equations. These systems are
+constructed from the (generalized) Newton's identities, and solving
+these systems is equivalent to find codewords of weight less than a
+given weight. We propose to compute a Groebner basis of the system, by
+using the Buchberger algorithm, or variants. These is a complexity
+barrier, which make the method inefficient for long codes. However,
+for small length, valuable information is obtained on codewords,
+because their Fourier transform is then known. Examples are given.
+<P>
+</OL>
+
+<P><img src="../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/program-plan.html"><img src="../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../austria-button.gif">
+</A>
+<P>
+</body>
+</html>
+

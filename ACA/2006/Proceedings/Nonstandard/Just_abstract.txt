@@ -1,0 +1,54 @@
+Using Groebner Bases to Reverse-Engineer Biochemical Networks
+
+Winfried Just [a,b] and Brandilyn Stigler [a]
+
+[a] Mathematical Biosciences Institute
+250 Mathematics Building
+231 W 18th Ave.
+Columbus, OH 43210
+USA
+
+[b] Department of Mathematics
+Ohio University
+Athens, OH 45701
+USA
+
+just@math.ohiou.edu
+bstigler@math.ohio-state.edu
+
+
+Biochemical networks often consist of n biochemicals, such as gene products or
+metabolites that mutually regulate their changing concentration levels.
+Current experimental techniques make it possible to collect data on
+simultaneous concentration levels of all chemicals in networks where n may take
+values in the thousands.  The task of reverse-engineering requires inferring
+from these data a model of how the network regulates itself.  Since typically
+the number of experiments is only in the tens, many different models fit the
+data and the problem of model selection becomes critical.
+
+Laubenbacher and Stigler [1] developed a reverse-engineering (LS) algorithm for
+networks whose concentration levels have been discretized to elements of a
+finite field.  The algorithm constructs all possible network models that are
+consistent with the data and uses Groebner bases to select the most
+parsimonious model.
+
+In this talk, we will briefly review the LS algorithm and give estimates on how
+much data are needed on average for the algorithm to converge to the correct
+network model.  Since data collection for large biochemical networks is
+expensive, minimizing the data requirements becomes an important practical
+issue.  In particular, we will present a result showing that a recent
+modification of the original algorithm is expected to need as few, and
+sometimes fewer, data than alternative algorithms for which such bounds are
+known.  We will also present a modification, which we have designed and
+implemented, of the Buchberger-Moeller algorithm for computing Groebner bases
+for zero-dimensional ideals of varieties of size m in a polynomial ring over n
+variables.  Our algorithm has been optimized for the case m << n, which is the
+typical situation encountered in analyzing data of m experiments on biochemical
+networks with n chemicals.
+
+
+Reference:
+
+[1] Laubenbacher, R. and Stigler, B. (2004). A computational algebra approach
+to reverse engineering of gene regulatory networks. J. Theor. Biol. 229,
+523 - 537.

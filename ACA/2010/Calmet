@@ -1,0 +1,107 @@
+Speech at the inaugural session of ACA 2010 in Vlora, Albania
+------------------------------------------------------------------------------
+In 1991, the AMS proposed as the main goals of Mathematical sciences:
+
+The most important long-term goals for the mathematical sciences are: provision
+of fundamental tools for science and technology, improvement of mathematics
+education, discovery of new mathematics, facilitation of technology transfer,
+and support of efficient computation.
+
+The goal of this year's ACA 2010 conference is well suited for this definition
+on at least three grounds: improvement of education, the facilitation of
+technology transfer, and the support of efficient computation.
+
+Any society tries to understand where it is coming from.  In other words: what
+are the building stones of its culture?  There are several such stones ranging
+from language to religion which are specific to each country or society.  There
+is one that is often forgotten nowadays: Mathematics.  Morris Kline wrote a
+book explaining that mathematics has been a major cultural force in Western
+civilization.  I suspect and claim that such a root is not limited to Western
+civilization, but is almost universal: Mathematics is culture.
+
+Another general feature of today's society is to understand what makes things
+sell.  Many (too many?) mathematicians claim that the sole end of science is
+the honor of the human mind.  In any case, this goal remains valid, but this is
+not incompatible with more practical goals.
+
+Some grounds for such a statement are:
+
+1) Mathematics is a framework to describe the world; a faithful description of
+   the world leads to better technologies.  Most of the models describing the
+   world we live in amount to a system of partial differential equations.  You
+   can easily link this fact to several of the sessions at this conference.  We
+   have sessions that are applied to communication (coding, for instance),
+   physics and chemistry, solutions of models expressed through systems of
+   equations (polynomial, parametric or differential, for instance) or special
+   functions, and to investigate classification of concepts through
+   methodologies of group theory to discover how our technologies can be
+   extended to topology.  This is a new frontier after having been so
+   successful with algebra and analysis (integration), we can now investigate
+   the link of these concepts to topology.  Pure mathematics and particularly
+   Grothendieck have developed theoretical concepts that will lead to
+   breakthroughs for mechanized mathematics when taking non-linear effects into
+   account.  It would be possible to extend the list of topics covered at this
+   conference that have very practical applications.  For instance, mechanizing
+   topology may lead to results useful in the area of statistics and insurance.
+
+2) Mathematics is not an isolated domain.  Designing algebraic algorithms
+   amounts to performing mechanical reasoning.  One must remember that
+   mechanical or formal reasoning has been developed by philosophers and
+   mathematicians since antiquity.  Mechanizing mathematics is thus an ever
+   lasting goal of humanity.
+
+3) As for previous ACA conferences, education is the topic of a specific
+   session.  Computer algebra is a powerful educational tool to teach
+   mathematics as well as engineering or physical sciences.  We live in a
+   society dominated by managers educated in law or business.  However, this
+   society sometimes exhibit the drawback that the ignorance of mathematics has
+   attained the status of a social grace.  This was pointed out by Morris Kline
+   in 1977 already and is not a blessing for our society.  To be accurate, it
+   looks like scientific education is still favored in some far east countries
+   (those with a higher growth factor than most of European societies?).  For
+   instance, Germany lacks 30,000 engineers while China trains 400,000
+   engineers each year.
+
+4) We must not be shy when dealing with business goals.  You may have guessed
+   that I am a bit interested in the philosophical meaning of what we do.  One
+   French philosopher said that there is "No truth without money".  Truth is at
+   the very basis of our field since we always prove what we implement.  Thus,
+   we must not stop investigating business models of what we are doing.  If you
+   think it is difficult task, then just let me add that you can read the
+   last section of the Discourse on Method of Descartes as a research grant
+   application.  This claim was partially based on the fact that you can think
+   of the concept of "essence" as axioms in a mathematical theory.  It is due
+   to a pure mathematician.  The main result is thus to outline that the
+   funding spent to organize ACA 2010 is a smart investment which will pay back
+   in the future.
+
+Some more technical words on ACA 2010: We have 14 sessions covering many
+applications of computer algebra.  Some of these sessions are new ones in the
+history of the ACA series of conferences: complexity, knowledge bases, and
+topology, for instance.  These are theoretical sessions, but with the goal of
+improving our knowledge and thus to look for applicability.  Indeed, it is
+often simpler to find meaningful business applications for very elaborated
+ideas than for straightforward applicative extensions.  Think simply to the
+industrial impact of the works of von Neumann, Godel, Shannon, Thom or
+Kolmogorov, for instance.
+
+Some applications in the directions of business or philosophy of sciences could
+have been added.  Let us say that they are on the agenda of future conferences.
+We will listen, in parallel, to 96 talks given by 92 attendees.
+
+You know that there are no proceedings for the ACA conferences.  However,
+several sessions will hopefully see their better papers published in special
+issues of well-known journals.  I am personally involved in one, and aware of a
+few other ones.  A total of 5 special issues ought to appear according to some
+valuable information.  Session directors (and journals' editor-in-chiefs) are
+responsible for such special issues.
+
+Our most sincere thanks are due to Prof. Tanush Shaska and to his team for the
+tremendous amount of work they did put to organize this meeting.  These thanks
+must be extended to the various authorities which are present at this inaugural
+session for their generous funding of the conference (at least according to the
+information I got at the time of sketching some notes for this talk).  I want
+to thank Michael Wester for support and help to organize the program for this
+meeting.
+
+Jacques Calmet

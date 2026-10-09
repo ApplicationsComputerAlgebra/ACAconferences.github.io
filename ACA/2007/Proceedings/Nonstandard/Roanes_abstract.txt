@@ -1,0 +1,126 @@
+Connecting the 3D DGS Calques3D with the CAS Maple
+
+Authors: Eugenio Roanes-Lozano (1),
+-------- Nicolas van Labeke (2),
+         Eugenio Roanes-Macias (1)
+
+         (1) Departamento de Algebra,
+             Universidad Complutense de Madrid, Spain
+             {eroanes,roanes}@mat.ucm.es
+
+         (2) School of Computer Science and Information
+             Systems, University of London
+             n.vanlabeke@scre.ac.uk
+
+Acknowledgments:
+----------------
+
+This work was partially supported by the research projects
+MTM2004-03175 (Ministerio de Educacion y Ciencia, Spain) and
+UCM2005-910563 (Comunidad de Madrid - Universidad Complutense de
+Madrid, research group ACEIA).
+
+Extended Abstract:
+------------------
+
+Both Computer Algebra Systems (CASs) and 2D Dynamic Geometry
+Systems (DGSs) have reached a high level of development.
+Moreover, some 3D DGS like Cabri3D and the free Calques3D, have
+recently been developed.
+
+Powerful packages devoted to Euclidean Geometry have been
+developed in CASs like Maple or Derive, but CASs have
+incorporated neither mouse drawing capabilities nor dynamic
+capabilities.
+
+Meanwhile, the well-known 2D DGSs (Cabri Geometry, The Geometer's
+Sketchpad, Cinderella, GeoGebra...) do not provide algebraic
+facilities.
+
+There have been different attempts to connect 2D DGS with CAS (a
+need underlined years ago by Tomas Recio). The possible
+strategies for collaboration can be classified the following way
+(Roanes-Lozano):
+
+- To develop a new system that integrates a new DGS and a new CAS.
+  Examples: Geometry Expert, Java Geometry Expert, The Algebraic
+  Geometer.
+
+- To develop a new DGS that can communicate with existing CASs.
+  Examples: GEOTHER & Epsilon, The Algebraic Geometer, GDI.
+
+- To develop an external translator that allows an existing DGS
+  to communicate with an existing CAS, what has the advantage of
+  reusing software. Example: paramGeo (by Roanes and Roanes, that
+  connects The Geometer's Sketchpad v.3 and v.4 with Maple and
+  Derive, and includes the development of the corresponding Derive
+  and Maple geometric packages --denoted paramGeo).
+
+Observe that The Algebraic Geometer appears in two classes, as it
+incorporates a small internal CAS but can also communicate with
+the external CASs Maple and Mathematica. Let us underline that in
+the case of this DGS, the communication with the CAS is
+bidirectional, that is, the results of the CAS can make the
+construction in the DGS change! It is, as far as we know, the
+only DGS with this surprising capability.
+
+Let us also underline that the authors of GDI and webDiscovery
+(Botana et al.) are working in the standardization of the
+connection of 2D DGS and CAS using (and evolving) the standard
+OpenMath. The goal is that, in the future, any 2D DGS with the
+possibility to export in OpenMath format would be able to access
+webDiscovery.
+
+Roanes and Roanes have been working for some years in automatic
+theorem proving and discovery in geometry, and have developed a
+Maple package for 3D geometry (paramGeo3D), that they have
+successfully used, for instance, in founding (and proving) some
+new (!) 3D geometric theorems.
+
+Regarding the 3D DGS - CAS connection, as far as we know, there
+were no connections until van Labeke reformed Calques3D so that it
+could provide a Mathematica-style output for the "History" of a
+construction. This was used by Botana et al., that, adopting our
+philosophy of software reuse, used this output in his system
+3D-LD (that calls the CAS CoCoA and Mathematica) and is oriented
+exclusively to the discovery of algebraic surfaces as loci of
+points.
+
+Now van Labeke has included in Calques3D the possibility to
+export in Maple-style the "History" of a construction in
+order to make it possible for Calques3D to collaborate with our
+Maple's paramGeo3D package.
+
+Our purpose in not only automatic-theorem proving and discovery
+in geometry, but a wider one: to explore 3D geometric problems
+(that can be drawn in a 3D extension of "rule-and-compass
+geometry") and to automatically obtain their equations (for any
+required purpose).
+
+We have therefore developed a "translator" Maple package that
+acts as a mediator between the orders exported by Calques 3D and
+those understood by Maple (after loading paramGeo3D package). This
+way many of Calques 3D's "commands" (those related with the "3D
+rule-and-compass geometry" mentioned above) are now accessible
+from Maple.
+
+The talk will be illustrated with simple but interesting examples,
+like:
+
+ - prove that the diagonals of a parallelepiped are concurrent
+ - obtain the coordinates of the common point to the diagonals of
+   a parallelepiped
+ - prove that the planes through two vertices and the midpoint of
+   the opposite side of a tetrahedron do intersect
+ - prove a 3D version of Desargues theorem (for triangles)
+ - prove a 3D version of Ceva and Menelaos theorems
+ - ...
+
+that are firstly drawn with Calques3D, and which "History" files
+are used by Maple to perform the corresponding computations.
+
+This work has clearly a didactic application in geometric problems
+exploration. Nevertheless, its main interest is to provide a
+convenient time-saving way to introduce data when dealing with a
+3D extension of "rule and compass Geometry", which has a wider
+scope than only educational purposes.

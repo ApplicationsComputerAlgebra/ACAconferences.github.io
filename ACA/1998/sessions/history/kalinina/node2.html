@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The Tree Representation.
+The Schemes Received at Different Rounds of the Tree</TITLE>
+<META NAME="description" CONTENT="The Tree Representation.
+The Schemes Received at Different Rounds of the Tree">
+<META NAME="keywords" CONTENT="kalinina">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="kalinina.css">
+</HEAD>
+<BODY >
+
+<H1><A NAME="SECTION00020000000000000000">
+The Tree   Representation.
+The  Schemes Received at Different Rounds of the Tree</A>
+</H1>
+
+<P>
+The structure  of  algebraic  expression  is  not  in its
+essence linear. The tree representation of expression presents
+full  information about syntax structure of the expression and
+clearly points out linkages between its elements.
+
+<P>
+Ab initio  KS  represented  the  tree  of  expressions as a
+sequence of numerated strings,  where the first element  of  a
+string  was  the  operation  of this string and other elements
+were the operands of the scheme.
+
+<P>
+The KS may be received from Kantorovich graph.
+   This graph is resembles  data flow diagram. The different
+directions  produced different schemes.
+
+<P>
+For example,
+for the expression
+
+<P>
+<PRE>
+    EX = (v*w + v**2 + 9) * (2*cos(v) + 7)
+</PRE>
+<P>
+the Kantorovich schemes may be next.
+
+<P>
+For instance,
+
+<P>
+<PRE>
+Scheme 1
+T1 =V*W      T2 =V**2     T3 =T1+T2     T4 =cos(v)
+T5 =2*T4     T6 =T5+7     T7 = T3+9     EX =T7*T6
+
+Scheme 2.
+T4 =cos(v)   T5 =2*T4     T6 =T5+7      T1 = v*w
+T2 =v**2     T3 =T1+T2    T7 =T3+9      EX = T7*T6
+</PRE>
+<P>
+and at last by directing from level to level we recieve
+
+<P>
+<PRE>
+scheme 3:
+T1 =v*w      T2 =v**2     T3 =cos(v)    T5 =2*T4
+T3 =T1+T2    T6 =T5+7     T7 =T3+9      EX = T7*T6
+</PRE>
+<P>
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../index.html> IMACS ACA'98</A>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,1206 @@
+From akritas@uth.gr Wed May 01 10:07:56 2002
+Return-path: <akritas@uth.gr>
+Envelope-to: wester@math.unm.edu
+Delivery-date: Wed, 01 May 2002 10:07:56 -0600
+Received: from titan.uth.gr ([194.177.200.6] helo=uth.gr)
+	by math.math.unm.edu with esmtp (Exim 3.22 #3)
+	id 172we3-0001ML-00
+	for wester@math.unm.edu; Wed, 01 May 2002 10:07:55 -0600
+Received: from uth.gr (vol-ppp4.dialup.uth.gr [195.251.17.134])
+	by uth.gr (8.9.3+Sun/8.9.1) with ESMTP id TAA26547
+	for <wester@math.unm.edu>; Wed, 1 May 2002 19:07:13 +0300 (EET DST)
+Message-ID: <3CD0130E.A717E8D2@uth.gr>
+Date: Wed, 01 May 2002 19:08:47 +0300
+From: alkis akritas <akritas@uth.gr>
+X-Mailer: Mozilla 4.72 [en] (Windows NT 5.0; I)
+X-Accept-Language: en
+MIME-Version: 1.0
+To: "wester@math.unm.edu" <wester@math.unm.edu>
+Subject: abstracts of the Symbolic-Numeric session
+Content-Type: multipart/mixed;
+ boundary="------------A85D6F8CCA02EFCCBFD84E3D"
+Status: RO
+Content-Length: 42833
+
+This is a multi-part message in MIME format.
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: text/plain; charset=iso-8859-7
+Content-Transfer-Encoding: 7bit
+
+Michael, I thought I will send you the other abstracts as well to be
+included in your
+electronic archive. Alkis
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: application/x-tex;
+ name="absemb.tex"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="absemb.tex"
+
+
+\documentstyle[11pt]{article}
+
+\oddsidemargin=0cm \textwidth=15.5cm \textheight=21.5cm
+\topmargin -1.0cm
+
+\begin{document}
+
+\newcommand{\qed}{\hfill$\Box$}
+\newcommand{\proof}{\noindent {\bf Proof. }}
+\newcommand{\eproof}{\hfill $\Box$ \vspace{0.2cm}}
+%\newcommand{\example}{\noindent {\bf Example.\enspace}}
+%\newcommand{\remark}{\noindent {\bf Remark.\enspace}}
+\newcommand{\note}{\noindent {\bf Note. }}
+\newcommand{\undertilde}[1]{\mbox{$#1$ \hspace{-4.4mm} \raisebox{-.7ex}
+{\tiny $\sim$}}}
+%\newcommand{\Undertilde}[1]{\mbox{$#1$\hspace{-6mm}\raisebox{-.8ex}{\small
+%$\sim$}}}
+\newcommand{\bin}[2]{\left(\begin{array}{@{}c@{}}
+           #1 \\#2 \end{array}\right)}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
+\newtheorem{definition}{Definition}
+\newtheorem{notation}{Notation}
+\newtheorem{summary}{Summary}
+\newtheorem{proposition}{Proposition}
+
+
+
+\title{\bf An algorithm finding submatrices of Hadamard matrices and the
+complete pivoting conjecture}
+
+\author{C. Koukouvinos\thanks{Department of Mathematics,
+National Technical University of Athens, Zografou 15773, Athens,
+Greece.}, E. Lappas ,$\!\!^{*}$ M. Mitrouli \thanks{Department of
+Mathematics, University of Athens, Panepistemiopolis 15784,
+Athens, Greece.}, and Jennifer Seberry\thanks{School of
+Information Technology and Computer Science, University of
+Wollongong, Wollongong, NSW, 2522, Australia.}}
+
+\date{}
+\maketitle
+
+
+\begin{center}
+{\Large Abstract}
+\end{center}
+
+\normalsize
+ An $n$-dimensional Hadamard matrix is an $n$ by
+$n$ matrix of $1's$ and $-1's$ with $HH^T=nI_n.$ A Hadamard
+matrix is said to be {\em normalized} if it has its first row and
+column all 1's. If not, we can normalize the Hadamard matrix by
+multiplying rows and columns by -1 where is needed. In these
+matrices, $n$ is necessarily $2$ or a multiple of $4.$
+
+Let $A$ be an $n \times n$ real matrix. Apply on it Gaussian
+elimination with complete pivoting \cite{Wilk3}. The growth
+factor of $A$ is defined as follows:
+$$g(n,A) = \frac{\max_{i,j,k}|a_{ij}^{(k)}|}{|a_{11}^{(0)}|}$$
+where $a_{ij}^{(k)},~~k=1,2,\ldots,n-1$ denotes the $(i,j)$th
+element that occurs at the $k$-th step of the elimination. The
+elements $a_{ii}^{(n-1)}$ are called pivots. We say that a matrix
+$A$ is completely pivoted (CP) if the rows and columns have been
+permuted so that Gaussian elimination with no pivoting satisfies
+the requirements for complete pivoting.
+
+\noindent Let $g(n,A)$ denote the growth associated with Gaussian
+elimination on a CP $n \times n$ matrix $A$ and $g(n)=\sup \{\,
+g(n,A) \,\}$. The problem of determining $g(n)$ for various
+values of $n$ is called the {\em growth problem}.
+\smallskip
+
+The determination of $g(n)$ remains a challenging problem.
+Wilkinson in \cite{Wilk2},\cite{Wilk3} noted that there were no
+known examples of matrices for which $g(n) > n$. In \cite{Cry}
+Cryer conjectured that ``$g(n,A) \leq n$, with equality if and
+only if $A$ is a Hadamard matrix". This was proved to be
+``untrue" in \cite{Gou}.
+
+Since Wilkinson's initial conjecture seems to be connected with
+Hadamard matrices the following, more refined, conjecture was
+posed (see \cite {Cry},\cite{Day},\cite{mmck1}):
+
+\ \\
+\smallskip
+\noindent {\bf Conjecture (The growth conjecture for Hadamard
+matrices)}
+
+Let $A$ be an $n\times n$ CP Hadamard matrix. Reduce $A$ by GE.
+Then
+\begin{enumerate}
+\item [(i)] $g(n,A)=n$.
+\item [(ii)] The four last pivots are equal to $\frac{n}{2}$ or $\frac{n}{4},\frac{n}{2},
+\frac{n}{2},n$.
+\item [(iii)] The fifth last pivot
+can take the values $\frac{n}{3}$ or $\frac{n}{2}$.
+\item [(iv)] The sixth last pivot
+can take the values $\frac{n}{4},$ $\frac{n}{10/3},$ or
+$\frac{n}{8/3}$.
+\item [(v)] Every pivot before the last has magnitude at most
+$\frac{n}{2}$.
+\item [(vi)] The first four pivots are equal to $1,2,2,4$.
+\item [(vii)] The fifth pivot can take the value $2$ or $3$. The value
+$3$ appears if the Hadamard matrix contains the $5 \times 5$
+$D$-optimal design.
+\item [(vii)] The sixth pivot can take the values
+$\frac{10}{3}$ or $\frac{8}{3}$ or $4$. The value of
+$\frac{10}{3}$ appears if the Hadamard matrix contains the $6
+\times 6$ $D$-optimal design.
+
+\end{enumerate}
+
+
+\noindent {\bf Notation} Write $A$ for a matrix of order $n$,
+which is completely pivoted (CP). Write $A(j)$ for the absolute
+value of the determinant of the $j \times j$ principal submatrix
+in the upper lefthand corner of the matrix $A$. The magnitude of
+the pivots appearing after the application of GE operations is
+given by
+
+\begin{equation}
+p_j =  A(j)/A(j-1).
+\end{equation}
+
+Relation (1) gives the pivots as quotients of determinants. Thus,
+knowing the values of $A(j),~j=1,2,\ldots,n$ we can dirctly
+derive the values of pivots. Since we are interested for CP
+matrices, it is useful to search for embedded matrices in Hadamard
+matrices having maximum value of determinants.
+
+A D-optimal design of order $n$ is an $n \times n$ matrix with
+entries $\pm 1$ having maximum determinant. It is well known that
+Hadamard matrices of order $n$ have absolute value of determinant
+$n^{n/2}$ and thus are D-optimal designs for $n \equiv 0 \ (mod \
+4)$. In the present work, we are interested for embedding
+D-optimal designs of orders $m=5,6$ and $7$ in Hadamard matrices
+of order $n$.
+
+In this paper we use an algebraic method to discover embedded
+matrices in Hadamard matrices. More precisely, we give a new proof
+that the $D$-optimal design of order $5$ always exists in the
+Hadamard matrix of order $12$. We show that a Hadamard matrix of
+order $16$ may contain a $D$-optimal design of order $5$ with
+determinant $48$, or a $\pm 1$ matrix of order $5$ with
+determinant $32$. Using these results and an algorithm specifying
+minors of Hadamard matrices, we are able to decide the first and
+last seven pivots, for all classes of Hadamard matrices of orders
+$n=8,12,16$ and $20.$
+
+
+\begin{thebibliography}{99}
+
+\bibitem{Cry}
+C.W. Cryer, Pivot size in Gaussian elimination,
+{\it Numer. Math.}, 12 (1968), 335-345.
+
+\bibitem{Day}
+J. Day, and B. Peterson, Growth in Gaussian elimination,
+{\it Amer. Math. Monthly}, 95 (1988), 489-513.
+
+\bibitem{edel1}
+A. Edelman and D. Friedman, On the complete pivoting conjecture for a
+Hadamard matrix of order 12,
+{\it Linear and Multilinear Algebra}, 38 (1995), 181-187.
+
+\bibitem{Gou}
+N. Gould, On growth in Gaussian elimination with pivoting,
+{\it SIAM J. Matrix Anal. Appl.}, 12 (1991), 354-361.
+
+
+\bibitem{kms}
+C. Koukouvinos, M. Mitrouli and J. Seberry,
+Bounds on the maximum determinant for (1,-1) matrices,
+{\em Bull. Inst. Combin. Appl.}, 29 (2000), 39-48.
+
+
+\bibitem{ckmmse3}
+C. Koukouvinos, M. Mitrouli and J. Seberry,
+An algorithm to find formulae and values of minors
+of Hadamard matrices, {\it Linear Algebra and its Appl.}, 330 (2001), 129-147.
+
+\bibitem{mmck1}
+M. Mitrouli and C. Koukouvinos, On the growth problem for $D$-optimal designs,
+{\em Proceedings of the First Workshop on Numerical Analysis
+and Applications}, Lecture Notes in Computer Science, Vol. 1196, Springer
+Verlag, Heidelberg, (1996), 341-348.
+
+\bibitem{sxkm}
+J. Seberry, T. Xia, C. Koukouvinos, and M. Mitrouli, The maximal determinant
+and subdeterminants of $\pm 1$ matrices, (submitted).
+
+
+\bibitem{Wilk2}
+J. H. Wilkinson, Rounding Errors in Algebraic Processes,
+{\it Her Majesty's Stationery Office}, London, 1963.
+
+\bibitem{Wilk3}
+J. H. Wilkinson, The Algebraic Eigenvalue Problem,
+{\it Oxford University Press}, London, 1988.
+
+\end{thebibliography}
+
+\end{document}
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: application/x-tex;
+ name="Adam1.tex"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="Adam1.tex"
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{graphicx}
+
+
+
+\textheight 240mm  %240/12
+\textwidth  160mm   %160/12
+\topmargin -10mm
+\begin{document}
+
+\title{An Improved Algorithm for Diophantine Equations in One Variable }
+
+\author{Adam W. Strzebo\'{n}ski\footnote{ Wolfram Research, Inc.,
+  100 Trade Center Drive, Champaign, IL 61820, USA}}
+
+
+\date{Summer 2002}
+\maketitle
+
+\begin{abstract}
+
+We present a new algorithm for computing integer roots of
+univariate polynomials. For a polynomial f in Z[t] we can find the
+set of its integer roots in a time polynomial in the size of the
+sparse encoding of f. An algorithm to do this was given in F.
+Cucker, P. Koiran, S. Smale, "A Polynomial Time Algorithm for
+Diophantine Equations in One Variable" (JSC 27 (1999), 21-29.) The
+paper introduces a polynomial time method for computing sign of f
+at integral points, and then finds integer roots of f by isolating
+the real roots of all polynomials in the sparse derivative
+sequence of f, up to unit-length intervals. We propose to isolate
+the roots of f using a "sparse variant" of Fourier`s theorem. We
+show that our algorithm requires a smaller number of polynomial
+sign evaluations, and present an empirical comparison of our
+implementations of the original and of the improved algorithm.
+
+
+
+\end{abstract}
+
+
+\end{document}
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: application/x-tex;
+ name="Adam2.tex"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="Adam2.tex"
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{graphicx}
+
+
+
+\textheight 240mm  %240/12
+\textwidth  160mm   %160/12
+\topmargin -10mm
+\begin{document}
+
+\title{Cylindrical Algebraic Decomposition Using Arbitrary-Precision
+Floating Point Arithmetic }
+
+\author{Adam W. Strzebo\'{n}ski\footnote{ Wolfram Research, Inc.,
+  100 Trade Center Drive, Champaign, IL 61820, USA}}
+
+
+\date{Summer 2002}
+\maketitle
+
+\begin{abstract}
+
+
+
+The stack construction phase of the cylindrical algebraic
+decomposition (CAD) algorithm can be made significantly faster by
+using sample points with arbitrary-precision floating point (APFP)
+number coordinates. Mathematica's APFP numbers are floating point
+numbers carrying information about their implied precision, so
+APFP number arithmetic is similar to interval arithmetic with
+intervals represented by center points and radii. We show
+empirical results comparing our implementations of CAD using exact
+algebraic number sample points and APFP number sample points, and
+discuss validation of the results obtained using the APFP number
+sample points.
+
+
+
+
+\end{abstract}
+
+
+\end{document}
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: application/x-tex;
+ name="AkStrzRootIsolation.tex"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="AkStrzRootIsolation.tex"
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{graphicx}
+
+
+
+\textheight 240mm  %240/12
+\textwidth  160mm   %160/12
+\topmargin -10mm
+\begin{document}
+
+\title{Effective Real Root Isolation Using Continued Fractions }
+
+\author{Alkiviadis G. Akritas\footnote{University of Thessaly, Department of
+  Computer and Communication Engineering, GR-38221 Volos,
+  Greece}\hspace{.1in} and\hspace{.1in}Adam W. Strzebo\'{n}ski\footnote{ Wolfram Research, Inc.,
+  100 Trade Center Drive, Champaign, IL 61820, USA}}
+
+\date{Summer 2002}
+\maketitle
+
+\begin{abstract}
+Recent progress in polynomial elimination has rendered the
+computation of the real roots of ill-conditioned polynomials of
+high degree (over $1000$) with huge coefficients (several thousand
+digits) a critical operation in computer algebra.
+
+To rise to the occasion, the only method-candidate that has been
+considered by various authors for modification and improvement has
+been the Collins-Akritas {\em bisection} method \cite{CA1976}. The
+most recent example is a preprint by Rouillier and Zimmermann
+\cite{RZ2002}, where the  authors try to present
+
+\begin{quote}...all the known algorithms in a
+unified framework. Using that framework, a new algorithm is
+presented, which is optimal in terms of memory usage and as fast
+as both Collins and Akritas' algorithm and Krandick variant
+...\end{quote}
+
+However, the authors of that preprint failed to include our own
+{\em continued fractions} method \cite{ABS1994} in their
+consideration. Developed in 1994 for implementation in the
+computer algebra system {\em Mathematica}, our method is based on
+Vincent's theorem \cite{V1836} and is amply described in
+\cite{Akr1980}, \cite{Akr1989} and \cite{ABS1994}.
+
+Experimentation with the data presented in the preprint
+\cite{RZ2002} showed that, with respect to time, our continued
+fractions method is by far superior to the one presented there,
+whereas the two are about equal with respect to  space.
+
+Moreover, it should be kept in mind that there is only one
+unifying principle, to wit {\em continued fractions,} which in the
+Collins-Akritas bisection method are {\em indirectly} computed
+from the intervals. Therefore, our method {\em is} the unifying
+framework.
+
+\end{abstract}
+\begin{thebibliography}{99}
+
+\bibitem{Akr1980} Alkiviadis G. Akritas, {\em An implementation of Vincent's Theorem},
+ Numerische Mathematik, {\bf 36}(1980), pp. 53--62.
+\bibitem{Akr1989}  Alkiviadis G. Akritas, {\em Elements of Computer Algebra---with
+Applications}, Wiley, New York, NY, 1989. Available also in
+Russian, MIR Publishers, Moscow, 1994 (with new material).
+\bibitem{ABS1994}  Alkiviadis G. Akritas, Alexei V. Bocharov and Adam W. Strzebo\'{n}ski, {\em
+Implementation of real root isolation algorithms in Mathematica},
+Abstracts of the International Conference on Interval and
+Computer-Algebraic Methods in Science and Engineering (Interval
+'94),  St. Petersburg, Russia, March 7--10, (1994), pp.23--27.
+\bibitem{CA1976} George E. Collins and Alkiviadis G. Akritas, {\em Polynomial real root isolation
+using Descartes' rule of signs}, Proceedings of the 1976 ACM
+Symposium on Symbolic and Algebraic Computations, Yorktown
+Heights, N.Y., (1976),pp. 272--275.
+\bibitem{RZ2002} Fabrice Rouillier and Paul Zimmermann, {\em Efficient isolation of polynomial
+real roots}, preprint, 2002.
+\bibitem{V1836} A.J.H. Vincent, {\em Sur la resolution des \'{e}quations num\'{e}riques}, Journal
+de Math\'{e}-matiques Pures et Appliqu\'{e}es, {\bf 1} (1836), pp.
+341--372 .
+
+\end{thebibliography}
+
+\end{document}
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: application/x-tex;
+ name="AlkisTshE.tex"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="AlkisTshE.tex"
+
+\documentclass[10pt,a4]{article}
+
+\begin{document}
+
+
+\title{Computations in Modules over Commutative Rings}
+
+\author{Alkiviadis G. Akritas\footnote{University of Thessaly, Department of
+  Computer and Communication Engineering, GR-38221 Volos,
+  Greece}\hspace{.1in} and\hspace{.1in}Gennadi I. Malaschonok\footnote{Tambov
+University,
+  Department of Mathematics, Tambov, Russia}}
+
+\date{Summer 2002}
+\maketitle
+
+
+\begin{abstract}
+
+
+
+Our talk is a  review of results on matrix computations over
+commutative domains. The following problems are examined:
+\begin{itemize}
+  \item solution of systems of linear equations,
+  \item computation of determinants,
+  \item computation of adjoint and inverse matrices,
+  \item factorization of adjoint matrices,
+  \item computation of subresultant polynomial remainder sequences and GCD of
+polynomials, and
+  \item computation of the characteristic polynomial of a
+matrix.
+\end{itemize}
+
+We start our review with C.L. Dodgson's paper---the first
+efficient method for computing determinants  and solving systems
+of linear equations in commutative domains. Then, we discuss two
+efficient $O(n^3)$ methods for solving systems of linear
+equations---the method of forward and backward direction (FB) and
+one pass method (OP).
+
+For matrix problems over a field the most effective methods are
+those with complexity equal to that of matrix multiplication.
+Strassen initiated these investigations and proposed the first
+fast method of matrix multiplication and its implementation in
+solving systems of linear equations over a field.
+
+Correspondingly, to solve matrix problems over commutative
+domains, methods were developed, in the past few years,  having
+complexity equal to that of matrix multiplication. We present such
+methods for the first four of the problems itemized above.
+
+Most of these methods are presented with examples and complexity
+evaluations in the number of multiplicative operations in the
+commutative domain. We assume that the standard ring operations
+(+, --, $\times$) exist in the commutative domain and that we can
+always execute the "exact division", i.e. for a given product $ab$
+and nonzero multiplier $a$ we can always compute the second
+multiplier $b$.
+
+For the last of the itemized problems above, there is no known
+method with complexity equal to that of matrix multiplication. The
+best known method for computing the characteristic polynomial of a
+matrix  over a commutative domain has complexity $O(n^3)$, where
+$n$ is the dimension  of the matrix. The development of a faster
+algorithm is an open problem.
+
+For computations over commutative domains we have the following
+results:
+\begin{itemize}
+
+  \item The complexity of the  $O(n^3)$ methods  (FB) and (OP)
+  for solving systems of linear equations of size $n\times m$ is:
+
+$$ M_{(FB)}=\frac{4n^{2}m-2n^{3}-2nm-3n^{2}- 2m+7n- 2}2, $$ $$
+M_{(OP)}=\frac{12n^{2}m-8n^{3}-6nm-9n^{2}-12m+ 8n+12}6. $$
+
+Suppose that the complexity of the given method for matrix
+multiplications is $\gamma n^\beta+o(  n^\beta)$, where $\gamma$
+and $\beta$ are constants, and $n$ is the order of the matrix.
+(For example, we know that for $\beta=3$ we have $\gamma=1$, and
+for $\beta=\log_2 7$ and  $n=2^N$ we have $\gamma=1$ as well.)
+Then, the complexity of the recursive methods for solving systems
+of size $n\times m$ is $$ S(n,m)= \gamma {n^{\beta} \over 2^\beta
+}\big[ (4 {m \over n}-2){1-n^{2-\beta} \over 1-2^{2-\beta}} -
+{1-n^{1-\beta} \over 1-2^{1-\beta}}\big] + o(n^{\beta-1}m ). $$
+%
+\item The complexity of the method for the computation of the determinant of a matrix of order $n$
+is $S(n,n)$. The complexity of the method for the computation of
+the kernel of a linear operator is $S(n,m)$.
+
+\item The complexity of the method for the computation and the factorization
+of the adjoint matrix is:
+%
+$$ F(n)=6\gamma  n^\beta \frac {1-(n/2)^{1-\beta}} {{2^\beta}-2}+
+o(n^\beta) $$
+
+\item The complexity of the method for the computation of the subresultant polynomial
+remainder sequences and GCD of  two polynomials of degrees
+ $p$ and $q$ is $S(p+q,p+q)$.
+
+
+\item Finally, the complexity of the best method (we know today) for the computation
+of the characteristic polynomial of a matrix of order $n$  is
+$\frac 5 3 n^3+ O(n^2)$.
+\end{itemize}
+
+
+
+\end{abstract}
+\end{document}
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: application/x-tex;
+ name="botsarov.tex"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="botsarov.tex"
+
+\documentclass[12pt,a4paper]{article}
+
+  \usepackage{graphicx}
+
+  \textheight 240mm  %240/12
+  \textwidth  160mm   %160/12
+  \topmargin -10mm
+  \begin{document}
+
+  \title{The Curious Algebra FX 2.0 }
+
+  \author{Alexei Bocharov\footnote{Unaffiliated talk; contact first Author as alexeib@microsoft.com}
+  \hspace{.1in} and\hspace{.1in}Philip Todd\footnote{Saltire Software Inc.,P.O. Box 1565
+  Beaverton, OR 97075,USA}}
+
+  \date{Summer 2002}
+  \maketitle
+
+  \begin{abstract}
+  Casio Computers product "Algebra FX 2.0" introduced in 1999 is worthy
+  of an entry in Guinness Book of records as the world's smallest commercial
+  computer algebra device. But this is not the only thing that is curious about
+  it.
+
+  Another unusual feature of FX 2.0 is "algebra tutor" mode which
+  exposes common steps in solving algebraic and calculus problems
+  (as opposed to presenting the user with the "magical", out of the box
+  solution).
+
+  This talk is an informal insider story about why and how FX 2.0 had
+  been designed and implemented. We outline the scope of computer
+  algebra functionality that we managed to squeeze into 128K dynamic
+  memory pool and point out some constraints that stringent resource
+  limitations imposed on the product.
+
+  The teacher/student perspective on the calculator is briefly summarized.
+
+
+  \end{abstract}
+
+  \end{document}
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: application/x-tex;
+ name="JohnM.tex"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="JohnM.tex"
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{graphicx}
+
+
+
+\textheight 240mm  %240/12
+\textwidth  160mm   %160/12
+\topmargin -10mm
+\begin{document}
+
+\title{Pathology of Symbolic Dimensionality on Continuous Multiphysics
+Theory Representation and Utilization }
+
+\author{John G. Michopoulos\footnote{ Naval Research Laboratory Code 6304, Washington DC 20375, USA e-mail:
+john.michopoulos@nrl.navy.mil}}
+
+
+\date{Summer 2002}
+\maketitle
+
+\begin{abstract}
+
+
+
+Symbolic algebra has been traditionally used for constitutive
+equation generation and representation to achieve systemic
+behavior modeling within the context of term calculus with
+equational logic. However the great majority of the historical
+attempts have been based on formulations established over the
+field of real numbers.
+
+In the present work an attempt is made to demonstrate that some
+aspects of the complexity and pathology of the derived
+formulations is an artifact of the unexamined apriori assumptions
+made by the research community with regard to the algebraic and
+syntactic dimensionality of the corresponding representations.
+
+It shown that raising the algebraic dimensionality via the help of
+hypercomplex algebras can help alleviate distinct problems that
+lead to the appearance of unsolvable or computationally
+inefficient representations for certain systemic models.
+
+In addition, the concepts of Directed Acyclic Graphs (DAG) and
+exact sequences in the context of complex tensor space mappings
+are combined to introduce the notion of Algebraic Solution Graphs
+(ASGs) in 3-D visual space as a tool for efficiently representing
+syntactically the behavioral modeling of continuous multiphysics
+systems. This approach reduces the problem of solving equations to
+the problem of following a path on a DAG.
+
+An example of utilizing both approaches is used to capture the
+behavior models of Anisotropic Electrothermoelastic continuous
+systems. It is demonstrated that the constructed ASGs can be used
+for recording available solutions, adding on new solutions,
+selecting useful solutions for the problem finding functions on
+the modeled systems whose critical values of performance are
+multi-field stimulus and geometry invariant.
+
+A Java-3D environment implementation for ASG management is
+demonstrated and the program of connecting it to Mathematica's
+rewriting engine along with a declarative language interpretive
+environment is presented.
+
+
+
+
+
+
+\end{abstract}
+
+
+\end{document}
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: application/x-tex;
+ name="mm_abstract2.tex"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="mm_abstract2.tex"
+
+\documentstyle[11pt]{article}
+
+  \oddsidemargin=0cm \textwidth=15.5cm \textheight=21.5cm
+  \topmargin -1.0cm
+
+  \begin{document}
+
+  \newcommand{\qed}{\hfill$\Box$}
+  \newcommand{\proof}{\noindent {\bf Proof. }}
+  \newcommand{\eproof}{\hfill $\Box$ \vspace{0.2cm}}
+  %\newcommand{\example}{\noindent {\bf Example.\enspace}}
+  %\newcommand{\remark}{\noindent {\bf Remark.\enspace}}
+  \newcommand{\note}{\noindent {\bf Note. }}
+  \newcommand{\undertilde}[1]{\mbox{$#1$ \hspace{-4.4mm} \raisebox{-.7ex}
+  {\tiny $\sim$}}}
+  %\newcommand{\Undertilde}[1]{\mbox{$#1$\hspace{-6mm}\raisebox{-.8ex}{\small
+  %$\sim$}}}
+  \newcommand{\bin}[2]{\left(\begin{array}{@{}c@{}}
+             #1 \\#2 \end{array}\right)}
+
+  \newtheorem{theorem}{Theorem}
+  \newtheorem{conjecture}{Conjecture}
+  \newtheorem{corollary}{Corollary}
+  \newtheorem{lemma}{Lemma}
+  \newtheorem{remark}{Remark}
+  \newtheorem{example}{Example}
+  \newtheorem{definition}{Definition}
+  \newtheorem{notation}{Notation}
+  \newtheorem{summary}{Summary}
+  \newtheorem{proposition}{Proposition}
+
+  \title{\bf Approximate Greatest Common Divisor of many polynomials and
+  generalised resultants}
+
+  \author{S. Fatouros\thanks{Control Engineering Centre, School of
+  Engineering, City University, Northampton Square, London,
+  EC1V0HB, UK.}, N. Karcanias ,$\!\!^{*}$ M. Mitrouli \thanks{Department of
+  Mathematics, University of Athens, Panepistemiopolis 15784,
+  Athens, Greece.}, and G. Halikias$\!\!^{*}$.}
+
+  \date{}
+  \maketitle
+
+  \begin{center}
+  {\Large Abstract}
+  \end{center}
+
+  \normalsize
+  Some of the key problems of algebraic computations are the computation
+  of the greatest common divisor (GCD) and the computation of the least
+  common multiple (LCM) of a set of polynomials. From the control theory
+  applications viewpoint, the GCD is linked with the characterisation of
+  zeros of representations, whereas LCM is connected with the derivation
+  of minimal fractional representations of rational models. The computation
+  of GCD is a classical problem of `nongeneric' computations (that is for
+  a generic set of polynomials their GCD is $1$) whereas that of LCM is a
+  `normal' computation (that is for any set a nontrivial solution always
+  exists). Nongeneric computations has as one of its most important topics
+  the study of almost zeros \cite{kgh}.
+  The two problems are inter-related and their relationships are
+  presented in \cite{km1}. Since the existence of a GCD is a property that
+  holds for specific sets and it is not true generically, extra care is
+  needed in the definition of the notion of `approximate GCD' and the
+  development of efficient numerical algorithms calculating correctly the
+  required GCD. The problem of finding the GCD of a set of polynomials
+  has been considered before  \cite{pbar}, \cite{mk}, \cite{km2}, \cite{noda}.
+  The numerical
+  computation of the GCD in a robust way has been considered using
+  methodologies such us the ERES \cite{mk}, \cite{mkk}, extended ERES \cite{kmf},
+  matrix pencils \cite{km2} etc. Such methodologies transform the GCD
+  computation to our equivalent problem of constant matrix computations.
+  The essence of the computation of approximate solutions is that they are
+  based on transforming exact procedures to their numerical versions.
+
+  \ \\
+  In this paper, an alternative characterisation of the approximate GCD
+  of many polynomials is given that also allows the evaluation of accuracy
+  of the corresponding `approximate GCD computation'. This alternative
+  approach is based on some recent results on the factorisation  of the
+  generalised resultant of a set of polynomials into reduced resultants and
+  appropriate Toeplitz matrices representing the exact GCD \cite{fk}. This
+  allows the reduction of `approximate GCD' computation to an equivalent
+  `approximate factorisation' of generalised resultants. This alternative
+  approach may be formulated as a structured optimization problem (distance
+  between structured matrices). We use this new framework to evaluate the
+  `accuracy' of the `approximate GCD' of a certain degree. This evaluation
+  is equivalent to finding the minimal perturbation on the original set of
+  polynomials, which make the selected given degree `approximate GCD'
+  exact for the perturbed set. The later makes precise the meaning of
+  approximate GCD, since it relates it to the exact notion on a perturbed
+  set.
+
+  \begin{thebibliography}{99}
+
+  \bibitem{fk}
+  S. Fatouros and N. Karcanias, The GCD of many polynomials and the
+  factorisation of generalised resultants,
+  {\it Research Report}, Control Engineering Centre, City University,
+  London, 2002.
+
+  \bibitem{kgh}
+  N. Karcanias, G. Giannakopoulos and M. Hubbard, Almost zeros of a set
+  of polynomials, {\em Int. Journ. Control}, 40 (1984), 673-698.
+
+  \bibitem{km1}
+  N. Karcanias and M. Mitrouli, Numerical computation of the
+  least common multiple of a set of polynomials, {\em Reliable Computing},
+  Issue 4, 6 (2000b), 439-457.
+
+  \bibitem{km2}
+  N. Karcanias N. and M. Mitrouli, A Matrix Pencil Based Numerical
+  Method for the Computation of the GCD of Polynomials, {\it IEEE Trans. Autom.
+  Cont.},  39 (1994) , 977-981.
+
+  \bibitem{kmf}
+  N. Karcanias, M. Mitrouli and S. Fatouros, Computation of
+  normal normal factorisation of polynomials using resultant sets
+  , {\it IFAC Symposium on System Structure and Control.}, Prague,
+  September 2001.
+
+  \bibitem{mk}
+  M. Mitrouli and N. Karcanias, Computation of the GCD of polynomials using
+  Gaussian transformation and shifting, {\it Int. Journ. Control}, 58 (1993)
+  , 211-228.
+
+  \bibitem{mkk}
+  M. Mitrouli, N. Karcanias and C. Koukouvinos, Further numerical
+  aspects of the ERES algorithm for the computation of the greatest common
+  divisor of polynomials and comparison with other existing methodologies,
+  {\it Utilitas Mathematica}, 50 (1996), 65-84.
+
+  \bibitem{noda}
+  M. Noda M. and T. Sasaki, Approximate GCD and its applications
+  to ill-conditioned algebraic equations,
+  {\it Jour. of Comp. and Appl. Math.}, 38 (1991), 335-351.
+
+  \bibitem{pbar}
+  I. S. Pace  and S. Barnett, Comparison of algorithms for calculation of GCD
+  of polynomials, {\it Int. Journ. System Scien.}, 4 (1973) , 211-226.
+
+  \end{thebibliography}
+
+  \end{document}
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: application/x-tex;
+ name="NatashaSN_shortabstract.tex"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="NatashaSN_shortabstract.tex"
+
+ \documentclass[10pt]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,euscript}
+
+\date{}
+\textheight 20cm  \textwidth 13cm
+
+\title{On application of Szeg\"o kernels for approximation of holomorphic
+functions by series }
+\author{N.Malaschonok}
+\begin{document}
+\maketitle
+
+In approximation theory the following problem is known. To
+represent a function holomorphic in a full $p$-circular domain \
+$\bar G \subset \Bbb C^p$ by a series of functions holomorphic in
+$G$ and naturally connected with the domain $G$. Let $F$ be
+holomorphic in $\bar G$, $h$ - holomorphic in $G$. Consider $p$
+sequences of complex numbers \  $\beta_k^{(i)}, \ \
+|\beta_k^{(i)}|<1,\ \ |\beta_k^{(i)}| \to 1, \ i = 1, \ldots, p$.
+ \ \ Denote \ $z=(z^1, \ldots, z_p),\ \ z^n = z_1^{n_1}\ldots
+z_p^{n_p}, \ \ k = (k_1, \ldots, k_p)$,\ \ $\beta_k =
+(\beta_{k_1}^{(1)}, \ldots, \beta_{k_p}^{(p)})$,\ \ $\beta_k z =
+(\beta_{k_1}^{(1)}z_1, \ldots, \beta_{k_p}^{(p)}z_p)$. The system
+of functions told about is \ $h_k(z) = h(\beta_k z)$. The
+function $F(z)$ is to be represented by the series $ \sum A_m
+h_m(z) $, call it {h}-series.
+
+There exists a method [3] to construct the sequences
+$\beta_k^{(p)}$ and to calculate the coefficients $A_m$, that
+allows {h}-series to converge with the following estimation for
+the coefficients:$$ |A_m| < C {\rm{exp}}(-\sum_{i=1}^p
+m_i^{1-\delta_i(m_i)}), \delta_i(k) \to 0, k \to \infty. $$
+
+The description of this method and its algorithmization are not
+under the consideration of our paper. It is interesting and
+important to construct an algorithm of calculating the function
+$h$, closely connected with $G$ and promoting a rapid convergence
+of {h}-series.
+
+Denote $d_n(G) = sup_{z \in G}|z^n|$. Fix a sequence $\alpha_n
+\in \Bbb C$ such that $$ \overline{\lim}_{|n| \to \infty} \root
+|n| \of{d_n(G) |\alpha_n|^{-1}} = 1, \ \ |n| = n_1 + \ldots +
+n_p. \eqno(1) $$ As a function $h(z)$  the function $ h (z) =
+\sum \alpha_n^{-1} z^n  $ has to be taken.
+
+We suggest the construction that exploits one property  of the
+Teylor coefficients of Szeg\"o kernel, proved by L.A.Aizenberg
+[2].
+
+Let $G^{(2)}$ be the "square" of $G$, i.e. $G^{(2)}$ consists of
+$(z_1^2, \ldots, z_p^2)$ for $z \in G$. Denote its boundary by
+$\partial G^{(2)}$, and by $|\partial G^{(2)}|$ its image in the
+positive octant of modulus $(|z_1|, \ldots, |z_p|)$. Let
+$\lambda$ be a finite measure on $|\partial G^{(2)}|$. Denote
+$\gamma_n(G) = \left(\int_{|\partial G^{(2)}|} |z^n| d \lambda
+\right)^{-1}$. The function  $h(z \bar \xi) = \sum \gamma_n (G)(z
+\bar \xi)^n$  is the Szeg\"o kernel constructed for the domain
+$G^{(2)}$.  The property pointed above is that the coefficients
+$\gamma_n^{-1}(G)$ may be taken as the numbers $\alpha_n$  in the
+construction of $h$.
+
+For example, the coefficients $\gamma_n(G)$ for the domain $G_k =
+\{(z_1, z_2): |z_1|^{2 \over k} + |z_2|^2 < 1, |z_1| \leq 1 \}$,
+denote them $\gamma^k_{n_1,n_2}, k = 1,2, \ldots$, are calculated
+in the explicit form. The boundary of \  $G^{(2)}_k$ \  is \
+$\partial G^{(2)}_k = \{(z_1, z_2): |z_1|^{1 \over k} + |z_2|  =
+1, 0 \leq |z_1| \leq 1 \}$. $|\partial G^{(2)}_k|$ \ and the
+measure $\lambda$ on it may be parametrized, respectively:
+$|z_2|=t, |z_1|=t^{1 \over k}$, $\lambda = t, 0 \leq t \leq 1 $.
+Then the coefficients $\gamma^k_{n_1,n_2}$ are calculated as the
+following: $$\gamma^k_{n_1,n_2} = \int_0^1 t^{n_2} (1-t^{1 \over
+k})^{n_1} d t = {[ k(n_1 + 1) - 1]!n_2! \over [ k(n_1 + 1) +
+n_2]!}. $$ The Szeg\"o kernel for $G^{(2)}_k$ is calculated in
+the explicit form: $$h(z \bar \xi) = {(1 - z_2 \bar \xi_2)^{k-1}
+\over [(1 - z_2 \bar \xi_2)^k - z_1 \bar \xi _1]^2}. $$
+Respectively, the function $h$ would be the following: $$h(z) =
+{(1 - z_2)^{k-1} \over [(1 - z_2)^k - z_1 ]^2}. $$
+
+There appear two types of problems that give rise to two various
+principals of algoritmization. The first one concerns the class
+of domains, for\  which \ the \ Szeg\"o \ kernel \ is \
+calculated \ in \ the \ explicit \ form. \ The application of the
+method of "continuation" Szeg\"o kernels (Aizenberg [2],[3])
+makes this class rather extensive. The example given above
+relates to this type of problems. The kernel (5) is "continued"
+on the class of domains whose boundary is defined in the
+following way: $$
+\partial G = \{ (z_1, z_2): |z_2| = \Phi (|z_1|), |z_1| \leq r \}.
+$$ Here $\Phi$ is a nondecreasing function under the condition:
+$$ k\omega \Phi''(|\omega|) + (k-1) \Phi'(|\omega|) < 0, \ \
+0<|\omega|<r. $$
+
+In this case the algorithm construction deals principally with
+the equation of the boundary, namely with its parametrization.
+
+Solving problems of the second type we are not able to obtain the
+explicit form of the Szeg\"o kernel. This is the most general
+case of domains.  The algorithmization  has to  achieve the
+accuracy consistent with the problems put on. It is the most
+difficult and the least developed class of problems.
+
+The approximation  of holomorphic functions by series of
+holomorphic functions has the proper interest for the development
+of computer algebra systems. It provides the class of rapidly
+convergent series reasonably connected with the domains of
+holomorphy of these functions.
+
+
+\begin{thebibliography}{99}
+\bibitem{1} Aizenberg L.A., Integral representations of functions
+holomorphic in n-circular domains ("Continuation" of Szeg\"o
+kernels), Mat.Sb. 65(107),1964, 104-143.
+\bibitem{2} Aizenberg L.A., Continuation of integral
+representations with the kernels and qusi-kernels Szeg\"o for
+n-circular domains, Krasnoyarsk, IF SO AN SSSR, 1973, 3-34.
+\bibitem{3} Kostochko N.A., On representation of analytic functions
+of several complex variables by some functional series, Dokl. AN
+Uz.SSR, N.11, 1987, c.7-10.
+\end{thebibliography}
+
+\end{document}
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: application/x-tex;
+ name="Steinberg.tex"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="Steinberg.tex"
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{graphicx}
+
+
+
+\textheight 240mm  %240/12
+\textwidth  160mm   %160/12
+\topmargin -10mm
+\begin{document}
+
+\title{Mimetic Discretization Methods and Vector Computer Algebra }
+
+\author{Stanly Steinberg\footnote{Professor of Mathematics
+       Associate Chair
+       Department of Mathematics and Statistics
+       University of New Mexico
+       Albuquerque NM 87131-1141 USA
+       stanly@math.unm.edu
+       http://math.unm.edu/~stanly/
+       Phone: 505-277-2198, FAX: 505-277-5505
+       Office: Humanities 436}}
+
+
+\date{Summer 2002}
+\maketitle
+
+\begin{abstract}
+Over the past few years I have been involved in developing mimetic
+discretization methods for initial boundary value problems for
+partial differential equations. These methods are based on the
+idea of discretizing the gradient, curl and divergence and them
+requiring that the properties of the discretization mimic the
+properties of the continuum. Some important properties are: the
+discrete curl of the discrete gradient is identically zero; if the
+discrete gradient of a discrete function is zero, then the
+function is constant; and that the discrete divergence and
+gradient satisfy exactly a discrete analog of the continuum
+divergence theorem. As a consequence, partial differential
+equations discretized using these discrete operators have many
+properties that mimic the continuum.
+
+The development of these methods cries out for the use of computer
+algebra, but unfortunately, current computer algebra systems are
+not all that useful because they cannot handle abstract vector
+algebra well.
+
+
+\end{abstract}
+
+
+\end{document}
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: application/x-tex;
+ name="yang_abstract.tex"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="yang_abstract.tex"
+
+% Latex file for ACA 2002 Abstract by Xin-She Yang
+
+\documentstyle[psfig,11pt]{article}
+\topmargin=-0.5in
+\textheight=9.0in
+\oddsidemargin=0.1in
+\textwidth=6in
+
+
+
+
+
+\begin{document}
+
+\title{\Large \bf Pattern Formation via Evolving L-System Algorithms}
+
+\author{ Xin-She Yang \\
+{\it Faculty of Engineering, University of Wales Swansea,} \\
+{\it Singleton Park, Swansea SA2 8PP, UK }\\
+ (email: x.s.yang@swansea.ac.uk)  }
+
+\date{}
+\maketitle
+
+Complex patterns such as fractals, structure of plants and
+biological hierarchy can be described using the  L-system
+algorithms with given production rules growing from a fixed
+axiom seed [1]. The context free grammar of productions rules
+can generate complicated patterns such as cellular automata,
+biological fractals and non-fractal patterns. However,
+global and fixed rules are used in most simulations [2]. In this work,
+we use a simple production rule starting from a randomly generated initial
+configuration of axiom seeds, then slightly evolve the generating algorithms
+locally through mutation and fitness selection. Numerical simulations
+show that much more complex patterns
+can be generated. In addition, the characteristics of patterns
+also evolve. By analyzing the statistics properties of generated
+patterns, we found that both the pattern connectivity distribution $P(k)$
+and lengths follows a power-law $P(k) \propto k^{-n}$. For
+connectivity, $n=2.6$, which implies that it is scale free.
+For the increasing length, $n$ varies from $1.6$ to $4.0$, and this
+implies that the patterns are multifractal. By varying the production
+rules and mutating the local algorithms, one can show that
+many realistic patterns in nature can be generated.
+
+
+\begin{description}
+\item{[1]} Charles-Edwards, D A (1986).
+{\it Modelling plant growth and development}, New York, Academic Press.
+
+\item{[2]} Flake, G A (1998).
+{\it The computational beauty of nature}, MIT press.
+
+\end{description}
+
+\end{document}
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: application/x-tex;
+ name="Zenger.tex"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="Zenger.tex"
+
+
+\documentstyle[11pt]{article}
+
+\oddsidemargin=0cm \textwidth=15.5cm \textheight=21.5cm \topmargin
+-1.0cm
+
+\begin{document}
+
+\newcommand{\qed}{\hfill$\Box$}
+\newcommand{\proof}{\noindent {\bf Proof. }}
+\newcommand{\eproof}{\hfill $\Box$ \vspace{0.2cm}}
+%\newcommand{\example}{\noindent {\bf Example.\enspace}}
+%\newcommand{\remark}{\noindent {\bf Remark.\enspace}}
+\newcommand{\note}{\noindent {\bf Note. }}
+\newcommand{\undertilde}[1]{\mbox{$#1$ \hspace{-4.4mm} \raisebox{-.7ex}
+{\tiny $\sim$}}}
+%\newcommand{\Undertilde}[1]{\mbox{$#1$\hspace{-6mm}\raisebox{-.8ex}{\small
+%$\sim$}}}
+\newcommand{\bin}[2]{\left(\begin{array}{@{}c@{}}
+           #1 \\#2 \end{array}\right)}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
+\newtheorem{definition}{Definition}
+\newtheorem{notation}{Notation}
+\newtheorem{summary}{Summary}
+\newtheorem{proposition}{Proposition}
+
+
+
+\title{\bf Object-Oriented Rapid Prototyping in Maple: Adaptive FEM with hierarchical bases}
+
+\author{Dmytro Chibisov, Victor Ganzha, Christoph Zenger\thanks{Institute of Informatics,
+Technical University of Munich, Munich 80290, Arcisstr. 21,
+Germany}}
+
+\date{}
+\maketitle
+
+
+
+\begin{abstract}
+
+
+
+
+We present an approach for the development of computational
+methods (in the context of Scientific Computing problems) on the
+basis of graphical data modeling techniques like class diagrams in
+UML and symbolic facilities of the CAS Maple. In our opinion such
+intuitive graphical object oriented diagrams provide the necessary
+expressive power in order to describe at the same time objects in
+the problem domain and data structures needed to perform the
+numerical computation.The relationships among these objects can be
+specified using standard mathematical notation. The problem
+solving process starting from a mathematical model and finally
+leading to a numerical computer code is considered as incremental
+successive refinement of graphical descriptions. Symbolic term
+rewriting techniques can be used to verify the correctness of the
+refinement process. One of the aims of this approach is automatic
+generation of the object oriented Maple code from the
+specification of the computational method defined by the above
+referenced graphical diagrams. The two dimensional adaptive FEM
+using hierarchical bases is investigated as a prototype
+application.
+
+
+\end{abstract}
+
+
+
+\end{document}
+
+--------------A85D6F8CCA02EFCCBFD84E3D
+Content-Type: text/x-vcard; charset=iso-8859-7;
+ name="akritas.vcf"
+Content-Transfer-Encoding: 7bit
+Content-Description: Card for alkis akritas
+Content-Disposition: attachment;
+ filename="akritas.vcf"
+
+begin:vcard 
+n:Akritas;Alkis 
+tel;cell:+30945-842296
+tel;home:+30-4210-78178
+tel;work:+30-4210-74886
+x-mozilla-html:FALSE
+org:University of Thessaly;Department of Computer and Communication Engineering
+adr:;;Papastartos Building;GR-38221 Volos, Greece;;;
+version:2.1
+email;internet:akritas@uth.gr
+fn:Alkis Akritas
+end:vcard
+
+--------------A85D6F8CCA02EFCCBFD84E3D--
+
+

@@ -1,0 +1,58 @@
+\documentclass{article}
+%\usepackage{graphicx,amsbsy}
+%\newcommand{\bfG}{\mathbf{\Gamma}}
+%\newcommand{\bfL}{\mathbf{\Lambda}}
+\title{Nonequilibrium Molecular Dynamics Integrators Using Maple}
+\author{
+Debra J. Searles\thanks{Department of Chemistry, St Lucia, University of
+Queensland, Queensland, AUSTRALIA.}\\
+Department of Chemistry,\\
+University of Queensland,\\
+searles@chemistry.uq.edu.au
+\and
+Dennis J. Isbister\thanks{School of Physics,
+University of NSW, University College, ADFA, Canberra ACT 2600,
+AUSTRALIA.}\\
+School of Physics,\\
+University of NSW,\\
+d-isbister@adfa.edu.au
+\and
+Denis J. Evans\thanks{Research School of Chemistry,
+Australian National University, Canberra ACT, AUSTRALIA.}\\
+Research School of  Chemistry, \\
+Australian National University\\
+evans@rsc.anu.edu.au
+}
+\date{~~~}
+\begin{document}
+
+\maketitle
+
+%\vspace{0.1in}
+\begin{center}
+\section*{Abstract}
+\end{center}
+The Conjugate Pairing Rule states that for Hamiltonian systems to
+which a Gaussian or Nos\'e-Hoover thermostat is applied, the spectrum
+of Lyapunov exponents should exhibit a simple symmetry: that the sum
+of conjugate pairs of exponents should be a constant independent
+of the pair index. This symmetry is important for it enables one
+to calculate the entropy production and thereby the nonequilibrium
+transport coefficient, by summing just two exponents, say the maximal
+exponents. However, the Conjugate Pairing Rule has never been proved
+for the standard computer simulation algorithm for shear flow namely
+the Sllod algorithm.
+
+We use the symbolic algebra program, Maple, to examine the validity
+of the Conjugate Pairing Rule for the Sllod algorithm.  We do this by
+using the multiple precision facility of Maple to carry out computer
+simulations for Sllod to very high accuracy. We also use the
+symbolic algebra capability of Maple to prove the Conjugate Pairing Rule
+for ideal gases subject to thermostatted shear flow and also for
+unthermostatted shear flow of fluids at arbitrary density.
+\vspace{3.0in}
+
+%{\it Submitted to IMACS Mathematics and Computers in Simulation: Non-Standard
+%Applications of Computer Algebra}, 7$^{th}$ April 1997.
+
+\end{document}

@@ -1,0 +1,52 @@
+Session title:
+
+"Computer algebra in analysis and solving of equations in
+ mathematical physics and control theory"
+
+The goal of the session is to provide a forum for developers of
+constructive algebraic methods and software for
+equations and systems of interest in mathematical physics and
+control theory and for those who need them to investigate and
+solve particular equations.
+
+The session topics include:
+
+- group analysis of differential, integral and difference equations
+
+- symmetries of solutions of boundary value problem for the above mentioned
+  equations (such symmetries are well-known as renorm-group symmetries)
+
+- blow-up regime and power solutions
+
+- linear systems of partial differential equations
+
+- integrability analysis of nonlinear evolution equations
+
+- completion of polynomial and differential systems to involution
+
+- computations with quantum algebras and groups
+
+- ordinary and partial control systems
+
+- constrained dynamics and differential-algebraic equations
+
+Session organizers:
+
+Vladimir Gerdt, Vladimir Kovalev and Dmitry Shirkov
+
+Call for Submissions:
+
+If you are interested in presenting a talk in this session, please, send a
+title and abstract of your talk to Vladimir Gerdt ( gerdt@jinr.ru ) by April
+15, 2001.
+
+Preliminary list of speakers:
+
+Hirokazu Anai   (Fujitsu Lab, Japan)
+Teijo Arponen   (Univ. Joensuu, Finland)
+Vladimir Gerdt  (JINR, Dubna, Russia)
+Willem de Graaf (Univ. Utrecht, Holland)
+Gegard Jacob    (Univ. Lille I, France)
+Niky Kamran     (McGill Univ., Montreal, Canada)
+Oleg Tarasov    (Univ. Bielefeld, Germany)
+Yoshio Uwano    (Univ. Kyoto, Japan)

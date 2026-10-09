@@ -1,0 +1,38 @@
+
+The use of digital tools to confront errors
+Regina Ovodenko, Center for Educational Technology, Israel
+Anatoli Kouropatov, Center for Educational Technology, Israel
+
+The math education community places much importance on information regarding the conceptualization of learners of different mathematical subjects and regarding typical errors in these subjects. This type of information is essential for teachers for teaching planning and practice (Samovol & Applebaum, 2003; Tsamir & Barkai, 2005; NCTM, 2000; Schulman, 1986). The question that has engaged math educators for many years is how we can confront these errors (Borasi, 1985; 1987; 1994).
+In recent years, technological tools were developed in order to support the teaching practice. These tools are supposed to help in confronting typical errors, especially those related to concepts that possess a strong visual character, such as the inflection point. Informed use of these tools presents an interesting and actual didactic challenge (Drijvers et al., 2010).
+In the spirit of this tendency, the Center for Educational Technology developed a digital environment for learning and teaching mathematics for 10th, 11th, and 12th grades in high school ? Challenge 5. The development of this environment was informed by research about the use of technological tools in math education and research about typical errors in specific mathematical subjects, such as the function (Carlson, 1998), tangent (Artigue, 1992; Tall, 1987; Vinner, 1982), inflection point (Tsamir & Ovodenko, 2013), and similar. 
+This environment is made up of teaching units that include PowerPoint presentations, geogebra labs, interactive digital questionnaires, and videos. The use of these units allows teachers to plan lessons enriched by technology that, among other things, should prevent the typical errors .  
+In the conference we will present typical errors related to the concept of the inflection point (Tsamir & Ovodenko, 2013) and we will show ways of confronting these errors using digital tools. We will demonstrate how a specific digital tool can be used to design a teaching unit that allows teachers to address errors. The teaching unit includes the tool itself, the investigative assignment based on it, and a variety of other assignments. In addition, we will discuss how this approach of using a digital tool to create a teaching unit can be useful for confronting errors related to other concepts.  
+
+Artigue, M. (1992). The importance and limits of epistemological work in didactics. In W. Geeslin & K. Graham (Eds.), Proceedings of the 16th Conference of the International Group for the Psychology of Mathematics Education, (Vol.3, pp.195-216). Durham, NH: University of New Hampshire: PME.
+Borasi, R. (1985). Using errors as springboards for the learning of mathematics. Focus on Learning Problems in Mathematics, 7(3-4), 1-14.     
+Borasi, R. (1987). Exploring mathematics through the analysis of errors. For the Learning of Mathematics, 7, 1-8.
+Borasi, R. (1994). Capitalizing on errors as "springboards for inquiry": A teaching experiment.  Journal for Research in Mathematics Education, 25, 166-208.
+ Challenge 5 (2016) http://lo.cet.ac.il/player/?document=d6beaef0-48a8-4250-b42d-c98cfae422a6&language=he. CET: Israel.
+Drijvers, P., Doorman, M., Boon, P., Reed, H. & Gravemeijer, K. (2010). The teacher and the tool: Instrumental orchestrations in the technology-rich mathematics classroom. Educational Studies in Mathematics, 75, 213-234.
+National Council of Teachers of Mathematics. (2000). Principles and Standards for
+School Mathematics. Reston, Virginia: NCTM.
+Samovol, P. & Applebaum, M. (2003). Find the mistake. Journal for Mathematics Teachers, 30, 45-48. (In Hebrew).
+Shulman, L. S. (1986). Those who understand: Knowledge growth in teaching.
+Educational Researcher, 15, 4?14.
+Tall, D. (1987). Constructing the concept image of a tangent. In J. Bergeron, N. Herscovics, & C. Kieran (Eds.), Proceedings of the 11th Conference of the International Group for the Psychology of Mathematics Education (Vol. 3, pp. 69-75). Montreal, Canada: PME. 
+Tsamir, P. & Barkai, R. (2005). The use of errors in teaching mathematics: theory and 
+     practice. Tel Aviv: Ramot. (In Hebrew). 
+Tsamir, P., & Ovodenko, R. (2013). University students? grasp of inflection points.
+   Educational Studies in Mathematics, 83, 409-427.
+Vinner, S. (1982). Conflicts between definitions and intuitions ? the case of the tangent. In A. Vermandel (Ed.), Proceedings of the 6th International Conference for the Psychology of Mathematical Education (pp. 24-29). Antwerp, Belgium: PME.
+
+
+
+
+
+2
+
+
+
+

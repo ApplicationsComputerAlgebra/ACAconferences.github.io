@@ -1,0 +1,9 @@
+Correct and Useful Simplification of Complex-valued Functions - What
+can be Done?
+
+Rob Corless
+University of Western Ontario
+Department of Applied Mathematics, Western Science Centre
+London, Ontario   N6A5B7
+Canada
+E-mail:Rob.Corless@uwo.ca

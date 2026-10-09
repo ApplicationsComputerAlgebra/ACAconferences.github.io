@@ -1,0 +1,244 @@
+%**********************************************************************************
+%* IMACS-ACA'2000 St. Petesburg                                                   *
+%* Session: Problem Solving Environments (Stanly Steinberg & Robert van Engelen)  *
+%* Article: An Approach from AI to the Design of Routes in a Railway Interlocking *
+%* (Extended Abstract)                                                            *
+%**********************************************************************************
+
+\documentclass{article}
+
+\begin{document}
+
+\title{An Approach from AI to the Design of Routes in a Railway 
+                  Interlocking\thanks{Partially
+                              supported by projects DGES PB96-0098-C04-03
+                              and DGES PB96-0098-C04-01 (Spain).}}
+
+\author{E. Roanes-Lozano\footnote{eroanes@eucmos.sim.ucm.es}, 
+        L. M. Laita\footnote{laita@fi.upm.es} }
+
+\date{}
+
+%*************** Nuevos comandos ************
+\newcommand{\NN}{\mbox{{\sl I}}\!\mbox{{\sl N}}}   %La N de naturales
+\newcommand{\RR}{\mbox{{\sl I}}\!\mbox{{\sl R}}}   %La R de reales
+\newcommand{\ZZ}{\mbox{{\sl Z}}\!\!\mbox{{\sl Z}}} %La Z de enteros
+%********************************************
+
+\maketitle
+
+\vspace{-.75cm}
+
+\begin{center}
+   ${}^{\dag}$ 
+   Dept. Algebra, Universidad Complutense de Madrid, \\
+   Edificio ``La Almudena", c/ Rector Royo Villanova s/n, 28040-Madrid,
+   Spain               \\
+   ${}^{\S}$ 
+   Dept. Artificial Intelligence, Universidad Polit\'ecnica de Madrid, \\
+   Campus de Montegancedo, Boadilla del Monte, 28660-Madrid, Spain    \\
+   \end{center}
+
+\vspace{3mm}
+
+\begin{center}
+{\Large EXTENDED ABSTRACT}
+\end{center}
+
+\begin{abstract}
+An expert system devoted to the design of routes in a railway interlocking is
+presented in this article. It is able to extract knowledge from the given data
+(propose new routes and give information about them: number of sections, estimated
+time) and to verify the safety of proposed new route (interlocking). It takes
+advantage of the the powerful handling of lists provided by the computer algebra
+system Maple 6.
+
+Once the topology of the network is introduced, the user can ask the expert system
+to exhaustively determine all routes departing from a given section and also all
+routes that are extension of a given one.  In both cases it is possible to ask the
+system to return only those routes that end in a given goal section. The system
+orders the routes accordingly to their length (in number of sections). Moreover,
+if an approximated time is associated to each section (these times can be
+calculated taken into consideration their physical length, speed limitations...),
+the system can return the theoretical time corresponding to each possible route.
+Therefore it is possible to optimise the selection of the route w.r.t. different
+criteria. 
+
+Finally, the verification of the proposal, i.e. the compatibility of routes (the
+task of the interlocking system) is trivial with this data structure: it is enough 
+to check that every pair of routes (of the routes to be authorised at the same time)
+don't share any common section.
+
+\end{abstract}
+
+   
+\section{Introduction}
+
+There are two ways to study an interlocking by computer.  In one of them the
+interlocking is interpreted as a logic problem of accessibility to sections.
+Before allowing a new situation of signals and turnouts, it must be presented to
+the system to be authorised, and the system has to decide in real time upon its
+security.
+
+The most sophisticated approaches that we know work this way and 
+are independent from the topology of the station. But, as far as we know, up to now they 
+are only theoretical models (Montigel, 1994; Hansen, 1996, Roanes \& Laita 1996a; 
+Roanes \& Laita, 1998). This approach has the disadvantage that the complexity of the 
+problem (related to its exhaustive nature) makes that only small or medium size 
+installations can be treated. The advantage comes also from its exhaustive nature: they 
+are absolutely safe. 
+
+In real installations, because of the problem mentioned above and, possibly, also 
+because of tradition (this is the way mechanical interlockings were designed), routes 
+are established first and compatibility is checked during the design stage (Siemens, 
+1988). Checking the compatibility of routes was usually done manually. The 
+interlocking allows only the simultaneous authorisation of routes previously 
+declared as compatible. For instance in 1993 the Spanish railway company (Renfe) 
+developed, in cooperation with other companies (Villamandos, 1993), a computer based 
+tool to automatically check routes compatibility.
+
+\section{The Approach}
+
+\subsection{Search for routes}
+
+The later approach is the one developed in this article. 
+
+The topology of the station is given as a list of lists of three elements 
+(one for each turnout).
+These three elements are (in this order) section in the point side, 
+section in direct route, section in diverted route.
+
+The routes are stored as lists of sections.
+
+Two auxiliary procedures have been implemented: {\tt last(l)}, {\tt lput(el,l)} 
+and {\tt selec\_goal(l,g)}.
+Procedure {\tt last(l)} returns the last element of list {\tt l}.
+Procedure {\tt lput(el,l)} returns a list formed by including element {\tt el} at the 
+end of list {\tt l}.
+Procedure {\tt selec\_goal(l,g)} returns a list, constructed by selecting, from the list 
+of lists {\tt l}, all the elements (lists) which last element is {\tt g}.
+
+Let us describe the main procedures:
+\begin{itemize}
+\item {\tt nextsect(i\_l,t\_l)}  \\
+      Input: list of routes, list of turnouts. \\
+      Algorithm: For each route in {\tt i\_l} it creates a list of sections       
+                 accessible from the last section of the route (sections that are  
+                 not already in the route, to avoid repetitive forward and backwards 
+                 movements), according to the information
+                 provided by {\tt t\_l}. The search is exhaustive. \\
+      Output: A list of lists with the 1-section possible extensions.
+
+\item {\tt nextlist(i\_l,t\_l)}  \\
+      Input: list of routes, list of turnouts. \\
+      Algorithm: For each route in {\tt i\_l} it creates the possible routes   
+                 extension of
+                 that one by adding the sections calculated by {\tt nextsect}.   \\
+      Output: A list of lists with the possible routes extended one section.  \\
+      Remark 1: Let us observe that, if applied recursively to a route, 
+              {\tt nextlist} returns the 
+              routes with 1 section more than the given one, 2 sections more, 3   
+              sections more... 
+              that are extensions of the given one. The last time it returns the empty 
+              list (what means that there are no routes with that number of  
+              sections, what always finally happens as repeating a section is not 
+              allowed). \\
+      Remark 2: The complexity of this procedure is the highest one (the growth of the 
+                number of routes is exponential with base 2 in the worse case). An 
+                upper boundary is 2 to the maximum of the lengths of routes.
+                The worse case is clearly reachable for a binary-tree-like network (what   
+                is a common shape e.g. of marshalling yards).
+
+\item {\tt tuti\_ite(i\_l,t\_l)}  \\
+      Input: list of routes, list of turnouts. \\
+      Algorithm: Applies {\tt nextlist} recursively to the given route until the    
+                 empty list is obtained. This routes (lists) are grouped in lists 
+                 (according to the number of sections) and this lists of lists are 
+                 grouped in a list.  \\
+      Output: A list of lists of lists (routes) with the possible extension 
+              routes.
+
+\item {\tt tuti\_term(i\_l,t\_l,ob\_)}  \\
+      Input: list of routes, list of turnouts, goal section. \\
+      Algorithm: Similar to {\tt tuti\_ite}, at each step only the routes that end 
+                 in the goal section are left.    \\
+      Output: As {\tt tuti\_ite}, but all routes end in the goal section. 
+\end{itemize}
+There is an auxiliary procedure {\tt clasi(iti\_)} that presents on the screen the given 
+list of routes according to the number of sections in it.
+
+
+\subsection{Time Calculi}
+
+More data have to be given now: the list of sections and a list of times (corresponding 
+to the sections in the other list, respectively).
+
+There is an auxiliary procedure: {\tt cal\_ti\_aux(l\_s,t\_s,l\_)} that substitutes the 
+i-th element of list {\tt l\_s} by the i-th element of list {\tt t\_s} (for i ranging along 
+the whole list {\tt l\_s}) in list {\tt l\_}. 
+
+The main procedure is {\tt cal\_ti}.
+\begin{itemize}
+\item {\tt cal\_ti(l\_s,t\_s,l\_)}  \\
+      Input: list of sections, list of times, list of lists of routes. \\
+      Algorithm: Uses {\tt cal\_ti\_aux} to substitute sections by corresponding times 
+                 and then adds the times for the sections in each route. \\
+      Output: A list of lists with the times corresponding to the given list of lists of 
+              routes.
+\end{itemize}
+
+
+
+\subsection{Study of Compatibility of routes} 
+
+
+The procedure is named {\tt compatible}.
+\begin{itemize}
+\item {\tt compatible(it\_,itau\_)}  \\
+      Input: list of sections, list of lists of routes already declared 
+             compatible.      \\
+      Algorithm: Converts {\tt itau\_} into a set (to avoid repetitions) and checks if 
+                 the resulting set is disjoint with {\tt it\_} (converted to set).  \\
+      Output: ``Authorised'' or ``Non-Authorised''.
+\end{itemize}
+
+
+
+\subsection{Remarks}
+
+Maple 6 was chosen because the use of lists is very convenient and powerful. For 
+instance the code commented above occupies altogether a couple of pages. Nevertheless 
+this package could also be implemented in a classic language (like C). This should be 
+done for speed reasons if a real application was to be finally developed.
+
+
+\section{Future Development}
+
+This work is part of a global environment still under development. It was initiated with 
+the development of computer based topology independent railway interlockings (Roanes \& 
+Laita 1996a; Roanes \& Laita, 1998). These were not related to establishing routes 
+but directly giving turnouts and signals positions.
+The work presented here is based in the previous study of routes.
+
+The third part of the work would be the development of GUI. It should be able to allow 
+the user to draw with the mouse the station at the initial stage (locating turnouts and 
+signals) and to introduce the position of trains, turnouts and signals (also with the 
+mouse) during the use stage. This GUI should offer to work either using routes or 
+directly giving turnouts and signals positions and would call the corresponding 
+inference engine accordingly.
+
+It would be better to translate this model and that in (Roanes \& Laita 1996a) to C for 
+speed reasons.
+Then it should be decided weather to use the Gr\"obner bases based model (Roanes \& 
+Laita 1996a) or model (Roanes \& Laita, 1998) for the case of directly giving turnouts 
+and signals positions. 
+
+
+\section{Conclusions}
+
+Computer algebra systems provides an environment that allows to develop quickly and 
+easily complicated AI tools.
+We think the one presented here is a very interesting application to transportaton
+technology.
+
+\end{document}

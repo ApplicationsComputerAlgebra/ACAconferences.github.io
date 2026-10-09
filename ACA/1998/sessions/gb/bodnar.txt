@@ -1,0 +1,66 @@
+    "On algorithmic desingularization of hypersurfaces"
+
+    Gabor Bodnar and Josef Schicho.
+    Research Institute for Symbolic Computation Linz
+    RISC-Linz, Joh. Kepler. Univ., A-4040 Linz
+    Linz, Austria, A-4040
+    Austria
+    E-mail:{Bodnar,Schicho}@risc.uni-linz.ac.at
+    
+
+The need to desingularize algebraic varieties has arised from the
+desire to extend the rich results from the nonsingular theory
+to the general case. For curves, the problem is easy, and the
+common answer is normalization (see \cite{Trager:76}).
+But for higher dimensional varieties, the problem is much more difficult.
+For instance, algorithmic desingularization of surfaces
+was posed as an open problem in \cite{Eisenbud:93}.
+Theoretically, the problem was solved in the famous paper
+\cite{Hironaka:64}, which proved existence of desingularizations
+for varieties in characteristic zero. Other proofs have been
+suggested by
+\cite{Jung:08,Walker:35,Zariski:39,Abhyankar:69,Hironaka:84,Lipman:78}
+in the surface case and by
+\cite{Villamayor:89,Bierstone_Milman:91} for
+arbitrary dimensions.
+  
+Unfortunately, almost all approaches to the desingularization
+problem are not algorithmic. But a desingularization algorithm
+is essential for effective application of all the results mentioned
+above. For instance, \cite{Schicho:97} uses surface desingularization
+for the parameterization of rational surfaces.
+In the same paper, desingularization is used to compute ``adjoints'',
+a powerful tool in computational algebraic geometry
+(see also \cite{Blass_Lipman:79}). Other applications would be possible in the
+theory of differential equations (see \cite{Cano_Cerveau:92}).
+
+>From an algorithmic point of view, the breakthrough was the
+paper~\cite{Villamayor:89}. It describes a desingularization
+of hypersurfaces by blowing up similar to Hironaka's desingularization
+(still characteristic zero).
+But unlike Hironaka, Villamayor gives a way to determine the
+blowing up centers explicitly. Hence the paper contains a
+desingularization algorithm, at least implicitly (see
+also \cite{Villamayor:91}).
+
+Up to now, Villamayor's algorithm was not implemented. The reasons
+are two-fold. First, the common way of representing blowing ups embeds
+the blowup variety in some higher dimensional space (see \cite{Hartshorne:77})
+.
+This is not convenient for performing the differential operations
+that are necessary in the algorithm. Second, the algorithm itself
+is rather complicated, even without taking the problem of representing
+blowing up into account.   
+
+In this paper we present an implementation of Villamayor's algorithm,
+and a solution to the technical problem of representing blowing ups.
+The idea is to work simultanously with two coordinate frames.
+The affine coordinates generate the coordinate ring,
+and they are used for all kinds of algebraic computations,
+based on the method of Gr\"obner bases
+(see \cite{Buchberger:65,Buchberger:85}).
+The differentiable frame is a set of regular functions
+that form a regular system of parameters for each point, modulo translation.
+It is used for differentiating and for defining all objects in the
+algorithm that are supposed to be nonsingular (i.e. the blowing up
+centers). 

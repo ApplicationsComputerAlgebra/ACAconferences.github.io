@@ -1,0 +1,13 @@
+Frank Postel*, Ralf Hillebrand (Germany), frankp@plato.uni-paderborn.de
+A Tutorial Mathematical System for Elementary Schools
+
+Modern Computer-Algebra-Systems (CAS) are not suitable for teaching elementary
+algebra to school classes from year 7 to 10. The use of CAS in schools requires
+a sophisticated user interface and specialized methods for school usage. The
+system should compute step-by-step and must keep the order of subexpressions.
+
+We develop such a tutorial CAS based on MuPAD. It will give warnings, when the
+student makes a mistake or tries to make a step, which is not appropriate for
+the solution of the problem at hand. Further, the system offers help on request
+suggesting appropriate next computational steps. All this will be possible for
+arbitrary problems entered by the student.

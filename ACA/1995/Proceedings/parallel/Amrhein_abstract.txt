@@ -1,0 +1,29 @@
+Parallel Computer Algebra on the Desk-Top
+
+Wolfgang Kuechlin    Beatrice Amrhein
+
+University of Tuebingen
+W. Schickard Institute for Informatics
+Sand 13, D-72076 Tuebingen, Germany
+e-mail: <{amrhein,kuechlin}@informatik.uni-tuebingen.de>
+
+We report on the development of PARSAC-2, 
+a library of parallel algebraic algorithms designed specifically
+for networks of multiprocessor workstations.
+PARSAC-2 is built upon the SAC-2/SACLIB library of algebraic algorithms
+and the S-threads system environment for multi-threaded symbolic computation.
+
+S-threads provides virtual parallelism by mapping
+tens of thousands of very light-weight processes
+onto the processors of a workstation.  
+It is currently being extended with network functionality,
+so that heavy-weight processes can be mapped across the network
+while preserving the S-threads interface.
+
+Parallel algorithms in PARSAC include long integer multiplication,
+polynomial gcd computation, and polynomial real root isolation.
+The current goal of algorithm development in PARSAC is the
+construction of a parallel polynomial equation solver using
+Groebner-Bases. We will report on first experiences running
+a strategy-compliant parallel Groebner-Basis computation
+with factorization. 

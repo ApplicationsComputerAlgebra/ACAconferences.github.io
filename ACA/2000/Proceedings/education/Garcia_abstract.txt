@@ -1,0 +1,17 @@
+Alfonsa Garcia*, Francisco Garcia, Felix Alonso, Agustin de la Villa,
+Sara Hoya, Gerardo Rodriguez (Spain), garcial@eui.upm.es,
+avilla@dmc.icai.upco.es, gerardo@gugu.usal.es
+
+Some Unexpected Results Using Computer Algebra Systems
+
+Sometimes, when you are using a computer algebra system (CAS), you introduce
+the input and the computer does not react as you expect.  Usually it's very
+difficult to know the reasons of such answer and what to do for solving the
+problem.  In this paper we see how the teacher can often profit these
+unexpected outputs to reinforce concepts and mainly to show the students they
+have ever to control the computer and they have ever to control the computer
+and they must always check its results.  We present different examples where a
+CAS like DERIVE, MAPLE or MATHEMATICA does not work as it is should and we
+propose how use them as a pedagogical tool.  We like to show different
+unexpected situations that you can find in a very wide context like bugs,
+limitations, good but surprising answers, etc.

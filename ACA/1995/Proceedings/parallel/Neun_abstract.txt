@@ -1,0 +1,13 @@
+REDUCE on a Massively Parallel System
+
+Winfried Neun
+Konrad--Zuse--Zentrum Berlin
+
+The implementation and usage of the Computer Algebra system 
+REDUCE on a massively parallel system (in our case the Cray T3D) is discussed
+here. The aim of the implementation is to retain portablity among parallel
+systems by refraining from the usage of propriatary software solutitions. 
+The communication protocol (using the Parallel Virtual Machine),
+the user interface and parallel extensions to the REDUCE command language
+are presented. The results of some typical computations in CA using this
+approach will be given.

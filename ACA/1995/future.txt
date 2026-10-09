@@ -1,0 +1,19 @@
+To keep the momentum that we have already built, we suggest that the
+next two meeting in our series be in Austria and Hawaii:
+
+1996: RISC, Hagenberg, Austria
+	The Research Institute for Symbolic Computation.
+	Organizer: Bruno Buchberger
+	Administrative Contact: Gerlinde Poechhacker
+
+1997: MHPCC, Maui, Hawaii
+	The Maui High Performance Computing Center.
+	This is proposed to be a joint meeting with the
+	International Symposium on Symbolic and Algebraic Computation (ISSAC).
+	ISSAC Contact: Bruce Char
+	IMACS Contact: Michael Wester
+
+This will be discussed by the session organizers at the Albuquerque meeting.
+
+	Stanly Steinberg
+	Michael Wester

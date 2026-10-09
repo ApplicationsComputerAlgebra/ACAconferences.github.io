@@ -1,0 +1,25 @@
+We will publish the proceedings as a hierarchal electronic document available
+via the World Wide Web.  Anything from an abstract to a full paper is
+acceptable.  In all cases, the paper should reference relevant contributions to
+the field.  The deadline for submissions is July 1, 1995.
+
+Papers submitted MUST be in one of the following forms: 
+	ASCII text
+	single PostScript file
+	completely self contained collection of TeX/LaTeX/AMSTeX/AMSLaTeX files
+	working URL pointing to a document
+To aid in the construction of the electronic document, we will request a
+separate file be provided with the paper's title, author's name and email
+address, and a list of keywords for the paper.  Michael Wester, Conference
+Coordinator, will be organizing this document.
+
+In addition, parts of the proceedings for the meeting will be published as
+special issues of IMACS journals.  The organizers of closely related special
+sessions should submit a proposal to Stanly Steinberg, Conference Chair and
+Guest Editor.  Note that if the total number of pages for an issue exceeds 200
+pages, then only selected papers will appear in the special issue.
+
+The journals available are:
+	Mathematics and Computers in Simulation (Elsevier)
+	Applied Numerical Mathematics (Elsevier)
+	Journal of Computational Acoustics (World Scientific)

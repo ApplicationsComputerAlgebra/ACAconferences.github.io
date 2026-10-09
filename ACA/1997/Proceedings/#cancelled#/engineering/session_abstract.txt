@@ -1,0 +1,18 @@
+Applications of Computer Algebra in Algorithm Design and System Engineering
+
+Thomas Beth (EISS_Office@ira.uka.de) and Armin Nueckel (nueckel@ira.uka.de)
+
+Universitaet Karlsruhe
+IAKS
+76128 Karlsruhe
+Am Fasanengarten 5
+Tel.: Germany xxxx721 608 3574
+
+The use of computer algebra provides a potential solution to a variety of
+problems in engineering and algorithm design.  The session is concerned with
+applications of computer algebra, e.g., in the following fields: automatic
+generation of algorithms and architectures, algebraic methods for error control
+coding and modulation, formal methods in industrial system engineering and
+control, algorithms for quantum and optical computing, computer algebra for
+digital signal and image processing (signal transforms, pattern recognition,
+compression, coding, etc.).

@@ -1,0 +1,6 @@
+Vlasta Kokol-Voljc* (Slovenia), vlasta.kokol@uni-mb.si
+Exam questions when using CAS for school mathematics teaching
+
+Using computer algebra systems for teaching 12-18 year old students is going to
+change the teaching methods, the contents of what we teach, and, last but not
+least, the exams. We present and discuss appropriate exam questions.

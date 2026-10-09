@@ -1,0 +1,15 @@
+Bengt Ahlander* (Sweden), ba@ostrabo.uddevalla.se
+Why use CAS with TI89 in mathematical education? Classrooms experiments.
+
+New ways of teaching mathematics with CAS are coming now very strongly with the
+help of a very good CAS tool such as the algebraic calculator TI-89.  You ought
+to start thinking how to approach math with tools such as the TI-89.  My
+thoughts will be  presented here.
+Differential equation:
+a) Movement from a string with friction.
+b) A current from a circuit with resistance, condenser and coil coupled in
+   series
+Polynomial: What polynomial fits to given points?
+Animation of the definition of the derivative.
+How to solve linear equations. How to solve systems of equation.
+How to treat upper sums and lower sums of a function. (Rieman integral)

@@ -1,0 +1,32 @@
+
+"The application driven Ctadel environment"
+
+
+Robert van Engelen and Lex Wolters
+Leiden Institute of Advanced Computer Science (LIACS)
+Leiden University, The Netherlands
+
+Gerard Cats
+Royal Netherlands Meteorological Institute (KNMI)
+The Netherlands
+
+
+Ctadel is an environment for the generation of efficient, computer-architecture
+dependent codes for PDE-based models. It transforms a high-level PDE problem
+specification into efficient codes for serial, vector, and parallel computer
+architectures. This process includes computing-cost heuristics and
+architecture-specific symbolic transformations. Furthermore, application
+dependent knowledge is incorporated into the transformations on the highest
+level down to those on the lowest level. Ctadel can be classified as an
+application driven problem solving environment.
+
+Ctadel has been successfully applied to a computationally intensive part of
+the numerical weather forecast system HIRLAM, which is in operational use at
+several European meteorological institutes. It could be concluded that Ctadel
+is able to generate efficient codes for this part of HIRLAM on different
+computer architectures. Most of the codes even outperformed the hand-written
+production codes.
+
+Prototyped as an environment for HIRLAM Ctadel has gradually matured into a
+small-scale computer algebra system that has the potential of manipulating
+and transforming a wider range of application models.

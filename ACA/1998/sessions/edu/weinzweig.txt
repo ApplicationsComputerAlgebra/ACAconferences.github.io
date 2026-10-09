@@ -1,0 +1,19 @@
+"Visualizing Mathematics and Mathematical Processes"
+
+A.I. Weinzweig
+University of Illinois at Chicago
+9711 N. Kildare Ave.
+Skokie, Illinois, 60076
+USA
+E-mail:izzie@maverick.math.uic.edu
+
+
+We will present a number of examples of the use of Computer Algebra in 
+helping students to understand some mathematical processes by "seeing" 
+what happens. We will illustrate the solution of systems of linear 
+equations by visulaizing the lines or planes generated at each step. We 
+will illustrate the use of Taylor Series in approximating functions, 
+and generating functions by Fourier Series. We will illustrate the use 
+some interesting problems such as the coin rotating about a coin, or does 
+any part of a railroad wheel go backwards, in motivating the study of 
+curves and the use of trigonometry.

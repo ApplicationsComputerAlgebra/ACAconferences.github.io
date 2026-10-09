@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">DEAS: A Computer-algebra-based Chip Design Environment for Algebraic Computation,
+    Coding and Signal Processing 
+</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Nueckel">Armin Nueckel</A><br>
+</h3>
+
+Date: July 19th (Friday)<br>
+Time: 14:00--14:30<br>
+
+<center>
+Abstract
+</center>
+
+ In general, commercial synthesis products are only able to generate quite
+    inefficient gate level netlists based on boolean functions or so called RT-level models.
+    Motivated by the observation, that problems in very large areas of engineering are specified
+    in terms of mathematical expressions, the IAKS (Institut für Algorithmen und Kognitive
+    Systeme, Prof. Beth) started a long term research project called IDEAS (Intelligent Designs
+    Environment for Algorithms and Systems). The main goal of this project was the
+    development of algebraic algorithm and optimization methods, very comparable to the
+    principle of boolean optimization. As a result of this project, the first fully integrated design
+    environment for algebraic algorithm engineering based on computer algebra systems was
+    implemented at the IAKS. The talk will describe the general structure of the design
+    environment and demonstrates the design style based on some application examples. 
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Sakata.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

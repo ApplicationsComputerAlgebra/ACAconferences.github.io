@@ -1,0 +1,10 @@
+A Counting Problem using Computer Algebra and Math Reform Techniques
+
+Bill Pletsch
+
+A counting problem with many different formulations will be discussed.  Central
+to the discussion will be the role computer algebra and math reform techniques
+played in the course of solving the problem.  Teachers of mathematics who use
+math reform techniques have asserted the effectiveness of these methods in
+process of discovery.  To be presented here is at least one instance of an
+emphatic reply, "Yes! You are right."

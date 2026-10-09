@@ -1,0 +1,24 @@
+     Numerical Algorithm for the Order Verification of Numerical Methods
+
+
+                Sayfy                              S. Khoury
+
+               sayfy@aus.edu                  skhoury@aus.edu
+
+
+                                  Abstract
+
+In this  paper,  we  have  introduced  a  unified  approach  for  the  order
+verification of the errors in  Taylor  polynomial  approximations  and  many
+numerical methods. An  algorithm,  based  on  the  computer  algebra  system
+"MAPLE, is written and tested by  verifying  the  error  for  many  familiar
+numerical methods that arise  in  the  undergraduate  curriculum,  such  as,
+Taylor polynomial approximation, Newton's method for solving equations,  the
+5-point forward numerical differentiation  formula,  the  composite  Simpson
+rule, the 4-stage explicit Runge-Kutta  method,  and  the  3-point  Gaussian
+integration formula.
+
+The algorithm offers a simple and unified way to understand and  verify  the
+error of Taylor approximations as well as numerical  methods.   Thus  it  is
+convenient  for  teaching  purposes   in   the   undergraduate   mathematics
+curriculum.

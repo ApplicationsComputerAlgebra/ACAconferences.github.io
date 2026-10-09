@@ -1,0 +1,13 @@
+Modular Algorithms for Computing Groebner Bases
+
+Beth Arnold
+Texas A&M University, College Station, Texas, USA
+
+Intermediate coefficients swell is a well known difficulty associated with
+Buchberger's algorithms for computing Groebner bases.  Modular algorithms limit
+this growth.  I will present two algorithms, one which uses the Chinese
+remainder theorem, and another which uses Hensel lifting techniques.  These
+algorithms extend the modular algorithms for computing the greatest common
+divisor of polynomials in one variable.  In particular, the concept of "lucky
+primes" for modular Groebner basis computations and a method for checking the
+result for correctness will be discussed and illustrated with examples.

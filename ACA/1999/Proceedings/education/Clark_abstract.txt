@@ -1,0 +1,22 @@
+Garry Clark* & Edward Redden (Australia), gclark@metz.une.edu.au
+Using Logo as a Scaffolding to Develop Algebraic Thinking in a Virtual
+   Classroom
+
+Literature regarding the introduction of algebra in schools advocates a number
+of methods including the use of patterns, modelling, problem-solving and
+functions. All have in common the expression of generality which Krutetskii
+said was a key concept in identifying mathematical giftedness.  The writers
+have been researching the efficacy of Logo in introducing algebraic concepts by
+addressing the following research questions a) Can geometric investigations in
+a Logo environment provide a suitable context for the generation of algebraic
+concepts?  b) Does this environment facilitate notions of expressing generality
+in children and how readily are these notions of generality recorded in
+symbolic language.
+
+A series of comparative case studies has been developed with 7 students
+enrolled in an online talent education development program. The data consists
+of a dialogue that is conducted between the online tutor and the participant in
+the program. The paper identifies a number of algebraic constructs that emerge
+from conducting investigations in a Logo environment. More importantly it
+details the intellectual struggle of a number of students as they interact with
+the environment.

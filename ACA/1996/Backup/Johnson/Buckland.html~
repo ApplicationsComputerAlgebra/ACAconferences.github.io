@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">CASE for concurrent systems based on the computer algebra of n-categories</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Buckland">Richard Buckland</A><br>
+</h3>
+
+Date: July 18th (Thursday)<br>
+Time: ??.??<br>
+
+<center>
+Abstract
+</center>
+
+Richard Buckland will describe a concrete application of computational category
+    theory in which a system designed to perform computations in n-categories is used as the
+    engine for a computer assisted software engineering (CASE) tool for concurrent systems. 
+    The skeletal structure of higher dimensional categories has been found to provide a useful
+    model of concurrent computation. However calculating with such higher dimensional
+    algebraic objects is, as is well known to those who have done such calculations, surprisingly
+    difficult. This difficulty arises both from the combinatorial complexity of all but the most
+    trivial or low dimensional examples, and from the problem of verifying the reasonableness
+    of procedures or results since we have little native intuition when dealing with high
+    dimensions. To assist in this difficult task of high dimensional calculation a computational
+    system has been developed to perform calculations with Schemes (schemes are the skeletal
+    structures underlying paths in omega categories). 
+    This talk will briefly describe the algorithms for calculating with Schemes and will then
+    show how, in a nice piece of circularity, this computer-aided mathematics has as an
+    application the engine of a CASE tool to specify computational systems. 
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Johnson.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

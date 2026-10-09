@@ -1,0 +1,39 @@
+\documentstyle{article}
+\begin{document}
+
+\centerline{\bf Computer Algebra and the Method of Modified Equations}
+
+\vskip 0.3cm
+
+\centerline{Mohammad O. Ahmed and Robert M. Corless}
+\centerline{Department of Applied Mathematics}
+\centerline{University of Western Ontario}
+\centerline{London, Ontario N6A 5B7, Canada}
+\centerline{Email: rcorless@uwo.ca}
+
+\vskip 0.3cm
+
+The method of modified equations is a venerable technique for the
+analysis and understanding of the performance of numerical methods
+for the solution of ordinary and partial differential equations.  One
+reason it is not too much used in practice, although it gives useful
+insight, is the tediousness of the
+calculations, which have to be done with every differential equation
+and numerical method combination.  We
+here discuss a simple Maple program which automates the construction of
+modified equations, given a differential equation and a numerical method
+we wish to analyze.  The basic idea is that we find another, modified,
+differential equation which is a better model of what the numerical
+method actually solves.
+
+We give several examples showing that the Maple program can, with little
+effort, give us good insight into the behaviour of the numerical method.
+In particular, some of the terms in the modified equation have physical
+interpretations, which helps the user's intuition.
+
+Our current implementation just uses Taylor series, but work on a
+B-series version is under way, and we hope by the time of the conference
+to have some preliminary results with which to compare the two
+approaches.
+
+\end{document}

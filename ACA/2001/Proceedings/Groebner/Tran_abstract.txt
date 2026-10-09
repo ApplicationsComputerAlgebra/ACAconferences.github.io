@@ -1,0 +1,43 @@
+FOLA: A Computer Algebra System for Doing Research, Teaching and Studying
+Formal Languages, Grammars and Automata.
+
+Dr. Quoc-Nam Tran, 
+Department of Computer Science, 
+Lamar University
+
+
+Abstract
+
+In this speech, I will talk about the use of Groebner bases and other symbolic
+techniques in doing research and teaching theoretical computer science and vice
+versa.
+
+Formal languages, grammars, automata and related matters from the theory of
+computation are of considerable importance in the field of computer science,
+because they cover the foundations and basic principles of computer science.
+The materials are also useful for important applications such as digital
+design, programming languages and compilers.  However, for a long time
+pencil-and-paper has been the most commonly used tool for working with the
+subject, which makes the subject a very abstract one.  In recent years, efforts
+have been made in order to develop computerized tools.
+
+The goal of this project is to use symbolic techniques from computer algebra
+for developing an easy-to-use, portable and efficient software which can be
+used for both visualizing abstract theoretical models and for assisting the
+manipulation of the models of computers and computation.  The system offers a
+unified approach for working with both formal languages, grammars, automata and
+related matters.  FOLA provides an environment that supports experimental
+research on both formal languages, grammars, automata and related matters.  The
+system does not have any restrictions on the alphabets, symbols, variables, the
+number of internal states, the size of the tapes, etc.
+
+From our experimental results, the system is efficient enough to support
+serious applications.  FOLA can also be used not only as a visual tool but also
+as a mathematical assistant for teaching and studying the subject.  Besides
+supporting most of the basic operations on automata, grammars, regular
+expressions and languages, FOLA will also support two- and three-dimensional
+plottings and animations, which can be used for simulating the work of
+theoretical models such as finite state automata, parsing trees or the more
+complicated models such as two- and three-dimensional tape Turing machines.
+Also, the users can easily modify or add new user-defined models and features
+into the FOLA system.

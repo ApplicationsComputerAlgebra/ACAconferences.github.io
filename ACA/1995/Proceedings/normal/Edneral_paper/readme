@@ -1,0 +1,36 @@
+    This  archive  contains  LaTeX-files  of  V.Edneral's   paper 
+"Normal  Form  Method and Seminumerical  Solutions  of  Nonlinear 
+ODEs".  This paper has been submitted to the Journal of  Symbolic 
+Computation.
+
+Keywords:  Systems of nonlinear ordinary differential  equations, 
+periodic  solutions,  Fourier  / power  series  approximation  of 
+periodic solutions.
+
+    Content:
+
+1. fig1.tex
+2. fig2.tex
+3. he10fig.tex
+4. jsc.sty
+5. paper.tex
+6. readme
+7. vdp28fig.tex
+
+    The paper.tex is the main LaTeX file.  Really it needs to  be 
+processed by BigTeX.  If your TeX reports to you that it has  not 
+enough  room  you should comment  all lines  with  an  "\include" 
+instruction  (2 lines) in the paper.tex file,  treat it as  usual 
+LaTeX  file  and  produce  2 pictures  from  files  fig1.tex  and 
+fig2.tex by LaTeX separately from the paper itself. Unfortunately
+a  usage of the Journal of Symbolic Computation style (jsc.sty  - 
+file) gives an error message at "\bibitem" instructions for  some 
+TeX/LaTeX  versions.  If in this situation you press  "q"  letter 
+after the error message (i.e.  invoke TeX "batch mode") and close 
+your eyes you probably will have a proper result.
+
+    Sincerely yours,
+    Victor  Edneral
+
+e-mail: edneral@theory.npi.msu.su
+

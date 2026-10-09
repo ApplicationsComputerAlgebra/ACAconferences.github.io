@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Giusti</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="http://aca2010.info/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="http://aca2010.info/styles/paperView.css" type="text/css" />
+
+			<link rel="stylesheet" href="http://aca2010.info/plugins/themes/classicNavy/classicNavy.css" type="text/css" />
+	
+	<script type="text/javascript" src="http://aca2010.info/js/general.js"></script>
+	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript" src="http://aca2010.info/js/sizer.js" ></script>
+
+	<!-- Add stylesheets for the font sizer -->
+	<link rel="alternate stylesheet" title="Small" href="http://aca2010.info/styles/fontSmall.css" type="text/css" />
+	<link rel="stylesheet" title="Medium" href="http://aca2010.info/styles/fontMedium.css" type="text/css" />
+	<link rel="alternate stylesheet" title="Large" href="http://aca2010.info/styles/fontLarge.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="body">
+
+<div id="main">
+
+<h2>University of Vlora - Conference Center,&nbsp;ACA&#039;10, Applications of Computer Algebra</h2>
+
+<div id="navbar">
+	<ul class="menu">
+		<li><a href="http://aca2010.info/index.php/index/index" target="_parent">Home</a></li>
+		<li><a href="../../about" target="_parent">About</a></li>
+					<li><a href="../../login" target="_parent">Log In</a></li>
+			<li><a href="../../user/account" target="_parent">Account</a></li>
+				<li><a href="../../search" target="_parent">Search</a></li>
+								<li><a target="_parent" href="../../../index/schedConfs/archive">Archive</a></li>							<li><a href="../../announcement" target="_parent">Announcements</a></li>
+						
+							<li><a href="http://univlora.edu.al" target="_parent">University of Vlora</a></li>
+					<li><a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/trackPolicies" target="_parent">Special Sessions</a></li>
+					<li><a href="https://sites.google.com/a/univlora.edu.al/aca-schedule/home/schedule" target="_parent">Schedule</a></li>
+			</ul>
+</div>
+
+<div id="breadcrumb">
+	<a href="../../index" target="_parent">Home</a> &gt;
+	<a href="../../../aca2010.4" target="_parent">ACA 2010, Applications of Computer Algebra, June 24-27,  Vlora, Albania</a> &gt;
+	<a href="../../index" target="_parent">ACA&#039;10, Applications of Computer Algebra</a> &gt;
+	<a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/presentations" target="_parent">Complexity of Solving Differential Algebraic Systems</a> &gt;
+	<a href="../view/150/0" class="current" target="_parent">Giusti</a>
+</div>
+
+<div id="content">
+	<div id="topBar">
+		<div id="paperFontSize">
+			Font Size:&nbsp;
+			<a href="150#" onclick="setFontSize('Small');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_small.gif" width="16" height="14" border="0" alt="Small" /></a>&nbsp;
+			<a href="150#" onclick="setFontSize('Medium');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_medium.gif" width="16" height="14" border="0" alt="Medium" /></a>&nbsp;
+			<a href="150#" onclick="setFontSize('Large');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_large.gif" width="16" height="14" border="0" alt="Large" /></a>
+		</div>
+	</div>
+
+	<h3>A static analogue to Ritt resolvents : efficient computation of Lagrange resolvents</h3>
+	<div><em>Marc Giusti</em></div>
+	<br />
+
+	<blockquote>
+							Last modified:&nbsp;2010-06-03<br/>
+	</blockquote>
+
+		<h4>Abstract</h4>
+	<br />
+	<div><p> </p><p>[Joint work with Antoine Colin]</p><p>Let be given a finite subgroup of a general linear group. We propose a<br />general frame to compute efficiently in the algebra of polynomials<br />invariant under this subgroup. The classical Noether normalization of<br />this Cohen-Macaulay algebra appears here naturally, and takes a<br />natural form when expressed with adequate data structures, based on<br />evaluation rather than writing. This allows to compute more<br />efficiently its multiplication tensor.<br /><br />As an illustration we give a fast symbolic algorithm to compute<br />Lagrange resolvents associated to the given subgroup. In particular we<br />show also how to find square-free resolvents with better theoretical<br />complexity.<br /><br />Geometrically this relies on a geometric link between the discriminant<br />of the natural Noether projection and two other discriminants related<br />to fundamental invariants.</p></div>
+	<br />
+	
+						
+
+</div>
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+<!--
+	// Open "Define Terms" context when double-clicking any text
+	function openSearchTermWindow(url) {
+		var term;
+		if (window.getSelection) {
+			term = window.getSelection();
+		} else if (document.getSelection) {
+			term = document.getSelection();
+		} else if(document.selection && document.selection.createRange && document.selection.type.toLowerCase() == 'text') {
+			var range = document.selection.createRange();
+			term = range.text;
+		}
+		if (url.indexOf('?') > -1) openRTWindowWithToolbar(url + '&defineTerm=' + term);
+		else openRTWindowWithToolbar(url + '?defineTerm=' + term);
+	}
+
+	if(document.captureEvents) {
+		document.captureEvents(Event.DBLCLICK);
+	}
+	document.ondblclick = new Function("openSearchTermWindow('http://aca2010.info/index.php/aca2010/aca2010/rt/context/150/0/96')");
+// -->
+
+</script>
+
+</body>
+</html>

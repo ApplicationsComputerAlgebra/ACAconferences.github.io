@@ -1,0 +1,28 @@
+          Introducing Maple V to Elementary Teachers of Mathematics
+
+
+                               Yiu-Kwong Man
+                         Department of Mathematics,
+                    The Hong Kong Institute of Education,
+                          10 Lo Ping Road, Tai Po,
+                         New Territories, HONG KONG.
+                           Email: ykman@ied.edu.hk
+
+
+                                  Abstract
+
+
+Almost all major education reforms in mathematics education have requested the
+pre-service or in-service mathematics teachers to be able to apply information
+technology for deepening the students' understanding of the subject contents,
+as well as developing the generic skills in learning, such as inquiry, problem
+solving and communication skills, etc.  Accordingly, there are increasingly
+more elementary teachers using calculators, dynamic geometry software or
+spreadsheet in the classrooms.  However, the use of computer algebra systems at
+elementary teaching level is still very limited.  Among some possible reasons
+behind, the lack of exposure of this kind of software to the elementary
+teachers should be taken into account.  In this paper, we describe how to
+introduce the basics of Maple V in a local teacher training programme and
+demonstrate how to use it in mathematics lessons for inquiry, visualization or
+problem-solving.  Sharing of teaching experience and views from the student
+teachers are also included.

@@ -1,0 +1,26 @@
+            Difficult Problems in Geometry
+                  Natalia Malaschonok
+                Tambov State University
+                natasha@math-iu.tstu.ru
+
+The title is a general name for a class of problems that arise in teaching
+mathematics.  The main problem both in secondary and high school is an
+upbringing of mathematical intuition.  It is not paradoxical that a way here is
+an algorithmization of mathematical problems and cycles of problems.
+
+An example is a geometric problem of an arbitrary character.  A correct
+formulation presupposes an existence of an object under consideration.  The
+best and universal way to create an algorithm of solving is a construction of
+the object.  It is a well-known approach of ancient Greek mathematics.  Now it
+is especially actual in methodology of teaching owing to modern computer
+systems adopted to the needs of mathematics.  One of the best is
+"Mathematica".  It is easy in use and suitable to specialists in various
+spheres of teaching mathematics.
+
+So the main idea is a reconstruction of an object that is ought to be
+calculated mathematically.  The closest to geometry is mechanics, and a great
+amount of applications.
+
+In the talk we demonstrate the examples of such algorithmization of some
+problems and of the cycle of problems.  We hope that it must be interesting not
+only in teaching but in applications of various sort also.

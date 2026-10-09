@@ -1,0 +1,143 @@
+\documentstyle[11pt]{article}
+
+\setlength{\textwidth}{15cm}	 
+\setlength{\oddsidemargin}{0cm}	 
+\setlength{\textheight}{22cm}	 
+\setlength{\topmargin}{0cm}
+
+\title{NP-hardness of some 
+linear control design problems\thanks{This research was supported by the AFOSR under grant
+AFOSR--91--0368 and by  the ARO under grant DAAL03--92--G0309. 
+The first author also gratefully acknowledges support from
+KTH, Stockholm.}}
+
+\author{ Vincent Blondel\thanks{INRIA Rocquencourt, Domaine de Voluceau BP105, 78153 Le Chesnay Cedex, France}\and
+John N. Tsitsiklis\thanks{Laboratory for Information and Decision 
+Systems, Massachusetts Institute of Technology, Cambridge, MA 02139, USA} 
+}
+
+\newcommand{\C}{{\Bbb C}}
+\newcommand{\R}{{\Bbb R}}
+\newcommand{\Z}{{\Bbb Z}} 
+\newcommand{\Db}{\overline{D}}
+\newcommand{\ux}{\underline{x}}
+
+\begin{document}
+
+\maketitle
+
+Consider the following three classical control problems:\\
+
+{\bf Stabilization by static output feedback.} This is perhaps the most
+basic problem in control theory. We are given a linear system 
+\begin{eqnarray*}
+{\dot x}(t) 	& = 	& A x(t) + Bu(t)\\
+y(t)	& = 	& Cx(t)
+\end{eqnarray*}
+and we consider a
+static feedback control law  of the form
+$$u(t)=K y(t).$$ The resulting closed loop system is
+$${\dot x}(t)=(A+BKC) x(t).$$
+The problem is 
+to find necessary and sufficient 
+conditions on the triplet of real matrices $(A, B, C)$ 
+under which there exists a feedback gain  matrix $K$ such that $A+BK
+C$ is stable. When $C$ is not invertible, 
+no general necessary and sufficient conditions are known.\\
+
+{\bf Simultaneous stabilization by static output or state feedback.}
+Our second problem is a generalization of the static output
+feedback problem. Suppose that for each $i$, $i=1,\ldots,k$, we are given
+a linear system
+\begin{eqnarray*}
+{\dot x}(t) 	& = 	& A_i x(t) + B_iu(t)\\
+y(t)	& = 	& C_ix(t).
+\end{eqnarray*}
+Under the feedback control law 
+$$u(t)=K y(t)$$
+the $i$th closed loop system is
+$${\dot x}(t)=(A_i+B_iKC_i) x(t).$$
+The problem is to find conditions on the triplets of real 
+matrices $(A_i, B_i, C_i)$, $i=1,\ldots,k$, under which there
+exists a matrix $K$ such that 
+$A_i+B_iKC_i$ is stable for each $i$.
+This problem is unsolved even if $C_i=I$ for all $i$ (state feedback).\\
+
+{\bf Stabilization by decentralized static output feedback.} 
+We now impose some structure on the feedback gains.
+Consider a linear system of the form
+\begin{eqnarray*}
+{\dot x}(t) 	& = 	& A x(t) + \sum_{i=1}^kB_iu_i(t)\\
+y_i(t)	& = 	& C_ix(t),\qquad i=1,\ldots,k,
+\end{eqnarray*}
+and suppose that we are interested in a static decentralized controller
+of the form
+$$u_i(t)=K_i y_i(t),\qquad i=1,\ldots,k.$$
+The closed loop system is
+$${\dot x}(t)=(A+\sum_{i=1}^kB_iK_iC_i) x(t),$$
+which is of the same form as in stabilization by static output feedback
+except that several of the entries of $K$ are forced to zero.
+This leads us to the
+problem of finding
+conditions on the triplet of real matrices $(A, B, C)$ under which there
+exists a matrix $K$ with a given structure such
+that $A+BKC$ is stable. The problem can be further constrained by
+requiring the matrix structure to be block diagonal, the blocks to
+have a bounded norm, or the blocks to be identical.\\
+
+
+A common feature of these three problems is that, although they are
+easy to state, neither closed--form
+nor efficient algorithmic solutions are known.
+It is rather improbable that
+closed--form solutions to these problems are possible.
+On the other hand, algorithmic solutions do exist as we now argue.
+
+All of the problems that we have described 
+are finitely parametrized. They all involve the search
+for a controller (the --- possibly partitioned
+--- matrix $K$) which can be specified 
+in terms of finitely many real parameters. In theory, 
+it is thus possible to apply the following methodology: (a) parametrize the
+gain matrix $K$ in terms of finitely many real coefficients; (b) express the 
+matrix  stability condition(s) in terms of 
+the coefficients of the system(s) and of the controller; (c) 
+use the Routh-Hurwitz test
+on the resulting characteristic polynomial(s). One 
+is then left with a (large) set of multivariable polynomial inequalities that 
+have to be simultaneously satisfied for some choice of the 
+controller coefficients. Checking 
+the existence of controller 
+coefficients that satisfy this system of 
+multivariable inequalities can be performed using the Tarski-Seidenberg 
+elimination theory. 
+The Tarski-Seidenberg elimination method leads, after a finite 
+number of rational operations, to a
+yes-no answer regarding the existence of a solution. The method is systematic and amenable to computer
+implementation.
+Thus, {\it all three problems described above are
+algorithmically solvable}.\\
+
+
+In this contribution we show that some of the above problems and their
+variations are very unlikely to allow for
+{\it efficient} algorithmic solutions.
+We adhere to the general consensus in computer science that identifies 
+algorithmic efficiency with polynomial time computability.
+We then show that some of the above problems are NP-hard,
+meaning that every problem in NP can be reduced them.
+Thus, 
+unless P=NP,
+these problems are not polynomial time solvable.\\
+
+Our results will be proved as corollaries of the following main theorem: 
+testing for the presence of a stable matrix in a family
+of matrices whose members  have entries that 
+are either fixed to some given real number 
+or vary in the closed unit interval $[-1, 1]$ is an NP-hard problem.
+This latter result complements a
+recent theorem of Nemirovskii
+who showed that testing for 
+the stability of {\it all} elements of such a family
+of matrices is an NP-hard problem.
+\end{document}

@@ -1,0 +1,17 @@
+Title: Symbolic-Numeric Interface
+
+Organizers: Richard Liska, liska@siduri.fjfi.cvut.cz
+            Stanly Steinberg, stanly@math.unm.edu
+
+
+Abstract:
+
+There are many ways of using computer algebra systems in numerical methods,
+however these possibilities are not yet fully understood nor are they commonly
+used by in the numerical community. This session will cover all the aspects of
+computer algebra applications in numerics. The subjects include but are not
+limited to: developing numerical methods, analysis of numerical methods,
+code generation, combining symbolic and numeric methods, etc.
+
+If you wish to present a talk in this session, please submit an abstract
+including title and authors to both organizers.

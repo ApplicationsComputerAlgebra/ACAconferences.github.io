@@ -1,0 +1,244 @@
+Sessions
+
+1st International IMACS Conference on Applications of Computer Algebra
+
+-------------------------------------------------------------------------------
+---------- SYMMETRIES AND CLOSED FORM SOLUTIONS OF DIFFERENTIAL EQUATIONS
+---------- Fritz Schwarz
+-------------------------------------------------------------------------------
+
+Group-Invariant Solutions of Hydrodynamics
+	(Stephen Coggeshall)
+Symmetry Reduction and Symbolic Solutions of Ordinary Differential Equations
+	(Alexei Bocharov)
+JET---An Axiom Environment for Geometric Computations with Differential
+	Equations
+	(Werner Seiler & Jaques Calmet)
+The Characterization of 3rd Order ODE's Admitting Fiber Preserving Point
+	Symmetries
+	(Guy Grebot)
+About the solution of first order quasilinear PDEs and the application of Lie
+	symmetries
+	(Thomas Wolf)
+Symmetries and Solutions of Plasma-Fluid Equations
+	(Raul Acevedo)
+Symmetries for Dynamical Systems on a Lattice
+	(Decio Levi)
+Algorithmic Determination of the Cartan Structure of Infinite Lie Symmetry
+	Groups of PDE's
+	(Greg Reid)
+Symbolic Computation and Conserved Densities
+	(Willy Hereman)
+Liouvillian Solutions of 3rd Order ODE's: A Progress Report
+	(Winfried Fakler & Jacques Calmet)
+On the Translation Invariants of Quadratic Differential Systems
+	(Leonid A. Timochouk)
+
+-------------------------------------------------------------------------------
+---------- PARAMETRIC CURVES AND APPLICATIONS IN COMPUTER AIDED GEOMETRIC DESIGN
+---------- J. Rafael Sendra
+-------------------------------------------------------------------------------
+
+Parametric Curves and Applications in CAGD: Introduction and Some Special
+	Issues
+	(Tomas Recio, J. Rafael Sendra & Juana Sendra)
+Implicitization by Groebner Basis Conversion
+	(Michael Kalkbrener)
+New Elimination Tools based on Symmetric Functions for the Implicitization of
+	Parametric Curves and Surfaces
+	(Laureano Gonzalez-Vega)
+Issues in Symbolic Parametrization of Algebraic Curves
+	(Franz Winkler)
+Geometric Constraint Solving: (I) Graph-Directed Solvers
+	(Christoph M. Hoffmann)
+A Toolkit for Algebraic Geometry
+	(Ashutosh Rege)
+
+-------------------------------------------------------------------------------
+---------- POLYNOMIAL SYSTEMS
+---------- Lakshman Y. N. & David Wood
+-------------------------------------------------------------------------------
+
+Geometric Constraint Solving: (II) Algebraic Issues
+	(Christoph M. Hoffmann)
+Resurrecting Dixon Resultants
+	(Deepak Kapur & Tushar Saxena)
+The Kapur-Saxena-Yang Dixon Resultant with Maple and Mathematica
+	(Janet McShane, George Nakos & Robert M. Williams)
+On Sparsifying Transformations for Multivariate Polynomials
+	(Lakshman Y. N.)
+Quasi-Linear Differential Algebraic Equations: An Algebraic Study
+	(Gabriel Thomas)
+Geometry and Polynomial Systems---Theory and Application
+	(Peter F. Stiller)
+Ten Minutes of Discussion of Issues Raised and Not Raised
+	(informally led by the organizers)
+Matrix Methods for Sparse Polynomial Systems
+	(John Canny)
+Advances in Affine Elimination Theory
+	(J. Maurice Rojas)
+Polynomial Conditions on Spectra of Real, Symmetric Toeplitz Matrices
+	(David H. Wood)
+A Normal Form Algorithm for Matrices over k[x,y]/<xy>
+	(Reinhard Laubenbacher)
+Ten Minutes of Discussion of Issues Raised and Not Raised
+	(informally led by the organizers)
+
+-------------------------------------------------------------------------------
+---------- CONSTRUCTION AND APPLICATIONS OF NORMAL FORMS IN THE THEORY OF
+---------- NONLINEAR ODES AND TRANSFER MAP TECHNIQUES
+---------- Alexander D. Bruno & Victor Edneral
+-------------------------------------------------------------------------------
+
+Methods of calculation of normal forms
+	(Alexander D. Bruno)
+Hodge decomposition and conservation laws
+	(Jan Sanders & Jing Ping Wang)
+Normal Form Method and Formal Integrals of Nonlinear ODEs systems
+	(Victor F. Edneral)
+SAP, a symbolic algebraic processor
+	(Andre Deprit)
+Computation of coefficients of the normal form in a singular case
+	(Sergey Yu. Sadov)
+Phase space structure of 4D symplectic mappings and applications to beam optics
+	(Ezio Todesco)
+The Newton Polyhedra in the Nonlinear Analysis
+	(Alexander D. Bruno)
+
+-------------------------------------------------------------------------------
+---------- COMPUTER ALGEBRA APPLIED TO TECHNOLOGY & OPEN SESSION
+---------- Waldir L. Roque & Laureano Gonzalez-Vega
+-------------------------------------------------------------------------------
+
+Mixing Symbolic and Numeric Strategies to Solve the Inverse Kinematics Problem
+	in Robotics
+	(Laureano Gonzalez-Vega)
+Design and Performance Analysis of Optical Instruments with Computer Algebra
+	(Yves Papegay)
+Verification of Knowledge Based Systems with Commutative Algebra and Computer
+	Algebra Techniques
+	(Eugenio Roanes-Lozano & Luis M. Laita)
+Two more links to NAG numerics involving CA systems
+	(Evatt Hawkes & Grant Keady)
+A Review of CAS Mathematical Capabilities
+	(Michael Wester)
+On Conservation Laws and Symmetries for PDEs
+	(Vladimir Rosenhaus)
+
+-------------------------------------------------------------------------------
+---------- CA APPLICATIONS OF STOCHASTIC METHODS
+---------- Michael Trott
+-------------------------------------------------------------------------------
+
+Quantum coupling coefficients seen as discrete wave functions
+	(Markus van Almsick)
+Computer-Aided Stochastic Calculus with Applications in Finance
+	(Colin P. Williams)
+Algebra for the Electronic Marketplace 
+	(Ross Miller)
+Transmission of Solitons through Random Media
+	(Robert Knapp)
+
+-------------------------------------------------------------------------------
+---------- PARALLEL COMPUTER ALGEBRA
+---------- Eric Kaltofen & Gilles Villard
+-------------------------------------------------------------------------------
+
+REDUCE on a Massively Parallel System
+	(Winfried Neun)
+Parallel Computer Algebra on the Desk-Top
+	(Beatrice Amrhein & Wolfgang Kuechlin )
+Parallelism in MuPAD
+	(Holger Naundorf)
+A Flexible Tool to Experiment with Distributed Symbolic Computation
+	(Stephane Dalmas & Marc Gaetano)
+Parallel Integral Multivariate Polynomial Greatest Common Divisor Computation
+	(Mohamed Omar Rayes)
+Distributed Symbolic Computation with the Black Box Representation
+	(Angel Diaz & Erich Kaltofen)
+Parallel Quantifier Elimination on the SP2
+	(Hoon Hong, Michael Jahn, Richard Liska, Nicholas Robidoux & Stanly
+	Steinberg)
+Summarizing Remarks
+	(Erich Kaltofen)
+
+-------------------------------------------------------------------------------
+---------- NUMERICAL METHODS FOR PDES IN A COMPUTER ALGEBRA ENVIRONMENT
+---------- Victor G. Ganzha & E. V. Vorozhtsov
+-------------------------------------------------------------------------------
+
+Applications of Computer Algebra in Scientific Computing
+	(Hans-Joachim Bungartz)
+Symbolic-Numeric Stability Investigation of Difference Schemes for the Euler
+	and Navier-Stokes Equations
+	(Victor G. Ganzha & E. V. Vorozhtsov)
+Using the Symbolic Computation for Analysis of Local Approximation of
+	Finite-Difference Operators
+	(Mikhail Shashkov & Victor G. Ganzha)
+Algorithm for Solving Riccati Matrix Equation with Guaranteed Accuracy
+	(Aider Ya. Bulgakov)
+Local Approximation Study of Johnson's Method for 2D Elasticity Problems
+	(Victor G. Ganzha & E. V. Vorozhtsov)
+
+-------------------------------------------------------------------------------
+---------- CA METHODS IN CONTROL
+---------- Chaouki T. Abdallah & Peter Dorato
+-------------------------------------------------------------------------------
+
+Complexity of Systems and Control Theory Problems
+        (Paul W. Goldberg, Chaouki T. Abdallah & Greg L. Heileman)
+NP-hardness of some linear control design problems
+	(Vincent Blondel & John N. Tsitsiklis)
+Application of Quantifier Elimination Theory to Robust Multi-objective Feedback
+	Design
+	(Peter Dorato, Wei Yang & Chaouki T. Abdallah)
+
+-------------------------------------------------------------------------------
+---------- CAS IN ENGINEERING EDUCATION
+---------- H. Eric Nuttall & Jeanine Ingber
+-------------------------------------------------------------------------------
+
+Coding Theory in MATHEMATICA
+	(Igor Gachkov & Kenneth Hulth)
+Advanced Engineering Math Through Symbolic Software
+	(Robert Lopez)
+Engineering Applications of Computer Algebra: Mathematica Approach
+	(Cetin Cetinkaya)
+Freshmen Engineering: Computing using Mathematica
+	(Jeanine Ingber & Eric Nuttall)
+Mathematica for the Beginning Teacher
+	(Henry Shapiro)
+
+-------------------------------------------------------------------------------
+---------- COMPUTER ALGEBRA AND AUTOMATED THEOREM PROVING
+---------- Dongming Wang
+-------------------------------------------------------------------------------
+
+An Open Environment for Doing Mathematics
+	(Karsten Homann & Jacques Calmet)
+Geometry Theorem-Proving and Geometry Problem-Solving, Old and New
+	(Wen-tsun Wu)
+Radical Decomposition and Geometry Theorem Proving
+	(Michael Kalkbrener)
+Zero Decomposition for Theorem Proving in Geometry
+	(Dongming Wang)
+Geometric Reasoning and Resultants
+	(Deepak Kapur)
+Probabilistic Verification of Elementary Geometry Statements
+	(Giuseppa Carra Ferro, Giovanni Gallo & Rosario Gennaro)
+
+-------------------------------------------------------------------------------
+---------- QUANTIFIER ELIMINATION AND ITS APPLICATIONS
+---------- Richard Liska & Michael Jahn
+-------------------------------------------------------------------------------
+
+TITLE???
+	(Hoon Hong)
+Partial solution of a path finding problem using the CAD method
+	(Scott McCallum)
+Stability Analysis by Quantifier Elimination
+	(Richard Liska & Stanly Steinberg)
+Using Quantifier Elimination to solve the Birkhoff Interpolation Problem
+	(Laureano Gonzalez-Vega)
+Applying quantifier elimination to problems in optimization and simulation
+	(Volker Weispfenning)

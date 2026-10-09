@@ -1,0 +1,48 @@
+<HTML>
+	<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<TITLE>ACA 2013</TITLE>
+		<LINK REL="StyleSheet" TYPE="text/css">
+	</HEAD>
+<script type="text/javascript">
+function contar() {
+  fecha=new Date(2013,06,07,07,45,00); //año,mes-1,dia,hora-1,minuto,segundo
+  fecha2=new Date(2013,06,10,11,45,00); //año,mes-1,dia,hora-1,minuto,segundo
+  ahora=new Date();
+  dif=new Date(fecha-ahora);
+  dif2=new Date(fecha2-ahora);
+  Math.dosDigitos = function( value ){
+  return (value < 10 )?( "0" + value ):(value)
+  }
+//  txt=Math.floor(dif/86400000)+' days, '+Math.dosDigitos(dif.getHours())+' hours, '
+  extra=(dif.getHours()==0)?(1):(0);
+  txt=(Math.floor(dif/86400000)<0)?(0):(Math.floor(dif/86400000)+extra);
+  txt2=(Math.floor(dif/86400000)+extra==1)?(' day, '):(' days, ');
+  txt=txt+txt2+Math.dosDigitos(dif.getHours())+' hours, '
+  +Math.dosDigitos(dif.getMinutes())+' minutes and '+Math.dosDigitos(dif.getSeconds())+' seconds left for ACA 2013';
+  txt=(dif.getYear()<70)?('ACA 2013 IS BEING HELD'):(txt);
+  txt=(dif2.getYear()<70)?('ACA 2013 IS OVER'):(txt);
+  document.getElementById('ACA2013').innerHTML=txt;
+}
+</script>
+<body onLoad="setInterval('contar()',1000)" BGCOLOR="#000000" background="images/fondouma_bottom.gif" TEXT="#000000" LINK="#000000" VLINK="#000000" ALINK="#000000">
+<table width="100%" border="0" cellspacing="5" cellpadding="0">
+  <tr>
+<!--    <td valign="top"><div align="left">
+    &nbsp;&nbsp;&nbsp;
+	<b><font color="#C80000"><span id="ACA2013"></span></font></b> 
+	</div></td> -->
+		<!-- Start Bravenet.com Service Code -->
+<!--    <td valign="top"><div align="left">
+		<script type="text/javascript" src=				"http://pub19.bravenet.com/counter/code.php?id=406254&usernum=1562931428&cpv=2"></script>
+		<!-- End Bravenet.com Service Code -->
+	
+    <td valign="top">
+      <div align="right"> <a href="mailto:aca2013@ctima.uma.es">aca2013@ctima.uma.es</a>&nbsp;&nbsp;&nbsp; 
+        <a href="http://www.facebook.com/aca2013" target="_blank"><img src="images/Facebook-icon.png" alt="Follow us in facebook" width="24" height="24" border="0" align="absbottom"></a>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/#!/ACA2013" target="_blank"><img src="images/Twitter-icon.png" alt="Follow us in Twitter" width="24" height="24" border="0" align="absbottom"></a>&nbsp;&nbsp;&nbsp; 
+        <font color="#000000">updated: June 28<sup>th</sup>&nbsp;&nbsp;&nbsp;</font></div>
+    </td>
+  </tr>
+</table>
+</BODY>
+</HTML>

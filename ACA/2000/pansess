@@ -1,0 +1,18 @@
+
+Here is my tentative description:
+
+Algebraic algorithms and complexity
+
+The session will cover various theoretical and practical aspects of
+synthesis and analysis of algebraic algorithms, in particular various
+issues of theoretical and practical complexity af algebraic computing.
+This will include the classical theoretical subject of lower bounds
+techniques as well as upper estimates for the parameters most important
+for practical computations, such as computational time, memory space, and
+computational precision, including both asymptotic estimates and the
+constants hidden in the "O" notation.
+We will focus on the most established fundamental subjects of the solution
+of polynomial equations and systems of equations and matrix multiplication
+but will also expose some more recently recognized topics such as
+computations in finite fields and structured matrices.
+

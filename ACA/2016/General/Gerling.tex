@@ -1,0 +1,80 @@
+%    Latex Template for ACA 2016
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS BELOW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{url}
+
+
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS ABOVE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\vspace{-0.8cm}
+\begin{flushleft}
+\Large \textbf{\noindent
+%%% PLEASE INSERT THE TITLE OF YOUR TALK HERE %%%%%%%
+Efficient computation of the bivariate chromatic polynomial for special graphs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5cm}
+\normalsize
+ %%%%%%             NAMES OF AUTHORS         %%%%%%
+ %%%%%% NAME OF SPEAKER SHOULD BE UNDERLINED %%%%%%%%%
+\normalsize{
+ %%%%%% FOR EXAMPLE %%%%%
+\underline{M. Gerling}$^1$
+ %%%%%%%%%%%%%%%%%%%%%%%%
+} \\
+\vspace{5mm}
+\textit{\footnotesize
+ %%%%%% AFFILIATION OF AUTHORS %%%%%%
+$^1$ University of Kassel, Germany,
+melanie.gerling@mathematik.uni-kassel.de
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+\end{flushleft}
+
+In 2003 Dohmen, Pönitz and Tittmann introduced a bivariate generalization $P(G;x,y)$ of the chromatic polynomial $P(G;y)$. While the definition of the usual chromatic polynomial strictly claimes, respectively, different colours for pairwise non-adjacent vertices, the bivariate polynomial expands this set of colours by another set without any restrictions. Let $X=Y\cup Z$ with $Y\cap Z=\emptyset$ be the set of all available colours with $\left|X\right|=x$ and $\left|Y\right|=y$. By a generalized proper colouring of $G$ we denote a map $\phi: V\rightarrow X$ such that for all edges $\left\{u,v\right\}\in E$ with $\phi\left(u\right)\in Y$ and $\phi\left(v\right)\in Y$ $\phi\left(u\right)\neq\phi\left(v\right)$ holds. In other words two adjacent vertices may only be coloured in the same colour, if this is chosen from $Z$.\\
+\indent
+The computation of the chromatic polynomial of a graph is an NP-complete problem. Consequently, this is also valid for the bivariate generalization of the chromatic polynomial. A recursion formula, which was introduced by Averbouch, Godlin and Makowsky in 2008, has exponential complexity. Hence, our aim is to find efficient algorithms or formulas for the calculation of the bivariate chromatic polynomial for special types of graphs. The following results will be presented.\\
+\indent
+We introduce partition formulas, which can be used to compute the bivariate chromatic polynomial for arbitrary graphs. These formulas are very complex, but they are also an easy method to prove more special but less complex formulas.\\
+\indent
+Some of those less complex methods are recursion-free equations for the complete partite graphs $K_{2,\ldots,2}$ and $K_{3,\ldots,3}$ as well as a recursion formula for the more general complete partite graph $K_{n_{1},\ldots,n_{t}}$ with $t\geq1$ and $n_{i}\geq1$ for all $i\in\left\{1,\ldots,t\right\}$.\\
+\indent
+Finally, we will consider complete seperators in graphs. In the univarate case, a complete seperator allows a simplification of the computation of the univariate chromatic polynomial. We will show that this is much more difficult in the bivariate case.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{00}
+\addcontentsline{toc}{chapter}{References}
+\setlength{\itemsep}{-1mm}
+\footnotesize
+
+\bibitem{AGM} I. Averbouch, B. Godlin and J. A. Makowsky, \textit{A most general edge elimination polynomial}, in \textit{Graph-Theoretic Concepts in Computer Science}, Lecture Notes in Comput. Sci. \textbf{5344}, pp.31-42 (2008). \url{http://link.springer.com/chapter/10.1007%2F978-3-540-92248-3_4}
+
+\bibitem{DPT} K. Dohmen, A. Pönitz and P. Tittmann, \textit{A new two-variable generalization of the chromatic polynomial}, Discrete Math. Theor. Comput. Sci. \textbf{6}, pp. 69-90 (2003). \url{http://www.emis.de/journals/DMTCS/volumes/abstracts/dm060106.abs.html}
+
+\bibitem{GER} M. Gerling, \textit{Eigenschaften chromatischer Polynome}, Dissertation, Universit\"at Kassel. \url{https://kobra.bibliothek.uni-kassel.de/handle/urn:nbn:de:hebis:34-2015110249265}
+
+\end{thebibliography}
+\normalsize
+\end{document} 

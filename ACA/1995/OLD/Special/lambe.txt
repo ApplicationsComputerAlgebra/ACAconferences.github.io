@@ -1,0 +1,55 @@
+                           FIRST ANNOUNCEMENT
+
+                 Special Session on Applications of 
+               Computational Topology and Algebra to 
+                    Engineering and Mathematics
+ 
+                             Larry Lambe
+                        Stockholm University
+
+
+This is a call for papers in the area of computational topology and 
+algebra as applied to solving problems in the following areas:
+
+
+   o  Solutions of ordinary and partial differential equations 
+      through the use of differential Groebner bases and/or 
+      symmetry methods.
+
+This includes, for example
+
+   1. Differential Groebner basis techniques in general.
+   2. Resolutions of operators using differential Groebner 
+      basis techniques.
+   3. Calculation of symmetries of systems of differential
+      equations.
+   4. Combined use of symmetries and differential Groebner
+      basis techniques.
+
+
+   o  The use of algebraic techniques for applied mathematics 
+      and numerical computations.
+
+This includes, for example
+
+   1. The use of symbolic computation in the finite element
+      and finite difference methods.
+   2. The use of symbolic computation to precondition problems 
+      for more efficient numeric solution.
+   3. The use of Lie algebra techniques in applied mathematics.
+   4. Symbolic computation in mathematical physics (R-matrices,
+      quantum Yang-Baxter equation, physical systems, etc).
+   5. Algebraic methods in the theory of interpolation.
+
+
+   o  Applications of topology and algebra to problems in engineering 
+      and science.
+
+This includes, for example
+
+   1. Homology techniques in computer-aided design.
+   2. Applications of computational topology to robotics.
+   3. Applications of computational topology and algebra
+      to networks and communication systems.
+   4. Applications of computational topology to biology
+      chemistry and other sciences.

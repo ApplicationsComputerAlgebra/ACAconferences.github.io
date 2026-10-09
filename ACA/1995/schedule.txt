@@ -1,0 +1,43 @@
+IMACS Conference on Applications of Computer Algebra TENTATIVE schedule
+
++==========+===========+=======================================================
+|          | morning   | Symmetries and DE Solutions I	(Schwarz)
+|          |           |
+|          |           | Parametric Curves/CAD		(Sendra)
+|May 16    |           |
+|          +-----------+-------------------------------------------------------
+|Tuesday   | afternoon | Symmetries and DE Solutions II	(Schwarz)
+|          |           |
+|          |           | Polynomial Systems I		(Wood-Lakshman)
+|          |           |
++==========+===========+=======================================================
+|          | morning   | ODE Normal Forms		(Bruno-Edneral)
+|          |           | 
+|          |           | Technology/Open Session	(Roque-Vega)
+|May 17    |           |
+|          +-----------+-------------------------------------------------------
+|Wednesday | afternoon | Polynomial Systems II		(Wood-Lakshman)
+|          |           |
+|          |           | Stochastic Methods		(Trott)
+|          |           |
++==========+===========+=======================================================
+|          | morning   | Parallel Computer Algebra I	(Kaltofen-Villiard)
+|          |           |
+|          |           | Numerical Methods for PDEs	(Ganzha-Vorozhtsov)
+|May 18    |           |
+|          +-----------+-------------------------------------------------------
+|Thursday  | afternoon | Parallel Computer Algebra II	(Kaltofen-Villiard)
+|          |           |
+|          |           | Methods in Control		(Abdallah-Dorato)
+|          |           |
++==========+===========+=======================================================
+|          | morning   | Engineering Education I	(Nuttall-Ingber)
+|          |           |
+|          |           | Automated Theorem Proving	(Wang)
+|May 19    |           |
+|          +-----------+-------------------------------------------------------
+|Friday    | afternoon | Engineering Education II	(Nuttall-Ingber)
+|          |           |
+|          |           | Quantifier Elimination		(Liska-Jahn)
+|          |           |
++==========+===========+=======================================================

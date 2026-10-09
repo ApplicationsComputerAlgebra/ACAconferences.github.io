@@ -1,0 +1,12 @@
+Michel Beaudin* (Canada), mbeaudin@seg.etsmtl.ca
+Using the TI-92Plus: Examples
+
+We incorporated the use of the TI-92/92+/89 in order to help our engineering
+students to use Computer Algebra in the classroom, not only in the labs.  We
+will present live examples in order to make connections between subjects.  For
+example :    we will solve equations using different methods and showing why
+the Algebra menu of the TI-92 is a teaching tool ;  in multiple variable
+calculus, we will look at Lagrange multipliers problems with the help of the
+"zeros" function and 2D/3D graphics;  in ODE courses, we will focus on some
+problems involving Laplace transforms/convolution, Fourier series,
+slope/direction fields, numerical methods, chaos, ...

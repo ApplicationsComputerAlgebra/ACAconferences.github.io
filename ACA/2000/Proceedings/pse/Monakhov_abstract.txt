@@ -1,0 +1,32 @@
+Title:
+Integrated Environment BARSIC as a Tool for Development and Run-Time
+Support of Research and Educational Software
+
+Authors:
+V.V. Monakhov, A.V. Kozhedub, S.B. Paramonov, E.Yu. Komarov, L.A. Evstegneev
+
+E-mail: kozhedub@cph3.phys.spbu.ru
+
+Abstract:
+The need for increased programmer productivity and rapid development of complex
+systems provide importance of problem-oriented software.  The universal
+programming languages such as Visual BASIC, Object PASCAL, C++ or other are
+used in many cases to develop research and educational software.  However in
+these languages the so-called "system programming constructions" are often used
+even it is not necessary.  We developed new universal programming language
+BARSIC with corresponding integrated environment to solve this problem.  BARSIC
+is a powerful tool for development and run-time support of research and
+educational software.
+
+The main features of the language are:  - It is object-oriented language;
+- It has many features of mathematical environments;
+- BARSIC applications work under control of BARSIC run-time environment;
+- BARSIC applications are much more robust then usual software due to
+	special syntax feature of the language and two-level exceptions
+	handling (application level and BARSIC kernel level);
+- Visual design of user's interface of BARSIC application.
+
+We developed a lot of BARSIC applications: controlling software for
+computerized research and educational installations in Russia, Sweden and
+Denmark; software for mathematical simulation of physical phenomena;
+mathematical package "Methods of numerical data processing and visualization".

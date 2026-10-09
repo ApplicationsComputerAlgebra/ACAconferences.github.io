@@ -1,0 +1,48 @@
+        IMACS Conference on Applications of Computer Algebra
+                       May, 16-19, 1995
+                       Tuesday - Friday
+                   University of New Mexico
+                 Albuquerque, New Mexico, USA
+
+To submit a proposal, please fill in the Proposed Special Session
+form available on WWW (mosaic) accessible through the ACA URL:
+        http://math.unm.edu/aca.html
+This information is also available by anonymous FTP:
+        ftp math.unm.edu
+        Name: anonymous
+        Password: <your email address>
+        cd pub/aca
+        get propose_session.txt
+You can also send email to:
+        aca@math.unm.edu
+As a last resort, FAX:
+        1-505-277-5505
+
+
+Special Sessions:
+
+A special session will be allocated three hours for presentations.  It is
+expected that most talks, including any time for questions or discussion,
+will be for one-half hour so that attendees can move from one session to
+another.  However, the organizers may use the time in anyway they wish. 
+Having the first talk in the session be a survey or overview for a general
+scientific and educational audience is encouraged.  It would be appropriate
+for this talk to be for one hour.
+
+Duties of a Session Chairperson:
+
+  [1]   Submit a proposal for a session to the organizing committee.
+        This should consist of an abstract for the session and a list
+        of speakers to be invited.  If the session is approved, then
+        the following needs to be done:
+  [2]   Invite the speakers.  Request that the speakers submit abstracts
+        to the organizer. The organizer will forward the abstracts to the
+        conference organizing committee.
+  [3]   It is suggested that the session organizer organize a dinner
+        for the session speakers and, perhaps, some of the session
+        participants.
+
+The conference organizers request that senior special-session organizers 
+invite a junior researcher to be their co-organizer. In addition, it is
+important for the health of the computer algebra community to encourage
+junior, female, and minority researchers to participate in the special sessions.

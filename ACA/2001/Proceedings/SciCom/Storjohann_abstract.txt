@@ -1,0 +1,22 @@
+Computing the Frobenius Canonical Form
+
+Arne Storjohann
+University of Western Ontario, London, Ontario, Canada
+
+Computing the Frobenius canonical form of a matrix over a field is a classical
+problem with many applications.  The form is entirely rational and thus well
+suited to be computed symbolically; this is in contrast to the closely related
+Jordan form which may have entries --- eigenvalues of the input matrix --- in
+an algebraic extension of the ground field.  In the first part of the talk I
+will define the form and recall some of it's properties and uses.
+
+The complexity of computing the form has been well studied, with first
+efficient algorithm given about fifteen years ago by Ozello.  Many algorithms
+have been proposed since then; in the second part of the talk I will give an
+overview.  Special attention will be given to recently discovered deterministic
+algorithms which recover the form in about the same number of field operations
+as required matrix multiplication --- this is nearly optimal.
+
+I will conclude by mentioning some open problems and recent results with
+respect to the problems of computing the form for a sparse input matrix and/or
+integer input matrix.

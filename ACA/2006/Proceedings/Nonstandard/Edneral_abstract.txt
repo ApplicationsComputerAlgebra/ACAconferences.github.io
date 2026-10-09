@@ -1,0 +1,17 @@
+Enabling GRID for Computer Algebra Applications
+
+Victor Edneral
+Department of Theoretical High Energy Physics
+Skobeltsyn Institute of Nuclear Physics, Moscow State University
+Moscow, Russia
+
+
+We briefly consider the EGEE (Enabling Grids for E - sciencE) project.  The
+Grid here is a global system of spread calculations and of information
+storage.  The described Grid net includes now about 180 resource centers all
+over the world.  They use about $18,000$ CPUs with storage capacity ~10,200
+TBytes as a whole.
+
+Possibilities of usage of the Grid net on a base of Virtual Organizations (VO)
+are considered.  A perspective of creation of the VO "calg" for a computer
+algebra applications usage is discussed.

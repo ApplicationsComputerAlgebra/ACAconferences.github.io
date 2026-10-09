@@ -1,0 +1,47 @@
+Combinatorial and Computational Methods in Algebraic Geometry
+
+Session Organizer:
+Jie-Tai Yu
+Institute of Mathematical Research
+Department of Mathematics
+The University of Hong Kong
+Tel: (852) 2859-2578   Fax: (852) 2580-9823
+Email: yujt@hkusua.hku.hk
+http://www.hkumath.hku/~jtyu/
+
+
+
+Session Description:
+
+The session aims is to provide a forum for discussing new trends in
+combinatorial and computational methods in algebraic geometry, in particular
+their applications in outstanding problems like the Jacobian conjecture,
+Embedding conjecture, Nagata's conjecture and Cancellation conjecture in affine
+algebraic geometry.
+
+Session Topics:
+
+Groebner Bases and Applications
+Locally Nilpotent Derivations and Applications
+Primitive Elements, Retracts, Test Elements and Automorphic Orbits
+Exotic Algebraic Structures on Affine Spaces
+Jacobian Conjecture
+Embedding Problem
+Nagata Conjecture
+Cancellation Problem
+
+
+
+List of Potential Speakers:
+
+Andrew Campbell (Los Angeles)
+David Eisenbud (Berkeley)
+Vesselin Drensky (Sofia)
+Arno van den Essen (Nijmegen)
+Jaime Gutierrez (Santander)
+Leonid Makar-Limanov (Detroit)
+Marie-Francoise Roy (IRMAR)
+Vladimir Shpilrain (New York)
+Wolmer Vasconcelos (New Brunswick)
+Jie-Tai Yu (Hong Kong)
+Mikhail Zaidenberg (Grenoble)

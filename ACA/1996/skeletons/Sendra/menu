@@ -1,0 +1,27 @@
+# Created by rsalamon@yucca on Thu Jul  4 10:57:47 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Arrondo.html
+Path=0/conference/IMACS96/skeletons/Sendra/Arrondo.html
+
+Name=Giusti.html
+Path=0/conference/IMACS96/skeletons/Sendra/Giusti.html
+
+Name=Giusti.ps
+Path=9/conference/IMACS96/skeletons/Sendra/Giusti.ps
+
+Name=Hong.html
+Path=0/conference/IMACS96/skeletons/Sendra/Hong.html
+
+Name=Mourrain.html
+Path=0/conference/IMACS96/skeletons/Sendra/Mourrain.html
+
+Name=Pottmann.html
+Path=0/conference/IMACS96/skeletons/Sendra/Pottmann.html
+
+Name=Sauer.html
+Path=0/conference/IMACS96/skeletons/Sendra/Sauer.html
+
+Name=Winkler.html
+Path=0/conference/IMACS96/skeletons/Sendra/Winkler.html
+

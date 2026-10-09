@@ -1,0 +1,13 @@
+A Recursion of the Symmetric Group's Polya Polynomial
+
+Bill Pletsch
+Central New Mexico Community College, Albuquerque, New Mexico, USA
+
+The Polya polynomial of the symmetric group is a useful beast.  Its computation
+is a bear.  A recursion developed by the author somewhat tames the beast.
+When coupled with computer algebra a powerful data gathering tool is created.
+The recursion, a sketch of its proof, and the link with computer algebra will
+be discussed.  Finally, if there is time, some of the patterns discovered and
+the results they reveal in the theory of double cosets, rearrangement
+reactions, contingency tables, integer sequences, and stochastic matrices will
+be discussed.

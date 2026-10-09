@@ -1,0 +1,15 @@
+Title:
+The Use of Algorithm Templates in a Problem Solving Environment for the
+Numerical Solution of Differential Equations
+
+Authors: R. L. Akers, E. Kant, C. J. Randall, S. Steinberg*, R. L. Young
+
+Abstract:
+SciNapse is a problem solving environment that transforms high-level
+descriptions of initial boundary value problems for systems of partial
+differential equations to efficient, documented and executable code, typically
+C or Fortran.  Modelers can concisely specify problems at a level that mirrors
+the mathematical description of the problem.  This talk will provide an
+overview of SciNapse and then gives more detailed discussions of the use of
+algorithm templates for representing algorithms, and how the templates are
+translated into executable code.

@@ -1,0 +1,437 @@
+\documentstyle{article}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\begin{document}
+\title{Partial Solution to a Path Finding Problem\\
+       Using the Cad Method}
+\author{SCOTT MCCALLUM \\
+        Department of Computing \\
+        Macquarie University NSW 2109 \\
+        Australia \\
+        scott@mpce.mq.edu.au}
+\maketitle
+
+\begin{abstract}
+This paper reports my attempt to solve partially a simple path finding
+problem in the plane using the cylindrical algebraic decomposition
+method (\cite{Arnon_Collins_McCallum:84a}, \cite{Collins:75}).\\
+\\
+{\em Keywords:} path finding, findpath, motion planning, cylindrical
+algebraic decomposition, quantifier elimination.
+\end{abstract}
+
+\section{Introduction}
+Schwartz and Sharir \cite{Schwartz_Sharir:83b} have pointed out
+that a suitable enhancement of the cylindrical algebraic
+decomposition (cad) algorithm (\cite{Collins:75}, 
+\cite{Arnon_Collins_McCallum:84a})
+can in principle be used to solve any path finding problem formulated in 
+semialgebraic terms. We know of two previous attempts 
+(\cite{Davenport:86}, \cite{Kalkbrener_Stifter:87}) to solve
+a specific path finding problem in the plane using some
+implementation of the cad method. Each of these attempts was unsuccessful
+because the amount of computation required by the version
+of the cad method used was prohibitive.
+
+The present paper reports my attempt to carry the solution of the
+path finding problem discussed in \cite{Kalkbrener_Stifter:87}
+(Example 11) as far as possible with a recent powerful
+implementation of the cad algorithm prepared by Hoon Hong
+and with contributions by George E. Collins, Jeremy R. Johnson
+and Mark J. Encarnacion.
+
+The author is indebted to the Macquarie University 
+Research Grants Scheme (formerly the Macquarie University Travelling
+Research Scholars Scheme) for providing the financial support for
+this research. The author is also indebted to Professor George E.
+Collins who introduced me to the new cad program mentioned above,
+and provided many valuable suggestions for the research.
+
+\section{Problem statement}
+We shall give a precise statement of the path finding problem
+in the plane. Let $M$ be a closed semialgebraic subset of the $(X,Y)$-plane
+(`$M$' stands for `movable object').
+For real numbers $\theta , x,y$, let $T_{\theta ,x,y}(M)$ be the
+image in the $(X^{\prime}, Y^{\prime})$-plane of $M$ under the
+transformation $(X^{\prime}, Y^{\prime}) = T_{\theta ,x,y}(X,Y)$ where
+\[T_{\theta ,x,y}(X,Y) = (X \cos \theta - Y \sin \theta + x,
+                         X \sin \theta + Y \cos \theta + y).\]
+(Note that $T_{\theta ,x,y}$ is the composite of a translation
+by the vector $(x,y)$ and a rotation about the origin by the
+angle $\theta$, with the rotation being applied first.)
+Thus a triple $(\theta ,x,y)$
+of real numbers determines a placement $T_{\theta ,x,y}(M)$ of object $M$
+in the $(X^{\prime}, Y^{\prime})$-plane.
+Let $W$ be a closed semialgebraic subset of the $(X^{\prime},Y^{\prime})$-plane
+(`$W$' stands for `walls').
+
+Let $X$ be the quotient space of ${\bf R}$ determined by the
+equivalence relation $\equiv$, where
+$\theta _{1} \equiv \theta _{2}$ if and only if $\theta _{1} - \theta _{2}$
+is an integral multiple of $2\pi$.
+An {\em allowable placement for $M$ with respect to $W$} is
+a triple $(\bar{\theta} ,x,y) \in X \times {\bf R}^{2}$ such that
+the intersection of $T_{\theta ,x,y}(M)$ and $W$ is empty.
+Let $A(M,W)$ be the subspace of $X \times {\bf R}^{2}$ consisting of all
+allowable placements for $M$ with respect to $W$.
+
+The {\em findpath problem} in the plane
+is to determine, given such a movable object $M$, such walls $W$, and
+initial and final allowable placements for $M$
+with respect to $W$, whether there exists a path in $A(M,W)$ which
+connects the initial and final placements and, if so, to
+find such a path. That is, the first part (the path existence part)
+of the findpath problem
+asks whether two given points of the space $A(M,W)$
+of allowable placements of $M$ with respect to $W$ lie in the
+same connected component of $A(M,W)$. The first part of the problem 
+can thus 
+be solved provided that one can compute (in some sense) the connected
+components of $A(M,W)$, and can determine which component a given
+point belongs to.
+
+In order to apply cad-based quantifier elimination to this problem,
+one ought to try to define $A(M,W)$ using a (possibly quantified)
+formula of elementary real polynomial algebra (that is, the elementary theory
+of real closed fields, or Tarski algebra).
+It would seem, though, that $A(M,W)$ is not in general so definable
+because the trigonometric functions $\sin \theta$ and $\cos \theta$
+occur in its definition. However it is possible to `algebraize'
+the problem. For example, one can set $r = \cos \theta$ and $s = \sin \theta$,
+and observe that $r^{2} + s^{2} = 1$. Indeed, one considers the
+homeomorphism 
+\[\phi : X \times {\bf R}^{2} \rightarrow S^{1} \times {\bf R}^{2}\]
+defined by $\phi (\bar{\theta},x,y) = (\cos \theta ,\sin \theta ,x,y)$
+(here $S^{1}$ denotes the unit circle whose centre is the origin).
+Let $B(M,W) = \phi (A(M,W))$. Then two points of $A(M,W)$ lie in the
+same connected component of $A(M,W)$ if and only if their images under
+$\phi$ lie in the same connected component of $B(M,W)$. Now $B(M,W)$
+can be defined using a (possibly quantified) formula of elementary real
+polynomial algebra, having the free variables $r, s, x, y$.
+
+The problem discussed in Example 11 of \cite{Kalkbrener_Stifter:87}
+is the specific instance of the path finding problem in the plane
+for which $M$ is the L-shaped object defined by
+\[ M = \{(X,Y) \in {\bf R}^{2} : (0 \le X \le 3 \wedge Y = 0)
+                         \vee (X = 0 \wedge 0 \le Y \le 3)\},\]
+$W$ is the pair of semi-infinite walls defined by
+\[W = \{(X^{\prime},Y^{\prime}) \in {\bf R}^{2} :
+                          (Y^{\prime} = 0 \wedge X^{\prime} \le 0)
+                      \vee (Y^{\prime} = 1 \wedge X^{\prime} \ge 0)\},\]
+the initial placement is $(\bar{0},-4,1)$ and the
+final placement is $(\bar{0},1,-3)$.
+This is the example with which we shall be concerned in the present
+paper. For the remainder of this section, $M$ and $W$ will be as defined
+in this paragraph.
+
+Now, by definition, $(\bar{\theta},x,y)$ belongs to $A(M,W)$ if and only if
+\[(\forall X^{\prime})(\forall Y^{\prime})
+           [(X^{\prime},Y^{\prime}) \in T_{\theta ,x,y}(M) \Rightarrow
+            (X^{\prime},Y^{\prime}) \not\in W ] .\]
+Thus it is not difficult to see that $(r,s,x,y)$ belongs to $B(M,W)$ 
+if and only if
+\[(\forall X^{\prime})(\forall Y^{\prime})(\forall X)(\forall Y)
+   [[[[0 \le X \le 3 \wedge Y = 0] \vee [X = 0 \wedge 0 \le Y \le 3]]\]
+ \[    \wedge X^{\prime} = rX - sY + x\]
+ \[    \wedge Y^{\prime} = sX + rY + y\]
+ \[    \Rightarrow \neg [Y^{\prime} = 0 \wedge X^{\prime} \le 0]
+                 \wedge \neg [Y^{\prime} = 1 \wedge X^{\prime} \ge 0]  ]\]
+ \[              \wedge r^{2} + s^{2} = 1 ].\]
+This I shall call {\em Formula 1}, a genuine formula of elementary
+real polynomial algebra.
+A simpler formula for $B(M,W)$ is easy to obtain:
+
+\[(\forall t)[ [ [0 \le t \le 3] \Rightarrow
+               \neg [y + ts = 0 \wedge x + tr \le 0]\]
+ \[   \wedge     \neg [y + ts = 1 \wedge x + tr \ge 0]\]
+ \[   \wedge     \neg [y + tr = 0 \wedge x - ts \le 0]\]
+ \[   \wedge     \neg [y + tr = 1 \wedge x - ts \ge 0] ]\]
+ \[   \wedge     r^{2} + s^{2} = 1 ].\]
+This I shall call {\em Formula 2}.
+
+We would like to mention a possible alternative algebraization
+of the findpath problem. The possible alternative consists in
+setting $w = \tan \theta /2$ and observing that
+$\cos \theta = (1 - w^{2})/(1 + w^{2})$ and
+$\sin \theta = 2w/(1 + w^{2})$.
+This was the method used in \cite{Kalkbrener_Stifter:87},
+where the following analogue of Formula 1 was derived:
+
+\[(\forall X^{\prime})(\forall Y^{\prime})(\forall X)(\forall Y)
+   [[[0 \le X \le 3 \wedge Y = 0] \vee [X = 0 \wedge 0 \le Y \le 3]]\]
+ \[    \wedge (1 + w^{2})X^{\prime} = (1 - w^{2})X - 2wY + (1+w^{2})x\]
+ \[    \wedge (1 + w^{2})Y^{\prime} = 2wX + (1 - w^{2})Y + (1+w^{2})y\]
+ \[    \Rightarrow \neg [Y^{\prime} = 0 \wedge X^{\prime} \le 0]
+                 \wedge \neg [Y^{\prime} = 1 \wedge X^{\prime} \ge 0]  ].\]
+
+If this algebraization is used, one must take into account that
+the mapping $w = \tan \theta /2$ is not defined at odd integral
+multiples of $\pi$. Hence the mapping $w = \tan \theta /2$ does not so easily
+give rise to a homeomorphism analogous to $\phi$. It is for this reason
+that we have chosen not to use this algebraization for the experiments
+reported in this paper.
+
+\section{The program QEPCAD}
+The first complete implementation of the cad method 
+for quantifier elimination for elementary real polynomial algebra was
+carried out by Arnon in 1979 and 1980 \cite{Arnon:81}.
+This was the implementation used by Kalkbrener
+and Stifter in their study \cite{Kalkbrener_Stifter:87}
+of collision and path finding problems.
+
+Collins and Hong \cite{Collins_Hong:91} presented a method for
+quantifier elimination for elementary real polynomial algebra
+by {\em partial cad construction}. This method is based on the
+observation that one can very often solve a quantifier elimination
+problem instance by means of a partially built cad if certain information
+contained in the input formula is used appropriately.
+
+In order to incorporate this idea and others, Hong \cite{Hong:90} completely
+reprogrammed the cad-based method
+for quantifier elimination. Hong's program QEPCAD was written using
+the C programming language and SACLIB. The program is
+interactive; the user has a number of commands at his disposal
+by which he can move through the program step by step.
+
+The program QEPCAD is divided into sequential phases:
+the normalization phase, the projection phase, the lifting or
+stack construction phase and the solution formula construction phase.
+The user enters an input formula in $r$ variables, say, in prenex
+form and specifies an ordering of the variables
+(in which the free variables must precede the bound variables).
+The normalization phase extracts the polynomials from the input
+formula, factors them, and rewrites the input formula in terms of
+these irreducible factors. In the projection phase
+a projection operation is repeatedly applied to eliminate
+each variable, except for the first one, successively.
+After each projection operation, the irreducible {\em projection factors}
+of the elements of the resulting projection set are computed.
+This phase ends with sets $P_{i}$ of projection factors in the first
+$i$ variables, for every $i$ in the range $1 \le i \le r$.
+The univariate projection factors in
+the set $P_{1}$ computed by the last projection and factorization
+determine a minimal cad of the real line in the cells of
+which they are all sign invariant. The stack construction phase
+begins by computing a sample point for each such cell.
+Each subsequent stack construction is one further step of this phase.
+In general the user has the ability to control the order in which
+subsequent stack constructions are to be performed.
+After each stack construction the program tries to determine the
+so-called {\em truth value} of each cell newly constructed,
+and {\em propagates} any such truth values as far as possible.
+The stack construction phase ends with a data structure from which
+can be deduced a cad of free variable space such that the truth
+value of every cell in free variable space has been determined.
+The solution formula construction phase constructs a quantifier-free
+defining formula for the union of those cells in free variable space
+which have truth value true.
+The reader can consult \cite{Collins_Hong:91} for more details about
+QEPCAD.
+
+A recent improvement to QEPCAD due to Collins \cite{Collins:95}
+is the application of equational constraints.
+A {\em constraint} of a quantifier elimination problem
+is an atomic formula which is logically implied by the
+quantifier-free matrix of the prenex input formula.
+If the atomic formula is an equation
+it is called an {\em equational constraint}.
+As pointed out by Collins, equational constraints are often
+present in quantifier elimination
+problems and can be used to reduce the sizes of the projection sets.
+Moreover equational constraints can also be used effectively
+during the stack construction phase.
+
+Cell adjacency algorithms for cad's of two and three dimensional space
+\cite{Arnon_Collins_McCallum:84b}, \cite{Arnon_Collins_McCallum:88}
+were provided with Arnon's implementation of the cad method.
+Collins and McCallum \cite{Collins_McCallum:95} have recently
+developed cell adjacency algorithms for cad's of four and
+higher dimensional space. As yet no cell adjacency algorithms
+have been incorporated into QEPCAD.
+It is anticipated that cell adjacency algorithms for two, three and four
+dimensional space will be incorporated into QEPCAD in the not too distant
+future.
+
+Let us consider how an enhancement of QEPCAD which could perform
+cell adjacency computations for cad's of four dimensional space
+could be applied to an instance of the findpath problem in the
+plane, as defined in the previous section.
+Let us further assume that, if given an input formula
+$F$ with four free variables, the enhancement of QEPCAD
+would have the capability to construct the connected components
+of the truth set of $F$ and to construct a defining formula for
+each such connected component.
+Let $M$, $W$, $(\bar{\theta _{1}}, x_{1}, y_{1})$
+and $(\bar{\theta _{2}},x_{2}, y_{2})$ be an instance of
+the findpath problem in the plane.
+The first step to solve the
+problem instance using such an enhanced program QEPCAD 
+would be to algebraize the findpath problem
+instance as described in the previous section,
+obtaining a (possibly quantified) defining formula say $F$
+with free variables $r, s, x, y$
+for the image $B(M,W)$ under $\phi$ of the space $A(M,W)$ of
+allowable placements for $M$ with respect to $W$.
+Next one would apply the enhancement of QEPCAD described above
+to $F$, with the variable ordering $(r, s, x, y, \ldots )$,
+to obtain the connected components of $B(M,W)$ together with
+a defining formula for each such connected component.
+Finally one would use the defining formulas for the connected
+components of $B(M,W)$ to determine whether the images under $\phi$
+of the initial and final allowable placements lie in the same connected
+component of $B(M,W)$: if so, one would report an affirmative
+answer to the first part (the path existence part) of the findpath
+problem and otherwise one would report a negative answer.
+
+\section{Results}
+As remarked above, no cell adjacency algorithms have as yet
+been incorporated into QEPCAD: the enhancement of QEPCAD
+described in the previous section is thus not yet available.
+However, in order to investigate the feasibility of applying
+such a future enhancement of QEPCAD to path finding problems,
+we applied the current version of QEPCAD (Version 13)
+to the specific instance of the findpath problem defined
+in Section 2. Our aim was to try to compute a partial cad
+of the space ${\bf R}^{4}$ of the free variables $r, s, x, y$
+for which each of the subspaces $S^{1} \times {\bf R}^{2}$
+and (its subspace) $B(M,W)$ is a union of some of the cells
+of the cad.
+
+The experiments reported here were all conducted using
+the current version (Version 13) of program QEPCAD on
+a DEC station 5000/25. Four megabytes of memory
+were made available for list processing for each computation.
+
+In the first experiment we applied QEPCAD to
+Formula 1 with the variable ordering
+$(r,s,x,y,X^{\prime},Y^{\prime},X,Y)$ and without the application
+of the constraint equation $r^{2} + s^{2} = 1$.
+The program computed four projections: for
+$Y$, $X$, $Y^{\prime}$ and $X^{\prime}$.
+Memory limitations were exceeded during the computation of
+the next projection (for $y$.)
+The largest set of projection factors produced was the
+set of projection factors at level four, that is, the
+set of projection factors in variables $r, s, x, y$ determined from the
+projection set computed by the projection for $X^{\prime}$:
+this set contains 188 polynomials. 
+The program used approximately 11 seconds
+to compute this set (and its ancestors).
+The program stopped during
+the computation of the next projection (for $y$) after having executed for
+approximately 553 seconds in total.
+
+In the second experiment we applied QEPCAD to Formula 1 with
+variable ordering $(r,s,x,y,X^{\prime},Y^{\prime},X,Y)$,
+this time with the constraint equation 
+$r^{2} + s^{2} = 1$ explicitly declared.
+Essentially the same outcome was observed, namely, that the program
+computed four projections (for $Y$, $X$, $Y^{\prime}$ and $X^{\prime}$)
+but ran out of memory during the next projection (for $y$). Again a total
+of 188 projection factors at level four were computed.
+
+In the third experiment we applied QEPCAD to Formula 2
+with the variable ordering $(r,s,x,y,t)$
+and without the application of the constraint equation
+$r^{2} + s^{2} = 1$.
+After about 12 seconds the program had computed the
+first three projections (for $t$, $y$, and $x$).
+There were 245 projection factors at level two.
+But the program ran out of memory during the last projection
+(for $s$) after about 209 seconds in total.
+
+In the fourth experiment QEPCAD was applied to Formula 2
+with the variable ordering $(r,s,x,y,t)$,
+this time with the constraint equation
+$r^{2} + s^{2} = 1$ explicitly declared.
+The program completed the projection phase and the construction
+of the cad of the line in about 23 seconds.
+There were 164 projection factors at level one,
+which determined a cad of the line comprising 707 cells.
+There were 245 bivariate projection factors.
+The program ran out of memory trying to construct
+the cad of the plane after about 48 seconds in total.
+(No stacks at level two had been constructed.)
+
+For the fifth experiment we obtained a quantifier free
+defining formula for the space $B(M,W)$ with the help of
+the program. More precisely, we solved four different and simpler
+quantifier elimination problems and combined the result
+manually to produce the quantifier-free defining formula.
+The first problem solved corresponds to the first line only of Formula 2.
+The second problem solved corresponds to the second line
+of Formula 2, and so forth.
+Program QEPCAD was applied to the quantifier-free defining
+formula for $B(M,W)$ obtained in this manner.
+The variable ordering $(r,s,x,y)$ was used and the
+constraint equation $r^{2} + s^{2} = 1$ was explicitly declared.
+QEPCAD completed the projection phase and the construction
+of the cad of the line after about 4 seconds.
+There were 66 univariate projection factors and 76 bivariate
+projection factors.
+The cad of the real line contained 239 cells, 38 of which
+were determined by the program to have truth value false
+and were marked as such.
+Cell (20) is the first cell in 1-space which is not marked false.
+We constructed the partial cad of 4-space based on cell (20),
+which is the point $r = 1$. This took about 2 seconds.
+Next we constructed the partial cad of 4-space based on
+cell (21), the next cell not marked false.
+This took about 21 seconds.
+We repeated this process for ten cells of 1-space
+(cells (20) - (29)). The total time taken was approximately
+562 seconds. About 15000 cells in 4-space were constructed.
+Therefore we can estimate that it will take the program
+just over three hours to construct the full partial cad
+of 4-space, which would contain about 300,000 cells
+comprising the subspace $S^{1} \times {\bf R}^{2}$.
+
+\section{Discussion}
+On the basis of the estimates obtained from the fourth
+experiment reported in the previous section,
+I think we can say that the use of cad-based methods for
+simple path finding problems in the plane is at least
+feasible, provided that:
+\begin{itemize}
+\item  one can obtain, perhaps with the help of
+a quantifier elimination program, a quantifier-free
+defining formula for the (image of) the space of allowable
+placements, 
+\item one can provide sufficient memory for the list processing
+involved in constructing a partial cad with a large number of cells,
+\item one can make available a few hours of computation time
+on a typical personal workstation, and
+\item the adjacency calculations (for which empirical time estimates were not
+obtained) can be performed in a reasonable amount of time.
+\end{itemize}
+For special kinds of path finding problems, such as the case
+of a two-dimensional rigid polygonal body moving amidst polygonal
+walls, special purpose methods such as those of Schwartz and Sharir
+\cite{Schwartz_Sharir:83a} are presumably much more efficient.
+It would be interesting to try to develop specialized versions of the
+cad method capable of handling specialized path finding problems efficiently.
+
+An observation which could potentially reduce the amount of time
+to be spent on adjacency computation for a path finding problem
+in the plane as defined in this paper is that the space of
+allowable placements is an open subset of the space
+$X \times {\bf R}^{2}$ of all placements (whether or not allowable).
+Indeed, where $M$ and $W$ are arbitrary closed semialgebraic
+subsets of the plane, as in the first paragraph of Section 2,
+the openness of $A(M,W)$ in $X \times {\bf R}^{2}$ follows from
+the normality of the plane (\cite{Dugundji:66}, Chapter 7, Section 3)
+and the continuity of the transformation
+$(X^{\prime}, Y^{\prime}) = T_{\theta ,x,y}(X,Y)$.
+Therefore $B(M,W)$ is open in $S^{1} \times {\bf R}^{2}$.
+Hence the first part of the findpath problem can be solved provided
+that one has a complete list of all pairs of adjacent cells
+$(c^{(2)},d^{(3)})$, where $c^{(2)}$ is a 2-cell of $S^{1} \times {\bf R}^2$
+and $d^{(3)}$ is a 3-cell of $S^{1} \times {\bf R}^{2}$.
+The reason is that a connected component of the open subset $B(M,W)$ 
+of $S^{1} \times {\bf R}^{2}$ will remain
+connected if an arbitrary finite collection of cells of dimension
+less than or equal to one is removed.
+\bibliographystyle{plain}
+\bibliography{McCallum_paper}
+\end{document}

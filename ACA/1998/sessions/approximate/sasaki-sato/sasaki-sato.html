@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Cancellation Errors in Multivariate Resultant Computation with Floating-point Numbers 1 </TITLE>
+<META NAME="description" CONTENT="Cancellation Errors in Multivariate Resultant Computation with Floating-point Numbers 1 ">
+<META NAME="keywords" CONTENT="sasaki-sato">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sasaki-sato.css">
+</HEAD>
+<BODY bgcolor=white>
+<H1 ALIGN="CENTER">Cancellation Errors in Multivariate Resultant Computation 
+               with Floating-point Numbers <A NAME="tex2html1"
+ HREF="footnode.html#foot75"><SUP>1</SUP></A>
+      </H1>
+<P ALIGN="CENTER"><STRONG>Tateaki Sasaki <IMG
+ WIDTH="18" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\dag )}$">
+and Tomoyuki Sato  
+<!-- MATH: $^{\ddag )}$ -->
+<IMG
+ WIDTH="18" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$^{\ddag )}$"></STRONG></P>
+<P ALIGN="CENTER"></P>
+<P ALIGN="LEFT"></P>
+
+<P>
+<DIV ALIGN="CENTER">
+<P>
+
+<!-- MATH: $^{ \dag )}$ -->
+<IMG
+ WIDTH="18" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\dag )}$">
+Institute of Mathematics  and  
+<!-- MATH: $^{\ddag )}$ -->
+<IMG
+ WIDTH="18" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$^{\ddag )}$">
+Master's Program in Education <BR>
+<BR>
+University of Tsukuba <BR>
+<BR>
+Tsukuba-shi, Ibaraki 305, Japan <BR>
+<BR>
+
+<P>
+<TT>{sasaki,tsato}@math.tsukuba.ac.jp</TT>
+</DIV>
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+<A NAME="tex2html2"
+ HREF="sasaki-sato.ps.gz">Full paper in compressed Postscript *.ps.gz</A>
+<P>
+
+<H3>Abstract:</H3>
+<DIV>
+We test five methods of computing resultant of multivariate
+polynomials with floating-point number coefficients, mostly from
+the viewpoint of numerical errors.  The methods tested are
+a) Brown-Traub's subresultant PRS algorithm,
+b) Collins' algorithm based on polynomial interpolation,
+c) minor expansion method of Bezout's determinant,
+d) Gaussian elimination method
+   (Bareiss' algorithm) of Bezout's determinant, and
+e) efficient Gaussian elimination method
+   (Sasaki-Murao's algorithm) of Bezout's determinant.
+We find that method a) causes so large cancellation errors
+that it is almost useless practically.  The errors caused by
+methods b) and  d) are not so large as those by a) but still large.
+The methods c) and e) are quite safe against the cancellation error
+and they are efficient, too.  Mechanisms of occurrence of large
+cancellation errors in methods a), b) and d) are clarified.
+By these, we show that approximate algebraic computation often
+causes large cancellation errors hence the error analysis and
+development of error-safe algorithms are very important.
+</DIV>
+<P>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html5"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

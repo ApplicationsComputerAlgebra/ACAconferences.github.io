@@ -1,0 +1,25 @@
+Tenoch E. Cedillo A.* (Mexico), tcedillo@mail.ajusco.upn.mx
+
+Plotting and Function Graphs as tools to face problem solving: A study with
+12-13 year olds using graphing calculators
+
+The graphing calculators offer new forms of mathematical validation that
+challenge the conventional algebraic methods.  We used to study Differential
+Calculus to approach the behaviour of functions, but, currently we can use
+calculators to start exploring graphs of functions visually, before the study
+of their algebraic properties and further applications in Calculus.  Thus,
+intuition is acquired before formalisation.
+
+This presentation comes from an exploratory study which addressed core issues
+of the teaching and learning of algebra.  The study was carried out in a
+comprehensive school in Mexico City with a class of twenty five students who
+had not had any instruction in algebra.  Preliminary results suggest that 12-13
+years olds can successfully approach the study of algebra and efficiently use
+functions to face problem solving.  The TI-92 was used to put the students in a
+situation where they learn algebra by tackling problems using plotting and
+function graphs as cognitive tools.  The strategy consisted of making students
+(12-13 year olds) familiar with the relationships between the coefficients and
+graphical behaviour of linear and polynomial functions.  Once they were able to
+work confidently with such functions and their graphs, they were handed a
+series of problems where modelling through functions is a way to negotiate
+solutions.

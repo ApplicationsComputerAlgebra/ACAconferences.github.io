@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA 1996</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Quantifier Elimination</H1>
+
+<H3>Organizers</H3>
+<ul>
+  <li>
+      <A HREF="http://math.unm.edu/~stanly/">S. Steinberg</A>
+      (<A HREF="mailto:stanly@math.unm.edu">stanly@math.unm.edu</a>)<br>
+      University of New Mexico<br>
+      Department of Mathematics and Statistics<br>
+      Albuquerque  NM87131<br>
+      USA<br>
+      <p>
+  <li>
+      <A HREF="http://www.risc.uni-linz.ac.at/people/hhong">H. Hong</A>
+      (<A HREF="mailto:Hoon.Hong@risc.uni-linz.ac.at">Hoon.Hong@risc.uni-linz.ac.at</a>)<br>
+      RISC-Linz <br>
+      Schlo&szlig; Hagenberg <br>
+      A-4232 Hagenberg <br>
+      Austria/Europe<br>
+      Tel: +43 7236 3231 48<br>
+      Fax: +43 7236 3231 30<br>
+      <p>
+  <li>
+      R. Liska (<A HREF="mailto:liska@siduri.fjfi.cvut.cz">liska@siduri.fjfi.cvut.cz</a>)<br>
+      Czech Technical University<br>
+      Brehova 7, 115 19 Prague 1<br>
+      Czech Republic<br>
+      Tel: (+42-2) 8576 2272<br>
+      Fax: (+42-2) 688 4818<br>
+</ul>
+
+<H3>Description</H3>
+
+Recently, quantifier elimination algorithms have seen many applications,
+and there have been new development in quantifier elimination algorithms
+for special classes of problems.
+
+<H3>Talks</H3>
+Date: July 19th (Friday)
+<dl>
+  <dt> 14:00-14:20
+  <dd> 
+      <a href="../participants.html#Dolzmann">Andreas Dolzmann</a>,
+      <a href="../participants.html#Sturm">Thomas Sturm</a><br>
+      <b> REDLOG -- Computer Algebra Meets Computer Logic</b><br>
+      <a href="Steinberg/Dolzmann.html"><em>Abstract</em></a>
+
+  <dt> 14:20-14:40
+  <dd>
+      <a href="../participants.html#Weispfenning">Volker Weispfenning</a><br>
+      <b>Quantifier Elimination Applied in Simulation and Scheduling</b><br>
+      <a href="Steinberg/Weispfenning.ps"><em>Abstract</em></a>
+
+  <dt> 14:40-15:00
+  <dd>
+      <a href="../participants.html#GonzalezCampos">Emma-Neila Gonzalez-Campos</a>,
+      <a href="../participants.html#Gonzalez-Vega">Laureano Gonzalez-Vega</a><br>
+      <b>Global projection operators for the Cylindrical
+		Algebraic Decomposition algorithm </b><br>
+      <a href="Steinberg/GonzalesCampos.html"><em>Abstract</em></a>
+
+  <dt> 15:00-15:20
+  <dd>
+      <a href="../participants.html#Brown">Chris Brown</a>,
+      <a href="../participants.html#Collins">George Collins</a><br>
+      <b>Simple Solution Formula Construction from Truth Invariant CADs</b><br>
+      <a href="Steinberg/Brown.ps"><em>Abstract</em></a>
+
+  <dt> <hr>
+      <p>
+  <dt> 15:20-15:50
+  <dd>
+      Coffee Break
+      <p>
+        <dt> <hr>
+
+  <dt> 15:50-16:10
+  <dd>
+      <a href="../participants.html#Jirstrand">Mats Jirstrand</a><br>
+      <b>Some Applications of Quantifier Elimination in Nonlinear
+		Control Theory</b><br>
+      <a href="Steinberg/Jirstrand.html"><em>Abstract</em></a>
+
+  <dt> 16:10-16:30
+  <dd> 
+      <a href="../participants.html#Jiangqian">Ying Jiangqian</a><br>
+      <b> On the Determination of the Strong Stabilizability
+	of an n-Dimensional Linear System</b><br>
+      <a href="Steinberg/Jiangqian.html"><em>Abstract</em></a>
+
+  <dt> 16:30-16:50
+  <dd> 
+      <a href="../participants.html#Hong">H. Hong</a>,
+      <a href="../participants.html#Neubacher">A. Neubacher</a><br>
+      <b>Approximate Quantifier Elimination</b><br>
+      Abstract to be supplied.
+
+  <dt> 16:50-17:10
+  <dd>
+      <a href="../participants.html#Liska">R. Liska</a>,
+      <a href="../participants.html#Steinberg">S. Steinberg</a><br>
+      <b>The Stability of Boundary Conditions</b><br>
+      <a href="Steinberg/Liska.html"><em>Abstract</em></a>
+
+  <dt> 17:10-17:30
+  <dd> 
+      <a href="../participants.html#Hong">H. Hong</a>,
+      <a href="../participants.html#Liska">R. Liska</a>,
+      <a href="../participants.html#Steinberg">S. Steinberg</a><br>
+      <b>Discussion and Comments by the Organizers and Participants.</b> <br>
+      The organizers will make some summary comments and
+      then begin a discussion session.
+</dl>
+
+
+<P><IMG SRC="../line-risc.gif" ALIGN=middle
+        ALT="________________________________________________________"><P>
+
+<A HREF=
+   "../program-plan.html">
+<IMG SRC="../up-button.gif" ALT="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<IMG ALT="RISC", SRC="../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<IMG ALT="SWP", SRC="../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<IMG ALT="Linz", SRC="../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<IMG ALT="Austria", SRC="../austria-button.gif">
+</A>
+</BODY>
+</HTML>
+

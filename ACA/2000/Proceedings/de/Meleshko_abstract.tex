@@ -1,0 +1,95 @@
+\documentclass[11pt, draft]{article}
+\topmargin=0mm
+\oddsidemargin=0mm
+\textwidth170mm
+\textheight230mm
+\begin{document}
+%\pagestyle{empty}
+\language=0
+%\hyphenation{}
+
+\begin{center}
+{\bf
+APPLICATION OF COMPUTER ALGEBRA TO ANALYSIS OF DIFFERENTIAL
+EQUATIONS SYSTEMS COMPATIBILITY
+}\\
+\vspace {0.3cm}
+{S.V.~Meleshko, V.P.~Shapeev}\\
+{\it \small ITAM SB RAS, 630090, Novosibirsk, Russia,
+ e-mail: shapeew@itam.nsc.ru}
+\end{center}
+\vspace {0.6cm}
+
+One of the fields of computer algebra application is
+the theory of differential equations system compatibility.
+Necessity of analysis on compatibility arises, for instance,
+when performing group analysis of partial differential equations
+(PDE), or applying the differential constraints method (DCM) [1].
+According to Cartan theorem of compatibility theory,
+after finite number of continuations
+any system of differential equations can be
+ reduced to involution (compatible system) or to contradiction.
+
+At present, two equivalent compatibility analysis methods
+ applicable to PDE exist: Cartan method and Janet-Spencer-Kuranishi
+ (JSK) method.
+ In applications, analysis on PDE compatibility often leads to
+ huge symbolic computations, to which modern computer algebra systems (CAS)
+ can be applied.
+>From algorithmic point of view methods of analysis on nonlinear PDE systems
+compatibility are nonlinear,
+ramified algorithms, which are too complicated for CAS.
+There are several attempts of theirs realizations.
+ A special case
+of reduction of one particular system was considered in [2], and a
+principal ability of using a computer for solving such a problems
+was shown.
+We have used different CASs for realization of Cartan and JSK methods.
+Full charts of algorithms in algebraic terms were written,
+software inplementation in REFAL and REDUCE systems was made,
+particular problems of reduction to involution some overdetermined PDE
+systems, which
+arise in hydroaerodynamics, were solved [1-7].
+This work was partially supported by the Russian Foundation for Basic
+Research (grants  99-01-00515 and 00-01-00370) and
+INTAS (proposal 1222).
+
+
+\begin{thebibliography}{}
+\bibitem{si}
+Sidorov A.F., Shapeev V.P., Yanenko N.N., {\it Technique
+of differential conections and its applications in gas dynamics,}
+Nauka, Novosibirsk, 1984, (Russian).
+\bibitem{ch}
+Shurygin V.A., Yanenko N.N., On computer realization of
+algebraic/differential algorithms, in: {\it Problemy
+Kibernetiki,} 6, 1961, (Russian).
+\bibitem{ar}
+  Arais E.A., Shapeev V.P. and Yanenko N.N. 1974 Computer realization
+of Cartan's external forms, Dokl. AN USSR. {\bf~214}~(4),
+737--738.
+\bibitem{ga}
+Ganzha V.G.,
+ Meleshko C.V., Murzin F.A., Shapeev V.P., Yanenko N.N.
+ Computer realization of the
+algorithm for the investigation of compatibility of systems of
+partial differential equations, {\it Doklady Akademii Nauk
+USSR,} 261(5), 1044-1046, 1981, (Russian).
+\bibitem{ga1}
+V.G. Ganzha, S. V. Meleshko, V. P. Shapeev. Automation of
+Compatibility Analysis of Quasilinear PDE Systems with the Aid
+of the REDUSE System. Computer Algebra and Its Applications
+to Mechanics. Nova Science Publishers, New York, 1993, p. 89-96.
+\bibitem{me}
+Meleshko S.V., On potential flows of polytropic gas of
+the type of triple waves, {\it Prikladnaya Matematika i
+Mekhanika,} 54(5), 775-779, 1990, (Russian).
+\bibitem{me1}
+S. V. Meleshko, V. P. Shapeev.
+An application of the differential constraints method for
+the two-dimensional equations of gas dynamics
+{\it Prikladnaya Matematika i Mekhanika,}
+ 63(6), 909-916, 1999, (Russian).
+\end{thebibliography}
+
+\end{document}

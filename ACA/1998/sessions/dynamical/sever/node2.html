@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Iterated Function Systems</TITLE>
+<META NAME="description" CONTENT="Iterated Function Systems">
+<META NAME="keywords" CONTENT="sever">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sever.css">
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="sever.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html36"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html34"
+ HREF="sever.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html28"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html37"
+ HREF="node3.html">Fractal Approximation of Sets</A>
+<B> Up:</B> <A NAME="tex2html35"
+ HREF="sever.html">No Title</A>
+<B> Previous:</B> <A NAME="tex2html29"
+ HREF="node1.html">Introduction</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00020000000000000000">&#160;</A>
+<A NAME="sec:IFSs">&#160;</A>
+<BR>
+Iterated Function Systems
+</H1>
+
+<P>
+Following M. Barnsley  [<A
+ HREF="node13.html#Barnsley">2</A>], under <I>fractals</I> we
+mean <I>compact subsets</I> of a complete metric space.
+
+<P>
+A deterministic <I>Iterated Function System</I> (IFS)
+[<A
+ HREF="node13.html#Barnsley">2</A>] is a structure
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+F = ((X,d), f_1, f_2, ..., f_N),
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+<I>F</I> = ((<I>X</I>,<I>d</I>), <I>f</I><SUB>1</SUB>, <I>f</I><SUB>2</SUB>, ..., <I>f</I><SUB><I>N</I></SUB>),
+</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where (<I>X</I>,<I>d</I>) is a <I>complete</I> metric space, with metric <I>d</I>,
+
+<!-- MATH: $f_i:X \rightarrow X$ -->
+<IMG
+ WIDTH="89" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$f_i:X \rightarrow X$">
+- a contiguous function <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\forall i$">.
+An IFS
+<I>F</I> induces an <I>operator</I> 
+<!-- MATH: $F:{\cal H}(X) \rightarrow {\cal
+H}(X)$ -->
+<IMG
+ WIDTH="142" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$F:{\cal H}(X) \rightarrow {\cal
+H}(X)$">,
+where 
+<!-- MATH: ${\cal H}(X)$ -->
+<IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="${\cal H}(X)$">
+- the space of all compact subsets of
+<I>X</I>:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+F = \bigcup_{i=1}^q f_i.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="76" HEIGHT="58"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}F = \bigcup_{i=1}^q f_i.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+The metric space 
+<!-- MATH: $({\cal H}(X),h)$ -->
+<IMG
+ WIDTH="77" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$({\cal H}(X),h)$">,
+with <I>Hausdorff metric</I>
+<I>h</I>, is also complete. When functions <I>f</I><SUB><I>i</I></SUB> are <I>contractions</I>,
+the IFS is <I>hyperbolic</I>. In this case, there is a compact
+subset <I>A</I><SUB><I>F</I></SUB> of <I>X</I> which is the fixed point of the operator <I>F</I>:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\exists A_F \in {\cal H}(X): \; A_F = F(A_F).
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="212" HEIGHT="31"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}\exists A_F \in {\cal H}(X): \; A_F = F(A_F).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+Such a set is called the <I>attractor</I> of the IFS <I>F</I>. The pair
+
+<!-- MATH: $({\cal H}(X), F)$ -->
+<IMG
+ WIDTH="81" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$({\cal H}(X), F)$">
+is a <I>set</I> dynamical system whose attractive
+point is a set (rather than a point) - the attractor <I>A</I><SUB><I>F</I></SUB>.
+Realizing the dynamics of such a dynamical system, we can build a
+fractal set.
+
+<P>
+The Hausdorff metric is defined as follows:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+h(A,B)=\max(d_{\rm s}(A,B),d_s(B,A)),
+\qquad A,B \in {\cal H}(X),
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="390" HEIGHT="31"
+ SRC="img9.gif"
+ ALT="\begin{displaymath}h(A,B)=\max(d_{\rm s}(A,B),d_s(B,A)),
+\qquad A,B \in {\cal H}(X),
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+where
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+d_{\rm s}(A,B)=\max_{x \in A} \min_{y \in B} (d(x,y)).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="206" HEIGHT="41"
+ SRC="img10.gif"
+ ALT="\begin{displaymath}d_{\rm s}(A,B)=\max_{x \in A} \min_{y \in B} (d(x,y)).\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+We are dealing here with hyperbolic IFSs with all <I>f</I><SUB><I>i</I></SUB> <I>affine</I> transformations.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html36"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html34"
+ HREF="sever.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html28"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html37"
+ HREF="node3.html">Fractal Approximation of Sets</A>
+<B> Up:</B> <A NAME="tex2html35"
+ HREF="sever.html">No Title</A>
+<B> Previous:</B> <A NAME="tex2html29"
+ HREF="node1.html">Introduction</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,22 @@
+REDLOG-Demo at IMACS-ACA'99 
+
+
+Title:             The REDLOG Package
+                - Tools and Applications
+
+          Volker Weispfenning, University of Passau
+
+REDLOG is a REDUCE-package developed by Andreas Dolzmann and Thomas Sturm at
+the University of Passau, Germany.  It puts a very flexible first-order logic
+environment on top of the computer algebra facilities of REDUCE.  Special
+emphasis is on efficient elimination algorithms for real numbers, algebraically
+closed fields, and valued fields.  REDLOG has numerous applications in
+computational geometry, automatic theorem proving, solid modeling, motion
+planning, control theory, simulation of networks, and optimization.
+
+The demo will outline the facilities and tools of the package with examples
+from these application areas. 
+
+For more information consult the REDLOG homepage:
+
+http://www.fmi.uni-passau.de/~redlog/

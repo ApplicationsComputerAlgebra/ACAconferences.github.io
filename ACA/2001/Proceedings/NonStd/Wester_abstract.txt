@@ -1,0 +1,40 @@
+Some Principles of Rational Structure-Based Drug Design
+
+Eric Burks and Michael Wester
+University of New Mexico Health Sciences Center, Albuquerque, New Mexico, USA
+
+Drug design has traditionally been a random process of biological and chemical
+experimentation, typically screening large libraries for drugs that interfere
+with the normal progress of a disease.  This is an expensive proposition, both
+in time and in money, so a more "rational" approach has long been desired.  In
+the last few years, structure-based drug design has come into its own with its
+most notable success a pill announced in late 2000 that has so far proved in
+clinical trials to be 90% effective in treating patients suffering from chronic
+myeloid leukemia.  In addition, the side effects from this drug are less than
+that produced by aspirin.  Chronic myeloid leukemia, one of the four major
+varieties of adult leukemia (cancer of the blood cells), had only been
+treatable previously by bone marrow transplants, a procedure that has a 20%
+mortality rate just for the operation.
+
+In this talk, we will present some of the basic principles of structure-based
+drug design.  "Structure-based" implies that we know the three dimensional
+structures of the proteins (or some of the proteins) involved in the disease,
+usually from x-ray diffraction experiments.  These proteins interact by
+latching together ("docking" in biomedical parlance), which is effectively a
+process of energy minimization.  The objective is to design a small molecule
+that will block the undesired protein interaction.
+
+Currently, the drug design process is to identify lead compounds, either by
+biologic assays or computationally searching chemical data banks.  The lead
+compounds are then refined so that they possess certain key properties:
+
+(1) high affinity (that is, they dock well with the target protein),
+(2) low molecular weight (making them easy to synthesize),
+(3) long serum half life (the medicine does not decay rapidly),
+(4) easy to administer (orally or intravenously),
+(5) low toxicity (we want the cure to be not worse than the disease!).
+
+As possible drugs are designed, it is necessary to test them in vitro on
+cellular cultures.  Those that seem promising then proceed through in vivo
+(animal) and finally human clinical trials as part of the process leading to
+routine clinical use.

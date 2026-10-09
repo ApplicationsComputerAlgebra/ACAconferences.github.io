@@ -1,0 +1,17 @@
+   "The Automatic Investigation of the ODEs of Nonlinear Elasticity"
+
+
+   Peter Vafeades
+   96 Egnatia
+   54623 Thessaloniki Greece
+   Email: peter@perseus.engr.trinity.edu
+
+
+   ABSTRACT: Any constitutive law model for nonlinearly elastic materials
+   gives rise to a series of nonlinear boundary value problems. The most
+   elementary and interesting problems give rise to ordinary differential
+   equations which are solved automatically. The symmetry properties of the
+   model are used to set up boundary value problems whose geometry allows
+   for the greatest application of Lie group methods. The investigation
+   includes issues of  stability and bifurcation as well as conservation
+   laws and  the thermodynamic implications of the solutions.

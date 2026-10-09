@@ -1,0 +1,44 @@
+Dear colleague:
+
+The ACA (Applications of Computer Algebra) conference has taken place for
+several years now: 1995-New Mexico, 1996-Austria, 1997-Hawaii, 1998-Czech
+Republic, 1999-Spain, 2000-Russia; and will be back to New Mexico in 2001
+(May 31-June 3, 2001; see
+
+   http://math.unm.edu/ACA/2001/2001.html
+
+for details).
+
+From 1996 onwards we have chaired a session (with a slightly changing title)
+devoted to ``Non-Standard Applications of Computer Algebra''.  The session
+traditionally collected contributions that, while using Computer Algebra
+techniques and/or Computer Algebra Systems, could not be easily allocated in 
+the ``standard'' sessions.  Examples of topics treated in papers presented in
+previous editions of the conference are: Verification of Expert Systems,
+Development of Expert Systems, Railway Traffic Control, Artificial
+Intelligence, Thermodynamics, Molecular Dynamics, Statistics, Electrical
+Networks, Logic, Robotics, Sociology, ...
+
+We are organising again in 2001 the session:
+
+        NON-STANDARD APPLICATIONS OF COMPUTER ALGEBRA
+
+Submissions of works in this area are welcome.  If you are interested in
+submitting a paper, please send an e-mail message to both of us, including a
+tentative title and a 1 to 2 pages long abstract with a general description of
+your work.
+
+Although the general proceedings are published ``only'' in electronic form, 
+articles corresponding to the presentations in this session in 1996-1997 and in 
+1998-1999 have been published in ``Mathematics and Computers in Simulation'' 
+(Transactions of IMACS) journal (volumes 45/1-2 and 51/5, respectively).  We'll
+try to have the articles accepted in this session compiled in another special
+volume too.
+
+Sincerely,
+
+Dr. Eugenio Roanes-Lozano, Universidad Complutense de Madrid
+(eroanes@eucmos.sim.ucm.es)
+
+Dr. Michael Wester, University of New Mexico
+(wester@math.unm.edu)

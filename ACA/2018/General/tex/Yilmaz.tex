@@ -1,0 +1,139 @@
+% Abstrat of your communication to the
+% ACA2018 Conference (Santiago de Compostela, 2018).
+% You must use LaTeX format.
+
+
+%====================================================
+% IMPORTANT: DO NOT MODIFY THE FOLLOWING LINES
+%====================================================
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsthm,amsmath,amsfonts,latexsym}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{times}
+
+\setlength{\oddsidemargin}{1.46cm}
+\setlength{\textwidth}{13cm}
+\setlength{\topmargin}{0.0cm}
+\setlength{\textheight}{20.5cm}
+
+\makeatletter
+\newcommand{\TITLE}[2][]{
+  \begin{center} \Large \bfseries #2%
+  \def\@temp{#1}\ifx\@temp\@empty\relax\else\footnote{#1}\fi\end{center}}
+
+\newcommand{\AUTHOR}[2][]{\textbf{#2}%
+  \def\@temp{#1}\ifx\@temp\@empty\relax\else\textsuperscript{#1}\fi}
+
+\newcommand{\ADDRESS}[2]{\noindent
+  \textsuperscript{#1}\parbox[t]{0.9\textwidth}{#2} \vspace{6pt}}
+
+\makeatother
+
+\newcommand{\KEYWORDS}[1]{\paragraph{Keywords:} #1}
+\newcommand{\MSCLASSIFICATION}[1]{\paragraph{Mathematics Subject Classification 2010:} #1}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{0}
+\pagestyle{empty}
+
+\newcommand{\HEADING}{
+{\noindent \small Applications of Computer Algebra -- ACA2018 \\
+Santiago de Compostela, June 18--22, 2018} \vspace{10pt}}
+
+%===============================================
+% DO NOT MODIFY THE ABOVE LINES
+%===============================================
+
+\begin{document}
+
+\HEADING
+
+
+\TITLE{Computations of Gr\"{o}bner-Shirshov Bases and Normal Forms for Affine Weyl Groups $\widetilde{B_n}, \widetilde{C_n}$ and $\widetilde{D_n}$ Using Mathematica}
+
+% If you need to thank someone next to the title, please use the next line (and delete the previous one)
+
+% \TITLE[thanks]{Title of talk}
+
+% Write the author names. Identify each one of them with a number
+% in order to give their own affiliations later on.
+\begin{center}
+ \AUTHOR[1]{Erol Y{\i}lmaz},
+ \AUTHOR[2]{U\v{g}ur Ustao\v{g}lu}
+% IF two or more authors have the same affiliation, associate to them the same number.
+% For instance, if there are three authors and the first a the second ones have the same affiliation,
+% write as follows:
+ % \AUTHOR[1]{Third Author}
+\end{center}
+
+
+% Write now the abstract of your communication.
+
+
+
+\par Gr\"{o}bner and Gr\"{o}bner-Shirshov bases theories are generating increasing interest since its usefulness in providing computational tools and in giving algebraical structures which are applicable to a wide range of problems in mathematics, engineering, science and computer science. In particular Gr\"{o}bner and Gr\"{o}bner-Shirshov bases theories are powerful tools to deal with the normal form, word problem, embedding problem, extentions of algebras, Hilbert series, etc. The importance of Gr\"{o}bner-Shirshov bases is that they can be computed.\\
+
+\par Gr\"{o}bner-Shirshov bases and reduced form of the elements were already found for the Coxeter groups of type $A_n$, $B_n$ and $D_n$ in \cite{bokut1}. They also proposed a conjecture for the general form of Gr\"{o}bner-Shirshov bases for all Coxeter groups. In \cite{chen} , an example was given an to show that the conjecture is not true in general. The Gr\"{o}bner-Shirshov bases of the other finite Coxeter groups are given in \cite{E1} and \cite{E2}. This paper is another example of finding Gr\"{o}bner-Shirshov bases for groups, defined by generators and defining relations.In \cite{ugur}, we calculated Gr\"{o}bner-Shirshov Basis and reduceds words for $\widetilde{A_n}$. In this talk, we deal with the affine Weyl group $\widetilde{B_n}, \widetilde{C_n}$ and $\widetilde{D_n}$  which is an infinite Coxeter groups.\\
+
+\par The main aim of this talking is to find the reduced Gr\"{o}bner-Shirshov bases of $\widetilde{B_n}, \widetilde{C_n}$ and $\widetilde{D_n}$ and applications classify all normal forms for the affine Weyl groups of $\widetilde{B_n}, \widetilde{C_n}$ and $\widetilde{D_n}$, using defining relations. We use the following strategy for solving the problem:\\
+
+\par Although Gr\"{o}bner bases algorithms implemented in Computer Algebra systems, there is no efficient Computer Algebra packages to compute Gr\"{o}bner-Shirshov bases. Because of non-commutative structure, it is not easy to find Gr\"{o}bner-Shirshov bases. We wrote a program in Mathematica to find Gr\"{o}bner-Shirshov bases of $\widetilde{B_n}, \widetilde{C_n}$ and $\widetilde{D_n}$ for small $n$'s. Then we generalize this set to any positive integer $n$, we called it $R'$. After that using the algorithm of elimination of leading words with respect to the polynomials in $R'$, all the words in the groups $\tilde{B_n}, \tilde{C_n}$ and $\tilde{D_n}$ are reduced to the explicit classes of words for small $n$'s with help of Mathematica. These sets are sets of normal forms of $\widetilde{B_n}, \widetilde{C_n}$ and $\widetilde{D_n}$. We also generalize these normal forms sets to any positive integer $n$'s. To count the number of the elements of these sets, we get the correspondences of between normal forms and permutation forms. Using Mathematica, we calculated the permutation forms of the words. Then using combinatorial techniques, we compute the number of all normal forms with respect to these classes by means of generating functions. These generating functions turn out to be same with the well known Poincar\'{e} polynomials of the affine Weyl groups $\widetilde{B_n}, \widetilde{C_n}$ and $\widetilde{D_n}$. Therefore, by Composition-Diamond Lemma the functions in $R'$ form Gr\"{o}bner-Shirshov bases. for the affine Weyl groups $\widetilde{B_n}, \widetilde{C_n}$ and $\widetilde{D_n}$. Furthermore, one can easily see that these bases are in fact the normal forms Gr\"{o}bner-Shirshov bases.
+
+
+% Write the keywords separated by commas
+
+\KEYWORDS {Affine Weyl Groups, Gr\"{o}bner-Shirshov Basis, Composition-Diamond Lemma, $q$-binomials, Basic Partitions}
+
+% Write the MSC2010 codes corresponding to your communication
+
+\MSCLASSIFICATION{22E67; 20F55; 51F15; 13P10}
+
+
+
+% Next include the references you need.
+% If your abstract includes no references at all, please delete all the lines
+% from \begin{thebibliography} to \end{thebibliography}.
+
+% Please, do not use more than 9 references.
+
+\begin{thebibliography}{9}
+
+\bibitem{bokut1} L.A. Bokut and L.S. Shiao, \emph{Gr\"{o}bner-Shirshov bases for Coxeter groups}, Comm. Algebra \textbf{29 (9)}, (2001), 4305-4319.
+
+\bibitem {bjorner} \textsc{A. Bjorner;  F. Brenti}, \emph{Combinatorics of Coxeter groups}, Graduate Texts in Mathematics, \textbf{231}, Springer-Verlag New York, 2005.
+
+\bibitem{chen} \textsc{Y.Chen; C. Liu}, \emph{Gr\"{o}bner-Shirshov bases for Coxeter groups I}, arXiv:0910.0096v1.
+
+\bibitem{E1} \textsc{D. Lee}, \emph{Gr\"{o}bner-Shirshov bases and normal forms for the coxeter groups $E_6$ and $E_7$}, Advances in Algebra and Combinatorics, World Scientific,243--255 (2008), .
+
+
+\bibitem{E2} \textsc{O. Svechkarenko}, \emph{Gr\"{o}bner-Shirshov bases for the Coxeter group $E_8$}, Master Thesis, Novosibirsk State University, 2007.
+
+\bibitem{ugur}\textsc{ E. Y{\i}lmaz; C. \"{O}zel; U. Ustao\v{g}lu}, \emph{Gr\"{o}bner-Shirshov basis and reduced words for the affine Weyl group $\tilde{A_n}$}, Journal of Algebra and Its Applications,\textbf{13} (6), (2014).
+\\
+\end{thebibliography}
+
+\vspace{1cm}
+
+% Full Affiliation of all authors
+\ADDRESS{1}{
+Department of Mathematics,\\Abant \.{I}zzet Baysal University \\
+Bolu, Turkey \\
+\texttt{yilmaz\_e2@ibu.edu.tr}
+}
+
+\vspace{.5cm}
+
+\ADDRESS{2}{
+Department of Mathematics,\\Abant \.{I}zzet Baysal University \\
+Bolu, Turkey \\
+\texttt{ugur.ustaoglu@ibu.edu.tr}
+}
+
+
+\end{document} 

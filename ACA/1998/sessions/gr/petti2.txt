@@ -1,0 +1,19 @@
+
+        Two Applications of Macsyma in General Relativity
+        -------------------------------------------------
+
+                          Richard Petti
+                          Macsyma Inc.
+
+This presentation surveys two applications of Macsyma to
+computations in general relativity.  The first application is
+a derivation of Einstein-Cartan theory from general relativity
+as a continuum limit of an ensemble of Kerr-Newman black holes.
+Macsyma is used to compute the connection coefficients of the 
+Kerr Newman solution (charged rotating black hole) with frame 
+fields.  The second application is a derivation of the Klein 
+Gordon Lagrangian as the scalar curvature of a connection with 
+complex conformal nonmetricity.  Macsyma is used for several 
+computations in this application, most importantly to compute 
+the scalar curvature in the presence of complex conformal 
+nonmetricity.

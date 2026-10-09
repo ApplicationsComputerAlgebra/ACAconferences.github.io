@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Atomic Scattering Quantities by Computer Algebra Systems</TITLE>
+   <META NAME="description" CONTENT="No Title">
+   <META NAME="keywords" CONTENT="imad">
+   <META NAME="resource-type" CONTENT="document">
+   <META NAME="distribution" CONTENT="global">
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (X11; I; Linux 2.0.0 i586) [Netscape]">
+   <META NAME="Description" CONTENT="Atomic Scattering Quantities by Computer Algebra Systems">
+   <META NAME="Keywords" CONTENT="Computer Algebra, Atomic Scattering">
+</HEAD>
+<BODY BGCOLOR=white LANG="EN">
+
+<H3 ALIGN=CENTER>Generation of Numerical Codes for Evaluation of Atomic
+Scattering Quantities by Computer Algebra Systems</H3>
+
+<H4 ALIGN=CENTER>Imad Ladadwa</H4>
+
+<CENTER><P>Department of Physics, University of Bergen, Bergen, Norway</P></CENTER>
+
+<P>The evaluation of collisional cross sections in Born approximation has
+been an important method before the more exact approaches were made possible
+by the development of computational techniques. However, even now when
+such more exact methods are feasible, the Born approximation is still useful
+in many connections, e.g. as a quick estimate in over all analysis or for
+extraction of important physical features etc. In particular, when the
+involved states are complex, as e.g. in the case of Rydberg atoms (the
+states are close to hydrogenic states for very large quantum numbers),
+the more exact methods lead to great complexity of numerical codes and
+the possibility to analyze the problems analytically in Born approximation
+can be very useful. </P>
+
+<P>The reported project has as an aim to develop methods for easy evaluation
+of various Born approximation results. Originally we have been using Mathematica
+to evaluate analytically the relevant matrix elements. The results are
+then manually modifiead and copied into a FORTRAN code, used for subsequent
+numerical evaluation. At present we are working on implementation of the
+symbolic-numeric procedures for this problem, using REDUCE for development
+of FORTRAN code, which will construct the matrix elements by performing
+the needed specialized symbolic manipulations in the same run as the final
+numerical results. </P>
+
+<P>The mathematical structure of the problem is as follows. The differential
+cross sections to be evaluated are </P>
+
+<P><IMG SRC="img1.gif" ALT="displaymath71" HEIGHT=37 WIDTH=352 ALIGN=BOTTOM>
+</P>
+
+<P>where the functions describing both the projectile and the inner structure
+of the target are now </P>
+
+<P><IMG SRC="img2.gif" ALT="displaymath73" HEIGHT=29 WIDTH=329 ALIGN=BOTTOM>
+</P>
+
+<P><IMG SRC="img3.gif" ALT="displaymath75" HEIGHT=29 WIDTH=333 ALIGN=BOTTOM>
+</P>
+
+<P>The atomic motion is described by the plane waves, while the atomic
+states are <IMG SRC="img4.gif" ALT="tex2html_wrap_inline77" HEIGHT=24 WIDTH=28 ALIGN=CENTER>
+. The potential is </P>
+
+<P><IMG SRC="img5.gif" ALT="displaymath79" HEIGHT=49 WIDTH=320 ALIGN=BOTTOM>
+</P>
+
+<P>The wave functions <IMG SRC="img4.gif" ALT="tex2html_wrap_inline77" HEIGHT=24 WIDTH=28 ALIGN=CENTER>
+contain the spherical harmonics <IMG SRC="img6.gif" ALT="tex2html_wrap_inline83" HEIGHT=24 WIDTH=61 ALIGN=CENTER>
+</P>
+
+<P><IMG SRC="img7.gif" ALT="displaymath85" HEIGHT=16 WIDTH=330 ALIGN=BOTTOM>
+</P>
+
+<P>and the expressions for the angular integrals are well known. One needs
+thus only to evaluate </P>
+
+<P><IMG SRC="img8.gif" ALT="displaymath87" HEIGHT=37 WIDTH=412 ALIGN=BOTTOM>
+</P>
+
+<P>where the <IMG SRC="img9.gif" ALT="tex2html_wrap_inline89" HEIGHT=24 WIDTH=43 ALIGN=CENTER>
+are the radial functions and <IMG SRC="img10.gif" ALT="tex2html_wrap_inline91" HEIGHT=24 WIDTH=50 ALIGN=CENTER>
+iis the spherical Bessel function. The variable <I>s</I> is the momentum
+transfer </P>
+
+<P><IMG SRC="img11.gif" ALT="displaymath95" HEIGHT=21 WIDTH=287 ALIGN=BOTTOM>
+</P>
+
+<P>For hydrogen-like <IMG SRC="img9.gif" ALT="tex2html_wrap_inline89" HEIGHT=24 WIDTH=43 ALIGN=CENTER>
+the analytic evaluation is the subject of this work. </P>
+
+<P>As an example, below follows one of the functions, evaluated and formatted
+by the Mathematica routine. </P>
+
+<P><IMG SRC="img12.gif" ALT="displaymath99" HEIGHT=44 WIDTH=499 ALIGN=BOTTOM>
+</P>
+
+<ADDRESS>here <I>z</I> is the atomic number of the target atom and <I>s</I>
+is the momentum transfer defined above. <BR>
+
+<HR></ADDRESS>
+
+<ADDRESS>For more information <A HREF="mailto:imad@kvark.fi.uib.no">imad@kvark.fi.uib.no.
+</A></ADDRESS>
+
+</BODY>
+</HTML>

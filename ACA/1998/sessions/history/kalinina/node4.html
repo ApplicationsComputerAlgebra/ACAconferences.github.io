@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Kantorovich schemes and parallel running symbolic transformations</TITLE>
+<META NAME="description" CONTENT="Kantorovich schemes and parallel running symbolic transformations">
+<META NAME="keywords" CONTENT="kalinina">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="kalinina.css">
+</HEAD>
+<BODY >
+
+<H1><A NAME="SECTION00040000000000000000">
+ Kantorovich schemes and
+      parallel running symbolic transformations</A>
+</H1>
+
+<P>
+Many operations   in   computer   algebra  systems  can  be
+separated for parallel running.  For example,  when a  sum  is
+integrated,  the  first  thing to do is to integrate each term
+separately.
+
+<P>
+It is important to have  a  possibility  to  represent  the
+expression   in  a  form  not  only  suitable  for  performing
+efficient transformations, but also for parallel performing.
+
+<P>
+Returning to expression representation from  Section  2  we
+can  see after careful examination that first  steps may be
+performed in parallel.
+
+<P>
+<PRE>
+  Step 1.    T1 = v*w,    T2 = v**2,   T4 = cos(v)
+  Step 2.    T5 = 2*T4,   T3 = T1+T2
+  Step 3.    T7 = T3+9,   T6 = T5+7
+  Step 4.    EXP = T7*T6
+</PRE>
+<P>
+It is possible to carry out analysis of independence of the
+scheme strings,  because a string of scheme includes reference
+to another scheme string.
+
+<P>
+The following  analysis  algorithm  can  be  used.  Let  an
+expression be represented in SK  form.  Each  string  contains
+linking operand pointing at a scheme string number.
+
+<P>
+Let S1, S2,..., SN  be  sets  of  strings  performed  in
+parallel.  First of all, the strings not containing numbers of
+another  string are considered.  Such strings may be performed
+in parallel,  and after  their  separation  one  can  pass  to
+considering of other strings.
+
+<P>
+Let's consider the remaining strings in set U.  By means of
+linking operand analysis,  strings sets performed concurrently
+are formed.  The sets of strings performed in parallel contain
+the strings of scheme,  operands of which  being  the  strings
+performed in parallel on previous steps.
+
+<P>
+Such concurrently performed string sets should be performed
+consequently until set U is empty.
+
+<P>
+Formation of concurrently performed sets can  be  used  for
+construction of algebraic programs performed in parallel.
+
+<P>
+To summarize,  the  KS  can  be  very useful for parallel
+running of symbol transformations.
+
+<P>
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../index.html> IMACS ACA'98</A>
+</ADDRESS>
+</BODY>
+</HTML>

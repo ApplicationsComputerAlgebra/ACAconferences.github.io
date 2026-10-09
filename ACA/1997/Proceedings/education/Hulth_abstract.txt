@@ -1,0 +1,67 @@
+Teaching Discrete Mathematics with Computer Algebra:  
+A New Approach to Modern Algebra and Error-Correcting Codes
+
+Kenneth Hulth (huke@konrad.hj.se) and Igor Gachkov (gaig@konrad.hj.se)
+
+Abstract for the session _Computer Algebra in Education_ at IMACS-ACA'97
+
+An attempt to introduce Computer Algebra in the course program of the School of
+Engineering, Jonkoping University, Sweden, was made three years ago, as the
+course Discrete Mathematics with Computer Algebra was given for the first time.
+The response from the students was very encouraging and indicated that a
+conceptually new course structure with hands-on sessions, using the powerful
+tools of MATHEMATICA, could make an advanced theory available for students with
+a minimal background in mathematics.
+
+In developing the course modules, the authors used the MATHEMATICA package
+Discrete Mathematics, and a set of laboratory sessions on an individual basis
+was worked out.
+
+The content of courses in discrete mathematics usually encompass some theory on
+algebraic structures, and often, as an application, one or two chapters on how
+to correct errors due to noise in communication channels.  The demand of
+knowledge in this field has in recent years increased tremendously, due to the
+now-a-days daily use of plastic (type credit-) cards in money-machines, in
+payment operations, keys of different kinds, as well as in CD-Players, CD-ROM
+storage in computers, FAX-machines etc, which all use error-correcting codes
+based on modern (abstract) algebra.
+
+Thus, the wide spread use of electronic circuits with error-correcting
+functions (practically every electronic circuit produced today has some sort of
+error-correcting capacity) gave the authors the idea to develop a special
+course module focusing on coding theory for engineers, not having deep
+mathematical background, but whose educational program is strongly connected
+with the construction, implementation and/or technical maintenance of the
+mentioned equipment, i.e., engineers in telecommunication, electronics or
+informatics.
+
+Due to the necessity of using advanced mathematical theories, like results on
+algebraic structures including extensions of finite fields and linear spaces
+over Galois fields, courses in coding theory in general have to be allocated on
+post-graduate level.  But having the possibilities of computer algebra at their
+disposal, the authors got the idea to develop a non-standard,
+methodical-oriented course where hands-on sessions could add substantial
+understanding in the introduction of the mentioned mathematical concepts.
+Consequently, a package in MATHEMATICA on Coding Theory was developed at the
+School of Engineering, and the first course was given autumn 1994 for students
+of advanced under-graduate level.  The hands-on sessions, worked out as a
+concept with introductory and problem-solving parts, usually repeated and
+sometimes also demonstrated the theory from the preceding lectures in another
+fashion.
+
+The first results from the course and the structure of the package Coding
+Theory were presented at the IMACS-ACA conference in Albuquerque 1995.
+
+In the autumn semester 1996 the course was given for the third time.  With the
+experience from the previous courses, with an extended package of commands, and
+also using hints and suggestions from the students, the course has been further
+developed.  Especially the previously not possible (due to complicated
+mathematical aspects) parts of the codes BCH, Reed-Solomon have now been
+included in the package.  The beautiful Error-Trapping decoding is demonstrated
+both analytically and as from a practical point of view (with construction of
+schemes and demonstration of the process of decoding).
+
+Apart from mentioned course modules, the students at School of Engineering can
+choose to write a (limited) scientific project in discrete mathematics using
+computer algebra as the final project of the undergraduate program in
+Jonkoping.  Also from this field the authors have positive experiences.

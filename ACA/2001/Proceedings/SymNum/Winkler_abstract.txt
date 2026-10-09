@@ -1,0 +1,12 @@
+  Title:        Faithful and Reliable Plotting of Curves 
+                by Symbolic-Numerical Methods
+  Authors:      Franz WINKLER
+  Affiliation:  RISC-Linz, J. Kepler University, Linz, Austria
+  Abstract:
+We describe a parallel hybrid symbolic-numerical solution to the problem of
+reliably plotting a plane algebraic curve.  The original sequential program is
+implemented in the software library CASA on the basis of the computer algebra
+system Maple.  The new parallel version is based on Distributed Maple, a
+distributed programming extension written in Java.  We describe the
+mathematical foundations of the algorithm, give sequential algorithmic
+improvements and discuss our parallelization approach.

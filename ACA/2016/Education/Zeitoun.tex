@@ -1,0 +1,96 @@
+%    Latex Template for ACA 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS BELOW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{url}
+
+
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS ABOVE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\vspace{-0.8cm}
+\begin{flushleft}
+\Large \textbf{\noindent
+%%% PLEASE INSERT THE TITLE OF YOUR TALK HERE %%%%%%%
+Accurate and interactive zooming of 2D functions using multi-grid algorithms}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5cm}
+\normalsize
+ %%%%%%             NAMES OF AUTHORS         %%%%%%
+ %%%%%% NAME OF SPEAKER SHOULD BE UNDERLINED %%%%%%%%%
+\normalsize{
+ %%%%%% FOR EXAMPLE %%%%%
+  D. G. Zeitoun$^1$,Th. Dana-Picard$^2$
+ %%%%%%%%%%%%%%%%%%%%%%%%
+} \\
+\vspace{5mm}
+\textit{\footnotesize
+ %%%%%% AFFILIATION OF AUTHORS %%%%%%
+$^1$ Orot College for Education, ed.technologie@gmail.com\\
+$^2$ Jerusalem College of Technology, ndp@jct.ac.il
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+\end{flushleft}
+
+The regular syllabus of a course in Advanced Calculus is built around multi-variable functions. In its main chapters, it works along a sequence parallel to what has been done in a first Calculus course, implementing part of a Buchberger spiral (see \cite{B}): the study of a 2 or 3 variable function, limits, continuity, differentiability and their applications. Then attention is devoted to double and triple integrals, and their applications. Along the entire course, visualization is an important issue. Students who have good visualization skills in 2D may have hard time in 3D.  Here is a sample of situations, taken from the course currently taught by the authors:
+
+\begin{itemize}
+\item The proof that a function of two variables has no limit at a given point $P_0$ using different paths approaching $P_0$ may be hard for some of them, because of a lack of visualization.
+\item For different purposes, different kinds of plots are used: regular plot, contour plot, etc. It happens that a student does not "see" that two given different plots may represent the same function.
+\item In order to compute the integral of a 3-variable function over a domain in \textbf{R}$^3$, a student must visualize the domain, and them decide which variable order will be efficient for the computation, and for each computation step, what are the lower limit and the upper limit of integration.
+\end{itemize}
+    
+The study of functions of two real variables can be supported by visualization using a Computer Algebra System (CAS). Contours plots were the first type of graphic representations. With the development of scientific computing, 3D plots were introduced and plotting the graph of a two-variable function has been made possible, including parametric plotting and implicit plotting.
+
+One type of constraints of the system is due to the implemented algorithms, yielding continuous approximations of the given function by interpolation. This masks often discontinuities of the given function and its curvature at small scales. It can also provide strange plots, rather inaccurate. In recent years, point based geometry associated with grid approximation has gained increasing attention as an alternative surface representation, both for efficient rendering and for flexible geometry processing of  complex surfaces.
+
+The study of the function behaviour around discontinuities and other singular points, and around points with high curvature, is of great interest. Recall that automated plotting requests the definition of a mesh (triangular or defined by geodesics and other specific curves) and interpolation based on the values of the function on the border of the cell. Regular zooming  inflates the cells but does not recompute the needed numerical data, thus does not yield new knowledge on the function, whence results with non accurate visualization of the discontinuities (see \cite{ZDP}).
+
+Classical zooming algorithm is an image processing process where the operations are done on pixel. Pixel zooming algorithms have been used in picture improvements (see for example \cite{Botsch}). In the plotting of a two-dimensional function, a mathematical expression of the function is known, therefore it can be evaluated at every point of the given domain. New zooming algorithms, called analytic zooming, based on accurate computation of the function have been developed (see \cite{ZeitounDana}; \cite{Zeitoun})
+
+Several analytic zooming   algorithms have been proposed to render accurately a  plots of a  two dimensional real functions. These algorithms may be classified into two main categories:
+\begin{enumerate}
+\item Algorithms using a reloading process
+\item Algorithms based on a special meshing generator that define a priori zones inside the function domain where an accurate approximation is needed.
+\end{enumerate}
+
+The difficulties with the first type of algorithm is the reloading of the mesh during the zooming may be an heavy process. The interactive zooming is therefore difficult with these types of approach.
+The second type of algorithm may be limited in the number of scales. even so this algorithm needs an automatic criterium for the selection of the zones.
+
+In our talk, several algorithms will be presented and a comparative study will be described. Examples of implementations which have been already used with students will be also shown.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{00}
+\addcontentsline{toc}{chapter}{References}
+\setlength{\itemsep}{-1mm}
+\footnotesize
+\bibitem [1] {Botsch}  Botsch M, Kobbelt L.: \emph{Resampling feature and blend regions in polygonal meshes for surface anti-aliasing}. In:
+\emph{Proceedings of Eurographics} (01), 402--10 (2001).
+\bibitem [2] {B} B. Buchberger. \emph{Mathematica: A system for doing mathematics by computer?}, Technical Report 93-50, Risc-Linz Institute, Johannes Kepler University (1993).
+\bibitem [3] {ZeitounDana} D.G. Zeitoun D.G. and Dana-Picard, Th.: \textit{Zooming algorithms for accurate plotting of two real variables},  ACA 2015 conference, Kalamata, Greece (2015).
+\bibitem [4] {ZDP} Zeitoun, D.G. and Dana-Picard, Th.:   \emph{Accurate visualization of graphs of functions of two real variables},  Int. J. of Comput. and Math. Sc. 4 (1), 1-11 (2010).
+\bibitem [5] {Zeitoun} Zeitoun, D.G., Laible, J.P. and Pinder, G.F.: An Iterative Penalty Method for the Least Squares Solution of Boundary Value Problems,  Numerical Methods for P.D.E. \textbf{13}, 257-281 (1997).
+
+
+
+\end{thebibliography}
+\normalsize
+\end{document}

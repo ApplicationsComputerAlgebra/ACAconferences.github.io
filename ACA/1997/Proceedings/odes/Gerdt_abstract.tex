@@ -1,0 +1,55 @@
+\documentstyle{article}
+\begin{document}
+
+\centerline{\bf Nonlinear Differential Equations with Inexactly Known}
+\centerline{\bf Boundary Conditions and Gr\"{o}bner bases}
+
+\vskip 0.3cm
+
+\centerline{Vladimir P. Gerdt}
+\centerline{Laboratory of Computing Techniques and Automation}
+\centerline{Joint Institute for Nuclear Research}
+\centerline{141980 Dubna, Russia}
+\centerline{Email: {\em gerdt@jinr.dubna.su}}
+\centerline{and}
+\centerline{Michael G.Dmitriev and Marina V.Nesterova}
+\centerline{Program System Institute of Russian Academy of Sciences}
+\centerline{152140 Pereslavl-Zalessky, Russia}
+
+\vskip 0.3cm
+
+An algorithm is presented for constructing approximate solutions of boundary
+problems for second-order differential equations of the form
+\begin{equation}
+\Phi(y'',y',x)=0, \quad y(a)=y_a,\quad y_b=y_b\,, \label{nbp}
+\end{equation}
+where $y(x)$ is a real function, $\Phi$ is a
+polynomial in its arguments over rationals, and the numbers $a,b,y_a,y_b$
+are also rational. Here $y_a$ or $y_b$ or both of them are assumed to be
+known with some reasonably small errors. The algorithm is based on the use
+of the quadratic penalty functions for the approximately given boundary
+conditions and solving the corresponding unconditional extremum problem.
+In particular, if equation $\Phi(y'',y',x)=0$ admits the variational
+formulation $(\phi_{y'})'-\phi_{y}=0$, and both $y_a,y_b$ are inexactly
+known, then an approximate solution of~(\ref{nbp}) can be constructed
+from the condition
+$$
+F(\{c_i\},\alpha,\beta)=\int_a^b \phi(\tilde{y}'',\tilde{y}',x)dx +
+ \alpha[\tilde{y}(a)-y_a]^2 + \beta[\tilde{y}(b)-y_b]^2
+ \ \Longrightarrow \ \min_{\{c_i\}}\,,
+$$
+$$
+ y\approx \tilde{y}=\sum_{i=1}^n c_i v_i(x)\,,
+$$
+The arising system of nonlinear algebraic equations in the coefficients
+$c_i$ for some appropriate set of basic functions $v_i(x)$ is solved by
+construction of a lexicographical Gr\"{o}bner basis. It is shown that the
+construction of such a basis allows one to develop a perturbation scheme
+in the inverse degrees of the penalty parameters $\alpha$ and $\beta$.
+The related computational aspects for parametric Gr\"{o}bner bases are
+considered. The proposed algorithm is illustrated by an example of the
+boundary problem with the use of computer algebra system Reduce. The
+obtained accuracy is analysed in comparison with some other methods
+used to solve that particular boundary problem.
+
+\end{document}

@@ -1,0 +1,170 @@
+<HTML>
+<HEAD>
+<TITLE>Jeannerod - Maillard - Pfluegel </TITLE>
+</HEAD>
+<BODY BGCOLOR=white  LANG="EN">
+ <H3 ALIGN=CENTER><B>An Algorithmic Approach for the <BR> 
+Symmetric Perturbed Eigenvalue Problem <BR> 
+<br>
+Application to the solution of a Schr&#246;dinger equation  <BR> 
+by a <B><I>kp</I>-Perturbation 
+Method</B></B> 
+</H3>
+<P ALIGN=CENTER><STRONG>Claude-Pierre Jeannerod (1), 
+Nicolas Maillard (2), and
+Eckhard Pfl&#252;gel (3)</STRONG></P><P>
+
+<P>
+<center>(1) <a
+	href="mailto:Claude-Pierre.Jeannerod@imag.fr">Claude-Pierre
+	Jeannerod</A> LMC-IMAG - 
+        (2) <a
+	href="mailto:Nicolas.Maillard@imag.fr">Nicolas Maillard</A>
+      LMC-IMAG, Observatoire de Grenoble - 
+       (3) <a
+	href="mailto:Eckhard.Pfluegel@imag.fr">Eckhard Pfl&#252;gel</A> LMC-IMAG
+  </center>
+<br><br>
+<A href="../jeanne.ps.gz">Full article postscript version</a>
+
+<br><br>
+<b>Abstract: </b> In semi-conductor theory, applying the
+<I>kp</I>-method to the monodimensional Schr&#246;dinger equation
+leads to a symmetric perturbed eigenvalue problem [<A
+HREF="main.html#Kane67">8</A>], i.e. to the diagonalization of a
+matrix <IMG ALIGN=BOTTOM
+ALT="tex2html_wrap_inline1252" SRC="lamb.gif" > depending on a small
+parameter <IMG ALIGN=BOTTOM
+ALT="tex2html_wrap_inline1254" SRC="epsil.gif" > , symmetric <IMG
+ ALIGN=BOTTOM ALT="tex2html_wrap_inline1256"
+SRC="each.gif" > . The eigenelements of <IMG 
+ALIGN=BOTTOM ALT="tex2html_wrap_inline1252" SRC="lamb.gif" > are
+expansions in fractional powers of <IMG ALIGN=BOTTOM
+ALT="tex2html_wrap_inline1254" SRC="epsil.gif" > (Puiseux series).<br>
+<br>
+Usually, physicists solve this problem by using Schr&#246;dinger
+perturbation formulas under some restrictive conditions,
+ which make
+perturbed eigenvector symbolic approximation impossible. This is
+illustrated by the modified Kane matrix [<A
+HREF="main.html#Fishman97">5</A>].<br> <br> To solve this problem completely
+from a symbolic computing point of view, we consider the symmetric
+perturbed eigenvalue problem in the case of analytic perturbations [<A
+HREF="main.html#baumgartel">2</A>, <A HREF="main.html#kato">9</A>]. We
+first review the classical characteristic polynomial approach, showing
+why it may be not optimal. We also present a direct matricial
+algorithm [<A HREF="main.html#cpj">7</A>]: transforming the analytic
+matrix <IMG ALIGN=BOTTOM
+ALT="tex2html_wrap_inline1252" SRC="lamb.gif"> into its so-called
+<I>q</I>-reduced form allows to recover the information we need for
+the eigenvalues.<br><br> 
+ This alternative method, as well as the classical
+one, can be described in terms of the Newton polygon. However, our
+approach uses only a finite number of terms of <IMG 
+ALIGN=BOTTOM ALT="tex2html_wrap_inline1252" SRC="lamb.gif" > and is
+more suitable for large matrices and a low approximation order.<br> <br> 
+Besides, we show that the <I>q</I>-reduction process can
+simultaneously provide symbolic approximations of both the perturbed
+eigenvalues and eigenvectors. 
+<br> <br> The implementation of this algorithm in
+M<font size=-1><small>APLE</small></font> is used to diagonalize the
+modified Kane matrix up to a given order. <BR> <BR>
+
+<hr><br>
+<b>Keywords: </b> perturbation of eigenvalues,
+symmetric analytic matrices, Newton-Puiseux polygon,
+<I>q</I>-reduced form of a matrix depending on a parameter, M<font size=-1><small>APLE</small></font> package,
+Schr&#246;dinger  equation, semi-conductor, <I>kp</I>-method, quantum well.
+
+
+<br><br><hr><br>
+<P><A NAME="SECTIONREF"><H2>References:</H2></A><P>
+<DL COMPACT>
+<DT><A NAME="abdeljaoued"><STRONG>1</STRONG></A><DD>
+J.&nbsp;Abdeljaoued.
+The Berkowitz algorithm, Maple and computing the characteristic
+  polynomial in an arbitrary commutative ring.
+<EM>MapleTech</EM>, 4 (3):21-32, 1997.
+
+<DT><A NAME="baumgartel"><STRONG>2</STRONG></A><DD>
+H.&nbsp;Baumg&#228;rtel.
+<EM>Analytic perturbation theory for matrices and operators</EM>.
+Birkhauser Verlag, Basel, 1985.
+
+<DT><A NAME="Cohen"><STRONG>3</STRONG></A><DD>
+C.&nbsp;Cohen-Tannoudji.
+<EM>M&#233;canique quantique, volumes I et II</EM>.
+Hermann, 1973.
+
+<DT><A NAME="dduval"><STRONG>4</STRONG></A><DD>
+D.&nbsp;Duval.
+Diverses questions relatives au calcul formel avec nombres
+  alg&#233;briques.
+Th&#232;se d'Etat, Facult&#233; des Sciences de Grenoble, 1987.
+
+<DT><A NAME="Fishman97"><STRONG>5</STRONG></A><DD>
+G.&nbsp;Fishman.
+Cube, Quasi-cube et W&#252;rtzite: application au GaN.
+&#201;cole th&#233;matique du CNRS, Montpellier, 1997.
+
+<DT><A NAME="HilWaz87a"><STRONG>6</STRONG></A><DD>
+A.&nbsp;Hilali and A.&nbsp;Wazner.
+Formes super-irr&#233;ductibles des syst&#232;mes diff&#233;rentiels
+  lin&#233;aires.
+<EM>Numer. Math.</EM>, 50:429-449, 1987.
+
+<DT><A NAME="cpj"><STRONG>7</STRONG></A><DD>
+C.P. Jeannerod.
+Algorithmic reduction of matrices depending on a parameter.
+Technical Report, LMC-IMAG, Grenoble, 1998.
+
+<DT><A NAME="Kane67"><STRONG>8</STRONG></A><DD>
+E.O. Kane.
+<EM>The <I>kp</I> method</EM>.
+Academic Press, 1967.
+
+<DT><A NAME="kato"><STRONG>9</STRONG></A><DD>
+T.&nbsp;Kato.
+<EM>Perturbation theory for linear operators</EM>.
+Springer, Berlin, 1980.
+
+<DT><A NAME="Loewdin51"><STRONG>10</STRONG></A><DD>
+P.O. L&#246;wdin.
+A note on the quantum-mechanical perturbation theory.
+<EM>Journal of Chemical Physics</EM>, 19(11):1396 - 1401, november
+  1951.
+
+<DT><A NAME="monagan"><STRONG>11</STRONG></A><DD>
+M.&nbsp;Monagan.
+<TT>share/linalg/eigen/eigen.mws</TT>.
+ system.
+
+<DT><A NAME="moro"><STRONG>12</STRONG></A><DD>
+J.&nbsp;Moro, J.V. Burke, and M.L. Overton.
+On the Lidskii-Vishik-Lyusternik perturbation theory for
+  eigenvalues of matrices with arbitrary Jordan structure.
+<EM>SIAM J. Matrix Anal. Appl.</EM>, 18:793-817, 1997.
+
+<DT><A NAME="Mos60"><STRONG>13</STRONG></A><DD>
+J.&nbsp;Moser.
+The order of a singularity in Fuchs' theory.
+<EM>Math. Z.</EM>, pages 379-398, 1960.
+
+<DT><A NAME="thesecki"><STRONG>14</STRONG></A><DD>
+E.&nbsp;Pfl&#252;gel.
+R&#233;solution symbolique des syst&#232;mes diff&#233;rentiels lin&#233;aires.
+PhD Thesis, UJF, oct. 1998.
+
+<DT><A NAME="vanhoeij"><STRONG>15</STRONG></A><DD>
+M.&nbsp;van Hoeij.
+The <TT>intbasis</TT> package.
+ share library.
+
+<DT><A NAME="wilkinson"><STRONG>16</STRONG></A><DD>
+J.H. Wilkinson.
+<EM>The algebraic eigenvalue problem</EM>.
+Oxford, 1965.
+</DL>
+<P>
+</BODY>
+</HTML>

@@ -1,0 +1,31 @@
+
+	DRISS BOULARAS
+
+In [1], the author gave a classification 
+(with respect to the group of invertible matrices)
+and a description of phase portraits of all 
+planar homogeneous quadratic systems x' = P(x,y), y' = Q(x,y).
+This classification is based on the number of 
+integral lines (or singular points at infinity).
+The one that we propose makes more use of 
+algebraic properties of polynomials P and Q
+(common factor, colinearity ...) and produces
+less canonical form. It is implemented in Maple.
+The tool used, is Invariant Theory.
+
+
+Dans [1], l'auteur a donn\'e une classification (par rapport au groupe des
+matrices inversibles) et une description des portraits de phase de tous les
+syst\`emes quadratiques homog\`enes plans $x' = P(x,y), \quad y' = Q(x,y)$.
+Cette classification est fond\'ee sur le nombre de droites int\'egrales (ou
+des points singuliers \`a l'infini). Celle que nous proposons tient
+plut\^ot compte des propri\'et\'es alg\'ebriques des polyn\^omes $P$ et $Q$
+(facteur commun, colin\'earit\'e,...) et aboutit a moins de formes
+canoniques.  Elle est implant\'ee en Maple. L'outil utilis\'e est la
+theorie des invariants.
+
+
+[1]  C.S.  {\sc Sibirskii},
+Introduction to the algebraic theory of invariants of differential
+equations, {\it Nonlinear Science, Theory and Applications, Manchester
+University Press, 1988}.

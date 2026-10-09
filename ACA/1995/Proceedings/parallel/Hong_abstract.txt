@@ -1,0 +1,13 @@
+Parallel Quantifier Elimination on SP2
+
+Hoon Hong, Michael Jahn, Richard Liska, Nicholas Robidoux, Stanly Steinberg
+
+In this talk, we report on a parallel implementation
+of the QEPCAD (quantifier elimination by partial cylindrical
+algebraic decomposition) method on a massively parallel
+machine (SP2).  The parallelization is done for the stack
+construction phase so that the stacks are constructed in
+parallel.  By using the parallel program,
+we have obtained an exact solution for some non-trivial 
+and important problems arising from control theory, 
+which could not be solved using the sequential program.

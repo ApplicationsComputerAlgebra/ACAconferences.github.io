@@ -1,0 +1,19 @@
+   "Applications of Computer Algebra to Gasdynamic Problems of Ballistic"
+
+
+   Alain Carriere, Louis-Remi Oudin
+   Institut Franco-Allemand de Recherches de Saint-Louis
+   5 rue du General Cassagnou
+   F 68301 Saint-Louis Cedex, France
+
+
+    ABSTRACT: Most problems of ballistics are modelised by PDE's os
+simpler ODE's which in general do not have closed form solutions.
+Therfore numerical integration must be used to solve them. However
+applying the usual methods requires a tremendeous computing time.
+Therfore a quasimonomial transformation by Brenig is applied. Most of
+the ballistic ODE's can be written in canonical QM format which allows
+to write easily Taylor expansions for numerical purposes. This is
+applied to gasdynamics problems of terminal and interior ballistics.
+Particular problems that are discussed are the generation of blast waves
+by intense (nuclear) explosions and the internal ballistics of guns.

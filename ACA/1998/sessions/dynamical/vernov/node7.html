@@ -1,0 +1,706 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The exact solution of system&nbsp;(5)</TITLE>
+<META NAME="description" CONTENT="The exact solution of system&nbsp;(5)">
+<META NAME="keywords" CONTENT="vernov">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="vernov.css">
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html92"
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html90"
+ HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html84"
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html93"
+ HREF="node8.html">The first approximation</A>
+<B> Up:</B> <A NAME="tex2html91"
+ HREF="node3.html">The standing wave solutions</A>
+<B> Previous:</B> <A NAME="tex2html85"
+ HREF="node6.html">The approximate solution of</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00034000000000000000">
+ The exact solution of system&nbsp;(5)</A>
+</H2>
+
+<P>
+The aim of this section is to find the analytical form of the function, which
+ Fourier coefficients satisfy system&nbsp;(5).
+ For arbitrary <IMG
+ WIDTH="83" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img140.gif"
+ ALT="$q\in(0,1)$">
+let us define the following
+sequence:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\bf f}\stackrel{\rm def}{=}\{\;\forall n\in
+\hbox{\normalsize\cal I\hskip-2pt\bf N}{ }:{ } f_{2n-1}^{\vphantom{+}}=\frac{q^{n-1/2}}{1+q^{2n-1}},{ }
+  {    }{ } f_{2n}^{\vphantom{+}}=0\;\}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="382" HEIGHT="57"
+ SRC="img141.gif"
+ ALT="\begin{displaymath}{\bf f}\stackrel{\rm def}{=}\{\;\forall n\in
+\hbox{\normalsi...
+...^{n-1/2}}{1+q^{2n-1}},{ }
+{ }{ } f_{2n}^{\vphantom{+}}=0\;\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The terms of the sequence <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img142.gif"
+ ALT="${\bf f}$">
+are proportional to Fourier
+coefficients of the Jacobi elliptic function <IMG
+ WIDTH="28" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img143.gif"
+ ALT="$\bf cn$">&nbsp;[<A
+ HREF="node11.html#2">2</A>]:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\mathop{\rm cn}\nolimits(z,k)=\frac{\gamma}{k}\sum_{n=1}^\infty
+f_{2n-1}^{\vphantom{+}}\cos\left((2n-1)\frac{\gamma z}{4} \right)
+\mbox{, \ \ where \ } \gamma\equiv\frac{2\pi}{K} \mbox{ , \  \  \  }
+z\in \hbox{\rm I\hskip-2pt\bf R}.
+\eqno (6)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="586" HEIGHT="83"
+ SRC="img144.gif"
+ ALT="\begin{displaymath}\mathop{\rm cn}\nolimits(z,k)=\frac{\gamma}{k}\sum_{n=1}^\inf...
+...} \mbox{ , \ \ \ }
+z\in \hbox{\rm I\hskip-2pt\bf R}.
+\eqno (6)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+Let us clarify introduced notations and point out some properties of
+the elliptic cosine:
+
+<P>
+1) Basic periods of the doubly periodic function 
+<!-- MATH: $\mathop{\rm cn}\nolimits(z,k)$ -->
+<IMG
+ WIDTH="70" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img145.gif"
+ ALT="$\mathop{\rm cn}\nolimits(z,k)$">are  4<I>K</I>(<I>k</I>) and 
+<!-- MATH: $2K(k)+2\dot\imath K'(k)$ -->
+<IMG
+ WIDTH="148" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img146.gif"
+ ALT="$2K(k)+2\dot\imath K'(k)$">,
+where <I>K</I>(<I>k</I>) is a full elliptic
+integral, 
+<!-- MATH: $K'(k)\equiv K(k')$ -->
+<IMG
+ WIDTH="130" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img147.gif"
+ ALT="$K'(k)\equiv K(k')$">
+and 
+<!-- MATH: $k'=\sqrt{1-k^{2^{\vphantom{+}}}}$ -->
+<IMG
+ WIDTH="118" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.gif"
+ ALT="$k'=\sqrt{1-k^{2^{\vphantom{+}}}}$">.
+
+<P>
+2) The parameter <I>q</I> in the Fourier expansion
+can be expressed in terms of elliptic integrals:
+
+<!-- MATH: $q\equiv e^{-{\displaystyle\pi}\frac{K'}{K^{\vphantom{+}}}}$ -->
+<IMG
+ WIDTH="94" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img149.gif"
+ ALT="$q\equiv e^{-{\displaystyle\pi}\frac{K'}{K^{\vphantom{+}}}}$">.
+<BR>
+
+<P>
+3) The Fourier-series expansion of the function 
+<!-- MATH: $\mathop{\rm cn}\nolimits(z,k)$ -->
+<IMG
+ WIDTH="70" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img145.gif"
+ ALT="$\mathop{\rm cn}\nolimits(z,k)$">
+does
+not include even harmonics.  This expansion is valid in the following
+domain of the complex plane: 
+<!-- MATH: $-K'<\Im m\: z<K'$ -->
+<IMG
+ WIDTH="165" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img150.gif"
+ ALT="$-K'<\Im m\: z<K'$">,
+in particular, for
+
+<!-- MATH: $z\in \hbox{\rm I\hskip-2pt\bf R}$ -->
+<IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img151.gif"
+ ALT="$z\in \hbox{\rm I\hskip-2pt\bf R}$">.
+<BR>
+
+<P>
+4) If 
+<!-- MATH: $z \in \hbox{\rm I\hskip-2pt\bf R}$ -->
+<IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img151.gif"
+ ALT="$z\in \hbox{\rm I\hskip-2pt\bf R}$">
+and <IMG
+ WIDTH="84" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img152.gif"
+ ALT="$k\in(0,1)$">,
+then  
+<!-- MATH: $\mathop{\rm cn}\nolimits(z,k)\in \hbox{\rm I\hskip-2pt\bf R}$ -->
+<IMG
+ WIDTH="115" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img153.gif"
+ ALT="$\mathop{\rm cn}\nolimits(z,k)\in \hbox{\rm I\hskip-2pt\bf R}$">.
+<BR>
+
+<P>
+5) The function 
+<!-- MATH: $\mathop{\rm cn}\nolimits(z,k)$ -->
+<IMG
+ WIDTH="70" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img145.gif"
+ ALT="$\mathop{\rm cn}\nolimits(z,k)$">
+is a solution of the following
+ differential equation:
+ <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{d^2\mathop{\rm cn}\nolimits(z,k)}{dz^2}=(2k^2-1)\mathop{\rm cn}\nolimits(z,k)-2k^2\mathop{\rm cn}\nolimits^3(z,k).
+\eqno (7)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="485" HEIGHT="52"
+ SRC="img154.gif"
+ ALT="\begin{displaymath}\frac{d^2\mathop{\rm cn}\nolimits(z,k)}{dz^2}=(2k^2-1)\mathop...
+...nolimits(z,k)-2k^2\mathop{\rm cn}\nolimits^3(z,k).
+\eqno (7)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+The latest property means that the infinite sequence of the Fourier
+coefficients for 
+<!-- MATH: $\mathop{\rm cn}\nolimits(z,k)$ -->
+<IMG
+ WIDTH="70" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img145.gif"
+ ALT="$\mathop{\rm cn}\nolimits(z,k)$">
+is a solution of some infinite system of
+ nonlinear algebraic  equations. Let us find this system.
+
+<P>
+On the one hand, it is clear from (6) that the
+Fourier-series expansion for the function 
+<!-- MATH: $\mathop{\rm cn}\nolimits^3(z,k)$ -->
+<IMG
+ WIDTH="78" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img155.gif"
+ ALT="$\mathop{\rm cn}\nolimits^3(z,k)$">
+is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\mathop{\rm cn}\nolimits^3(z,k)=\frac{\gamma^3}{4k^3}\sum_{j=1}^\infty F_j^{(3)}({\bf f})
+\cos\left(j\frac{\gamma z}{4}\right)\mbox{, \ \ where } j=1,3,5,\dots,+\infty
+\mbox{\ ; \ \ \ }
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="567" HEIGHT="62"
+ SRC="img156.gif"
+ ALT="\begin{displaymath}\mathop{\rm cn}\nolimits^3(z,k)=\frac{\gamma^3}{4k^3}\sum_{j=...
+...ht)\mbox{, \ \ where } j=1,3,5,\dots,+\infty
+\mbox{\ ; \ \ \ }
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\begin{array}{rl}
+\displaystyle
+F_{j}^{(3)}({\bf f})\!&\displaystyle=\;
+3f_j^3+3f_j^2f_{3j}^{\vphantom{+}} +f_j^{\vphantom{+}}\left(6\sum_
+{\vbox{\hbox{$\scriptstyle s=1$}
+\vspace{1mm}\hbox{$\scriptstyle  s\neq j$}}}^{\infty}\;(f_s^2+
+f_s^{\vphantom{+}}f_{2j+s}^{\vphantom{+}})+
+3\!\sum_{\vbox{\hbox{$\scriptstyle s=1$}
+\vspace{1mm}\hbox{$\scriptstyle s\neq j$}}}^{2j-1}
+ f_s^{\vphantom{+}}f_{2j-s}^{\vphantom{+}} \right)+\\[1cm]
+\!&\displaystyle+\;\;
+3\sum_{\vbox{\hbox{$\scriptstyle s=1$}
+\vspace{1mm}\hbox{$\scriptstyle s\neq
+j$}}}^{\infty}\;\sum_{\vbox{\hbox{$\scriptstyle p=1$}
+\vspace{0.5mm}\hbox{$\scriptstyle p\neq j$}}}^{\infty}f_s^{\vphantom{+}}
+f_p^{\vphantom{+}} f_{j+s+p}^{\vphantom{+}} +3
+\sum_{\vbox{\hbox{$\scriptstyle s=1$}
+\vspace{1mm}\hbox{$\scriptstyle s\neq
+j$}}}^{\infty}\!\!\!\!\!\!\!\sum_{\vbox{\hbox{\ \  \ \
+$\scriptstyle p=1$}\vspace{0.5mm}\hbox{\ \ \ \ $\scriptstyle p\neq
+j$}\vspace{1mm}\hbox{\ \ \ \ $\scriptstyle p\neq 2j-s$}}}^{\infty}
+\!\!\!\!\!\!\!\! f_s^{\vphantom{+}}
+f_p^{\vphantom{+}}f_{s+p-j}^{\vphantom{+}}+
+\sum_{s=1}^{j-2}\;\sum_{p=1}^{j-2}
+f_{s}^{\vphantom{+}}f_{p}^{\vphantom{+}}f_{j-s-p}^{\vphantom{+}}
+\end{array}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="614" HEIGHT="196"
+ SRC="img157.gif"
+ ALT="\begin{displaymath}\begin{array}{rl}
+\displaystyle
+F_{j}^{(3)}({\bf f})\!&\displ...
+...tom{+}}f_{p}^{\vphantom{+}}f_{j-s-p}^{\vphantom{+}}
+\end{array}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P> (in all sums we summarize over only odd numbers).
+
+<P>
+On the other hand, from the differential equation&nbsp;(7) it follows that
+
+<!-- MATH: $F_j^{(3)}({\bf f})$ -->
+<IMG
+ WIDTH="64" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img158.gif"
+ ALT="$F_j^{(3)}({\bf f})$">
+is proportional to 
+<!-- MATH: $f_j^{\vphantom{+}}$ -->
+<IMG
+ WIDTH="23" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img159.gif"
+ ALT="$f_j^{\vphantom{+}}$">,
+with
+coefficients of proportionality depending on <I>j</I>:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\forall j \mbox{ \ \
+:  \ \ } F_j^{(3)}({\bf
+f})=\left(\frac{2(2k^2-1)}{\gamma^2}+\frac{j^2}{8}\right)
+f_j^{\vphantom{+}}.    \eqno(8)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="459" HEIGHT="59"
+ SRC="img160.gif"
+ ALT="\begin{displaymath}\forall j \mbox{ \ \
+: \ \ } F_j^{(3)}({\bf
+f})=\left(\frac{2...
+...)}{\gamma^2}+\frac{j^2}{8}\right)
+f_j^{\vphantom{+}}. \eqno(8)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+Thus, the sequence <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img142.gif"
+ ALT="${\bf f}$">
+is a nonzero
+solution of system&nbsp;(8) at all <IMG
+ WIDTH="83" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img140.gif"
+ ALT="$q\in(0,1)$">.
+The following
+lemma proves the existence of a preferred value of <I>q</I>.
+
+<P>
+<BR>
+<BR>
+
+<!-- MATH: $\!\!\!\!\!$ -->
+<IMG
+ WIDTH="2" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img161.gif"
+ ALT="$\!\!\!\!\!$"><TABLE CELLPADDING=3>
+<TR><TH ALIGN="RIGHT"><FONT SIZE="+1"><B>Lemma. </B></FONT></TH>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH=351><FONT SIZE="+1"><I>There exists such value of parameter
+<IMG
+ WIDTH="83" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img140.gif"
+ ALT="$q\in(0,1)$">
+that   the sequence <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img142.gif"
+ ALT="${\bf f}$">
+is a  real solution of
+system&nbsp;(5),   in addition a value of  
+<!-- MATH: $\omega_1^{\vphantom{+}}$ -->
+<IMG
+ WIDTH="26" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$\omega_1^{\vphantom{+}}$">
+also
+is real. </I></FONT></TH>
+</TR>
+<TR><TH ALIGN="RIGHT"><B>Proof. </B></TH>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=351>Inserting the
+sequence <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img142.gif"
+ ALT="${\bf f}$">
+into system  (5) :
+
+<!-- MATH: $a_j^{\vphantom{+}}=f_j^{\vphantom{+}}$ -->
+<IMG
+ WIDTH="67" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$a_j^{\vphantom{+}}=f_j^{\vphantom{+}}$">
+and using system  (8), we
+obtain:</TD>
+</TR>
+</TABLE> <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\begin{array}{r@{\displaystyle \;=\;}l}
+\displaystyle \mbox{ \ \  }
+\forall j \mbox{ \ \   :  \ \ }
+R_{jj}({\bf f})& \displaystyle \left\{ F_j^{(3)}({\bf f})+
+ f_j^{\vphantom{+}}\left(6\sum_{n=1}^\infty f_n^2
+ -32j^2\omega_1^{\vphantom{+}}
+  \right)\right\}=\\[0.7cm]
+ &\displaystyle f_j^{\vphantom{+}}
+ \left\{6\sum_{n=1}^\infty f_n^2+
+ \frac{2(2k^2-1)}{\gamma^2}+j^2\left(\frac{1}{8}-32
+ \omega_1^{\vphantom{+}}\right)\right\}=0.
+\end{array}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="557" HEIGHT="130"
+ SRC="img163.gif"
+ ALT="\begin{displaymath}\begin{array}{r@{\displaystyle \;=\;}l}
+\displaystyle \mbox{ ...
+...}{8}-32
+\omega_1^{\vphantom{+}}\right)\right\}=0.
+\end{array} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+System  (5) has a nonzero solution if and only if
+ <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left\{ \begin{array}{r@{\; =\;}l}
+\displaystyle\omega_1^{\vphantom{+}}&\displaystyle
+ \frac{1}{256},\\[0.3cm]
+ \displaystyle\sum\limits_{n=1}^\infty
+    f_n^2 & \displaystyle\frac{(1-2k^2)}{3\gamma^2}. \\
+\end{array}
+\right.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="182" HEIGHT="108"
+ SRC="img164.gif"
+ ALT="\begin{displaymath}\left\{ \begin{array}{r@{\; =\;}l}
+\displaystyle\omega_1^{\v...
+...displaystyle\frac{(1-2k^2)}{3\gamma^2}. \\
+\end{array}\right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+We have obtained the value  of 
+<!-- MATH: $\omega_1^{\vphantom{+}}$ -->
+<IMG
+ WIDTH="26" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$\omega_1^{\vphantom{+}}$">.
+The second
+equation of this system is equivalent to the following equation in
+parameter <I>q</I>:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+3\sum_{n=1}^\infty\left(\vphantom{\sum_{n=1}^\infty}
+\frac{q^{n-1/2}}{1+q^{2n-1}}\right)^2
+-\left(\frac{1}{4}+ \sum_{n=1}^\infty
+\frac{q^n}{1+q^{2n}}\right)^2+2\left(\sum_{n=1}^\infty
+\frac{q^{n-1/2}}{1+q^{2n-1}}\right)^2=0.     \eqno (9)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="575" HEIGHT="88"
+ SRC="img165.gif"
+ ALT="\begin{displaymath}3\sum_{n=1}^\infty\left(\vphantom{\sum_{n=1}^\infty}
+\frac{q^...
+...n=1}^\infty
+\frac{q^{n-1/2}}{1+q^{2n-1}}\right)^2=0. \eqno (9)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+This equation has the following solution on interval (0,1):
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+q=1.42142623201\times10^{-2}\pm1\times10^{-13}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="328" HEIGHT="35"
+ SRC="img166.gif"
+ ALT="\begin{displaymath}q=1.42142623201\times10^{-2}\pm1\times10^{-13}. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B>Thus the lemma is proved.</B>
+
+<P>
+Now it is easy to construct the required zero approximation for the
+function 
+<!-- MATH: $\varphi(x,\tilde t)$ -->
+<IMG
+ WIDTH="61" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$\varphi(x,\tilde t)$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\varphi_0^{\vphantom{+}}(x,\tilde t)= A\Bigl\{\mathop{\rm cn}\nolimits(\alpha (x-\tilde
+t),k)-\mathop{\rm cn}\nolimits(\alpha (x+\tilde t),k)\Bigr\}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="401" HEIGHT="41"
+ SRC="img167.gif"
+ ALT="\begin{displaymath}\varphi_0^{\vphantom{+}}(x,\tilde t)= A\Bigl\{\mathop{\rm cn}...
+...
+t),k)-\mathop{\rm cn}\nolimits(\alpha (x+\tilde t),k)\Bigr\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+For arbitrary <IMG
+ WIDTH="84" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img152.gif"
+ ALT="$k\in(0,1)$">
+this function
+  is a real solution of equation  (4). If
+
+<!-- MATH: $\alpha=\frac{2K}{\displaystyle\pi}$ -->
+<IMG
+ WIDTH="69" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img168.gif"
+ ALT="$\alpha=\frac{2K}{\displaystyle\pi}$">,
+then the periods
+  of 
+<!-- MATH: $\varphi_0^{\vphantom{+}}(x,\tilde t)$ -->
+<IMG
+ WIDTH="69" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\varphi_0^{\vphantom{+}}(x,\tilde t)$">
+in <I>x</I> and in <IMG
+ WIDTH="13" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img169.gif"
+ ALT="$\tilde t$">
+are
+  equal to <IMG
+ WIDTH="27" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$2\pi$">.
+Using the Fourier-series expansion for the function
+
+<!-- MATH: $\mathop{\rm cn}\nolimits(z,k)$ -->
+<IMG
+ WIDTH="70" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img145.gif"
+ ALT="$\mathop{\rm cn}\nolimits(z,k)$">
+(formula (6)), we obtain the following  expansion for
+function 
+<!-- MATH: $\varphi_0^{\vphantom{+}}(x,\tilde t)$ -->
+<IMG
+ WIDTH="69" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\varphi_0^{\vphantom{+}}(x,\tilde t)$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\varphi_0^{\vphantom{+}}(x,\tilde
+t)=2A\frac{\gamma}{k}\sum_{n=1}^{\infty}f_{2n-1}^{\vphantom{+}}
+\sin((2n-1)x)\sin((2n-1)\tilde t).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="453" HEIGHT="59"
+ SRC="img170.gif"
+ ALT="\begin{displaymath}\varphi_0^{\vphantom{+}}(x,\tilde
+t)=2A\frac{\gamma}{k}\sum_{...
+...fty}f_{2n-1}^{\vphantom{+}}
+\sin((2n-1)x)\sin((2n-1)\tilde t).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+If 
+<!-- MATH: $q=1.42142623201\times10^{-2}\pm1\times10^{-13}$ -->
+<IMG
+ WIDTH="331" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img171.gif"
+ ALT="$q=1.42142623201\times10^{-2}\pm1\times10^{-13}$">,
+then <I>q</I> is a
+solution of equation&nbsp;(9) and the sequence <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img142.gif"
+ ALT="${\bf f}$">
+is a real solution
+of system&nbsp;(5).  The middle value of <I>q</I> corresponds to
+
+<!-- MATH: $k=0.451075598811$ -->
+<I>k</I>=0.451075598811, 
+<!-- MATH: $\gamma=3.78191440007$ -->
+<IMG
+ WIDTH="166" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img172.gif"
+ ALT="$\gamma=3.78191440007$">
+and 
+<!-- MATH: $\alpha=1.0576653982$ -->
+<IMG
+ WIDTH="157" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img173.gif"
+ ALT="$\alpha=1.0576653982$">.
+All
+equation in system (5) are homogeneous ones, hence, for  these values of
+parameters, the sequence of the Fourier
+coefficients of the function 
+<!-- MATH: $\varphi_0^{\vphantom{+}}(x,\tilde t)$ -->
+<IMG
+ WIDTH="69" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\varphi_0^{\vphantom{+}}(x,\tilde t)$">
+also
+is a solution of system&nbsp;(5), with <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\omega_1^{\vphantom{+}}=\frac{\gamma^2}{64k^2}A^2=1.0983600974A^2.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="275" HEIGHT="52"
+ SRC="img174.gif"
+ ALT="\begin{displaymath}\omega_1^{\vphantom{+}}=\frac{\gamma^2}{64k^2}A^2=1.0983600974A^2.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+Thus we have proved that the function
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\varphi_0^{\vphantom{+}}(x,\tilde t)=
+A\Bigl\{\mathop{\rm cn}\nolimits(\alpha (x-\tilde t),k)-\mathop{\rm cn}\nolimits(\alpha (x+\tilde t),k)\Bigr\},
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="401" HEIGHT="41"
+ SRC="img175.gif"
+ ALT="\begin{displaymath}\varphi_0^{\vphantom{+}}(x,\tilde t)=
+A\Bigl\{\mathop{\rm cn...
+... t),k)-\mathop{\rm cn}\nolimits(\alpha (x+\tilde t),k)\Bigr\},
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+with 
+<!-- MATH: $k=0.451075598811$ -->
+<I>k</I>=0.451075598811 and 
+<!-- MATH: $\alpha=1.0576653982$ -->
+<IMG
+ WIDTH="157" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img173.gif"
+ ALT="$\alpha=1.0576653982$">is such a standing wave solution of equation&nbsp;(3) that equation&nbsp;(4) has
+a periodic solution.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html92"
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html90"
+ HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html84"
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html93"
+ HREF="node8.html">The first approximation</A>
+<B> Up:</B> <A NAME="tex2html91"
+ HREF="node3.html">The standing wave solutions</A>
+<B> Previous:</B> <A NAME="tex2html85"
+ HREF="node6.html">The approximate solution of</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

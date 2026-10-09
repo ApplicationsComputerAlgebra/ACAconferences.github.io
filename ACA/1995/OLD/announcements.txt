@@ -1,0 +1,155 @@
+Some announcements regarding the IMACS Conference on Applications of Computer
+Algebra:
+
+Please send in your registration forms even if we are paying your registration
+fees!!!  This information is important for our record keeping.
+
+More information, such as maps, local sites, and so forth have been added to
+both the WWW pages (http://math.unm.edu/aca.html) and the anonymous FTP area
+(ftp://math.unm.edu/pub/aca).  The latter has a file called INDEX detailing the
+files collected there.  These areas will remain active as the conference
+approaches.
+
+The WWW page for the electronic proceedings/preliminary program organized by
+sessions and the anonymous FTP file talks.txt will keep track of talk titles
+and speakers.  In the next few days, a preliminary conference program will be
+produced (in PostScript).  An announcement will be sent out when the program
+becomes available.
+
+We are trying to organize some group activities for some of the lunch periods
+and evenings for any who wish to participate.  Walks around campus and nearby
+areas (especially Sandia Crest which has an elevation of 10,378 feet) are
+under consideration.  We will let you know more when the program comes out.
+
+If you wished to be removed from further mailings for this conference (but not
+future conferences), please send a note to aca@math.unm.edu .
+
+Registration for the IMACS Conference on Applications of Computer Algebra will
+take place starting at 8 am, Tuesday, May 16, 1995 on the University of New
+Mexico campus in the UNM Centennial Lounge (Thompson Gallery) at the north end
+of the first floor of the Student Union Building (SUB) [the entrance will be to
+the diagonal right if entering the SUB through the north doors; coming in from
+the south, you must pass by the dining area on the left, the "Campus Grind",
+then a couple of tables before coming to the Centennial Lounge].  The Student
+Union Building is located on the southeast section of campus as sketched below
+(the Centennial Lounge is marked with an @):
+
+                           |===| stairs
+                     +-----|===|---------+
+                     |                   .
+                   ---                   .
+            stairs |||     plaza         .
+                   ---                    
+                     |                   |
+                     +---+----\/-+       |
+                         | +--   |       |       /\
+             +-----+     | | @|  |       |       ||
+  Humanities |     |     | +--+  |       |     North
+   Building  |     |     |       |       |
+  (5 floors) +-----+     |       |       |
+                         | SUB   |       |
+                         |       |       +--- ...
+                         +----/\-+
+
+                                o fountain   +---------+
+                                             |         |
+                                 +-----------+ Johnson |       Johnson
+                    +---------+  |           |         |
+                    | Popejoy |  |   VISITOR |   Gym   |        Field
+                    |   Hall  |  |   PARKING |         |
+                    +---------+  |   +---+   +---------+---+
+                                 | o booth                 |
+---------------------------------+   +-----------------------------------------
+                                                        Redondo Road
+---+   +-----------+-------------+   +------+ +-+   +-+ +----------------------
+   |   | Yale Park | construction|     parking  |   |       parking
+---+   +-----------+-------------+--------------+   +--------------------------
+                                                        Central Avenue
+---+   +----------+   +----------+   +----------+   +----------+   +-----------
+   |   |          |   |          |   |          |   |          |   |
+   Yale          Harvard        Cornell        Stanford       Columbia
+
+    ||
+    \/ To the airport
+
+Central Avenue is also known as Route 66 of TV fame.  This was the main
+east-west highway used by anyone traveling from the East to California.
+
+If you are coming from Hokona Hall (for those staying in the dormitories), walk
+south from Hokona a dozen feet or so until you reach an east-west sidewalk.
+Follow the sidewalk west past the Education building (on the left) and the
+Business School (on the right), and then turn south on the long north-south
+sidewalk that starts where the east-west sidewalk ends.  This will lead to the
+stairs on the north side of the plaza (see map).  The building to the south is
+the SUB.  Now, that was easy, wasn't it? ;-]
+
+AIRPORT -> HOTELS
+
+A free shuttle is available between the airport and the conference hotels
+(Hilton Hotel and Fairfield Inn).  In theory, the shuttle comes by the airport
+hourly, but one can simply request it by using one of the courtesy phones in
+the baggage claim area (these are well marked with the name of the hotel
+listed).  There are shuttles to other Albuquerque hotels as well.
+
+DORMITORY ROOMS
+
+Those attendees arriving by plane and staying in the dormitories should take
+a taxi from the airport.  The approximate cost is $6-7.  Tell the taxi driver
+that you want to go to Hokona Hall on the University of New Mexico campus.
+Hokona Hall is located on Campus Boulevard, directly south of the University of
+New Mexico Hospital on Lomas Boulevard.
+
+Hokona Hall consists of two pentagonal "lobes" connected by a short hallway.
+The dorm rooms will be in the Zuni section of Hokona Hall which is the western
+lobe.  To check in, you will need to go to the lobby in the the central
+hallway.  From the street, ypu will see two blue canopy covered entrances.  Go
+*past* them around the side of the building (in either direction) until you
+come to a door marked LOBBY.  If the door is locked, there is a buzzer you can
+press to fetch someone to let you in.  The rooms will be available Monday night
+(May 15) through Friday night (May 19).  Check-in time is 11 am to 10 pm.  If
+you arrive outside those times, there are phones and instructions for calling
+someone who will check you in.  The standard check-out is by 11 am on Saturday
+(May 20).  If you wish to stay until Sunday, please make arrangements to do
+this when you check in.  If you are arriving before the dorm rooms are
+available, or leaving after the dorm rooms are no longer available, you will
+need to arrange for a hotel room for those times.
+
+There was a mistake on the dorm prices.  Each room is $23.  Thus, if you are in
+a room by yourself, the cost will be $23 per night. If you share a room, then
+the price will be $11.50 per night.  Should this mistake cause you any
+difficulty, please contact Professor Steinberg.
+
+The dorm occupants should plan on purchasing breakfast and dinner at one of the
+many restaurants on Central Avenue.  These are very near the meeting site.
+
+PARKING
+
+There is a visitor parking lot southeast of the Student Union Building (see
+map).  The cost is $3/day.  If you are staying in the dorms, you can obtain
+daily passes there for $1.50/day.  There is also scattered free parking in the
+streets south of campus, however, you must avoid posted areas that require a
+parking permit.
+
+WEATHER (averages for May in Albuquerque)
+
+Temperature: minimum   51 F   (10.6 C)
+             mean      67 F   (19.4 C)
+             maximum   80 F   (26.7 C)
+
+Rainfall: 0.67 inches   (1.7 cm)
+
+Humidity: 25%
+
+Winds:  7 days of  0-10 mph   (   0-16.1 km/hr)
+       19 days of 11-20 mph   (17.7-32.2 km/hr)
+        4 days of 21-30 mph   (33.9-48.4 km/hr)
+
+MISCELLANEOUS
+
+It is always easy to know what direction you face when outside in Albuquerque
+as the Sandia Mountains are on the east side.  There will be further
+information about the conference (and campus maps) available in the dorms and
+the conference hotels.  There will be a van shuttling between the
+Hilton/Fairfield and the SUB in the mornings and the afternoons.  The van will
+start leaving the hotels on Tuesday around 7:30 am (because registration starts
+at 8 am).  We will provide further information as we make it up!

@@ -1,0 +1,28 @@
+                         Computer Algebra in Education
+
+   at ACA'2012 to be held June 25-28, 2012 in Sofia, Bulgaria
+
+   Organizers:
+
+   Alkis Akritas, University of Volos, Greece
+   Michael Wester, University of New Mexico, USA
+   Bill Pletsch, Central New Mexico Community College, USA
+
+   Overview:
+
+   Education has become one of the fastest growing application areas for
+   computers in general and computer algebra in particular. Computer
+   Algebra Systems (CAS) make for powerful teaching and learning tools
+   within mathematics, physics, chemistry, biology, economics, etc. Among
+   them are: (a) the commercial "heavy weights" such as Casio ClassPad
+   330, Derive, Magma, Maple, Mathematica, MuPAD, TI NSpire CAS, and TI
+   Voyage 200, and (b) the free software/open source systems such as
+   Axiom, Euler, Fermat, wxMaxima, Reduce, and the rising stars such as
+   GeoGebra, Sage, SymPy and Xcas (the swiss knife for mathematics).
+
+   The goal of this session is to exchange ideas, discuss classroom
+   experiences, and to explore significant issues relating to CAS
+   tools/use within education. Subjects of interest for this session will
+   include new CAS-based teaching/learning strategies, curriculum changes,
+   new support materials, and assessment practices from all scientific
+   fields.

@@ -1,0 +1,208 @@
+<HTML>
+<HEAD>
+<TITLE>Formal Analysis of PDEs</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Formal Analysis of PDEs</H1>
+
+<h3>Organizer</h3>
+<ADDRESS>
+<p>
+Vladimir P. Gerdt 
+(<a href="mailto:gerdt@jinr.dubna.su">gerdt@jinr.dubna.su</a>)<br>
+Laboratory of Computing Techniques and Automation<br>
+Joint Institute for Nuclear Research<br>
+141980 Dubna<br>
+RUSSIA<br>
+Tel: (7-09621) 63437 <br>
+Fax: (7-09621) 65145
+</ADDRESS>
+<p>
+
+<h3>Description</h3>
+<p>
+The session is to be devoted to the algorithmic and applied
+aspects of analysis of algebraic PDEs, based on their transformation 
+into the special forms which are called in the literature as formal 
+integrable, passive, involutive or standard. Such forms are much like 
+to a Groebner basis and allow one to extract an important information 
+on the equation system without its explicit integration. This
+information includes, in particular, compatibility analysis, finding
+dimension of the solution space, formulation of the initial conditions
+providing uniqueness and holomorphy of solution. Recently a number of 
+different algorithmic techniques were designed and some of them have 
+been implemented in computer algebra systems Axiom, Maple and Reduce. 
+Over the session one expects presentation of some algorithmic approaches
+and their discussion in view of differential algebra, interconnection of 
+the above special forms of PDEs with differential Groebner bases and 
+characteristic sets, application to real problems of theoretical and
+mathematical physics, applied mathematics. One of the most important 
+applications is Lie symmetry analysis of nonlinear differential equations 
+which is the most universal tool of their integration.
+
+
+
+<p>
+
+<h3>Talks</h3>
+
+<ul>
+  <li>  <A NAME="first">The Application of a System REDUCE for the
+      Construction of the
+      Solutions of Gas Dynamics Equations by the Method of differential
+      Constraints.</A><br>
+      <A HREF="http:../participants.html#Meleshko">S.V. Meleshko</A>,
+      <A HREF="http:../participants.html#Shapeev">V.P. Shapeev.</A><br>
+      <em>Abstract:</em>
+      The REDUCE was used for finding the compatibility conditions of
+overdetermined system of differential equations. Such systems
+are obtained in the applications of the method of differential
+constraints to the two-dimensional gas dynamics equations.
+In the given case, the REDUCE system was used for symbolic
+manipulations according to the algorithm of compatibility analysis:
+various substitutions, solving the systems of linear algebraic 
+equations, various transformations of equations.
+Finally, a classification of the solutions satisfying
+additionally to one, two or three differential constraints of the
+first order was performed for two-dimensional stationary equations
+of gas dynamics. The solutions of gas dynamics equations are 
+constructed by an integration of obtained overdetermined equations. 
+Such solutions are interesting for the applications.
+      <p>
+
+  <li> <A NAME="second">Some improvements of a lemma of Rosenfeld.</A><br>
+      <A HREF="http:../participants.html#Boulier">Fran&#231;ois Boulier</A><br>
+      <em>Abstract:</em>
+    We give some improvements of a lemma of Rosenfeld which permit us to
+optimize some algorithms in differential algebra: we prove the
+lemma with weaker hypotheses and we demonstrate an analogue
+of Buchberger's second criterion, which avoids non necessary
+reductions for detecting coherent sets of differential polynomials.
+We try also to clarify the relations between the theorems in
+differential algebra and some more widely known results in the
+Gr&ouml;bner bases theory.
+      <p>
+
+  <li> Minimal Involutive Bases<br>
+      <A HREF="http:../participants.html#Gerdt">Vladimir P. Gerdt</A>,
+      <A HREF="http:../participants.html#Blinkov">Yuri A. Blinkov</A><br>
+      <em>Abstract:</em>
+ In this paper we study of the uniqueness properties of involutive
+polynomial bases which are redundant Gr&ouml;obner bases of the special form.
+The most general involutive algorithmic techniques is based on the
+concept of involutive monomial division which allows one to separate
+all the variables into multiplicative and non-multiplicative subsets.
+The separation gives thereby the self-consistent computational procedure
+for constructing an involutive basis by performing non-multiplicative
+prolongations and multiplicative reductions. Every specific involutive
+division generates a particular form of involutive computational procedure.
+In addition to three involutive divisions used by Thomas, Janet and
+Pommaret for analysis of partial differential equations we introduce two
+new ones. These two divisions much as Thomas division do not depend on
+the order of variables. We prove noetherity and continuity of the new
+divisions. Given noetherian and continuous division, we present an algorithm
+for constructing of the minimal involutive basis for a polynomial ideal.
+This minimal basis is uniquely defined for any admissible monomial
+ordering.
+      <p>
+  <li> Involutive systems and the numerical analysis of constrained
+	Hamiltonian Systems<br>
+      <A HREF="http:../participants.html#Seiler">Werner M. Seiler</A><br>
+       <em>Abstract:</em>
+      We will give a brief introduction into the theory of involutive
+	systems concentrating on the completion of a given system of PDEs
+	to an involutive one. Then we will show how such problems
+	naturally occur in the numerical analysis of differential algebraic
+	equations and in the the theory of constrained Hamiltonian
+      systems.
+
+      <p>
+  <li> Triangular Matrices, Differential Resultants and Systems of Linear 
+      Homogeneous PDE's
+      <A HREF="http:../participants.html#Carra">
+      Giuseppa Carr&agrave; Ferro</A><br>
+      <em><a href="Carra/Carra.html">Abstract</a></em>
+
+      <p>
+  <li> A Generalization of Rosenfeld's Lemma.<br>
+      <A HREF="http:../participants.html#Morrison">
+      Sally D. Morrison</A><br>
+      <em>Abstract:</em>
+In this paper we explore connections between Mansfield's work on
+differential Gr&ouml;bner bases and Boulier's work on differential radical
+ideals.  In particular, we obtain a generalization of the result in
+differential algebra known as Rosenfeld's Lemma.  This generalization
+replaces Rosenfeld's `auto-reduced' hypothesis (very effectively used by
+Boulier in his computation of radical differential ideals) with Mansfield's
+weaker `almost complete' hypothesis, and thus permits some of Boulier's
+techniques to be adapted to the more general case.
+
+      <p>
+  <li> The rif and radical rif algorithms.<br>
+      <A HREF="http:../participants.html#Reid">
+      Gregory J. Reid</A><br>
+      <em>Abstract:</em>
+The rif algorithm uses a finite number of
+differentiations and algebraic operations to simplify analytic
+nonlinear systems of partial differential equations to what we
+call reduced involutive form.  This form includes the integrability
+conditions of the system and satisfies a constant rank condition. 
+
+      <p>
+The rif algorithm is effective provided it can effectively perform
+elimination on the algebraic systems it generates and transform such
+systems to constant rank form.  The radical rif algorithm is a
+realization of the rif algorithm for polynomially
+nonlinear pde systems which uses Buchberger's algorithm for elimination
+and algorithms for constructing the radical of a polynomial ideal to
+realize the constant rank condition.
+Various applications including the symmetry analysis of differential
+equations are discussed.
+      <p>
+      Reference:<br>
+G. J. Reid, A. D. Wittkopf and A. Boulton (1994).<br>
+Reduction of systems of nonlinear partial differential equations to
+simplified involutive forms. <br>
+Available at <A HREF="http://www.iam.ubc.ca/tr/1994/iam94-14">
+      http://www.iam.ubc.ca/tr/1994/iam94-14</a>.
+
+</ul>
+
+<h3>Potential Speakers</h3>
+
+<ul>
+  <li>   Francois Boullier, University of Waterloo, Canada
+  <li>   David Hartley, GMD, St-Augustin, Germany
+  <li>   Elizabeth Mansfeld, University of Kent at Canterbury, U.K.
+  <li>   Gregary Reid, University of British Columbia, Vancouver, Canada
+  <li>   Fritz Schwarz, GMD, St-Augustin, Germany
+  <li>   Werner Seiler, Universit&auml;t Karlsruhe, Germany
+
+  
+<p>
+
+</ul>
+
+<P><img src="../line-risc.gif" align=middle alt="________________________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/program-plan.html"><img src="../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

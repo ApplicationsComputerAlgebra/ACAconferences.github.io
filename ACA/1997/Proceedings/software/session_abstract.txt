@@ -1,0 +1,24 @@
+  	     Computer Algebra and Software Integration
+
+Olaf Bachmann   (obachman@mathematik.uni-kl.de)
+Andreas Sorgatz (andi@uni-paderborn.de)
+
+There are several different approaches and proposals to accomplish
+software integration in the field of CA. They range from statically
+and dynamically linked libraries to various different mathematics
+communication protocols. The session's goal is to bring the designers
+of several of these approaches together to:
+1) analyze what the important issues are 
+2) how the different approaches address these issues 
+3) compare the advantages and disadvantage of these approaches, 
+4) report on experiences made in applications of theses approaches
+5) discuss future challenges and tasks
+
+Talks:
+
+Simon Gray: The MP protocol: Past, Present, Future
+Olaf Bachmann: Experiences on software integration based on MP
+Andreas Sorgatz: Dynamically Linked Modules of MuPAD 
+and, collectively, about:
+Accomplishing Software Integration: Dynamic Linking vs Interprocess
+Communications 

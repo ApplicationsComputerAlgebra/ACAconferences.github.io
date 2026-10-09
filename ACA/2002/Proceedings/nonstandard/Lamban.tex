@@ -1,0 +1,104 @@
+\documentclass[11pt]{article}   % For Latex2e
+\usepackage{amsfonts, amsthm, amsmath}   % For Latex2e\documentclass{llncs}
+\begin{document}
+
+\sloppy
+
+\title{Algebraic Specification and Symbolic Computation\thanks{Partially
+supported by DGES, project PB98-1621-C02-01.}}
+
+
+
+
+
+\author{Laureano Lamb\'an, Vico Pascual and Julio Rubio}
+
+
+\date{Universidad de La Rioja, Luis de Ulloa s/n\\ Edificio Vives,
+26004 Logro\~no (La Rioja), Espa\~na\\
+ \tt \{lalamban,mvico,jurubio\}@dmc.unirioja.es}
+
+\maketitle
+
+This work deals with a rather unusual application of a Computer
+Algebra system. Looking for an algebraic specification of the
+symbolic computation system called EAT (for {\it Effective
+Algebraic Topology}), we have found several interesting relations
+in the algebraic specification field. In this way, the
+``application arrow'' has been, in a sense, reversed, and an
+application of Computer Algebra to Algebraic Specification has
+been obtained.
+
+The system under observation is a Common Lisp program, designed by
+Sergeraert and called EAT \cite{EAT}. The aim of EAT is to provide
+a tool for the mechanized computation of homology groups of
+infinite topological spaces (namely, iterated loop spaces). In
+order to undertake a formal analysis of the system, an operation
+on Abstract Data Types was introduced in \cite{ISSAC99}. The main
+tool for this construction is a syntactic operation between
+signatures, which was denoted by $()_{imp}$. The operation
+$()_{imp}$ intends to capture the way of working in EAT, and, in
+particular, to model the handling of infinite data structures
+(which is essential to implement algorithms in Algebraic
+Topology).
+
+In this work, interpretations of the $()_{imp}$ operation are
+presented from four points of view:
+
+\begin{itemize}
+
+\item The original one, the programming perspective.
+
+\item As a particular case of certain Category Theory constructions.
+
+\item In the hidden algebraic specification setting \cite{Hidden}.
+
+\item From a coalgebraic point of view \cite{Coalg}.
+
+\end{itemize}
+
+Then these four perspectives are suitably related. As a
+consequence of it, a generalization of the results presented in
+\cite{ISSAC99} is obtained. Namely, the final object of
+\cite{ISSAC99} is now expressed as a coproduct. This result gives
+a more accurate model of the EAT way of programming.
+
+As a by-product, some previously known results in the algebraic
+specification field are re-found, enlightening the relationship
+between the hidden and the coalgebraic methodologies. In
+particular, the final objects described, for instance, in
+\cite{Hidden} and \cite{Coalg} are easily expressed in our case,
+illustrating the very nature of these algebraic specification
+constructs.
+
+\begin{thebibliography}{99}
+
+\bibitem{Hidden}
+   J. Goguen, G. Malcolm.
+   A hidden agenda.
+   {\it Theoretical Computer Science,}
+   {\bf 245} (2000) 55--101.
+
+\bibitem{ISSAC99}
+   L. Lamb\'an, V. Pascual, J. Rubio.
+   Specifying implementations.
+   In {\it Proceedings ISSAC'99,}
+   ACM Press (1999) 245--251.
+
+\bibitem{EAT}
+   J. Rubio, F. Sergeraert, Y. Siret.
+   {\it EAT: Symbolic software for effective homology
+   computation.}
+   {\tt ftp://fourier.ujf-grenoble.fr/pub/EAT},
+   Institut Fourier, Grenoble, 1997.
+
+\bibitem{Coalg}
+   J. J. M. M. Rutten.
+   Universal coalgebra: a theory of systems.
+   {\it Theoretical Computer Science,}
+   {\bf 249} (2000) 3--80.
+
+\end{thebibliography}
+
+
+\end{document}

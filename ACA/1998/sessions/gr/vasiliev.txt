@@ -1,0 +1,14 @@
+       "Symplifications of tensor expressions  and computations
+        with Kerr-Schild metrics"
+
+        Nikolai Vasiliev, 
+        St.Petersburg Department of Mathematical Institute,
+        St.Petersburg, Russia
+
+
+Abstract:
+
+A comparison of different algorithms for tensor simplification is
+presented from both theoretical and practical point of view. As an
+application some computations with Kerr-Shild metrics and Kerr-Shild
+transformations will be presented. 

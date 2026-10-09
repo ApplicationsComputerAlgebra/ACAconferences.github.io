@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Existing methods for LMI &amp; BMI problems</TITLE>
+<META NAME="description" CONTENT="Existing methods for LMI &amp; BMI problems">
+<META NAME="keywords" CONTENT="anai">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="anai.css">
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="anai.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html42"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html40"
+ HREF="anai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html34"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html43"
+ HREF="node4.html">Reducing SDP to QE</A>
+<B> Up:</B> <A NAME="tex2html41"
+ HREF="anai.html">Solving LMI and BMI</A>
+<B> Previous:</B> <A NAME="tex2html35"
+ HREF="node2.html">Quantifier Elimination</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00030000000000000000">
+Existing methods for LMI &amp; BMI problems</A>
+</H1>
+
+<P>
+As for LMI problems, 
+we can obtain the numerical solution 
+by applying the efficient algorithm of convex optimization which based on the 
+interior point method to SDP problems,
+if we can not obtain the analytic solution.
+As Software tools [<A
+ HREF="node8.html#LMItoolbox">8</A>]
+for solving LMI based on the convex optimization methods
+are widely spread, 
+LMI approach becomes one of the powerful design methods [<A
+ HREF="node8.html#Boyd">4</A>].
+
+<P>
+In the case of BMI problems,
+since BMI is a non-convex constraint,
+we can not utilize the convex optimization methods.
+This fact  makes it difficult to solve BMI problems.
+For a given BMI,  if we can  derive a LMI which is equivalent to the BMI,
+the BMI problem is solved as the LMI problem by convex optimization method.
+There are many successful results in this direction.
+But there exists many important control and design problems described by BMI
+which can not be reduced to LMI problems.
+The method using branch &amp; bound  is proposed [<A
+ HREF="node8.html#Goh_etal">9</A>]
+for such problems.
+However,
+there remains some issues in the branch &amp; bound  approach.
+
+<P>
+Due to the non-convexity of BMI, it is difficult 
+to obtain the answer in the whole space.
+So we compute the answer in a bounded subspace.
+It is not easy to find the ``meaningful''  bounded subspace.
+Moreover, it is difficult to determine exactly infeasibility
+by branch &amp; bound  approach 
+
+<P>
+Therefore, it is desirable to develop the methods which also
+work for non-convex case and parametric case.
+The QE method does not utilize any information about possible convexity 
+of the problem and hence does not suffer from this drawback.
+So here we present a new symbolic method based on QE for the SDP and 
+ESDP problems and show some experiment by using existing QE package 
+to demonstrate the capability of the method.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html42"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html40"
+ HREF="anai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html34"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html43"
+ HREF="node4.html">Reducing SDP to QE</A>
+<B> Up:</B> <A NAME="tex2html41"
+ HREF="anai.html">Solving LMI and BMI</A>
+<B> Previous:</B> <A NAME="tex2html35"
+ HREF="node2.html">Quantifier Elimination</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

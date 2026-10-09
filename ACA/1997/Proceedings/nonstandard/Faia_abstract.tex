@@ -1,0 +1,558 @@
+%% Created by Maple V Release 4 (IBM INTEL NT)
+%% Source Worksheet: trucks-6.txt
+%% Generated: Fri Jul 04 13:11:54 1997
+\documentclass{article}
+\usepackage{maple2e}
+\DefineParaStyle{Heading 1}
+\DefineParaStyle{Heading 2}
+\DefineParaStyle{Heading 3}
+\DefineParaStyle{Maple Output}
+\DefineParaStyle{Title}
+\DefineCharStyle{2D Math}
+\DefineCharStyle{2D Output}
+\begin{document}
+\begin{maplegroup}
+\begin{Title}
+Social Structures and Speeding Trucks: A Simulation with Experimentation
+\vskip .25in
+Michael~A. Faia
+\vskip .25in
+\end{Title}
+
+This study develops a Maple simulation and exploits opportunities for
+experimenting with it; additional examples are available at
+
+http://morton.wm.edu/public\_html/index.html.
+
+The simulation involves truck transportation, incentives for speeding,
+and the efficacy of various ways of controlling speeding. After
+setting several initial structural conditions, we show how these
+conditions make possible an estimate of operating costs per trip as a
+function of speed. Next, we suggest ways in which the total cost
+function, operating as a feedback mechanism, might influence a
+driver's incentives for speeding or slowing down, or a firm's
+incentives for encouraging or discouraging speeding. Finally, a series
+of experiments, only partially shown herein and involving the
+probability and severity of traffic citations, suggests why maximum
+deterrence of speeding requires a judicious combination of sanction
+severity and sanction probability.
+
+Reading Ouellet (1994), we learn that the typical trucker logs 60 to
+70 hours per week; that he works ``at a steady clip" whether paid by
+the hour or by the load; that there are subtle pressures that lead to
+excessive speed, e.g., ``drivers often jockey one another for position
+on the road and by the loading dock, as a minute or two lead to the
+next job ... can save an hour or two of waiting time." We therefore
+seek conditions under which a speed in excess of 65 to 70 miles per
+hour would appear to be ``rational." Are there circumstances under
+which, say, 80 m.p.h. would seem rational? How would law enforcement
+attempt to manipulate these circumstances? Here, of course, the word
+rational means cost-minimizing, or profit-maximizing.
+
+The user, early in this simulation, may experiment with the first four
+input values, k1, x[1], k3, and k4. Later on, we encounter additional
+opportunities for experimentation based on further theoretical
+considerations.
+
+\begin{Heading 3}
+Structure
+\end{Heading 3}
+
+First, we insert a baseline operating cost, in dollars per mile, for a
+given type of truck. By baseline, we mean all costs involved in paying
+for and maintaining a truck, worked out on a per-mile basis, but
+without considering ways in which costs are raised by driver behavior,
+e.g., high operating speeds, mechanical abuse, etc., or by traffic
+citations.
+
+Standard cost per mile, in dollars:
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{k1 := 1/3;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{\it k1} := {\displaystyle \frac {1}{3}}
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+Truck operating costs increase exponentially with average speed, due
+to increased fuel consumption and increased depreciation. We estimate
+this additional per/mile cost to be a certain multiplier of a dollar:
+the speed in m.p.h., called v, which we will first adjust with an
+exponent and then divide by, say, 1000 or some other large
+``standard." This latter value itself may need to be adjusted from
+time to time to reflect changing costs of fuel, depreciation, etc. We
+begin with an equation such as that given immediately below as a
+plausible way of capturing this variable.
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{x[1] := (v^(8/5))/(4 * (10^3)); # additional
+velocity factor}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{x_{1}} := {\displaystyle \frac {1}{4000}} \,v^{8/5}
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+The next several expressions should be fairly clear. They, too, are
+subject to change. We begin by considering the situation of drivers
+who have an hourly pay rate; such drivers, according to Ouellet, are
+in a very different situation from those who receive piece-work
+payment. The hourly wage, initialized below, assumes that for at least
+part of a lengthy trip, two drivers must be paid, so that the value
+assigned to k3 is a weighted average.
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{k3 := 3715/100; # drivers' hourly wage}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{\it k3} := {\displaystyle \frac {743}{20}}
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{k4 := 600; # trip length, miles}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{\it k4} := 600
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+Now we obtain a provisional total cost, for trips of this type. The
+total cost has two components, as in a Cobb-Douglas function (Dowling
+1990:213-14): non-labor cost and labor cost. The first component
+equals the length of the trip multiplied by the sum of k1 and x[1]:
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{cn := k4*(k1 + x[1]); # non-labor cost,
+entire trip}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{\it cn} := 200 + {\displaystyle \frac {3}{20}} \,v^{8/5}
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{plot(cn, v=50..90, thickness = 3, labels =
+[speed, cost], title = `Fig. 1: Non-labor cost as function of
+speed`);}{%
+}
+\end{mapleinput}
+
+\end{maplegroup}
+\begin{maplegroup}
+The second cost component equals the driver's hourly wage multiplied
+by the amount of time required for the trip, which is the trip length
+divided by the speed:
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{cl := k3*(k4/v); # labor cost, entire trip}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{\it cl} := {\displaystyle \frac {22290}{v}}
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{plot(cl, v=50..90, thickness = 3, labels =
+[speed, cost], title = `Fig. 2: Labor cost as function of speed`);}{%
+}
+\end{mapleinput}
+
+\end{maplegroup}
+\begin{maplegroup}
+Examine non-labor costs and labor costs together, as functions of
+speed, on a single plot. When we set out to find the speed that
+minimizes costs, we shall realize that this is a speed for which
+non-labor costs are increasing at the same rate as labor costs are
+decreasing.
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{plot(\{cn, cl\}, v=50..90, thickness = 3,
+labels = [speed, cost], title = `Fig. 3: cn and cl as function of
+speed`);}{%
+}
+\end{mapleinput}
+
+\end{maplegroup}
+\begin{maplegroup}
+Finally, we obtain the sum of cn and cl, which gives us the total
+cost:
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{ct := cn + cl; #total cost, entire trip}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{\it ct} := 200 + {\displaystyle \frac {3}{20}} \,v^{8/5} +
+{\displaystyle \frac {22290}{v}}
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{plot(ct, v=50..90, thickness = 3, labels =
+[speed, cost], title = `Fig. 4: Total cost as function of speed`);}{%
+}
+\end{mapleinput}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Heading 3}
+Dynamics
+\end{Heading 3}
+
+In order to analyze the socio-ecological dynamics of the
+truck-transportation situation as defined thus far, we begin by
+obtaining a derivative as follows:
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{Diff(ct, v) = diff(ct, v);}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{\frac {\partial }{\partial v}}\,(200 + {\displaystyle \frac {3}{
+20}} \,v^{8/5} + {\displaystyle \frac {22290}{v}} )=
+{\displaystyle \frac {6}{25}} \,v^{3/5} - {\displaystyle \frac {
+22290}{v^{2}}}
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+This expression gives the rate of change of cost, relative to speed.
+We can use it to find the speed that minimizes total costs; this speed
+is often very high---over 80 m.p.h. in this initial simulation---and
+it is sometimes considerably higher.
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{sols := solve(diff(ct, v) = 0, v): sols[1];
+evalf(", 4);}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+92875^{5/13}
+\]
+\end{maplelatex}
+
+\begin{maplelatex}
+\[
+81.42
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+Perhaps more realistically, one could ask how much incentive there
+would be to increase one's speed from, say, 60 or 70 m.p.h. to any
+given higher level. That is, how much would costs for each trip drop
+for each mile-per-hour added to one's speed, starting at a relatively
+safe speed? Here, we need to solve the derivative for v = 60 and v =
+70. Adjacent values may be substituted, for experimental purposes.
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{k5 := 60: k6 := 70:}{%
+}
+\end{mapleinput}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{subs(v = k5, diff(ct, v)): evalf(", 3);
+subs(v = k6, diff(ct, v)): evalf(", 3);}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+-3.38
+\]
+\end{maplelatex}
+
+\begin{maplelatex}
+\[
+-1.48
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+These solutions imply that there is a strong incentive for going
+faster than 60 m.p.h.---\$3.38 can be shaved from total-trip cost for
+each additional mile per hour. At higher speeds, incentives are
+weaker.
+
+\begin{Heading 3}
+Adaptation and Social Control
+\end{Heading 3}
+
+In this example, it appears that the tendency to race for loading
+docks, as described by Ouellet, could be exploited by unscrupulous
+firms as a way of reducing costs: Any factor that causes drivers to
+increase speed toward the minimal-cost operating speed, which may be
+very high, will reduce costs for the trucking firm. Suppose, however,
+that these cost-reduction strategies tend to get drivers and firms
+into trouble with the police and highway patrol. This contingency adds
+to costs. Estimate these costs on a miles-per-hour basis for all
+speeds in excess of what we might call the de facto speed limit---the
+speed where the police start writing tickets.
+
+For now, there are two decisions about the sanction system: First,
+what is the probability of a speeding ticket on a given trip, when one
+exceeds the de facto speed limit? Second, what is the severity of the
+sanction, that is, the cost of speeding tickets, for each m.p.h. in
+excess of the de facto limit?
+
+Social scientists who write about deterrence usually distinguish among
+four aspects of punishment: probability, severity, celerity (speed),
+and saliency (awareness of prior warnings or prior instances of
+punishment). How could all four of these factors be written into a
+simulation? What is the relative impact of, say, a 10 per cent
+increase in the probability of punishment versus a plausible increase
+in the severity of it? We address these questions in an extended
+version of this paper.
+
+\begin{Heading 3}
+Sanctions: I
+\end{Heading 3}
+
+We begin working toward a resolution of these problems by writing a
+new cost function, one that will take into account our costs as
+already established but will also allow for increased costs due to
+traffic citations. Initially, we assume a fixed probability for
+traffic citations, regardless of the degree to which speed exceeds the
+de facto speed limit. The assumption is based on the idea that
+excessive speeders make special efforts to avoid detection.
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{k7 := 1/10: # probability of receiving a
+speeding ticket}{%
+}
+\end{mapleinput}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{k8 := 9: # sanction severity: cost of
+speeding ticket, for each m.p.h. excess}{%
+}
+\end{mapleinput}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{k9 := 75: # the de facto speed limit}{%
+}
+\end{mapleinput}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{cc := k7*k8*(v - k9); cn; cl;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{\it cc} := {\displaystyle \frac {9}{10}} \,v - {\displaystyle
+\frac {135}{2}}
+\]
+\end{maplelatex}
+
+\begin{maplelatex}
+\[
+200 + {\displaystyle \frac {3}{20}} \,v^{8/5}
+\]
+\end{maplelatex}
+
+\begin{maplelatex}
+\[
+{\displaystyle \frac {22290}{v}}
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ctt := cn + cl + cc; # total cost, including
+impact of sanction system}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{\it ctt} := {\displaystyle \frac {265}{2}}  + {\displaystyle
+\frac {3}{20}} \,v^{8/5} + {\displaystyle \frac {22290}{v}}  +
+{\displaystyle \frac {9}{10}} \,v
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{plot(\{ct, ctt\}, v=k9..90, thickness = 3,
+labels = [speed, cost], title = `Fig. 5: Excess operating costs due to
+sanction system, I`, titlefont=[TIMES, ROMAN, 9]);}{%
+}
+\end{mapleinput}
+
+\end{maplegroup}
+\begin{maplegroup}
+How effective is our sanction system? If the region located between
+these two curves, and ranging from the de facto speed limit to, say,
+90 m.p.h., were considered a ``braking factor," then we could
+integrate through the region as a way of assessing the weight of this
+factor.
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{Digits := 7: Int(ctt, v = k9..90) = int(ctt,
+v); i := int(ctt, v=k9..90):}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{\displaystyle \int _{75}^{90}} {\displaystyle \frac {265}{2}}
+ + {\displaystyle \frac {3}{20}} \,v^{8/5} + {\displaystyle
+\frac {22290}{v}}  + {\displaystyle \frac {9}{10}} \,v\,dv=
+{\displaystyle \frac {265}{2}} \,v + {\displaystyle \frac {3}{52}
+} \,v^{13/5} + 22290\,{\rm ln}(v) + {\displaystyle \frac {9}{20}
+} \,v^{2}
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{evalf(", 6);}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+9789.82
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{Int(ct, v = k9..90) = int(ct, v); j :=
+int(ct, v=k9..90): evalf(", 6);}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{\displaystyle \int _{75}^{90}} 200 + {\displaystyle \frac {3}{20
+}} \,v^{8/5} + {\displaystyle \frac {22290}{v}} \,dv=200\,v +
+{\displaystyle \frac {3}{52}} \,v^{13/5} + 22290\,{\rm ln}(v)
+\]
+\end{maplelatex}
+
+\begin{maplelatex}
+\[
+9688.52
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{weight := i - j; evalf(", 5);}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+{\it weight} := {\displaystyle \frac {405}{4}}
+\]
+\end{maplelatex}
+
+\begin{maplelatex}
+\[
+101.25
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\end{mapleinput}
+
+\end{maplegroup}
+\begin{maplegroup}
+This does not seem to be a very heavy weight, but all is relative. How
+could we make it heavier? What is the relative impact of sanction
+probability and sanction severity on the braking factor? In a later
+installment, we shall address this question.
+
+\vskip .15 in
+Reference:
+
+\indent\indent Dowling, Edward T. 1990. Calculus for business, economics, and
+
+the social sciences. New York: McGraw-Hill.
+
+\indent\indent Ouellet, Lawrence J. 1994. Pedal to the metal. Philadelphia: Temple
+
+University Press.
+
+\end{maplegroup}
+\end{document}
+%% End of Maple V Output

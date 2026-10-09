@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Towards modelling the topology of homogeneous manifolds by means of symbolic
+    computation </H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Joswig">Michael Joswig</A><br>
+</h3>
+
+Date: July 17th (Wednesday)<br>
+Time: ??.??<br>
+
+<center>
+Abstract
+</center>
+
+The theory of Lie groups is among the central topics in modern
+mathematics. It represents a natural link between geometry, group
+theory and mathematical physics. Problems arising from physics,
+e.g.~from the theory of special relativity, are transferable to the
+language of geometry.  Often the geometrical questions can be answered
+by group-theoretical means in case the geometrical structure has
+enough symmetry, i.e.  it admits sufficiently many automorphisms.  In
+this respect, transitive actions are most important. Manifolds which
+admit a transitive action of some Lie group are called <I>homogeneous</I>.
+
+<p>
+In recent years quite a few attempts have been made to bring Lie
+theory to the computer, e.g. see van Leeuwen, Cohen and
+Lisser [.Cohen LiE.], Moody, Patera and Rand [.simpLie.], B&ouml;di and
+Joswig [.boedi Joswig.], not to mention the various packages devoted
+to the study of finite groups of Lie type.  When it comes to solving
+problems arising from real Lie groups by means of a computer
+frequently the derived linearized problems are studied instead. This
+means one tries to translate the initial problem about Lie groups into
+a (usually simpler one) about Lie algebras.  However, the
+correspondence between Lie groups and Lie algebras is <I>not</I>
+1--1. In fact, for a given Lie algebra <I>g</I> there are usually
+several (not isomorphic) groups having <I>g</I> as their associated Lie
+algebra. They are only <I>locally</I> isomorphic, which means that
+they are algebraically somehow similar but differ with respect to
+their global topological properties. Roughly speaking, during the
+linearization process the global topological information is lost.
+
+<p>
+Here we want to suggest an approach with is in some sense
+complementary. Instead of skipping the topological information we
+intend to focus on it.
+
+<p>
+We want to look for a computational method to solve problems of the
+following kind and related ones: Given a Lie group <I>Gamma</I> and a
+homogeneous manifold <I>M</I>.  Does there exist a (continuous) transitive
+action of <I>Gamma</I> on <I>M</I>?
+
+<p>
+Without any doubt this immediately raises at least two questions.  How
+should a non-discrete Lie group (being of uncountable cardinality as a
+set) be represented in the computer? How can one even expect that a
+question like this is decidable at all?  Instead of trying to solve
+the problem in this generality we want to discuss a certain
+approximation of the problem which can be outlined as follows.  A
+transitive action of <I>Gamma</I> on <I>M</I> gives rise to an 
+infinitely long
+exact sequence of their respective homotopy groups (see below).  The
+group <I>Gamma</I> and the manifold <I>M</I> are described by some of
+their
+algebraic and topological properties such as the dimension,
+information about compactness, maybe some homotopy groups which are
+known etc. It is explicitly admitted that only partial information
+will be given.  Assume that a transitive action exists. Select
+finitely many among the infinitely many pieces of information obtained
+from the long exact homotopy sequence. Translate this into an
+arithmetical problem.  Check for a contradiction. In case we actually
+arrive at a contradiction then this falsifies the assumption
+concerning the existence of a transitive action. However, if we do not
+obtain a contradiction, we might not gain any information.
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Buchberger.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

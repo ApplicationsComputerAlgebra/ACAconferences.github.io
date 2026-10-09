@@ -1,0 +1,12 @@
+Improving Math Teaching with DERIVE and the TI-92: The Scaffolding Method
+B Kutzler (Lecture, 45 minutes)
+
+The technology behind DERIVE and the TI-92, computer algebra, creates one of
+the biggest challenges to math education. On the one hand these systems make
+wonderful tools in traditional teaching. On the other hand they will help to
+change the contents of what we teach. With regard to the first issue, we will
+present a concept that explains how to incorporate these tools in a traditional
+math class. The approach, called the "Scaffolding Method" (based on
+Buchberger's "White-Box/Black-Box Principle"), is demonstrated with examples
+from elementary algebra and calculus. Several variants of the method are
+described and their impact for teaching and learning is discussed.

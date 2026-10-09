@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE>Hamiltonian Systems</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Hamiltonian Systems</H1>
+
+<h3>Organizer</h3>
+<p>
+<ADDRESS>
+Alexander Bruno
+(<a href="mailto:bruno@applmat.msk.su">bruno@applmat.msk.su</a>)
+Wolfram Research, Inc.<br>
+100 Trade Center Dr.,Suite 600<br>
+Champaign, IL 61820, USA<br>
+</ADDRESS>
+<p>
+
+<h3>Description</h3>
+
+   Hamiltonian Systems of differential equations describe problems
+   from Celestial Mechanics, Mathematical Physics, Hydrodynamics etc.
+   Special methods of Computer Algebra were developed for these fields,
+   especially for Celestial Mechanics. New achievement in applications
+   of CA for studying the Hamiltonian Systems are the longtime theories
+   of perturbation, the analysis of different kinds of stability,
+   study of bifurcations, existence and finding new integrals etc.
+   They will be interesting to a broad auditorium. On the other side,
+   new achievement in other applications of Computer Algebra may
+   be interesting for the specialists in Hamiltonian Systems.
+
+
+<h3>Talks</h3>
+
+<ul>
+  <li> Title of the talk<br>
+       Speaker(s)<br>
+       Abstract of the talk
+<p>
+
+</ul>
+
+<P><img src="../line-risc.gif" align=middle alt="________________________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/program-plan.html"><img src="../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

@@ -1,0 +1,17 @@
+----------------------------------------------------------------------------
+                    Grand Challenges in Computer Algebra
+----------------------------------------------------------------------------
+
+             Computing on the Net or: Computer Algebra goes Java
+
+     The internet is a huge potential resource of computing power. In this
+     talk we will discuss ways to open up this resource to computer algebra
+     applications. In particular we will present a computer algebra system
+     whose kernel is implemented in Java. This allows it to be incorporated
+     into a web page, inviting internet users all around the world to
+     contribute CPU cycles to a massive computation.
+
+     Laurent Bernardin
+     Institut für Wissenschaftliches Rechnen
+     ETH Zürich, Switzerland
+     bernardin@inf.ethz.ch

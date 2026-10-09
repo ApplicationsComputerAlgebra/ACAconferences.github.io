@@ -1,0 +1,69 @@
+% 
+% Updated: May 27, 1997 
+% 
+% \documentclass[12pt]{amsart}
+\documentstyle[12pt]{article}
+\font\tit=cmbx12
+\font\bigbf=cmbx12 scaled \magstep1
+\parindent=0pt
+\setlength{\textwidth}{160mm}
+\setlength{\textheight}{200mm}
+\addtolength{\headheight}{1.5pt}
+\setlength{\oddsidemargin}{2mm}
+\setlength{\evensidemargin}{\oddsidemargin}
+\addtolength{\textheight}{3.2cm}
+\addtolength{\topmargin}{-0.7cm}
+\hyphenation{Sprin-ger}
+
+\def\R{{\rm I\kern-.20em R}}
+\begin{document}
+\begin{center}
+{\Large \bf Presentation in IMACS '97, Maui, Hawaii}
+\vskip 20pt
+{\Large \bf Conference on Applications of Computer Algebra}
+\vskip 20pt
+{\Large \bf Session: Algorithmic Analysis of PDEs}
+\vskip 20pt
+{\bf \"Unal G\"okta\c{s} and Willy Hereman} \\
+Department of Mathematical and Computer Sciences \\
+Colorado School of Mines \\
+Golden, CO 80401-1887, USA
+\vskip 20pt 
+{\bf Speaker:} \"Unal G\"okta\c{s}, ugoktas@lie.mines.edu
+\end{center}
+\vskip 3pt
+\begin{center}
+{\large \bf
+Symbolic Computation of Conserved Densities for Nonlinear
+Evolution and Differential-Difference Equations 
+} 
+\end{center}
+A straightforward method for the computation of polynomial-type conserved
+densities for systems of nonlinear evolution equations and its extension
+towards differential-difference equations will be presented.
+The technique is based on the scaling symmetries of the equations,
+and is completely algorithmic.
+The method can be implemented in any computer algebra system.
+
+Our programs in {\it Mathematica\/} allow one to automatically
+compute conserved densities.
+Applied to systems with parameters, they can be used to determine
+the conditions on these parameters so that a sequence of conservation
+laws will exist, hence predicting integrability. 
+\vskip 5pt
+{\bf Software Demonstration:}
+\vskip 5pt
+CONDENS.M: Symbolic Computation of Conservation Laws for Systems
+of Nonlinear Evolution Equations with {\it Mathematica}
+\vskip 5pt
+DIFFDENS.M: Symbolic Computation of Conservation Laws for Systems
+of Nonlinear Differential-Difference Equations with {\it Mathematica}
+\vskip 5pt
+The programs {\it condens.m} and {\it diffdens.m} will be demonstrated with
+several examples, including equations with parameters, for which
+the compatibility conditions for the existence of conserved densities
+will be computed.
+\vfill
+\end{document}
+\end
+\bye

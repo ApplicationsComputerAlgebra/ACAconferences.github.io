@@ -1,0 +1,8 @@
+Some Geometric and Computer Algebra Aspects on Modeling Robot Arms
+
+Jochen Pfalzgraf
+Department of Computer Science, University of Salzburg
+Jakob Haringer Str.2
+A-5020 Salzburg
+Austria
+E-mail:jpfalz@cosy.sbg.ac.at

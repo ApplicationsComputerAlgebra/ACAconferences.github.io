@@ -1,0 +1,26 @@
+"Hierarchical approach to automatic differentiation"
+
+Marco Mancini 
+Parallel Computing Laboratory 
+Department of Electronics, Computer Science and Systems
+University of Calabria
+87036 Rende (CS) - Italy
+
+Automatic differentiation (AD) techniques have been investigated since
+1980; however, AD technology is still in its infancy. Current tools use
+very simple AD algorithms, because most of the development time has been
+dedicated to building robust tools instead of implementing more
+sophisticated and efficient AD algorithms. 
+This talk describes advanced algorithms for generating first-order
+derivatives exploiting the program structure of the function to be
+differentiated and the associativity of the chain rule, in a global
+forward mode approach.
+To decrease the complexity of the derivative codes, a hierarchical 
+approach to automatic differentiation is used, by exploiting the
+interface asymmetries between the number of derivatives to be computed
+and the amount of information flowing in or out of a program segment.
+The computational results show performance gains of the proposed
+techniques compared with existing approaches. We also describe a new
+source transformation module for computing first-order derivatives 
+and the underlying infrastructure used to create a language-independent
+translation tool.

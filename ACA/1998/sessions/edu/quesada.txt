@@ -1,0 +1,23 @@
+"Should Recursion be part of the secondary student's mathematics toolbox?"
+
+Antonio Quesada
+The University of Akron
+146 Judson Rd.
+Kent, Ohio 44240
+USA
+E-mail:aquesada@uakron.edu
+
+
+The capabilities of modern graphing calculators are changing the way
+we teach as well as the content and scope of what is taught in basic
+mathematics. For instance, an increase number of recursive
+applications have begun to appear in new textbooks from pre-algebra to
+calculus, both in high school and introductory college levels. In this
+talk we will present examples that illustrate how, with the help of a
+graphing calculator, (i) recursion can be used to solve a great
+variety of problems (growth, convergence, Markov chains...); (ii) for
+students of basic mathematics, recursion makes accessible models that
+are traditionally taught in upper levels to selected groups of
+students, and finally, (iii) recursion, in some cases, provides an
+alternative problem solving approach less dependent on ready made
+formulas.

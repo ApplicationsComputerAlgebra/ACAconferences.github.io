@@ -1,0 +1,21 @@
+"Teaching basic concepts in Analysis with dynamical geometry programs"
+
+Stefan Welke*
+Beethoven-Gymnasium Bonn
+Stefan Welke, In der Wehrhecke 29, D-53125 Bonn
+D-53125 Bonn
+Germany
+E-mail:Spwelke@aol.com
+
+
+
+Modern software technology allows new paths in teaching concepts. Dynamical geometry programs like Cabri Geometre offer the
+opportunity to demonstrate the concept of Derivative by visualizing the limit
+                  delta y 
+            lim ------------- 
+                   delta x 
+      delta x -> 0
+as a dynamical change of a geometric figure. So the student can see what really happens in the limiting case: We magnify the characteristic
+triangle and we can observe that the ratio, that defines the slope of the secants, attains a definite value, the slope of the tangent. 
+Utilizing geometric ideas of I. Newton, this access to the subject is demonstrated in detail by the example of trigonometric and inverse
+trigonometric functions. 

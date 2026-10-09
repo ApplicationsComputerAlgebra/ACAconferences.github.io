@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\pagestyle{empty}
+\topmargin=0mm
+\oddsidemargin=0mm
+\textwidth170mm
+\textheight250mm
+
+\begin{document}
+
+\begin{center}
+{\bf APPLICATION OF COMPUTER ALGEBRA SYSTEMS TO CONSTRUCT FORMULAE OF THE
+COLLOCATION AND LEAST SQUARES METHOD}\\
+\vspace {4mm}
+
+L.G.~Semin, V.P.~Shapeev\\
+{\it \small ITAM SB RAS, 630090, Novosibirsk, Russia\\
+e-mail: shapeew@itam.nsc.ru}
+\end{center}
+\vspace {6mm}
+
+Huge analytical work is needed when constructing the formulae of the
+collocation and least squares (CLS) method for solving the Navier\,---\,Stokes
+equations numerically.  To great extent, such work can be carried out by
+computer algebra systems (CAS) \cite{bk:val, bk:sha}.  To construct the
+formulae one needs to perform analytically the follows: summation of huge
+expressions in functionals, their differentiation, solving a linear algebraic
+systems in order to obtain coefficients of approximate solution in polynomial
+basis.  CAS can successfully cope with this work.  Computer derivation of the
+formulae of the method also gives additional advantages.  Optimization with
+respect to rate of computation by obtained formulae, analytical and numerical
+verification of these formulae by using the same or another CAS, conversion of
+constructed formulae to arithmetic operators of FORTRAN and C programming
+languages can be made.  All this greatly facilitate the final result obtaining
+and reduce the time consumption for it.  Different modifications of the method
+are easily available using computer programs in CAS.  Modifications related to
+replacement of basis, collocation nodes, matching conditions  and so on, can
+be made just by changing functions involved in the program.  Construction of
+the formulae of CLS method for Navier\,---\,Stokes equations was first
+performed with the help of the computer program of analytic computations in
+CAS REDUCE, and then in MAPLE \cite{bk:sha, bk:semin, bk:hungary}.
+
+The CLS method created was verified by solving the different problems
+numerically.  Comparison between obtained and known results was made, good
+potentialities of the method were shown.  This work was partially supported
+by the Russian Foundation for Basic Research (grants 99--01--00515 and
+00--01--00370).
+
+\begin{thebibliography}{}
+\bibitem{bk:val}
+A.N. Valiullin, V.P. Shapeev et al. 
+Symbolic manipulations in the
+methods of mathematical physics //
+Symposium mathematics for computer science.
+Paris, March 16--18, 1982, P.~431-438.
+
+\bibitem{bk:sha}
+V.P. Shapeev.
+Application of computer algebra in numerical methods //
+Proceedings of 31-th regional youth conference "Problems of theoretical
+and applied mechanics" --- Ekaterinburg, 2000. --- Pp.~80--84
+(in Russian)
+
+\bibitem{bk:semin}
+  L.G.~Semin, V.P.~Shapeev.
+  Collocation and least squares method for Navier\,---\,Stokes equations //
+  Computational Technologies. --- 1998. --- Vol.~3, No.~3. --- Pp.~72--84.
+  (in Russian)
+
+\bibitem{bk:hungary}
+  L.G.~Semin, V.P.~Shapeev.
+  Collocation and least squares method for Navier-Stokes equations //
+  Conference on Numerical Methods and Computational Mechanics 1998,
+  August 24 -- 27, 1998, Miskolc, Hungary. --- Book of abstracts. ---
+  Pp. 94--96. 
+
+\end{thebibliography}
+
+\end{document} 

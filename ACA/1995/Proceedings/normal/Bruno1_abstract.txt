@@ -1,0 +1,12 @@
+             Methods of calculation of normal forms.
+                       Alexander D. Bruno
+
+            Keldysh Institute for Applied Mathematics
+            Miusskaja sq., 4, Moscow, 125047, Russia
+
+                 e-mail:   bruno@applmat.msk.su
+                  fax:      (+7+095) 972-07-37
+
+    I compare 5 different methods of a computation of the  normal 
+form:  direct, simple iterative, exponential iterative, quadratic 
+and exponential quadratic.

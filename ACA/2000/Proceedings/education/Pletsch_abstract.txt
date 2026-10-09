@@ -1,0 +1,22 @@
+Bill Pletsch* (USA), bpletsch@email.tvi.cc.nm.us 
+
+A Discrete Look at Elementary Functions
+
+The collection of algebraic combinations of polynomials, exponential, and
+trigonometric functions and their inverses compose the class of elementary
+functions.  The behavior of the elementary functions has been studied
+extensively for centuries.  Nonetheless, these functions as seen from the point
+of view of the discrete, reveal some surprises and some new insights.  We will
+revisit these old friends from the discrete approach of the data set.
+
+One major insight will be that data sets representing an elementary function
+often have a unique signature by which they can be classified.  For example, it
+is not well known that the negative harmonic mean of consecutive elements of
+the harmonic sequence 1, 1/2, 1/3, ... yields a constant, or that the negative
+harmonic mean can be used to generate the sequence recursively.  It is so, and
+the result can be extended to a whole class of rational functions.
+
+The possibilities for discovery by students are enormous.  A major theme of
+this workshop will be the adaptability of the material to the classroom.  The
+insights gained can aid both instructors and students alike in achieving a
+deeper understanding of these functions.

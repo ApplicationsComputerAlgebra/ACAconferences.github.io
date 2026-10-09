@@ -1,0 +1,29 @@
+A New Algebraic Model for Implementing Expert Systems Represented Under the
+Frames Paradigm
+
+Antonio Hernando
+
+This paper is concerned with expounding a new representation paradigm for
+modelling expert systems based on computing Groebner Bases. Previous research
+on Groebner Bases expert systems has so far been connected to modelling
+expert systems based on (both bi- and multi-valued) propositional logics. Our
+approach instead is based on the well-known Artificial Intelligence frames
+paradigm for representing knowledge. More precisely, our research is based
+on translating an already existent expert system described in terms of
+the frames paradigm to a new algebraic model which represents knowledge by
+means of polynomials. In this way, issues about consistence and inference
+within this expert system will be, through this new model, transformed into
+algebraic problems involving calculating Groebner Bases.
+
+By using this new model of ours, some interesting advantages ensue: on the
+one hand, knowledge representation may be performed in a more straightforward
+and intuitive way; on the other, calculating the Groebner Bases associated
+to our algebraic model is usually faster adopting this new frames-based
+paradigm than it was in previous propositional logic-based expert systems.
+
+The exposition is illustrated with some interesting examples in which the
+main advantages of our model are established by comparing its performance
+to that of the mentioned propositional logic-based expert systems.
+
+Acknowledgments This work was partially supported by the research project
+UCM2008-910563 (UCM - BSCH Gr. 58/08, research group ACEIA).

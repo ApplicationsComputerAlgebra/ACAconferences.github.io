@@ -1,0 +1,14 @@
+Joseph D. Myers*, Kelley B. Mohrmann, Terry T. Crow (USA),
+   aj5831@exmail.usma.army.mil
+Derivations and Visualizations for the Hydrogen Atom
+
+We demonstrate an Interdisciplinary Lively Applications Project (ILAP) from a
+PDE course that demonstrates the applicability of the material to Math majors
+and prepares Physics majors for the applications they will wrestle with in
+their majors courses. This project supplements student handiwork with
+Mathematica to help analyze the resulting ODE's and with Maple to let students
+visualize and experiment in order to get a better feel for how the math
+translates into physics. We find that this project helps motivate the material,
+previews a difficult subject for the physics majors, and helps translate
+between the math and physics jargon in a way that usually isn't done in either
+course alone.

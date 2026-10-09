@@ -1,0 +1,34 @@
+A Summary of the Role of Computer Algebra in an NSF Funded Project
+
+Bill Pletsch
+Albuquerque Technical Vocational Institute
+
+A summary of the NSF funded New Mexico Math Reform Project will be presented
+with a special emphasis on the role of computer algebra (CA).  In the course of
+Project's existence, January 2001-March 2004, thanks to CA, some surprising
+mathematics was unearthed.  This was especially true regarding exponential
+functions of the form Exp(P(x)), P(x) a polynomial.
+
+The use of computer algebra in the instruction of this class of exponential
+functions will be discussed.  Underlying all exponential functions is the
+concept of ratio.  Using CA, it will be shown how virtually everything that is
+taught on exponential functions can be seen as a variation on this theme.
+Among the subjects to be covered are:  successive quotients, instantaneous
+ratio, product integrals, and data sets.
+
+Several examples of this new mathematical approach of ratio will be
+demonstrated using a specific computer classroom lecture.  Simultaneously, the
+presentation will demonstrate by example, the modern method of presenting a
+mathematical concept from the numerical, graphical, and symbolic points of
+view.
+
+A graphing calculator is not enough, since, among other things, symbol
+manipulation is required to do the necessary limits or to obtain the full-blown
+generalizations.   A salient feature of the presentation will be to show the
+necessity of CA in order to drive home to the students the full instructional
+message.
+
+Overall, it will be shown how computer algebra is in a unique position to aid
+in student learning.  As prices continue to drop, it will come into its own.
+The eventual goal is, of course, to have the computer capabilities to deliver
+lessons in their full power.

@@ -1,0 +1,52 @@
+"PSE construction using software components*"
+
+Bruce Char, Jeremy Johnson, and Lakshman Y. N.
+
+Mathematics and Computer Science
+Drexel University
+Philadelphia, PA 19104 USA
+{bchar, jjohnson,lakshman}@mcs.drexel.edu
+
+A problem solving environment (PSE) is an integrated software system for 
+solving problems in a specific application domain.  A PSE should enable the 
+user to input and work on problems in a manner that is natural to the 
+problem domain without being burdened by the underlying computer software 
+used by the PSE.
+
+Many different types of computing are typically involved in a PSE for
+scientific and engineering problems: numeric and symbolic computation,
+code generation and compilation, visualization, document processing,
+knowledge representation and processing, and automated reasoning.
+The PSE must provide support communication between the different computational
+components and an effective interface for the user to interact with the PSE.  
+Since different computations may be performed on different computers
+(e.g. a supercomputer might be used for a computational intensive numeric
+simulation) and multiple users may be interacting with the PSE from different
+locations, the PSE must support distributed computation.
+
+This talk presents a framework for building PSEs.  It is proposed that 
+PSEs be built through the composition of software components.  A software
+component is a configurable piece of software with a standard interface.
+Effective construction of PSEs will depend on having a useful set of
+components.  We believe that a key component for PSE construction is a
+generic server component.  The generic server serves as an application
+wrapper with support for control and communication.
+
+We present an initial implementation of a generic server component using
+java beans.  This server component has been used to wrap computer algebra 
+systems (e.g. maple and mathematica), compilers (e.g. f77), interpreters
+(e.g. scheme), and graphing programs (e.g. gnuplot).  
+
+The use of software components in general, and the generic server component
+in particular, to build PSEs will be demonstrated.  Three PSEs will be
+presented:  Techtalk, a PSE for web-based mathematical collaboration, a 
+PSE for pollution modeling, and soliton explorer, a PSE to study soliton 
+geometry.
+
+*This work is part of the PSEware project, and was funded in part by
+the National Science Foundation, as grant number CCR-9527130.  The PSEware
+project is a collaboration between researchers at Caltech, Drexel, Indiana
+University, Los Alamos National Laboratory, and the University of California
+at Irvine.  Its goal is to facilitate construction of problem solving
+environments for science and engineering through software components.
+

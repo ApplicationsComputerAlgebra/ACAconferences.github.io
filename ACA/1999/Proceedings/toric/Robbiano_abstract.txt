@@ -1,0 +1,10 @@
+Computing Toric Ideals
+by Lorenzo Robbiano
+
+Toric ideals are binomial ideals which represent the algebraic relations of
+sets of power products.  They show up in  many fundamental questions arising
+from several fields of Mathematics, such as Integer Programming, Statistics,
+Combinatorics, and it is also the basic step of any procedure which computes
+SAGBI bases.  In this introductory exposition I explain how naive approaches to
+the problem of computing toric ideals may lead to very poor performances, so
+that the need of new algorithms will be clear.

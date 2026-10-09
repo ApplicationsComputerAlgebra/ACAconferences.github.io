@@ -1,0 +1,46 @@
+Gildas Besancon, LAG, ENSIEG, France (gildas@lag.ensieg.fr)
+
+Title: Symbolic Computation Applied to Nonlinear Control Systems
+       Analysis
+
+Abstract: 
+The control of industrial systems is based on mathematical
+models which are often given by nonlinear state-space
+representations. Many theoretical tools based on differential
+geometry or differential algebra are now available to help
+designing the controllers for such systems. But they involve
+lots of non-numeric calculations not easily done  by hand which
+make them of difficult practical use: typically matricial
+manipulations, differentiations of nonlinear functions, solution
+of algebraic or differential equations.  Nevertheless, these
+calculations are to some extent well adapted to some symbolic
+computation framework, and several results are now available in
+this field of investigation (e.g. with Macsyma, with Maple, with
+Mathematica). The main contributions are based on differential
+geometric approach and concern the analysis of some structural
+properties of the system such as {\it controllability and
+observability }, and the solution of several standard control
+problems such as {\it feedback linearization, noninteracting
+control, disturbance decoupling,} etc. However the control
+design is generally based on the assumption that all state
+variables are available, which does not happen very often. The
+estimation of the unmeasured states is the task of the observer,
+which is an auxiliary dynamical system  whose inputs are those
+of the system to be controlled together with its outputs, and
+whose outputs are the estimated states.  There is no systematic
+method to design observers for nonlinear systems. But the design
+can be made easier if the system can be brought to some well
+known one. That is why system equivalence (in the sense of
+change of coordinates) has been investigated, and more
+particularly equivalence to bilinear - or more generally state
+affine - systems up to output injection.  Once again the
+inspection of the conditions of such an equivalence is not an
+easy task without any computer assistance. Even with symbolic
+computing systems, a direct programming of the conditions would
+require high performances, such as solving sets of nonlinear
+equations. This motivated the special attention paid to this
+problem, and an algorithm avoiding any symbolic limitation and
+exactly answering the question of bilinearizability has been
+proposed (\cite{Besancon94}). It appears to be a good
+illustration of what can be done with symbolic computation in
+the field of control and observation theory.

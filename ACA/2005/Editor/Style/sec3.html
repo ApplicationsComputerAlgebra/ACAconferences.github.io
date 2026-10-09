@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+    "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+  <head>
+    <meta $Jssac: sec3.html,v 1.5 2008/12/09 03:21:22 noriko Exp $>
+    <meta http-equiv="Content-Type" CONTENT="text/html;CHARSET=euc-jp">
+    <meta http-equiv="Content-Style-Type" CONTENT="text/css">
+    <link rel="stylesheet" href="/jssac.css" type="text/css">
+    <meta name="Author" content="Tomokatsu SAITO">
+    <title>Jssac style rules 3</title>
+  </head>
+  <body class="contri">
+  <hr>
+  <h2 style="text-align:center">
+    オプションの宣言</h2>
+  <hr>
+  jssac.sty は，様々なオプション引数を用意しております． <p>
+  <ol>
+    <li><b>日本語と英語</b><br>
+      jssac.sty は日本語と英語によってタイトル等の文字を変えております．
+      原則は日本語となっておりますので，原稿が英文原稿の場合は，
+      jssac.sty のオプションで
+      <table align=center class="src">
+        <td>
+        \usepackage[English]{jssac}
+        </td>
+      </table>
+      <p>
+      としてください．日本語の原稿の場合に，Japanese オプションを付けても
+      付けなくても同様です．<p>
+
+     <li><b>定理環境</b><br>
+       原稿の中で定理環境等を利用する場合に使うオプションです．定理，命題，
+       補題，系，定義，仮定，記法，例，注意，問題，アルゴリズムをタイトル
+       とした原稿を作成する場合に利用してください．オプションの宣言は
+       <p>
+       <table align=center class="src">
+         <td>
+           \usepackage[theorem]{jssac}
+         </td>
+       </table>
+       <p>
+       です．この環境は，LaTeX2e の theorem 環境を利用して作成されています．
+       <a href="sec4.html">定理環境の利用法</a>
+     <li><b>グラフィックス</b><br>
+      『数式処理』では，グラフ等の図を原則として Encapsulated PostScript
+      に制限しております．そのために必要なオプションとして
+      <p>
+      <table align=center class="src"><td>
+        \usepackage[useeps]{jssac}
+        </td>
+      </table><p>
+      があります．この環境は，LaTeX2e のグラフィックス環境の一部を利用
+      しています． <a href="sec5.html"> グラフィックス環境の利用法</a>
+    <li><b>テキストモード</b><br>
+       『数式処理』の原稿の中にプログラム等のプレーンテキストを入れる場合
+       LaTeX2e の \verb か \verbatim を利用する事が一般的です．しかし
+       この結果を枠で囲む必要があった場合は細かい処理をする必要があります．
+       そこで jssac.sty ではフレーム付の verbatim モードを用意しました．
+       オプションの宣言は
+       <p>
+       <table align=center class="src"><td>
+         \usepackage[FVerb]{jssac}
+         </td>
+       </table>
+       です． <a href="sec6.html"> FVerb 環境の利用法</a>
+  </ol>
+  <br><p>
+  <hr width="60%">
+  <table align=center rules="none">
+    <tr><td align=center>
+      <a href="sec2.html">標準的な形式</a>&nbsp;
+    </td><td align=center>
+      <a href="sec4.html">定理環境</a>&nbsp;
+    </td><td align=center>
+      <a href="index.html">作成要項に戻る</a>&nbsp;
+    </td><td align=center>
+      <a href="/TopPage.html">JssacHomeに戻る</a>
+    </td></tr>
+  </table>
+  <hr>
+  <address><a href="mailto:webmaster@jssac.org">webmaster@jssac.org</a>
+  </address>
+  <pre>
+  Last modified: $Jssac: sec3.html,v 1.5 2008/12/09 03:21:22 noriko Exp $
+  </pre>
+  </body>
+</html>

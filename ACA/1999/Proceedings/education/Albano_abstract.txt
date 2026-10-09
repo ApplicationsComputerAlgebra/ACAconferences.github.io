@@ -1,0 +1,13 @@
+G. Albano*, A. Cavallone, C. D'Apice*, G. Gargiulo (Italy),
+   dapice@diima.unisa.it
+Mathematica and didactical innovation: a quadric use case
+
+The aim of this work is to describe a package for the education in mathematics
+focused on the study of the quadrics. It is structured in an hypertextual way,
+including a part of theory and a guided laboratory. In the tutorial the
+quadrics are introduced starting from the definition and proceeding with the
+classification and the reduction to a standard form.  The laboratory part has
+been given a structure designed in order to make the final user's interface as
+friendly as possible. Such an improvement has been obtained by the insertion of
+buttons and links that make it possible to use all implemented functions
+without prior knowledge of their syntax.

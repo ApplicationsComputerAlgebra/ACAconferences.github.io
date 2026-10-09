@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">"NORT" Package for Treating Multivariate Power Series and
+    Applications</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Edneral">Victor Edneral</A><br>
+</h3>
+
+Date: July 19th (Friday)<br>
+Time: 14:25--14:45<br>
+
+<center>
+Abstract
+</center>
+
+In the report discussed applications of the NORT package for
+problems of creation multivariate power series which approximate
+periodic solutions of nonlinear autonomous ODEs (Edneral,1993),
+trajectories of periodic orbits of such systems, Lyapunov's values
+for small limit circles of a cubic plane system of general type and 
+for solving of systems of equation over truncated formal power series (Edneral,1995), (Vasiliev,Edneral,1995).
+<P>
+   Originally the NORT package was created for building Poincare --
+Dulac normal forms (Edneral,Khrustalev,1985,1992) till fixed order.
+It is written in Standard LISP and contains procedures for treating
+truncated multivariate power series of an arbitrary dimension. Besides 
+of procedures for arithmetic operations with such series there are 
+special procedures for the creation of normal forms and procedures for substitutions, calculations of roots, for differentiating, for printing 
+and for inverting multivariate power series. The package can be used 
+as a separate unit under a Standard Lisp environment or as a REDUCE 
+package.
+<P>
+    Complex numerical coefficients of the truncated power series may 
+be evaluated in three different arithmetics: precision rational, floating 
+point and approximate rational (Rodionov A.Ya,in progress), in according 
+to the user's choice. Separately user may choose a representation of 
+numbers (in a floating point or in a rational form) for output. This 
+output has a REDUCE acceptable form, but REDUCE's internal procedures 
+are not used by the NORT.
+<P>
+   The program uses a recurrent polynomial representation separated in 
+each order of the stored series. There is a compact enough use of memory. 
+So for 8 - dimensional problem we managed to treat pieces of series with 
+150000 elements on computer with 64 Mbyte of RAM.
+<P>
+<b> References</b>
+<P>
+Edneral, V.F., Khrustalev, O.A. (1985)
+<em> The Normalizing Transformation for Nonlinear Systems of ODE.  
+The  Realization   of   the   Algorithm</em>;   Proceedings  of   the 
+International Conference on Computer Algebra and its  Application 
+in  Theoretical  Physics (USSR,  Dubna,  September 1985).  Dubna: 
+JINR publ.,  219--224. In Russian.
+<P>
+Edneral, V.F., Khrustalev, O.A. (1992)
+<em> Program   for  Recasting ODE Systems in the  Normal  Form</em>; 
+&quot;Programmirovanie&quot; (Sov.  J.  of Programming),  # 5,  73--80. In 
+Russian.
+<P>
+Edneral, V.F. (1993)
+<em> Computer  Generation  of  Normalizing  Transformation   for 
+Systems of Nonlinear ODE</em>;  Proceedings of the 1993 International 
+Symposium on Symbolic and Algebraic Computation  (Kiev,  Ukraine, 
+July 6-8, 1993). N.Y., ACM Press, edited by M.Bronstein, pp. 14--
+19.
+<P>
+Vasiliev N.N., Edneral V.F., (1995)
+<em> About Constructing Canonical Basis for the Ring of Formal 
+Power Series</em>; The Abstracts of the conference &quot;Computer Methods 
+of Celestial Mechanics (S.-Petersburg, Russia, October 17--20, 
+1995)&quot;, pp. 72--73. In Russian.
+<P>
+Edneral V.F., (1995)
+<em> To the Question of Multidimensional Power Series Solving</em>; 
+The  Abstracts  of the PoSSo-95 &quot;PoSSo Open Workshop
+on Applications of PoSSo and Real Solving, (Iraklio, Greece, 
+June 7--10, 1995)&quot;, p. 34.
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Edneral.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

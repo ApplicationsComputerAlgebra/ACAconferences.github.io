@@ -1,0 +1,226 @@
+<html><head><title>ACA 2003 Session T9: Computer Algebra and Polynomial Systems in Chemistry</title></head>
+
+<body>
+
+
+<h1> T9: Computer Algebra and Polynomial Systems in Chemistry </h1>
+
+ACA 2003:  
+<a href="http://math.unm.edu/ACA/2003/2003.html">Home</a>,
+<a href="http://math.unm.edu/ACA/2003/Sessions.html">Sessions</a> 
+
+
+<h2>Organizers</h2>
+<ul>
+
+<li> <a href="mailto:gatermann@zib.de"> Karin Gatermann</a> (Konrad-Zuse-Zentrum, Germany)
+
+
+</li></ul>
+
+
+<h2>Overview</h2>
+<ul>
+
+<li> <h3> Problem </h3>
+In the recent years there has been progress in applications
+of computational algebra to chemistry including the related areas
+of biophysics, biochemistry, geosciences, and others. 
+The session will center around the
+new applications of symbolic and algebraic computations in this area. 
+In  <b>stoichiometric network analysis</b> systems with <b>mass action kinetics</b>
+are investigated which are <b>polynomial differential equations</b>.
+The main progress is due to the application of <b>toric geometry</b> to steady state analysis.
+This includes multistationarity and results on the dynamical behavior. 
+
+A different, but related, approach is the <b>time series analysis</b> of biochemical models
+over discrete fields.
+Another approach to the investigation of dynamical systems is that of
+normal forms which requires computational invariant theory.
+     <p>
+  
+
+</p></li><li> <h3> Motivation and Importance </h3>
+Various phenomena in chemistry, biophysics and mathematical biology
+are modeled by differential equations or discrete dynamical systems.
+Mass action kinetics is to most common and most basic model available.
+Computer algebra enables the exploitation of structure
+and gives new insights. In particular the presence of multistationarity
+is important since this is the basis for other dynamical phenomena such as
+<b>Hopf bifurcation</b>, <b>bistability</b> and 
+<b> reaction-diffusion waves</b>.
+This theory enables to exclude already in the creation process models with
+unwanted properties, the so-called model discrimination.
+The time series analysis of biochemical systems gives insight which
+chemical species is influencing others and thus can be viewed as the main
+species.
+     <p>
+
+</p></li></ul>
+
+
+<h2>Talks/Abstracts</h2>
+<ul>
+
+<li><h3>Electrocatalytic oxidation of formic acid</h3>
+    <a href="mailto:sensse@fhi-berlin.mpg.de">Anke Sensse</a> (Fritz Haber Institut Berlin, Germany)<br> 
+    <p>
+    <strong>Abstract</strong>: 
+Modeling the dynamics of a chemical reaction systems is an interesting topic 
+where the application of convex and toric geometry can be of great advantage. 
+As an illustrative example a model for the electrocatalytic oxidation of formic 
+acid will be presented. It will be shown how a realistic system involving 
+different rate laws like mass action kinetics and Butler-Volmer kinetics can be 
+described by a set of purely polynomial ordinary differential equations. The 
+property of the set of positive stationary solutions of such systems as an 
+intersection set of a convex cone and the variety of a toric ideal will be 
+explained in details. It allows to reduce this high dimensional set to a curve 
+and leads to a new parameterization of the steady state. The stability analysis 
+can then be executed with the usual theorems stemming from the theory of 
+dynamical systems. Of special interest are bistability and oscillatory 
+instabilities. The consideration of this problem under the light of toric 
+geometry allows to make justified conclusions about the occurrence of such 
+dynamical phenomena and about the parameter range in which they are to be 
+expected. 
+    </p><p> 
+        
+</p></li><li><h3>Polynomial Models for Gene Regulatory Networks</h3>
+    <a href="mailto:bstigler@vbi.vt.edu">Brandilyn Stigler</a> (VBI Virginia, USA)<br> 
+    <p>
+    <strong>Abstract</strong>: Several different approaches to modeling of gene regulatory networks have
+been used in recent years, in particular ODE-based models and Boolean
+networks. In this talk we propose a modeling approach that can be thought
+of interpolating between these two frameworks. It is based on the concept
+of a dynamic network represented by polynomial functions on finite, but
+arbitrarily large state sets. Applications contain the reverse-engineering
+of gene regulatory networks from data, as well as the reverse-engineering
+of dynamics. The polynomial framework makes it possible to bring to bear
+the powerful machinery of algorithmic polynomial algebra.: 
+    </p><p>
+
+</p></li><li><h3>Positive solutions of systems with mass action kinetics</h3>
+    <a href="mailto:gatermann@zib.de"> Karin Gatermann</a> (Konrad-Zuse-Zentrum, Germany)
+    <p>
+    <strong>Abstract</strong>: 
+    The behavior of the concentrations of chemical species
+in a system of chemical reactions is given by 
+a polynomial differential system.
+We are interested in the stationary solutions and thus the
+positive solutions of a system of sparse polynomial equations.
+The system comes with a rich structure given by two graphs,
+a directed graph describing the chemical reactions and
+a bipartite graph for the stoichiometric coefficients.
+The polynomials depend on many unknown parameter.
+We show the existence of special solutions of type
+complex balancing with the Cayley trick.
+The existence of several positive solutions is shown by 
+a variation of the Viro method. This is based on 
+the approach to intersect a deformed toric variety with a 
+convex polyhedral cone. The generators of this cone are known as
+extreme fluxes or extreme currents.
+The so-called stoichoimetric generators
+are central for multistationarity.
+Our result gives the parameter region where multistationarity 
+is expected to occur.
+    </p><p> 
+       
+</p></li><li><h3> Model Discrimination using Algebraic Geometry and Computer Algebra Systems </h3>
+    <a href="mailto:conradi@mpi-magdeburg.mpg.de">Carsten Conradi</a> (Otto-von-Guericke Universität Magdeburg, Germany)
+ <a href="mailto:stelling@mpi-magdeburg.mpg.de">Jörg Stelling</a> (Max Planck Institut Magdeburg, Germany)
+ <a href="mailto:raisch@mpi-magdeburg.mpg.de">Jörg Raisch</a> (Max Planck Institut Magdeburg, Germany)
+    <p>
+    <strong>Abstract</strong>: 
+   Model discrimination is concerned with the ability to make 
+distinctions between different reaction networks (i.e. directed 
+graphs) based on available experimental data and qualitative 
+properties of the reaction networks and their associated dynamical 
+models. Whereas it is a straithforward procedure to translate a 
+network structure into a set of ordinary differential equations 
+(ODEs) with yet unknown parameters (i.e. a dynamical model), it is 
+not a-priori clear, which network structure will yield a dynamical 
+model that is compatatible with the available experimental data. 
+We suggest to use qualitative properties, such as the number of 
+steady states, to discriminate between different network structures.
+The solution set of a system of sparse polynomial equations is 
+identical to the staedy states of a system of ODEs derived from a 
+(bio)chemical reaction network. Since the unknowns represent 
+chemcial concentrations we are only interested in real nonnegative 
+solutions. Our contribution show how results from [1] can be applied
+to model discrimination.
+
+ </p><p> 
+
+Two simplified, yet realistic network structures describing the 
+transition between two phases in the cell of Saccharomyces 
+cerevisiae (budding yeast) are examined: Under the assumed 
+conditions the qualitative behavior of the system is primarily 
+characterized by the existence of two staedy states, one 
+corresponding to the G1-phase and one to S-pahse and Mitasis. 
+For model discrimination it is sufficient to show that the ODE 
+system corresponding to one of those network structures will 
+never exhibit two steady states, regardless of the parameter 
+values, whereas for some parameter values the system associated 
+with the second network structure indeed admits two steady states.
+
+ </p><p> 
+
+Thus two sets of sparse polynomial equations are investigated by 
+using certain triangulations of the Newton polytopes associated 
+with those sets. Each triangulation defines a subnetwork of the original 
+reaction network and thus a set of polynomial equations
+involving less terms. Based on results from [1] the existence of two
+nonnegative solutions for these sets of polynomial equations is
+explored. Extension to the complete set of polynomial equations and thus to 
+the complete network is then possible by again using results from [1].
+
+ </p><p> 
+
+[1] Karin Gatermann and Matthias Wolfrum. Bernstein's 2. theorem and Viro's
+ method for sparse polynomial systems in chemistry.
+
+    </p><p>  
+    
+</p></li><li><h3>Groebner basis methods in Symbolic Computation of
+Invariants and Equivariants applied to Normal forms of Non-linear
+Systems with Nilpotent linear part</h3>
+    <a href="mailto:malonza@iastate.edu">David M. Malonza</a> (Iowa State University, USA)
+    <p>
+    <strong>Abstract</strong>:
+The set of systems of differential equations that are in normal form
+with respect to a particular linear part has the structure of a module
+of equivariants, and it is best described by giving a Stanley
+decomposition of that module. Groeber basis methods(implementable in a
+computer algebra system) are used to determine the Stanley
+decomposition of the ring of invariants, that arise in normal forms for
+systems with nilpotent linear part consisting of repeated 2x2 Jordan
+blocks. An efficient algorithm developed by Murdock is then used to
+produce a Stanley decomposition of the module of the equivariants from
+the Stanley decomposition of the ring of invariants. </p><p>  
+   
+  </p></li><li><h3>Investigating Young Group Double Cosets with Computer Algebra: Latest
+        Advances with Some Proofs</h3>
+    <a href="mailto:">Bill Pletsch</a> (Albuquerque Technical Vocational Institute, USA)
+    <p>
+    <strong>Abstract</strong>: 
+Consider a deuteron colliding with another deuteron ignoring charge and spin.
+In the case where after the collision two deuterons are returned, there are
+only two possible reactions.  Either nothing happened or a particle was
+exchanged.  Generalizing this simple problem from scattering theory results in
+an excursion into Polya's theory of counting and the theory of double cosets.
+
+Until the advent of computer algebra, the theory of double cosets has been
+restricted to a few elegant but computationally impossible theorems.
+Impossible in the sense that in principle the calculation can be done but it
+will take ten thousand years.
+
+Today, using Computer Algebra much can be calculated quickly.  Using Macsyma
+and Maple in the special case of Young group generated double cosets, we will
+see just how valuable Computer Algebra can be.  Some surprising and stimulating
+patterns emerge after a just few computer algebra experiments.
+
+The results presented last year will be extended and expanded.  Some proofs
+will be sketched.
+    </p><p> 
+</p></li></ul>
+
+</body></html>

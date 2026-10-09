@@ -1,0 +1,76 @@
+          IMACS Conference on Applications of Computer Algebra
+                             Special Sessions
+
+Applied Computational Topology and Algebra
+	Amir Assadi
+		(see lambe.txt)
+
+CA Applications of Stochastic Methods
+	Michael Trott
+		(see trott.txt)
+
+CA Methods in Control
+	Chaouki Abdallah & Peter Dorato
+		(see abdallah.txt)
+
+CAS in Engineering Education
+	H. Eric Nuttall & Jeanine Ingber
+		(see nuttall.txt)
+
+Coding Theory and Computer Algebra
+	Igor Gachkov & Kenneth Hulth
+		(see gachkov.txt)
+
+Computer Algebra and Automated Theorem Proving
+	Dongming Wang
+		(see automated.txt)
+
+Computer Algebra Applied to Technology
+	Waldir L. Roque & Laureano Gonzalez Vega
+		(see roque.txt)
+
+Computer Algebra Systems in Precollege and College Mathematics Education
+	Ralph DeMarr
+		(see undergrad.txt)
+
+Construction and Applications of Normal Forms in the Theory of Nonlinear ODEs
+	   and Transfer Map Techniques
+	Alexander Bruno & Victor Edneral
+		(see edneral.txt)
+
+Differential-Algebraic and Differential-Geometric Elimination Algorithms for
+	   Systems of PDEs
+	Gregory Reid
+		(see reid.txt)
+
+Numerical Methods for PDEs in a Computer Algebra Environment
+	V. G. Ganzha & E. V. Vorozhtsov
+		(see ganzha.txt)
+
+Parallel Computer Algebra
+	Eric Kaltofen & Gilles Villard
+		(see parallel.txt)
+
+Parametric Curves and Applications in Computer Aided Geometric Design
+	J. Rafael Sendra
+		(see sendra.txt)
+
+Program Transformation
+	Richard Zippel
+		(see zippel.txt)
+
+Quantifier Elimination and its Applications
+	Richard Liska & Michael Jahn
+		(see quantifier.txt)
+
+Symbolic Algorithms, Differential Algebra, and Differential Equations
+	Mene Doffou & Robert Grossman
+		(see grossman.txt)
+
+Symmetries and Closed Form Solutions of Differential Equations
+	Fritz Schwarz
+		(see schwarz.txt)
+
+Symmetries and Partial Differential Equations
+	Vladimir P. Gerdt
+		(see gerdt.txt)

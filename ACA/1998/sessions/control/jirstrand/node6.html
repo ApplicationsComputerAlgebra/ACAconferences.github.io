@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1-f (May 31, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>5 Examples</TITLE>
+<META NAME="description" CONTENT="5 Examples">
+<META NAME="keywords" CONTENT="jirstrand">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="jirstrand.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html73" HREF="node7.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://www.control.isy.liu.se/icons/next_motif.gif"></A> <A NAME="tex2html71" HREF="jirstrand.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://www.control.isy.liu.se/icons/up_motif.gif"></A> <A NAME="tex2html65" HREF="node5.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://www.control.isy.liu.se/icons/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html74" HREF="node7.html">6 Conclusions</A>
+<B>Up:</B> <A NAME="tex2html72" HREF="jirstrand.html">On Switched Polynomial Systems </A>
+<B> Previous:</B> <A NAME="tex2html66" HREF="node5.html">4 Exact Output Tracking</A>
+<BR> <P>
+<H1><A NAME="SECTION00050000000000000000">5 Examples</A></H1>
+<P>
+<A NAME="secswex">&#160;</A>
+<P>
+In the following examples we illustrate how one can obtain
+discontinuous zero dynamics by using the switched controller ideas.
+Moreover, we illustrate how incorporating bounded controls induces
+``shrinking'' of the region of attraction for the zero dynamics.
+<P>
+There may not exist continuous output zeroing controllers which yield
+stable zero dynamics, whereas discontinuous output zeroing controllers
+which achieve this may exist. This was illustrated in the
+paper&nbsp;[<A HREF="node8.html#NesicSME97">11</A>]. We can also incorporate control and state
+constraints in the design in a straightforward manner. Hence, the
+approach is practical and we can construct genuine target sets which
+need to be reached for the exact output tracking problem.
+<P><A NAME="exswstab">&#160;</A> <IMG WIDTH=63 HEIGHT=12 ALIGN=BOTTOM ALT="example487" SRC="img123.gif"  > <P>
+  Consider the system
+  <P><A NAME="eqswstabsys">&#160;</A> <IMG WIDTH=500 HEIGHT=66 ALIGN=BOTTOM ALT="equation490" SRC="img124.gif"  > <P>
+  The continuous output zeroing controllers are
+  <P> <IMG WIDTH=381 HEIGHT=14 ALIGN=BOTTOM ALT="displaymath1629" SRC="img125.gif"  > <P>
+  They give the following (continuous) zero dynamics
+  <P> <IMG WIDTH=500 HEIGHT=36 ALIGN=BOTTOM ALT="equation499" SRC="img126.gif"  > <P>
+  It is easily seen that 0 is an unstable stationary point of both
+  systems. Hence, by applying a continuous output zeroing controller
+  we do not obtain stable zero dynamics. Introduce the Lyapunov
+  function
+  <P><A NAME="exswstablyap">&#160;</A> <IMG WIDTH=500 HEIGHT=14 ALIGN=BOTTOM ALT="equation511" SRC="img127.gif"  > <P>
+  The derivatives of <I>V</I>(<I>x</I>) along solutions to the two systems become
+  <P> <IMG WIDTH=384 HEIGHT=14 ALIGN=BOTTOM ALT="displaymath1630" SRC="img128.gif"  > <P>
+  and
+  <P> <IMG WIDTH=401 HEIGHT=14 ALIGN=BOTTOM ALT="displaymath1631" SRC="img129.gif"  > <P>
+  To test if it is possible to find a discontinuous (switched)
+  control law which yields stable zero dynamics with respect to the
+  chosen Lyapunov function, we check the decision
+  problem&nbsp;(<A HREF="node4.html#eqqeglobstabsw">12</A>). We get the following formula
+  <P> <IMG WIDTH=500 HEIGHT=22 ALIGN=BOTTOM ALT="equation517" SRC="img130.gif"  > <P>
+  which can be shown to be FALSE and hence it is impossible to prove
+  global stability with the given Lyapunov function. However,
+  performing quantifier elimination in
+  <P> <IMG WIDTH=500 HEIGHT=22 ALIGN=BOTTOM ALT="equation521" SRC="img131.gif"  > <P>
+  gives TRUE and we have an estimate of the region in which there
+  exists a minimum phase controller  <IMG WIDTH=139 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline1649" SRC="img132.gif"  > .
+  See Figure&nbsp;<A HREF="node6.html#figswstab">2</A> for regions where  <IMG WIDTH=49 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1431" SRC="img74.gif"  > .
+<P>
+  <P><A NAME="533">&#160;</A><A NAME="figswstab">&#160;</A> <IMG WIDTH=484 HEIGHT=220 ALIGN=BOTTOM ALT="figure528" SRC="img133.gif"  > <BR>
+<STRONG>Figure:</STRONG> The regions (gray) where  <IMG WIDTH=50 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1511" SRC="img99.gif"  >  (left) and  <IMG WIDTH=50 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1513" SRC="img100.gif"  >  (right).<BR>
+<P>
+<P>
+  A switched controller that stabilizes the zero dynamics can be
+  implemented using the following switching rule. Initially, choose
+  controller according to
+  <P> <IMG WIDTH=285 HEIGHT=24 ALIGN=BOTTOM ALT="displaymath1632" SRC="img134.gif"  > <P>
+  where  <IMG WIDTH=11 HEIGHT=12 ALIGN=MIDDLE ALT="tex2html_wrap_inline1543" SRC="img107.gif"  >  denotes the initial state. In the sequel, use the
+  current controller as long as  <IMG WIDTH=48 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1659" SRC="img135.gif"  > , when  <IMG WIDTH=25 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1661" SRC="img136.gif"  >  hits
+  zero, switch to the other controller. Due to the overlap between
+  regions defined by  <IMG WIDTH=50 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1511" SRC="img99.gif"  >  and  <IMG WIDTH=50 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1513" SRC="img100.gif"  > , we will
+  always switch to a controller that makes  <IMG WIDTH=48 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1659" SRC="img135.gif"  >  and the state
+  converges to the origin.
+<P>
+  In Figure&nbsp;<A HREF="node6.html#figswstabtraj">3</A> we show some state trajectories and a
+  time response for the zero dynamics of system&nbsp;(<A HREF="node6.html#eqswstabsys">25</A>),
+  when the above control law has been used.
+<P>
+  <P><A NAME="548">&#160;</A><A NAME="figswstabtraj">&#160;</A> <IMG WIDTH=486 HEIGHT=228 ALIGN=BOTTOM ALT="figure543" SRC="img137.gif"  > <BR>
+<STRONG>Figure 3:</STRONG> Left: Estimate of the region of attraction,
+        switching surfaces, and some trajectories. Right: A time
+        response for initial state  <IMG WIDTH=99 HEIGHT=21 ALIGN=MIDDLE ALT="tex2html_wrap_inline1167" SRC="img3.gif"  > .<BR>
+<P>
+<P>
+  It is straightforward to take control constraints into account.
+  Suppose that we have the constraint  <IMG WIDTH=33 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1671" SRC="img138.gif"  > . Then by
+  considering the following decision problem
+  <P> <IMG WIDTH=372 HEIGHT=48 ALIGN=BOTTOM ALT="multline552" SRC="img139.gif"  > <P>
+  we see that the region of attraction is much smaller than without
+  control constraints. In fact,  <IMG WIDTH=218 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline1673" SRC="img140.gif"  >  is an estimate of the
+  region of attraction and for only slightly larger values of  <IMG WIDTH=10 HEIGHT=10 ALIGN=BOTTOM ALT="tex2html_wrap_inline1675" SRC="img141.gif"  > 
+  the control constraints prevent controlled invariance of the set
+   <IMG WIDTH=16 HEIGHT=16 ALIGN=MIDDLE ALT="tex2html_wrap_inline1677" SRC="img142.gif"  > .
+<P>
+It may happen that the neither of the solutions which keep the output
+identically equal to zero is defined on a neighborhood of the
+equilibrium of interest. However, by combining the different
+solutions, we may achieve that the domain of definition is a
+neighborhood of the origin. This is a purely algebraic constraint and
+we are not aware of any techniques in the literature which could be
+used for this kind of stability analysis. The constructive power of
+quantifier elimination is very useful in this case.
+<P><A NAME="exdomdef">&#160;</A> <IMG WIDTH=64 HEIGHT=12 ALIGN=BOTTOM ALT="example560" SRC="img143.gif"  > <P>
+  The switched dynamic system considered in this example can be seen
+  as the zero dynamics of the following system
+  <P><A NAME="eqdomdef">&#160;</A> <IMG WIDTH=500 HEIGHT=67 ALIGN=BOTTOM ALT="equation563" SRC="img144.gif"  > <P>
+  We get three different systems which correspond to the continuous
+  output zeroing controllers
+  <P> <IMG WIDTH=500 HEIGHT=36 ALIGN=BOTTOM ALT="equation571" SRC="img145.gif"  > <P>
+  Can we switch between these systems to achieve stability of the zero
+  dynamics? Observe that the domain of definition of the state
+  feedback control laws that give the last two systems are not the
+  whole state space. Furthermore, the first system is unstable so the
+  zero dynamics cannot be stabilized without switching. We will show
+  that the zero dynamics can be stabilized by switching despite these
+  observations.  The regions where  <IMG WIDTH=49 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1431" SRC="img74.gif"  >  are shown in
+  Figure&nbsp;<A HREF="node6.html#figdomdef">4</A>.
+<P>
+  <P><A NAME="598">&#160;</A><A NAME="figdomdef">&#160;</A> <IMG WIDTH=366 HEIGHT=340 ALIGN=BOTTOM ALT="figure591" SRC="img147.gif"  > <BR>
+<STRONG>Figure 4:</STRONG> The regions (gray) where  <IMG WIDTH=105 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1681" SRC="img146.gif"  > .<BR>
+<P>
+<P>
+  Let  <IMG WIDTH=118 HEIGHT=20 ALIGN=MIDDLE ALT="tex2html_wrap_inline1683" SRC="img148.gif"  > . The derivatives of <I>V</I>(<I>x</I>) along
+  solutions to the systems are
+  <P> <IMG WIDTH=500 HEIGHT=14 ALIGN=BOTTOM ALT="equation602" SRC="img149.gif"  > <P>
+  where  <IMG WIDTH=10 HEIGHT=12 ALIGN=MIDDLE ALT="tex2html_wrap_inline1421" SRC="img72.gif"  >  is given by one of the solutions to  <IMG WIDTH=171 HEIGHT=20 ALIGN=MIDDLE ALT="tex2html_wrap_inline1689" SRC="img150.gif"  > . The modification of the quantifier
+  elimination problem&nbsp;(<A HREF="node4.html#eqqestabsw">11</A>) due to the implicit relation
+  between <I>x</I> and <I>u</I> becomes
+  <P> <IMG WIDTH=362 HEIGHT=67 ALIGN=BOTTOM ALT="multline605" SRC="img151.gif"  > <P>
+  Performing quantifier elimination we can prove that  <IMG WIDTH=60 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1695" SRC="img152.gif"  > 
+  describes a control invariant set in which the zero dynamics can be
+  stabilized by switching.
+<P>
+We investigate the example from [<A HREF="node8.html#NesicSME97">11</A>] to show how
+quantifier elimination can be used to obtain a parameterized set of
+solutions for the problem - in [<A HREF="node8.html#NesicSME97">11</A>] only numerical
+solutions were available. We will follow the procedure outlined in
+Section&nbsp;<A HREF="node4.html#secstabswitch">3</A>.
+<P><A NAME="exNesicSME">&#160;</A> <IMG WIDTH=63 HEIGHT=12 ALIGN=BOTTOM ALT="example610" SRC="img153.gif"  > <P>
+  Consider the system
+  <P><A NAME="ex4sys">&#160;</A> <IMG WIDTH=500 HEIGHT=69 ALIGN=BOTTOM ALT="equation613" SRC="img154.gif"  > <P>
+  where  <IMG WIDTH=138 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1697" SRC="img155.gif"  >  and  <IMG WIDTH=102 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1699" SRC="img156.gif"  > . The control objective is to design a control law which
+  would keep the output identically equal to zero and for which the
+  zero dynamics is stable.
+<P>
+  There are two output zeroing control laws
+  <P><A NAME="ctrs">&#160;</A> <IMG WIDTH=500 HEIGHT=28 ALIGN=BOTTOM ALT="equation632" SRC="img157.gif"  > <P>
+  which are well defined on the set  <IMG WIDTH=208 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline1701" SRC="img158.gif"  > . The zero dynamics is defined by
+   <IMG WIDTH=56 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1703" SRC="img159.gif"  >  and hence we obtain
+  <P><A NAME="zero">&#160;</A> <IMG WIDTH=500 HEIGHT=32 ALIGN=BOTTOM ALT="equation640" SRC="img160.gif"  > <P>
+After linearization of&nbsp;(<A HREF="node6.html#zero">30</A>) at the origin with the choice
+   <IMG WIDTH=14 HEIGHT=12 ALIGN=MIDDLE ALT="tex2html_wrap_inline1705" SRC="img161.gif"  >  we obtain that the linearized zero dynamics has its
+  eigenvalues at  <IMG WIDTH=71 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1707" SRC="img162.gif"  > . Similarly, the linearized zero
+  dynamics with  <IMG WIDTH=14 HEIGHT=8 ALIGN=MIDDLE ALT="tex2html_wrap_inline1709" SRC="img163.gif"  >  has as eigenvalues  <IMG WIDTH=61 HEIGHT=16 ALIGN=MIDDLE ALT="tex2html_wrap_inline1711" SRC="img164.gif"  > . Hence, for
+  both control laws (<A HREF="node6.html#ctrs">29</A>) the corresponding zero dynamics is
+  unstable.
+<P>
+  The Jacobians obtained by linearizing the zero dynamics (<A HREF="node6.html#zero">30</A>)
+  is denoted by  <IMG WIDTH=12 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1713" SRC="img165.gif"  >  and  <IMG WIDTH=12 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1715" SRC="img166.gif"  > .
+<P>
+  We compute the Routh-Hurwitz (or Lienard-Chipart) inequalities for
+   <IMG WIDTH=60 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1717" SRC="img167.gif"  >  which are parameterized by  <IMG WIDTH=9 HEIGHT=11 ALIGN=MIDDLE ALT="tex2html_wrap_inline1719" SRC="img168.gif"  >  and  <IMG WIDTH=9 HEIGHT=11 ALIGN=MIDDLE ALT="tex2html_wrap_inline1721" SRC="img169.gif"  > 
+  <P> <IMG WIDTH=354 HEIGHT=14 ALIGN=BOTTOM ALT="displaymath1633" SRC="img170.gif"  > <P>
+  Performing quantifier elimination, we first check the existence of
+  solution (this was verified numerically in [<A HREF="node8.html#NesicSME97">11</A>])
+  <P> <IMG WIDTH=435 HEIGHT=22 ALIGN=BOTTOM ALT="displaymath1634" SRC="img171.gif"  > <P>
+  This decision problem can be shown to be TRUE and the system can be
+  stabilized at least locally. If we only eliminate the quantified
+  variable  <IMG WIDTH=9 HEIGHT=11 ALIGN=MIDDLE ALT="tex2html_wrap_inline1719" SRC="img168.gif"  >  in above formula we obtain  <IMG WIDTH=32 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1725" SRC="img172.gif"  > . Hence, for
+  any positive  <IMG WIDTH=9 HEIGHT=11 ALIGN=MIDDLE ALT="tex2html_wrap_inline1721" SRC="img169.gif"  >  there exists  <IMG WIDTH=9 HEIGHT=11 ALIGN=MIDDLE ALT="tex2html_wrap_inline1719" SRC="img168.gif"  >  for which the positive
+  combination of matrices  <IMG WIDTH=121 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1731" SRC="img173.gif"  > 
+  is Hurwitz.
+<P>
+  By fixing any pair of  <IMG WIDTH=25 HEIGHT=12 ALIGN=MIDDLE ALT="tex2html_wrap_inline1733" SRC="img174.gif"  >  which yields stability, the
+  matrix  <IMG WIDTH=44 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1735" SRC="img175.gif"  >  satisfies a Lyapunov matrix equation. That
+  is, for any matrix  <IMG WIDTH=84 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline1737" SRC="img176.gif"  >  with  <IMG WIDTH=31 HEIGHT=19 ALIGN=MIDDLE ALT="tex2html_wrap_inline1739" SRC="img177.gif"  > 
+  there exists a matrix  <IMG WIDTH=84 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline1741" SRC="img178.gif"  >  with  <IMG WIDTH=31 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1743" SRC="img179.gif"  > 
+  which is the solution of
+  <P> <IMG WIDTH=336 HEIGHT=14 ALIGN=BOTTOM ALT="displaymath1635" SRC="img180.gif"  > <P>
+  Note that <I>Q</I> introduces another degree of freedom and can be
+  regarded as a design parameter. The following <I>P</I> is a solution of
+  the above matrix equation
+  <P> <IMG WIDTH=283 HEIGHT=29 ALIGN=BOTTOM ALT="displaymath1636" SRC="img181.gif"  > <P>
+  With this <I>P</I> we estimate the domain of attraction of the zero
+  dynamics, which is the target set we want to reach if we want exact
+  tracking of constant outputs. By using quantifier elimination we
+  obtain that the ellipsoid defined by  <IMG WIDTH=92 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline1751" SRC="img182.gif"  >  is a
+  domain of attraction for the zero dynamics. In fact, the plane  <IMG WIDTH=75 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1753" SRC="img183.gif"  >  which is the boundary of the domain of definition of
+  the switched control laws, is a tangent to this ellipsoid.
+<P>
+The zero dynamics is usually described by <em>nonlinear</em>
+differential equations and yet this fact is not incorporated
+sufficiently into the definition of minimum phase. For instance if the
+zero dynamics has a globally stable limit cycle, the system would be
+termed non-minimum phase despite that the behavior of the systems when
+tracking constant outputs may be satisfactory. In this sense the known
+definition of minimum phase is often misleading.  This was tried to
+overcome in [<A HREF="node8.html#BastinJM93">2</A>] where global stability of an invariant
+set was suggested as the definition of minimum phase. We believe that
+the local equilibrium stability and global set stability definitions
+are just two ends of a wide spectrum of possible situations.
+<P>
+In the following example we show how to use quantifier elimination to
+estimate the region of attraction of an invariant set for a given zero
+dynamics.
+<P><A NAME="exzdinvset">&#160;</A> <IMG WIDTH=63 HEIGHT=12 ALIGN=BOTTOM ALT="example660" SRC="img184.gif"  > <P>
+  Consider the system
+  <P><A NAME="exzdinvsetsys">&#160;</A> <IMG WIDTH=500 HEIGHT=67 ALIGN=BOTTOM ALT="equation663" SRC="img185.gif"  > <P>
+  The question of invariance of a given set can be formulated as
+  follows: Is it possible to choose the control such that the solution
+  trajectory tangent always points inwards along the boundary of the
+  given set, i.e.,  <IMG WIDTH=111 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1755" SRC="img186.gif"  > . Using the Lyapunov
+  function  <IMG WIDTH=118 HEIGHT=20 ALIGN=MIDDLE ALT="tex2html_wrap_inline1683" SRC="img148.gif"  > , we can show that the
+  following formula is TRUE
+  <P> <IMG WIDTH=336 HEIGHT=87 ALIGN=BOTTOM ALT="multline671" SRC="img187.gif"  > <P>
+  which means that the invariant set  <IMG WIDTH=60 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1759" SRC="img188.gif"  >  has a domain of
+  attraction defined by  <IMG WIDTH=53 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1761" SRC="img189.gif"  > . If we change  <IMG WIDTH=60 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1763" SRC="img190.gif"  > 
+  to  <IMG WIDTH=48 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1765" SRC="img191.gif"  >  the formula is FALSE. Further analysis is needed to
+  decide how the state behaves inside the ellipsoid  <IMG WIDTH=60 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1759" SRC="img188.gif"  > 
+  (asymptotically stable, limit cycles, etc).
+<P>
+Some of the issues treated here were raised in [<A HREF="node8.html#NesicSME97">11</A>] but
+we show that for a large class of systems, quantifier elimination
+provides a tool to test these conditions.
+<P>
+The use of switched output zeroing controllers allow for more
+flexibility when control and state constraints have to be taken into
+account. If the goal is to exactly track constant outputs, then fixing
+the equilibrium around which we wish our zero dynamics to be stable,
+does not seem to be appropriate. Indeed, it may happen that the zero
+dynamics system has several different equilibria with (perhaps)
+disjoint regions of attractions. In order to exactly track the output
+and have bounded states and control, reaching any of the basins of
+attraction would satisfy the control objective. Quantifier elimination
+could be used for such computations.
+<P>
+<HR><A NAME="tex2html73" HREF="node7.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://www.control.isy.liu.se/icons/next_motif.gif"></A> <A NAME="tex2html71" HREF="jirstrand.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://www.control.isy.liu.se/icons/up_motif.gif"></A> <A NAME="tex2html65" HREF="node5.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://www.control.isy.liu.se/icons/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html74" HREF="node7.html">6 Conclusions</A>
+<B>Up:</B> <A NAME="tex2html72" HREF="jirstrand.html">On Switched Polynomial Systems </A>
+<B> Previous:</B> <A NAME="tex2html66" HREF="node5.html">4 Exact Output Tracking</A>
+<P><ADDRESS>
+<I>Mats Jirstrand <BR>
+Mon Nov 30 23:37:24 MET 1998</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,906 @@
+\nonstopmode 
+\magnification=\magstep 1 
+\input amstex
+\redefine\rightheadline{\eightrm \folio \hfil  THE IDEAL GENERATION
+CONJECTURE \hfil }
+\documentstyle{amsppt}  
+\loadbold \loadmsbm\loadeufm 
+\topmatter 
+\title The Ideal Generation Conjecture for  General Rational  projective
+Curves \endtitle
+\author Ferruccio Orecchia\endauthor
+\address Ferruccio Orecchia, Dipartimento di Matematica e Applicazioni "R.
+Caccioppoli", Complesso 
+Universitario di Monte S. Angelo
+- Via Cintia , 80126 Napoli-Italy \endaddress
+\email ORECCHIA\@MATNA2.DMA.UNINA.IT.\endemail\
+\thanks Work partially supported by 
+MURST\endthanks 
+
+\keywords Generic position, ordinary multiple subvarieties,
+conductor\endkeywords
+\subjclass 14Q05\endsubjclass
+\abstract  We pose a conjecture for the expected number 
+of generators of the ideal of the union $C$ of
+$s$ general rational irreducible  curves
+in $\Bbb P^r$.
+By using the
+computer we prove the conjecture for $C$ of low degree $d$ (e.g. if $s=1$
+for
+ $d\leq 80$ and if $s\leq 10$ for $d\leq 40$).
+\endabstract
+\endtopmatter
+
+\document
+\head 1. Introduction.\endhead 
+Let $C=C_1\cup...\cup C_s\subset  \Bbb P^r_k$, $r\geq 3$ be a
+non-degenerate 
+curve  union 
+of $s$, $s\geq 1$ rational irreducible smooth disjoint
+curves $C_i$ of degree  $d_i$, $i=1,...,s$, over an algebraically closed
+field $k$. Then the degree of 
+$C$ is $d=\sum_{i=1}^s d_i$.\medskip
+ The curve
+$C$  has maximal rank if, for every integer $n\geq 1$, the natural
+restriction map 
+$$\rho(n): H^0(O_{\Bbb P^r_k}(n)) \to H^0(O_C(n))$$
+has maximal rank 
+i.e. $\rho(n)$ is injective or surjective.\medskip
+ Let $\alpha=Min\{n\in \Bbb N\mid  $$n+r\choose r$$ > dn+s\}$\medskip  
+
+A  curve $C$ of maximal rank is minimally generated if 
+the natural map
+$$\sigma(\alpha): H^0(I_C(\alpha)) \otimes H^0(O_{\Bbb P^r_k}(1)) \to
+H^0(I_C(\alpha+1))$$
+is of maximal rank.
+Fixed $r,s,d_1,...,d_s$, if there exists a curve $C$ of maximal rank
+(respectively
+of maximal rank and minimally generated), then, for 
+general $C_1,...,C_s$, $C$ has maximal rank (respectively has maximal rank
+and is minimally generated) [Corollary 2.6]. 
+
+The problem of finding the values of $r,s,d_1,...,d_s$ for which there
+exists
+a curve $C$ of
+ maximal rank has been completely solved. In fact, starting from work of
+Hartshorne
+and Hirshowitz
+it has been shown in [4]  that if $r\geq 4$ then, for any $s,d_1,...,d_s$,
+ there exists a curve $C$  maximal rank.
+ Furthermore in [1] it has been shown that, if $r=3$,
+there exists $C$ of maximal rank, for any $s,d_1,...,d_s$, except the
+following 
+five cases: $s=2, d_1=d_2=2;$   $s=2, d_1=2, d_2=4;$  $s=3, 
+d_1=d_2=d_3=2;$  $s=3, d_1=d_2=2,d_3=4;$   $s=4, d_1=d_2=d_3=d_4=2$.
+
+ The problem
+of finding the values of $r,s,d_1,...,d_s$ for which there exists a curve
+ $C$  of maximal rank and 
+minimally generated is, in general, unsolved. In the case of lines, i.e.
+$d_1=...=d_s=1$, of $\Bbb P^3$, it has been shown in [9] that, for any
+$s\neq 4$,
+there exist $s$ lines with maximal rank and minimally generated. In the
+case $s=1$,
+ recently in [3] and [10]
+ it has been shown that for any
+$d\geq 932$ or $d\leq 73$, ($d\neq 5$) 
+there exists an irreducible rational smooth curve of $\Bbb P^3$ which has
+maximal
+rank and  is
+minimally generated.
+
+
+
+
+In this paper we pose the following conjecture, which we call  {\sl
+ ideal generation conjecture}
+(I.G.C. for short) for rational curves.
+
+For any 
+$r,s,d_1,...,d_s$, 
+there exists a curve $C$ of maximal rank and minimally generated,
+ except the following s-uples $(d_1,...,d_s)$.\medskip
+
+If $r=3:$ 
+$(5)$ (i.e. $s=1$ and $d_1=5$); $(1,2)$; $(2,2)$; $(2,3)$; $(2,4)$;
+ $(3,4)$; $(1,1,2)$; 
+
+$(1,2,2)$; 
+$(2,2,2)$; $(2,2,3)$; $(2,2,4)$; $(1,1,1,1)$;
+$(1,2,2,2)$; $(2,2,2,2)$; $(1,2,2,2,2)$.\medskip
+
+If $r=4:$ 
+$(5)$; $(2,3)$; $(1,1,2)$.
+\medskip
+If $r=5:$
+$(3,4)$; $(2,2,2)$;\medskip
+ 
+In particular, if $s=1$, the conjecture is that, for any $d$ and $r$
+there exists an irreducible rational smooth curve of degree $d$ in $\Bbb
+P^r$ 
+with maximal rank
+and minimally generated except when $d=5$ in $\Bbb P^3$ or $\Bbb P^4$.
+This, 
+if proved,
+ would
+ extend
+to $\Bbb P^r$ the result of [3] and [10] in $\Bbb P^3$. 
+Moreover, in the case of lines, if the 
+conjecture is proved, we have that for any $s$ and $r$ there exist $s$
+ lines in $\Bbb P^r$ with maximal rank and minimally generated except the
+case of 
+$4$ lines
+in $\Bbb P^3$, thus extending 
+the result of [9] in $\Bbb P^3$.
+
+The conjecture has been formulated 
+with the help of the computer.
+In fact we show how to check the conjecture by computer for fixed
+$r,s,d_1,...,d_s$
+ using an algorithm [Algorithm 3.5] that reduces
+the computation of the generators of the ideal of the curve $C$
+to the computation of the generators
+for the ideal of a set of points suitably chosen on $C$. This has allowed
+us to prove the conjecture 
+on our Personal Computer for $d\leq 80$, if $s=1$, and for $d\leq 40$, if
+$s\leq 10$,
+ but enlarging this bound is only a question of having
+time and/or more powerful computers [Remark 3.10].
+
+Note that the usual systems for computations in Commutative Algebra and 
+Algebraic Geometry like CoCoA [5] seem less suitable for this
+particular kind of computation [Remark 3.10].
+
+This paper has been inspired by the ideal generation conjecture for a
+finite set of points 
+in general position, which was posed in [6] and 
+although proved in many cases (see [2] and [8]), is still
+open in its generality.
+
+We would like to thank G. Albano and F. Cioffi for having done the
+implementation 
+of  Algorithm 3.5 of this paper in the language $C++$ and L. Chiantini for
+many
+useful discussions on this subject.
+\head 1. Maximal rank.\endhead
+In all the paper $k$ is a fixed algebraically closed field.\medskip
+We recall that a coherent sheaf $\Cal F$ on $\Bbb P^r$ is  $n$-regular if
+$H^i(\Cal F(n-i))=0$ for $i>0$. If $\Cal F$ is $n$-regular $\Cal F$ is
+$n+1$-regular [11, Lecture 14].
+\definition{Definition 1.1} Let $Y$ be a closed subvariety (also
+reducible)
+ of $\Bbb P^r$ and
+$\rho(n): H^0(\Cal O_{\Bbb P^r_k}(n)) \to H^0(\Cal O_Y(n))$ be
+the natural restriction map. We say that $Y$ has {\sl maximal rank} if,
+for every
+integer $n\geq 0$, 
+ $\rho(n)$ has maximal rank
+as a map of vector spaces i.e. it is injective or
+surjective.\enddefinition
+
+Let $I(Y)=\bigoplus_{n\geq 0}I(Y)_n\subset k[X_0,...,X_r]=R$ be the ideal
+of 
+$Y$ and $A=R/I(Y)$ be the coordinate
+ring of $Y$. 
+
+Set $H_Y(n)=dim_kA_n=dim_kR_n-dim_kI(Y)_n= $$n+r\choose r$$-dim_kI(Y)_n$
+for the Hilbert function of  $Y$ and $P_Y(n)$ for the Hilbert polynomial
+of $Y$.
+ 
+In the following we say that {\sl $Y$ is generated in degree $n$} if 
+the ideal $I(Y)$ of $Y$ can be generated by forms of degree $\leq n$.
+
+\proclaim{Lemma 1.2} Let $Y$ be a curve and $n\geq 0$ a given integer.
+ $Y$ is $n$-regular if and only if $\Cal O_Y(n-2)$ is non-special and
+$\rho(n-1): H^0(\Cal O_{\Bbb P^r_k}(n-1)) \to H^0(\Cal O_Y(n-1))$ is
+surjective in which case
+$Y$ is generated in degree $n$.\endproclaim
+\demo{Proof} [7, section 1]\qed\enddemo
+
+ 
+
+
+
+\proclaim{Proposition 1.3} Let
+ $C=C_1\cup...\cup C_s\subset  \Bbb P^r_k$, $r\geq 3$ be the union 
+of  $s$ rational irreducible smooth disjoint 
+curves $C_i$ of degree $d_i$, $i=1,...,s$.
+ Denote with $d$  the degree $\sum_{i=1}^s d_i$ of $C$. Then:\medskip
+ 
+(a) $H_C(n)\leq P_C(n)$ for any n;\medskip
+
+(b) if $H_C(m)=P_C(m)$ for some integer $m$ then $C$ is $m+1$-regular,
+whence
+  the ideal $I(C)$ of $C$
+is generated in degree $\leq m+1$ and
+ $H_C(n)=P_C(n)$ for any $n\geq m$;
+\medskip
+(c) $P_C(n)=dn+s$; \medskip
+
+(d) $H_C(n)\leq Min\{$$n+r\choose r$$, dn+s\}$ and
+ $C$ has maximal rank if and only if
+$H_C(n)=Min\{ $$n+r\choose r$$, dn+s \}$ \medskip
+\endproclaim
+\demo {Proof}
+ $(a)$, $(b)$ Since $C$ is rational the line bundle $\Cal O_C(n)$ is
+non-special
+for any $n$. 
+Then $C$ is $n$-regular if and only if $\rho(n-1)$ is surjective [Lemma
+1.2].
+Moreover, for any $n$,  $h^1(\Cal O_C(n))=0$ and then  $h^0(\Cal
+O_C(n))=P(n)$.
+Hence, for any $n$, $H(A,n)=dim_k(Im_{\rho(n)})\leq h^0(\Cal O_C(n))=P(n)$
+ (which gives (a)) and $H_C(m)=P_C(m)$, for some integer $m$, if and only
+if
+ $C$ is $m+1$-regular.
+ This gives $(b)$ in virtue of Lemma 1.2 and the fact that if $C$ is
+$m$-regular,
+for some integer $m$, then $C$ is $m+1$-regular.\medskip
+ 
+
+$(c)$ Since the irreducible curves $C_i$, $i=1,...,s$ are smooth, rational
+of degree $d_i$ it is well known that $P_{C_i}(n)=d_in+1$. Moreover the
+$C_i$ are disjoint then
+$P_C(n)=\sum_{i=1}^s P_{C_i}(n)=\sum_{i=1}^s (d_in+1)=dn+s$.
+\medskip
+$(d)$ The first claim follows from $(a)$ and $(c)$ since
+ $H_C(n) \leq $$n+r\choose r$$ $
+for any $n$.
+The second claim follows by observing that $\rho(n)$ is injective if and
+only if
+$H_C(n)= $$n+r\choose r$$ $ and that $\rho(n)$ is surjective if 
+and only if $H_C(n)=P_C(n)=dn+s$ by the previous
+considerations.\qed\enddemo
+
+In general the Hilbert function of a rational curve (not smooth) is not
+bounded by 
+the corresponding Hilbert polynomial as the following example shows.
+
+
+\proclaim {Example 1.4} Let $x=u(u^5-v^5),y=v(u^5-v^5),z=v^6$
+ be a parametrization of the rational sextic
+$C:y^6-x^5z+y^5z=0$. Then it is easily seen that $P_C(n)=6n-9$
+ while $H_C(3)=10> P_C(3)=9$.
+\endproclaim
+
+\proclaim{Proposition 1.5} Let $C=$$\bigcup_{i=1}^s$$ C_i  \subset \Bbb
+P^r$
+ be a non-degenerate curve,  
+such that $C_i$, are rational irreducible curves parametrized by  maps 
+$\Phi_i:\Bbb P^1 \rightarrow \Bbb P^r$
+given by forms
+of degree $d_i$, for any $i$. Let $d=\sum_{i=1}^s d_i$
+and assume that $H_C(m)=dm+s$ for some $m$. Then  $C_i$ are smooth
+disjoint curves of 
+degree $d_i$ and $C$ is $m+1$-regular.\endproclaim
+\demo{Proof} It is enough to prove that the curves $C_i$ are smooth and
+disjoint
+since then $C$ is $m+1$-regular by Proposition 1.3.\medskip
+First we consider the case $i=1$.\medskip 
+
+Let $C'$ be the $n$-uple
+embedding  of $C$. clearly $C'\subset \Bbb P^{nd}$ and $H_C(m)=dm+1$ is
+the
+Hilbert function of the coordinate ring of $C'$ in  degree one. Then $C'$
+is non 
+degenerate. Hence $C'$ is the rational normal curve of degree
+$nd$ in $\Bbb P^{nd}$. Since $C'$ is smooth also $C$ is smooth and has
+degree $d$.\medskip
+
+Let now $i>1$. \medskip
+If $ C_i^*$ is the normalization of $C_i$ then $H_{C_i}(n)\leq
+H_{C_i^*}(n) \leq d_in+1$, for any $n$ [Proposition 1.3]. Then 
+$md+s=H_C(m)\leq \sum_1^s H_{C_i}(m)\leq \sum_1^s(d_im+1)=dm+s$ and then 
+$H_{C_i}(m) = d_im+1$ for any $i=1,...,s$. Hence the curves 
+$C_i$ are smooth of degree $d_i$ and $C$ has degree $d$. Now suppose that 
+$C_i$ and $C_j$ are not disjoint for some $i,j$. It is easily seen that in
+this case
+$H_C(m)< \sum_1^sH_{C_i}(m)=\sum_1^s(d_im+1)=dm+s$ and this contradicts
+the
+hypothesis that $H_C(m)=dm+s$.
+ \qed\enddemo
+\proclaim{Theorem 1.6}  Let $C=$$\bigcup_{i=1}^s$$ C_i  \subset \Bbb P^r$
+ be a  non-degenerate curve,  
+such that $C_i$, are rational irreducible curves parametrized by  maps 
+$\Phi_i:\Bbb P^1 \rightarrow \Bbb P^r$ 
+given by forms
+of degree $d_i$, for any $i$. Let $d=\sum_{i=1}^s d_i$ and
+$\alpha=Min\{n\in\Bbb N\mid $$n+r\choose r$$ > dn+s\}$. Then the following
+conditions are equivalent:\medskip
+$($a$)$ the curves $C_i$ are smooth of degree $d_i$ and disjoint for any 
+$i$ and $C$ has maximal rank; \medskip 
+$($b$)$ $H_C(\alpha -1)=$$\alpha+r-1\choose r$$ $ and $H_C(\alpha)=d\alpha
++s$;\medskip
+and imply that $I(C)$ can be generated by forms of degree $\alpha$ and
+$\alpha+1$.\endproclaim
+\demo{Proof} If $H_C(\alpha -1)=$$\alpha+r-1\choose r$$ $ then 
+$H_C(n)=$$n+r\choose r$$ $ for any $n<\alpha$. Hence  the claim follows
+from Propositions
+$1.3$ and $1.5$\qed\enddemo
+\head 2. Minimal generation.\endhead
+
+Let $C=$$\bigcup_{i=1}^s$$ C_i  \subset \Bbb P^r$, $r\geq 3$,
+be the union of $s$ rational irreducible smooth disjoint curves and denote
+with
+$\nu (C)$ the minimal number of generators of the ideal $I(C)$ of $C$. 
+With $I_C$ we denote the
+ideal sheaf of $C$.
+Assume that $C$ has maximal rank and let
+$\alpha=Min\{n\in\Bbb N\mid $$n+r\choose r$$ > dn+s\}$; 
+By Theorem
+1.6 the ideal 
+$I(C)=\bigoplus_{n\geq 0}I(C)_n$ of $C$ can be generated by forms of
+ degree  $\alpha$ and $\alpha+1$. Then if we set
+ $$W_{\alpha+1}=X_0I(C)_\alpha+...+X_rI(C)_\alpha\subset I(C)_{\alpha+1}$$
+we have $$\nu (I)=dim_kI(C)_{\alpha}+
+dim_kI(C)_{\alpha+1}-dim_kW_{\alpha+1}$$
+Furthermore:\medskip
+
+(1) $dim_k W_{\alpha+1} \leq Min\{(r+1)dim_k I(C)_\alpha,dim_k
+I(C)_{\alpha+1}\}$
+and then:
+$$ \nu (I(C)))  \geq 
+dim_k I(C)_\alpha+ dim_k I(C)_{\alpha+1}-Min\{(r+1)dim_k I(C)_\alpha,dim_k
+I(C)_{\alpha+1}\}$$
+\definition { Definition 2.1}   $C$ of maximal rank
+is minimally generated if:
+
+$$ \nu (I(C))) =
+dim_kI(C)_\alpha+
+dim_kI(C)_{\alpha+1}-Min\{(r+1)dim_kI(C)_\alpha,dim_kI(C)_{\alpha+1}\}$$
+that is
+$$dim_kW_{\alpha+1}=Min\{(r+1)dim_kI(C)_\alpha,dim_kI(C)_{\alpha+1}\}$$
+that is 
+$$\sigma(\alpha): H^0(I_C(\alpha))
+ \otimes H^0(O_{\Bbb P^r_k}(1)) \to H^0(I_C(\alpha+1))$$
+is of maximal rank. \enddefinition
+
+We want to show that maximal rank and minimal generation can be checked by
+computing the generators of a suitably chosen set of points on
+$C$.\medskip
+
+\proclaim {Lemma 2.2} Let $C=$$\bigcup_{i=1}^s$$ C_i  \subset \Bbb P_k^r$
+ be a  non-degenerate  curve
+such that the $C_i$ are rational irreducible curves parametrized by maps 
+$\Phi_i:\Bbb P_k^1 \rightarrow \Bbb P_k^r$,
+ $\Phi_i([t_1,t_2])=[f_{i0}(t_1,t_2),...,f_{in}(t_1,t_2)]$, 
+where $f_{ij}\in k[t_1,t_2]$
+are homogeneous polynomials of the same degree $d_i$.
+Let $m>1$ a fixed integer. Consider the set $V_i$ consisting of 
+$h_i=r_im+1$ distinct
+ points  of $C_i$, for any $i$, and 
+let $V=\cup_{i=1}^s V_i$ be the set of all these $(h=\sum_{i=1}^s h_i)$
+points and 
+$I(V)= \oplus_{n\geq 0} I(V)_n$
+be the ideal of $V$.
+ Then $I(C)_n=I(V)_n$
+for any $n\leq m$.\endproclaim
+\demo{Proof} Clearly $I(C)_m\subset I(V)_m$.Then we have  to prove the
+opposite 
+inclusion.
+Since $I(V)= \cap_{i=1}^s I(V_i)$  and  $I(C)= \cap_{n=1}^s I(C_i)$, 
+it is enough to prove the claim in the case 
+of one irreducible curve $C_i$. Let $P_1,...,P_{h_i}$, 
+ be the points of $V_i$.
+ If $f\in I(V_i))_n$ then
+$f(\Phi_i(P_u))=f(f_{i0}(P_u),...,f_{ir}(P_u))=0$, for any $u=1,...,h_i$.
+ Thus $f(f_{i0},...,f_{ir})$ is a
+polynomial of degree $nd_i\leq md_i$ vanishing on the 
+$md _i+1$  points $P_i$ and then
+$f(f_1,...,f_r)=0$. But $C_i$ is the smallest variety containing
+the points $[f_{i0}(a_0,a_1),...,f_{ir}(a_0,a_1)]$, for any 
+$[a_0,a_1]\in \Bbb P^1$
+and then $C_i \subset V(f)$
+that is $f\in I(C_i)$.\qed\enddemo
+ 
+ 
+
+\proclaim {Remark 2.3} The $h_i$ points of Lemma 2.2 are immediately found
+giving  values $n.1_k$, $n\in \Bbb Z$, to the
+two parameters $t_1,t_2$.\endproclaim
+
+\proclaim{Theorem 2.4} Let $C=$$\bigcup_{i=1}^s$$ C_i  \subset \Bbb P_k^r$
+ be a non-degenerate curve
+such that $C_i$ are rational irreducible curves parametrized by maps 
+$\Phi_i:\Bbb P_k^1 \rightarrow \Bbb P_k^r$
+given by forms of degree $d_i$ , for any $i$. Let $d=\sum_{i=1}^s d_i$ and 
+$\alpha=Min\{n\in\Bbb N\mid $$n+r\choose r$$ > dn+s\}$
+Consider $h_i=d_i(\alpha+1)+1$ points of $C_i$ for any $i$.
+Let $V$ be the set of all these $h=\sum_{i=1}^s h_i=d(\alpha+1)+1$ points
+and let 
+$I(V)= \oplus_{n\geq 0} I(V)_n$
+ be the ideal of $V$. Set:
+
+ $$W_{\alpha+1}=X_0I(V)_\alpha+...+X_rI(V)_\alpha\subset
+I(V)_{\alpha+1}$$\medskip
+
+Then $C$
+has maximal rank  if and only if\medskip 
+
+$H_V (\alpha -1)=$$\alpha+r-1\choose r$$ $  , $H_V(\alpha)=d\alpha
++s$\medskip
+
+Moreover $C$ is  minimally generated if and only if
+$$dim_kW_{\alpha+1}=Min\{(r+1)dim_kI(V)_\alpha,dim_kI(V)_{\alpha+1}\}$$\endproclaim 
+\demo{Proof} Follows immediately from Theorem 1.6, Definition 2.1 and
+Lemma 2.2.\qed\enddemo
+
+let $V=\{P_1,...,P_h\}\in \Bbb P_k^r$  be a set of points .
+ The vector space $I(V)_n$ is easily given by the null
+space of a matrix with elements in $k$. In fact if 
+$R_n=\{f\in k[X_0,...,X_r]\mid deg(f)=n \}$
+then:\medskip
+
+
+(2) $I(V)_n=\{f\in R_n\mid f(P_i)=0,$ $i=1,...,h \}$\medskip
+
+If we denote with $T_i$, $i=1,...,u$, the terms of degree $n$ in the 
+indeterminates $X_0,...,X_r$ then $S=\{T_1,...,T_u\}$ is a basis of the
+$k$-vector space
+$R_n$. Let $G_n(V)$ be the following $ $$n+r\choose r$$\times h$
+matrix:\medskip
+
+(3) $G_n(V)=(b_{ij})$ where $b_{ij}=T_i(P_j)$\medskip
+
+If $f=a_1T_1+...+a_uT_u\in k[X_0,...,X_r]$, we set
+
+
+ $$(f)_S=\pmatrix a_1\\a_2\\ \vdots\\a_h\endpmatrix$$
+
+
+Then:\medskip
+
+(4) $I(V)_n=\{f\in R_n\mid G_n(V)(f)_S=0\}$ \medskip
+
+   that is $f\in I(V)_n$ if and only if $(f)_S$
+ is a
+vector of the null space $ N_n(V)$ of the matrix $G_n(V)$. This gives, by 
+elementary linear algebra that:
+\medskip
+(5) $dim_k(I(V)_n= $$n+r\choose r$$- rk(G_n(V))$ then 
+ $rk(G_n(V))=H_V(n)$ $(rk=rank)$.
+\medskip
+Let
+ $\{(g_1)_S,...,(g_e)_S\}$
+be a basis of $N_n(V)$, $e= $$n+r\choose r$$ -rk(G_n(V))$. then the
+$e(r+1)$ polynomials $g_iX_j$ of $I(V)_{\alpha+1}$
+span the vector space $W_{\alpha+1}$. Let:\medskip
+
+(6) $M_{\alpha+1}(V)$ be the matrix
+whose columns are $(g_iX_j)_S$, for any $i,j$\medskip
+ then\medskip
+
+(7) $dim_k W_{\alpha+1}=rk(M_{\alpha+1}(V))$ \medskip
+
+
+\proclaim {Corollary 2.5} Let $C=$$\bigcup_{i=1}^s$$ C_i  \subset \Bbb
+P_k^r$
+ be a non-degenerate curve
+such that $C_i$ are rational irreducible curves parametrized by maps 
+$\Phi_i:\Bbb P_k^1 \rightarrow \Bbb P_k^r$
+given by forms of degree $d_i$ , for any $i$. Let $d=\sum_{i=1}^s d_i$ and 
+$\alpha=Min\{n\in\Bbb N\mid $$n+r\choose r$$ > dn+s\}$
+Consider $h_i=d_i(\alpha+1)+1$ points of $C_i$ for any $i$.
+Let $V$ be the set of all these $h=\sum_{i=1}^s h_i=d(\alpha+1)+1$ points.
+Then
+  the curves $C_i$ are smooth and disjoint and $C$ has maximal rank 
+if and only if\medskip
+
+$ rk(G_{\alpha-1}(V))=$$\alpha+r-1\choose r$$ $ and
+$ rk(G_{\alpha}(V))=d\alpha+s $.\medskip
+
+Moreover, if $C$ has maximal rank, $C$ is minimally generated
+if and only if \medskip
+ 
+$rk(M_{\alpha+1}(V))= Min\{(r+1)($$\alpha+r\choose r$$-d\alpha-s) , 
+$$\alpha+r+1\choose r$$-d(\alpha+1)-s)\}$\medskip \endproclaim
+\demo{Proof} It follows immediately from Theorem 2.4 and (5),
+(7)\qed\enddemo 
+\proclaim {Corollary 2.6}  Let $C=$$\bigcup_{i=1}^s$$ C_i  \subset \Bbb
+P_k^r$
+ be a  non-degenerate  curve
+such that $C_i$ are rational irreducible curves parametrized by maps 
+$\Phi_i:\Bbb P_k^1 \rightarrow \Bbb P_k^r$,
+ $\Phi_i([t_1,t_2])=[f_{i0}(t_1,t_2),...,f_{ir}(t_1,t_2)]$, 
+where $f_{ij}\in k[t_1,t_2]$
+are homogeneous polynomials of the same degree $d_i$. Let $a_1,...,a_q$
+ $(q=s(d+1)(r+1))$
+ be all the coefficients of all the polynomial $f_{ij}(t_1,t_2)$.
+Then:\medskip
+(a) the set $U\subset\Bbb A^q$ of  the $q$-tuples $(a_1,...,a_q)$ for
+which 
+ the curves 
+$C_i$ are smooth of degree $d_i$ and disjoint, for any $i$, and $C$ has
+maximal rank
+is open;\medskip
+(b) the  set $U'\subset\Bbb A^q$,
+of the $q$-tuples $(a_1,...,a_q)\in U$ for which $C$ is minimally
+generated is open.\endproclaim
+\demo{Proof} By construction (see also Remark 2.3) the matrices 
+$G_{\alpha-1}(V)$, $G_\alpha(V)$ and $M_{\alpha+1}(V)$ 
+have entries which are forms in 
+$a_1,...,a_q$ and then their  minors are forms in 
+$a_1,...,a_q$. Moreover, by Proposition 1.3,(d) and (1),(5),(7), we have
+$ rk(G_{\alpha-1}(V)) \leq c=$$\alpha+r-1\choose r$$ $,
+$ rk(G_{\alpha}(V))\leq c'=d\alpha+s $ and 
+$rk(M_{\alpha+1}(V)) \leq c"=Min\{(r+1)($$\alpha+r\choose r$$-d\alpha-s) , 
+$$\alpha+r+1\choose r$$-d(\alpha+1)-s)\}$. Let  $M_1,...,M_u$  
+ be  the  minors of 
+$G_{\alpha-1}(V)$ of order $c$, $M'_1,...,M'_v$ be the minors of
+$G_\alpha(V)$ of
+order $c'$ and  $M"_1,...,M"_w$ be the minors of $M_{\alpha+1}(V)$ of
+order  $c"$.
+ Consider the 
+following closed sets of $\Bbb A^q$, $D: M_1=0,...,M_u=0$, 
+$D': M'_1=0,...,M'_v=0$,
+$D": M"_1=0,...,M"_w=0$ and let $U=\Bbb A_k^q- (D\cap D')$ and
+$U'=\Bbb A_k^q- (D\cap D'\cap D")$.  
+If $(a_1,...,a_q)\in U$ then the matrices 
+$G_{\alpha-1}(V)$ and $G_\alpha(V)$ have respectively rank $c$ and $c'$
+and then $C$ has maximal rank 
+[Corollary 2.5].
+If $(a_1,...,a_q)\in U'$ then  the matrix $M_{\alpha+1}(V)$  has  rank
+$c"$
+and then $C$ has maximal rank and is minimally
+generated [Corollary 2.5].\qed\enddemo
+\proclaim{Remark 2.7} For some fixed
+$r,s,d_1,...,d_s$ the open sets $U$ and $U'$ of Corollary $2.6$  could be
+empty. For example  the union $C$ in $\Bbb P^3$ of
+ two conics $C_1\cup C_2$ is contained
+ in a reducible quadric and $C$ has not maximal rank. The union of $4$
+generic 
+lines in $\Bbb P^3$ has maximal rank but it is non minimally generated
+$[9]$.\endproclaim 
+
+\head 3.The ideal generation conjecture.\endhead
+In this section we assume that the algebraically closed field $k$ has
+characteristic zero.
+ 
+Denote with $C=$$\bigcup_{i=1}^s$$ C_i  \subset \Bbb P^r$
+ the union   of  rational irreducible smooth disjoint curves $C_i$.
+
+Consider the following two questions:\medskip
+ (a) {\sl For what values of $r, s, d_1,...,d_s$ is it true that, for
+general
+$C_1,...,C_s$, the curve $C=$$\bigcup_{i=1}^s$$ C_i  \subset \Bbb P^r$ has
+maximal rank?}\medskip
+(b) {\sl For what values of $r,n,d_1,...,d_s$ is it true that, for general
+$C_1,...,C_s$, the curve $C=$$\bigcup_{i=1}^s$$ C_i  \subset \Bbb P^r$
+ has maximal  rank and is finitely generated?}
+
+Clearly, by Corollary 2.6, to answer to one of the two
+questions for specific values of 
+$r, s, d_1,...,d_s$,
+it is enough to
+find an example of curve $C$ with maximal rank or with maximal rank
+ and finitely generated.
+Question $(a)$  had a complete answer with the following result.
+\proclaim{Theorem 3.1} Let $C=$$\bigcup_{i=1}^s$ $ C_i  \subset \Bbb
+P_k^r$, $r\geq 3$,
+be the union of $s$ rational irreducible smooth disjoint curves. Then, for
+general
+$C_1,...,C_s$, $C$ has maximal rank, for any $r,s,d_1,...,d_s$, 
+ except the following $s$-uples $(d_1,...,d_s)$ of $\Bbb P_k^3$:\medskip
+$(2,2);$ $(2,4);$ $(2,2,2);$ $(2,2,4);$ $(2,2,2,2)$.\endproclaim
+\demo {Proof} If $r\geq 4$, for general $C_1,...,C_s$ any $C$ has maximal
+rank  
+[4, Theorem 1]. 
+
+If $r=3$ the statement is proved in [1, Theorem 1]\qed\enddemo
+Question $(b)$ has had a partial answer for lines and recently
+for irreducible curves in $\Bbb P^3$ with the following results:
+\proclaim{Theorem 3.2} (a) Let $C$
+be the union of $s$   general lines in $\Bbb P^3$. Then $C$ has maximal
+rank
+ for any $s\neq 4$.
+
+(b) If $C$ is a general irreducible rational curve of $\Bbb P^3$ of degree
+$d\neq 5$
+then
+$C$ has maximal rank and is minimally generated if $d\leq 73$ or $d\geq
+932$.\endproclaim
+\demo{Proof} (a) is proved in [9, Theorem 1]
+
+(b) has been recently proved in [3, Theorem 0.2 and Remark 8.139]  and in
+[10, Theorem 1]
+\qed\enddemo
+In the following we want to show how the computer can be used to detect
+ when a curve $C$ is of maximal rank and minimally generated.
+
+Let $\Bbb Z_p$ be the residue field of the integers modulo a prime $p$.
+If $\overline f=\overline b_1T_1+...+\overline b_uT_u$ is a polynomial
+ of $\Bbb Z_p[t_1,t_2]$
+($T_i$ are the terms in $t_1,t_2$   and $\overline b_i\in\Bbb Z_p$
+are the coefficents  of $\overline f$) then
+$f=b_1T_1+...+b_uT_u$ 
+is the corresponding polynomial in $\Bbb Z[t_1,t_2]$. 
+\proclaim{Theorem 3.3} 
+Let $\overline C=\cup_i^s\overline C_i$ be the union of rational
+irreducible curves $C_i\subset\Bbb P_{\Bbb Z_p^*}^r$ ($\Bbb Z_p^*$= 
+algebraic closure of $\Bbb Z_p^*$)
+ represented by forms $\overline f_{ij}\in \Bbb Z_p[t_1,t_2]$,
+$j=1,...,r$.
+Let $C=\cup_i^s C_i$ be the  union of the corresponding 
+irreducible curves $C_i\subset\Bbb P_k^r$
+ represented by the forms $f_{ij}\in \Bbb Z[t_1,t_2]\subset k[t_1,t_2]$,
+  of degree $d_i$. Let $d=\sum_{i=1}^s d_i$ and 
+$\alpha=Min\{n\in\Bbb N\mid $$n+r\choose r$$ > dn+s\}$
+Suppose that  $\overline C_i$ contains $h_i=d_i(\alpha+1)+1$ distinct
+points for any $i$.
+let $\overline V$ be the set of all these $h=\sum_{i=1}^s
+h_i=d(\alpha+1)+s$
+ points. Consider the  matrices $(3)$ and $(6)$ of section $2$ relative to
+the set $\overline V$.
+If the following conditions hold:\medskip
+
+(a) $ rk(G_{\alpha-1}(\overline V))=$$\alpha+r-1\choose r$$ $;\medskip
+(b) 
+$ rk(G_\alpha(\overline V))=d\alpha+s $;\medskip
+
+(c) $rk(M_{\alpha+1}(\overline V))= Min\{(r+1)($$\alpha+r\choose
+r$$-d\alpha-s),$$\alpha+r+1\choose r$$-d(\alpha+1)-s)\}$;\medskip
+
+then 
+  the curves $C_i$ are smooth and disjoint, $C$
+has maximal rank and is minimally generated.\endproclaim
+\demo{Proof} It is enough to recall the construction of the matrices
+ given in section 2 and to observe the following: if $Q=(a_{ij})$ is a
+matrix
+  $m\times n$ with entries $a_{ij}\in \Bbb Z$
+and $\overline Q= \overline a_{ij}$ is the matrix $m\times 
+n$ whose entries are the integers
+$a_{ij}$ modulo a prime $p$ then $rk (\overline Q)\leq rk (Q)$.
+But, by Proposition 1.3,(d) and (1),(5),(7) of section 2, we have
+ $ rk(G_{\alpha-1}( V)) \leq $$\alpha+r-1\choose r$$ $,
+$ rk(G_\alpha( V)) \leq d\alpha+s $, and 
+
+$rk(M_{\alpha+1}( V)) \leq  
+Min\{(r+1)($$\alpha+r\choose r$$-d\alpha-s), 
+$$\alpha+r+1\choose r$$-d(\alpha+1)-s)\}$.
+  
+ Hence, by the assumptions $(a)$,$(b)$,$(c)$, we have
+ $ rk(G_{\alpha-1}(\overline V))=rk(G_{\alpha-1}( V))$,
+$ rk(G_\alpha(\overline V))=rk(G_\alpha( V))$ and 
+$ rk(M_{\alpha+1}(\overline V))=rk(M_{\alpha+1}( V))$ and the
+claim follows from Corollary 2.5.\qed\enddemo
+
+
+Then, fixed $r,s,d_1,...,d_s$, if we find an example of curve 
+$\overline C=\cup_i^s \overline C_i$ 
+for which the conditions $(a),(b),(c)$
+of Theorem 3.3 are verified
+ for a suitable prime $p$, then the corresponding curve
+$C\subset\Bbb P_k^r$, 
+ has maximal rank and
+is minimally generated.
+
+\proclaim{Remark 3.4} A key condition in Theorem $3.3$ is to find 
+$h_i=d_i(\alpha+1)+1$ distinct points on any $\overline C_i$ but 
+if $p$ is chosen large enough $($ e.g. $p=31991$ has worked in all our
+examples$)$ 
+$\overline C_i$ always contains $h_i$ distinct points $($ that are 
+immediately found by giving
+numerical values to the parameters $t_1,t_2$ that are used to represent
+$C_i$,
+ $i=1,...,s$ $)$.\endproclaim 
+
+ Using Theorem 3.3 it is easy to costruct an algorithm that for fixed
+$r,s,d_1,...,d_s$  produces examples (if they exist)
+of curves $C$  with maximal rank and minimally generated 
+\proclaim {Algorithm 3.5}\medskip
+{\bf Step 1}. Input the integers $r,s,d_1,...,d_s$, the prime $p$ and the
+ the coefficients (in $\Bbb Z_p$)  of the polynomials 
+$\overline f_{ij}$ that represent $\overline C_i$.
+\medskip
+{\bf Step 2}. Find $h_i=d_i(\alpha+1)+1$ distinct points of $C_i$, for any
+$i$
+ (this can
+be done, if $p$ is large enough, by giving numerical values to the
+parameters
+ $t_1,t_2$ of $\overline f_{ij}$).\medskip
+{\bf Step 3}. Compute the ranks (with Gaussian reduction) of the matrices
+
+$G_{\alpha-1}(\overline V)$,
+ $G_\alpha(\overline V)$,
+ $M_{\alpha+1}(\overline V)$.\medskip
+{\bf Step 4}. If these three ranks are respectively
+$ $$\alpha+r-1\choose r$$ $,
+$  d\alpha+s $, and  
+$Min\{(r+1)($$\alpha+r\choose r$$-d\alpha-s), 
+$$\alpha+r+1\choose r$$-d(\alpha+1)-s)\}$ then output:
+ $C$ has maximal rank and is minimally generated.
+ 
+ 
+\endproclaim
+\proclaim{Remark 3.6} By Corollary $2.6$ with a random choice of
+coefficients in 
+ $Step 1$ one always finds
+a curve $C$ of maximal rank and finitely generated unless for fixed
+$r,s,d_1,...,d_s$ there is $\underline {no}$ curve
+ $C$ of maximal rank and finitely generated.\endproclaim
+Using the language $C++$, G. Albano and F. Cioffi have implemented
+Algorithm 3.5 
+on our PC 
+(an Intel Pentium $200$MHz with $40$ MB RAM$+$ $100$MB swap,
+running Linux $2.0$).
+
+The examples that we have run on the computer suggest the following: 
+\proclaim{Conjecture 3.7 [Ideal Generation Conjecture ( I.G.C. ) for
+rational curves]}
+For every positive integers $r,s,d_1,...,d_s$, $r\geq 3$, 
+the union $C=$$\bigcup_{i=1}^s$ $ C_i  \subset \Bbb P_k^r$ 
+of  general rational irreducible  curves $C_i$ of degree $d_i$ has maximal
+rank
+and is minimally generated, 
+ except for the following $s$-uples $(d_1,...,d_s)$.\medskip
+
+If $r=3:$
+$(5); (1,2); (2,2); (2,3); (2,4); (3,4); (1,1,2); (1,2,2); (2,2,2);
+(2,2,3);$
+
+$(2,2,4); (1,1,1,1); (1,2,2,2); (2,2,2,2);(1,2,2,2,2);$ \medskip
+
+If $r=4:$
+ $(5); (2,3); (1,1,2);$
+\medskip
+If $r=5:$
+$(3,4); (2,2,2);$\medskip 
+ \endproclaim
+\proclaim{Remark 3.8} With geometric arguments it is easily seen that for
+all the 
+previous
+exceptionals $s$-tuples all the corresponding curves have not maximal rank
+or
+have maximal rank but are not minimally generated.\endproclaim
+
+In virtue of Corollary 2.6 to verify the conjecture it is enough to find
+an example
+for every $s$-uple $(d_1,...,d_s)$ different from the exceptional ones.
+In particular we have verified by computer the following cases:
+\proclaim{Theorem 3.9} Let $d=\sum_{i=1}^s d_i$ be the degree of $C$. If
+$s=1$  then the I.G.C. is true for 
+ $d\leq 80$. If $s\leq 10$  then the I.G.C. is true for 
+ $d\leq 40$.\endproclaim
+
+\proclaim{Remark 3.10} Theoretically there is no limit on the degree $d$
+for  producing examples of union of rational curves
+which satisfy the I.G.C. but when $s$ and $d$ get larger the computational
+time can be very 
+high and the cases to treat very numerous.\endproclaim
+\proclaim {Remark 3.11} Curves $C=\cup_{i=1}^s  C_i$  which satisfy the
+$I.G.C.$  could also be 
+found by computing  a minimal set of generators of $I(C)$ 
+with Computer Algebra Systems based on Groebner Bases computation, like
+CoCoA. 
+Using our PC, we  have computed,
+ with the last version of CoCoA $[5]$ $($that uses for the elimination of
+parameters
+th Hilbert Driven Algorithm of Traverso$)$,
+ a set of minimal generators of  $I(C)$ for general rational curves
+$C_i$.
+With CoCoA one needs first to compute a minimal set of generators of the
+ideal
+of every curve $C_i$ and then has to compute the generators of the
+intersection of all the 
+ideals $I(C_i)$. This  always needs much more computational time then with
+our algorithm.
+For example the minimal generators of the ideal of a general
+ irreducible curve of degree $40$ in 
+$\Bbb P^{15}$ are found with CoCoA in  $222$ 
+ seconds and with our algorithm in $88$ seconds. 
+If the irreducible curve has degree $80$ in $\Bbb P^{10}$ we have found
+the 
+minimal generators in  $310$ seconds while with CoCoA we did not get any
+answer after
+$9$ hours $($then we have turned off the computer$)$. 
+The generators  of 
+the ideal of $10$
+curves with degree $8$ in $\Bbb P^{10}$ are computed with CoCoA in $3244$
+seconds and
+with our algorithm in $367$ seconds. Since to verify
+ Theorem $3.8$
+on the computer one needs to check hundreds of cases 
+it is clear that CoCoA
+ is less  suitable than our algorithm for checking I.G.C..
+\endproclaim
+
+
+ 
+
+  
+
+ 
+\Refs
+\widestnumber\key{14}
+\ref\key 1
+\by E. Ballico
+\paper On the postulation of disjoint rational curves in a projective
+space
+\yr 1986 
+\jour Rend. Sem. Mat. Univer. Politecn. Torino
+\vol 44
+\pages 46-52
+\endref
+\ref\key 2
+\by E. Ballico
+\paper Generators for the homogeneous ideal of $s$ general points in $\Bbb
+P^3$
+\yr 1987 
+\jour J. Algebra
+\vol 106
+\pages 46-52
+\endref
+
+\ref\key 3
+\by E. Ballico
+\paper On the minimal free resolution of non-special curves in $\Bbb P^3$
+\jour Preprint
+\endref
+\ref\key 4
+\by E. Ballico, P. Ellia
+\paper On the Postulation of Many Disjoint Rational Curves in $\Bbb P^n$,
+$n\geq 4$                                                                  	
+\yr 1985
+\jour Bollettino U.M.I. 
+\vol (6) 4-B
+\pages 585-599
+\endref
+\ref\key 5
+\by D. Capani, G. Niesi and L. Robbiano
+\paper CoCoA (Computational Commutative Algebra)                                                                  	
+\yr 1999
+\jour available at http://lancelot.dima.unige.it 
+\endref
+
+\ref\key 6
+\by A.V. Geramita, F. Orecchia
+\paper Minimally Generating Ideal Defining Certain Tangent Cones                                                                   	
+\yr 1982
+\jour J. Algebra 
+\vol 78
+\pages 36-57
+\endref
+\ref\key 7
+\by L. Gruson, R. Lazarsfeld, and C. Peskine
+\paper On a Theorem of Castelnuovo, and the Equations Defining Space
+Curves
+\yr 1983
+\jour  Invent. Math.
+\vol 72
+\pages 491-506
+\endref
+\ref\key 8
+\by A. Hirschowitz, C. Simpson
+\paper La r\'esolution minimale de l'id\'eal d'un arrangement g\'en\'eral
+d'un grand nombre de
+points dans $\Bbb P^n$                                                                   	
+\yr 1996
+\jour Invent. Math. 
+\vol 126
+\pages 467-503
+\endref
+\ref\key 9
+\by M. Ida'
+\paper On the homogeneous ideal of the generic union of $s$-lines in $\Bbb
+P^3$ 
+\yr 1990
+\jour  J. Reine Angew. Math.
+\vol 403
+\pages 67-153
+\endref
+\ref\key 10
+\by M. Ida'
+\paper Generators for the generic rational space curve: low degree case 
+\yr 1997
+\jour  Proceedings of the Ferrara Conference in honour of M. Fiorentini
+\endref
+
+\ref\key 11
+\by D. Mumford
+\paper Lectures on curves on an algebraic surface
+\yr 1966
+\jour Ann. of Math. studies
+\vol 59
+\endref
+\endRefs
+\enddocument

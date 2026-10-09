@@ -1,0 +1,75 @@
+\documentclass[12pt,a4paper]{article}
+
+
+\usepackage{graphicx}
+
+
+
+\textheight 240mm  %240/12
+\textwidth  160mm   %160/12
+\topmargin -10mm
+\begin{document}
+
+\title{Applications of Singular-Value Decomposition (SVD) }
+
+\author{Alkiviadis G. Akritas\footnote{University of Thessaly, Department of
+  Computer and Communication Engineering, GR-38221 Volos,
+  Greece}\hspace{.1in} and\hspace{.1in}Gennadi I. Malaschonok\footnote{Tambov University,
+  Department of Mathematics,Tambov, Russia}}
+
+\date{Summer 2002}
+\maketitle
+
+\begin{abstract}
+Let $A$ be an $m \times n$ matrix with $m \geq n$. Then one form
+of the singular-value decomposition of $A$ is
+
+$$ A = U^T \Sigma V,$$
+
+where $U$ and $V$ are orthogonal and $\Sigma$ is square diagonal.
+That is, $UU^T=I_{rank(A)},$ $VV^T=I_{rank(A)},$ $U$ is $rank(A)
+\times m,$ $V$ is $rank(A) \times n$ and
+
+$$ \Sigma = \left(\begin{array}{ccccc}  \sigma_1&0&\cdots&0&0\\
+                                                                 0&\sigma_2&\cdots&0&0\\
+                                                                 \vdots&\vdots&\ddots&\vdots&\vdots\\
+                                                                 0&0&\cdots&\sigma_{rank(A)-1}&0\\
+                                                                 0&0&\cdots&0&\sigma_{rank(A)}
+\end{array}\right)  $$
+
+is a $rank(A) \times rank(A)$ diagonal matrix.  In addition
+$\sigma_1\geq \sigma_2\geq \cdots \geq \sigma_{rank(A)} >  0.$ The
+$\sigma_i$'s are called the {\em singular values} of $A$ and their
+number is equal to the rank of $A$.  The ratio $\sigma_1 \over
+\sigma_{rank(A)} $ can be regarded as a condition number of the
+matrix $A$.
+
+It is easily verified that the singular-value decomposition can be
+also written as
+
+$$ A = U^T \Sigma V = \sum_{i=1}^{rank(A)} \sigma_i u_i^T v_i.$$
+
+The matrix $ u_i^T v_i$ is the {\em outer product} of the i-th row
+of $U$ with the corresponding row of $V$.  Note that each of these
+matrices can be stored using only $m+n$ locations rather than $mn$
+locations.
+
+
+The singular value decomposition is over a hundred years old. For
+the case of square matrices, it was discovered independently by
+Beltrami in 1873 and Jordan in 1874. The technique was extended to
+rectangular matrices by Eckart and Young in the 1930's and its use
+as a computational tool dates back to the 1960's.  Gene Golub and
+van Loan demonstrated its usefulness and feasibility in a wide
+variety of applications.
+
+Using both forms presented above---and following Jerry Uhl's
+beautiful approach---we show how SVD can be used as a tool for
+teaching Linear Algebra geometrically, and then apply it in
+solving least-squares problems and in data compression.
+
+\end{abstract}
+
+
+
+\end{document}

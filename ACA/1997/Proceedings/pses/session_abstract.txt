@@ -1,0 +1,30 @@
+Session on Symbolic-Numeric Interfaces at IMACS-ACA
+
+Organizers:
+	Sanjiva Weerawarana (saw@cs.purdue.edu)
+	Paul S. Wang (pwang@mcs.kent.edu)
+
+The IMACS-ACA'97 (Applications of Computer Algebra) meeting will be 
+held at the Aston Wailea Resort, Maui, Hawaii on July 24-26, 1997. 
+For information see:
+        http://math.unm.edu/ACA/1997.html
+
+The session on symbolic-numeric interfaces will address issues related
+to integrating the symbolic and numeric computing paradigms in building
+computational systems for mathematics, science, and engineering.
+All areas from theoretical issues to applications of integrating 
+symbolic and numeric computing are welcome. A survey of the 
+state-of-the-art which discusses current practice as a tutorial is
+strongly desired.
+
+This session has been assigned a three-hour time slot. This may be 
+allocated as follows: 1 hr for a survey talk + four 1/2 hour talks or
+simply as six 1/2 hr talks.
+
+To be invited to give a talk in this session, send a title and abstract
+to the session organizers at
+	aca97-sni@cs.purdue.edu
+There will not be printed proceedings. Accepted papers will appear
+electronically in the URL of the conference.  If the contributions
+warrant it, publication as a special issue of a journal is a distinct
+possibility.

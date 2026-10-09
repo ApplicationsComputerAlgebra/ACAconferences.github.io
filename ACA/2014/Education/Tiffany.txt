@@ -1,0 +1,43 @@
+Effectively Melding Computer Algebra Systems into the Calculus Curriculum
+
+Patrice Geary Tiffany
+Manhattan College
+Manhattan College Parkway
+Riverdale, NY 10471
+patrice.tiffany@manhattan.edu
+
+CAS in the Calculus curriculum can motivate and clarify.  It can visualize and
+spark discussion.  It can enable students to inquire “what if” and go on then
+to investigate and postulate.  It can be wonderful if used in a pedagogically
+sound way.  It can be detrimental to learning if we allow it to be a typing
+exercise lab with lines of code.
+
+I have developed pedagogical materials that foster the inclusion of technology
+in the curriculum of Calculus I and II.  I do concentrate mainly on the
+computer algebra system, Maple.  This material can be easily adapted to
+different CAS software.  The idea is not to rely on one specific software
+package but to educate our students, especially our engineers, in the 21st
+century electronic culture.  The manual that I am developing is not a cookbook
+of Maple handouts with code.  That approach to the use of technology in the
+classroom is how the original labs were written when CAS was first introduced.
+None of this material is a stand alone “lab” that can just be distributed, but
+rather a guided activity within a mathematics lesson using a CAS.
+
+There are three ways that I have found computer algebra systems to be effective
+tools in the teaching of mathematics.  Though I do not like to categorize,
+because the following categories can and should overlap, I have developed three
+different types of lab materials.
+
+1.      Labs that can be worked on by the student individually
+2.	Labs that can be worked on by groups
+3.	Interactive teaching labs
+4.	Turn it on, turn it off activity
+
+I have not developed these labs as major projects.  They are developed to be a
+part of a 50 minute class.  Some are completely contained within the class
+period and some may be completed out of class.  All begin in the classroom.
+Some use CAS to visualize mathematics, some use the power of CAS to see quickly
+and easily “what if I change this,” some use data from the web and some
+reaffirm what they have learned in class.
+
+My talk will present how I use CAS in my Calculus I and II classes.

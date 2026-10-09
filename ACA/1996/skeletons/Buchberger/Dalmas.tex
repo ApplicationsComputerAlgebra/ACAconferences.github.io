@@ -1,0 +1,49 @@
+\begin{center}
+\LARGE
+A Deductive Database for Mathematical formulas
+\end{center}
+
+\begin{center}
+\Large
+St\'ephane Dalmas, Marc Ga\"etano, Claude Huchet
+\end{center}
+
+\noindent
+Date: July 17th (Wednesday)\\
+Time:  10:20-10:45\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+In this talk, we present {\bf mfd2}, a deductive database for
+mathematical formulas. Mathematical relations such as the ones defined
+in the Handbook of mathematical functions (by M. Abramovitz and I.
+Stegun) can be stored in and retrieved from {\bf mfd2}.  The database
+itself is a stand-alone program which can run as a client in a
+client/server environment and it has been designed to be a powerful
+assistant for computer algebra systems as well as for other
+applications. For example, {\bf mfd2} could be the heart of an
+electronic handbook of mathematical relations or could be used as a
+lemma database for a theorem prover. The information stored in {\bf
+  mfd2} is accessed through a specialized query language.  A formula
+is always associated with its conditions of validity. These conditions
+are central to the retrieval mechanism of the database: {\bf mfd2}
+usually answers to a query conditionaly. For example, if we ask the
+simple query $e^x > 0$ for $x$ complex {\bf mfd2} would not just
+answer {\it false} but it would answer {\it true} if $x$ is real''.
+At the heart of {\bf mfd2} is a deduction engine based on an algorithm
+for associate-commutative unification that takes care of the
+conditions associated with the formulas. To solve a particular query,
+the engine first tries to find a ``close enough'' formula in the
+database using associate-commutative unification. If it fails, the
+engine tries to analyse the failure reasons to generate some equations
+that can make the formula and the query to match. It then tries to
+solve these new equations using the statements contained in the
+database and some built-in mathematical transformations. This can
+produce some new conditions (conditions for some solution to hold)
+that are in turn analyzed by calling the database recursively. The
+complexity of this process is controlled by carefully chosing an order
+on the formulas in the database, depending on the query.
+

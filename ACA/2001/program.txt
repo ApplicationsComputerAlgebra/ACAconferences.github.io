@@ -1,0 +1,97 @@
+*** TENTATIVE *** (note the word "tentative"!!!) PROGRAM
+
+Individual talks will be inserted in the appropriate slot for a session based
+on the order of the talks in the web page for that session.
+
+-------------------------------------------------------------------------------
+
+SESSIONS
+--------
+Signal		Application of Computer Algebra to Image and Signal Processing
+    Jeremy Johnson
+    Markus Pueschel
+Involutive	Applications of Involutive and Groebner Bases; the Differential
+		and the Polynomial Case
+    Joachim Apel
+    Ralf Hemmecke
+Physics		Computer Algebra in Analysis and Solving of Equations in
+		Mathematical Physics and Control Theory
+    Vladimir Gerdt
+    Vladimir Kovalev
+    Dmitry Shirkov
+Education	Education Meets Computer Algebra
+    Vlasta Kokol-Voljc
+    Bernhard Kutzler
+Groebner	Groebner Bases and Applications
+    Quoc-Nam Tran
+    Alexander Levin
+    Ilias Kotsireas
+NonStd		Non-Standard Applications of Computer Algebra
+    Eugenio Roanes-Lozano
+    Michael Wester
+SymNum		Symbolic and Numerical Scientific Computation
+    Franz Winkler
+EffEdu		Teaching of Efficient Mathematics
+    Alkiviadis G. Akritas
+    Gennadi Malaschonok
+SciCom		The Scientific Committee's Invitational Special Session
+    The Scientific Committee of the ACA
+Forum		ACA/NMMATYC Forum on Technology in Education
+
+PROGRAM
+-------
+Thursday (May 31)
+     9:00 am               Physics
+     9:30 am               Physics
+    10:00 am   --- BREAK ------------------
+    10:30 am   NonStd      Physics
+    11:00 am   NonStd      Physics   Signal
+    11:30 am   NonStd      Physics   Signal
+    12:00 pm   --- LUNCH ------------------
+     2:00 pm   NonStd      Physics   Signal
+     2:30 pm   NonStd      SymNum    Signal
+     3:00 pm   NonStd      SymNum    Signal
+     3:30 pm   --- BREAK ------------------
+     4:00 pm   NonStd      SymNum    Signal
+     4:30 pm   NonStd      SymNum    Signal
+     7:00 pm   --- Party at the home of Stanly Steinberg ---
+
+Friday (June 1)
+     9:00 am   Education   SymNum    Groebner
+     9:30 am   Education   SymNum    Groebner
+    10:00 am   --- BREAK --------------------
+    10:30 am   Education   SymNum    Groebner
+    11:00 am   Education   SymNum    Groebner
+    11:30 am   Education   SymNum    Groebner
+    12:00 pm   --- Excursion to the Very Large Array / BOX LUNCH ---
+
+Saturday (June 2)
+     8:30 am   ACA/NMMATYC Mixer ---------------------------------
+     9:00 am   Education   SciCom    Groebner     NMMATYC sessions
+     9:30 am   Education   SciCom    Groebner     NMMATYC sessions
+    10:00 am   --- BREAK ----------------------   NMMATYC sessions
+    10:30 am   Education   SciCom    Groebner     NMMATYC sessions
+    11:00 am   Education   SciCom    Groebner     NMMATYC sessions
+    11:30 am   Education   SciCom    Groebner     NMMATYC sessions
+    12:00 pm   --- LUNCH -----------------------------------------
+     2:00 pm   Education   SciCom    Involutive   NMMATYC sessions
+     2:30 pm   Education   SciCom    Involutive   NMMATYC sessions
+     3:00 pm   Education   SciCom    Involutive   NMMATYC sessions
+     3:30 pm   --- BREAK ----------------------   NMMATYC sessions
+     4:00 pm   Education             Involutive   NMMATYC sessions
+     4:30 pm   Education             Involutive   NMMATYC sessions
+     5:00 pm   ACA Business Meeting -----------
+     6:30 pm   --- Banquet at El Pinto Restaurant ----------------
+
+Sunday (June 3)
+     8:00 am   Education             
+     8:30 am   Education             Involutive
+     9:00 am   Education             Involutive   NMMATYC sessions
+     9:30 am   --- BREAK ----------------------   NMMATYC sessions
+    10:00 am   Forum                              NMMATYC sessions
+    10:30 am   Forum                              NMMATYC sessions
+    11:00 am   --- BRUNCH ----------------------------------------
+     1:00 pm   --- Excursion to Santa Fe -------------------------
+
+Notes: The last Education talk and the EffEdu talk will be mixed in with the
+       NMMATYC sessions.

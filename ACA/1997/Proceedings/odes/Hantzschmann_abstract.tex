@@ -1,0 +1,78 @@
+\documentstyle{article}
+\begin{document}
+
+\centerline{\bf Concepts and Algorithms of Computer Analysis}
+\centerline{\bf for an Approximate Solution of ODE's}
+
+\vskip 0.3cm
+
+\centerline{Karl Hantzschmann}
+\centerline{Universitaet Rostock, Fachbereich Informatik}
+\centerline{Albert-Einstein-Strasse 21}
+\centerline{18051 Rostock, Germany}
+\centerline{Email: hantzschmann@informatik.uni-rostock.de}
+
+\vskip 0.3cm
+
+1.	Purpose and methodology of Computer Analysis
+
+Whereas in Computer Algebra the dominant object is algorithms based on
+algebraic concepts and aimed  at finding exact solutions, Computer Analysis
+gives priority to algorithms using CAS for finding controlled analytic
+approximate solutions. The point is to find efficiently practicable and
+transparent formula expressions reflecting the qualitative properties of a
+given problem and securing a desired accuracy. This implies practicable
+error estimations which must always be performed by the Computer.
+
+2.	Algorithms for approximate solutions
+
+In the field of ODEs several algorithms could be developed and tried in the
+last decade. In accordance with the purpose of Computer Analysis preference
+is given to mathematical approximation methods allowing an automatic
+adaptation to a given problem and giving a transparent short formula
+expression at a reasonable expense. The paper will give a survay of some
+these algorithms.
+In recent years good results could be achieved by a two-step concept. In the
+first step the given problem will be adapted by means of a neighbouring
+problem which must be suitably chosen and allow to find an exact solution by
+algorithms of Computer Algebra. Then the fundamental solutions form the
+basis for an adequate approximating ansatz in the second step. This two-step
+concept has the advantage of allowing a close problem adaptation. It offers
+a wide field for the development of several algorithms depending first on
+the approximation criterions used in both steps and second on the selected
+family of neighbouring problems. Interpreting the steps as projection
+methods allows a uniform theoretic foundation.
+
+A modification of this strategy results in an algorithm for the approximate
+computation of non-exponential solutions for the class of simple
+differential equations.
+Based on efficient algorithms for the finding exponential solutions or some
+subclasses of such solutions a relatively wide class of adapted differential
+equations has been made available which may serve as a basis for
+approximations. This class consists of simple differential equations, the
+relevant differential operators of which are factorizable by differential
+operators of first order with exponential solutions.
+
+3.	Practicable error estimations
+
+For finding error estimations a special procedure has proved its worth.
+This procedure will allow to completely calculate error boundaries by
+computer, if the coefficient functions of the differential equations belong
+to a reasonably restricted function class.  It will be necessary to
+formulate the error function in the form of a fix point equation which will
+use Green's function of a linear neighbouring differential equation which
+in its turn can be derived from the given differential operator by means of
+linearization.
+
+If the non-linear remainder operators satisfy special Lipschitz-relations
+of second order in surroundings of the approximate solution, fixpoint
+theorems will give the wanted estimations. In the meantime the principle has
+been modified and extended. It will be discussed in the paper by taking a
+non-linear differential equation of n-th order as an example.
+This procedure shows the advantage of combining the symbolic with the proven
+numerical computation as a typical attribute of the algorithms of Computer
+Analysis.
+The Lipschitz-estimations needed for non-linear differential equations are
+supplied by a specially developed Lipschitz-calculus.
+
+\end{document}

@@ -1,0 +1,27 @@
+# Created by rsalamon@crocus on Tue Jul  2 18:30:54 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Barrere.html
+Path=0/conference/IMACS96/skeletons/Bocharov/Barrere.html
+
+Name=Bocharov.html
+Path=0/conference/IMACS96/skeletons/Bocharov/Bocharov.html
+
+Name=Korelc.html
+Path=0/conference/IMACS96/skeletons/Bocharov/Korelc.html
+
+Name=Sofroniou.html
+Path=0/conference/IMACS96/skeletons/Bocharov/Sofroniou.html
+
+Name=Sofroniou.ps
+Path=9/conference/IMACS96/skeletons/Bocharov/Sofroniou.ps
+
+Name=Trott.html
+Path=0/conference/IMACS96/skeletons/Bocharov/Trott.html
+
+Name=Vorobev.html
+Path=0/conference/IMACS96/skeletons/Bocharov/Vorobev.html
+
+Name=Harris.html
+Path=0/conference/IMACS96/skeletons/Bocharov/Harris.html
+

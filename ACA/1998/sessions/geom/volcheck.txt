@@ -1,0 +1,19 @@
+"On Computing the Weierstrass Points of a Plane Algebraic Curve"
+
+Mark Heiligman and Emil Volcheck*.
+*Department of Defense
+3120 Saint Paul St., Apt. B-205
+Baltimore MD  21218
+USA
+E-mail:volcheck@acm.org
+
+
+Abstract:
+
+Weierstrass points are an important geometric feature of an algebraic curve.
+We present an algorithm based on a classical construction to compute the
+Weierstrass points of an absolutely irreducible plane algebraic curve
+defined over a computable field of characteristic zero.  As a partial
+complexity analysis, we show that critical steps of the algorithm are bounded
+by $O(g^9 d^2)$ ground field operations, where $g$ is the genus
+and $d$ the degree of the curve.

@@ -1,0 +1,433 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Implementation and Experimentation.</TITLE>
+<META NAME="description" CONTENT="Implementation and Experimentation.">
+<META NAME="keywords" CONTENT="vega">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="vega.css">
+</HEAD>
+<BODY bgcolor=white>
+
+<H1><A NAME="SECTION00050000000000000000">
+Implementation and Experimentation.</A>
+</H1>   
+  
+We used the <TT>PoSSoLib</TT> library to write the code used for tests; it is a C++  
+library developed (and still developing) within the ESPRIT projects  PoSSo  
+and FRISCO. It permits a complete customization of many algebraic  
+structures (rings, polynomials, monoids, orderings, etc.) and provides many  
+functions to deal with all the main operations within these structures in a very
+flexible way, and not available in such a way in other symbolic computation  
+packages. Gr&#246;bner bases and Hilbert function  computations are also  
+available, together with many other low- and high-level features.  
+  
+The code consisted in some new specific functions and a C++ program
+organizing all the computations: the specification of the polynomial
+ring 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$ -->
+<IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$">
+and the polynomials under consideration are read
+from an input file. There are two operative modes, and the user must
+choose:
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>Check a particular specialization; a list of values for the
+parameters is read from the input file, and the computation is done
+  just for that single case (see the example).
+<DT>2.
+<DD>Compute conditions: the general analysis (section 2) is
+  performed.
+</DL>
+<P>
+In the first case the direct computation and Hilbert function testing
+is performed, in the second one the rings 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T}]$ -->
+<IMG
+ WIDTH="44" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T}]$">,
+
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$ -->
+<IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$">
+are constructed, the polynomials converted and the
+monomials 
+<!-- MATH: ${\bf {X}}^{\alpha}$ -->
+<IMG
+ WIDTH="29" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img149.gif"
+ ALT="${\bf {X}}^{\alpha}$">
+taken, for the computation of the
+Hilbert functions to be compared, while the ``coefficients"
+
+<!-- MATH: $u_{i,j}(\underline{T})$ -->
+<IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img150.gif"
+ ALT="$u_{i,j}(\underline{T})$">
+play their role in cutting the condition tree
+(when they are constant) and in the final simplification of obtained
+conditions. The code is currently being expanded to obtain a clean and
+clear output, and to make the whole analysis completely automatic.
+
+<P>
+Next it is shown how the performed implementation works over the  
+homogeneous polynomial system of equations coming from  
+the modelling of a neural network. In this case there is only one parameter  
+<I>c</I> and four unknowns <I>u</I>,<I>v</I>,<I>w</I>,<I>t</I>:  
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\matrix{ t^3-cut^2-uv^2 - uw^2=0\cr t^3-cvt^2-vu^2-vw^2=0\cr
+t^3-cwt^2-wu^2-wv^2=0\cr}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="194" HEIGHT="65"
+ SRC="img151.gif"
+ ALT="\begin{displaymath}\matrix{ t^3-cut^2-uv^2 - uw^2=0\cr t^3-cvt^2-vu^2-vw^2=0\cr
+t^3-cwt^2-wu^2-wv^2=0\cr}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The input file, which is included below, contains first the definition
+of the polynomial ring (with the corresponding ordering) where the
+computations are to be performed and then the list of polynomials. The
+final line, which is optional, contains the values of the parameters
+under consideration (to be used if we are only interested about these
+concrete values).
+<PRE>
+  
+            {5,  
+             {N, {c,  u,v,w,t}},  
+             {C, {0,  1,1,1,1}},  
+             {V, {0,  1,1,1,1}},  
+             {C, {1,  0,0,0,1}}  
+            }  
+            {  
+             {1t3, -1cut2, -1uv2, -1uw2}  
+             ,  
+             {1t3, -1cvt2, -1vu2, -1vw2}  
+             ,  
+             {1t3, -1cwt2, -1wu2, -1wv2}  
+            }  
+            {-1}
+</PRE>  
+In this example the current implementation returns that, for any <I>c</I> such that <IMG
+ WIDTH="43" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img152.gif"
+ ALT="$c\neq 0$">,
+the ``generic" Gr&#246;bner Basis specializes  well.  
+  
+Next example is more complicated (see [<A
+ HREF="node15.html#rimey">10</A>]) and it was already
+used in section 3. It contains four parameters (<I>a</I>, <I>b</I>, <I>c</I> and <I>d</I>)
+and four unknowns (<I>x</I>, <I>y</I>, <I>z</I> and <I>t</I>):
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\matrix{
+F_1=a x t^2 + b y z t -x(x^2+c y^2+d z^2)\cr   
+F_2=a y t^2 + b z x t -x(y^2+c z^2+d x^2)\cr  
+F_3=a z t^2 + b x y t -x(z^2+c x^2+d y^2)\cr}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="268" HEIGHT="65"
+ SRC="img153.gif"
+ ALT="\begin{displaymath}\matrix{
+F_1=a x t^2 + b y z t -x(x^2+c y^2+d z^2)\cr
+F_2=a...
+...+c z^2+d x^2)\cr
+F_3=a z t^2 + b x y t -x(z^2+c x^2+d y^2)\cr}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and in this case the Gr&#246;bner Basis (computed in
+
+<!-- MATH: ${\mathchoice {\setbox  0=\hbox{$\displaystyle\rm Q$ }\hbox {\raise
+0.15\ht0\hbox to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\textstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptscriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}}[a,b,c,d,x,y,z,t]$ -->
+<IMG
+ WIDTH="150" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img145.gif"
+ ALT="${\mathchoice {\setbox 0=\hbox{$\displaystyle\rm Q$ }\hbox {\raise
+0.15\ht0\hbo...
+...\ht0\hbox
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}}[a,b,c,d,x,y,z,t]$">)
+contains 23 polynomials and the computation,
+which is to be shown below, provided in less than 1 second (including
+the Gr&#246;bner Basis computation) the following good conditions for
+specialization (which are later further simplified):
+<UL>
+<LI>
+<!-- MATH: $c\neq 0, d\neq 0, d^2 - c\neq 0, c^2 - d\neq 0, cd - 1\neq 0, c^4d + cd^4 -
+2c^2d^2 - c^3 - d^3 + 2cd\neq 0,
+c^3 + d^3 - 3cd + 1\neq 0, d^3 - 2cd + 1\neq 0, cd^3 - c^2d - d^2 + c\neq 0,
+c^2d^2 - 2cd + 1\neq 0, c^3d - cd^2 - c^2 + d\neq 0$ -->
+<IMG
+ WIDTH="1377" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img154.gif"
+ ALT="$c\neq 0, d\neq 0, d^2 - c\neq 0, c^2 - d\neq 0, cd - 1\neq 0, c^4d + cd^4 -
+2c^...
+...^3 - c^2d - d^2 + c\neq 0,
+c^2d^2 - 2cd + 1\neq 0, c^3d - cd^2 - c^2 + d\neq 0$">.
+<LI>
+<!-- MATH: $c^4d + cd^4 - 2c^2d^2 - c^3 - d^3 + 2cd=0,
+c\neq 0, d\neq 0, d^2 - c\neq 0, c^2 - d\neq 0, cd - 1\neq 0, cd^3 - c^2d - d^2 + c\neq
+0, c^3 + d^3 - 3cd + 1\neq 0,  
+c^2d^2 - 2cd + 1\neq 0, d^3 - 2cd + 1\neq 0, c^3d - cd^2 - c^2 +d\neq 0$ -->
+<IMG
+ WIDTH="1377" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img155.gif"
+ ALT="$ c^4d + cd^4 - 2c^2d^2 - c^3 - d^3 + 2cd=0,
+c\neq 0, d\neq 0, d^2 - c\neq 0, ...
+...neq 0,
+c^2d^2 - 2cd + 1\neq 0, d^3 - 2cd + 1\neq 0, c^3d - cd^2 - c^2 +d\neq 0$">.
+<LI>
+<!-- MATH: $c=0, d\neq 0, d^2\neq 0, d^3\neq 0$ -->
+<IMG
+ WIDTH="197" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img156.gif"
+ ALT="$c=0, d\neq 0, d^2\neq 0, d^3\neq 0$">.
+</UL>A simplification through factorization provides the following final result:
+<UL>
+<LI>
+<!-- MATH: $c\neq 0, d\neq 0, d^2 - c\neq 0, c^2 - d\neq 0, cd - 1\neq 0,
+c^3-2cd+d^3\neq 0,c+d+1\neq 0,d^2+1-d+c^2-c-cd\neq 0,d^3-2cd+1\neq 0$ -->
+<IMG
+ WIDTH="903" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img157.gif"
+ ALT="$c\neq 0, d\neq 0, d^2 - c\neq 0, c^2 - d\neq 0, cd - 1\neq 0,
+c^3-2cd+d^3\neq 0,c+d+1\neq 0,d^2+1-d+c^2-c-cd\neq 0,d^3-2cd+1\neq 0$">.
+<LI>
+<!-- MATH: $c^3-2cd+d^3=0,
+c\neq 0, d\neq 0, d^2 - c\neq 0, c^2 - d\neq 0, cd - 1\neq 0,  c+d+1\neq 0,
+d^2+1-d+c^2-c-cd\neq 0,d^3-2cd+1\neq 0$ -->
+<IMG
+ WIDTH="903" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img158.gif"
+ ALT="$c^3-2cd+d^3=0,
+c\neq 0, d\neq 0, d^2 - c\neq 0, c^2 - d\neq 0, cd - 1\neq 0, c+d+1\neq 0,
+d^2+1-d+c^2-c-cd\neq 0,d^3-2cd+1\neq 0$">.
+<LI>
+<!-- MATH: $c=0, d\neq 0$ -->
+<IMG
+ WIDTH="89" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img159.gif"
+ ALT="$c=0, d\neq 0$">.
+</UL>Next it is shown how the computations are performed: first the file
+containing the polynomials (and the corresponding ring) is read and a
+Grobner Bases computation is performed.
+<PRE>
+frisco% ./paramCond test.in
+Homogenous system.
+File : test.in
+Initial basis:
+{
+-(x^3 + c*x*y^2 + d*x*z^2 - b*y*z*t - a*x*t^2),
+ -(d*x^2*y + y^3 + c*y*z^2 - b*x*z*t - a*y*t^2),
+ -(c*x^2*z + d*y^2*z + z^3 - b*x*y*t - a*z*t^2)
+}
+
+GroebnerBasis is :
+{
+ c*x^2*z + d*y^2*z + z^3 - b*x*y*t - a*z*t^2,
+ d*x^2*y + y^3 + c*y*z^2 - b*x*z*t - a*y*t^2,
+ ............................................ 
+ ............................................,
+
+ x^2*z^5 - c^2*d*y^2*z^5 + d^2*y^2*z^5 + c*y^2*z^5
+ - c*d^2*z^7 + 2*d*z^7 - b*d^2*x*y*z^4*t
+ + b*c*x*y*z^4*t - b*d*x*y*z^4*t + a*d*x^2*z^3*t^2
+ - 2*a*x^2*z^3*t^2 + a*c^2*d*y^2*z^3*t^2
+ + a*c*d*y^2*z^3*t^2 - a*d^2*y^2*z^3*t^2
+ - b^2*y^2*z^3*t^2 - 2*a*c*y^2*z^3*t^2
+ + a*c*d^2*z^5*t^2 + b^2*d*z^5*t^2 + a*c*d*z^5*t^2
+ + a*d^2*z^5*t^2 - 4*a*d*z^5*t^2 - a*z^5*t^2
+ + a*b*d^2*x*y*z^2*t^3 - a*b*c*x*y*z^2*t^3
+ + a*b*d*x*y*z^2*t^3 - a^2*d*x^2*z*t^4
+ + a^2*x^2*z*t^4 - a^2*c*d*y^2*z*t^4
+ + a*b^2*y^2*z*t^4 + a^2*c*y^2*z*t^4
+ - a*b^2*d*z^3*t^4 - a^2*c*d*z^3*t^4
+ - a^2*d^2*z^3*t^4 + a^2*d*z^3*t^4 + 2*a^2*z^3*t^4
+ + a^3*d*z*t^6 - a^3*z*t^6
+}
+</PRE>Next, the user is asked if he wants to compute the good conditions for
+specialization (our case) or to check a particular set of values.
+Then, for every polynomial in the Grobner Basis already computed, it
+is performed the separation between the 
+<!-- MATH: ${\underline X}$ -->
+<IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\underline{X}$">-monomials
+and their coefficients.
+<PRE>
+What do you want to use ?
+1) isGoodSpecialization           2) conditions
+Make your choice :  2
+Phase 2: testing conditions.      list length = 23
+lengths = [5 5 5 5 5 5 7 9 9 9 11 8 9
+           9 11 9 10 10 11 13 11 10 12]
+varList = {
+ { x^2*z, y^2*z, z^3, x*y*t, z*t^2},
+ { x^2*y, y^3, y*z^2, x*z*t, y*t^2},
+ .........................................
+ .........................................,
+ { x^2*z^5, y^2*z^5, z^7, x*y*z^4*t, x^2*z^3*t^2,
+   y^2*z^3*t^2, z^5*t^2, x*y*z^2*t^3, x^2*z*t^4,
+   y^2*z*t^4, z^3*t^4, z*t^6}
+}
+
+parList = {
+ { c, d, 1,  - b,  - a},
+ { d, 1, c,  - b,  - a},
+ .........................................,
+ { 1,  - c^2*d + d^2 + c,  - c*d^2 + 2*d,
+   - b*d^2 + b*c - b*d, a*d - 2*a,
+   a*c^2*d + a*c*d - a*d^2 - b^2 - 2*a*c,
+   a*c*d^2 + b^2*d + a*c*d + a*d^2 - 4*a*d - a,
+   a*b*d^2 - a*b*c + a*b*d,  - a^2*d + a^2,
+   - a^2*c*d + a*b^2 + a^2*c,
+   - a*b^2*d - a^2*c*d - a^2*d^2 + a^2*d + 2*a^2,
+   a^3*d - a^3}
+}
+</PRE>Now the algorithm presented in section 2 is applied: the different
+Hilbert Functions arising after specializations are compared with the
+generic Hilbert Function. The final result is the set of maximal
+elements of the set <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img126.gif"
+ ALT="${\cal S}$">
+introduced in the subsection
+<A HREF="node10.html#algorithm">2.1</A>. After lemma <A HREF="node10.html#LEMMA">1</A>, all the lists (called below
+<EM>list of exploded indexes</EM>) smaller than those which are maximal
+give the set of good specialization conditions.
+<PRE>
+originalHFunction = {1,0,0,-3,0,0,3,0,0,-1}
+Result : list of indexes.
+</PRE><PRE>
+[0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 2, 2, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 1, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+</PRE>
+<PRE>
+Result : list of ``exploded'' indexes.
+</PRE><PRE>
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+.....................................................................
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+</PRE>
+
+<P>
+Finally, after a initial simplification, three conditions are
+obtained. Every condition has two parts: the first correspond to
+``=0" conditions and the second to ``<IMG
+ WIDTH="31" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img160.gif"
+ ALT="$\neq 0$">" conditions.
+
+<P>
+<PRE>
+Result : list of ``simplified'' conditions.
+( { 0 }
+  { c, d, d^2 - c, c^2 - d, c*d - 1, c^4*d + c*d^4
+    - 2*c^2*d^2 - c^3 - d^3 +  2*c*d, c^3 + d^3
+    - 3*c*d + 1, d^3 - 2*c*d + 1, c*d^3 - c^2*d
+    - d^2 + c, c^2*d^2 - 2*c*d + 1, c^3*d - c*d^2
+    - c^2 + d },
+
+  { c^4*d + c*d^4 - 2*c^2*d^2 - c^3 - d^3 + 2*c*d}
+  { c, d, d^2 - c, c^2 - d, c*d - 1, c*d^3 - c^2*d
+    - d^2 + c, c^3 + d^3 - 3*c*d + 1,
+    c^2*d^2 - 2*c*d + 1, d^3 - 2*c*d + 1, c^3*d
+    - c*d^2 - c^2 + d },
+
+  { c }
+  { d, d^2, d^3 }
+)
+</PRE>
+<P>
+A more complicated example is the one defined by the following
+homogeneous polynomial system of equations (where <I>m</I> is the only
+parameter):
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\matrix{
+F_1=2mt^3-7xt^2+mx^2y+mzt^2\hfill\cr
+F_2=3mxt^2+u^2t-2mytu\hfill\cr
+F_3=2mt^3-2t^3+z^2u+xyt-mz^2t\hfill\cr
+F_4=2t^3+z^2u+m^2xyt-mzyt\hfill\cr}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="264" HEIGHT="85"
+ SRC="img161.gif"
+ ALT="\begin{displaymath}\matrix{
+F_1=2mt^3-7xt^2+mx^2y+mzt^2\hfill\cr
+F_2=3mxt^2+u^2t...
+...t^3+z^2u+xyt-mz^2t\hfill\cr
+F_4=2t^3+z^2u+m^2xyt-mzyt\hfill\cr}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In this case a ``generic" Grobner Basis with 50 elements is obtained
+and the good conditions for specialization are:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+[m\neq 0, m^2 - 1\neq 0, 2m^2-7\neq 0, 5m^2 + 4m - 7\neq 0]
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="378" HEIGHT="31"
+ SRC="img162.gif"
+ ALT="\begin{displaymath}[m\neq 0, m^2 - 1\neq 0, 2m^2-7\neq 0, 5m^2 + 4m - 7\neq 0]\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Note that this condition is obtained after a big number of Hilbert
+Series computations according to the algorithm presented in section 2.
+
+<P>
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

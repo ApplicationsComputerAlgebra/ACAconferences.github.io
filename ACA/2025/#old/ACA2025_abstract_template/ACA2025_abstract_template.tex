@@ -1,0 +1,83 @@
+% This document generates the PDF for the abstract of the
+% communication to the ACA2025 Conference
+% (Heraklion, Crete, Greece, 2025) using LaTeX format.
+
+% Only edit the name of the abstract file in the \input{} command.
+
+
+%====================================================
+% IMPORTANT: DO NOT MODIFY THE FOLLOWING LINES
+%====================================================
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsthm,amsmath, amsfonts, latexsym}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{times}
+\usepackage{color}
+
+\setlength{\oddsidemargin}{1.46cm}
+\setlength{\textwidth}{13cm}
+\setlength{\topmargin}{0.0cm}
+\setlength{\textheight}{20.5cm}
+
+\makeatletter
+
+\makeatother
+
+% no page numbering
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{0}
+\pagestyle{empty}
+
+% abstract heading
+\newcommand{\HEADING}{
+{\noindent \small Applications of Computer Algebra -- ACA 2025 \\
+\small July 14-18, 2025\\
+Session on \textit{``Session Title''}}
+\vspace{10pt}}
+
+%\definecolor{mygray}{RGB}{164, 168, 172} % grey color
+\definecolor{mygray}{RGB}{67, 70, 75} % grey color
+
+\setlength\parindent{0pt} % noindent in the whole abstract
+\setlength{\parskip}{1em} % spacing between paragraphs
+
+
+
+%----------------------------------------
+% online abstract environment
+%----------------------------------------
+\newenvironment{abstract_online}[4] %{title}{author}{email}{affiliation}
+{	
+	\begin{center}{\LARGE \bfseries #1}\end{center}
+
+	{\bfseries \itshape #2} \hfill	{\small \texttt{#3}}
+	
+	\textcolor{mygray}{#4}
+
+}
+
+
+
+\begin{document}
+	
+\rule{\textwidth}{0.01 in}\\[-2em]
+	
+\HEADING	
+
+\vspace{1cm}
+
+%===============================================
+% DO NOT MODIFY THE ABOVE LINES
+%===============================================
+
+
+% Call the abstract tex file by the speaker's last name. (e.g : smith)
+\input{smith}
+
+
+\end{document}

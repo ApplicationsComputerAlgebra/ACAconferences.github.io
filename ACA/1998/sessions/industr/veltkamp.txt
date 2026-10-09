@@ -1,0 +1,22 @@
+
+CGAL: a library for flexible geometric computing
+Remco Veltkamp
+email: Remco.Veltkamp@cs.uu.nl
+
+
+    Geometric computing is difficult: algorithms are often 
+non-trivial, many special cases occur, and robustness 
+problems cause wrong computations and wrong flow of control.
+CGAL, the Computational Geometry Algorithms Library, meets
+these problems. It provides a collection of standard geometric 
+data structures and algorithms. It allows to choose fast 
+floating point as well as robust exact arithmetic. Also, it 
+is a flexible, generic, library: users can plug their own 
+primitive types (point, vector, etc.) from their applications.
+    CGAL is used in application areas such as GIS, robotics, 
+virtual reality, and shape modeling. These emerging application 
+areas are among the fastest growing areas in information 
+technology. Marketing surveys indicate a strong market for 
+C++ based development tools like CGAL in these areas.
+
+

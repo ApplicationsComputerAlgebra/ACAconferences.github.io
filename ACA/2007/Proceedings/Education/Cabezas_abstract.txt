@@ -1,0 +1,80 @@
+A Proposal for Filling the Gap Between the Knowledge of a CAS and its
+Application in the Classroom
+
+AUTHORS: Justo Cabezas (1), Maria de la Vega Vara (2),
+         Eugenio Roanes-Lozano (3,*), Eugenio Roanes-Macias (3),
+         Pedro Ortega (5), Concepcion Romo (3)
+
+(1) High school Professor (Ret.), Badajoz, Spain
+(2) High school ``Sierra de San Pedro'', La Roca de la Sierra, Badajoz, Spain
+(3) Universidad Complutense de Madrid, Algebra Dept., Madrid, Spain
+(4) High school ``Celestino Mutis'', Madrid, Spain &
+    Universidad Autonoma de Madrid, Madrid, Spain
+
+(*) Corresponding author. e-mail: eroanes@mat.ucm.es
+
+EXTENDED ABSTRACT:
+
+We strongly support the use of new technologies in the mathematics classroom
+because they improve concept acquisition through an increased experimentation
+and the possibility of avoiding tedious computations.
+
+Nowadays personal computers have an affordable price and there are excellent
+software pieces for mathematics, like computer algebra systems (CAS), dynamic
+geometry systems (DGS)...  We believe that the mathematical education of the
+XXIst century requires computers with mathematical software in the classroom
+plus well trained teachers.
+
+Spain is organized in 17 regions with their own parliaments and the possibility
+to decide on many topics of educational policy.  Extremadura is a region in SW
+Spain, sharing a long border with Portugal, and consists of two provinces:
+Badajoz and Caceres.
+
+An innovative project supported by the regional government has transformed all
+classrooms of all high schools (12-18 year old students) in Extremadura into
+computer labs, with a personal computer for every two students running a local
+version of Linux (LinEx).  Only free software is allowed to be used in these
+classrooms.
+
+The local government also organizes free courses in ``teachers centers''
+located at the big villages in order to introduce the different pieces of
+software to the teachers.
+
+Although the situation in Extremadura can be considered ``ideal'', the
+percentage of teachers that really use computer tools in their classes is low.
+Moreover, among those who use them, the number of lessons treated with the
+computer is also low.
+
+If the teachers have the hardware, the software, the training and a positive
+attitude, why are most of them reluctant to apply these media in their classes?
+We believe the main reason is that there is a gap between their training and
+the activity they have to develop.  Their training and the books available are
+usually focused on mastering the tool, not to be able to develop applications
+to be used by a high school student.
+
+Consequently, regarding the use of CAS, we are developing a collection of
+activities that try to fill this gap.  They are completely finished
+applications (to be spread both printed and in electronic format) that can be
+directly used in such an ideal environment.  They have been chosen according to
+their suitability or the determinant roll that the CAS has in that particular
+application.  For instance, we have developed in detail, at the student's
+level, among others:
+
+o permutations (bijections), using the advantages of exact arithmetic for
+  dealing with big numbers
+
+o formal continuity of functions, using the possibility of calculating
+  (symbolically) limits
+
+o probability calculus in continuous random variable using probability density
+  functions and the possibility to compute definite integrals instead of using
+  statistical tables or statistical computer packages
+
+o ...
+
+The characteristics of the environment suggests to choose easy-to-use
+cross-platform compatible software, so that the students can also work at home,
+despite the operating system they have at their home computers.  Non-commercial
+pieces of software that fulfill this requirements are the CAS Maxima/wxMaxima,
+the DGS GeoGebra and the spreadsheet OpenCalc of OpenOffice. We have chosen
+wxMaxima to develop the applications mentioned above.

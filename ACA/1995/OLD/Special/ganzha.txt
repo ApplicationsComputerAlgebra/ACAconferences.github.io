@@ -1,0 +1,42 @@
+     NUMERICAL METHODS FOR PDES IN COMPUTER ALGEBRA ENVIRONMENT
+                   V.G.Ganzha and E.V.Vorozhtsov
+                    ganzha@hrz.uni-kassel.de
+
+
+                             Abstract
+
+   The complexity of difference schemes approximating the PDEs of fluid
+dynamics often makes it impossible to study their important properties like
+the stability and approximation by the analytical methods. The combined use
+of the symbolic computation (computer algebra(CA)) and the numerical analysis
+proves to be an efficient tool for the solution of these problems. On the other
+hand, many computational fluid dynamicists appear to be unaware of the recent
+developments in the field of powerful computer algebra systems like
+Mathematica, Maple, Axiom, etc., and of the capabilities of these systems.
+   The main task of the proposed session is to make the computational fluid
+dynamicists acquainted with the works in which CA is used both for the
+stability and for the approximation study of numerical schemes for solving
+the fluid dynamics equations, including the important case of schemes on
+curvilinear spatial grids.
+
+Proposed Speakers:
+
+    1. S.Steinberg          6. A.Akritas      11. W.Schmidt
+    2. P.J.Roache           7. M.Thune        12. H.Lomax
+    3. J.J.Yagla            8. P.Kutler       13. J.F.Thompson
+    4. V.G.Ganzha           9. M.Hafez
+    5. E.V.Vorozhtsov      10. A.Jameson      14. R. Liska
+
+
+
+
+Talks
+==============================================================================
+                 V.G.Ganzha and E.V.Vorozhtsov
+     Symbolic-Numeric Stability Investigation of Difference
+       Schemes for the Euler and Navier-Stokes Equations
+==============================================================================
+                       V.G.Ganzha and E.V.Vorozhtsov
+              Local Approximation Study of Numerical Schemes
+                    for Continuum Mechanics Problems
+============================================================================

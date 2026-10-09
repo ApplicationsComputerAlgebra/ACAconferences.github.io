@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>An Example of HRFA</TITLE>
+<META NAME="description" CONTENT="An Example of HRFA">
+<META NAME="keywords" CONTENT="kai">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="kai.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="kai.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html60"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html58"
+ HREF="kai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html52"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html61"
+ HREF="node6.html">Summary</A>
+<B> Up:</B> <A NAME="tex2html59"
+ HREF="kai.html">Accuracy Analysis of Hybrid</A>
+<B> Previous:</B> <A NAME="tex2html53"
+ HREF="node4.html">Accuracy of HRFA</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00050000000000000000">
+An Example of HRFA</A>
+</H1>
+
+<P>
+We show how the error of HRFA satisfies the error estimate
+(<A HREF="node4.html#eqn:mainresult">11</A>).
+As a practical example, a data set
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="420" HEIGHT="81"
+ SRC="img67.gif"
+ ALT="\begin{eqnarray*}D&=&\{(-1.0,0.0384615),(-0.8,0.588235),(-0.6,0.1),\\
+&&(-0.4,0...
+...5),(0.4,0.2),\\
+&&(0.6,0.1),(0.8,0.0588235),(1.0,0.00384615)\},
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">is considered and approximated by HRFA with the accuracy level
+
+<!-- MATH: $\alpha=10^{-12}$ -->
+<IMG
+ WIDTH="79" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img68.gif"
+ ALT="$\alpha=10^{-12}$">.
+
+<P>
+The data set <I>D</I> 
+is obtained by discretization of a function 
+<!-- MATH: $f(x)=1/(1+25x^2)$ -->
+<I>f</I>(<I>x</I>)=1/(1+25<I>x</I><SUP>2</SUP>).
+Because of the presence of a roundoff error,
+rational interpolation of <I>D</I> is obtained by linearized equations such as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="404" HEIGHT="145"
+ SRC="img69.gif"
+ ALT="\begin{eqnarray*}R_{5,5}&=&\frac{P(x)}{Q(x)},\\
+P(x)&=&-1.58989\cdot10^{-14}x^5...
+...(x)&=&-532.11x^5+138.4x^4+199.658x^3+30.536x^2\\
+&&+8.83771x+1.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">The leading and the second coefficients of <I>P</I>(<I>x</I>) is smaller 
+than <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\alpha$">.
+Thus deg
+(<I>P</I>(<I>x</I>))=3.
+Since 
+<!-- MATH: $\min_i|Q(x_i)|=0.751654$ -->
+<IMG
+ WIDTH="176" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.gif"
+ ALT="$\min_i\vert Q(x_i)\vert=0.751654$">,
+we put <I>c</I>=1.33041.
+Thus, the accuracy of symbolic-numeric hybrid rational interpolation is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left|f_i-\frac{p(x_i)}{q(x_i)}\right|\leq 2\times
+\frac{1.33041\cdot10^{-12}}{1-1.33041\cdot10^{-12}}=2.66082\cdot10^{-12}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="408" HEIGHT="49"
+ SRC="img71.gif"
+ ALT="\begin{displaymath}\left\vert f_i-\frac{p(x_i)}{q(x_i)}\right\vert\leq 2\times
+\...
+...041\cdot10^{-12}}{1-1.33041\cdot10^{-12}}=2.66082\cdot10^{-12}.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+near-GCD(<I>P</I>,<I>Q</I>) with 
+<!-- MATH: $\alpha=10^{-12}$ -->
+<IMG
+ WIDTH="79" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img68.gif"
+ ALT="$\alpha=10^{-12}$">
+is obtained as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+10^{-12}\mbox{-GCD}(P,Q)=-21.2844x^3+5.53599x^2+8.83771x+1.00000.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="487" HEIGHT="31"
+ SRC="img72.gif"
+ ALT="\begin{displaymath}10^{-12}\mbox{-GCD}(P,Q)=-21.2844x^3+5.53599x^2+8.83771x+1.00000.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Thus rational function is obtained by (<A HREF="node3.html#eqn:input_pol_our">8</A>) as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+r(x)=\frac{p(x)}{q(x)}=\frac{1}{1+5.34132\cdot 10^{-15}x+25x^2}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="317" HEIGHT="48"
+ SRC="img73.gif"
+ ALT="\begin{displaymath}r(x)=\frac{p(x)}{q(x)}=\frac{1}{1+5.34132\cdot 10^{-15}x+25x^2}.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The expression can be replaced by
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+r(x)=\frac{p(x)}{q(x)}=\frac{1}{1+25x^2}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="180" HEIGHT="48"
+ SRC="img74.gif"
+ ALT="\begin{displaymath}r(x)=\frac{p(x)}{q(x)}=\frac{1}{1+25x^2}.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The result satisfies the theorem <A HREF="node4.html#theo:accuracy">4.1</A>.
+
+<P>
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

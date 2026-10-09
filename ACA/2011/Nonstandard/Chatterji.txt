@@ -1,0 +1,11 @@
+Algebraic Computation of Nash equilibria in Finite Normal Form Games
+
+Samaresh Chatterji & Ratnik Gandhi
+
+In this paper we study an algebraic approach for computing Nash equilibria
+solutions of a subclass of finite normal form games.  With algebraic
+characterization of a game, we present a method for computing all its Nash
+equilibria that uses knowledge of Galois groups.  A method for deciding
+membership to the subclass of games, based on Gr\"{o}bner basis, is presented.
+An appendix containing an example to show working of the presented methods
+concludes this work.

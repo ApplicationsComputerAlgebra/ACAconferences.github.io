@@ -1,0 +1,12 @@
+# This is an approximate batch file for producing 
+# a kdv.dvi file for the paper by
+#        Jan Sanders and Jing Ping Wang
+# "Hodge decomposition and conservation laws"
+
+latex kdv
+bibtex kdv
+latex kdv
+latex kdv
+
+#   Victor Edneral
+#   edneral@theory.npi.msu.su

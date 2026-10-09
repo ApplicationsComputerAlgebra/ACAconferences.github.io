@@ -1,0 +1,17 @@
+"Symbolic Maximum Likelihood Estimation with Mathematica"
+
+COLIN ROSE 
+Theoretical Research Institute, Sydney, Australia
+and MURRAY D. SMITH* 
+Department of Econometrics, University of Sydney, Sydney, Australia
+
+
+Mathematica is a symbolic programming language that empowers the user to 
+undertake complicated algebraic tasks. One such task is the derivation of 
+maximum likelihood estimators, demonstrably an important topic in statistics at 
+both the research and expository level. In this paper, a Mathematica package 
+is provided that contains a function entitled SuperLog. This function utilises 
+pattern-matching code that enhances Mathematica's ability to simplify 
+expressions involving the natural logarithm of a product of algebraic terms. 
+This enhancement to Mathematica's functionality can be of particular benefit 
+for maximum likelihood estimation.

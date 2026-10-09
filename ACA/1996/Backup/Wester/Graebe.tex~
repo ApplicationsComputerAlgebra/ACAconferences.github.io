@@ -1,0 +1,30 @@
+\begin{center}
+\LARGE
+Factorized Gröbner Bases and Polynomial System
+\end{center}
+
+\begin{center}
+\Large
+Hans-Gert Gräbe 
+
+\end{center}
+
+\noindent
+Date:  July 20th (Saturday) \\
+Time:  09:15-09:37.5\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+Solving complicated polynomial systems with special purpose CASs (as proposed in L.
+Bernardin's abstract) is often only of restricted benefit due to the complicated output structure.
+Especially for systems with infinitely many solutions, algorithms near to a prime decompositions
+must be involved instead to obtain more insight into the structure of the set of solutions. A central
+tool for such a purpose is the Gröbner algorithm with factorization. No special purpose systems
+offer both facilities (yet) on a satisfactory level. In my report, I will present both a comparison of
+the Gröbner factorizer capabilities of the big general purpose CASs (as far as these capabilities are
+accessible) and a survey about the output quality of this algorithm compared to a full prime
+decomposition. 
+

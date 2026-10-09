@@ -1,0 +1,15 @@
+----------------------------------------------------------------------------
+                    Grand Challenges in Computer Algebra
+----------------------------------------------------------------------------
+
+                   Parallel Polynomial Real Root Isolation
+
+     Werner Krandick
+     Universität Paderborn, Germany
+     krandick@uni-paderborn.de
+
+Back to the session homepage
+
+----------------------------------------------------------------------------
+Last update: May 29, 1997
+----------------------------------------------------------------------------

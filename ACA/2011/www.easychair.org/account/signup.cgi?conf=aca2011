@@ -1,0 +1,29 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>ACA-2011 Signing up for EasyChair: Step 1</title>
+<script>if (top != self) top.location.href=location.href;</script><link type="text/css" rel="StyleSheet" href="../css/cool.css?version=490" /><link type="image/jpeg" rel="icon" href="../images/chairEC.jpg" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div id='content' class='nomenu'><h2 id="title">Signing up for EasyChair: Step 1</h2><p>**********************</p><p>To use EasyChair, one should first create an account. This
+       is done to prevent misuse of the system. The procedure for obtaining
+       an account is the following.</p><ol><li>You should type the two words that you see in the image below
+           and click on "Continue".</li><li>If you type the words correctly, you will be asked to fill out
+           a simple form with your personal information.</li><li>After you filled out the form, EasyChair will send you an email
+           with a link that you can use to create an account.</li></ol><p>**********************</p><form action="https://www.easychair.org/account/signup.cgi"><input value="1" name="captcha" type="hidden"/><input value="aca2011" name="conf" type="hidden"/><p>Please enter the words you see in the box, in order and
+                     separated by a space. Doing so helps prevent automated
+                     programs from abusing this service. If you are not sure
+                     what the words are, either enter your best guess or click
+                     the reload image <img src="https://www.google.com/recaptcha/api/img/red/refresh.gif"/> next to the distorted words.</p><script type="text/javascript">
+//<![CDATA[
+var RecaptchaOptions = {"theme":"red"};
+//]]>
+</script>
+<script src="https://www.google.com/recaptcha/api/challenge?k=6Ldu38MSAAAAAA6ciOoFSr6tXJVjgqlQxygXhCnJ" type="text/javascript"></script>
+<noscript><iframe frameborder="0" height="300" src="https://www.google.com/recaptcha/api/noscript?k=6Ldu38MSAAAAAA6ciOoFSr6tXJVjgqlQxygXhCnJ" width="500"></iframe><textarea cols="40" name="recaptcha_challenge_field" rows="3"></textarea><input name="recaptcha_response_field" type="hidden" value="manual_challenge" /></noscript>
+<input value="Continue" name="Continue" style="font-weight:bold;margin-top:7pt" type="submit"/></form></div>
+</body>
+</html>

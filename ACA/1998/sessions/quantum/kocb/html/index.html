@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Symbolic-Numeric Codes in FORTRAN</TITLE>
+   <META NAME="description" CONTENT="No Title">
+   <META NAME="keywords" CONTENT="integ">
+   <META NAME="resource-type" CONTENT="document">
+   <META NAME="distribution" CONTENT="global">
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (X11; I; Linux 2.0.0 i586) [Netscape]">
+   <META NAME="Author" CONTENT="L. Kocbach and R.Liska">
+   <META NAME="Description" CONTENT="FORTRAN and REDUCE">
+   <META NAME="Keywords" CONTENT="symbolic-numeric programmingcomputer algebra">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR=white LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" LANG="EN">
+
+<H3 ALIGN=CENTER>Symbolic-Numeric Codes and Computer Algebra Systems</H3>
+
+<H4 ALIGN=CENTER>Ladislav Kocbach</H4>
+
+<CENTER><P>Department of Physics, University of Bergen, Allegaten 55, N-5007
+Bergen, Norway</P></CENTER>
+
+<P>
+<HR WIDTH="100%">This talk was based mainly on an earlier work </P>
+
+<P>Ladislav Kocbach and Richard Liska: Journal of Symbolic Computation
+<B>25 </B>(1998) 367-382, <I>Generation and Verification of Algorithms
+for Symbolic-Numeric Processing.</I> </P>
+
+<P><B><FONT FACE="helvetica"><FONT SIZE=-1> </FONT></FONT></B></P>
+
+<TABLE ALIGN=ABSCENTER CELLSPACING=15 CELLPADDING=0 WIDTH="100%"
+BGCOLOR="#FEF0F0" >
+<TR>
+<TD><FONT FACE="helvetica"><A HREF="http://www.hbuk.co.uk/ap/jsc/">Journal
+of Symbolic Computation</A></FONT></TD>
+
+<TD>
+<FONT FACE="helvetica" ALIGN=right>Earlier version of the <A HREF="http://www.fi.uib.no/AMOS/integ/numsymb.ps">paper
+</A>(preprint, postscript -175 kB)</DIV>
+</TD>
+</TR>
+</TABLE>
+<HR WIDTH="100%">
+<P>The method is also presented at this <A HREF="http://www.fi.uib.no/AMOS/integ/">address.</A></P>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<H3>Presentation of the method</H3>
+
+<P>You need to generate a program in FORTRAN or C, which would correctly
+perform some numerical evaluation of expressions, which you have obtained
+by analytic work. In the analytic work and subsequent coding of the results
+every person can make errors. Some can even happen later, after coding,
+by editing, text transfers, etc. Debugging of such programs might be a
+time consuming task, missing factors 2 and wrong signs are well known.
+The described techniques should both save time and ideally produce an error-free
+code by using the powers of computer algebra and automatic code translation.
+</P>
+
+<P>Some of your computations might even require from your numerical code
+to contain algorithms performing symbolic computations with a limited class
+of algebraic formulas. To distinguish the algorithms which perform <I>symbolic
+manipulation in numerical programming language</I> from other methods,
+we propose to call them <I>symbolic-numeric algorithms</I>. Developing
+and implementing such algorithms in a numerical programming language is
+in principle not difficult, but in practice a tedious and error prone task.
+</P>
+
+<P>The described method is based on developing the algorithms in a computer
+algebra system where their correctness can be checked by comparison with
+build-in facilities of the system so that the computer algebra system is
+used as an advanced debugging tool. After such testing of the correctness
+of your algebra, a numerical code for the algorithms is automatically generated
+from the same source code. </P>
+
+<P>The computer algebra system REDUCE with the standard code generation
+package GENTRAN is used to develop codes in FORTRAN. Real applications
+to calculation of matrix elements of Coulomb interaction and two-centre
+exchange integrals needed in atomic collision codes have been completed
+and the method is currently used in new projects in atomic collision theory.</P>
+
+</BODY>
+</HTML>

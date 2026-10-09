@@ -1,0 +1,807 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Solving BMI by QE</TITLE>
+<META NAME="description" CONTENT="Solving BMI by QE">
+<META NAME="keywords" CONTENT="anai">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="anai.css">
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="anai.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html72"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html70"
+ HREF="anai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html64"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html73"
+ HREF="node7.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html71"
+ HREF="anai.html">Solving LMI and BMI</A>
+<B> Previous:</B> <A NAME="tex2html65"
+ HREF="node5.html">Optimization by QE and</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00060000000000000000">
+Solving BMI by QE</A>
+</H1>
+
+<P>
+<P>
+<DIV><B>Algorithm  1</B> (Feasible problems)  &nbsp; 
+<EM>``Find </EM><I>X</I><EM> which satisfies </EM>
+<!-- MATH: $M(X) >_d (or  \geq_d) \ 0$ -->
+<IMG
+ WIDTH="156" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$M(X) >_d (or \geq_d) 0$"><EM>''</EM>
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>Transform 
+
+<!-- MATH: $M(X) >_d (or  \geq_d) 0$ -->
+<IMG
+ WIDTH="156" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$M(X) >_d (or \geq_d) 0$">
+to an equivalent formula
+
+<!-- MATH: $\varphi(X)$ -->
+<IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\varphi(X)$">
+by using Sylvester's theorem.
+<P>
+<DT>2.
+<DD>Construct the first-order formula 
+<!-- MATH: $\psi = \exists X (\varphi(X))$ -->
+<IMG
+ WIDTH="126" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="$\psi = \exists X (\varphi(X))$">.
+
+<P>
+<DT>3.
+<DD>Perform QE for <IMG
+ WIDTH="18" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$\psi$">.
+</DL>
+<P>
+
+<P></P>
+QE outputs true or false.
+In the case of true QE returns one feasible solution.
+false means there are no feasible solutions. </DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  1</B> &nbsp; 
+``Does BMI 
+<!-- MATH: $B(x_1,x_2) <_d 0$ -->
+<I>B</I>(<I>x</I><SUB>1</SUB>,<I>x</I><SUB>2</SUB>) &lt;<SUB><I>d</I></SUB> 0 have any feasible solutions in 
+
+<!-- MATH: $(x_1,x_2) \in [-\frac{1}{2},2]\times [-3,7]$ -->
+<IMG
+ WIDTH="212" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$(x_1,x_2) \in [-\frac{1}{2},2]\times [-3,7]$">? [<A
+ HREF="node8.html#Goh_etal">9</A>]'' where 
+
+<P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $B(x_1,x_2)=$ -->
+<I>B</I>(<I>x</I><SUB>1</SUB>,<I>x</I><SUB>2</SUB>)=
+<!-- MATH: $\left [
+\begin{array}{ccc}
+-10 & -\frac{1}{2} & -2 \\
+-\frac{1}{2} & \frac{9}{2} & 0 \\
+-2 & 0 & 0
+\end{array}
+\right ]
++x_1\left [
+\begin{array}{ccc}
+-\frac{9}{5} & -\frac{1}{10} & -\frac{2}{5} \\
+-\frac{1}{10} & \frac{6}{5} & -1 \\
+-\frac{2}{5} & -1 & 0
+\end{array}
+\right ]$ -->
+<IMG
+ WIDTH="363" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$
+\left [
+\begin{array}{ccc}
+-10 & -\frac{1}{2} & -2 \\
+-\frac{1}{2} & \frac{9}...
+...-\frac{1}{10} & \frac{6}{5} & -1 \\
+-\frac{2}{5} & -1 & 0
+\end{array}\right ]
+$">
+<P>
+  
+
+<!-- MATH: $+x_2
+\left [
+\begin{array}{ccc}
+9 & \frac{1}{2} & 0 \\
+\frac{1}{2} & 0 & -3 \\
+0 & -3 & -1
+\end{array}
+\right ]
++x_1x_2
+\left [
+\begin{array}{ccc}
+0 & 0 & 2 \\
+0 & -\frac{11}{2} & 3 \\
+2 & 3 & 0
+\end{array}
+\right ].$ -->
+<IMG
+ WIDTH="363" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$+x_2
+\left [
+\begin{array}{ccc}
+9 & \frac{1}{2} & 0 \\
+\frac{1}{2} & 0 & -3 \\...
+...y}{ccc}
+0 & 0 & 2 \\
+0 & -\frac{11}{2} & 3 \\
+2 & 3 & 0
+\end{array}\right ].
+$"></DIV>
+<P>
+This problem is equivalent to the following QE problem:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\exists x_1 \exists x_2
+(A_1 \land A_2 \land A_3 \land -\frac{1}{2} \leq  x_1 \leq 2 \land
+-3 \leq  x_2 \leq 7)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="416" HEIGHT="45"
+ SRC="img60.gif"
+ ALT="\begin{displaymath}\exists x_1 \exists x_2
+(A_1 \land A_2 \land A_3 \land -\frac{1}{2} \leq x_1 \leq 2 \land
+-3 \leq x_2 \leq 7)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where
+
+<P>
+
+<P><P>
+<BR>
+
+<!-- MATH: $A_1 = -45x_1+9x_2+50 > 0 ,$ -->
+<I>A</I><SUB>1</SUB> = -45<I>x</I><SUB>1</SUB>+9<I>x</I><SUB>2</SUB>+50 &gt; 0 ,
+<P>
+
+<P><P>
+<BR>
+
+<!-- MATH: $A_2 = (-4950x_2-25)x_1^2+(990x_2^2+6590x_2+4100)x_1-217x_2^2$ -->
+<I>A</I><SUB>2</SUB> = (-4950<I>x</I><SUB>2</SUB>-25)<I>x</I><SUB>1</SUB><SUP>2</SUP>+(990<I>x</I><SUB>2</SUB><SUP>2</SUP>+6590<I>x</I><SUB>2</SUB>+4100)<I>x</I><SUB>1</SUB>-217<I>x</I><SUB>2</SUB><SUP>2</SUP>
+<P>
+
+<!-- MATH: $-2020x_2-4525 > 0$ -->
+-2020<I>x</I><SUB>2</SUB>-4525 &gt; 0,
+
+<P>
+
+<P><P>
+<BR>
+
+<!-- MATH: $A_3 = (-11000x_2^3+37500x_2^2-102750x_2+40375)x_1^3+
+(-700x_2^3$ -->
+<I>A</I><SUB>3</SUB> = (-11000<I>x</I><SUB>2</SUB><SUP>3</SUP>+37500<I>x</I><SUB>2</SUB><SUP>2</SUP>-102750<I>x</I><SUB>2</SUB>+40375)<I>x</I><SUB>1</SUB><SUP>3</SUP>+
+(-700<I>x</I><SUB>2</SUB><SUP>3</SUP>
+<P>
+
+<!-- MATH: $-15850x_2^2+141250x_2-27500)x_1^2+
+(3680x_2^3+12935x_2^2$ -->
+-15850<I>x</I><SUB>2</SUB><SUP>2</SUP>+141250<I>x</I><SUB>2</SUB>-27500)<I>x</I><SUB>1</SUB><SUP>2</SUP>+
+(3680<I>x</I><SUB>2</SUB><SUP>3</SUP>+12935<I>x</I><SUB>2</SUB><SUP>2</SUP>
+<P>
+
+<!-- MATH: $-71900x_2-19625)x_1-764x_2^3-3280x_2^2+7000x_2+9000 > 0$ -->
+-71900<I>x</I><SUB>2</SUB>-19625)<I>x</I><SUB>1</SUB>-764<I>x</I><SUB>2</SUB><SUP>3</SUP>-3280<I>x</I><SUB>2</SUB><SUP>2</SUP>+7000<I>x</I><SUB>2</SUB>+9000 &gt; 0.
+
+<P>
+
+<P><P>
+<BR>
+After performing QE for this, we
+have ``true''.
+In the case of  
+<!-- MATH: $(x_1,x_2) \in {\bf R}^2$ -->
+<IMG
+ WIDTH="110" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.gif"
+ ALT="$(x_1,x_2) \in {\bf R}^2$">,
+after performing QE for
+
+<!-- MATH: $\exists x_1 \exists x_2 (A_1 \land A_2 \land A_3)$ -->
+<IMG
+ WIDTH="181" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$\exists x_1 \exists x_2 (A_1 \land A_2 \land A_3)$">we also have  true.</DIV><P></P>
+
+<P>
+<P>
+<DIV><A NAME="SDP"><B>Algorithm  2</B></A> (linear objective minimization problems)  &nbsp; 
+``minimize '<I>c</I><SUP><I>T</I></SUP> <I>X</I> subject to 
+<!-- MATH: $M(X) >_d (or  \geq_d) 0$ -->
+<IMG
+ WIDTH="156" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$M(X) >_d (or \geq_d) 0$">.
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>Transform 
+
+<!-- MATH: $M(X) >_d (or  \geq_d) 0$ -->
+<IMG
+ WIDTH="156" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$M(X) >_d (or \geq_d) 0$">
+to an equivalent formula
+
+<!-- MATH: $\varphi(X)$ -->
+<IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\varphi(X)$">
+by using Sylvester's theorem.
+<P>
+<DT>2.
+<DD>Assign the new variable <I>z</I> to the objective function; 
+<!-- MATH: $z-c^T X \geq 0$ -->
+<IMG
+ WIDTH="106" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.gif"
+ ALT="$z-c^T X \geq 0$">.
+
+<P>
+<DT>3.
+<DD>Construct the first-order formula 
+
+<!-- MATH: $\psi = \exists X  \ (\varphi(X) \ \land \ z-c^T X \geq 0 )$ -->
+<IMG
+ WIDTH="264" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$\psi = \exists X \ (\varphi(X) \ \land \ z-c^T X \geq 0 )$">.
+
+<P>
+<DT>4.
+<DD>Perform QE for <IMG
+ WIDTH="18" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$\psi$">.
+</DL></DIV><P></P>
+
+<P>
+We consider some examples (which are modified one taken 
+from [<A
+ HREF="node8.html#VandB">20</A>]), and apply the above mentioned method 
+to them in order to demonstrate the potential of QE approach 
+to SDP problems.
+
+<P>
+
+<P>
+<BR>
+
+<IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.gif"
+ ALT="$\bullet$"><B>Non-Parametric:</B>  <I>Minimize </I><I>x</I><SUB>1</SUB>+<I>x</I><SUB>2</SUB><I> subject to </I>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\left [
+\begin{array}{ccc}
+1   & x_1 & 0 \\
+x_1 & x_2 & 0 \\
+0   & 0   & x_1+1
+\end{array}\right] \geq_d 0.
+
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="SDPProblem">&#160;</A><IMG
+ WIDTH="198" HEIGHT="78"
+ SRC="img66.gif"
+ ALT="\begin{displaymath}
+\left [
+\begin{array}{ccc}
+1 & x_1 & 0 \\
+x_1 & x_2 & 0 \\
+0 & 0 & x_1+1
+\end{array}\right] \geq_d 0.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+The semidefinite constraint (<A HREF="node6.html#SDPProblem">8</A>) is reduced to 
+a Boolean system of inequalities constraints by using 
+Sylvester's criterion;
+
+<P>
+
+<P>
+<BR>
+
+
+<!-- MATH: $\psi=
+(1 \geq 0)  \land
+(x_2 \geq 0)  \land
+(x_1+1 \geq 0) \land 
+(x_2-x_1^2 \geq 0) \land
+(x_2x_1+x_2) \geq 0) \land
+(x_1+1 \geq 0) \land
+(-x_1^3-x_1^2+x_2x_1+x_2 \geq 0).$ -->
+<IMG
+ WIDTH="938" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="$\psi=
+(1 \geq 0) \land
+(x_2 \geq 0) \land
+(x_1+1 \geq 0) \land
+(x_2-x_1^2 \ge...
+..._2x_1+x_2) \geq 0) \land
+(x_1+1 \geq 0) \land
+(-x_1^3-x_1^2+x_2x_1+x_2 \geq 0).$">
+<P>
+
+<P>
+<BR>
+Assign new slack variable <I>z</I> to objective function <I>x</I><SUB>1</SUB>+<I>x</I><SUB>2</SUB> and let
+
+<!-- MATH: $\psi' = \psi \land (z-x_1-x_2 \geq 0).$ -->
+<IMG
+ WIDTH="222" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$\psi' = \psi \land (z-x_1-x_2 \geq 0).$">Then the problem is formulated as a first-order formula
+
+<!-- MATH: $\varphi = \ ^\exists x_1 \ ^\exists x_2 \ ( \psi' ).$ -->
+<IMG
+ WIDTH="150" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$\varphi = \ ^\exists x_1 \ ^\exists x_2 \ ( \psi' ).$">After QE we have an equivalent qf formula describing
+the range of objective function;
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+4z + 1 \geq 0
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="nonpara">&#160;</A><IMG
+ WIDTH="82" HEIGHT="32"
+ SRC="img70.gif"
+ ALT="\begin{displaymath}
+4z + 1 \geq 0
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(9)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+
+<IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.gif"
+ ALT="$\bullet$"><B>Parametric(1):</B>  <I>Minimize </I><I>ax</I><SUB>1</SUB>+<I>x</I><SUB>2</SUB><I> subject to  (<A HREF="node6.html#SDPProblem">8</A>) 
+with a parameter </I><I>a</I><I>.</I>
+
+<P>
+
+<P>
+<BR>
+Let 
+<!-- MATH: $\psi'_{P_1} = \psi \land (z-ax_1-x_2 \geq 0).$ -->
+<IMG
+ WIDTH="243" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.gif"
+ ALT="$\psi'_{P_1} = \psi \land (z-ax_1-x_2 \geq 0).$">The problem is formulated as 
+
+<!-- MATH: $\varphi_{P_1} = \ ^\exists x_1 \ ^\exists x_2 \ ( \psi'_{P_1} ).$ -->
+<IMG
+ WIDTH="178" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.gif"
+ ALT="$\varphi_{P_1} = \ ^\exists x_1 \ ^\exists x_2 \ ( \psi'_{P_1} ).$">After QE we have an equivalent qf formula 
+describing
+the range of objective function <I>z</I> with a parameter <I>a</I>;
+
+<P>
+
+<P>
+<BR>
+<!-- MATH: $(a + z - 1 \geq 0) \lor
+(z \geq 0) \lor 
+((a^3 - 2a^2z + a^2  + az^2  - az \leq 0)
+\land (a^2  - az \geq 0) \land (a - z + 1 \leq 0) \land (a = 0))
+\lor ((a^3 - a^2  + 3az - 2z \leq 0) \land 
+(a^2  + 4z \geq 0) \land (a^2 + 2z \geq 0) \land (a - 2 \leq 0))
+\lor ((a^2 + 4z \geq 0) \land (a - 2 < 0)).$ -->
+<IMG
+ WIDTH="1672" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="$(a + z - 1 \geq 0) \lor
+(z \geq 0) \lor
+((a^3 - 2a^2z + a^2 + az^2 - az \leq ...
+... + 2z \geq 0) \land (a - 2 \leq 0))
+\lor ((a^2 + 4z \geq 0) \land (a - 2 < 0)).$">
+
+<P>
+
+<P>
+<BR>
+If we substitute a parameter <I>a</I> with 1 and simplify the result,
+we have same result as
+(<A HREF="node6.html#nonpara">9</A>).
+
+<P>
+
+<P><P>
+<BR>
+
+<IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.gif"
+ ALT="$\bullet$"><B>Restricted region:</B>  
+<I>Minimize </I><I>x</I><SUB>1</SUB>+<I>x</I><SUB>2</SUB><I> subject to (<A HREF="node6.html#SDPProblem">8</A>)
+in restricted domains </I><I>D</I><SUB>1</SUB>,<I>D</I><SUB>2</SUB><I> respectively,
+where
+(i) </I>
+<!-- MATH: $D_1=
+\{ x_1,x_2 \in {\bf R} \ | \ 0 \leq  x_1 \leq 3, 0 \leq  x_2 \leq 5 \}$ -->
+<IMG
+ WIDTH="349" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.gif"
+ ALT="$D_1=
+\{ x_1,x_2 \in {\bf R} \ \vert \ 0 \leq x_1 \leq 3, 0 \leq x_2 \leq 5 \}$"><I>and 
+(ii) </I>
+<!-- MATH: $D_2=
+\{ x_1,x_2 \in {\bf R} \ | \ 0 \leq x_1 \leq 10, 5 \leq x_2 \leq 10 \}$ -->
+<IMG
+ WIDTH="367" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.gif"
+ ALT="$D_2=
+\{ x_1,x_2 \in {\bf R} \ \vert \ 0 \leq x_1 \leq 10, 5 \leq x_2 \leq 10 \}$"><I>.</I>
+
+<P>
+
+<P>
+<BR>
+(i) In this case the problem is formulated as 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\varphi_{D_1} = \ ^\exists x_1 \ ^\exists x_2 (\psi' \land
+(0 \leq  x_1 \leq 3 \land  0 \leq  x_2 \leq 5) )
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="376" HEIGHT="34"
+ SRC="img76.gif"
+ ALT="\begin{displaymath}\varphi_{D_1} = \ ^\exists x_1 \ ^\exists x_2 (\psi' \land
+(0 \leq x_1 \leq 3 \land 0 \leq x_2 \leq 5) )\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+After QE we have 
+<!-- MATH: $4z + 1 \geq 0$ -->
+<IMG
+ WIDTH="89" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.gif"
+ ALT="$4z + 1 \geq 0$">.
+
+<P>
+
+<P>
+<BR>
+(ii) In this case the problem is formulated as 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\varphi_{D_2} = \ ^\exists x_1 \ ^\exists x_2 (\psi' \land
+(0 \leq  x_1 \leq 10 \land  5 \leq  x_2 \leq 10) )
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="394" HEIGHT="34"
+ SRC="img78.gif"
+ ALT="\begin{displaymath}\varphi_{D_2} = \ ^\exists x_1 \ ^\exists x_2 (\psi' \land
+(0 \leq x_1 \leq 10 \land 5 \leq x_2 \leq 10) )\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+After QE we have 
+
+<P>
+
+<P>
+<BR>
+<!-- MATH: $(z - 4 \geq 0) \lor
+((z^2  - 10z + 20 \leq 0) \land (z^2  - 20z + 90 \geq 0)
+\land (4z + 1 \geq 0) \land (z \leq 0))
+\lor ((z^2  - 10z + 20 \leq 0) \land
+(z^2  - 20z + 90 \geq 0) \land (4z + 1 \geq 0) \land (z < 0)).$ -->
+<IMG
+ WIDTH="1210" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.gif"
+ ALT="$(z - 4 \geq 0) \lor
+((z^2 - 10z + 20 \leq 0) \land (z^2 - 20z + 90 \geq 0)
+\la...
+... 20 \leq 0) \land
+(z^2 - 20z + 90 \geq 0) \land (4z + 1 \geq 0) \land (z < 0)).$">
+
+<P>
+
+<P><P>
+<BR>
+
+<IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.gif"
+ ALT="$\bullet$"><B>Parametric(2):</B> <I>Minimize </I><I>x</I><SUB>1</SUB>+<I>x</I><SUB>2</SUB><I> subject to 
+</I>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\left [
+\begin{array}{ccc}
+s   & x_1 & 0 \\
+x_1 & x_2 & 0 \\
+0   & 0   & x_1+1
+\end{array}\right] \geq_d 0.
+
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="SDPProblem2">&#160;</A><IMG
+ WIDTH="198" HEIGHT="78"
+ SRC="img80.gif"
+ ALT="\begin{displaymath}
+\left [
+\begin{array}{ccc}
+s & x_1 & 0 \\
+x_1 & x_2 & 0 \\
+0 & 0 & x_1+1
+\end{array}\right] \geq_d 0.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P><I>where </I><I>s</I><I> is a parameter.</I>
+
+<P>
+
+<P>
+<BR>
+The semidefinite constraint (<A HREF="node6.html#SDPProblem2">10</A>) is reduced to 
+
+<P>
+
+<P>
+<BR>
+
+
+<!-- MATH: $\psi_P=
+(s \geq 0)  \land
+(x_2 \geq 0)  \land
+(x_1+1 \geq 0) \land
+(sx_2-x_1^2 \geq 0) \land
+(x_2x_1+x_2) \geq 0) \land
+(s(x_1+1) \geq 0) \land
+((x_2x_1+x_2)s-x_1^3-x_1^2 \geq 0).$ -->
+<IMG
+ WIDTH="988" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.gif"
+ ALT="$\psi_P=
+(s \geq 0) \land
+(x_2 \geq 0) \land
+(x_1+1 \geq 0) \land
+(sx_2-x_1^2 \...
+...+x_2) \geq 0) \land
+(s(x_1+1) \geq 0) \land
+((x_2x_1+x_2)s-x_1^3-x_1^2 \geq 0).$">
+<P>
+
+<P>
+<BR>
+Let 
+<!-- MATH: $\psi'_{P_2} = \psi_P \land (z-x_1-x_2 \geq 0).$ -->
+<IMG
+ WIDTH="245" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.gif"
+ ALT="$\psi'_{P_2} = \psi_P \land (z-x_1-x_2 \geq 0).$">Then the problem is formulated as a first-order formula
+
+<!-- MATH: $\varphi_{P_2} = \ ^\exists x_1 \ ^\exists x_2 \ ( \psi'_{P_2} ).$ -->
+<IMG
+ WIDTH="178" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.gif"
+ ALT="$\varphi_{P_2} = \ ^\exists x_1 \ ^\exists x_2 \ ( \psi'_{P_2} ).$">After QE we obtain
+
+<P>
+
+<P>
+<BR>
+<!-- MATH: $(sz + s - 1 \geq 0 \land s > 0 \land z + 1 \geq 0)
+\lor (sz + s - 1 \geq 0 \land s \geq 0 \land z + 1 \geq 0)
+ \lor (sz + s \geq 0 \land s \geq 0 \land z = 0) \lor (s^2  + 4sz \geq 0 \land ((
+s^2  - 2s \leq 0 \land sz + s - 1 \leq 0 \land s - 2 \leq 0 \land s \geq 0 \land (
+s^2  + 3sz - s - 2z \leq 0
+ \lor (s + z - 1 \leq 0 \land (sz + s - 1 = 0 \lor z = 0)))
+ \land (s + 2z \geq 0 \lor z = 0)) \lor (s + 2z \geq 0 \land s \geq 0
+ \land (s^2  - 2s \leq 0 \lor sz + s - 1 \geq 0 \lor s = 0)
+ \land (s^2  - 2s \leq 0 \lor s > 0) \land (
+(s^2  + 3sz - s - 2z \leq 0 \land (sz + s - 1 \leq 0 \lor z = 0))
+ \lor (s + z - 1 \geq 0 \land (sz + s - 1 \geq 0 \lor z = 0)))
+ \land (sz + s - 1 \geq 0 \lor s - 2 \leq 0)))) \lor (s \geq 0 \land z \geq 0)
+ \lor (s^2  - 2s \leq 0 \land s + 4z \geq 0 \land s - 2 \leq 0 \land s > 0)
+ \lor (s^2 z + s^2  - s \geq 0 \land s > 0)
+ \lor (s^2  - 2s \leq 0 \land s + 4z \geq 0 \land s - 2 < 0 \land s > 0)
+ \lor (s > 0 \land z \geq 0) \lor (s > 0
+ \land (s^2 z + s^2  - s > 0 \lor (s^2  - 2s < 0 \land sz + s - 1 = 0))).$ -->
+<IMG
+ WIDTH="5593" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.gif"
+ ALT="$(sz + s - 1 \geq 0 \land s > 0 \land z + 1 \geq 0)
+\lor (sz + s - 1 \geq 0 \la...
+...(s > 0
+\land (s^2 z + s^2 - s > 0 \lor (s^2 - 2s < 0 \land sz + s - 1 = 0))).
+$">
+
+<P>
+
+<P>
+<BR>
+If we substitute the parameter <I>s</I> with 1
+and simplify the result, we have same result as
+(<A HREF="node6.html#nonpara">9</A>).
+
+<P>
+
+<P><P>
+<BR>
+
+<IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.gif"
+ ALT="$\bullet$">
+<B>Parameter uncertainty:</B>
+ <I>Minimize </I><I>x</I><SUB>1</SUB>+<I>x</I><SUB>2</SUB><I> subject to (<A HREF="node6.html#SDPProblem2">10</A>)
+within the regions of a parameter </I><I>s</I><I> (i) </I>
+<!-- MATH: $-5 \leq s \leq -1$ -->
+<IMG
+ WIDTH="109" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.gif"
+ ALT="$-5 \leq s \leq -1$"><I>,
+(ii) </I>
+<!-- MATH: $-10 \leq s \leq 0$ -->
+<IMG
+ WIDTH="104" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.gif"
+ ALT="$ -10 \leq s \leq 0$"><I>, respectively.</I>
+
+<P>
+
+<P>
+<BR>
+For (i),(ii), the problem is formulated as a first-order formula;
+
+<!-- MATH: $\varphi_{(i)} = \ ^\exists x_1 \ ^\exists x_2
+(\psi'_{P_2} \land (-5 \leq s \leq -1))$ -->
+<IMG
+ WIDTH="305" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$\varphi_{(i)} = \ ^\exists x_1 \ ^\exists x_2
+(\psi'_{P_2} \land (-5 \leq s \leq -1))$">,
+
+<!-- MATH: $\varphi_{(ii)} = \ ^\exists x_1 \ ^\exists x_2
+(\psi'_{P_2} \land ( -10 \leq s \leq 0))$ -->
+<IMG
+ WIDTH="305" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$\varphi_{(ii)} = \ ^\exists x_1 \ ^\exists x_2
+(\psi'_{P_2} \land ( -10 \leq s \leq 0))$">,
+respectively.
+After QE we obtain ``false'' for (i) and for (ii)
+
+<P>
+
+<P>
+<BR>
+<!-- MATH: $(sz + s - 1 \geq 0 \land s = 0 \land z + 1 \geq 0)
+\lor (sz + s \geq 0 \land s = 0 \land z = 0) \lor (s^2  + 4sz \geq 0 \land ((
+s^2  - 2s \leq 0 \land sz + s - 1 \leq 0 \land s = 0 \land (
+s^2  + 3sz - s - 2z \leq 0
+ \lor (s + z - 1 \leq 0 \land (sz + s - 1 = 0 \lor z = 0)))
+ \land (s + 2z \geq 0 \lor z = 0)) \lor (s^2  - 2s \leq 0 \land s + 2z \geq 0
+ \land s = 0 \land (
+(s^2  + 3sz - s - 2z \leq 0 \land (sz + s - 1 \leq 0 \lor z = 0))
+ \lor (s + z - 1 \geq 0 \land (sz + s - 1 \geq 0 \lor z = 0))))))
+ \lor (s = 0 \land z \geq 0).$ -->
+<IMG
+ WIDTH="2936" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.gif"
+ ALT="$(sz + s - 1 \geq 0 \land s = 0 \land z + 1 \geq 0)
+\lor (sz + s \geq 0 \land s...
+... \geq 0 \land (sz + s - 1 \geq 0 \lor z = 0))))))
+\lor (s = 0 \land z \geq 0).$">
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html72"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html70"
+ HREF="anai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html64"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html73"
+ HREF="node7.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html71"
+ HREF="anai.html">Solving LMI and BMI</A>
+<B> Previous:</B> <A NAME="tex2html65"
+ HREF="node5.html">Optimization by QE and</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

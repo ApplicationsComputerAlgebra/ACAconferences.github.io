@@ -1,0 +1,11 @@
+Uli Walther
+
+Department of Mathematics, Purdue University, West Lafayette, Indiana, USA
+
+"Computational Algebraic Geometry and Switching Surfaces in Optimal Control"
+
+Some problems in control can be reduced to finding suitable real solutions of
+algebraic equations.  In particular, such a problem arises in the context of
+switching surfaces in optimal control.  In this note, we apply Gr"obner basis
+techniques and some facts from the theory of real systems to find effective
+solutions to the classical problem of time-optimal control.

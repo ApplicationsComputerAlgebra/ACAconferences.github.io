@@ -1,0 +1,42 @@
+An Algebraic Model for implementing Expert Systems based on the Knowledge of
+different Experts.
+
+Antonio Hernando, Eugenio Roanes-Lozano
+
+Keywords: Expert Systems, Groebner Basis, Boolean logic
+
+The aim of this paper is to expound an original algebraic model for managing
+the knowledge provided by different expert humans when developing expert
+systems.  This model is conceived as an extension of classical propositional
+logics in which each proposition is associated with a set of human experts who
+agree with it.  In our model, the logical notions of tautological consequence
+and consistency of a set of formulae are reformulated taking into account
+the criteria and the knowledge of the different experts.  The core of the
+paper is related to the discovery of a remarkable relation between these
+redefined logical concepts with the calculation of reduced Groebner bases
+on an ideal of polynomials.
+
+Expert systems are computational programs on a certain domain which try to
+simulate the decisions that human experts on this domain would take.  In the
+last years, much research has been focused on developing both techniques
+for representing the human knowledge in a computer and techniques for
+reasoning automatically.
+
+An interesting way for representing knowledge in an expert system is based on
+describing it through propositional logic.  By means of a mathematical result,
+an expert system based on > propositional logic can be transformed to an
+algebraic problem.  In this way, expert systems based on propositional logic
+may be very easy implemented by means of a computer algebra system like CoCoA
+or Polybori.  Making use of this result, different expert systems have been so
+far developed in the last recent years.
+
+In some interesting domains very related to the development of experts
+systems, like medicine, different human experts may have different criteria
+or opinions in some points which may lead to different conclusions or
+which may be even contradictory.  In order to manage the different criteria
+of these experts, we have extended the propositional logic redefining the
+concepts of consistence and tautological consequence.  Taking into account
+this logical concepts, we have obtained a relation to the calculation of
+Groebner basis.  This results allows us to deal algebraically the development
+of this expert systems which takes into account the criteria of different
+human experts.

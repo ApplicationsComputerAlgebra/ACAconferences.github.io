@@ -1,0 +1,4 @@
+Symbolic Algorithms, Differential Algebra, and Differential Equations
+                 Mene Doffou and Robert Grossman
+                Laboratory for Advanced Computing
+                University of Illinois at Chicago

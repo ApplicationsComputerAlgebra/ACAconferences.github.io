@@ -1,0 +1,32 @@
+  Title:        Connecting External Engines through OMEI: Open
+                Mathematical Engine Interface
+  Authors:      Weidong LIAO, Dongdai LIN, Paul S. Wang
+  Affiliation:  Institute of Computational Mathematics,
+                Dept. of Computer Science, Kent State University
+  Abstract:
+Open Mathematical Engine Interface (OMEI) is an application programming
+interface specification for providing computational services through external
+engine for compute servers.  The background and use scenarios of OMEI, the OMEI
+specification and its implementation in Java environment are discussed.
+
+The Internet has been a platform for a variety of services for more than one
+decade, but the deployment of mathematical services over the Internet has
+relatively lagged behind.  Cooperating with other institutions worldwide, the
+Institute of Computational Mathematical at Kent State University initiated an
+IAMC project to provide an infrastructure and framework for bringing
+mathematical computational and educational services over the Internet.
+
+The IAMC infrastructure includes a layered protocol model for connecting IAMC
+client and server effectively and efficiently over the Internet environment, an
+external engine interface (EEI) for binding external compute engines to the
+IAMC server to provide real computational services, and a software framework
+for facilitating the development of IAMC systems.  The OMEI is an example of
+EEI; it is a programming interface that intends to standardize the access
+pattern to external compute engines.
+
+In this paper we concentrate on OMEI.  First we introduce the background and
+motivation behind OMEI.  Then several use scenarios of OMEI specification will
+be described; we can see that OMEI cannot only be used with compute servers,
+but also the regular front-ends.  The OMEI specification and OMEI
+implementation in Java environment will be also discussed.  Finally we provide
+some conclusions and our plans about OMEI.

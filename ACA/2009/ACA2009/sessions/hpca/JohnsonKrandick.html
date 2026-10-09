@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Special Session on Applications of Math Software to Mathematical Research</title>
+<meta name="Description" content="">
+<meta name="Keywords" content="">
+<meta name="Author" content="ETS">
+<meta name="Generator" content="WebExpert 2000">
+</head>
+<body bgcolor="#f9fbf1" text="#000000" link="#993300" vlink="#993300" alink="#993300">
+<h2><i><div align="center">Special Session on <u>High-Performance Computer Algebra</u></div></i></h2>
+<p>&nbsp;</p>
+<table border="0">
+    <tr>
+      <td width="40"></td>
+      <td>
+   
+ 
+<p><b><i>Title:</i>&nbsp;&nbsp;&nbsp; Code Generation and Autotuning in Computer Algebra
+</b></p>
+  
+  
+<b> Jeremy Johnson*, Werner Krandick*, David Richardson*, Anatole Ruslanov+</b><br>
+*Department of Computer Science, Drexel University, USA<br>
++Department of Computer and Information Sciences, SUNY Fredonia, USA<p>
+
+
+<div style="text-align:justify;"> 
+
+<p>Recently many numeric computing kernels such as matrix multiplication [ATLAS and PHiPAC], 
+sparse matrix vector product [Sparsity] the fast Fourier transform [FFTW, UHFFT], and 
+more general DSP transforms [SPIRAL] have utilized code generation and automated 
+performance tuning to obtain high-performance implementations tuned to specific 
+platforms.  This talk outlines how these techniques may be applied to symbolic 
+computation and computer algebra systems.
+</p>		   
+
+<p>Examples demonstrating the benefit of these techniques are drawn from the
+papers [ISSAC06, ISSAC05] which show that the performance of the Taylor shift
+operation used in real root isolation can be substantially improved through
+delayed carry propagation, radix reduction, and an interlaced coefficient
+representation combined with register tiling.</p>
+
+<p>This speedup is obtained over a straightforward implementation that utilizes
+the heavily optimized integer addition routines from GMP.  The resulting
+code is significantly more complicated that the original code utilizing GMP.
+Moreover, the code can be tuned using different tile sizes, amounts of
+unrolling and different scheduling strategies.  Note that compilers are not
+capable of performing this tuning due to various dependencies and lack
+higher knowledge needed to transform the code.</p> 
+
+<p>The particular tuning parameters used depends on the platform (e.g. number
+of registers, number of integer units, etc.) and furthermore, the optimal
+parameter settings are not easily determined without runtime experiments.
+This talk presents a code generator from [Richardson09] that produces code 
+with different tile sizes and empirically searches for the best implementation 
+on a given platform.</p>
+							<br><br>
+<p>[ISSAC06]  Jeremy Johnson, Werner Krandick, Kevin Lynch, David Richardson, and 
+Anatole Ruslanov, High-performance implementations of the Descartes method.  
+In J.-G. Dumas, editor, International Symposium on Symbolic and Algebraic Computation, 
+pp. 154-161, ACM Press, 2006.</p>
+
+<p>[ISSAC05]  Jeremy Johnson, Werner Krandick, and Anatole Ruslanov, Architecture-aware 
+classical Taylor shift by 1.  In M. Kauers, editor, International Symposium on Symbolic 
+and Algebraic Computation, pp. 200-207, ACM Press, 2005.</p>
+
+<p>[Richardson09] David Richardson, Efficient Programming Techniques for the SACLIB 
+Computer Algebra Library, Ph.D. Thesis, Drexel University, 2009. </p>
+
+
+</div> 
+	  
+	  </td>
+      <td width="60"></td>
+    </tr>
+</table>
+
+	  
+</body>
+</html>
+

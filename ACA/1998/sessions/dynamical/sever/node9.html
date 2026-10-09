@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Automata Networks</TITLE>
+<META NAME="description" CONTENT="Automata Networks">
+<META NAME="keywords" CONTENT="sever">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sever.css">
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html109"
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html107"
+ HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html101"
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html110"
+ HREF="node10.html">Iterated Function Systems as</A>
+<B> Up:</B> <A NAME="tex2html108"
+ HREF="node8.html">Automata Network Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html102"
+ HREF="node8.html">Automata Network Algorithm</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00051000000000000000">
+Automata Networks</A>
+</H2>
+
+<P>
+We define an <I>Automata Network</I> <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\sigma$">
+as a structure
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+(C, A, S_0, N, \Delta),
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="117" HEIGHT="31"
+ SRC="img56.gif"
+ ALT="\begin{displaymath}(C, A, S_0, N, \Delta),
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where
+<UL>
+<LI><I>C</I> is a set of <I>cells</I>;
+<LI><I>A</I> is an <I>alphabet of states</I> (attributes);
+<LI>
+<!-- MATH: $S:\,C \rightarrow A$ -->
+<IMG
+ WIDTH="84" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.gif"
+ ALT="$S:\,C \rightarrow A$">
+is a <I>state</I>, <IMG
+ WIDTH="39" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\qquad$">
+<I>S</I><SUB>0</SUB>  - an <I>initial</I> state;
+<LI>
+<!-- MATH: $N:\,C \rightarrow \cal{P}(C)$ -->
+<IMG
+ WIDTH="112" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$N:\,C \rightarrow \cal{P}(C)$">
+is a <I>neighborhood system</I>, <IMG
+ WIDTH="39" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\qquad$">
+
+<!-- MATH: $\cal{P}(C)$ -->
+<IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\cal{P}(C)$">
+is the power-set of <I>C</I>, <BR>
+     
+<!-- MATH: $\forall c \in C: \;\; N(c)$ -->
+<IMG
+ WIDTH="113" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.gif"
+ ALT="$\forall c \in C: \;\; N(c)$">&nbsp;is the <I>neighborhood</I> of <I>c</I>;
+<LI>
+<!-- MATH: $\Delta:\,\Sigma \rightarrow \Sigma$ -->
+<IMG
+ WIDTH="86" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img62.gif"
+ ALT="$\Delta:\,\Sigma \rightarrow \Sigma$">
+is a <I>global dynamic
+        rule</I> (GDR), <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.gif"
+ ALT="$\;\;\;\;$">
+
+<!-- MATH: $\Sigma = \{S\,|\,S \mbox{\rm ~is a state}\}$ -->
+<IMG
+ WIDTH="160" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$\Sigma = \{S\,\vert\,S \mbox{\rm ~is a state}\}$">.
+</UL>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\Delta^n:\, S_{n-1} \longmapsto S_n \qquad n=1,2, \dots, M
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="273" HEIGHT="31"
+ SRC="img66.gif"
+ ALT="\begin{displaymath}\Delta^n:\, S_{n-1} \longmapsto S_n \qquad n=1,2, \dots, M
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+The global dynamic rule <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img67.gif"
+ ALT="$\Delta$">
+comes about from the <I>local
+dynamic rules</I> (LDRs)
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\delta_c:\, \Sigma_{N(c)} \rightarrow A,
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="112" HEIGHT="33"
+ SRC="img68.gif"
+ ALT="\begin{displaymath}\delta_c:\, \Sigma_{N(c)} \rightarrow A,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where <I>S</I><SUB><I>N</I>(<I>c</I>)</SUB> is the restriction of <I>S</I> to <I>N</I>(<I>c</I>). Every LDR
+<IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$\delta_c$">
+gives a new state value to the cell <I>c</I> as a function of
+cell states from the neighborhood <I>N</I>(<I>c</I>) of <I>c</I>. The action of
+<IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img67.gif"
+ ALT="$\Delta$">
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\Delta(S) = \bigcup_{c \in C}S[S(c) \leftarrow
+\delta_c(S_{N(c)})],
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="234" HEIGHT="49"
+ SRC="img70.gif"
+ ALT="\begin{displaymath}\Delta(S) = \bigcup_{c \in C}S[S(c) \leftarrow
+\delta_c(S_{N(c)})],
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(14)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+is the union of the states obtained by replacing the state of each
+cell <I>c</I> accordingly to <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$\delta_c$">.
+
+<P>
+Automata Networks can be considered as a generalization of Cellular Automata,
+the main difference is our automata networks have non-regular structure
+of the system of the cell neighborhoods.
+There is no a common template of vicinity for cells, the neighborhoods of
+cells have variable cardinality and, hence, the LDRs have variable
+arity. There are possible cases when 
+<!-- MATH: $c \notin N(c)$ -->
+<IMG
+ WIDTH="68" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.gif"
+ ALT="$c \notin N(c)$">
+and even 
+<!-- MATH: $N(c)
+=\{\emptyset\}$ -->
+<IMG
+ WIDTH="88" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.gif"
+ ALT="$N(c)
+=\{\emptyset\}$">.
+
+<P>
+An automata network <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\sigma$">
+works as follows. If an initial state
+<I>S</I><SUB>0</SUB> is given, it iteratively applies the GDR <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img67.gif"
+ ALT="$\Delta$">
+until it
+reaches a steady attractive state <I>S</I><SUB><I>A</I></SUB>:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+S_0 \stackrel{\Delta}{\longrightarrow} S_1
+\stackrel{\Delta}{\longrightarrow} S_2
+      \stackrel{\Delta}{\longrightarrow} \dots
+      \stackrel{\Delta}{\longrightarrow} S_A.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="240" HEIGHT="29"
+ SRC="img73.gif"
+ ALT="\begin{displaymath}S_0 \stackrel{\Delta}{\longrightarrow} S_1
+\stackrel{\Delta}...
+...longrightarrow} \dots
+\stackrel{\Delta}{\longrightarrow} S_A.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The cells work synchronously in parallel governed by some global
+synchronization signals.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html109"
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html107"
+ HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html101"
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html110"
+ HREF="node10.html">Iterated Function Systems as</A>
+<B> Up:</B> <A NAME="tex2html108"
+ HREF="node8.html">Automata Network Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html102"
+ HREF="node8.html">Automata Network Algorithm</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

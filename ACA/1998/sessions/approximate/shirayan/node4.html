@@ -1,0 +1,34 @@
+
+<H2><A NAME="SECTION00031000000000000000"><tex2html_anchor_invisible_mark></A><A NAME="GB"><tex2html_anchor_mark></A><BR>
+Gr&#246;bner bases
+</H2>
+Gr&#246;bner basis (GB) techniques are a valuable tool for solving many problems 
+in polynomial ideal theory. As is well known, 
+the process of computing a GB may involve large numbers of 
+intermediate coefficients - say from a field <I>k</I> - even when the final GB 
+does not.  In fact, the cost of performing exact 
+arithmetic in <I>k</I> with the intermediate coefficients is a major factor 
+determining the computational cost of computing a GB. 
+When <I>k</I> is a subfield of the real numbers,
+using floating-point computation between coefficients
+may reduce the computational cost. 
+
+<P>
+Buchberger's algorithm is an algorithm
+to compute Gr&#246;bner bases but it is unstable with respect to input 
+coefficients because there is a predicate whether a remainder polynomial 
+is zero or whether a coefficient is zero. 
+We applied the stabilization techniques to it. 
+One of our observation is:
+our approach may be unsuccessful if input polynomials contain a polynomial
+of too high degree or with too many terms, because even using floating-point
+computation does not solve the problem of the number of reductions or 
+the number of polynomials that we must retain to make S-polynomials.
+But it will be useful when <#228#><I>the growth of coefficients</I><#228#> is
+the main reason why the computation of a Gr&#246;bner basis
+by the usual Buchberger algorithm is slow. For further details
+see [#shirayan#<tex2html_cite_mark>#1##<tex2html_cite_mark>#,#shirayan_j#<tex2html_cite_mark>#1##<tex2html_cite_mark>#].
+
+<P>
+We refer the reader to [#buch#<tex2html_cite_mark>#1##<tex2html_cite_mark>#,#CLO#<tex2html_cite_mark>#1##<tex2html_cite_mark>#] for the theory of Gr&#246;bner bases
+and Buchberger's algorithm.

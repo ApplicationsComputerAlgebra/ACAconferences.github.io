@@ -1,0 +1,28 @@
+Teaching Basic Mechanics With Computer Algebra, Sophia and Maple
+
+(M. Lesser)
+
+The standard approach to using computer algebra in basic mechanics courses has
+been to apply a standard CAS such as Maple to carry out calculations in
+calculator mode or with some programming built around the specific example or
+problem being examined.  Another approach is to use the CAS as a foundation on
+which one builds a tool kit of routines that allows the student to set up the
+algorithm for the solution of general classes of mechanics problems. Sophia is
+the name of such a tool kit, developed at the Royal Institute, for teaching
+both basic and advanced mechanics.  It has for the most part been implemented
+as an addition to Maple, however versions have also been produced to work in
+other CAS.  The constructs used in Sophia are designed to have pedagogical
+significance and when useful, an infix structure similar to that used in
+working with paper and pencil.  Details, such as change of frames, are done
+automatically.  The advanced version allows use of modern algorithms, such as
+Kane's equations, for treating multibody nonholonomic systems with complex
+constraints.  In this lecture the main features of Sophia and examples of how
+they are used in basic mechanics education will be demonstrated.  Only slight
+reference will be made to more advanced applications.  The software and
+tutorial information is also available at the web site
+http://www.mech.kth.se/~mlesser
+
+Reference:
+M. Lesser
+The Analysis of Complex Nonlinear Mechanical Systems, a computer algebra based
+approach. World Scientific Press.

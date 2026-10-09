@@ -1,0 +1,38 @@
+;(function($) {
+    if($('body').hasClass('fl-disable-side-nav') == false) {
+        var wrapper = $('<div />').addClass('fl-side-nav-wrapper'),
+            nav = $('<ul />').addClass('fl-side-nav').appendTo(wrapper),
+            $rows = $('[data-side-nav]'),
+            waypoints;
+
+        if ($rows.length > 0) {
+            function updateWaypoint(direction) {
+                var id = $(this).attr('id');
+
+                $('.fl-side-nav-item', wrapper).removeClass('active');
+                $('.fl-side-nav-link[href="#' + id + '"]', wrapper).parents('.fl-side-nav-item').addClass('active');
+            };
+
+            waypoints = $rows.waypoint({
+                handler: updateWaypoint,
+                offset: 25
+            });
+
+            $rows.each(function () {
+                var item = $('<li />').addClass('fl-side-nav-item').appendTo(nav),
+                    link = $('<a />').addClass('fl-side-nav-link')
+                        .attr('href', '#' + $(this).attr('id'))
+                        .data('target', $(this).attr('id'))
+                        .text($(this).data('side-nav'))
+                        .appendTo(item);
+
+                if ($(this).data('side-nav').length <= 0) {
+                    link.addClass('no-text');
+                }
+            });
+
+            wrapper.appendTo($('body'));
+        }
+    }
+
+}(jQuery));

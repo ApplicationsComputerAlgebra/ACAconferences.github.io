@@ -1,0 +1,17 @@
+Linear vs Quadratic Complexity -- which algorithm to use?
+by
+Alkiviadis G. Akritas, Adam Strzebonski and Panagiotis S. Vigklas
+
+
+It is ingrained in the minds of all of us that linear complexity algorithms
+should be preferred over algorithms with quadratic complexity since they are
+faster.  However, when we compute bounds on the values of the positive roots of
+polynomials speed and quality of the estimates do not always go together.  That
+is, whereas the faster linear complexity algorithms produce acceptable
+estimates, the estimates obtained from the slower quadratic complexity
+algorithms are much better.
+
+In this presentation we examine the performance of various linear and quadratic
+complexity algorithms for computing such bounds and find that in most cases it
+is preferable to use the latter ones -- as the  former are better only in very
+extreme cases.

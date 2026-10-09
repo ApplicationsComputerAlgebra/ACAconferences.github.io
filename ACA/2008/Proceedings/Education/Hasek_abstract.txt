@@ -1,0 +1,48 @@
+Introduction to Kinematics of Manipulators using Maple
+
+Roman Hasek
+hasek@pf.jcu.cz
+Pedagogical faculty, University of South Bohemia
+Ceske Budejovice, Czech Republic
+
+
+Computer algebra systems (CAS) enable teachers to bring various real-world
+problems into classrooms.  These programmes provide students and teachers with
+means to develop symbolic representation of selected real-world problems, model
+them graphically and solve them symbolically or numerically.  Such process,
+closed with solution and a functional model, is in our opinion very beneficial
+to develop true understanding of all utilized mathematical terms.
+
+The paper aims to present several examples that are closely connected to
+kinematics of serial robot-manipulators---forward and inverse kinematic
+problems and a velocity problem.  We will see that kinematics of simple
+mechanisms (at the beginning we can restrict ourselves to planar mechanisms)
+represent real and attractive problems whose solving require mostly basic
+knowledge of linear algebra, geometry, differential geometry and of methods of
+solving systems of nonlinear algebraic equations.  Suitable utilization of CAS
+relieves students of intricate computation and formulas manipulation and gives
+them opportunity to concentrate on the basic facts.  Moreover the graphical and
+programming tools of CAS enable us to build simple both planar and spatial
+movable models of respective manipulators.
+
+Some of the problems are introduced in courses of geometry and linear algebra
+within the mathematics teacher training programmes at the Pedagogical faculty
+of the University of South Bohemia. The forward kinematic problem serves as an
+illustration of the connection between linear algebra and geometry,
+particularly between matrices and geometric transformations. Examples
+corresponding to the inverse kinematic problem are used as means of
+introduction to the solving of systems of nonlinear equations.  More complex
+problems are assigned as student projects in the subject ``Solving problems
+using Maple'' which is one of those preparing students of teaching to use CAS
+programmes in education.
+
+The Pedagogical faculty of the University of South Bohemia educates teachers of
+mathematics for both elementary and secondary schools.  Students of mathematics
+teaching are familiarized with the CAS software Derive, Maple and Mathematica
+during their study.  Each of these programs plays its unique role in the
+teacher training.  The Derive 6 software in its Czech localization is, in our
+opinion, the most convenient to adopt in the education of mathematics at
+elementary and secondary schools. In 2004 we started with systematic
+preparation, of both students of mathematics teaching and teachers of
+mathematics, in using this software.  The Maple and Mathematica software is
+mainly used to support the teaching and study of mathematical academic courses.

@@ -1,0 +1,26 @@
+
+<H2><A NAME="SECTION00033000000000000000"><tex2html_anchor_invisible_mark></A><A NAME="ch"><tex2html_anchor_mark></A><BR>
+Convex hull
+</H2>
+Graham's algorithm is an algorithm to compute the two dimensional
+convex hull of a given finite set of points. The instability of 
+the algorithm derives from the predicate whether a 
+point is to the left or to the right to or directly on a line. 
+This predicate has zero discontinuity. We applied the stabilization 
+techniques to the algorithm and experimented on an input sample of 
+3,000 points, with success. 
+In this application, in some cases one can verify the correctness
+<#308#><I>visually</I><#308#>.
+
+<P>
+However, as far as the two dimensional convex hull 
+problem is concerned, in most cases a naive floating-point 
+computation method seems to be sufficient as well.
+
+<P>
+The stabilization techniques would be more effective for
+higher dimensional cases or other problems in computational geometry.
+
+<P>
+We refer the reader to [#PS#<tex2html_cite_mark>#1##<tex2html_cite_mark>#] for example for the details of
+Graham's algorithm and other topics in computational geometry.

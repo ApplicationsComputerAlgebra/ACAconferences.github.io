@@ -1,0 +1,25 @@
+Title:
+  A Special Quantifier Elimination Algorithm for Pham Systems
+Author:
+  Laureano Gonzalez-Vega and Neila Gonzalez-Campos
+  Departamento de Matematicas, Estadistica y Computacion,
+  Facultad de Ciencias, Universidad de Cantabria,
+  Avenida de los Castros s/n, 39071 Santander, Spain
+E_mail:
+  gvega@matesco.unican.es  gcampos@matesco.unican.es
+
+Abstract:
+  We show how to perform quantifier elimination in an efficient way for
+  existential formulae involving a  polynomial system of n equations in n
+  variables with parametric coefficients, where the polynomials have a
+  particular structure: a Pham system or equivalently a Grobner Bases with
+  respect some monomial ordering. The algorithm proceeds first in an
+  algebraic manner, computing a partition of the parameter space and
+  a finite number of polynomials for every set in the partition; in the
+  second phase, the algorithm proceeds in a combinatorial way, selecting,
+  among all possible sign conditions on these polynomials, those making
+  the considered formula true, using a precise rule.
+
+  The application of this method to the analysis of discretization
+  schemes depending on a parameter and to the emptiness checking of a
+  hypersurface will be also presented.

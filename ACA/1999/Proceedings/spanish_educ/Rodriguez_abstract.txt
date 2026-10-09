@@ -1,0 +1,11 @@
+Lola Rodriguez:
+
+Curricular Changes in the Tuition of Algebra
+
+Matrices, determinants and lineal systems of equations are the most traditional
+contents in the teaching of Algebra in Bachillerato (high-school) level.
+Nowadays, the teaching of these contents is based on algorithms related to
+matrix operations to solve lineal systems of equations. By using graphics with
+CAS we can go beyond the mere explanation of algorithms and focus on problems
+applied to real life situations. We are not trying to change the contents but
+the methodology to make the teaching and learning processes more efficient.

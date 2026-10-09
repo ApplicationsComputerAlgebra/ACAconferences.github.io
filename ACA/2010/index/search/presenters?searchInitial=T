@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Browse Author Index</title>
+	<meta name="description" content="Applicatios of Computer Algebra, University of Vlora June 24-27, 2010" />
+	<meta name="keywords" content="computer algebra; vlora" />
+	<meta name="generator" content="Open Conference Systems 2.1.1.2" />
+	
+
+	<link rel="stylesheet" href="http://aca2010.info/styles/common.css" type="text/css" />
+
+	
+	
+	<link rel="stylesheet" href="http://aca2010.info/styles/sidebar.css" type="text/css" />	<link rel="stylesheet" href="http://aca2010.info/styles/leftSidebar.css" type="text/css" />	<link rel="stylesheet" href="http://aca2010.info/styles/rightSidebar.css" type="text/css" />	<link rel="stylesheet" href="http://aca2010.info/styles/bothSidebars.css" type="text/css" />
+			<link rel="stylesheet" href="http://aca2010.info/plugins/themes/classicNavy/classicNavy.css" type="text/css" />
+	
+	<script type="text/javascript" src="http://aca2010.info/js/general.js"></script>
+	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript" src="http://aca2010.info/js/sizer.js" ></script>
+
+	<!-- Add stylesheets for the font sizer -->
+	<link rel="alternate stylesheet" title="Small" href="http://aca2010.info/styles/fontSmall.css" type="text/css" />
+	<link rel="stylesheet" title="Medium" href="http://aca2010.info/styles/fontMedium.css" type="text/css" />
+	<link rel="alternate stylesheet" title="Large" href="http://aca2010.info/styles/fontLarge.css" type="text/css" />
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+<div id="headerTitle">
+<h1>
+	<img src="http://aca2010.info/public/conferences/1/pageHeaderLogoImage_en_US.jpg" width="186" height="186" alt="UV logo" />
+	ACA 2010, Vlora, Albania,  June 24-27, 2010
+</h1>
+</div>
+</div>
+
+<div id="body">
+
+	<div id="sidebar">
+					<div id="leftSidebar">
+				<div class="block" id="sidebarInformation">
+	<span class="blockTitle">Information</span>
+	<ul>
+		<li><a href="../information/readers">For Readers</a></li>		<li><a href="../information/presenters">For Authors</a></li>	</ul>
+</div>
+<div class="block" id="sidebarUser">
+	<span class="blockTitle">User</span>
+		<form method="post" action="http://aca2010.info/index.php/aca2010/index/login/signIn">
+	<table>
+	<tr>
+		<td><label for="sidebar-username">Username</label></td>
+		<td><input type="text" id="sidebar-username" name="username" value="" size="12" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr>
+		<td><label for="sidebar-password">Password</label></td>
+		<td><input type="password" id="sidebar-password" name="password" value="" size="12" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">Remember me</label></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit" value="Log In" class="button" /></td>
+	</tr>
+	</table>
+	</form>
+	</div>	<div class="block" id="sidebarNavigation">
+		<span class="blockTitle">Conference Content</span>
+		
+		<span class="blockSubtitle">Search</span>
+		<form method="post" action="http://aca2010.info/index.php/aca2010/index/search/results">
+		<table>
+		<tr>
+			<td><input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /></td>
+		</tr>
+		<tr>
+			<td><select name="searchField" size="1" class="selectMenu">
+				<option label="All" value="">All</option>
+<option label="Authors" value="1">Authors</option>
+<option label="Title" value="2">Title</option>
+<option label="Abstract" value="4">Abstract</option>
+<option label="Index terms" value="120">Index terms</option>
+<option label="Full Text" value="128">Full Text</option>
+
+			</select></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Search" class="button" /></td>
+		</tr>
+		</table>
+		</form>
+		
+		<br />
+	
+	
+				<span class="blockSubtitle">Browse</span>
+		<ul>
+			<li><a href="schedConfs">By Conference</a></li>
+			<li><a href="presenters">By Author</a></li>
+			<li><a href="titles">By Title</a></li>
+					</ul>
+			</div>
+<div class="block" id="sidebarFontSize">
+	<span class="blockTitle">Font Size</span>
+	<a href="presenters?searchInitial=T#" onclick="setFontSize('Small');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_small.gif" width="16" height="14" border="0" alt="Small" /></a>&nbsp;
+	<a href="presenters?searchInitial=T#" onclick="setFontSize('Medium');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_medium.gif" width="16" height="14" border="0" alt="Medium" /></a>&nbsp;
+	<a href="presenters?searchInitial=T#" onclick="setFontSize('Large');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_large.gif" width="16" height="14" border="0" alt="Large" /></a>
+</div>
+			</div>
+							<div id="rightSidebar">
+				<div class="block" id="sidebarDevelopedBy">
+	<a class="blockTitle" href="http://pkp.sfu.ca/ocs/" id="developedBy">Open Conference Systems</a>
+</div>	<div class="block" id="sidebarHelp">
+	<a class="blockTitle" href="javascript:openHelp('http://aca2010.info/index.php/aca2010/index/help/view/user/topic/000006')">Conference Help</a>
+</div>
+			</div>
+			</div>
+
+<div id="main">
+<div id="navbar">
+	<ul class="menu">
+		<li><a href="http://aca2010.info/index.php/index/index">Home</a></li>
+		<li><a href="../about">About</a></li>
+					<li><a href="../login">Log In</a></li>
+			<li><a href="../user/account">Account</a></li>
+				<li><a href="../search.1">Search</a></li>
+								<li><a href="../schedConfs/archive">Archive</a></li>							<li><a href="../announcement">Announcements</a></li>
+						
+							<li><a href="http://univlora.edu.al">University of Vlora</a></li>
+					<li><a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/trackPolicies">Special Sessions</a></li>
+					<li><a href="https://sites.google.com/a/univlora.edu.al/aca-schedule/home/schedule">Schedule</a></li>
+			</ul>
+</div>
+
+<div id="breadcrumb">
+	<a href="http://aca2010.info/index.php/index/index/index">Home</a> &gt;
+			<a href="../search.1" class="hierarchyLink">Search</a> &gt;
+		<a href="presenters?searchInitial=T" class="current">Browse Author Index</a>
+</div>
+
+<h2>Browse Author Index</h2>
+
+<div id="content">
+<p><a href="presenters?searchInitial=A">A</a> <a href="presenters?searchInitial=B">B</a> <a href="presenters?searchInitial=C">C</a> <a href="presenters?searchInitial=D">D</a> <a href="presenters?searchInitial=E">E</a> <a href="presenters?searchInitial=F">F</a> <a href="presenters?searchInitial=G">G</a> <a href="presenters?searchInitial=H">H</a> <a href="presenters?searchInitial=I">I</a> <a href="presenters?searchInitial=J">J</a> <a href="presenters?searchInitial=K">K</a> <a href="presenters?searchInitial=L">L</a> <a href="presenters?searchInitial=M">M</a> <a href="presenters?searchInitial=N">N</a> <a href="presenters?searchInitial=O">O</a> <a href="presenters?searchInitial=P">P</a> <a href="presenters?searchInitial=Q">Q</a> <a href="presenters?searchInitial=R">R</a> <a href="presenters?searchInitial=S">S</a> <a href="presenters?searchInitial=T"><strong>T</strong></a> <a href="presenters?searchInitial=U">U</a> <a href="presenters?searchInitial=V">V</a> <a href="presenters?searchInitial=W">W</a> <a href="presenters?searchInitial=X">X</a> <a href="presenters?searchInitial=Y">Y</a> <a href="presenters?searchInitial=Z">Z</a> <a href="presenters">All</a></p>
+
+<a name="presenters"></a>
+
+		
+			<a name="T"></a>
+		<h3>T</h3>
+	
+		
+		
+				
+		<a href="presenters/view?firstName=Shinichi&amp;middleName=&amp;lastName=Tajima&amp;affiliation=Tsukuba&#32;University&amp;country=">Tajima, Shinichi</a>, Tsukuba University
+	<br/>
+		
+	
+		
+		
+				
+		<a href="presenters/view?firstName=Gabriel&amp;middleName=Humberto&amp;lastName=Tamayo&#32;Valdés&amp;affiliation=Popular&#32;University&#32;of&#32;Cesar&#32;-&#32;Manuel&#32;Germán&#32;Cuello&#32;Gutiérrez&#32;School&amp;country=CO">Tamayo Valdés, Gabriel Humberto</a>, Popular University of Cesar - Manuel Germán Cuello Gutiérrez School
+	<br/>
+		
+	
+		
+		
+				
+		<a href="presenters/view?firstName=Loredana&amp;middleName=&amp;lastName=Tec&amp;affiliation=&amp;country=AT">Tec, Loredana</a>
+	<br/>
+		
+	
+		
+		
+				
+		<a href="presenters/view?firstName=Darja&amp;middleName=&amp;lastName=Tolumbaeva&amp;affiliation=St.&#32;Petersburg&#32;State&#32;University&amp;country=RU">Tolumbaeva, Darja</a>, St. Petersburg State University
+	<br/>
+		
+	
+		
+		
+				
+		<a href="presenters/view?firstName=Pedro&amp;middleName=Juan&amp;lastName=Torres&#32;Florez&amp;affiliation=Popular&#32;University&#32;of&#32;Cesar&#32;-&#32;La&#32;Esperanza&#32;Technical&#32;School&amp;country=CO">Torres Florez, Pedro Juan</a>, Popular University of Cesar - La Esperanza Technical School
+	<br/>
+		
+	
+		
+		
+				
+		<a href="presenters/view?firstName=Sergey&amp;middleName=&amp;lastName=Tsarev&amp;affiliation=Siberian&#32;Federal&#32;University&amp;country=RU">Tsarev, Sergey</a>, Siberian Federal University
+	<br/>
+		
+	
+		
+		
+				
+		<a href="presenters/view?firstName=Anastasiya&amp;middleName=Aleksandrovna&amp;lastName=Tyutyunnik&amp;affiliation=Peoples'&#32;Friendship&#32;University&#32;of&#32;Russia&amp;country=RU">Tyutyunnik, Anastasiya Aleksandrovna</a>, Peoples&#039; Friendship University of Russia
+	<br/>
+	<br />
+	1 - 7 of 7 Items&nbsp;&nbsp;&nbsp;&nbsp;
+
+<br /><br />
+<h3 dir="ltr"><span id="sites-page-title">Sponsors</span></h3><div style="margin: 5px 10px 0pt 0pt; display: inline; float: left;"><br /><br /><br /></div><div style="margin: 5px 10px 0pt 0pt; display: inline; float: left;"><a href="https://sites.google.com/a/univlora.edu.al/conferences-at-uv/aca/UV_Logo.png?attredirects=0"><img src="https://sites.google.com/a/univlora.edu.al/conferences-at-uv/_/rsrc/1263144519874/aca/UV_Logo.png?height=200&width=0" border="0" alt="" width="0" height="200" /></a></div><ul><li><strong>College of Technical Sciences, <a rel="nofollow" href="http://www.univlora.edu.al/">University of Vlora</a></strong></li></ul><ul><li><em><span style="text-decoration: underline;"><a href="http://sites.google.com/site/aulonnapress/" target="_blank"><strong>Aulona Press</strong></a></span></em><br /></li></ul><ul><li><a href="https://sites.google.com/a/univlora.edu.al/albanian-math-society/" target="_blank"><span style="text-decoration: underline;"><strong>Albanian Mathematical Society</strong></span></a></li></ul>
+
+
+
+</div><!-- content -->
+</div><!-- main -->
+</div><!-- body -->
+
+
+
+</div><!-- container -->
+</body>
+</html>

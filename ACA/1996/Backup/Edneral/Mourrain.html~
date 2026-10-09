@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center"> Some Applications of Duality Between
+Polynomials and Formal Series</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Mourrain">Bernard  Mourrain</A><br>
+</h3>
+
+Date: July 19th (Friday)<br>
+Time: 14:00--14:25<br>
+
+<center>
+Abstract
+</center>
+
+We are going to describe a duality between the algebra of
+polynomials and the algebra of formal series, viewed as a space of
+differential operators. This duality is connected to the notion of inverse
+systems introduced by Macaulay (1916). We will recall the main properties
+of these inverse systems and see how difficult operation on ideals become
+easier with formalism. Then we will focus on <b>0</b>-dimensional ideals
+and show how the local ring of an isolated point can
+be computed by <em> integration</em> in the dual space.
+We will give some applications to the computation  of local residues
+in the case of complete intersection, to the analysis of real branches of
+locally complete intersection case. We will end by some computations of
+global residues, where formal series appear explicitly. Some connections
+with Grobner bases computations will also be illustrated.
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Edneral.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

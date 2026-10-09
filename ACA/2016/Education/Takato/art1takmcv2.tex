@@ -1,0 +1,425 @@
+%    Latex Template for ACA 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS BELOW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{url}
+
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS ABOVE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\vspace{-0.8cm}
+\begin{flushleft}
+\Large \textbf{\noindent
+%%% PLEASE INSERT THE TITLE OF YOUR TALK HERE %%%%%%%
+Collaborative Use of KeTCindy and Free CASs for Making Materials}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5cm}
+\normalsize
+ %%%%%%             NAMES OF AUTHORS         %%%%%%
+ %%%%%% NAME OF SPEAKER SHOULD BE UNDERLINED %%%%%%%%%
+\normalsize{
+ %%%%%% FOR EXAMPLE %%%%%
+ \underline{Setsuo Takato}$^1$, Alasdair McAndrew$^2$,
+Masataka Kaneko$^3$
+ %%%%%%%%%%%%%%%%%%%%%%%%
+} \\
+\vspace{5mm}
+\textit{\footnotesize
+ %%%%%% AFFILIATION OF AUTHORS %%%%%%
+$^1$ Toho University, Japan,
+takato@phar.toho-u.ac.jp\\
+$^2$ Victoria University, Australia,
+Alasdair.McAndrew@vu.edu.au\\
+$^3$ Toho University, Japan,
+masataka.kaneko@phar.toho-u.ac.jp\\
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+\end{flushleft}
+
+\ifnum 1=0
+
+Use this format (without changing the settings) to prepare your abstract. The
+abstracts are used for evaluation purposes. Therefore, it is important that you
+describe your intended presentation concisely and clearly, including the objectives,
+status, methodology, results, and significance of your study.  Abstracts may contain
+equations, figures and references (see Eqs.~(\ref{eq1}, \ref{eq2}) and
+Refs.~\cite{KR,WK,ABS}). {\bf The extended abstract length is limited to 5 pages}.
+Equations are to be centered horizontally, with equation numbers aligned with the
+right margin.  Paragraph text is full-justified.  Do not explicitly begin by writing
+the word ``abstract''.  Equations should be properly punctuated.  For instance, as
+\begin{equation}
+y=3x^2\  \  \  \mbox{and}\  \  \  x>0, \label{eq1}
+\end{equation}
+we see that
+\begin{equation}
+z=\sqrt{y}=\sqrt{3}x. \label{eq2}
+\end{equation}
+
+
+%\begin{eqnarray}
+%\lim_{x \to +\infty} {\rm Abstract}(x) = 1\ {\rm page}.
+%\label{eq1}
+%\end{eqnarray}
+Your abstract should be prepared in \LaTeX\ according to the template provided
+and then \textbf{converted to PDF for submission.}  Abstracts not complying with
+this template may not be included in the book of abstracts of the ACA
+2015. Abstract submission should be done via the session organizers, they will
+confirm your submission. If your abstract is accepted, you will be invited to
+present your talk.  The book of abstracts will be available to the participants
+prior to the conference and will provide the audience with more information
+about the papers being presented at the ACA 2015 Workshop. At least one author
+must be registered for your talk to be included in the program of the
+conference.
+
+\fi
+
+\input{fig/ketpic.tex}
+\input{fig/ketlayer.tex}
+\newcounter{figno}
+\setcounter{figno}{1}
+
+\section{Introduction}
+
+Many mathematics teachers at collegiate level use \LaTeX\ to write materials for
+distribution to their classes.  As is well known, \LaTeX\ can typeset complex
+mathematical formulas.  On the other hand, it has poor ability to create
+figures.  One possibility might be to use a third-party package, such as TiKZ.
+However, TiKZ coding is complicated and is not easy to read
+even for the following simple figure.
+%For example, consider the following simple figure.
+
+\begin{center}
+\input{fig/sin.tex}
+
+Figure \thefigno\addtocounter{figno}{1}\ \ A simple example%
+%\includegraphics[bb=0.00 0.00 305.76 87.84]{fig/figsin2.pdf} 
+\end{center}
+
+\vspace{-2mm}
+
+%An example of TiKZ codes will be as follows.\vspace{-2mm}
+
+%{\small
+%\begin{verbatim}
+%\begin{tikzpicture}
+%  \draw[->, ultra thick,opacity=0.7] (0,2)-(16,2)node[right]{$x$};
+%  \draw[->, ultra thick,opacity=0.7] (8,0)--(8,4)node[above]{$y$};
+%  \draw[domain=-7.5:7.5,xshift=8cm,yshift=2cm,very thick,samples=80]
+%      plot[id=sin] function{sin(x)} node[above right] {$y=\sin x$};
+%  \draw[domain=-2:2, xshift=8cm, yshift=2cm, very thick, samples=80] 
+%       plot[id=x] function{x} node[above right] {$y=x$};
+%  \node [xshift=8cm, yshift=2cm] (O) at (0,0) [label=225:$O$] {};
+%  \foreach \x in {-6,-4,-2,2,4,6} 
+%    \fill [radius=1.5pt, xshift=8cm, yshift=2cm] (\x, 0) 
+%       circle node[below] {$\x$};
+%  \foreach \y in {-1,1} 
+%    \fill [radius=1.5pt, xshift=8cm, yshift=2cm] (0, \y) 
+%       circle node[left] {$\y$};
+%\end{tikzpicture}
+%\end{verbatim}
+%}\vspace{-2mm}
+
+TiKZ can in fact produce figures of great complexity, but its power comes at the
+cost of a steep learning curve.  In order to provide a system for easy creation
+of publication quality figures, the first author has developed \ketpic, the
+first version of which was released in 2006.  \ketpic\ is a macro package of
+mathematical software such as Maple, Mathematica, Scilab and R.  The recent
+version uses Scilab mainly and R secondarily.
+
+The flow of generating and inserting graphs with \ketpic\ is as follows.%
+\vspace{-2mm}
+
+\begin{enumerate}
+\item \ketpic\ and Scilab commands are listed in a Scilab editor and executed
+  by Scilab.\vspace{-3mm}
+
+\item Scilab generates a \LaTeX\ file composed of codes for drawing figures.\vspace{-3mm}
+\item That file can be inserted into a \LaTeX\ document with \verb|\input| command.
+\vspace{-3mm}
+\item The document can be compiled to produce a pdf file.\vspace{-3mm}
+\end{enumerate}
+
+Scripts for Figure \addtocounter{figno}{-1}\thefigno\addtocounter{figno}{1}
+are as follows.\vspace{-3mm}
+
+%      A=[2.5,1]; B=[2.0,1.5];
+
+{\small
+\begin{verbatim}
+      Setwindow([-7.5,7.5],[-2,2]);
+      Setax(7,"se");
+      gr1=Plotdata("sin(x)","x");
+      gr2=Plotdata("x","x","Num=1");
+      Openfile("figsin");
+        Drwline(gr1,gr2);
+        Expr([2.5,1],"e","y=\sin x",[2,1.5],"e","y=x");
+      Closefile('1');
+\end{verbatim}
+}\vspace{-2mm}
+
+%As can be easily seen, 
+Scripts of \ketpic\ are far more readable than those of TiKZ, and the simplicity
+of the scripts provides for a simple method of inserting figures into \LaTeX.
+
+However, it is cumbersome to write all scripts in the Scilab editor first. %
+In particular, mathematics teachers who are not used to mathematical software may
+find \ketpic\ hard to use.
+%\marginpar{\small What does this mean?}
+One of the long-standing plans for \ketpic\ has been to write a graphical user
+interface(GUI) for it.
+
+\section{Development of \ketcindy}
+
+Cinderella\cite{cindy} is a dynamic geometry software(DGS), and was developed by
+Gebert and Kortenkamp.  The first author had been searching for the possibility
+of collaborating \ketpic\ and Cinderella with Kortenkamp, and the first version
+of \ketcindy\ was released in September, 2014. Cinderella works as GUI of
+\ketcindy. It has two screens for the display of figures and for the editor of
+CindyScript, which is a programming language of Cinderella. To draw a figure,\vspace{-2mm}
+
+\begin{enumerate}
+\item Put geometric components such as points and segments on the display.\vspace{-2mm}
+\item Describe scripts for drawing a figure and generating of \LaTeX\ graphic
+  codes.\vspace{-2mm}
+\item Press two buttons on the display to execute batch processing of Scilab,
+  \LaTeX\ compiling and viewing PDF sequentially.\vspace{-2mm}
+\end{enumerate}%\vspace{-2mm}
+
+Then you can get the objective figure of \LaTeX.
+
+\begin{layer}{150}{0}
+\putnotese{6}{5}{\includegraphics[bb=0.00 0.00 646.00 275.00,height=28mm]{fig/displayscreen.pdf}}
+\putnotese{73}{5}{\includegraphics[bb=0.00 0.00 483.00 257.00,height=28mm]{fig/CindyScript.pdf}}
+\putnotes{75}{38}{Figure \thefigno\ \ Screens of Cinderella}\addtocounter{figno}{1}%
+\end{layer}
+
+\vspace{42mm}
+
+So far, \ketcindy\ can generate various types of figures or tables as follows.
+
+\newpage
+
+\begin{layer}{150}{0}
+\putnotes{35}{0}{\input{fig/s106bowhatch.tex}}
+\putnotes{35}{43}{Figure \thefigno\ \ Geometric Figure}\addtocounter{figno}{1}%
+\putnotes{95}{3}{\input{fig/s210diffeq2.tex}}
+\putnotes{105}{43}{Figure \thefigno\ \ Graph of Function}\addtocounter{figno}{1}%
+\putnotes{35}{50}{\input{fig/s305incanddec.tex}}
+\putnotes{35}{107}{Figure \thefigno\ \ Table}\addtocounter{figno}{1}%
+%\putnotes{97}{65}{\input{fig/kumamonthin.tex}}
+\putnotes{97}{56}{%
+\includegraphics[bb=0.00 0.00 183.63 142.07]{fig/figkumamon.pdf}}
+\putnotene{100}{69}{\input{fig/kumamoto.tex}}
+\putnotes{97}{107}{Figure \thefigno\ \ B\'ezier Curve}\addtocounter{figno}{1}%
+\end{layer}
+
+\vspace{114mm}
+
+
+3D figures such like the followings can be produced by \ketcindy.
+%The scripts are so simple.
+\vspace{-2mm}
+
+{\small
+\begin{verbatim}
+      Xyzax3data("","x=[-5,5]","y=[-5,5]","z=[-4,4]");
+      polydt=Readobj("r02.obj",["size=-3.5"]);
+      VertexEdgeFace("1",polydt,["Pt=fix","Edg=nogeo"]);
+      Nohiddenbyfaces("1","phf3d1",[],["do"]);
+\end{verbatim}\vspace{-2mm}
+}
+
+%      //Skeletonparadata("1",[1.5]);
+\vspace{1mm}
+
+\begin{layer}{150}{0}
+\putnotes{30}{0}{\scalebox{0.85}{\input{fig/s507polyhedron.tex}}}
+\putnotes{68}{0}{\scalebox{0.85}{\input{fig/s507polyhedron2.tex}}}
+\putnotes{105}{3}{\scalebox{0.85}{\input{fig/s907multisurfaces.tex}}}
+\putnotes{49}{36}{Figure \thefigno\ \ Polyhedron}\addtocounter{figno}{1}%
+\putnotes{105}{36}{Figure \thefigno\ \ Surface}\addtocounter{figno}{1}%
+\end{layer}
+
+\vspace{42mm}
+
+%\newpage
+
+
+
+\ketcindy\ is downloadable from \url{http://ketpic.com/?lang=english}.
+
+\section{Calling CASs from \ketcindy}
+
+Recently, we implemented functionality to call CASs such as Maxima and FriCAS.
+In this section, we introduce the functionality and show some application in mathematics education.
+
+The flow and chart are as follows.\vspace{-1mm}
+
+\begin{layer}{150}{0}
+\putnotese{62}{-5.5}{\scalebox{0.7}{\input{fig/calling.tex}}}
+\putnotese{70}{34}{Figure \thefigno\ \ Chart of \ketcindy}\addtocounter{figno}{1}
+\end{layer}
+
+\begin{enumerate}
+\item To generate the shell file to call a CAS\vspace{-2mm}
+\item To execute the file\vspace{-2mm}
+\item To return the result as text\vspace{-2mm}
+\item To use the result in \ketcindy\vspace{-2mm}
+\item To produce the PDF file\vspace{-2mm}
+\end{enumerate}
+
+\vspace{3mm}
+
+We give an example to find points of contact of two curves.\vspace{-2mm}
+
+\begin{layer}{120}{0}
+\putnotes{103}{14}{\scalebox{0.9}{\input{fig/s1002equation.tex}}}
+\putnotes{103}{36}{Figure \thefigno}\addtocounter{figno}{1}%
+\end{layer}
+
+{\small
+\begin{verbatim}
+    Mxfun("1","solve",["[y=x^2, x^2+(y-1)^2=3/4]","[x,y]"],[""]);
+    P=parse(mx1)_1; Q=parse(mx1)_2;
+    Plotdata("1","x^2","x");
+    Circledata("1",[A,P]);
+    Listplot("1",[P,A,Q]);
+    Letter([A,"ne","A",P,"sw","P",Q,"se","Q"]);
+\end{verbatim}
+}
+
+\vspace{8mm}
+
+%\newpage
+
+The use of a computer algebra system is required for use with \ketcindy\, and in
+keeping with the open-source nature of the project, we choose an open-source
+system.  Of the many available, we are most interested in Maxima and FriCAS,
+being open-source version of once commercial software: Macysma and IBM Axiom
+respectively.  Maxima is written in Lisp and C, and can run on any system which
+supports those languages.  In particular, Maxima can run under MS Windows,
+Linux, and MacOS.  There are even versions of portable systems such as Android.
+Maxima, formally, is a ``term-rewriting'' system, where by a system of rules
+(which the user can add to or change) a term can be rewritten in another form.
+Thus there are formal rules for symbolic differentiation, for applying integral
+transforms, for linear algebra, and so on.
+
+FriCAS is a fork of the CAS Axiom, which was released as open-source by IBM when
+it became clear it was losing its market share.  In comparison to all other
+CAS's today, FriCAS is\emph{ strongly typed}: each expression, variable or other
+object belongs to a particular type, or nest of types.  The use of types allows
+for overwriting of operations, so that, for example, the outcome of a
+multiplication '\texttt{x * y}' will depend on the types of \texttt{x} and
+\texttt{y}.  The nesting of types means that you can define, for example, square
+matrices of polynomials over a finite field, and having defined that type you
+automatically have operations available: an inverse of such a matrix, for
+example, will produce an output object of the same type.  The use of types is
+confusing for the beginner, but in fact provides immense power for the
+exploration of mathematical systems.  In that sense FriCAS probably has greater
+depth than any other system, although it loses out on breadth.  
+
+For systems which are to be used as black boxes: question in, answer out, Maxima
+may be preferred because of its breadth.  But for a system where mathematical
+precision and rigour are required, FriCAS is the best choice.  FriCAS however works
+best under Linux, so its use in a Windows system requires either some Unix
+subsystem (such as Cygwin) or the use of a docker container.  
+
+Here we give an example of use of Maxima and FriCAS
+with \ketcindy.\vspace{-2mm}
+
+{\small
+\begin{verbatim}
+    fun="((1-cos(t))/(1/2-cos(t)))^(1/2)";
+    Mxfun("1","integrate",[fun,"t"]); //by Maxima (inadequate)
+    Frifun("2","integrate",[fun,"t"]); // by Fricas
+    Mxtex("2",fri2);  // Maxima can generate LaTeX form
+\end{verbatim}\vspace{-1mm}
+}
+
+\vspace{-2mm}
+
+\noindent
+The result by Fricas is $\displaystyle\int \sqrt{\frac{1-\cos
+    t}{\frac{1}{2}-\cos t}} \,dt=-\arctan \left(\frac{\left(4\,\cos
+      t+1\right)\,\sqrt{\frac{2\,\cos  t-2}{2\,\cos t-1}}}{4\,\sin t}\right) $.
+
+\vspace{1mm}
+
+Note that FriCAS implements a nearly complete version of the Risch algorithm for
+symbolic integration; thus its integration routines are amongst the strongest of
+any current CAS.
+
+\section{Conclusion and Future Work}
+
+Printed materials are often used in mathematics classes at collegiate level, and 
+high quality figures are indispensable in such materials. \ketcindy\ makes it easy
+to produce and insert them.
+The samples in this paper show that the symbolic computation capability of a CAS
+can enhance the graphics capability of the \ketcindy\ system. 
+CASs are also useful to produce examples and problems embedded into materials, for example, when we put matrices for Gaussian elimination.
+Other possibilities of their collaborative use in education should be pursued.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{4mm}
+
+\noindent
+{\bf Acknowledgment}
+
+\noindent
+This work was supported by JSPS KAKENHI Grant Numbers 
+25350370, 15K01037, 15K00944.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{00}
+\addcontentsline{toc}{chapter}{References}
+\setlength{\itemsep}{-1mm}
+\footnotesize
+\bibitem{cindy}
+Cinderella, \url{http://www.cinderella.de/tiki-index.php}
+%\bibitem{KYKMNKT}
+%Kaneko M., Yamashita S., Kitahara K., Maeda Y., Nakamura Y., 
+%Kortenkamp U, Takato S., KETCindy--- Collaboration of Cinderella and KETpic,
+%Reports on CADGME 2014 Conference Working Group, The International Journal for Technology in
+%Mathematics Education, 22(4), 179-185, 2015.
+%\bibitem{ths}
+%Takato S., Hamaguchi N., Sarafian H., Generating Data of Mathematical Figures for 3D Printers with KETpic and Educational Impact of the Printed Models, ICMS 2014, LNCS, vol. 8592, pp. 629-634, Springer, Heidelberg, 2014.
+%\bibitem{kmhnt}
+%Kaneko, M., Maeda, Y., Hamaguchi, N., Nozawa, T., Takato, S., A scheme for demonstrating and improving the effect of CAS use in mathematics education, Proc. ICCSA, pp.62-71, IEEE, 2013.
+%\bibitem{kt1}
+%Kaneko M, Takato S., The effective use of LaTeX drawing in linear algebra, The Electronic Journal of Mathematics and Technology 5(2), pp. 1-20, 2011.
+%\bibitem{kt2}
+%Kaneko, M., Takato, S., A CAS macro package as LaTeX graphical command generator and its applications, Proc. ICCSA, pp.72-81, IEEE, 2011.
+%\bibitem{kastfyt}
+%Kaneko M., Abe T., Sekiguchi M., Tadokoro Y., Fukazawa K., Yamashita S., Takato S., CAS-aided Visualization in LaTeX Documents for Mathematical Education, Teaching Mathematics and Computer Science VIII-I, pp. 1-18,  2010.
+%\bibitem{kor}
+%Kortenkamp U., Interoperable interactive geometry for Europe, The Electronic Journal of Mathmatics and Technology, 5(1), pp.1-14, 2011.
+%\bibitem{oshima2}
+%Oshima T., Drawing curves, Mathematical Progress in Expressive Image Synthesis III, to appear
+%from Springer Japan.
+%\bibitem{oshima1}
+%Oshima, T., Drawing curves, Symposium MEIS2015: Mathematical Progress in Expressive Image Synthesis, MI Lecture Notes 2015 64, pp. 117?120, Kyushu University, 2015, ISSN : 2188?1200
+\end{thebibliography}
+\normalsize
+
+\end{document} 

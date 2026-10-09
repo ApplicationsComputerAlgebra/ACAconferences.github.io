@@ -1,0 +1,20 @@
+Mathematica for the Beginning Teacher
+
+Henry Shapiro
+Department of Computer Science
+University of New Mexico
+
+In this talk we present some anecdotal evidence about aspects of
+Mathematica that were hard for an experienced computer science
+professor to learn and teach.  These problems invariably arose when
+constructing Mathematica notebooks, where it was desireable to have no
+interaction with the notebook other than changing a few parameters at
+the beginning of the notebook or the contents of a data file.  The
+difficulties included extracting data from lists, scope of variables,
+immediate versus delayed assignment, and order of evaluation.  Our
+experience with freshman engineering students, shows that once the
+tricks of the trade are learned, Mathematica becomes an effective tool
+for solving engineering and science problems, and is considerably more
+useful to the beginning student than knowing how to program at the
+level of skill gained from a one or two-semester sequence in
+programming.

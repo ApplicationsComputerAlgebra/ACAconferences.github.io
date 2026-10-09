@@ -1,0 +1,10 @@
+Integrating Computer Algebra Systems and Theorem Provers
+
+Jacques Calmet
+
+Abstract: Coupling computation and deduction is the topic of many on going 
+projects.  This talk will be divided into three parts.  The first one 
+investigates and assesses the different possible approaches.  A second part is 
+a reminder of the experiments we have conducted in Karlsruhe.  The third part 
+draws conclusions and lessons from these experiments. The talk concludes with 
+a brief review of our on going research resulting from these experiments.

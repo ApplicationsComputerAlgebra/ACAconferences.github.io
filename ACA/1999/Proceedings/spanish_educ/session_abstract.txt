@@ -1,0 +1,27 @@
+Computer Algebra in the Spanish Educational System
+
+Lola Rodriguez (mrodri7@olmo.pntic.mec.es)
+Math Educational Consultant in Teacher Training Center of Leganes.
+Madrid and Educational Consultant, Texas Instruments, Spain.
+____________
+
+Speakers:
+ Confirmed:
+ - Justo Cabezas, Secondary School ``Rodriguez Mo~nino'' (Badajoz) and
+                  Extremadura University.
+ - Jorge Cujo, Complutense University of Madrid.
+ - Tomas Recio, Cantabria University.
+ - Lola Rodriguez. Leganes Teacher Training (Madrid).
+ To confirm:
+ - Rafael Perez, Granada University.
+ - Agustin Carrillo, Andujar Teacher Training Center (Jaen).
+ - Juan Llovet, Alcala University (Madrid).
+ - Jose R. Vizmanos, Secondary School Santamara (Madrid).
+ - Mayte Sanchez. Torrejon Teacher Training Center (Madrid).
+
+Resume:
+  This session will focus in how Computer Algebra affects Mathematics
+  teaching, in particular how it affects the Spanish educational system.
+  For instance, now there are alternative ways to introduce classic
+  specific contents in the classroom.  Moreover, with these new technologies,
+  new objectives can now be reached and new contents can be taught.

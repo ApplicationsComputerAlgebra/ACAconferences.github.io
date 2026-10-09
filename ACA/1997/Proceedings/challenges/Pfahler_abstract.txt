@@ -1,0 +1,52 @@
+----------------------------------------------------------------------------
+                    Grand Challenges in Computer Algebra
+----------------------------------------------------------------------------
+
+       Factoring univariate polynomials over finite fields with LiDIA
+
+     The factorization of univariate polynomials over finite fields arises
+     in various contexts of algebra and number theory, for example as the
+     first step of factoring polynomials over the ring of integers.
+
+     From the computational point of view, the problem of factoring
+     polynomials over finite fields is not considered to be hard because of
+     its polynomial time complexity. In practice, algorithms by Berlekamp
+     (for small finite fields) and the modifications by Zassenhaus (using
+     randomization for larger fields) have succesfully been proven useful,
+     as far as memory limitations are not a major concern. Equally
+     applicable, but less memory consuming, are algorithms by Ben-Or, Rabin,
+     Cantor & Zassenhaus and recently by Shoup & von zur Gathen.
+
+     In our talk, we will give a short survey of the algorithms that are
+     used in practice, concentrating on the latter algorithm and its
+     implementation within LiDIA, a library for computational number theory.
+
+     Furthermore, we will present some experimental results such as running
+     times in order to show what polynomials can be treated today, as well
+     as comparisons of our implementation with other computer algebra
+     systems.
+
+     References
+
+     E. R. Berlekamp, Factoring polynomials over finite fields, Bell System
+     Tech J., 46:1853-1859, 1967
+
+     M. Ben-Or, Probabilistic algorithms in finite fields, 22nd Ann. Symp.
+     on Found. of Comp. Science, pp. 394-398, 1981
+
+     D. G. Cantor and H. Zassenhaus, A new algorithm for factoring
+     polynomials over finite fields, Math. Comp., 36(154):587-592, 1981
+
+     LiDIA group, Lehrstuhl Prof. Dr. J. Buchmann, Alexanderstr.10, 64283
+     Darmstadt, http://www.informatik.th-darmstadt.de/TI/LiDIA
+
+     M. O. Rabin, Probabilistic algorithms in finite fields, SIAM J.
+     Comput., 9:273-280, 1980
+
+     J. von zur Gathen and V. Shoup, Computing Frobenius maps and factoring
+     polynomials, Computational Complexity, 2:187-224, 1992
+
+     Thomas Pfahler
+     Institute of Maths and Statistics
+     University of Kent at Canterbury
+     T.Pfahler@ukc.ac.uk

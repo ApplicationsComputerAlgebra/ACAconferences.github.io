@@ -1,0 +1,324 @@
+%Keywords: differential equations, stationary point, resonant terms,
+%Hamiltonian system.
+
+\documentstyle[12pt]{article}
+\setlength{\evensidemargin}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{16.cm}
+\setlength{\textheight}{8.5in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\itemsep}{-\parsep}
+\renewcommand{\topfraction}{.9}
+\renewcommand{\textfraction}{.1}
+\newcommand{\ol}{\setlength{\itemsep}{0pt.}\begin{enumerate}}
+\newcommand{\eol}{\end{enumerete}\setlength{\itemsep}{-\parsep}}
+\newcommand{\R}{{\rm{I\! R}}}
+\newcommand{\Q}{{\rm Q\!\!\! l}}
+\newcommand{\C}{{\rm{I\!\!\! C}}}
+\newcommand{\N}{{\rm{I\! N}}}
+\newcommand{\defi}{{\;\buildrel \rm def \over =}\;}
+\hyphenation{tra-ns-for-ma-tion}
+
+\begin{document}
+\Large
+\centerline {\bf On computation of normal forms}
+\centerline {\bf A.D.~Bruno}
+\centerline {Institute of Applied Mathematics, Moscow}
+\centerline { 125047 Russia (bruno@applmat.msk.su)}
+\bigskip
+\bigskip
+
+{\bf Keywords:} differential equations, stationary point, resonant terms,
+Hamiltonian system.
+
+Let $X\in \R^n$ or $\,\C^n$. In a neighbourhood of the stationary point $X=0$ 
+we
+consider the ODE system
+$$
+dX/dt\defi \dot X=AX+\Phi(X)\eqno(1)
+$$
+where $\Phi$ is a vector power series, $\Phi =O(\|X\|^2)$.
+
+{\bf Problem:} Simplify the system (1) preserving  main properties of
+its solutions.
+
+There are two methods for that:
+
+1. If in (1) the matrix $A\neq 0$, then we can perform a formal
+transformation of coordinates
+$$
+X=BY+ \Xi(Y)\eqno(2)
+$$
+to bring the system (1) into a normal form
+$$
+\dot Y = CY+\Psi(Y).\eqno(3)
+$$
+
+2. If $A=0$ then instead of the system (1) we can consider  the
+truncated system
+$$
+\dot X = \hat\Phi_j^{(d)}(X),\eqno(4)
+$$
+where components of the vector $\hat\Phi_j^{(d)}(X)$ are some
+quasihomgeneous parts of components of the vector-series $\Phi(X)$.
+Generally speaking, there are several different truncated systems (4).
+To find them we use the Newton polyhedron of the system (1).
+
+In my book [1] it was shown that in any compicated case,
+combining both methods, one can reduce the system (1) to several
+simple systems. Here we shall only consider the first method in
+details.
+
+Let the matrix $C=(c_{ij})$ be in a normal form (for instance, in the
+Jordan one). So its diagonal consists of its eigenvalues
+$(\lambda_1,\dots,\lambda_n)=\Lambda$, and $c_{ij}=0$ if
+$\lambda_i\neq\lambda_j$. Let us write components of the vector $\Psi$
+in (3) in the form
+$$
+\psi_i(Y)\defi y_ig_i(Y)\defi  y_i\sum g_{iQ}Y^Q,\quad i=1,\dots,n,\eqno(5)
+$$
+where $Q=(q_1,\dots,q_n)\in {\bf Z}^n$ and $Y^Q=y_1^{q_1} \dots y_n^{q_n}$.
+
+{\bf Definition 1} [2,1]. The system (3), (5) is called {\it the
+resonant normal form}, if expansions (5) contain only such terms
+$g_{iQ}Y^Q$ for which the scalar product
+$$
+\langle Q,\Lambda\rangle \defi
+q_1\lambda_1+\dots+q_n\lambda_n=0.\eqno(6)
+$$
+
+{\bf Theorem 1} [2,1]. {\it For each system (1) there exists a formal
+transformation (2)  which brings (1) into its resonant normal form
+(3).}
+
+Let the equation (6) have exactly $k$ integer solutions $Q\in {\bf
+Z}^n$ which  are linearly independent over $\R$. Then the system (1)
+has the $k$ -- {\it fold resonance.}
+
+{\bf Definition 2} [3,1]. The nonlinear transformation of coordinates
+$$
+z_i = y_1^{\alpha_{i1}}y_2^{\alpha_{i2}} \dots y_n^{\alpha_{in}}, \quad i=1, 
+\dots, n
+\eqno(7)
+$$
+is called {\it the power transformation} with the matrix $\alpha
+=(\alpha_{ij})$. It is a linear transformation of logarithms of
+coordinates $\log Z = \alpha\log Y$ where $\log Z = (\log z_1,\dots, \log 
+z_n)^*$.
+
+{\bf Theorem 2} [2,1]. {\it If the system (1)
+has the $k$ --  fold resonance, then there exists such a power
+transformation (7) which brings the resonant normal form (3) into the
+system}
+$$
+\dot{(\log z_i)}=f_i(z_1,\dots,z_k),\quad i=1,\dots,n.\eqno(8)
+$$
+{\it Here all $\alpha_{ij}$ are integers and}  det$\alpha =\pm 1$.
+
+Thus, to solve the system (8) one must solve its subsystem of order $k$:
+$$
+\dot z_i = z_if_i(z_1,\dots,z_k),\quad i=1,\dots,k.\eqno(9)
+$$
+The system (9) has not a linear part.
+So to simplify the system (9) we must find its truncated systems
+$$
+\dot z_i = z_i\hat f_{ij}^{(d)}(z_1,\dots,z_k),\quad i=1,\dots, k,\eqno(10)
+$$
+using the Newton polyhedron of the system (9). The system (10) is
+quasihomogeneous, so we can again use a power transformation to  simplity it.
+
+There are  3 other kinds of the normal form (shortly n.f.):
+
+2. Belitski n.f.
+
+3. Hamiltonian resonant n.f.
+
+4. Hamiltonian Belitski n.f.
+
+{\bf Definition 3} [4,5]. The system
+$$
+\dot Y =CY+\tilde\Psi(Y)\eqno(11)
+$$
+is called the {\it Belitski normal form}, if it is the resonant n. f.
+and
+$$
+{\partial\tilde \Psi\over\partial Y}\bar{C^*}Y-\bar{C^*}\tilde \Psi(Y) =
+0,\eqno(12)
+$$
+where the matrix $\bar{C^*}$ is conjugate to the matrix $C$.
+
+If components of the vector $\tilde \Psi$ we write  as
+$$
+\tilde \psi_i = y_i\sum\tilde g_{iQ}Y^Q,\quad i=1,\dots, n
+$$
+then these expansions for the Belitski n. f. (11)
+have only resonant terms $\tilde g_{iQ}Y^Q$ with property (6) but some
+of them are absent.
+
+{\bf Theorem 3} [4,5]. {\it For each system (1) there exists a formal
+transformation (2) into its Belitski n. f.}
+
+The power transformation (7) of Theorem 2 brings the Belitski n. f.
+(11) into the system
+$$
+(\log \dot z_i) =\tilde f_i(z_1,\dots, z_k),\quad i=1,\dots,n
+$$
+with the subsystem
+$$
+\dot z_i = z_i\tilde f_i(z_1,\dots, z_k),\quad i=1,\dots, k.
+$$
+
+Let us compare its truncated systems
+$$
+\dot z_i = z_i\widehat{\tilde f}_{ij}^{(d)}(z_1,\dots, z_k),\quad
+i=1,\dots, k.  \eqno(13) $$
+with truncations (10) of the system (9), obtained from the resonant
+n. f. (3). Some of them can conside:
+$$
+\widehat f_{ij}^{(d)}(Y)=
+\widehat{\tilde f}_{ij}^{(d)}(Y),  \quad i=1,\dots, k.
+ $$
+ Thus, to compute such truncations it is enough to compute the
+ resonant n. f. that is simpler than a computation of the Belitski
+ n.f.
+
+ {\bf Example 1.} In [6] there was considered an invertible system (1)
+ with  $n=4$, where the matrix $A$ depends of two small parameters:
+ $A=A(\mu_1, \mu_2)$. The unperturbed matrix $A=A(0,0)$ is the
+ $4\times 4$ Jordan block  with zero eigenvalue. Then the system (1)
+ is its own resonant n.f. By means of a special program [7]  for
+ computation of the Newton polyhedron we have computed the Newton
+ polyhedron of that system (1). It gave 5 truncated systems; 4 of them
+ are integrable and one (the main  truncation) is
+ nonintegrablite. We have computed   the Belitski n.~f.
+ of the system (1) and its Newton polyhedron. It gave 4 truncated
+ systems for the Belitski n. f.; 3 of them are integrable and the
+ fourth is exactly the same main truncation that was obtained for
+ initial system (1).
+
+ Now let us consider the Hamiltonian system (1):
+ $$
+ \dot x_i  = {\partial h\over\partial x_{i+m}},\quad
+ \dot x_{i+m}  = -{\partial h\over\partial x_{i}},\quad
+ i=1,\dots, m\eqno(14)
+ $$
+ where $n=2m$ and the Hamiltonian function $h$ is a power series
+ $$
+ h=\sum h_QX^Q.\eqno(15)
+ $$
+ Let $\Lambda$ be the vector of eigenvalues of the matrix of the
+ linear part of the system (14).
+
+ {\bf Definition 4 }[8]. {\it Hamiltonian} system (14) is called the
+ {\it resonant normal form} if the expansion (15) contains only terms
+ $h_QX^Q$ with the property (6).
+
+ {\bf Theorem 4} [8, \S~12]. {\it For any Hamiltonian system (14), there
+ exists a canonical transformation (2) which brings (14) into the
+ Hamiltonian resonant n. f.}
+
+ For the Hamiltonian resonant n. f., one can compute the reduced
+ subsystem
+ $$
+ \dot z_i = z_i\tilde h_i(z_1,\dots, z_k),\quad i=1,\dots, k.\eqno(16)
+ $$
+ On the other side, for the Hamiltonian system (14), we can compute
+ the resonant n. f. (3), using a noncanonical transformation (2) and
+ obtain its reduced sybsystem  (10). Sometimes the main truncations of
+ the systems (10) and (16) differ by a linear transformation of
+ variables only. In such cases, to obtain the
+ main truncation we can use the
+ noncanonical normalizing
+ transformation, that demands essentially more simple computation that
+ the canonical one. Moreover, to compute coefficients of the
+ truncated system (10) we can use the explicit formula (35) in [1, Ch.
+ III, \S~1]. In [9] such approach was used in a system related to  the
+ water--wade problem.
+
+ Let $C$ be the matrix of the linear part of the Hamiltonian system
+ (14).
+
+ {\bf Definition 5 }[5]. The Hamiltonian system (14) is called {\it
+ the Hamiltonian Belitski normal form} if the scalar product
+ $$
+ \langle \bar C^*X, \partial h/\partial X\rangle = 0.
+ $$
+
+ {\bf Theorem  5 }[5]. {\it There exists a formal canonical transformation
+ (2), which brings the Hamiltonian system (14) into its Hamiltonian
+ Belitski n. f.}
+
+ Indeed the normal form and the normalizing transformation are not
+ unique. Using more special normalizing transformation, we obtain more
+ special normal form, but it demands more complicated computation.
+
+ Thus,  me have 4 normal forms:
+
+ (i)  Resonant n. f.
+
+ (ii) Belitski n. f.
+
+ (iii) Hamiltonian resonant n. f.
+
+ (iv) Hamiltonian Belitski n. f.
+
+ There are inclusions:
+ $$
+ \begin{array}{c}
+ ({\rm i}) \supset ({\rm iii})\supset({\rm iv}),\\
+ ({\rm i}) \supset ({\rm ii})\supset({\rm iv}).
+ \end{array}
+ $$
+
+ Apparently in some cases we can solve a problem, computing less
+ special n. f., i.e. using more simple computation. Five methods of
+ computation of normal forms are discussed in [10].
+
+ The work was partly supported by the  International Science
+ Foundation, Grant M3W300.
+
+
+\begin{thebibliography}{99}
+\bibitem{1}
+    Bruno, A.D. Local Methods in Nonlinear Differential Equations.
+   Springer -Verlag, Berlin, 1989.
+\bibitem{2}
+   Bruno,  A.D. Normal form of differential equations.
+   Soviet Math. Dokl. {\bf 5}(1964) 1105 -- 1108.
+\bibitem{3}
+   Bruno,  A.D. The asymptotic behavior of solutions of nonlinear
+   systems of differential equations.
+   Soviet Math. Dokl. {\bf 3}(1962) 464 -- 467.
+\bibitem{4}
+    Belitski, G.R. The normal forms of local mappings. Uspehi Mat.
+    Nauk, {\bf 30}:1(1975) 223 (Russian).
+\bibitem{5}
+    Belitski, G.R. Normal Forms, Invariants and Local Mappings.
+    Kiev: Naukova Dumka, 1979 (Russian).
+
+\bibitem{6}
+ Soleev, A. and Aranson, A.B. First approximations of a reversible ODE
+  system. Preprint N~28 of the Keldysh Inst. of Appl. Math., Moscow, 1995
+ (Russian).
+\bibitem{7}
+ Soleev, A. and Aranson, A.B. Computation of a polyhedron and of
+ normal cones of its faces. Preprint N~36 of the Keldysh Inst. of
+ Appl. Math., Moscow, 1994 (Russian).
+
+\bibitem{8}
+   Bruno, A.D. Analytical form of differential equations. Trans. Moscow
+   Math. Soc.{\bf 26}(1972) 199--239.
+
+\bibitem{9}
+  Bruno, A.D. and  Soleev, A.  Local analysis of a singularity of an
+  invertible ODE system. Preprints Nos. 40, 47, 54 of Keldysh Inst. of
+  Appl. Math., Moscow, 1995 (Russian).
+
+\bibitem{10}
+   Bruno, A.D. Methods of computation of the normal form. Russian
+   Academy Sci. Doklady. Mathem. (1995) (to appear).
+\end{thebibliography}
+
+\end{document}

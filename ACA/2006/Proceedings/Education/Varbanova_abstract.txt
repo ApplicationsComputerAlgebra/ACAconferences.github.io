@@ -1,0 +1,26 @@
+Technology-Meets-Tradition: Activities in Teaching and Learning Integrals
+
+Elena A. Varbanova
+Faculty of Applied Mathematics and Informatics
+Technical University of Sofia
+Sofia, Bulgaria
+
+This paper has been planed with non-mathematics students in mind.  A
+Mathematics service course for them should not be unnecessarily complicated,
+but at the same time it has to help the students develop the capabilities they
+need to be successful.  In the 20th century the universal language of
+Mathematics and its independence of cultural influences made possible the
+creation of one of the most challenging educational tools called Computer
+Algebra System (CAS).  An experience at the Technical University of Sofia in
+combining traditional modes and CAS- supported approaches to undergraduate
+mathematics is represented.  Examples of integration as one of the key
+mathematical operations are considered with application of CAS Derive.  The
+main goal is to find a harmonized combination of educational values/tradition
+in our country and the power of technology.  Thus we can ensure that both are
+open in response to a global imperative: to create diversity (as nobody has
+monopoly on truth).  In this sense CAS could serve as a bridge over the ocean
+of the great variety of effective modern practices in education.  Trough CAS we
+have made an attempt to actively and interactively involve students into the
+teaching and learning process.  This helps teachers to find out what mix of
+which types of learning environments is better suited for a particular topic or
+type of problems.

@@ -1,0 +1,137 @@
+
+"The History of Computer Algebra Application in Mechanics
+                      in Russia (Soviet Union)"
+    
+                      G.B.Efimov, M.V.Grosheva
+             Keldysh Institute of Applied Mathematics RAS
+       Institute of Mechanics Moscow State Lomonosov University
+		Moskow, 125047, Miusskaya sq.4, Russia
+           efimov@applmat.msk.su    grosheva@inmech.msu.su
+    
+  Present    Review   considers   the   History   of   Mechanical 
+Applications  of  Symbolical Algebraic  Manipulations  (SAM)   or 
+Computer  Algebra (CA)  in our country - for almost forty  years.  
+>From  the very beginning mechanicians was  among the leaders   of  
+SAM  application   -  due to vast problems,  important  for  them 
+(spacecraft  dynamics,  theory of strength), as well  as  due  to 
+presence   and   readiness   of   experts,  capable  to   develop 
+mathematical  methods and to apply/develop computer programs  for 
+SAM.
+
+     The   first  attempts  of computer symbolical  manipulations 
+in  Soviet Unions were made more than thirty years ago.   In  the 
+work   of Nobel  laureate L.V.KANTORORVICH and his followers  the 
+problems  of  SAM  and their  applications  were  considered,  in 
+particular  in  the theory of elasticity.  N.N.YANENKO  and   his  
+colleagues   solved  the   problems   of   differential   schemes 
+theory. D.E.OKHOTSIMSKY, V.A.BRUMBERG  and  others  applied   SAM  
+in  celestial  mechanics. M.CHUBAROV  investigated  a   stability 
+problem in linear systems. Despite the computers  had  only   the 
+few  K   of memory at that time, some interesting  problems  were 
+solved successively with them.
+
+     In  the middle of 1960's and in the beginning of 1970's  the  
+old  groups of workers were expanded and new ones have arisen  in 
+the  area of SAM. The groups were working in  Moscow,  Leningrad,  
+Novosibirsk,   Gorky, Tomsk, Kazan, Harkov, Irkutsk,  Vilnius.The 
+areas of researches were: stability in mechanics, oscillation and 
+control theory, celestial mechanics and elasticity, group  theory 
+in   fluid  mechanics,  mathematics,  physics   and   computorial 
+problems.  In Kiev V.A.GLUSHKOV with his colleagues have  created 
+the  computer  "MIR-2", the  first realization of  the  symbolic-
+numerical language ANALYTIK by hardware means.  Many mathematical 
+and   mechanical  problems  were  solved  and  many   non-trivial 
+algorithms  realized  on  these  computers.  Later  ANALYTIK  was 
+realized  both by hardware on Hulliet-Packers and  IBM   machines  
+and by software. SAM systems were created with both high and  low 
+level  languages.   As  an  interesting  example  of  high  level 
+language  we can mention V.F.TURCHIN with his  original  language 
+Refal.    S.S.LAVROV   and  his  colleagues   worked   on   Lisp.  
+A.P.ERSHOV was initiator of creation the universal tipe SAM. From 
+the other hand, applied specialists, physicists and mechanicians,  
+often  created  specialized  SAM program  systems  for  solving  
+their  problems,  and   sometimes preferred Algol or Fortran. 
+Numerous applications had very  large range: from nuclear physics 
+and General Relativity,  multi-bodies dynamics and stability  to 
+differential geometry and analysis.
+
+     In  the  end of the 70-ies SAM were used more often and have
+obtained  rather  wide popularity.  Conferences  in  Novosibirsk, 
+Irkutsk, in Moscow University contributed to this popularity.  At  
+the   known conferences  in  Dubna the foreign  systems  (REDUCE, 
+for  example) were demonstrated  and  widely distributed.  REDUCE 
+algorithms were created in mechanics  applications domain as well 
+as in physics one.
+
+     The large event was the great conference on SAM in mechanics 
+in  1984  in  Gorky. The majority of experts  in  SAM  from   our  
+country  were participating it, and achievements of   works   for  
+20   years were  demonstrated. There were such  known  scientists 
+among  participants as A.A.SAMARSKY,   N.N.GOVORUN,   D.M.KLIMOV,  
+V.M.MATROSOV,  D.V.SHIRKOV  and  others.  The  programmers   have 
+demonstrated  the  SAM  systems,  physicists,  mechanicians   and  
+mathematicians   presented various   problems   and   algorithms.  
+In   theory   of  elasticity, mechanics of  fluid  and  celestial  
+mechanics   SAM   were  used  for construction  of  solutions  in 
+series.  Formal  derivation  of equations  of   movement,   their  
+averaging,   analysis    of stability,  generation  of  numerical 
+programs  for simulation - were applied  for  various   difficult  
+mechanical  systems.  The large difference schemes,  formulas  of  
+estimation   of  accuracy  were formed.  The   group   properties  
+of  systems  of equations, their integrals were investigated.
+
+     The  SAM  applications  in multi bodies dynamics (more  then  
+15 groups  from Moscow, S-Petersburg, Irkutsk, Perm, Vilnius etc.) 
+were  analyzed  in  special  conferences  and  work-shops  in  
+S-Petersburg, Vilnius, Irkutsk and Moscow University.
+
+   At present SAM became recognized and customary tool for solution  
+of  problems  of  mechanics  of  multi-body  systems,   celestial 
+mechanics, cavitation,  strength,  physics,  theory  of  control.  
+Now  many domestic systems, including specialized, have  finished 
+the   work.  Their  role was taken by  the  programs  in  systems 
+REDUCE,  MAPLE, MATHEMATYCA  and other ones. But the  experts  on  
+SAM   and   their  applications  in various   areas  continue  to 
+work.  The experience of work, solution of specific SAM  problems 
+is present. SAM are applied in new areas (chemistry, verification  
+of   programs   etc.),   but  SAM  conventional  applications  in 
+mechanics as always are popular.
+
+     SAM are widely used in mathematical education from the  very 
+beginning:  in   formation  system  programmers   on   SAM,   for  
+training for SAM-systems, for mechanics and physics education. In 
+many  Universities the courses on SAM, their systems,  algorithms 
+and applications are read.  The students are taught to work  with 
+SAM, to construct and realize symbolical  algorithms,  to   apply 
+SAM  in  mechanics,  mathematics,  physics,  to  participate   in 
+development  of  systems.  The geography of  SAM  application  in 
+education  has very large domain: from S.Petersburg  to  Irkutsk, 
+>from Perm and Dubna to Kiev and Lvov.
+
+   Information   about   many  systems   and   mathematical   and  
+mechanical algorithms in them were assembled  by  authors of this 
+report. The modern data are collecting in information bank on SAM: 
+"Computer   Symbolic  manipulations  in  problems  of  mechanics"  
+(Institute   of  Mechanics.  Moscow  State Lomonosov   University.  
+Michurynski  pr.1, Moscow 117192, Russia. M.V.Grosheva: tel.(095) 
+939-5478,e-mail: grosheva@inmech.msu.su).
+     The work was carried out under support of RFFI grant N 96-15
+-97229, N 98-01-00941 and Russian Universities, Mathematical 
+Simulation.
+                  
+[1] Grosheva M.V., Efimov G.B. Systems for analytical calculation
+    at  computer.  - In: Packages of applied programs. Analytical
+    transformations. Moscow, Nauka, 1988, 5-30. (In Russian).
+[2] Grosheva M.V., Samsonov V.A.  Information  bank:  Computer
+    Symbolic  manipulations  in  problems  of  mechanics.  -  In:
+    Computer Analytical manipulations in automatic of  scientific
+    research. Vilnius, 1990, p.92. (In Russian).
+[3] Efimov G.B., Grosheva M.V. On History of use the Computerized
+    Symbolical Manipulation's in Mechanics. - Preprint of Inst.of
+    Mech. Moscow St. Lomonosov University, No 16, Moscow. 1995.
+    44 pp. (In Russian).
+[5] Miola A.M., Pottosin I.V.   A bibliography of soviet works in
+    algebraic manipulations. - SIGSAM Bull., 1981, 15, N 1, 5-7.
+[6] Brumberg V.A., Tarasevich S.V., Vasiliev  N.N.   Specialized
+    celestial  mechanics  systems  for  symbolic  manipulations.-
+    Celest. Mech. 1989, 45, 149-162.

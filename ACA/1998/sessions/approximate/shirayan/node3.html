@@ -1,0 +1,85 @@
+
+<H1><A NAME="SECTION00030000000000000000"><tex2html_anchor_invisible_mark></A><A NAME="appl"><tex2html_anchor_mark></A><BR>
+Applications
+</H1>
+
+<P>
+Table~<A HREF=<tex2html_cr_mark>#tab:S-table#194><tex2html_cr_mark></A> presents several of the applications of the 
+stabilization methodology.
+All of the examples are in terms of <tex2html_verbatim_mark>#math62#<tex2html_image_mark>#tex2html_wrap_inline1361#.
+The left column in the table gives the algebraic objects computed 
+by <tex2html_verbatim_mark>#math63#<tex2html_image_mark>#tex2html_wrap_inline1363# together with the algorithm used.  The right column 
+gives the related references.  A floating-point approximation is used
+as an approximation sequence for input <I>f</I>.  Namely, for 
+<tex2html_verbatim_mark>#math64#<tex2html_image_mark>#tex2html_wrap_inline1367#,
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math65#
+
+<tex2html_image_mark>#displaymath1069#
+</DIV><BR CLEAR="ALL">
+<P></P>
+where <tex2html_image_mark>#tex2html_wrap_inline1369# is a floating-point approximation to <I>a</I> with precision <tex2html_image_mark>#tex2html_wrap_inline1373#and <tex2html_image_mark>#tex2html_wrap_inline1375# is the associated error.
+Note that not only is the input approximated 
+but also in the course of executing each algorithm, approximate 
+computation was done. This is also discussed in [#SS#<tex2html_cite_mark>#1##<tex2html_cite_mark>#].
+
+<P>
+We have explained that zero rewriting is done preceding 
+evaluating predicates. However, in implementation, it is often 
+more convenient to perform zero rewriting after every function
+evaluation.  This extra rewriting was done for the Buchberger and 
+Sturm algorithms.  This is good in the case where
+a predicate does not explicitly appear in the description of an algorithm.
+For example, the function of 
+taking the lead term from a polynomial implicitly involves 
+a predicate whether a coefficient is zero.
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+
+<A NAME="tab:S-table"><tex2html_anchor_mark></A>
+<P>
+
+<P><BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<A NAME="206"><tex2html_anchor_mark></A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table:</STRONG>
+Applications of the stabilization techniques</CAPTION>
+<TR><TD ALIGN="CENTER">Gr&#246;bner bases</TD>
+<TD ALIGN="CENTER">(Shirayanagi 93) [#shirayan#<tex2html_cite_mark>#1##<tex2html_cite_mark>#]</TD>
+</TR>
+<TR><TD ALIGN="CENTER">(Buchberger)</TD>
+<TD ALIGN="CENTER">(Ozaki 94) [#ozaki#<tex2html_cite_mark>#1##<tex2html_cite_mark>#]</TD>
+</TR>
+<TR><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">(Hiyoshi 97) [#hiyoshi#<tex2html_cite_mark>#1##<tex2html_cite_mark>#]</TD>
+</TR>
+<TR><TD ALIGN="CENTER">Counting real roots</TD>
+<TD ALIGN="CENTER">(Sekigawa 95) [#sturm#<tex2html_cite_mark>#1##<tex2html_cite_mark>#]</TD>
+</TR>
+<TR><TD ALIGN="CENTER">(Sturm)</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">Convex hull</TD>
+<TD ALIGN="CENTER">(Sekigawa 95) [#convex#<tex2html_cite_mark>#1##<tex2html_cite_mark>#]</TD>
+</TR>
+<TR><TD ALIGN="CENTER">(Graham)</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">Smith normal form</TD>
+<TD ALIGN="CENTER">(Niitsuma 96) [#jordan#<tex2html_cite_mark>#1##<tex2html_cite_mark>#]</TD>
+</TR>
+<TR><TD ALIGN="CENTER">Moore-Penrose generalized inverses</TD>
+<TD ALIGN="CENTER">(Minakuchi 96) [#mina#<tex2html_cite_mark>#1##<tex2html_cite_mark>#]</TD>
+</TR>
+<TR><TD ALIGN="CENTER">(Greville)</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+</TABLE></DIV>
+</DIV><BR>
+<P>

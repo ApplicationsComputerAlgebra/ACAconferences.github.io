@@ -1,0 +1,62 @@
+Special session organizers
+
+IMACS Conference on Applications of Computer Algebra
+
+Chaouki Abdallah
+	(chaouki@jemez.eece.unm.edu)
+Amir Assadi
+	(assadi@math.wisc.edu)
+Alexander Bruno
+	(bruno@applmat.msk.su)
+Ralph DeMarr
+	(demarr@math.unm.edu)
+Mene Doffou
+	(mdoff@matisse.eecs.uic.edu)
+Peter Dorato
+	(peter@jemez.eece.unm.edu)
+Victor Edneral
+	(edneral@theory.npi.msu.su)
+Igor Gachkov
+	(gaig@ihs.hj.se)
+Victor G. Ganzha
+	(ganzha@hrz.uni-kassel.de)
+Vladimir P. Gerdt
+	(gerdt@cict.fr)
+Robert Grossman
+	(grossman@math.uic.edu)
+Kenneth Hulth
+	(huke@ihs.hj.se)
+Jeanine Ingber
+	(Jeanine Ingber)
+Michael Jahn
+	(jahn@math.unm.edu)
+Eric Kaltofen
+	(kaltofen@cs.rpi.edu)
+Lakshman Y. N.
+        (ylakshma@mcs.drexel.edu)
+Richard Liska
+	(liska@siduri.fjfi.cvut.cz)
+H. Eric Nuttall
+	(nuttall@unm.edu)
+Gregory Reid
+	(reid@math.ubc.ca)
+Waldir L. Roque
+	(roque@mat.ufrgs.br)
+Fritz Schwarz
+	(fritz.schwarz@gmd.de)
+Juan Rafael Sendra
+	(mtsendra@alcala.es)
+Michael Trott
+	(mtrott@wri.com)
+Laureano Gonzalez Vega
+	(gvega@matsun1.unican.es)
+Gilles Villard
+	(gvillard@mistral.imag.fr)
+E.V. Vorozhtosov
+	(adm@itam.nsk.su)
+Dongming Wang
+	(wang@lifia.imag.fr)
+David Wood
+	(wood@udel.edu)
+Richard Zippel
+	(rz@cs.cornell.edu)

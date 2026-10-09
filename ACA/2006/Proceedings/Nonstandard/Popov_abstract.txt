@@ -1,0 +1,36 @@
+Using Computer Algebra Techniques for the Specification and Verification of
+Recursive Programs
+
+Nikolaj Popov and Tudor Jebelean
+
+Research Institute for Symbolic Computation (RISC-Linz)
+Johannes Kepler University
+Linz, Austria
+
+popov@risc.uni-linz.ac.at
+jebelean@risc.uni-linz.ac.at
+
+
+We describe an innovative method for proving total correctness of tail
+recursive programs of a specific configuration, namely programs in which a tail
+recursive function is driven by a main nonrecursive function, for which alone a
+specification is provided.
+
+The specification of the auxiliary function is obtained almost fully
+automatically by propagating restrictions taken from the specification of the
+main program, and by solving coupled linear recursive sequences with constant
+coefficients.
+
+The process is carried out by means of CA (Computer Algebra) and
+AC (Algorithmic Combinatorics) techniques available in Mathematica.
+
+The method under consideration consists of the following three steps: 
+(1) find what the auxiliary function does, that is, find its closed form;
+(2) prove termination of the auxiliary function;
+(3) prove correctness of the main function.
+
+During the talk we are going to present the method on a running example.  By
+the end we will find a "bug" in the program and we will get useful hints "how
+to overcome" that bug.  On purpose we use example which fails to verify, 
+because we want to demonstrate the usefulness of our method in such situations
+also.   

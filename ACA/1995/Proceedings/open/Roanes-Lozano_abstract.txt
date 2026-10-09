@@ -1,0 +1,50 @@
+Verification of Knowledge Based Systems with Commutative Algebra and
+Computer Algebra Techniques
+
+*****************************************************
+
+AUTHORS:
+
+Eugenio Roanes-Lozano
+Lecturer (Dept. Algebra, Univ. Complutense de Madrid)
+Ph.D. in Mathematics (Univ. Seville)
+Ph.D. in Computer Science (Technical Univ. Madrid)
+Age: 32
+
+Luis M. Laita
+Senior Professor (Dept. Artificial Intelligence, Technical Univ. Madrid)
+Master in Physics and Ph.D. in Mathematics (Univ. Complutense de Madrid)
+Ph.D. in Logic and Philosophy of Science (University of Notre Dame, USA)
+
+*****************************************************
+
+INTRODUCTION/ABSTRACT:
+
+  When a Knowledge Based System (KBS), usually known as Expert System, is
+constructed, the expert (a human) gives a list of rules, facts and
+constraints. The knowledge of the expert would be supposed not to lead to
+any contradiction. Nevertheless, structural problems actually appear in most
+KBSs. Therefore much attention has been paid lately to check the
+reliability of the KBSs because safety is the main goal in some
+applications, as clinical practice guidelines (diagnosis in Medicine) and
+decision taking in nuclear power-stations. The celebration of more than 20
+international conferences and workshops since 1988 testify the importance
+of the topic.
+  Checking the forward reasoning consistency of a KBS is a very hard an
+still not completely closed problem. Usually the KBS is broken into small
+pieces (that look independent) and they are manually checked using diagrams.
+Other techniques use random checking and Petri-nets checking.
+  In our approach we give an interpretation of forward reasoning
+consistency using ideals of Boolean algebras. Then we construct an
+isomorphic polynomial K-algebra and use elementary techniques from ideal
+theory (now ideals of a polynomial ring) to check the logic consistency of
+the knowledge of the expert (in an exhaustive way).
+  We have developed implementations in REDUCE and Maple V.
+  As we say above, the problem is very hard (double-exponential in the
+worse case with our approach). We suspect that the reason is that the
+worse-case complexity of the problem is double-exponential with any
+approach. Anyway the implementations can handle small-size KBSs in a
+486-PC.
+  We think that this is a very innovative approach in the use of elementary
+techniques that are of common usage in Algebraic Geometry and in Computer
+Algebra to an important problem of Artificial Intelligence.

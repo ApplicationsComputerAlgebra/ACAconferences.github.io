@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">High order WKB approximation and singular perturbation theory</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Trott">Michael Trott</A><br>
+</h3>
+
+Date: July 18th (Thursday)<br>
+Time: ??.??<br>
+
+<center>
+Abstract
+</center>
+
+In the first part high order WKB quantization formulas  
+for one-dimensional systems are derived by alternating  
+repeated automatic partial integration with respect to x  
+and V'(x). At the end nonintegrable singularities are  
+rewritten as multipe energy derivatives to allow numerical  
+treatment of the integrals.
+The second part discusses the second order dependence of  
+the eigenvalues of a finite quantum well in an electric  
+field. Because the system has a continous energy spectrum,  
+classical perturbation theory yields untractable  
+integrals. Starting from the exact solution a singular  
+perturbation theory is performed to yield relatively  
+simple closed form expressions for all eigenvalues.
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Maccone.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

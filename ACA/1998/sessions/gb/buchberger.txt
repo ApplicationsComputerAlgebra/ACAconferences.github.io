@@ -1,0 +1,16 @@
+    "Computer Support for Inventing Groebner Bases Theory"
+
+    Bruno Buchberger.
+    RISC - Research Institute for Symbolic Computation, Johannes Kepler
+    University
+    Schloss Hagenberg
+    A-4232 Hagenberg
+    Austria
+    E-mail:buchberg@risc.uni-linz.ac.at
+	 
+Abstract: We will speak about the Theorema project (based on Mathematica),
+which aims at supporting mathematicians in playing with new notions and
+studying their consequences. The main tools are various computer-supported
+provers that generate proofs in a style that imitates human proving. The
+project is motivated by the author's work on various variants and
+generalizations of the Groebner bases theory.

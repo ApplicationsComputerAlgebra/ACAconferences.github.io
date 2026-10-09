@@ -1,0 +1,27 @@
+
+"Polynomial System Solving for industrial problems:
+ A report from the FRISCO project"
+
+Laureano Gonzalez--Vega
+Departamento de Matematicas, Estadistica y Computacion,
+Facultad de Ciencias, Universidad de Cantabria, Santander, Spain.
+E_mail: gvega@matesco.unican.es
+
+
+In this talk the FRISCO (A Framework for Integrated Symbolic/Numeric
+Computation) project will be presented together with the
+activity developped inside the project towards the transfer, to companies,
+enterprises and R\&D laboratories, of the last achievements in polynomial
+system solving.
+
+This will be done by presenting, at least, two concrete examples arising,
+the first,  from the design of a transistor and, the second, from the
+CAD/CAM software in an industrial framework. In these examples it will be
+shown how the use of new techniques for Polynomial System Solving has been
+very useful to solve the real-world problems considered.
+
+
+
+
+
+

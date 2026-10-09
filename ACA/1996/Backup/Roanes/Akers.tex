@@ -1,0 +1,58 @@
+\begin{center}
+\LARGE
+A Problem Solving Environment for Numerical Partial
+                     Differential Equations
+\end{center}
+
+\begin{center}
+\Large
+R.L. Akers, P. Baffes, E. Kant, C. Randall, S. Steinberg, R.L Young
+
+\end{center}
+
+\noindent
+Date:  July 18th (Thursday)\\
+Time:  15:15-15:40\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+SciNapse is a problem solving environment for numerically solving partial differential equations
+that is currently under commercial development. The main interface to the system is the "problem
+specification language". This language allows an initial-boundary value problem for a system of
+partial differential equations to be specified in terms of invariant differential operators or in a
+particular coordinate system. The region in which the differential equations hold is specified in
+terms of a union of rectangles in some coordinate system. This allow rather general regions
+apropriate for discretization using logically-rectangular grids. The methods for discretizing the
+differential equations and the boundary conditions can be specified by giving keywords for
+common methods or by giving detailed mathematical replacement rules, or some combination of
+both. In the case of finite-difference discretizations, simple ways exist for specifying grid
+staggering and the placement of the boundaries in the staggered grid. 
+
+The SciNapse system includes a template language for specifying algorithms. One typical use for
+templates is to specify the over-all time evolution in terms of a general method for taking
+individual time steps. Then the particular method for taking a time step can be chosen from a
+library of templates, e.g. Runge-Kutta-Fehlberg or Dormand-Prince integrators, or a new
+template may be written. If the method is implicit, then a solver may also be chosen from a library
+of solvers, e.g. preconditioned conjugate gradient or quasi-minimal residual, or a new solver
+template can be written. SciNapse has heuristics for choosing solvers, and many other features of
+the solution algorithm. The SciNapse system is implemented in Mathematica and the templates are
+executable Mathematica code, so they can easily be tested for correctness in Mathematica. 
+
+SciNapse is a knowledge-based program synthesis system implemented with objects,
+transformation rules, and a reasoning system. A great deal of knowledge engineering has gone into
+providing the system with extensive information about how to solve initial boundary value
+problems in an intelligent manner. The system starts with an abstract notion of what is needed to
+write a program recorded in its objects and starts filling in the details based on rules associated
+with the objects. Information may be given to SciNapse in files written by the user, from a simple
+terminal interface, or in a graphical user interface. When SciNapse realizes that it doesn't have a
+piece of information that it needs to specify a problem, it will ask the user for that information,
+typically by giving a menu of alternatives. Users can have the system use its own knowledge
+whenever possible or can request that they be asked to confirm system choices. If some
+information has already been given to SciNapse, then the reasoning system uses this to eliminate
+alternatives. Using constaints (hard and fast rules about legal options and combinations), heuristic
+rules of thumb for making decisions, and defaults, SciNapse can take much of the burden of
+writing a program off the user. 
+

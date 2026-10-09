@@ -1,0 +1,17 @@
+Authors: Jacques Calmet and Christoph Zenger
+Institution: University of Karlsruhe
+Title:  Indexed Types  
+
+Abstract:	
+
+In this talk an extension of the Hindley-Milner type-system is
+proposed. The extensions allows to parameterize algebraic datatypes
+not only with types, but also with indices (numbers).  For example
+matrices can be parameterized not only by the type of the matrix
+elements, but also by their size.  Nevertheless the system still
+allows static type checking, such that for example the size
+constraints in matrix multiplication can be checked statically.  In
+order to make this possible the constraints on indices are limited to
+either (quantified) Boolean formulas over polynomial equations or
+formulas in Presburger arithmetic.  We will present examples to
+demonstrate the expressiveness of the system.

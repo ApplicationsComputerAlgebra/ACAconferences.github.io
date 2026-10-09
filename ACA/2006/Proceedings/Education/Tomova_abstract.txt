@@ -1,0 +1,20 @@
+Application of Computer Algebra Systems for Obtaining, Illustration and
+Verification of Mathematical Results
+
+Anna Tomova
+Department of Mathematics and Informatics
+Naval Academy "N. J. Vapcarov"
+Varna, Bulgaria
+
+The contemporary Computer algebra Systems (CAS), such as Mathematica, Maple,
+Reduce, Matlab and others, have a large scale of capabilities allowing them to
+be used for automatic performance and illustration of mathematical
+computations.  These systems can be used for obtaining and verification of
+mathematical results as well, thus helping the mathematical developments.
+
+The CAS should be wider used at all levels of education in mathematics.  Some
+Bulgarian universities have good experience in this field.  In particular,
+successful application of CAS in education of mathematics at Varna Naval
+Academy has made.  Some examples of such application of CAS are described as
+well as their use via Internet.  CAS applications for obtaining and
+verification of mathematical results are also considered.

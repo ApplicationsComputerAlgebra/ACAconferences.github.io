@@ -1,0 +1,55 @@
+Moderated FORUM on Computer Algebra Systems
+
+The format of this discussion will be a panel of selected representatives of
+various points of view: developers of general purpose and specialized systems,
+users from various disciplines (mathematics, science, engineering, education,
+business, etc.), reviewers of computer algebra systems or anyone else with an
+interesting perspective.  Each panel member will make a statement, providing
+some commentary on an outstanding issue of interest in the community.  This
+will then be followed by a discussion, starting first with any panel members
+who care to comment, after which the discussion will be opened up to the
+audience.  This will continue until either a set amount of time has elapsed or
+the moderator decides that the discussion has wound down.
+
+Each panel member will have an opportunity to bring up at least one issue.  If
+time allows, additional issues can be brought up or discussions cut short
+earlier can be continued.  The commentary may last a few minutes and the panel
+member may even use ONE viewgraph (but no more!) to help present his or her
+point.
+
+The focus on this session will be computer algebra systems as this is the main
+interaction between the user community with developers and researchers.  Topics
+might include (some based on discussion in sci.math.symbolic):
+
+o what kinds of abilities (and facilities) are lacking in the current systems
+  that users feel are needed?
+o what kinds of abilities (and facilities) are lacking in the current systems
+  that developers think are needed?
+o What good ideas in some of the current systems should spread widely?
+o how easy is it to use the current systems?
+o how easy is it to find out if a system can do a particular operation?
+o does one have to be too much of a computer scientist to effectively use the
+  current systems?
+o how easy is it to manipulate and transform expressions?
+o do the current systems use too much brute force and not enough finesse?
+o is the algorithm a system employs too dependent on the exact form of the
+  input [e.g., integrate(x^2/(1 + x^3)^(3/2), x = 0..2) may produce a very
+  different looking result than integrate(x^2/sqrt((1 + x^3)^3), x = 0..2)]?
+o are the algorithms employed covering well areas of applied interest? 
+o how well do the current systems interact with other programs?
+o how well do the current systems manage data from external sources?
+o what quality of output and graphics is produced and how could it be improved?
+o how well do the current systems generate code in numerical languages like C
+  and Fortran?
+o how well do the current systems cope with large problems?
+o how well and how should systems cope with the different viewpoints presented
+  by various flavors of mathematicans, scientists, engineers, educators,
+  business users, etc.?
+o what is the role of reviews?
+o commercialization of CASs
+o whatever else seems appropriate
+
+Although the topics may be broad, the panel member should strive to inject some
+specifics in his or her presentation to help focus the discussion.  The
+ultimate goal is to engender some good interactions within the developer/user
+community.

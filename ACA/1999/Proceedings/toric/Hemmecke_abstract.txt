@@ -1,0 +1,11 @@
+Decomposing Graver Test Sets in Stochastic Programming
+by Raymond Hemmecke
+
+In this talk we present the notion of a Graver test set for the problem
+$\min\{cz : Az=b, z\geq 0\}$, with possible integrality constraints on $z$,
+and consider the structure of such sets for very special matrices arising in
+2-stage stochastic programming. We show the existence of a finite set
+$H_\infty$ of building blocks from which for an arbitrary number of scenarios
+the corresponding Graver test set can be reconstructed. Moreover, we present
+algorithms to compute $H_\infty$ and to efficiently reconstruct an improving
+vector for a given feasible solution.

@@ -1,0 +1,118 @@
+Title:    Some geometric remarks concerning the overthrow of 
+          the different types of railway vehicles when sitting 
+          on curved track
+
+Authors:  Eugenio Roanes-Lozano
+          (Univ. Complutense de Madrid, Madrid, Spain)
+
+Extended Abstract:
+
+Many railway passenger coaches in Continental Europe, like 
+German "m wagen" or French "Corail" coach are 26.40 m long 
+and 2.825 m wide.
+
+The reason is that there are size standards in order to allow 
+trains to pass from one railway network to another (that is, 
+to be interoperable). The maximum size and shape of the 
+rolling stock is denoted "gauge". More precisely, the 
+following definitions: 
+
+  << - Gauge: A document or drawing describing how big a train 
+       may be, or how small a structure may be. It may include 
+       a gauge line.  
+
+     - Gauge Line: A notional line, usually described by 
+       points, illustrating the limits of a gauge. The gauge 
+       line may require adjustments according to gauge rules.
+
+     - Gauge rules: A series of standard conditions under 
+       which the vehicle or strucutre must comply with when 
+       evaluating against the gauge line
+
+     - Static Gauge: A gauge line and set of rules to be 
+       applied when the vehicle is stationary on curved or 
+       straight track. In the former case, it is usually 
+       necessary to apply overthrow adjustment.
+
+     - Dynamic (or kinematic) Gauge: A static gauge further 
+       adjusted to account for suspension movements associated 
+       with motion. >>
+
+can be found in the document "Gauging. The V/S SIC Guide to 
+British gauging practice", published by the British RSSB (Rail 
+Safety and Standards Board). 
+
+Sometimes further distinctions are made, like in Chapter 7 
+"Gauging Issues" of S. Iwnicki's  "Handbook of Railway 
+Vehicle Dynamics", where a (static) "swept gauge" is 
+distinguished: 
+
+  << On curves, vehicles sweep a larger path than on straight 
+     track, a phenomenon known as "overthrow". >> 
+
+The standard gauges are defined by the UIC (Union 
+Internationale des Chemins de Fer --International Union of 
+Railways) in its "505" series of leaflets.
+
+Calculating the dynamic gauge is far more complex than 
+calculating the static gauge, as different possible 
+deviations have to be taken into account (displacements due 
+to the suspension movements, superelevation of the track, 
+tolerances, tilting bodies...). There are two well-known 
+packages for computing dynamic gauges: VAMPIRE(R) and 
+ClearRoute(TM).
+
+Nevertheless, from the geometrical point of view, analyzing 
+the influence of the different types of railway vehicles in 
+the overthrow when sitting on curved track is very 
+interesting, and can be easily performed using a computer 
+algebra system such as Maple.
+
+We shall distinguish the following types of coaches: 
+
+- two-axle coaches 
+  (obsolete, like Renfe's 7000 or the DR/DB "Donnerb??chsen" 
+  --Thunder Boxes), 
+
+- bogie coaches (2-axles bogies) 
+  (a "bogie" (UK) or "truck" (US) is a structure underneath a 
+  railway vehicle, that can turn w.r.t. the vehicle's body, 
+  and to which axles are attached through bearings)
+  (this is the most common kind of coaches nowadays), 
+
+- coaches sharing bogies (Jakob-type bogies), 
+  (like DB's ICE, SNCF's TGV and AGV, Renfe's AVE series 100 
+  and 103 and Civia commuter trains,...),
+
+- Talgo coaches (with independent wheels situated between 
+  coaches);
+
+and the parameters considered are: 
+
+- the radius of the curve (only constant radius curves will 
+  be considered), 
+
+- the total length of the body of the vehicle, 
+
+- the width of the body of the vehicle, 
+
+- the bogie pivot distance (or wheelbase if the vehicle has 
+  no bogies), 
+
+- the bogie wheelbase (distance between the two axles of the
+  bogie --if applies),
+
+- ...
+
+Some curious results are obtained, and even a surprise (one 
+negative value is obtained for Talgo coaches).
+
+Let us finally emphasize that Talgo company has recently 
+released the new train "Avril", of which a high-density 
+widebody version will be offered. Regarding gauge, this 
+version benefits from the advantages of using "short" coaches 
+and situating the wheels at the end of the coaches (the width 
+is 3.00 m for the standard version and 3.45 m (!) for the 
+widebody one). Other passenger trains, such as Bombardier's 
+"Zefiro 380" are also offered in widebody versions (3.4 m
+for the "380 Zefiro").

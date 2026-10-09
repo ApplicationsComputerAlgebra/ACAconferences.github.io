@@ -1,0 +1,11 @@
+Bill Pletsch* (USA), bpletsch@tvi.cc.nm.us
+A Computer Classroom Lecture: Asymptotic Convergence of Rational Functions
+
+Computer algebra in the mathematics classroom will be discussed with special
+attention to the computer classroom . A specific computer classroom lecture
+will be demonstrated, that of the convergence of a rational function to a
+polynomial. Computer algebra is in a unique position to aid students in
+learning this concept. Symbol manipulation is necessary to do the polynomial
+division. Simultaneously, the presentation will demonstrate the modern methods
+of presenting a mathematical concept from the numerical, graphical, and
+symbolic points of view.

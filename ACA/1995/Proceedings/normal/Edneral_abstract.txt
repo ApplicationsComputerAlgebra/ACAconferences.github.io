@@ -1,0 +1,21 @@
+Normal Form Method and Formal Integrals of Nonlinear ODEs systems
+                        Victor F. Edneral
+
+    Institute for Nuclear Physics of Moscow State University
+             Leninskie Gory, Moscow, 119899, Russia
+
+                e-mail: edneral@theory.npi.msu.su
+                  Phone/fax: (+7+095) 939-03-97
+
+    This  report  describes  examples of  building  by  the  NORT 
+package and a practical usage of formal integrals of  Gustavson's 
+type  for  the  reduction of an  order  of  nonlinear  autonomous 
+systems of ODEs.  The formal integrals are created by the  normal 
+form  method  as  a truncated power series in  variables  of  the 
+system. For relevant cases (for example for Henon-Heiles' system) 
+this technique provides exact formal integrals so it is  possible 
+to  get some partial periodic solutions of nonlinear  systems  in 
+these  cases.  Otherwise it is possible to get approximations  of 
+formal  integrals  which  can  be  useful  for  increasing  of  a 
+precision of a numerical integration of periodic solutions of the 
+systems.

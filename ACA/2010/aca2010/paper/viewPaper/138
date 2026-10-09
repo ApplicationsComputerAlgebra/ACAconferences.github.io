@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Ferrer- Mallorquí</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="http://aca2010.info/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="http://aca2010.info/styles/paperView.css" type="text/css" />
+
+			<link rel="stylesheet" href="http://aca2010.info/plugins/themes/classicNavy/classicNavy.css" type="text/css" />
+	
+	<script type="text/javascript" src="http://aca2010.info/js/general.js"></script>
+	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript" src="http://aca2010.info/js/sizer.js" ></script>
+
+	<!-- Add stylesheets for the font sizer -->
+	<link rel="alternate stylesheet" title="Small" href="http://aca2010.info/styles/fontSmall.css" type="text/css" />
+	<link rel="stylesheet" title="Medium" href="http://aca2010.info/styles/fontMedium.css" type="text/css" />
+	<link rel="alternate stylesheet" title="Large" href="http://aca2010.info/styles/fontLarge.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="body">
+
+<div id="main">
+
+<h2>University of Vlora - Conference Center,&nbsp;ACA&#039;10, Applications of Computer Algebra</h2>
+
+<div id="navbar">
+	<ul class="menu">
+		<li><a href="http://aca2010.info/index.php/index/index" target="_parent">Home</a></li>
+		<li><a href="../../about" target="_parent">About</a></li>
+					<li><a href="../../login" target="_parent">Log In</a></li>
+			<li><a href="../../user/account" target="_parent">Account</a></li>
+				<li><a href="../../search" target="_parent">Search</a></li>
+								<li><a target="_parent" href="../../../index/schedConfs/archive">Archive</a></li>							<li><a href="../../announcement" target="_parent">Announcements</a></li>
+						
+							<li><a href="http://univlora.edu.al" target="_parent">University of Vlora</a></li>
+					<li><a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/trackPolicies" target="_parent">Special Sessions</a></li>
+					<li><a href="https://sites.google.com/a/univlora.edu.al/aca-schedule/home/schedule" target="_parent">Schedule</a></li>
+			</ul>
+</div>
+
+<div id="breadcrumb">
+	<a href="../../index" target="_parent">Home</a> &gt;
+	<a href="../../../aca2010.4" target="_parent">ACA 2010, Applications of Computer Algebra, June 24-27,  Vlora, Albania</a> &gt;
+	<a href="../../index" target="_parent">ACA&#039;10, Applications of Computer Algebra</a> &gt;
+	<a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/presentations" target="_parent">Interaction Between Computer Algebra and Interval Computations</a> &gt;
+	<a href="../view/138/0" class="current" target="_parent">Ferrer- Mallorquí</a>
+</div>
+
+<div id="content">
+	<div id="topBar">
+		<div id="paperFontSize">
+			Font Size:&nbsp;
+			<a href="138#" onclick="setFontSize('Small');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_small.gif" width="16" height="14" border="0" alt="Small" /></a>&nbsp;
+			<a href="138#" onclick="setFontSize('Medium');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_medium.gif" width="16" height="14" border="0" alt="Medium" /></a>&nbsp;
+			<a href="138#" onclick="setFontSize('Large');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_large.gif" width="16" height="14" border="0" alt="Large" /></a>
+		</div>
+	</div>
+
+	<h3>Combining symbolic tools with interval analysis. An application to solve robust control problems.</h3>
+	<div><em>Inès Ferrer- Mallorquí, Josep Vehi</em></div>
+	<br />
+
+	<blockquote>
+							Last modified:&nbsp;2010-05-28<br/>
+	</blockquote>
+
+		<h4>Abstract</h4>
+	<br />
+	<div><p class="MsoNormal" style="margin: 0cm 0cm 0pt; line-height: normal; text-align: justify; mso-layout-grid-align: none;">Complex systems are often subjected to uncertainties that make its model difficult, if not impossible to obtain.  A quantitative model, that is a mathematical model in which the values of the parameters are real numbers, may be inadequate to represent the behavior of systems which require an explicit representation of imprecision and uncertainty. </p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; line-height: normal; text-align: justify; mso-layout-grid-align: none;"> </p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; line-height: normal; text-align: justify; mso-layout-grid-align: none;">When the uncertainties are structured, i.e. the model structure is known and only the parameters undergo imprecise, they can be handled with interval models in which the values of the parameters are allowed to vary within numeric intervals.</p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; line-height: normal; text-align: justify; mso-layout-grid-align: none;"> </p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; line-height: normal; text-align: justify; mso-layout-grid-align: none;">Robust control uses such mathematical models to explicitly have uncertainty into account. To solve robust control problems like finding the robust stability or designing a robust controller involves hard symbolic and numeric computation. When interval models are used, it also involves interval computation.</p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; line-height: normal; text-align: justify; mso-layout-grid-align: none;"> </p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; line-height: normal; text-align: justify; mso-layout-grid-align: none;">This paper presents a methodology and a framework that combines symbolic and numeric computation with interval analysis to solve robust control problems. The main advantage of interval analysis is that it provides guaranteed solutions.  </p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; line-height: normal; text-align: justify; mso-layout-grid-align: none;"> </p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; line-height: normal; text-align: justify; mso-layout-grid-align: none;">The framework IRCAD (Interval Robust Control framework for Analysis and Design) is implemented in Matlab. The application calls Maple, to manage symbolic data, and  C++ for interval and numerical computations. The implemented functionalities include: robust analysis tools like stability test and stability margin computation; robust control design tools, including a design specifications selecting tool; and a set of visualization and post-design tools to analize the behavior of the designed controllers and to verify the fulfillment of the requested specifications.</p></div>
+	<br />
+	
+						
+
+</div>
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+<!--
+	// Open "Define Terms" context when double-clicking any text
+	function openSearchTermWindow(url) {
+		var term;
+		if (window.getSelection) {
+			term = window.getSelection();
+		} else if (document.getSelection) {
+			term = document.getSelection();
+		} else if(document.selection && document.selection.createRange && document.selection.type.toLowerCase() == 'text') {
+			var range = document.selection.createRange();
+			term = range.text;
+		}
+		if (url.indexOf('?') > -1) openRTWindowWithToolbar(url + '&defineTerm=' + term);
+		else openRTWindowWithToolbar(url + '?defineTerm=' + term);
+	}
+
+	if(document.captureEvents) {
+		document.captureEvents(Event.DBLCLICK);
+	}
+	document.ondblclick = new Function("openSearchTermWindow('http://aca2010.info/index.php/aca2010/aca2010/rt/context/138/0/96')");
+// -->
+
+</script>
+
+</body>
+</html>

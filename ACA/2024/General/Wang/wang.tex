@@ -1,0 +1,217 @@
+% This file should be rename with the speaker's last name. (e.g : smith)
+
+% Write the author names in the order you wish them to appear
+% and underline the one who will give the talk.
+
+% Only the speaker's email address is required.
+\newcommand{\GM}[1]{{\color{red} \textbf{GM:} #1}}
+
+
+\begin{abstract_online}{Completing Parametric Unimodular Rows to Unimodular Matrices}{%
+        \underline{Dingkang Wang}$^{1,2}$, Xiaopeng Zheng$^{1,2}$}{[dwang@amss.iss.ac.cn]
+        }{%
+        $^1$ KLMM, Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing 100190, China \newline{}$^2$ School of Mathematical Sciences, University of Chinese Academy of Sciences, Beijing 100049, China\newline{}}
+
+
+   % In this paper, we extend the aforementioned result to cover the case of multiple polynomials. Based on this result, we then develop our main algorithm for computing parametric GCRD. 
+
+%The Quillen–Suslin theorem, also known as Serre's problem or Serre's conjecture, is a theorem in commutative algebra concerning the relationship between free modules and projective modules over polynomial rings. 
+
+Serre, in his 1955 paper \cite{serre1955faisceaux}, remarked that the corresponding question was not known for algebraic vector bundles: "It is not known whether there exist projective $A$-modules of finite type which are not free." Here $A$ is a polynomial ring over a field. Serre made some progress towards a solution in 1957 when he proved that every finitely generated projective module $P$ over a polynomial ring over a field was {\itshape stably free}, i.e., $P \oplus A^t \simeq A^s$. In view of this, Serre's Problem becomes the following: does "stably free" imply "free" over $k[x_1,\ldots,x_n]$? In fact, in the aspect of polynomial matrix, this problem is equivalent to the following problem (refer to \cite{yengui2015constructive}, Proposition 20):  
+\vspace{-0.3cm} 
+\begin{center}
+	\begin{tabular}{l}
+		\itshape If $f_1,\ldots,f_m\in A=k[x_1,\ldots,x_n]$ generate the unit ideal, can we always complete\\ \itshape $(f_1,\ldots,f_m)$ to an $m \times m$ matrix over $A$ with determinant in $k \setminus \{0\}?$
+	\end{tabular}
+\end{center}
+\vspace{-0.3cm} 
+In 1976, Quillen \cite{quillen1976projective} and Suslin \cite{suslin1976projective} proved independently that Serre's Conjecture is true and gave a positive answer to the problem above, which means that polynomial vector $(f_1,\ldots,f_m)$ can be completed to a unimodular matrix if $f_1,\ldots,f_m$ generate the unit ideal. This theorem is commonly referred to Quillen-Suslin theorem:
+\vspace{-0.3cm} 
+\begin{center}
+	\begin{tabular}{l}
+		\itshape {\bf \itshape Quillen-Suslin Theorem.} A polynomial vector $(f_1,\ldots,f_m)$ can be completed to a \\ \itshape unimodular matrix if $f_1,\ldots,f_m$ generate the unit ideal.
+	\end{tabular}
+\end{center}
+\vspace{-0.3cm} 
+
+The constructive version of the Quillen-Suslin theorem is presented by \cite{roitman1975serre} for $A = k[x_1,x_2]$ and 
+by \cite{logar1992algorithms} for $A = \mathbb{C}[x_1,\ldots,x_n]$. The first implementation of the constructive versions of Quillen-Suslin algorithm in computer algebra system {\itshape Maple} is presented in \cite{fabianska2007applications} for $A = \mathbb{Q}[x_1,\ldots,x_n]$. 
+
+In this paper, we will extend the Quillen-Suslin Theorem to parametric case.  Specifically, we will consider the following problem: Let $L$ be a algebraic closed filed contained $k$, $X = (x_1,\ldots,x_n)$ and $U = (u_1,\ldots,u_s)$.
+
+\begin{problem}
+	Let $\vec{f}(U,X)\in k[U][X]^{1 \times m}$ be a polynomial vector with variables $x_1,\ldots,x_n$ and parameters $u_1,\ldots,u_s$. Find a series of subsets $C_1,\ldots,C_s$ of $L^s$ and polynomial matrices $P_1,\ldots,P_s\in k[U][X]^{m \times m}$, such that $C_1 \cup \cdots \cup  C_l= L^s$ and for any $(a_1,\ldots,a_s)\in C_i$, we have
+	\vspace{-0.4cm}
+	\begin{enumerate}
+		\item $\vec{f}(a_1,\ldots,a_s,X)\in L[X]^{1\times m}$ is completed to $P_i(a_1,\ldots,a_s,X)\in L[X]^{m\times m}$, i.e., $\vec{f}(a_1,\ldots,a_s,X)$ is the first row of $P_i(a_1,\ldots,a_s,X)$.
+		\item $P_i(a_1,\ldots,a_s,X)$ is unimodular, i.e., $\det(P_i(a_1,\ldots,a_s,X)) \in L$.
+	\end{enumerate}
+\end{problem}
+
+
+\begin{example}
+	Let 
+	\begin{align*}
+		\vec{f}(u,x,y) &= \left(-uy-y,x^{2}+u x+y^{2}+x y+x,x^{2}-u x-y,y^2+u y-u^{2}+u \right)\\
+		& = (f_1,f_2,f_3,f_4,f_5)\in \mathbb{Q}[u][x,y]^{1\times 5}.
+	\end{align*} 
+By computation, we complete $\vec{f}$ to unimodular matrices in parametric case and obtain the following result: For any $a \in \mathbb{C}$, we have
+	%We will regard $u$ as parameter and complete $F$ to a unimodular matrix in parametric case. We can check $F$ is not unimodular row over $\mathbb{Q}[u,x,y]$, which implies $F$ can not be completed to a unimodular matrix in $\mathbb{Q}[u,x,y]$. Therefore, 
+	\vspace{-0.4cm}
+	\begin{enumerate}
+		\item[(1)] if $\left(a-1\right)a = 0$, then $\vec{f}(a,x,y)$ can not be completed to a unimodular matrix;
+		\item[(2)] if $(a-1)a \neq 0$ and $(a+1)(2a+1) \neq 0$, then $\vec{f}(a,x,y)$ can be completed to a unimodular matrix $P_1$
+		over $\mathbb{C}[x,y]$, where
+		$$P_1 = \left(\begin{smallmatrix}
+			-ay-y &x^{2}+ax+y^{2}+x y+x & x^{2}-a x-y & y^2+a y-a^{2}+a
+			\\
+			a+1 & -y-x & 1 & -y-a 
+			\\
+			0 & -x & 2 a-x+1 & 0 
+			\\
+			0 & -a-x-1 & a-x & 0 
+		\end{smallmatrix}\right);$$
+	    \item[(3)] if $a+1 = 0$, then $\vec{f}(a,x,y)$ can be completed to a unimodular matrix $P_2$ 
+	    over $\mathbb{C}[x,y]$, where
+	    	$$P_2 = \left(\begin{smallmatrix}
+	    	0 & x^{2}+y^{2}+x y & x^{2}+ x-y & y^2- y - 2\\
+	    	\\
+	    	0 & x^{2}+2 x+y & -1 & x^{2}+x+y-1 
+	    	\\
+	    	1 & 0 & 0 & 0 
+	    	\\
+	    	0 & x^{2}-4 x y+y^{2}+x-3 y-14 & x^{2}+6 x-y+3 & -5 x y+y^{2}-4 x-4 y-10 
+	    \end{smallmatrix}\right);$$
+        \item[(4)] if $2a+1=0$, then then $\vec{f}(a,x,y)$ can be completed to a unimodular m
+        atrix $P_3$ over $\mathbb{C}[x,y]$, where
+        	$$P_3 = \left(\begin{smallmatrix}
+        	-\frac{y}{2} & x^{2}+x y+y^{2}+\frac{1}{2} x & x^{2}+\frac{1}{2} x-y & y^{2}-\frac{1}{2} y-\frac{3}{4} 
+        	\\
+        	-1 & 2 x+2 y & -2 & -1+2 y 
+        	\\
+        	0 & 0 & 1 & 0 
+        	\\
+        	0 & 1 & 1 & 0 
+        \end{smallmatrix}\right).$$
+	\end{enumerate}
+\end{example}
+
+%\begin{definition}
+%	A vector $\vec{f} = (f_1,\ldots,f_m) \in A^{1 \times m}$ is called unimodular if $\langle f_1,\ldots,f_m\rangle = A$. A matrix $P \in A^{m \times m}$ is called unimodular if $\det(P)$ is invertible in $A$.
+%\end{definition}
+
+\begin{notations}
+	For $\vec{a} = (a_1,\ldots,a_s) \in L^s$ and $\vec{f} \in k[U][X]^{1 \times m}$, we denote the vector obtained by substituting $u_1,\ldots,u_s$ with $a_1,\ldots,a_s$ as $\vec{f}(\vec{a})$.
+\end{notations}
+
+%\begin{example}
+%	Let 
+%	\begin{align*}
+%		\vec{f}(u,x,y) &= \left(-uy-y,x^{2}+u x+y^{2}+x y+x,x^{2}-u x-y,y^2+u y-u^{2}+u \right)\\
+%	     & = (f_1,f_2,f_3,f_4,f_5)\in \mathbb{Q}[u][x,y]^{1\times 5}.
+%	\end{align*} 
+%%We will regard $u$ as parameter and complete $F$ to a unimodular matrix in parametric case. We can check $F$ is not unimodular row over $\mathbb{Q}[u,x,y]$, which implies $F$ can not be completed to a unimodular matrix in $\mathbb{Q}[u,x,y]$. Therefore, 
+%Firstly, we compute the comprehensive Gr\"{o}bner system of $\{f_1,\ldots,f_5\}$ and obtain that
+%$$\mathcal{G} = \left\{(\emptyset, \{u(u - 1)\}, \{1\}), ({u(u - 1)}, \{1\}, \{x, y\})\right\}.$$
+%This implies that for any $a \in \mathbb{C}$, if $a(a-1)\neq 0$, then
+% $$\vec{f}(a,x,y) = \left(-ay-y,x^{2}+a x+y^{2}+x y+x,x^{2}-a x-y,y^2+a y-a^{2}+a \right)$$
+% is unimodular. Otherwise, $\vec{f}(a,x,y)$ is not unimodular. 
+% 
+% We consider $\mathcal{K} = k(u)$ and $\vec{f} \in \mathcal{K}[x,y]^{1\times 5}$. Then $\vec{f}$ is a unimodular row over $\mathcal{K}[x,y]$. We invoke the Quillen-Suslin Algorithm to complete $\vec{f}$ to a unimodular matrix over $\mathcal{K}[x,y]:$
+% $$P_1(u,x,y) = \left(\begin{smallmatrix}
+% -uy-y &x^{2}+ux+y^{2}+x y+x & x^{2}-u x-y & y^2+u y-u^{2}+u
+% 	\\
+% 	u+1 & -y-x & 1 & -y-u 
+% 	\\
+% 	0 & -x & 2 u-x+1 & 0 
+% 	\\
+% 	0 & -u-x-1 & u-x & 0 
+% \end{smallmatrix}\right).$$
+% We compute the determinant of $P$ and obtain $\det(P) = u \left(2 u+1\right) \left(u-1\right) \left(u+1\right)^{2}$, which implies that for any $a \in \mathbb{C}$, if $\left(2 a+1\right) \left(a-1\right) \left(a+1\right)^{2}a \neq 0$, we have $P(a,x,y)$ is unimodular and $\vec{f}(a,x,y)$ is completed to $P(a,x,y)$.
+% 
+% If $\left(a-1\right)a = 0$, by the comprehensive Gr\"{o}bner basis above, $\vec{f}(a,x,y)$ is not unimodular. Therefore, it can not be completed to a unimodular matrix. If $a + 1 = 0$, then 
+% $$\vec{f}(-1,x,y) = (0,x^{2}+y^{2}+x y,x^{2}+ x-y,y^2- y - 2)$$
+% can be completed to unimodular matrix over $\mathbb{C}[x,y]:$
+% $$P_2(x,y) = \left(\begin{smallmatrix}
+% 	 0 & x^{2}+y^{2}+x y & x^{2}+ x-y & y^2- y - 2\\
+% 	\\
+% 	0 & x^{2}+2 x+y & -1 & x^{2}+x+y-1 
+% 	\\
+% 	1 & 0 & 0 & 0 
+% 	\\
+% 	0 & x^{2}-4 x y+y^{2}+x-3 y-14 & x^{2}+6 x-y+3 & -5 x y+y^{2}-4 x-4 y-10 
+% \end{smallmatrix}\right).$$
+%If $~2a+1 = 0$, then
+%$$\vec{f}(-1/2,x,y) = \left(-\frac{y}{2} , x^{2}+x y+y^{2}+\frac{1}{2} x , x^{2}+\frac{1}{2} x-y , y^{2}-\frac{1}{2} y-\frac{3}{4}\right),$$
+%can be completed to be completed to unimodular matrix over $\mathbb{C}[x,y]:$
+%$$P_3(x,y) = \left(\begin{smallmatrix}
+%	-\frac{y}{2} & x^{2}+x y+y^{2}+\frac{1}{2} x & x^{2}+\frac{1}{2} x-y & y^{2}-\frac{1}{2} y-\frac{3}{4} 
+%	\\
+%	-1 & 2 x+2 y & -2 & -1+2 y 
+%	\\
+%	0 & 0 & 1 & 0 
+%	\\
+%	0 & 1 & 1 & 0 
+%\end{smallmatrix}\right).$$
+%
+%In summary, for any $a\in \mathbb{C}$, we have$:$
+%\vspace{-0.4cm}
+%\begin{enumerate}
+%	\item if $(a-1)a = 0$, then $\vec{f}(a,x,y)$ can not be completed to a unimodular matrix over $\mathbb{C}[x,y];$
+%	\vspace{-0.3cm}
+%	\item if $(a-1)a \neq 0$ and $\left(2 a+1\right) \left(a+1\right) \neq 0$, then $\vec{f}(a,x,y)$ can be completed to a unimodular matrix $P_1(a,x,y)$ over $\mathbb{C}[x,y];$
+%	\vspace{-0.3cm}
+%	\item if $a+1 = 0$, then then $\vec{f}(a,x,y)$ can be completed to a unimodular matrix $P_2(x,y)$ over $\mathbb{C}[x,y];$
+%	\vspace{-0.3cm}
+%	\item  if $2a+1 = 0$, then then $\vec{f}(a,x,y)$ can be completed to a unimodular matrix $P_3(x,y)$ over $\mathbb{C}[x,y];$
+%\end{enumerate}
+%\end{example}
+
+In the following, we sketch our idea for solving Problem 1: 
+\vspace{-0.4cm}
+\begin{enumerate}
+	\item[(1)] By computing the comprehensive \gr system of $\{f_1,\ldots,f_m\}$, we can find a constructible set $C \subset L^s$ such that for any $\vec{a} = (a_1,\ldots,a_s) \in L$, $\vec{f}(\vec{a})$ is unimodular if and only if $\vec{a} \in C$. 
+	\item[(2)] Without loss of generality, suppose that $C = V(E)\setminus V(N)$, where $V(E)$ and $V(N)$ are the affine varieties defined by ideal $E,N\subset k[U]$ respectively. Compute the irreducible decomposition of $V(E)$, such that $V(E) = \cup_{i = 1}^lV(E_i)$ with each $E_i$ is a prime ideal in $k[U]$. Then $C = \cup_{i=1}^l\left(V(E_i)\setminus V(N)\right)$.
+	\item[(3)] For each $C_i = V(E_i)\setminus V(N)$, construct a field $\mathcal{K} = \operatorname{Frac}(k[U]/(E_i))$, i.e., the fraction field of $\mathcal{R} = k[U]/(E_i)$. Let $\vec{f}_\mathcal{K} = \pi(\vec{f})\in \mathcal{K}[X]^{m}$, where $\pi$ is the canonical map. We claim that $\vec{f}_\mathcal{K}$ is unimodular over $\mathcal{K}[X]$. Then we can invoke the Quillen-Suslin Algorithm to complete $\vec{f}_\mathcal{K}$ to a unimodular matrix $P_{\mathcal{K}}$ over $\mathcal{K}[X]$.      
+	\item[(4)] Multiply the rows of $P_{\mathcal{K}}$ by some polynomial in $\mathcal{R}$ properly and obtain a new $P_{\mathcal{K}}$ such that $P_{\mathcal{K}} \in \mathcal{R}[X]^{m \times m}$. Suppose that $\det(P_{\mathcal{K}}) = d(U) \in \mathcal{R}$. Let $d_i=\pi^{-1}(d)\in k[U]$ and $P_i = \pi^{-1}(P_{\mathcal{K}})$ be a matrix over $k[U][X]$. Then we claim that:
+	\vspace{-0.1cm}
+	\begin{center}
+		\begin{tabular}{l}
+			\itshape For any $\vec{a}\in V(E_i)\setminus (V(N)\cup V(d_i))$, $P_i(\vec{a})$ is unimodular and its first row is\\
+			\itshape equal to $\vec{f}(\vec{a})$, i.e., $\vec{f}(\vec{a})$ is completed to the unimodular matrix $P_i(\vec{a})$ over $L[X]$.
+		\end{tabular}
+	\end{center}
+\vspace{-0.3cm}
+	\item[(4)]  Furthermore, we consider $C_i' = V(E_i+\langle d_i \rangle)\setminus V(N)$ and repeat the processes (2)-(4) for $C_i'$ if $C_i'$ is not empty. Since $d \neq 0$ in $\mathcal{K}[X]$, then $d_i \notin E_i$, i.e., $E_i \subsetneq E_i+\langle d_i \rangle$. Therefore, this process will terminate within a finite number of steps.
+\end{enumerate}
+\vspace{-0.2cm}
+	In the terms of theory, we can complete the parametric unimodular row to unimodular matrix by the analysis above. However, in this process, we regard the Quillen-Suslin Algorithm as a black box and assume that we can invoke it to complete any unimodular row over $\mathcal{K}[X]$ for any field $\mathcal{K}$. Therefore, in terms of implementation, we need to consider how to implement Quillen-Suslin Algorithm over $\mathcal{K}[X]$ for any field $\mathcal{K}$, especially the field defined by a prime ideal as above, which is also called function field. 
+	
+	In summary, this paper extend the Quillen-Suslin Theorem to parametric case and present a process to complete a parametric row to unimodular matrix with parameters. However, in terms of implementation, further research is needed.
+
+
+
+\textbf{Keywords} \newline{} Parametric unimodular rows, Quillen-Suslin Theorem, comprehensive Gr\"{o}bner system.
+
+%\textbf{References} \newline{}
+% Model for references to books.
+
+%  Model for references to articles
+%[2] \textsc{A. Uthor}, Title. \emph{Journal} \textbf{volume}(number), first page--last page  (year of publication). \newline{}
+
+
+
+%  Model for references to proceedings. 
+%[3] \textsc{A. Uthor}, Title. In \emph{Title of the proccedings}, names of the editors (eds.), first page--last page. Editor(s), City, year of publication. \newline{}
+
+
+
+
+
+
+\vspace{-0.5cm}
+
+\bibliographystyle{plain}
+\bibliography{gcrd.bib}
+
+\end{abstract_online}

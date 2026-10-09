@@ -1,0 +1,94 @@
+
+<H2><A NAME="SECTION00035000000000000000"><tex2html_anchor_invisible_mark></A><A NAME="g-inverse"><tex2html_anchor_mark></A><BR>
+Moore-Penrose generalized inverses
+</H2>
+Given an <tex2html_image_mark>#tex2html_wrap_inline1435# matrix <I>A</I> with entries in the reals, 
+an <tex2html_image_mark>#tex2html_wrap_inline1439# matrix <I>G</I> is said to be 
+the Moore-Penrose generalized inverse of <I>A</I>, 
+or for short MPG-inverse of <I>A</I>, if <I>G</I> satisfies 
+the following four conditions:
+<DL>
+<DT><STRONG><#3108#>(i)<#3108#></STRONG>
+<DD><I>AGA</I>=<I>A</I> <DT><STRONG><#3109#>(ii)<#3109#></STRONG>
+<DD><I>GAG</I>=<I>G</I> <DT><STRONG><#3110#>(iii)<#3110#></STRONG>
+<DD>(<I>AG</I>)<SUP><I>T</I></SUP>=<I>AG</I> <DT><STRONG><#3111#>(iv)<#3111#></STRONG>
+<DD>(<I>GA</I>)<SUP><I>T</I></SUP>=<I>GA</I></DL>where <I>B</I><SUP><I>T</I></SUP> denotes the transpose of <I>B</I>. <I>G</I> is uniquely determined by <I>A</I> 
+and often written as <I>A</I><SUP>+</SUP>.
+
+<P>
+Moore-Penrose generalized inverses are an important tool
+for solving a system of linear equations <tex2html_verbatim_mark>#math83#<tex2html_image_mark>#tex2html_wrap_inline1471#.
+When there is no strict solution, it is possible to find 
+the <#413#><I>least square solution</I><#413#> by <tex2html_verbatim_mark>#math84#<tex2html_image_mark>#tex2html_wrap_inline1477#,
+where <tex2html_verbatim_mark>#math85#<tex2html_image_mark>#tex2html_wrap_inline1483# is minimal with <tex2html_verbatim_mark>#math86#<tex2html_image_mark>#tex2html_wrap_inline1487# minimal.
+The norm <tex2html_image_mark>#tex2html_wrap_inline1489# is the Euclidean norm, i.e.
+the square root of
+the sum of squares of each component. For the details see [#RM#<tex2html_cite_mark>#1##<tex2html_cite_mark>#].
+Moreover, MPG-inverses are applied to engineering such as 
+associative memory and pattern recognition, see [#therrien#<tex2html_cite_mark>#1##<tex2html_cite_mark>#]. 
+
+<P>
+There are many algorithms to compute Moore-Penrose generalized inverses,
+but we used Greville's algorithm, see [#greville#<tex2html_cite_mark>#1##<tex2html_cite_mark>#]. 
+Let us call it <#423#><B>Greville</B><#423#>.
+
+<P>
+<#424#><B>Greville:</B><#424#>
+Let us express an <tex2html_image_mark>#tex2html_wrap_inline1491# 
+input matrix <I>A</I> as <tex2html_verbatim_mark>#math87#<tex2html_image_mark>#tex2html_wrap_inline1495#,
+where each <I>a</I><SUB><I>i</I></SUB> is an <I>m</I>-dimensional vector.
+Define an <tex2html_image_mark>#tex2html_wrap_inline1501# matrix <I>A</I><SUB><I>i</I></SUB> by
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math88#
+
+<tex2html_image_mark>#displaymath1076#
+</DIV><BR CLEAR="ALL">
+<P></P>
+and for <tex2html_verbatim_mark>#math89#<tex2html_image_mark>#tex2html_wrap_inline1505#, 
+we compute an <tex2html_image_mark>#tex2html_wrap_inline1507# matrix <I>A</I><SUP>+</SUP><SUB><I>i</I></SUB> 
+inductively by the following equation:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math90#
+
+<tex2html_image_mark>#displaymath1077#
+</DIV><BR CLEAR="ALL">
+<P></P>
+where <tex2html_verbatim_mark>#math91#<I>d</I><SUB><I>i</I></SUB>,<I>c</I><SUB><I>i</I></SUB>,<I>b</I><SUB><I>i</I></SUB> (<tex2html_verbatim_mark>#math92#<tex2html_image_mark>#tex2html_wrap_inline1513#)
+and the initial matrix <I>A</I><SUP>+</SUP><SUB>1</SUB> are 
+computed by the following:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<tex2html_image_mark>#eqnarraystar430#
+</DIV><P></P><BR CLEAR="ALL"><I>A</I><SUP>+</SUP><SUB><I>n</I></SUB> is the desired matrix <I>A</I><SUP>+</SUP>.
+
+<P>
+As can be seen, <#452#><B>Greville</B><#452#> is an algebraic algorithm
+with zero discontinuity, which has the predicates ``<I>c</I><SUB><I>i</I></SUB>=0''
+(<tex2html_verbatim_mark>#math94#<tex2html_image_mark>#tex2html_wrap_inline1531#) and ``<I>a</I><SUB>1</SUB>=0''.
+
+<P>
+This application exhibits an interesting, important property:  it is computationally cheaply checkable.  I.e. given a proposed MPG-inverse 
+to <I>A</I>, obtained by stabilization methods or any other way, it is
+computationally inexpensive to determine whether the four conditions
+(i) - (iv) are satisfied, either strictly or approximately.  The
+extended Euclidean algorithm is another such example.
+We will propose a new direction 
+for application of the stabilization methodology,
+where again the example of MPG-inverses is considered.
+
+<P>
+In this experiment, we observed that if <tex2html_image_mark>#tex2html_wrap_inline1537# is the result
+obtained by executing <#454#><B>Greville</B><#454#> based on the 
+stabilization techniques with precision <tex2html_image_mark>#tex2html_wrap_inline1539#, then
+<tex2html_verbatim_mark>#math95#<tex2html_image_mark>#tex2html_wrap_inline1541#,
+<tex2html_verbatim_mark>#math96#<tex2html_image_mark>#tex2html_wrap_inline1543#,
+<tex2html_verbatim_mark>#math97#<tex2html_image_mark>#tex2html_wrap_inline1545#, and
+<tex2html_verbatim_mark>#math98#<tex2html_image_mark>#tex2html_wrap_inline1547# as <tex2html_image_mark>#tex2html_wrap_inline1549# increases,
+where <tex2html_image_mark>#tex2html_wrap_inline1551# denotes the square root of
+the sum of square of each entry of the matrix.
+Of course, when we were able to compute <I>A</I><SUP>+</SUP> by exact approach
+in advance, we observed <tex2html_verbatim_mark>#math99#<tex2html_image_mark>#tex2html_wrap_inline1555#.
+
+<P>

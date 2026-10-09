@@ -1,0 +1,5 @@
+           COMPUTER ALGEBRA METHODS in CONTROL
+                  Chaouki Abdallah
+            chaouki@jemez.eece.unm.edu
+                    Peter Dorato
+	     peter@jemez.eece.unm.edu

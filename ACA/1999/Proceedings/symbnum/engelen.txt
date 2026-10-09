@@ -1,0 +1,32 @@
+
+Ctadel: A Computer Algebra System for the Generation of Efficient Numerical
+Codes for PDEs
+
+   Robert van Engelen: Assistant Professor, Computer Science Department
+   Florida State University, 206 Love Bldg., Tallahassee, FL32306-4530
+   Email: engelen@cs.fsu.edu, URL: http://www.cs.fsu.edu/~engelen
+
+
+Abstract:
+
+The Ctadel system is a generator of numerical codes for hyperbolic PDE
+problems using finite difference methods. The system exploits characteristics
+of the target computer hardware to generate efficient codes. Ctadel has
+primarely been used in the area of numerical weather forecasting to generate
+efficient serial, vector, and parallel versions of the so-called dynamics
+routines. The dynamics routines solve the PDEs describing the dynamical
+tendencies of the prognostic variables using second-order finite differences
+in space and time. In this scheme, the arithmetically complicated right-hand
+sides are calculated first by evaluating spatial differences and quadratures.
+Then, the results are time integrated by a leap-frog time scheme. For the
+specification of PDE problems like the weather forecast dynamics, Ctadel
+has a problem specification language with mixed low- to high-level language
+constructs. The high-level constructs are for PDEs in vector notation and
+integrations. The low-level constructs range from differences to almost
+Fortran-level constructs. In this way, the user can override implementation
+decisions of the system by choosing lower instead of higher-level constructs. 
+The constructs at the different levels are manipulated by Ctadel's algebraic
+subsystem that integrates classical term-rewriting methods but also
+restructuring compiler optimizations for improved code generation and
+parallelization.
+

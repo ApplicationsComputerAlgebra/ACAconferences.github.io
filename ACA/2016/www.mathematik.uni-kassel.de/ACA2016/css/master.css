@@ -1,0 +1,81 @@
+body { background-image: url("../images/notebook.png"); margin: 0 auto;}  
+   .left    { text-align: left; }
+   .right   { text-align: right; }
+   .center  { text-align: center; }
+   .justify { text-align: justify; }
+   .start   { text-align: start; }
+
+
+#container	{	position:relative; 
+				width: 1000px; 
+				height:880px; 
+				margin: auto;
+			}
+			
+#header		{	position:relative; 
+				height:250px; 
+				margin: 5px;
+			}
+			
+#navigation	{	position:relative;
+				height:580px;
+				width:20%;
+				float:left;
+				margin: 5px;
+			}
+			
+#inhalt		{	position:relative;
+				width:77%;
+				height:580px;
+				float:right;
+				margin: 5px;
+			}
+			
+#nav ul 	{
+		        width: 10em;
+        		margin: 0; 
+		        padding: 0.2em 0.8em 0.8em;
+        		border: 1px solid black;
+		        background-color: silver;
+      		}
+ 
+	nav li {
+        		list-style: none;
+		        margin: 0.4em; 
+        		padding: 0;
+		      }
+ 
+	nav a, nav span, nav h2 {
+        display: block;
+        padding: 0.4em;
+        text-decoration: none; font-weight: bold;
+        border: 1px solid blue;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px white inset;
+        color: royalblue; 
+        background-color: lightblue;
+      }
+ 
+	nav a:focus,
+	nav a:hover,
+	nav a:active,
+	nav span {
+		    color: lightblue; 
+        	background-color: royalblue;
+	        border-color: gold;
+    	  }
+
+#stattext {
+			background:linear-gradient( #CCCCCC, #EEEEEE );
+			background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+			width:550px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			padding:10px;
+			border: 1px solid #999;
+			border: inset 1px solid #333;
+			-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+			-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+			box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}

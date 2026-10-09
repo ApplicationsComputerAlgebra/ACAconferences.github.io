@@ -1,0 +1,30 @@
+Computer Algebra - A Good Reason to Bring Interest and Enthusiasm Back to
+Mathematics Classes
+
+Elena A. Varbanova
+
+                                       "Such as the teacher,
+                                        such the school,
+                                        such the students"
+                                       (an old dictum)
+
+The learning environment is a bridge connecting the learner and teacher.  The
+nature and value of the "objects and the net load" crossing the gap are
+strongly dependent on the bridge capacity and quality.  The latter could be
+improved integrating Computer Algebra (CA) for learning mathematics/science.
+CA used in the right way can bring interest and enthusiasm back to mathematics
+classes.  Enthusiasm, however, is not a substitute for knowledge and
+imagination.  It is teachers' duty not to reduce mathematics (for the sake of
+technology) to automatically obtained results and graphical images. To achieve
+this goal teachers need adequate qualification and competency.
+
+Some ideas and educational experience in application of CA into undergraduate
+mathematics will be presented and discussed.
+
+
+Assoc.Prof.Dr Elena Varbanova
+Department of Mathematical Analysis and Numerical Methods
+Faculty of Applied Mathematics and Informatics
+Technical University of Sofia
+Bul. "St. Kliment Ohridski" 8
+1000 Sofia, Bulgaria

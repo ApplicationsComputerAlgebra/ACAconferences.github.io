@@ -1,0 +1,29 @@
+Omega - a free online Computer Algebra System Explorer
+
+Michael Xue
+Vroom Laboratory for Advanced Computing (US)
+mxue@vroomlab.com
+
+Abstract
+
+Online courses have become the medium of choice for students who cannot
+otherwise attend in a traditional classroom setting.  Online distance education 
+allows students to take courses in the convenience of their home or office, at 
+their leisure, free of the distractions of campus life, without commute, while 
+at the same time being provided with almost instantaneous access to the
+instructor and course materials.  However, the lack of access to Computer
+Algebra System, traditionally exists only in computer labs on campus can be a
+significant detriment to online classes.  In this presentation, we will
+introduce Omega, a free online Computer Algebra System (CAS) Explorer that
+provides user with immense power in both symbolic and numeric computing.  To
+use Omega, only a web browser is required.  User composes and submits
+mathematical query using a calculator-like graphical user interface.  Upon
+submission, the query is processed by Omega's CAS engine, and the result is
+displayed in text or graphic formats.  Omega can be accessed from
+desktop/laptop computers, ipad/tablets, and smartphones.  It is compatible with
+all major web browsers. Different CAS can be plugged in as Omega’s underlying
+engine.
+
+Keywords
+
+free, online education, calculator, graphing, maxima, CAS, distance learning 

@@ -1,0 +1,14 @@
+"Computation of standard bases of ideals of free noncommutative
+ algebras"
+
+A.A.Mikhalev* and A.A.Zolotykh
+Moscow State University, Russia,
+aamikh@cnit.math.msu.su zolotykh@lsili.ru
+
+Abstract:
+
+We consider standard bases of free Lie algebras and free associative
+algebras over rings. The main result is a criterion for a subset
+of a free algebra to be a standard basis of the ideal it generates.
+Based on this result we present algorithms to construct standard bases
+and discuss the termination condition for these algorithms.

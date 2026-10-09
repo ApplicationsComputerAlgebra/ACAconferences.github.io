@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1-f (May 31, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>2 Preliminaries</TITLE>
+<META NAME="description" CONTENT="2 Preliminaries">
+<META NAME="keywords" CONTENT="jirstrand">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="jirstrand.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html34" HREF="node3.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://www.control.isy.liu.se/icons/next_motif.gif"></A> <A NAME="tex2html32" HREF="jirstrand.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://www.control.isy.liu.se/icons/up_motif.gif"></A> <A NAME="tex2html26" HREF="node1.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://www.control.isy.liu.se/icons/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html35" HREF="node3.html">Nonsmooth Systems</A>
+<B>Up:</B> <A NAME="tex2html33" HREF="jirstrand.html">On Switched Polynomial Systems </A>
+<B> Previous:</B> <A NAME="tex2html27" HREF="node1.html">1 Introduction</A>
+<BR> <P>
+<H1><A NAME="SECTION00020000000000000000">2 Preliminaries</A></H1>
+<P>
+<A NAME="secpreliminaries">&#160;</A>
+Consider a nonlinear system of the following form
+<P><A NAME="eqsys">&#160;</A> <IMG WIDTH=500 HEIGHT=30 ALIGN=BOTTOM ALT="equation64" SRC="img5.gif"  > <P>
+where  <IMG WIDTH=72 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1177" SRC="img6.gif"  > , and
+ <IMG WIDTH=83 HEIGHT=19 ALIGN=MIDDLE ALT="tex2html_wrap_inline1179" SRC="img7.gif"  >  and  <IMG WIDTH=59 HEIGHT=9 ALIGN=BOTTOM ALT="tex2html_wrap_inline1181" SRC="img8.gif"  > 
+are continuous functions with <I>f</I>(0,0)=0 and <I>h</I>(0)=0.
+Since we are interested in whether a system can be stabilized by
+switching between different controllers we introduce a set of so
+called <em>basic controllers</em> of the form
+<P><A NAME="eqbctrl">&#160;</A> <IMG WIDTH=500 HEIGHT=12 ALIGN=BOTTOM ALT="equation71" SRC="img9.gif"  > <P>
+where  <IMG WIDTH=95 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1187" SRC="img10.gif"  >  is
+continuous,  <IMG WIDTH=124 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1189" SRC="img11.gif"  > , and  <IMG WIDTH=12 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1191" SRC="img12.gif"  >  is closed.
+To determine when to use a basic controller we also introduce a
+<em>switching function</em> <I>I</I>(<I>x</I>) which maps the set of state
+measurements into the set of integers  <IMG WIDTH=55 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1195" SRC="img13.gif"  > . Hence, the
+switching function induces a partition of the state space with
+different enumerated components. We use the following notation
+<P><A NAME="eqcon">&#160;</A> <IMG WIDTH=500 HEIGHT=13 ALIGN=BOTTOM ALT="equation77" SRC="img14.gif"  > <P>
+for the control law obtained by choosing basic controller with respect
+to the switching function <I>I</I>. In the sequel we assume
+that&nbsp;(<A HREF="node2.html#eqsys">1</A>) is controlled by the basic
+controllers&nbsp;(<A HREF="node2.html#eqbctrl">2</A>) with respect to the switching function
+<I>I</I>. Such systems may arise in cases when the controller consists of a
+number of relay nonlinearities which can be used to change the
+structure of the system&nbsp;(<A HREF="node2.html#eqsys">1</A>).
+<P>
+Notice that the right hand side of the closed loop system
+<P><A NAME="eqclsys">&#160;</A> <IMG WIDTH=500 HEIGHT=13 ALIGN=BOTTOM ALT="equation84" SRC="img15.gif"  > <P>
+is bounded as long as the state belongs to some compact subset
+ <IMG WIDTH=10 HEIGHT=8 ALIGN=BOTTOM ALT="tex2html_wrap_inline1201" SRC="img16.gif"  >  of  <IMG WIDTH=23 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1203" SRC="img17.gif"  > . Hence,  <IMG WIDTH=11 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1205" SRC="img18.gif"  >  is bounded
+on  <IMG WIDTH=10 HEIGHT=8 ALIGN=BOTTOM ALT="tex2html_wrap_inline1201" SRC="img16.gif"  > .
+<P>
+Sometimes it can be desired to implement a switching controller using
+some hysteresis elements, for example to avoid sliding modes. Observe
+that this kind of controllers cannot be described by a switching
+function since the hysteresis element introduce a discrete state. We
+will use the term <em>switching rule</em> to distinguish these cases.
+<P>
+Here we state a number of definitions and results that we need for
+investigating stability and stabilizability of switched systems, see
+for example&nbsp;[<A HREF="node8.html#Khalil96">8</A>, <A HREF="node8.html#KrsticKK95">9</A>].
+<P>
+<P><A NAME="eqposdef">&#160;</A> <IMG WIDTH=412 HEIGHT=41 ALIGN=BOTTOM ALT="definition94" SRC="img19.gif"  > <P>
+<P>
+<P><A NAME="defradunbound">&#160;</A> <IMG WIDTH=363 HEIGHT=46 ALIGN=BOTTOM ALT="definition99" SRC="img20.gif"  > <P>
+<P>
+<P><A NAME="defstab">&#160;</A> <IMG WIDTH=411 HEIGHT=169 ALIGN=BOTTOM ALT="definition104" SRC="img21.gif"  > <P>
+<P>
+If the origin is asymptotically stable it has a <em>region of
+  attraction</em>, i.e.,&nbsp;a set of initial states  <IMG WIDTH=8 HEIGHT=9 ALIGN=BOTTOM ALT="tex2html_wrap_inline1237" SRC="img22.gif"  >  such that
+ <IMG WIDTH=45 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1239" SRC="img23.gif"  >  for all  <IMG WIDTH=45 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1241" SRC="img24.gif"  > .
+<P><A NAME="definvset0">&#160;</A> <IMG WIDTH=409 HEIGHT=26 ALIGN=BOTTOM ALT="definition114" SRC="img25.gif"  > <P>
+Note that sometimes the term <em>positively invariant</em> is used to
+describe the above property. However, we do not adopt that terminology
+here.
+<P>
+<P><A NAME="defswstab">&#160;</A> <IMG WIDTH=415 HEIGHT=41 ALIGN=BOTTOM ALT="definition119" SRC="img26.gif"  > <P>
+The main problem we consider in this report is:
+<BLOCKQUOTE> What are the conditions for existence and how is it possible to design
+  a (globally) stabilizing switching controller&nbsp;(<A HREF="node2.html#eqcon">3</A>)?
+</BLOCKQUOTE>
+Much of the stability analysis of smooth systems can be generalized to
+nonsmooth systems.
+<P>
+<BR> <HR>
+<UL><A NAME="CHILD_LINKS">&#160;</A>
+<LI> <A NAME="tex2html36" HREF="node3.html#SECTION00021000000000000000">Nonsmooth Systems</A>
+</UL>
+<HR><A NAME="tex2html34" HREF="node3.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://www.control.isy.liu.se/icons/next_motif.gif"></A> <A NAME="tex2html32" HREF="jirstrand.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://www.control.isy.liu.se/icons/up_motif.gif"></A> <A NAME="tex2html26" HREF="node1.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://www.control.isy.liu.se/icons/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html35" HREF="node3.html">Nonsmooth Systems</A>
+<B>Up:</B> <A NAME="tex2html33" HREF="jirstrand.html">On Switched Polynomial Systems </A>
+<B> Previous:</B> <A NAME="tex2html27" HREF="node1.html">1 Introduction</A>
+<P><ADDRESS>
+<I>Mats Jirstrand <BR>
+Mon Nov 30 23:37:24 MET 1998</I>
+</ADDRESS>
+</BODY>
+</HTML>

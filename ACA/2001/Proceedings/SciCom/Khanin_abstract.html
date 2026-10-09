@@ -1,0 +1,70 @@
+<html>
+<title> Abstract of talk at ACA'01. Raya Khanin </title>
+<body bgcolor=white>
+
+ <center><H1><font color=#0000FF>    Symbolic-Numerical Methods for Solving 
+Singular Perturbation Problems.          </font> </h1></center>
+<h3><font color=#0000FF> <center>Raya Khanin </center>
+<center> DAMTP, University of Cambridge
+</center></font></h3>
+<center>
+<Table>
+
+<tr><td align=left width=650> <cr>
+
+<P><b>Abstract.</b> The term <i>singular perturbation problem</i> applies to
+any problem whose solution has a near-singular behaviour relative to a
+perturbation parameter in the system.  This usually represents the appearance
+of several time scales (or, for example, length scales) meaning that various
+components of the system change at different rates. The long term solution is
+of particular interest to engineers and scientists as it describes the
+long-term behaviour of the system.
+
+<P>There are two general ways for finding solutions of  singular perturbation
+problems problems: an analytical approach and numerical integration.  The
+common analytical approach  is to construct two asymptotic approximations: one
+in the neighbourhood of the singular point, another far away from it and then
+to connect them in the overlap region where both expansions are valid
+(<i>method of matched asymptotic expansions</i>). The main difficulties
+associated with this method are solving the <i>outer</i> problem in a closed
+form, finding the asymptotics at large times for the <i>inner</i> problem  and
+matching the two. At the same time, despite a tremendous progress in numerical
+analysis, numerical integration of singular perturbation or <i>stiff</i>
+problems still remains time-consuming as fine meshes and small step sizes are
+required throughout the calculation to ensure it is stable.
+
+<P>There are certainly advantages of combining the two approaches and
+developing hybrid symbolic-numerical algorithms for solving singular
+perturbation problems. Taking advantage of solution structure may help to avoid
+stiffness problems, greatly reduce computational time and  resources. The
+so-called asymptotic-numerical methods for particular problems have been
+developed by several authors. However, in these papers asymptotic analysis has
+been performed on paper manually.  It has then been manually included in the
+design of the numerical code for the specific problem. It is advantageous to
+implement asymptotic analysis in CAS and to automatically incorporate it into
+numerical code.  This will yield higher precision, improve efficiency, and, in
+particular, result in more general numerical codes for stiff problems as is
+already the case for other types of odes (e.g. <i>Taylor</i> method).
+
+<P>At least two approaches for applying the results of asymptotic analysis in
+the numerical computation can be envisaged.  One approach starts from a robust
+domain decomposition method and adjusts the decomposition on the basis of
+asymptotic criteria. Another approach starts from a known asymptotic expansion
+and devises a numerical scheme to compute various terms in the expansion. I
+will discuss ideas of the second approach. A symbolic technique is based on the
+method of matched asymptotic expansions and in particular on the
+<i>polyhedron</i> algorithm for finding the appropriate scaling and local
+approximating systems near the singularity. I will show how application of the
+hybrid method can improve or facilitate the procedure of solving the singularly
+perturbed problems.  A symbolic-numerical algorithm for tackling scalar
+semilinear boundary value problems will be discussed. The algorithm  is based
+on the Newton quasilinearisation method and asymptotic solutions of linearised
+problems.
+
+</td>
+</tr>
+</table>
+</center>
+
+</body>
+</html>

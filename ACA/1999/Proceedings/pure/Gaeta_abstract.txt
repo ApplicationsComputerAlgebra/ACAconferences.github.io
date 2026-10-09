@@ -1,0 +1,17 @@
+    A Fast Computation of Hook Schur Functions
+
+               Federico Gaeta
+         Instituto Pluridisciplinar
+          Universidad Complutense
+              Madrid. Spain
+       E-mail: fgaeta@eucmax.sim.ucm.es 
+    http://frisco.matesco.unican.es/gaeta.html
+
+The columns of a matrix (1_n H) n x (N+1) normalized of the Grassmanian 
+G(n-1;N) corresponding to a n-secant space S_{n-1} or the normal rational
+curve R_N in P_N have a very natural interpretation in terms of the
+congruences
+              x^{n-1+j} = p_j(x)     mod f(x)
+where the roots of f(x)=0 define the n support  points of S_{n-1}  with
+R_N and each p_j(x) is a polynomial of degree smaller than n
+(j=1,2,..., N-n+1).  

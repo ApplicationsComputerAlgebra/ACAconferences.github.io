@@ -1,0 +1,232 @@
+##################################################################
+Sample letter of invitation for a speaker in a special session.
+
+To: xxx
+Fr: xxx
+	email address
+Re: IMACS ACA Applied Computer Algebra Meeting
+Da: xxx
+
+We are inviting you to speak in a special session that we am organizing
+for the IMACS Applied Computer Algebra meeting that is being held in
+the Spring of 95. We would like you to make a half-hour (hour)
+presentation on xxx in the special session xxxx.
+
+A special session is allocated three hours for presentations. It is
+expected that most talks, including any time for questions or discussion,
+will be for one-half hour so that attendees can easily move from one session
+to another.
+
+At this point there is no funding for this meeting although outside funding
+is being sought.  Thus all attendees will be responsible for all of their
+expenses unless the organizers are able to obtain outside funding.  An
+experienced small company has been hired to do the local arrangements.  They
+have provided an estimate on which we have based the the registration fee.
+Proposals will be submitted to fund session organizers, students, foreign
+visitors, and others.  If you know of a possible funding source, please let
+me know.
+
+See below for more about this meeting.
+
+##################################################################
+
+        IMACS Conference on Applications of Computer Algebra
+                       May, 16-19, 1995
+                       Tuesday - Friday
+                   University of New Mexico
+                 Albuquerque, New Mexico, USA
+
+Conference Rationale:
+
+In the past several years there has been a dramatic increase in the use
+of computer algebra in engineering, science and education.  The
+computer-algebra research community has made significant progress in
+developing applicable algorithms, particularly in the areas of ordinary
+and partial differential equations and systems of algebraic equations.
+There are now textbooks for many engineering, science and mathematics
+courses that use a computer algebra approach.  This international
+conference will bring together these diverse groups for an exchange
+of their latest ideas.
+
+Topics Included:
+     o  Solutions of ordinary and partial differential equations,
+        including symmetry methods and differential algebras.
+     o  The use of symbolic techniques for numerical computations.
+     o  Applications of Grobner basis algorithms.
+     o  The use of quantifier elimination algorithms to solve problems
+        in engineering.
+     o  The use of computer algebra in education, including precollege,
+        college, and graduate education.
+     o  Application of computer algebra to problems in engineering
+        and science.
+
+The conference will be run in the standard IMACS format where individuals
+are invited to organize a special session.  Requests for proposals for
+special session will also be issued.
+
+For more information, please refer to the WWW (mosaic) page with URL:
+        http://math.unm.edu/aca.html
+This information is also available by anonymous FTP:
+        ftp math.unm.edu
+        Name: anonymous
+        Password: <your email address>
+        cd pub/aca
+        ls
+        get <any file you want, for example, long_description.txt>
+You can also send email to the automated mail server at:
+        aca-request@math.unm.edu
+	Subject: help
+As a last resort, FAX:
+        1-505-277-5505
+
+A list of email addresses for interested parties is being collected.  Please
+either use the "Join the list of interested parties!" option in the WWW
+(mosaic) interface or send email to aca@math.unm.edu if you would like to be
+added to this list.
+
+                     Local Organizing Committee:
+           Stanly Steinberg    - Conference Chairperson
+           Robert Vichnevetsky - President of IMACS
+           Michael Wester      - Conference Coordinator
+
+                 International Organizing Committee:
+	Victor Edneral         - Moscow University
+	Vladimir Gerdt         - Universite de Lille, France
+	Robert Grossman	       - University of Illinois at Chicago, USA
+	Herbert Melenk         - Konrad-Zuse-Zentrum, Germany
+	H. Eric Nuttall        - University of New Mexico
+	Richard L. Peskin      - Rutgers University
+	Waldir L. Roque	       - UFRGS, Brazil
+	Fritz Schwarz          - GMD, Germany
+	David Wood             - University of Deleware, USA
+
+Here is a list of the special sessions currently being organized:
+
+                 Special Sessions
+
+Education
+	CAS in Engineering Education
+	Computer Algebra Systems in Precollege and
+		College Mathematics Education
+
+Engineering and Technology
+	Coding Theory and Computer Algebra
+	Computer Algebra Applied to Technology
+	Computer Algebra Methods in Control
+	Quantifier Elimination and its Applications
+
+Computer Science
+	Computer Algebra and Automated Theorem Proving
+	Parallel Computer Algebra
+	Parametric Curves and Applications in Computer Aided Geometric Design
+	Program Transformation
+
+Mathematics
+	Applied Computational Topology and Algebra
+
+Differential Equations
+	Construction and Applications of Normal Forms in the Theory of
+		Nonlinear ODEs and Transfer Map Techniques
+	Differential-Algebraic and Differential-Geometric
+        	Elimination Algorithms for Systems of PDEs
+	Numerical Methods for PDEs in a Computer Algebra Environment
+	Symbolic Algorithms, Differential Algebra, and Differential Equations
+	Symmetries and Closed Form Solutions of Differential Equations
+	Symmetries and Partial Differential Equations
+
+Probability
+	Computer Algebra Applications of Stochastic Methods
+
+Local Arrangements:
+
+As soon as you register, a packet of detailed information will be
+sent to you by:
+        Sandbar Productions
+        email: sandbar@math.unm.edu
+        If you do not have access to email, then FAX or write:
+                Sandbar Productions
+                P.O. Box 3824
+                Albuquerque, NM 87190
+                Phone: 1-505-243-1344
+                FAX:   1-505-268-5952
+Blocks of hotel rooms and dorm rooms will be reserved with prices
+ranging form $25-$75 per night.
+
+To register, please use WWW (mosaic) to fill out the registration form
+accessible from the ACA URL:
+        http://math.unm.edu/aca.html
+If you do not have access to WWW, then use anonymous FTP to obtain the form:
+        ftp math.unm.edu
+        Name: anonymous
+        Password: <your email address>
+        cd pub/aca
+        get register.txt
+Fill out the form and the email it to aca@math.unm.edu
+
+Registration Fee:
+        Members of IMACS
+                On or before May 1, 1995 - $325 USA
+                After        May 1, 1995 - $375 USA
+        Non-members add $25
+
+Registration fees can by paid by Visa, MasterCard, American Express or
+Diners Club cards, institutional check, personal check, money order,
+purchase order, wire transfer (all fees must be paid at point of origin)
+and cash (on-site only please).  Make checks payable to ACA-IMACS.  Mail
+payments to Sandbar Productions, P.O. Box 3824, Albuquerque, NM 87190.
+
+Currently, this meeting is self-supporting.  Thus, each and every attendee
+must pay the registration fee.  However, several proposals will be submitted
+for support.  In the event any of these are funded, then the funds will be
+used for students fellowships, to defray costs for session organizers,
+and to assist with foreign travel.  The registration fee includes:
+transportation between the meeting and the hotel, rental of meeting rooms,
+audio visual equipment, refreshments for breaks, lunches each day, security, 
+program, maps, advertising costs, etc.
+
+Attendees will be responsible for their transportation to and from the
+meeting, their hotel accommodations, and their morning and evening meals.
+
+
+Location:
+
+The conference will be held on the campus of the University of New Mexico
+which is in Albuquerque, New Mexico.  Albuquerque is served by an
+international airport.  Taxi and van service is available for travel
+between the airport and the hotels.  Buses will be provided for travel between
+the meeting and the hotels.
+
+Note: The month of May is one of the best times to visit New Mexico and the
+southwestern United States.  There are many tourist attractions.  Information
+will be provided via WWW and by surface mail after you register.
+
+Meeting Format:
+
+The meeting will be run in the standard IMACS format where individuals are
+invited to organize a special session.  YOU ARE INVITED TO SUBMIT A PROPOSAL
+FOR A SPECIAL SESSION.  Paper submissions should be directed to the organizers
+of an apropriate special session.  Additional information is available by WWW
+(mosaic), ftp and email.
+
+Duties of a Session Chairperson:
+
+  [1]   Submit a proposal for a session to the organizing committee.
+        This should consist of an abstract for the session and a list
+        of speakers to be invited.  If the session is approved, then
+        the following needs to be done:
+  [2]   Invite the speakers.  Request that the speakers submit abstracts
+        to the organizer.  The organizer will forward the abstracts to the
+        conference organizing committee.
+  [3]   It is suggested that the session organizer organize a dinner
+        for the session speakers and, perhaps, some of the session
+        participants.
+
+The conference organizers request that senior special-session organizers
+invite a junior researcher to be their co-organizer.  In addition, it is
+important for the health of the computer algebra community to encourage junior,
+female, and minority researchers to participate in the special sessions.
+
+A list of email addresses for interested parties is being collected.  Please
+either use the "Join the list of interested parties!" option in the WWW
+(mosaic) interface or send email to aca@math.unm.edu if you would like to be
+added to this list.

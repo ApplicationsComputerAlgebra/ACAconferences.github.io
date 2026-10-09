@@ -1,0 +1,10 @@
+Comparing Acceleration Techniques for Dixon and Macaulay Resultants
+
+Bob Lewis
+Fordham University
+New York City, New York, USA
+
+The Dixon resultant method for solving systems of polynomial equations lends
+itself to various acceleration techniques, previously reported on by the
+present author, which can be extremely effective.  In this talk we will discuss
+how well these techniques apply to the Macaulay resultant.

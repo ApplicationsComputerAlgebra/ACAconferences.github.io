@@ -1,0 +1,260 @@
+\documentstyle{article}
+\begin{document}
+%\bibliographystyle{/u/caphorn/0/saga/merlet/LaTeX/englishplain}
+
+\begin{center}
+Forward kinematics of parallel robots\\
+J-P. Merlet\\
+INRIA Sophia-Antipolis, France
+\end{center}
+
+\vspace{1cm}
+
+{\bf Abstract:} The purpose of this paper is to present a state of the
+art in the field of the forward kinematics of parallel robots.
+The problem is to determine the possible pose of the end-effector of
+the robot being given its articular coordinates and amount to solve
+the non-linear system of equations obtained from the inverse
+kinematics. This problem is known to be one of the most challenging in
+the field of kinematics: it involves the resolution of a
+relatively large set of non-linear equations in order to determine the
+current pose of the end-effector. Although they are many different
+possible mechanical architecture for parallel robots the direct
+kinematics of most of them may be reduced to solving the direct
+kinematics for a small subset of architectures, the most important
+being the famous Gough platform.
+
+This problem may be considered from different viewpoints:
+\begin{enumerate}
+\item determining the maximum number of solutions of the system either
+real or complex
+\item determining the maximum number of real solutions of the system
+\item calculating all the solutions without constraint on the
+computation time
+\item finding an example which has exactly the maximum number of real
+solutions calculated for problem 2
+\item if all the real solutions have been found, sort the solutions
+set in order to determine the current pose
+\item calculating the current pose with real-time constraint
+\end{enumerate}
+
+The two first problems have been addressed in the last ten years,
+starting with particular geometries of robots (see for
+example~\cite{charentus89,griffis89,hunt78,nanua89,faugere95})
+until a solutions
+has been given for the most general cases of Gough platform
+(see~\cite{lazard92,mourrain93,raghavan91,ronga92}, for which they may
+be up to 40 solutions.
+
+Problem 3 has received a lot of attention and many algorithms have
+been proposed for particular architectures. Still for the most general
+case of Gough platform although specific algorithms have been
+proposed~\cite{husty94-1} they are not exactly satisfactory either
+because their computation time is still large or they have to rely on
+symbolic computation system to find the solutions.
+
+Problem 4 is still an unsolved problem although a conjecture is that
+there will always be a robot geometry and a set of articular
+coordinates such that the number of real solutions of the direct kinematics
+will reach the maximum. This has been shown for particular
+architectures~\cite{lazard94,merlet89-1} and recently for the most
+general case of general Gough platform~\cite{dietmaier98}. Still for
+many architectures the conjecture has still to be
+verified~\cite{faugere95}.
+
+Problem 5 is quite important in practice: for real applications
+solving the direct kinematics means to determine the current, real
+pose of the end-effector of the robot. Consequently computing all the
+solutions is only the first step of the resolution of the direct
+kinematics. Then is it is necessary to sort the solutions in order to
+determine the current pose of the end-effector. Currently there is no
+known solution to this problem: sorting the solution will have to rely
+on an algorithm which will be able to determine which solution may be
+reached from an initial assembly mode without crossing a singularity
+(but this is not sufficient as different solutions may be joined
+without crossing a singularity as shown
+in~\cite{innocenti92-3,hunt98}) and without having to dismantle the
+robot.
+
+Problem 6 is also very important in practice. Usually a Newton-Raphson
+scheme~\cite{reboulet85}
+ is used to solve this problem, as an estimate of the
+solution is known, but this method has some drawbacks. The first
+problem in this
+method is to determine the parameterization of the end-effector pose
+(especially the orientation part) in order to have the largest
+convergence domain. The second drawback is that Newton method does not
+always converge toward the solution which is the closest to the
+estimate: this is a major drawback as the control of the robot heavily
+rely on the direct kinematics. Alternative method have been proposed:
+neural network~\cite{geng91,yee91}, genetic
+algorithms~\cite{boudreau96}, interval analysis~\cite{didrit98},
+improved
+Newton method~\cite{chetelat97} and
+their merits will be discussed.
+
+%\bibliography{/u/caphorn/0/saga/merlet/Texte/robot_parallele,/u/caphorn/0/saga/merlet/Texte/mecanisme}
+\newcommand{\vide}{\setcounter{DATE}{-1}} \newcommand{\private}{Communication
+  personelle}
+\newcounter{DATE}
+\newcommand{\Janvier}{\setcounter{DATE}{1}}
+\newcommand{\Fevrier}{\setcounter{DATE}{2}}
+\newcommand{\Mars}{\setcounter{DATE}{3}}
+\newcommand{\Avril}{\setcounter{DATE}{4}}
+\newcommand{\Mai}{\setcounter{DATE}{5}}
+\newcommand{\Juin}{\setcounter{DATE}{6}}
+\newcommand{\Juillet}{\setcounter{DATE}{7}}
+\newcommand{\Aout}{\setcounter{DATE}{8}}
+\newcommand{\Septembre}{\setcounter{DATE}{9}}
+\newcommand{\Octobre}{\setcounter{DATE}{10}}
+\newcommand{\Novembre}{\setcounter{DATE}{11}}
+\newcommand{\Decembre}{\setcounter{DATE}{12}}
+\newcommand{\summer}{\setcounter{DATE}{13}}
+\newcommand{\frenchmonth}{
+\ifcase\value{DATE}\or January \or February \or March \or
+April \or May \or June \or July \or August \or September \or October \or
+November \or December \or Summer \fi}
+\newcommand{\frenchmonthh}{
+\ifcase\value{DATE}\or January, \or February, \or March, \or
+April, \or May, \or June, \or July, \or August, \or September, \or October,
+\or
+November, \or December, \or Summer \fi}
+\newcommand{\frenchdate}[3]{#2\frenchmonthh #1, \space #3}
+\newcommand{\frenchmy}[2]{#1\frenchmonth \space #2}
+\newcommand{\frenchddate}[5]{#3\frenchmonth #1#4-\frenchmonth #2, \space #5}
+\begin{thebibliography}{10}
+
+\bibitem{boudreau96}
+Boudreau R. and Turkkan N.
+\newblock Solving the forward kinematics of parallel manipulators with a
+  genetic algorithm.
+\newblock {\em J. of Robotic Systems}, 13(2):111--125,
+  \frenchmy{\Fevrier}{1996}.
+
+\bibitem{charentus89}
+Charentus S. and Renaud M.
+\newblock Calcul du mod\`ele g\'eom\'etrique direct de la plate-forme de
+  {Stewart}.
+\newblock Research Report 89260, LAAS, Toulouse, France,
+  \frenchmy{\Juillet}{1989}.
+
+\bibitem{chetelat97}
+Ch\'etelat O., Merlet J-P., Myszkorowski P., and Longchamp R.
+\newblock Globally convergent iterative algorithms for the coordinate
+  transformations in the articulated mechanisms.
+\newblock In {\em Syroco}, Nantes, \frenchmy{\Septembre}{1997}.
+
+\bibitem{didrit98}
+Didrit O., Petitot M., and Walter E.
+\newblock Guaranteed solution of direct kinematic problems for general
+  configurations of parallel manipulator.
+\newblock {\em IEEE Trans. on Robotics and Automation}, 14(2):259--266,
+  \frenchmy{\Avril}{1998}.
+
+\bibitem{dietmaier98}
+Dietmaier P.
+\newblock The {Stewart-Gough} platform of general geometry can have 40 real
+  postures.
+\newblock In {\em ARK}, pages 7--16, Strobl,
+  \frenchddate{29}{4}{\Juin}{\Juillet}{1998}.
+
+\bibitem{faugere95}
+Faug\`ere J.C. and Lazard D.
+\newblock The combinatorial classes of parallel manipulators.
+\newblock {\em Mechanism and Machine Theory}, 30(6):765--776,
+  \frenchmy{\Aout}{1995}.
+
+\bibitem{geng91}
+Geng Z. and Haynes L.S.
+\newblock Neural network for the forward kinematics problem of a {Stewart}
+  platform.
+\newblock In {\em IEEE Int. Conf. on Robotics and Automation}, pages
+  2650--2655, Sacramento, \frenchdate{11-14}{\Avril}{1991}.
+
+\bibitem{griffis89}
+Griffis M. and Duffy J.
+\newblock A forward displacement analysis of a class of {Stewart} platform.
+\newblock {\em J. of Robotic Systems}, 6(6):703--720, 1989.
+
+\bibitem{hunt78}
+Hunt K.H.
+\newblock {\em Kinematic geometry of mechanisms}.
+\newblock Clarendon Press, Oxford, 1978.
+
+\bibitem{hunt98}
+Hunt K.H. and McAree P.R.
+\newblock The octahedral manipulator: geometry and mobility.
+\newblock {\em Int. J. of Robotics Research}, 17(8):868--885, 1998.
+
+\bibitem{husty94-1}
+Husty M.L.
+\newblock An algorithm for solving the direct kinematic of
+  {Stewart}-{Gough}-type platforms.
+\newblock Research Report TR-CIM-94-7, Universit\'e McGill, Montr\'eal,
+  \frenchdate{30}{\Juin}{1994}.
+
+\bibitem{innocenti92-3}
+Innocenti C. and Parenti-Castelli V.
+\newblock Singularity-free evolution from one configuration to another in
+  serial and fully-parallel manipulators.
+\newblock In {\em 22nd Biennial Mechanisms Conf.}, pages 553--560, Scottsdale,
+  \frenchdate{13-16}{\Septembre}{1992}.
+
+\bibitem{lazard92}
+Lazard D.
+\newblock {Stewart} platform and {Gr\"obner} basis.
+\newblock In {\em ARK}, pages 136--142, Ferrare,
+  \frenchdate{7-9}{\Septembre}{1992}.
+
+\bibitem{lazard94}
+Lazard D. and Merlet J-P.
+\newblock The (true) {Stewart} platform has 12 configurations.
+\newblock In {\em IEEE Int. Conf. on Robotics and Automation}, pages
+  2160--2165, San Diego, \frenchdate{8-13}{\Mai}{1994}.
+
+\bibitem{merlet89-1}
+Merlet J-P.
+\newblock Manipulateurs parall\`eles, 4eme partie : mode d'assemblage et
+  cin\'ematique directe sous forme polynomiale.
+\newblock Research Report 1135, INRIA, \frenchmy{\Decembre}{1989}.
+
+
+\bibitem{mourrain93}
+Mourrain B.
+\newblock The 40 generic positions of a parallel robot.
+\newblock In Bronstein M., editor, {\em ISSAC'93}, ACM press, pages 173--182,
+  Kiev (Ukraine), \frenchmy{\Juillet}{1993}.
+
+\bibitem{nanua89}
+Nanua P. and Waldron K.J.
+\newblock Direct kinematic solution of a {Stewart} platform.
+\newblock In {\em IEEE Int. Conf. on Robotics and Automation}, pages 431--437,
+  Scottsdale, \frenchdate{14-19}{\Mai}{1989}.
+
+\bibitem{raghavan91}
+Raghavan M.
+\newblock The {Stewart} platform of general geometry has 40 configurations.
+\newblock In {\em ASME Design and Automation Conf.}, volume 32-2, pages
+  397--402, Chicago, \frenchdate{22-25}{\Septembre}{1991}.
+
+\bibitem{reboulet85}
+Reboulet C. and Robert A.
+\newblock Hybrid control of a manipulator with an active compliant wrist.
+\newblock In {\em 3rd ISRR}, pages 76--80, Gouvieux, France,
+  \frenchdate{7-11}{\Octobre}{1985}.
+
+\bibitem{ronga92}
+Ronga F. and Vust T.
+\newblock {Stewart} platforms without computer?, 1992.
+\newblock Preprint.
+
+\bibitem{yee91}
+Yee C.S. and Lim K.B.
+\newblock Neural network for the forward kinematics problem in parallel
+  manipulator.
+\newblock In {\em IEEE Int. Joint Conf. on Neural Network}, pages 1699--1704,
+  Singapore, \frenchdate{18-21}{\Novembre}{1991}.
+
+\end{thebibliography}
+
+\end{document} 

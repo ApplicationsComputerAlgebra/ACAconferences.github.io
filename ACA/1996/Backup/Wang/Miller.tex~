@@ -1,0 +1,30 @@
+\begin{center}
+\LARGE
+Algorithms for Extending Gröbner Bases to Subalgebras and
+                          Their Ideals
+\end{center}
+
+\begin{center}
+\Large
+. Lyn Miller
+\end{center}
+
+\noindent
+Date:  July 19th (Friday)\\
+Time:  08:30-09:00\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+This talk summarizes the results of my 1994 doctoral dissertation, in which methods were
+presented for generalizing the theory of Gr\"obner bases to four distinct contexts: First, we outline
+the results developed by Robbiano and Sweedler in 1987 and by Sweedler in 1988 to extend
+Gr\"obner basis theory in an intrinsic manner to $k$-subalgebras of a polynomial ring $k[x1,...,xn]$ over
+a field k and to their ideals. We will present additional results that enable us actually to compute
+SAGBI-Gr\"obner bases (analogs to Gröbner bases for ideals of k-subalgebras) in $k[x1,...,xn]$ and
+also to use them in applications. Then, we will extend SAGBI and SAGBI-Gr\"obner theory to the
+more general context of a polynomial ring over a noetherian integral domain, describing
+algorithms for computing these bases and offering some applications. 
+

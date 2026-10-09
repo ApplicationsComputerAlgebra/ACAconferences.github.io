@@ -1,0 +1,84 @@
+% This file should be rename with the speaker's last name. (e.g : smith)
+
+% Write the author names in the order you wish them to appear
+% and underline the one who will give the talk.
+
+% Only the speaker's email address is required.
+
+\begin{abstract_online}{Familiarizing students with definition of Lebesgue integral  using Mathematica - some examples of calculation directly from its definition: Part 2}{%
+        \underline{W{\l}odzimierz Wojas}$^{1}$, \underline{Jan Krupa}$^{1}$,  Jaros{\l}aw Bojarski}{[jan\_krupa@sggw.pl]
+        }{%
+        $^1$ Department of Applied Mathematics, Warsaw University of Life Sciences (SGGW), Warsaw, Poland}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Begin of Autors preabmule settings %%%%%%%%%%%%%%
+
+
+\theoremstyle{definition}
+\newtheorem{defin}{Definition}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\dx}{\,\mathrm{d}}
+
+%%%%%%%%%%% End of Autors preabmule settings %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+In popular books of calculus, for example \cite{Apostol, Ficht}, we can find many examples of Riemann integral calculated directly from its definition. The aim of these examples is to familiarize students with the definition of Riemann integral.  In this article, with similar aim but for Lebesgue integral definition,  we present the following examples of calculation directly from its definition: $\ds \int_0^1 x\chi_{\Q}(x) \dx m(x)$, $\ds \int_0^{\infty} e^{-x} \dx m(x)$, $\ds \int_0^{1} (-\ln x) \dx m(x)$, $\ds \int_1^{\infty} \frac{1}{x} \dx m(x)$, $\ds \int_0^{1} \frac{1}{x} \dx m(x)$ and some others, $\ds \dx m(x)$ denotes the Lebesgue measure on the real line.
+ The title of this talk is very similar to the title of author's article \cite{WojasKrupa} in  which  there are examples of Lebesgue integrals of bounded function over bounded intervals calculated directly from its definition but in our talk we show examples of Lebesgue integrals of bounded or unbounded function over bounded or  unbounded intervals calculated directly from its definition.
+We calculate sums, limits and plot graphs of needed simple functions using Mathematica. Using Mathematica or others CAS programs for calculation Lebesgue integral directly from its definitions, seems to be didactically useful for students because of the possibility of symbolic calculation of sums, limits - checking our hand calculations and plotting dynamic graphs. Moreover we  get students used not only to the definition of Lebesgue integral but also to CAS applications generally.
+
+ The two following definitions of Lebesgue integral are used in this article:
+
+Let $(\R, \mathfrak{M}, m)$ be measure space, where
+$\mathfrak{M}$ is $\sigma-$ algebra of Lebesgue measurable subsets
+in $\R$, and $m$- Lebesgue measure on  $\R$.
+
+Let $f:\R \to \R$ be measurable nonnegative function (we've  omitted the definition of Lebesgue integral for simple real measurable functions).
+
+\begin{defin} (See \cite{Rudin, Bartle, Jones, Browder, Folland})
+\label{def:1}
+\begin{equation}
+\label{eq:1}
+\int f\dx m(x) = \sup \Big\{ \int s\dx m(x): 0\leq s \leq f, s\; \mathrm{simple\;measurable\; function}\Big\}.
+\end{equation}
+\end{defin}
+
+\begin{defin} (See \cite{Char, Kol, Sik})
+\label{def:2}
+Let $s_n$ be nondecreasing sequence of nonnegative simple measurable functions such that $\ds \lim_{n\to \infty}s_n (x)=f(x)$ for every $x\in \R$.
+Then:
+\begin{equation}
+\label{eq:2}
+\int f\dx m(x) = \lim_{n\to \infty}\int s_n \dx m(x).
+\end{equation}
+\end{defin}
+
+\textbf{Keywords} \newline{}Higher education, Lebesgue integral, Application of CAS, Mathematica, Mathematical didactics
+
+\vspace{-2em}
+\renewcommand\refname{{\normalsize References}}
+%\textbf{References}
+\begin{thebibliography}{00}
+\vspace{-2em}
+\setlength{\itemsep}{-1mm}
+\bibitem{WojasKrupa}  \textsc{W{\l}odzimierz Wojas and  Jan Krupa}, Familiarizing Students with Definition of Lebesgue Integral: Examples of Calculation Directly from Its Definition Using Mathematica, \emph{Mathematics in Computer Science}, \textbf{11}, 363--381, http://doi.org/10.1007/s11786-017-0321-5, (2017)
+\bibitem{Apostol} \textsc{Tom M. Apostol}, \emph{Calculus, Volume 1, One-Variable Calculus with an Introduction to Linear Algebra}, 2\textsuperscript{nd} ed., Addison-Wesley Publishing Company, (1991)
+\bibitem{Ficht} \textsc{G. M. Fichtenholz}, \emph{Differential and Integral Calculus}, Fizmatgiz, (1958)
+\bibitem{Rudin} \textsc{W. Rudin}, \emph{Principles of Mathematical Analysis}, 3\textsuperscript{rd} ed., McGraw-Hill Education, (1973)
+\bibitem{Char}  \textsc{Charalambos D. Aliprantis, Owen Burkinshaw}, \emph{Principles of Real Analysis}, 3\textsuperscript{rd} ed., Academic Press,  (1998)
+\bibitem{Bartle} \textsc{Robert G. Bartle}, \emph{The Elements of Integration and Lebesgue Measure}, Wiley-Interscience, (1995)
+\bibitem{Jones} \textsc{Frank Jones}, \emph{Lebesgue Integration On Euclidean Space}, Jones \& Bartlett Learning, (2000)
+\bibitem{Browder} \textsc{Andrew Browder}, \emph{Mathematical Analysis An Introduction}, 2\textsuperscript{nd} ed.,  Springer, (2001)
+\bibitem{Folland} \textsc{Gerald B. Folland},  \emph{Real Analysis Modern Technique}, 2\textsuperscript{nd} ed., Wiley, (2007)
+\bibitem{Kol} \textsc{W. Ko{\l}odziej}, \emph{Mathematical Analysis}, (in polish), Polish Scientific Publishers PWN, Warsaw (2012)
+\bibitem{Sik} \textsc{R. Sikorski}, \emph{Differential and Integral Calculus. Functions of several variables},  (in polish), Polish Scientific Publishers PWN, Warsaw (1977)
+\bibitem{Ruskeepa} \textsc{H. Ruskeepa}, \emph{Mathematica Navigator: Graphics and Methods of applied Mathematics.}
+Academic Press, Boston (2005)
+\bibitem{Wolfram}
+\textsc{S. Wolfram},  \emph{The Mathematica Book.} Wolfram Media Cambridge University Press (1996)
+\end{thebibliography}
+\end{abstract_online}

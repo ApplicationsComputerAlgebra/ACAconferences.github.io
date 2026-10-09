@@ -1,0 +1,23 @@
+USING THE AUSDEHNUNGSLEHRE AND MATHEMATICA TO DETERMINE THE UNKNOWN PARAMETERS
+OF GRASSMANN CHAIN MECHANISMS WITH TWO AND THREE INPUT SOURCES
+
+Gloria Bitterfeld
+
+Swinburne University of Technology, School of Mechanical and Manufacturing
+Engineering, PO Box 218, Hawthorn, 3122, Victoria, Australia
+
+ABSTRACT: The Grassmannian mathematical system, well known as the
+Ausdehnungslehre together with the symbolic computational program Mathematica
+is used to synthesise a class of planar mechanisms, named Grassmann Mechanisms.
+The objective of investigating Grassmann Mechanisms is to be able to compute
+easily the design parameters of the mechanism from their precision points.
+
+Mechanisms in this class have only moving links rotating on pivots.  The paper
+reports on a type of synthesis result of Grassmann Mechanism with two input
+sources using four precision points.  Extending this type of Grassmann
+Mechanism the paper implements a new type of mechanism named Grassmann Chain
+Mechanism which has three input sources.  A synthesis result of this type of
+mechanism is also presented using two precision points and two precision lines
+for the last mechanism of the chain and four precision points for the join
+mechanism.  Numerical examples are presented to justify the simplicity of the
+Grassmannian method to mechanism design.

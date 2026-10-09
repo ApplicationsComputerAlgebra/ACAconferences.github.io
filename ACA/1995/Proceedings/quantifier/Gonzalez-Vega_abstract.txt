@@ -1,0 +1,16 @@
+Laureano Gonzalez-Vega
+  Title:
+    Using Quantifier Elimination to solve the Birkhoff Interpolation 
+    Problem
+
+  Abstract:
+    This talk is devoted to show how to use Quantifier Elimination to
+    solve some particular instances of the Birkhoff Interpolation Problem.
+    In particular, this problem is completely solved for degrees smaller or
+    equal than 3 and any number of nodes and several instances of degrees 4
+    and 5 by computing all the incidence normal poised matrices  with such
+    characteristics. The special structure of the first order formulae
+    involved in the Birkhoff Interpolation Problem allows to apply in a very
+    efficient way different features of several Quantifier Elimination
+    Methods: Sturm-Habicht Sequences, manipulation of formal inequalities
+    "a la BenOr-Kozen-Reif", etc.

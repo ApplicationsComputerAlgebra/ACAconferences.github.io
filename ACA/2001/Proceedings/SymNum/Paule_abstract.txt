@@ -1,0 +1,8 @@
+  Title:        Symbolic Computation and Wavelets
+  Authors:      Peter Paule
+  Affiliation:  RISC-Linz, J. Kepler University, Linz, Austria
+  Abstract:
+The talk reports on recent work joint with F. Chyzak, O. Scherzer, A.
+Schoisswohl and B. Zimmermann.  It discusses the construction of wavelets in
+connection with the use of methods from computer algebra, in particular,
+Gr{\"o}bner bases and symbolic summation.

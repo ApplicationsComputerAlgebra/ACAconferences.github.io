@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+    "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+  <head>
+    <meta $Jssac: sec9.html,v 1.5 2007/08/22 08:04:18 saito Exp $>
+    <meta http-equiv="Content-Type" CONTENT="text/html;CHARSET=euc-jp">
+    <meta http-equiv="Content-Style-Type" CONTENT="text/css">
+    <link rel="stylesheet" href="/jssac.css" type="text/css">
+    <meta name="Author" content="Tomokatsu SAITO">
+    <title>Jssac style rules 1</title>
+  </head>
+  <body class="contri">
+  <hr>
+  <h2 style="text-align:center">
+    書き方に関する一般的な注意
+  </h2>
+  <hr>
+  <ol>
+    <li><td><b>空白の取り扱い</b><br>
+      学会誌は，色々な方々の原稿を統一的に取り扱います．
+      そのため一人の方の原稿の書き方が一般的でない場合，
+      不統一な誌面になる恐れが御座います．
+      最低限の制約として改ページは，使わない事となっています．
+      さらに改行は，必要に応じて使っていただいて結構ですがあまり無意味
+      (読者にとって)な改行は避けてください．
+      確かに証明の区切りなどで少し広めに空白を取りたいと言う要望は判りますが
+      できうればそのような事は避けてください．<p>
+
+    <li><td><b>句読点の取り扱い</b><br>
+      日本語における句読点は，全角の点，コンマ("．", "，")とします．
+      また確固等の取扱いは，括弧の中が日本語である場合は，全角とします．
+
+    <li><td><b>フォントの乱用</b><br>
+      原稿によっては，特殊なフォントを使う方がいらっしゃいます．
+      また，そのサイトでは一般的でも世間では一般的でないフォントが
+      良くあります．日本語のフォントとしては明朝かゴッシク，
+      アルファベットとしては，LaTeX2e の標準フォント以外は使わないように
+      してください．
+      <p>
+      現在『数式処理』の印刷では，明朝体，ゴシック体，
+      Times-Romanを利用して印刷をしております．
+      <p>
+      特に必要がある場合は編集委員会にご相談ください．
+      フォントサイズもなるべく標準の物を利用してください．<p>
+
+    <li><td><b>表</b><br>
+      "表" は，table環境を利用して必ず本文中に組み入れて下さい．
+      以下に典型的な表の作成法を示します．
+        <table align=center class="src"><td><code>
+          \begin{table}[t]<br>
+            \caption{表のタイトル}<br>
+            \label{tbl:表のキー}<br>
+            \begin{center}<br>
+              \begin{tabular}{列の指定}<br>
+                要素 & 要素 & ... & 要素 \\<br>
+                要素 & 要素 & ... & 要素 \\<br>
+                     ...<br>
+                要素 & 要素 & ... & 要素 \\<br>
+              \end{tabular}<br>
+            \end{center}<br>
+          \end{table}<br>
+        </code></td></table>
+     <li><td><b>参考文献</b></td>
+       本文中での参考文献の引用は，参考文献リストに付せられた番号により，
+       [1],[2] 等とします．このためには，\cite コマンドを利用してください．
+       文献の追加・削除等により文献番号がずれた場合にも原稿の修正がいりません．
+       <p>
+       jbibTeX を使って文献データベースから取り出すための sss.bst は，
+       使用を停止します．特に編集委員会の同意がある場合を除いて jbibTeX は
+       使用しないでください．
+   <ul>
+     <li><td><b>単純な引用</b></td>
+       \cite と \bibitem をもちいた最も単純な場合は，次のように
+       なります．
+       <table align=center class="src"><td><code>
+         ...\cite{著者にとって覚えやすいラベル}...<br>
+         \begin{thebibliography}[99]<br>
+           \bibitem {著者にとって覚えやすいラベル} 著者名: 表題,<br>
+           {\it 雑誌名},{\bf 巻番号}(号番号), 西暦, ページ範囲<br>
+         \end{thebibliography}<br>
+       </code></td></table>
+       <p>
+       です．
+       <p>
+     <li><td><b>付加情報付きの引用</b></td>
+       参考文献を参照するときに，ページ範囲などの付加情報を付ける
+       ためには， \cite[付加情報]{参照ラベル} 
+       とすれば [1,pp.100-110] などと表示できます．
+
+     <li><td><b>参考論文の記載法</b></td>
+       参考文献は，原則として著者名のアルファベット順に
+       (漢字表記の場合は読みの英語表現で)，以下に掲げる様式で
+       書いてください．なお，統一さえとれていれば，
+       多少記述形式が異なっていても構いません．
+       <p>
+       雑誌掲載論文の場合<p>
+       形式は，"著者名: 表題, 雑誌名, 巻(号), 発行年, ページ範囲."
+       とします．和文誌は雑誌名をそのまま書き，欧文誌は一般に
+       流布している略記法(例えば，Abbreviations of Names of Series:
+       Mathematical Reviews,ISO4, ISO833) を用い，
+       イタリック体で記述して下さい．
+       また，"巻"はボールド体として下さい．
+       <br>
+       実例としては以下のようになります．<p>
+
+        <table align=center class="src"><td><code>
+          \bibitem {KMH} Kobayashi, H., Moritsugu, S. and Hogan, R.W.:<br>
+          On radical zero-dimensional ideals,<br>
+          {\it J.Symb. Comput.}, {\bf 8}(6), 1989, 545--552.<p>
+        </code></td></table>
+        編集書中の論文の場合<p>
+        形式は，
+        "著者名: 表題, 編集書名 (編集),発行所名, 発行地名, 発行年, ページ範囲."
+        とします．欧文の編集書名はイタリック体として下さい．
+        "編集"のところには編集者名, ed.，編集者名 and 編集者名, eds.
+        編集者名 編，編集者名, 編集者名 編 等を入れてください．
+        <br>
+        実例としては以下のようになります．
+        <table align=center class="src"><td><code>
+          \bibitem {Shirayan} Shirayanagi, K.: On the isomorphism problem<br>
+          for finite-dimensional binomial algebras,<br>
+          \it Proc.\~{}ISSAC '90} (Watanabe, S.\~{}and Nagata, M., eds.), <br>
+          ACM, New York, 1990, 19--29.<br>
+        </code></td></table>
+
+        単行本の場合<p>
+        形式は，"著者名: 書名, 発行所名, 発行地名, 発行年."
+        となります．叢書 (シリーズ) 中の一巻の場合は
+        "著者名: 書名 (編集), 叢書名, 発行所名, 発行地名, 発行年."
+        のように書いてください．欧文の書名・叢書名はイタリック体
+        として下さい．
+        訳本であることを明示したい場合は，<br>
+        }著者名:~書名 (翻訳者名 訳), 発行所名, 発行地名, 発行年.<br>
+        著者名:~書名 (編集 / 翻訳者名 訳),叢書名, 発行所名, 発行地名, 発行年.<br>
+        のような形式とするか，"発行年."の後に注釈として必要事項を書いて下さい．<br>
+        実例としては，<p>
+        <table align=center class="src"><td><code>
+          \bibitem {hitotsumatsu} 一松 信: 正多面体を解く, 東海科学選書, 東海大学出版会,東京, 1983.
+        </code></td></table>
+        <br>です．
+   </ul>
+</ol>
+  <p>
+  <hr witdh="60%">
+  <table align=center rules="none">
+    <tr><td align=center>
+      <a href="sec8.html">アブストラクト</a>&nbsp;
+    </td><td align=center>
+      <a href="sec10.html">原稿の送付</a>&nbsp;
+    </td><td align=center>
+      <a href="index.html">作成要項</a>&nbsp;
+    </td><td align=center>
+      <a href="/TopPage.html">JssacHome</a>
+    </td></tr>
+  </table>
+  <hr>
+  <address><a href="mailto:webmaster@jssac.org">webmaster@jssac.org</a>
+  </address>
+  <pre>
+  Last modified: $Jssac: sec9.html,v 1.5 2007/08/22 08:04:18 saito Exp $
+  </pre>
+  </body>
+</html>

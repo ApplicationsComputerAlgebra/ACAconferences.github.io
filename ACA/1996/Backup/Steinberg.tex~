@@ -1,0 +1,71 @@
+%==============
+\begin{center}
+{\LARGE \bf Quantifier Elimination
+}
+\end{center}
+%==============
+\bigskip
+
+{\bf Organizer}
+\medskip
+
+\begin{itemize}
+
+\item
+S. Steinberg (stanly@math.unm.edu)
+\item
+H. Hong (Hoon.Hong@risc.uni-linz.ac.at)
+
+\item
+R. Liska (liska@siduri.fjfi.cvut.cz)
+
+\end{itemize}
+
+\bigskip
+
+{\bf Description}
+\medskip
+
+Recently, quantifier elimination algorithms have seen many applications, and there have been new
+development in quantifier elimination algorithms for special classes of problems. Talks Date: July
+19th (Friday) 
+
+\bigskip
+{\bf Talks}
+\medskip
+
+\begin{description}
+\item[] \ \\
+  Andreas Dolzmann, Thomas Sturm\\
+  {\bf REDLOG -- Computer Algebra Meets Computer Logic.} 
+\item[] \ \\
+  Volker Weispfenning\\
+  {\bf Quantifier Elimination Applied in Simulation and Scheduling} 
+\item[] \ \\
+  Emma-Neila Gonzalez-Campos, Laureano Gonzalez-Vega\\
+  {\bf Global projection operators for the Cylindrical Algebraic Decomposition algorithm.} 
+\item[] \ \\
+  Chris Brown, George Collins\\
+  {\bf Simple Solution Formula Construction from Truth Invariant CADs.} 
+\item[] \ \\
+  \\
+  {\bf Coffee Break} 
+\item[] \ \\
+  Mats Jirstrand\\
+  {\bf Some Applications of Quantifier Elimination in Nonlinear
+    Control Theory.} 
+\item[] \ \\
+  Ying Jiangqian\\
+  {\bf On the Determination of the Strong Stabilizability of an
+    n-Dimensional Linear System.} 
+\item[] \ \\
+  H. Hong, A. Neubacher\\
+  {\bf Approximate Quantifier Elimination.} 
+\item[] \ \\
+  R. Liska, S. Steinberg\\
+  {\bf The Stability of Boundary Conditions.} 
+\item[] \ \\
+  H. Hong, R. Liska, S. Steinberg\\
+  {\bf Discussion and Comments by the Organizers and Participants. } 
+\end{description}
+

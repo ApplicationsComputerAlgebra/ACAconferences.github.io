@@ -1,0 +1,79 @@
+        IMACS Conference on Applications of Computer Algebra
+                       May, 16-20, 1995
+                       Tuesday - Friday
+                   University of New Mexico
+                 Albuquerque, New Mexico, USA
+
+Conference Rationale:
+
+In the past several years there has been a dramatic increase in the use
+of computer algebra in engineering, science and education.  The
+computer-algebra research community has made significant progress in
+developing applicable algorithms, particularly in the areas of ordinary
+and partial differential equations and systems of algebraic equations.
+There are now textbooks for many engineering, science and mathematics
+courses that use a computer algebra approach.  This international
+conference will bring together these diverse groups for an exchange
+of their latest ideas.
+
+You are invited to propose a special session or to submit
+a paper to the organizers of a special session.
+
+Here are the special sessions currently being organized:
+
+Education
+	CAS in Engineering Education
+	Computer Algebra Systems in Precollege and
+		College Mathematics Education
+
+Engineering and Technology
+	Coding Theory and Computer Algebra
+	Computer Algebra Applied to Technology
+	Computer Algebra Methods in Control
+	Quantifier Elimination and its Applications
+
+Computer Science
+	Computer Algebra and Automated Theorem Proving
+	Parallel Computer Algebra
+	Parametric Curves and Applications in Computer Aided Geometric Design
+	Program Transformation
+
+Mathematics
+	Applied Computational Topology and Algebra
+
+Differential Equations
+	Construction and Applications of Normal Forms in the Theory of
+		Nonlinear ODEs and Transfer Map Techniques
+	Differential-Algebraic and Differential-Geometric
+        	Elimination Algorithms for Systems of PDEs
+	Numerical Methods for PDEs in a Computer Algebra Environment
+	Symbolic Algorithms, Differential Algebra, and Differential Equations
+	Symmetries and Closed Form Solutions of Differential Equations
+	Symmetries and Partial Differential Equations
+
+Probability
+	Computer Algebra Applications of Stochastic Methods
+
+For more information, please refer to the WWW (mosaic) page with URL:
+        http://math.unm.edu/aca.html
+This information is also available by anonymous FTP:
+        ftp math.unm.edu
+        Name: anonymous
+        Password: <your email address>
+        cd pub/aca
+        ls
+        get <any file you want, for example, long_description.txt>
+You can also send email to the automated mail server at:
+        aca-request@math.unm.edu
+	Subject: help
+As a last resort, FAX:
+        1-505-277-5505
+
+A list of email addresses for interested parties is being collected.  Please
+either use the "Join the list of interested parties!" option in the WWW
+(mosaic) interface or send email to aca@math.unm.edu if you would like to be
+added to this list.
+
+We will attempt to publish the proceedings as an electronic document.
+If anyone knows of an electronic journal that would be interested in
+working with us, please let us know.

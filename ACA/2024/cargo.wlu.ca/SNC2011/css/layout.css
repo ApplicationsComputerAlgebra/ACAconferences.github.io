@@ -1,0 +1,292 @@
+* {
+  margin:0;
+  padding:0;
+}
+body {
+  font:76% Verdana, Tahoma, Arial, sans-serif;
+  line-height:1.4em;
+  text-align:center;
+  color:#303030;
+  background:#e8eaec;
+}
+
+a img {
+    float: right;
+    margin: 1em;
+    border: 0;
+}
+
+table {text-align: left; width: 100%; padding-bottom: 1em;}
+      
+#snc-2011-program table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 1px solid rgb(190, 190, 190);
+}
+
+#snc-2011-program td,
+#snc-2011-program th {
+  text-align: left;
+  border: 1px solid rgb(190, 190, 190);
+  vertical-align: top;
+  padding:5px;
+  background-color: #DBFFDB;
+}
+
+#snc-2011-program tr.header td,
+#snc-2011-program tr.header th,
+#snc-2011-program td:first-child
+{
+  color: white;
+/*  background-color: rgb(42, 90, 138); */
+  background-color: ForestGreen;
+/*  text-shadow: #101010 2px 2px 3px;
+  font-weight: bold; */
+  text-align: left;
+  width: auto;
+}
+
+#snc-2011-program td:first-child
+{
+  background-color: DarkSeaGreen;
+  color: black;
+}
+
+
+#snc-2011-program td.misc
+{
+  background-color: #ffeeee;
+  text-align: center;
+  font-style: italic;
+}
+
+#snc-2011-program td.invited
+{
+  background-color: #ffeeee;
+  font-weight: bold;
+}
+
+#snc-2011-program td.fcrc
+{
+  background-color: #ffeeee;
+  /*font-weight: bold;*/
+  text-align: center
+}
+
+#snc-2011-program td.break
+{
+  background-color: rgb(232, 234, 236);
+  text-align: center;
+  font-style: italic;
+}
+
+
+#registration table  {text-align: left; width: auto; padding-bottom: 1em;
+                      border: 1px solid #347235;
+                      border-collapse: collapse; background-color: #B5EAAA;}
+#registration td     {padding: 0 1em}
+#registration tr.even td {border-bottom: solid 1px #347235}
+
+div#important-dates table {width: auto}
+div#important-dates td {padding-right: 12ex}
+div#important-dates em {color: green; font-style: normal; font-weight: bold}
+
+div#additional-information a img {
+    float: right;
+    margin: 1em;
+    height: 6em;
+    border: 0;
+}
+
+img.left, img.center, img.right {
+  padding:4px;
+  border:1px solid #a0a0a0;
+}
+img.left {
+  float:left;
+  margin:0 12px 5px 0;
+}
+img.center {
+  display:block;
+  margin:0 auto 5px auto;
+}
+img.right {
+  float:right;
+  margin:0 0 5px 12px;
+}
+#container {
+  width:1000px;
+  margin:20px auto;
+  padding:1px 0;
+  text-align:left;
+  background:#ffffff;
+  color:#303030;
+  border:2px solid #a0a0a0;
+  position:relative;
+}
+#header {
+  height:110px;
+  width:100%;
+  margin:0 1px 1px 1px;
+  background-color: DarkSeaGreen; /*wheat; /*#467aa7;*/
+  color: black; /*#ffffff;*/
+}
+
+#header img {
+    float: right;
+}
+
+#headpicture {
+  height:110px;
+  width:100%;
+  margin:0 1px 1px 1px;
+  background-color: DarkSeaGreen; /*wheat; /*#467aa7;*/
+  background:url(../assets/Panoramic_Downtown_San_Jose_reduced.jpg) no-repeat center left;
+  color:#ffffff;
+}
+#navigation {
+  height:2.2em;
+  line-height:2.2em;
+  width:100%;
+  margin:0 1px;
+  background: DarkSeaGreen; /*wheat; /*#578bb8;*/
+  color:#ffffff;
+}
+#navigation li {
+  float:left;
+  list-style-type:none;
+  border-right:1px solid #ffffff;
+  white-space:nowrap;
+}
+#content {
+  float:left;
+  width:750px;
+  font-size:0.9em;
+  padding:20px 0 0 20px;
+  min-height: 700px;
+}
+#subcontent {
+  position:absolute;
+  top:140px;
+  left: 820px;
+  /* float:right; */
+  width:160px;
+  padding:20px 10px 10px 0;
+  line-height:1.4em;
+}
+.menublock {
+  margin:0 0 20px 8px;
+  font-size:0.9em;
+}
+.menublock li {
+  list-style:none;
+  display:block;
+  padding:2px;
+  margin-bottom:2px;
+}
+.menublock li ul {
+  margin:3px 0 3px 15px;
+  font-size:1em;
+  font-weight:normal;
+}
+.menublock li ul li {
+  margin-bottom:0;
+}
+#footer {
+  clear:both;
+  width:100%;
+  height: 20px;
+  padding:5px 0;
+  margin:0 1px;
+  font-size:0.9em;
+  color:#f0f0f0;
+  background:DarkSeaGreen; /*wheat; /*#467aa7;*/
+}
+.splitcontentleft {
+  float:left;
+  width:48%;
+}
+.splitcontentright {
+  float:right;
+  width:48%;
+}
+.clear {
+  clear:both;
+}
+.small {
+  font-size:0.8em;
+}
+.hide {
+  display:none;
+}
+.textcenter {
+  text-align:center;
+}
+.textright {
+  text-align:right;
+}
+.important {
+  color:#f02025;
+  background-color:inherit;
+  font-weight:bold;
+}
+.box {
+  margin:0 0 20px 0;
+  padding:10px;
+  border:1px solid #c0c0c0;
+  background-color:#fafbfc;
+  color:#505050;
+  line-height:1.5em;
+}
+#content dl {
+  margin:0 5px 10px 25px;
+}
+#content dt {
+  font-weight:bold;
+  margin-bottom:5px;
+}
+#content dd {
+  margin:0 0 10px 15px;
+}
+table.program {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+table.program td, th {
+  border: 1px solid rgb(190, 190, 190);
+  vertical-align: top;
+  padding:5px;
+}
+table.program th {
+  color: white;
+  background-color: rgb(42, 90, 138);
+  text-shadow: #101010 2px 2px 3px;
+}
+table.program td.time {
+  color: white;
+  background-color: rgb(87, 139, 184);
+}
+table.program td.break {
+  text-align: center;
+  background-color: rgb(232, 234, 236);
+}
+table.program td.software {
+  background-color: #eeffee;
+}
+table.program td.invited {
+  background-color: #ffeeee;
+}
+table.program td.misc {
+  background-color: #ffffdd;
+  font-weight: bold;
+}
+
+.figure .caption {
+    display: none;
+}
+
+.figure {
+    float: right;
+}

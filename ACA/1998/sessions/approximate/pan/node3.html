@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Polynomial rootfinding</TITLE>
+<META NAME="description" CONTENT="Polynomial rootfinding">
+<META NAME="keywords" CONTENT="pan">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL="STYLESHEET" HREF="pan.css">
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="pan.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html41"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html39"
+ HREF="pan.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html33"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html42"
+ HREF="node4.html">Solution of a polynomial</A>
+<B> Up:</B> <A NAME="tex2html40"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html34"
+ HREF="node2.html">Models of computing</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00030000000000000000">&#160;</A><A NAME="sec3">&#160;</A>
+<BR>
+Polynomial rootfinding
+</H1>
+
+<P>
+Problem 3.1, 
+polynomial rootfinding. Given a positive <I>b</I> and real or complex coefficients <IMG
+ WIDTH="100" HEIGHT="33"
+ SRC="img9.gif"
+ ALT="$p_0, \ldots, p_{n-1}$">of the monic polynomial
+<IMG
+ WIDTH="269" HEIGHT="41"
+ SRC="img10.gif"
+ ALT="$p(x)=\sum_{i=0}^{n}p_ix^i =\prod_{j=1}^n(x-z_j)$">with zeros <IMG
+ WIDTH="80" HEIGHT="33"
+ SRC="img11.gif"
+ ALT="$z_1, \ldots, z_n$">lying in the unit disc <IMG
+ WIDTH="183" HEIGHT="37"
+ SRC="img12.gif"
+ ALT="$D(0,1)=\{x: \vert x\vert \le 1\}$">,
+compute approximations  to the zero, 
+<IMG
+ WIDTH="86" HEIGHT="35"
+ SRC="img13.gif"
+ ALT="$z_1^*, \ldots, z_n^*, $">satisfying 
+<IMG
+ WIDTH="226" HEIGHT="37"
+ SRC="img14.gif"
+ ALT="\begin{displaymath}\vert z_j^*-z_j\vert < 2^{-b}, ~j=1, \ldots, n.\end{displaymath}">
+<P>
+If some zeros of <I>p</I>(<I>x</I>) are not in the unit disc <I>D</I>(0,1) , we may compute the 
+values <IMG
+ WIDTH="207" HEIGHT="43"
+ SRC="img15.gif"
+ ALT="$r^*=\max _{k \ge 1} \vert p_{n-k} / p_{n} \vert^{1/k} $">,
+<IMG
+ WIDTH="99" HEIGHT="21"
+ SRC="img16.gif"
+ ALT="$r^+=1.62r^*$">,
+recall from [<A
+ HREF="node7.html#He74">He74</A>], pp. 451-457, that 
+<IMG
+ WIDTH="117" HEIGHT="39"
+ SRC="img17.gif"
+ ALT="$r^+ > {\rm max}_{j} \vert z_j\vert$">,
+and scale the variable <I>x</I> ,
+that is,  shift from <I>p</I>(<I>x</I>) to the monic polynomial 
+<IMG
+ WIDTH="171" HEIGHT="39"
+ SRC="img18.gif"
+ ALT="$q(y)= (r^+)^{-n} p(y r^+)$">with zeros <IMG
+ WIDTH="152" HEIGHT="39"
+ SRC="img19.gif"
+ ALT="$z_j/r^+, j=1, \ldots, n$">.
+
+<P>
+For a few millennea, the study of this problem was crucial for the
+development of mathematics and applied mathematics; presently this subject
+remains highly important for computer algebra (cf. [<A
+ HREF="node7.html#P97">P97</A>], [<A
+ HREF="node7.html#P98a">P98a</A>]). The
+solution of this algebraic problem typically combines numerical and algebraic 
+techniques, in some cases also involving geometric search on the complex plane. In particular, this
+is the case for the
+recent algorithms of [<A
+ HREF="node7.html#P95">P95</A>] (cf. also [<A
+ HREF="node7.html#P96">P96</A>],  [<A
+ HREF="node7.html#P97">P97</A>], 
+[<A
+ HREF="node7.html#P98a">P98a</A>]), which support the following results.
+
+<P>
+<P>
+<DIV><A NAME="the3.1"><B>T<SMALL>HEOREM </SMALL> 3.1</B></A> &nbsp; 
+Problem 3.1 can be solved at the computational cost bounded <BR>
+by 
+<IMG
+ WIDTH="234" HEIGHT="42"
+ SRC="img20.gif"
+ ALT="$O_A((n \log^2 n) (\log^2 n + \log b))$">as well as by 
+<IMG
+ WIDTH="289" HEIGHT="42"
+ SRC="img21.gif"
+ ALT="$O_A((\log^3 n) (\log^3 n + \log b), n/\log n)$">and
+<BR> 
+<IMG
+ WIDTH="494" HEIGHT="42"
+ SRC="img22.gif"
+ ALT="$O_B((\log^3 n) \log^2 (bn) , M ((b\log(bn)+n) n^2 ) / ( \log^2 (bn)
+(\log^2 n)))$">,
+where <I>M</I>(<I>d</I>) is the Boolean complexity of multiplication of a pair of integers
+modulo <IMG
+ WIDTH="23" HEIGHT="21"
+ SRC="img23.gif"
+ ALT="$2^d$">,
+<IMG
+ WIDTH="230" HEIGHT="37"
+ SRC="img24.gif"
+ ALT="$M(d)=O((d \log d) \log \log d)$">.</DIV><P></P>
+
+<P>
+The estimates of 
+Theorem <A HREF="node3.html#the3.1">3.1</A>
+are optimal (up to polylogarithmic factors in <I>n</I>  and b)
+under both  arithmetic and Boolean models  and in both cases
+under both sequential and parallel models of computing,  because they 
+are within polylogarithmic factors from the number of
+input coefficients as well as from the number of binary bits required 
+to represent these coefficients in order to enable 
+obtaining the  output zeros within the error bound <IMG
+ WIDTH="33" HEIGHT="21"
+ SRC="img25.gif"
+ ALT="$2^{-b}$">.
+Indeed, we need 
+to  process all the <I>n</I>  coefficients 
+<IMG
+ WIDTH="100" HEIGHT="33"
+ SRC="img9.gif"
+ ALT="$p_0, \ldots, p_{n-1}$">in order to obtain even a single zero <IMG
+ WIDTH="21" HEIGHT="33"
+ SRC="img26.gif"
+ ALT="$z_j$">.
+Moreover,
+we have  to 
+process order of <IMG
+ WIDTH="32" HEIGHT="20"
+ SRC="img27.gif"
+ ALT="$bn^2$">
+bits of
+<I>n</I>/2  trailing coefficients  of such a polynomial as 
+<IMG
+ WIDTH="89" HEIGHT="37"
+ SRC="img28.gif"
+ ALT="$(x-1/7)^n$">in order to approximate  within <IMG
+ WIDTH="33" HEIGHT="21"
+ SRC="img25.gif"
+ ALT="$2^{-b}$">
+its single (<I>n</I> -multiple) zero <IMG
+ WIDTH="74" HEIGHT="37"
+ SRC="img29.gif"
+ ALT="$z_1=1/7$">.
+
+<P>
+The algorithms of [<A
+ HREF="node7.html#P95">P95</A>], [<A
+ HREF="node7.html#P96">P96</A>] supporting  Theorem <A HREF="node3.html#the3.1">3.1</A>
+ involve sophisticated and advanced algebraic, numerical and geometric techniques, 
+and this slows  down the process of their
+numerical testing and  practical implementation. 
+The reader is referred  to [<A
+ HREF="node7.html#P97">P97</A>] on the currents most competitive
+practical algorithms  for polynomial rootfinding.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html41"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html39"
+ HREF="pan.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html33"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html42"
+ HREF="node4.html">Solution of a polynomial</A>
+<B> Up:</B> <A NAME="tex2html40"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html34"
+ HREF="node2.html">Models of computing</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

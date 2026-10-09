@@ -1,0 +1,901 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>An Elimination Procedure of Finitely Many Differential
+Variables</TITLE>
+<META NAME="description" CONTENT="An Elimination Procedure of Finitely Many Differential
+Variables">
+<META NAME="keywords" CONTENT="carra">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="carra.css">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html76"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html74"
+ HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html70"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html77"
+ HREF="node7.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html75"
+ HREF="node4.html">An Elimination Procedure</A>
+<B> Previous:</B> <A NAME="tex2html71"
+ HREF="node5.html">An Elimination Procedure of</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00031200000000000000">
+ An Elimination Procedure of Finitely Many Differential
+Variables</A>
+</H3>
+Let <IMG
+ WIDTH="31" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$(\eta)$">
+be the system of ordinary algebraic differential
+equations:
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="31" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$(\eta)$">={ <I>P</I>=
+<!-- MATH: $P(y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},v_{1},\ldots,
+v_{k})$ -->
+<IMG
+ WIDTH="334" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.gif"
+ ALT="$P(y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},v_{1},\ldots,v_{k})$">=0,
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>=0, <BR>
+
+<!-- MATH: $R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>=0, 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">
+}.
+</DIV>
+with 
+<!-- MATH: $P \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$ -->
+<IMG
+ WIDTH="266" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$P \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$">,
+
+<!-- MATH: $Q_{i},
+R_{j} \in F\{ y \}$ -->
+<IMG
+ WIDTH="128" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$Q_{i},
+R_{j} \in F\{ y \}$">,
+
+<!-- MATH: $ord(Q_{i})$ -->
+<I>ord</I>(<I>Q</I><SUB><I>i</I></SUB>)=<I>q</I><SUB><I>i</I></SUB> and <BR>
+<!-- MATH: $ord(R_{j})$ -->
+<I>ord</I>(<I>R</I><SUB><I>j</I></SUB>)=<I>r</I><SUB><I>j</I></SUB> for
+all <I>i</I> and <I>j</I>.
+
+<P>
+Let <I>N</I>=max{<I>n</I>,<I>q</I><SUB><I>i</I></SUB>,<I>r</I><SUB><I>j</I></SUB>: 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">}.
+
+<P>
+By using an elimination procedure of the variable <I>v</I><SUB><I>k</I></SUB> the system <IMG
+ WIDTH="31" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$(\eta)$">
+becomes
+equivalent to the system
+<BLOCKQUOTE>
+
+<!-- MATH: $(\eta_{1})$ -->
+<IMG
+ WIDTH="39" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.gif"
+ ALT="$(\eta_{1})$">={ <I>P</I>=0, <I>P</I><SUP>(1)</SUP>=0, <I>P</I><SUB>1</SUB>=0, 
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>=0, <BR>
+
+<!-- MATH: $R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>=0, 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">
+}.
+</BLOCKQUOTE>with 
+<!-- MATH: $P \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$ -->
+<IMG
+ WIDTH="266" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$P \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$">,
+
+<!-- MATH: $P_{1} \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-1} \}$ -->
+<IMG
+ WIDTH="289" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$P_{1} \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-1} \}$">,
+<I>Q</I><SUB><I>i</I></SUB>and <I>R</I><SUB><I>j</I></SUB> in <IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$F\{ y \}$">,
+
+<!-- MATH: $ord(P_{1})$ -->
+<I>ord</I>(<I>P</I><SUB>1</SUB>)=<I>N</I>+1, 
+<!-- MATH: $ord(Q_{i})$ -->
+<I>ord</I>(<I>Q</I><SUB><I>i</I></SUB>)=<I>q</I><SUB><I>i</I></SUB> and
+
+<!-- MATH: $ord(R_{j})$ -->
+<I>ord</I>(<I>R</I><SUB><I>j</I></SUB>)=<I>r</I><SUB><I>j</I></SUB> for all <I>i</I> and <I>j</I>.
+
+<P>
+By using an elimination procedure of the variable <I>v</I><SUB><I>k</I>-1</SUB> the system 
+<!-- MATH: $(\eta_{1})$ -->
+<IMG
+ WIDTH="39" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.gif"
+ ALT="$(\eta_{1})$">becomes equivalent to the system
+<BLOCKQUOTE>
+
+<!-- MATH: $(\eta_{2})$ -->
+<IMG
+ WIDTH="39" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.gif"
+ ALT="$(\eta_{2})$">={ <I>P</I>=0, <I>P</I><SUP>(1)</SUP>=0, <I>P</I><SUB>1</SUB>=0, 
+<!-- MATH: $P_{1}^{(1)}$ -->
+<I>P</I><SUB>1</SUB><SUP>(1)</SUP>=0,
+<I>P</I><SUB>2</SUB>=0, 
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>=0, <BR>
+
+<!-- MATH: $R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>=0, 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">
+}.
+</BLOCKQUOTE>with 
+<!-- MATH: $P \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$ -->
+<IMG
+ WIDTH="266" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$P \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$">,
+
+<!-- MATH: $P_{1} \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-1} \}$ -->
+<IMG
+ WIDTH="289" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$P_{1} \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-1} \}$">,
+<BR>
+
+<!-- MATH: $P_{2} \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-2} \}$ -->
+<IMG
+ WIDTH="289" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.gif"
+ ALT="$P_{2} \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-2} \}$">,
+
+<!-- MATH: $Q_{i},
+R_{j} \in F\{ y \}$ -->
+<IMG
+ WIDTH="128" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$Q_{i},
+R_{j} \in F\{ y \}$">,
+
+<!-- MATH: $ord(P_{1})$ -->
+<I>ord</I>(<I>P</I><SUB>1</SUB>)=<I>N</I>+1, 
+<!-- MATH: $ord(P_{2})$ -->
+<I>ord</I>(<I>P</I><SUB>2</SUB>)=
+<BR><I>N</I>+2,
+
+<!-- MATH: $ord(Q_{i})$ -->
+<I>ord</I>(<I>Q</I><SUB><I>i</I></SUB>)=<I>q</I><SUB><I>i</I></SUB> and 
+<!-- MATH: $ord(R_{j})$ -->
+<I>ord</I>(<I>R</I><SUB><I>j</I></SUB>)=<I>r</I><SUB><I>j</I></SUB> for all <I>i</I> and <I>j</I>.
+
+<P>
+Finally by using recursively an elimination procedure of the variables
+
+<!-- MATH: $v_{k-2},\ldots,v_{1},z_{h},\ldots,z_{h-i}$ -->
+<IMG
+ WIDTH="207" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img91.gif"
+ ALT="$v_{k-2},\ldots,v_{1},z_{h},\ldots,z_{h-i}$">
+the system <IMG
+ WIDTH="31" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$(\eta)$">
+is
+equivalent to the system
+<BLOCKQUOTE>
+
+<!-- MATH: $(\eta_{k+i})$ -->
+<IMG
+ WIDTH="55" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="$(\eta_{k+i})$">={ <I>P</I>=0, <I>P</I><SUP>(1)</SUP>=0, <I>P</I><SUB>1</SUB>=0, 
+<!-- MATH: $P_{1}^{(1)}$ -->
+<I>P</I><SUB>1</SUB><SUP>(1)</SUP>=0,
+..., <I>P</I><SUB><I>k</I></SUB>=0, 
+<!-- MATH: $P_{k}^{(1)}$ -->
+<I>P</I><SUB><I>k</I></SUB><SUP>(1)</SUP>=0,...,
+<I>P</I><SUB><I>k</I>+<I>i</I>-1</SUB>=0, 
+<!-- MATH: $P_{k+i-1}^{(1)}$ -->
+<I>P</I><SUB><I>k</I>+<I>i</I>-1</SUB><SUP>(1)</SUP>=0, <I>P</I><SUB><I>k</I>+<I>i</I></SUB>=0,
+
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>=0, 
+<!-- MATH: $R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>=0,
+
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">
+}.
+</BLOCKQUOTE>with 
+<!-- MATH: $P \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$ -->
+<IMG
+ WIDTH="266" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$P \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$">,
+
+<!-- MATH: $P_{1} \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-1} \}$ -->
+<IMG
+ WIDTH="289" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$P_{1} \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-1} \}$">,..., <BR>
+
+<!-- MATH: $P_{k} \in F\{ y,z_{1},\ldots,z_{h} \}$ -->
+<IMG
+ WIDTH="184" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$P_{k} \in F\{ y,z_{1},\ldots,z_{h} \}$">,...,
+
+<!-- MATH: $P_{k+i-1} \in F\{ y,z_{1},\ldots,z_{h-i} \}$ -->
+<IMG
+ WIDTH="234" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="$P_{k+i-1} \in F\{ y,z_{1},\ldots,z_{h-i} \}$">,
+
+<!-- MATH: $P_{k+i} \in F\{ y,z_{1},\ldots,\\z_{h-i-1} \}$ -->
+<IMG
+ WIDTH="234" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.gif"
+ ALT="$P_{k+i} \in F\{ y,z_{1},\ldots,\\ z_{h-i-1} \}$">,
+
+<!-- MATH: $Q_{i},
+R_{j} \in F\{ y \}$ -->
+<IMG
+ WIDTH="128" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$Q_{i},
+R_{j} \in F\{ y \}$">,
+
+<!-- MATH: $ord(P_{1})$ -->
+<I>ord</I>(<I>P</I><SUB>1</SUB>)=<I>N</I>+1,..., 
+<!-- MATH: $ord(P_{k})$ -->
+<I>ord</I>(<I>P</I><SUB><I>k</I></SUB>)=<I>N</I>+<I>k</I>,...,
+<BR>
+
+<!-- MATH: $ord(P_{k+i-1})$ -->
+<I>ord</I>(<I>P</I><SUB><I>k</I>+<I>i</I>-1</SUB>)=<I>N</I>+<I>k</I>+<I>i</I>-1, 
+<!-- MATH: $ord(P_{k+i})$ -->
+<I>ord</I>(<I>P</I><SUB><I>k</I>+<I>i</I></SUB>)=<I>N</I>+<I>k</I>+<I>i</I>,
+
+<!-- MATH: $ord(Q_{i})$ -->
+<I>ord</I>(<I>Q</I><SUB><I>i</I></SUB>)=<I>q</I><SUB><I>i</I></SUB> and 
+<!-- MATH: $ord(R_{j})$ -->
+<I>ord</I>(<I>R</I><SUB><I>j</I></SUB>)=<I>r</I><SUB><I>j</I></SUB> for all <I>i</I> and <I>j</I>.
+
+<P>
+If <I>i</I>=<I>h</I>, then the system <IMG
+ WIDTH="31" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$(\eta)$">
+is equivalent to the system
+<BLOCKQUOTE>
+
+<!-- MATH: $(\eta_{k+h})$ -->
+<IMG
+ WIDTH="58" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="$(\eta_{k+h})$">={ <I>P</I>=0, <I>P</I><SUP>(1)</SUP>=0, <I>P</I><SUB>1</SUB>=0, 
+<!-- MATH: $P_{1}^{(1)}$ -->
+<I>P</I><SUB>1</SUB><SUP>(1)</SUP>=0,
+..., <I>P</I><SUB><I>k</I></SUB>=0, 
+<!-- MATH: $P_{k}^{(1)}$ -->
+<I>P</I><SUB><I>k</I></SUB><SUP>(1)</SUP>=0,...,
+<I>P</I><SUB><I>k</I>+<I>h</I>-1</SUB>=0, 
+<!-- MATH: $P_{k+h-1}^{(1)}$ -->
+<I>P</I><SUB><I>k</I>+<I>h</I>-1</SUB><SUP>(1)</SUP>=0, <I>P</I><SUB><I>k</I>+<I>h</I></SUB>=0,
+
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>=0, 
+
+<!-- MATH: $R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>=0, 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">
+}.
+</BLOCKQUOTE>with 
+<!-- MATH: $P \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$ -->
+<IMG
+ WIDTH="266" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$P \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$">,
+
+<!-- MATH: $P_{1} \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-1} \}$ -->
+<IMG
+ WIDTH="289" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$P_{1} \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-1} \}$">,...,
+<BR>
+
+<!-- MATH: $P_{k} \in F\{ y,z_{1},\ldots,z_{h} \}$ -->
+<IMG
+ WIDTH="184" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$P_{k} \in F\{ y,z_{1},\ldots,z_{h} \}$">,...,
+
+<!-- MATH: $P_{k+h-1} \in F\{ y,z_{1} \}$ -->
+<IMG
+ WIDTH="160" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.gif"
+ ALT="$P_{k+h-1} \in F\{ y,z_{1} \}$">,
+
+<!-- MATH: $P_{k+h} \in F\{ y \}$ -->
+<IMG
+ WIDTH="116" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.gif"
+ ALT="$P_{k+h} \in F\{ y \}$">,
+
+<!-- MATH: $Q_{i}, R_{j} \in F\{ y \}$ -->
+<IMG
+ WIDTH="128" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$Q_{i},
+R_{j} \in F\{ y \}$">,
+
+<!-- MATH: $ord(P_{1})$ -->
+<I>ord</I>(<I>P</I><SUB>1</SUB>)=<I>N</I>+1,..., 
+<!-- MATH: $ord(P_{k})$ -->
+<I>ord</I>(<I>P</I><SUB><I>k</I></SUB>)=<I>N</I>+<I>k</I>,
+..., 
+<!-- MATH: $ord(P_{k+h-1})$ -->
+<I>ord</I>(<I>P</I><SUB><I>k</I>+<I>h</I>-1</SUB>)=<I>N</I>+<I>k</I>+<I>h</I>-1, <BR>
+<!-- MATH: $ord(P_{k+h})$ -->
+<I>ord</I>(<I>P</I><SUB><I>k</I>+<I>h</I></SUB>)=<I>N</I>+<I>k</I>+<I>h</I>,
+
+<!-- MATH: $ord(Q_{i})$ -->
+<I>ord</I>(<I>Q</I><SUB><I>i</I></SUB>)=<I>q</I><SUB><I>i</I></SUB> and 
+<!-- MATH: $ord(R_{j})$ -->
+<I>ord</I>(<I>R</I><SUB><I>j</I></SUB>)=<I>r</I><SUB><I>j</I></SUB> for all <I>i</I> and <I>j</I>.
+
+<P>
+Now the differential ideal <I>I</I>=[<I>P</I>, 
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>,
+
+<!-- MATH: $R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>, 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">]=
+[<I>P</I>, <I>P</I><SUB>1</SUB>=0,..., <I>P</I><SUB><I>k</I></SUB>,...,<I>P</I><SUB><I>k</I>+<I>h</I>-1</SUB>, <I>P</I><SUB><I>k</I>+<I>h</I></SUB>=0,
+
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>, 
+<!-- MATH: $R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>,
+
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">]
+so the systems <IMG
+ WIDTH="33" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$(\beta)$">
+and <IMG
+ WIDTH="31" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$(\eta)$">
+are
+equivalent. 
+
+<P>
+Let <IMG
+ WIDTH="37" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.gif"
+ ALT="$(\gamma')$">
+be the following system
+<BLOCKQUOTE>
+<IMG
+ WIDTH="37" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.gif"
+ ALT="$(\gamma')$">={ <I>P</I>=0, <I>P</I><SUP>(1)</SUP>=0, <I>P</I><SUB>1</SUB>=0, 
+<!-- MATH: $P_{1}^{(1)}$ -->
+<I>P</I><SUB>1</SUB><SUP>(1)</SUP>=0,
+..., <I>P</I><SUB><I>k</I></SUB>=0, 
+<!-- MATH: $P_{k}^{(1)}$ -->
+<I>P</I><SUB><I>k</I></SUB><SUP>(1)</SUP>=0,...,
+<BR>
+<I>P</I><SUB><I>k</I>+<I>h</I>-1</SUB>=0, 
+<!-- MATH: $P_{k+h-1}^{(1)}$ -->
+<I>P</I><SUB><I>k</I>+<I>h</I>-1</SUB><SUP>(1)</SUP>=0, <I>P</I><SUB><I>k</I>+<I>h</I></SUB>=0, 
+<I>z</I><SUB><I>i</I></SUB>=
+<!-- MATH: $exp(Q_{i})$ -->
+<I>exp</I>(<I>Q</I><SUB><I>i</I></SUB>), <I>v</I><SUB><I>j</I></SUB>=
+<!-- MATH: $log(R_{j})$ -->
+<I>log</I>(<I>R</I><SUB><I>j</I></SUB>), <BR>
+
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>=0,
+
+<!-- MATH: $R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>=0, 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">
+}.
+</BLOCKQUOTE>The system <IMG
+ WIDTH="37" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.gif"
+ ALT="$(\gamma')$">
+is equivalent to the system <IMG
+ WIDTH="34" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="$(\alpha)$">.
+
+<P>
+Since each elimination of one variable among <I>z</I><SUB><I>i</I></SUB> and <I>v</I><SUB><I>j</I></SUB> riquires
+one more derivative of <I>P</I> by 3.1.1., then 
+<!-- MATH: $P_{1},\ldots,P_{h+k} \in I$ -->
+<IMG
+ WIDTH="145" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.gif"
+ ALT="$P_{1},\ldots,P_{h+k} \in I$">
+and
+the system <IMG
+ WIDTH="37" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.gif"
+ ALT="$(\gamma')$">
+is equivalent to the following system <IMG
+ WIDTH="32" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.gif"
+ ALT="$(\gamma)$">:
+<BLOCKQUOTE>
+<IMG
+ WIDTH="32" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.gif"
+ ALT="$(\gamma)$">={ <I>P</I>=0, <I>P</I><SUP>(1)</SUP>=0,..., <I>P</I><SUP>(<I>h</I>+<I>k</I>)</SUP>=0,
+<I>z</I><SUB><I>i</I></SUB>=
+<!-- MATH: $exp(Q_{i})$ -->
+<I>exp</I>(<I>Q</I><SUB><I>i</I></SUB>), <I>v</I><SUB><I>j</I></SUB>=
+<!-- MATH: $log(R_{j})$ -->
+<I>log</I>(<I>R</I><SUB><I>j</I></SUB>),
+<BR>
+
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>=0,
+
+<!-- MATH: $R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>=0, 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">
+}.
+</BLOCKQUOTE>
+<P>
+Finally the differential equation { 
+<!-- MATH: $P=P(y,y^{(1)},\ldots,y^{(n)},
+exp(Q_{1}),\ldots,\\exp(Q_{h}),log(R_{1}),\ldots,
+log(R_{k}))=0$ -->
+<IMG
+ WIDTH="603" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$P=P(y,y^{(1)},\ldots,y^{(n)},exp(Q_{1}),\ldots,exp(Q_{h}),log(R_{1}),
+\ldots,log(R_{k}))=0$">
+} is equivalent to the system
+<BLOCKQUOTE>
+<IMG
+ WIDTH="38" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.gif"
+ ALT="$(\alpha')$">={ <I>P</I>=
+<!-- MATH: $P(y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},
+v_{1},\ldots,v_{k})$ -->
+<IMG
+ WIDTH="334" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.gif"
+ ALT="$P(y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},v_{1},\ldots,v_{k})$">=0, <I>P</I><SUB><I>h</I>+<I>k</I></SUB>=
+<BR>
+<!-- MATH: $P_{h+k}(y,y^{(1)},\ldots,y^{(N+h+k)})$ -->
+<IMG
+ WIDTH="225" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.gif"
+ ALT="$P_{h+k}(y,y^{(1)},\ldots,y^{(N+h+k)})$">=
+0, <I>z</I><SUB><I>i</I></SUB>=
+<!-- MATH: $exp(Q_{i})$ -->
+<I>exp</I>(<I>Q</I><SUB><I>i</I></SUB>), <I>v</I><SUB><I>j</I></SUB>=
+<!-- MATH: $log(R_{j})$ -->
+<I>log</I>(<I>R</I><SUB><I>j</I></SUB>),
+<BR> 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">,
+},
+</BLOCKQUOTE>
+<P>
+<P>
+<DIV><B>REMARK  4</B> &nbsp; 
+The elimination of the differential variables 
+<!-- MATH: $z_{1},\ldots,z_{h},
+v_{1},\ldots,\\v_{k}$ -->
+<IMG
+ WIDTH="172" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.gif"
+ ALT="$z_{1},\ldots,z_{h},
+v_{1},\ldots,\\ v_{k}$">
+in the system <IMG
+ WIDTH="33" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$(\beta)$">
+can be also obtained in
+the following ways.
+
+<P>
+(i) By using the Ritt's theory of characteristic sets it is sufficient to
+find the unique differential polynomial 
+<!-- MATH: $P_{h+k} \in R\{y\}$ -->
+<IMG
+ WIDTH="116" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.gif"
+ ALT="$P_{h+k} \in R\{y\}$">
+in the extended
+characteristic set of the set of differential polynomials
+<IMG
+ WIDTH="16" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$\{ $">
+<!-- MATH: $P, z_{i}^{(1)}-Q_{i}^{(1)}z_{i}, R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>P</I>, <I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>, <I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>:
+
+<!-- MATH: $l=1,\ldots,h+k$ -->
+<IMG
+ WIDTH="138" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.gif"
+ ALT="$l=1,\ldots,h+k$">,
+
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$"><IMG
+ WIDTH="16" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="$ \}$">
+with respect to
+a ranking <I>O</I> of the differential variables, such that
+
+<!-- MATH: $y<_{O}<z_{1}<_{O}\ldots<_{O}z_{h}<_{O}v_{1}<_{O}\ldots<_{O}v_{k}$ -->
+<IMG
+ WIDTH="376" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.gif"
+ ALT="$y<_{O}<z_{1}<_{O}\ldots<_{O}z_{h}<_{O}v_{1}<_{O}\ldots<_{O}v_{k}$">.
+
+<P>
+(ii) By using the Gr&#246;bner bases techniques, it is sufficient to find the
+Gr&#246;bner basis <I>G</I> of the ideal <I>J</I><SUB><I>h</I>+<I>k</I></SUB>=(
+<!-- MATH: $P,P^{(l)},
+z_{i}^{(1)}-Q_{i}^{(1)}z_{i},(z_{i}^{(1)}-Q_{i}^{(1)}z_{i})^{(l)},\\
+R_{j}v_{j}^{(1)}-R_{j}^{(1)},(R_{j}v_{j}^{(1)}-R_{j}^{(1)})^{(l)}$ -->
+<IMG
+ WIDTH="580" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.gif"
+ ALT="$P,P^{(l)},
+z_{i}^{(1)}-Q_{i}^{(1)}z_{i},(z_{i}^{(1)}-Q_{i}^{(1)}z_{i})^{(l)},\\
+R_{j}v_{j}^{(1)}-R_{j}^{(1)},(R_{j}v_{j}^{(1)}-R_{j}^{(1)})^{(l)}$">:
+
+<!-- MATH: $l=1,\ldots,h+k$ -->
+<IMG
+ WIDTH="138" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.gif"
+ ALT="$l=1,\ldots,h+k$">,
+
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">)
+in
+
+<!-- MATH: $R[y,\ldots,y^{(N+h+k)},z_{1},\ldots,z_{1}^{(h+k)},\ldots,z_{h},\ldots,
+z_{h}^{(h+k)},v_{1},\ldots,v_{1}^{(h+k)},\ldots,v_{k},\ldots,\\v_{k}^{(h+k)}]$ -->
+<IMG
+ WIDTH="698" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.gif"
+ ALT="$R[y,\ldots,y^{(N+h+k)},z_{1},\ldots,z_{1}^{(h+k)},\ldots,z_{h},\ldots,
+z_{h}^{(h+k)},v_{1},\ldots,v_{1}^{(h+k)},\ldots,v_{k},\ldots,\\ v_{k}^{(h+k)}]$">with respect to the lexicographic term ordering <IMG
+ WIDTH="18" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img109.gif"
+ ALT="$\sigma$">
+with 
+
+<!-- MATH: $y<_{\sigma}\ldots<_{\sigma}y^{(N+h+k)}<_{\sigma}z_{1}<_{\sigma}\ldots
+<_{\sigma}z_{1}^{(h+k}<_{\sigma}\ldots<_{\sigma}z_{h}<_{\sigma}\ldots<_{\sigma}
+z_{h}^{(h+k}<_{\sigma}v_{1}<_{\sigma}\ldots<_{\sigma}v_{1}^{(h+k}
+<_{\sigma}\ldots<_{\sigma}v_{k}<_{\sigma}\ldots<_{\sigma}v_{k}^{(h+k}$ -->
+<IMG
+ WIDTH="1056" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img110.gif"
+ ALT="$y<_{\sigma}\ldots<_{\sigma}y^{(N+h+k)}<_{\sigma}z_{1}<_{\sigma}\ldots
+<_{\sigma...
+...1}^{(h+k}
+<_{\sigma}\ldots<_{\sigma}v_{k}<_{\sigma}\ldots<_{\sigma}v_{k}^{(h+k}$">.
+The riquired differential polynomial <I>P</I><SUB><I>h</I>+<I>k</I></SUB> is in
+
+<!-- MATH: $G \cap R[y,\ldots,y^{(N+h+k)}]$ -->
+<IMG
+ WIDTH="196" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.gif"
+ ALT="$G \cap R[y,\ldots,y^{(N+h+k)}]$">.
+
+<P>
+(iii) By using the differential resultant theory, e.g. by finding the
+differential resultant of the <I>h</I>+<I>k</I>+1 differential polynomials <I>P</I>,
+
+<!-- MATH: $z_{1}^{(1)}-Q_{1}^{(1)}z_{1},\ldots,z_{h}^{(1)}-Q_{h}^{(1)}z_{h}$ -->
+<IMG
+ WIDTH="259" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.gif"
+ ALT="$z_{1}^{(1)}-Q_{1}^{(1)}z_{1},\ldots,z_{h}^{(1)}-Q_{h}^{(1)}z_{h}$">,
+
+<!-- MATH: $R_{1}v_{1}^{(1)}-R_{1}^{(1)},\ldots,R_{k}v_{k}^{(1)}-R_{k}^{(1)}$ -->
+<IMG
+ WIDTH="270" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.gif"
+ ALT="$R_{1}v_{1}^{(1)}-R_{1}^{(1)},\ldots,R_{k}v_{k}^{(1)}-R_{k}^{(1)}$">,
+as
+differential polynomials in 
+<!-- MATH: $R\{y\}\{z_{1},\\\ldots,z_{h},v_{1},\ldots,
+v_{k-1},v_{k}\}$ -->
+<IMG
+ WIDTH="285" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.gif"
+ ALT="$R\{y\}\{z_{1},\\ \ldots,z_{h},v_{1},\ldots,
+v_{k-1},v_{k}\}$">.
+<BR>
+Since <I>ord</I>(<I>P</I>)=<I>n</I>, 
+<!-- MATH: $ord(Q_{i})$ -->
+<I>ord</I>(<I>Q</I><SUB><I>i</I></SUB>)=<I>q</I><SUB><I>i</I></SUB> and
+
+<!-- MATH: $ord(R_{j})$ -->
+<I>ord</I>(<I>R</I><SUB><I>j</I></SUB>)=<I>r</I><SUB><I>j</I></SUB> for all <I>i</I> and <I>j</I>, let <I>N</I><SUP>*</SUP>=
+<!-- MATH: $n+
+\sum_{i=1,\ldots,h}max(1,q_{i})+\sum_{j=1,\ldots,k}max(1,r_{j})$ -->
+<IMG
+ WIDTH="386" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img115.gif"
+ ALT="$n+
+\sum_{i=1,\ldots,h}max(1,q_{i})+\sum_{j=1,\ldots,k}max(1,r_{j})$">.
+By
+differential resultant theory such differential resultant is equal to
+the resultant of the polynomials <I>P</I>,...,
+<BR>
+<!-- MATH: $P^{(N^{*}-ord(P))}$ -->
+<I>P</I><SUP>(<I>N</I><SUP>*</SUP>-<I>ord</I>(<I>P</I>))</SUP>,
+
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i},\ldots,
+(z_{i}^{(1)}-Q_{i}^{(1)}z_{i})^{(N^{*}-max(1,q_{i}))},
+R_{j}v_{j}^{(1)}-R_{j}^{(1)},\ldots,\\
+(R_{j}v_{j}^{(1)}-R_{j}^{(1)})^{(N^{*}-max(1,r_{j}))}$ -->
+<IMG
+ WIDTH="760" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img116.gif"
+ ALT="$z_{i}^{(1)}-Q_{i}^{(1)}z_{i},\ldots,
+(z_{i}^{(1)}-Q_{i}^{(1)}z_{i})^{(N^{*}-max...
+...)}-R_{j}^{(1)},\ldots,\\
+(R_{j}v_{j}^{(1)}-R_{j}^{(1)})^{(N^{*}-max(1,r_{j}))}$">,
+
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">)
+in the polynomial ring <I>R</I>[
+<!-- MATH: $y,\ldots,y^{(N^{*})},z_{i},\ldots,
+z_{i}^{(N^{*}-max(1,q_{i}))},v_{j},\ldots,v_{j}^{(N^{*}-max(1,r_{j}))}]$ -->
+<IMG
+ WIDTH="473" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img117.gif"
+ ALT="$y,\ldots,y^{(N^{*})},z_{i},\ldots,
+z_{i}^{(N^{*}-max(1,q_{i}))},v_{j},\ldots,v_{j}^{(N^{*}-max(1,r_{j}))}]$">:
+
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">].
+<BR>
+Since each elimination process of the above differential variables riquires
+at most <I>h</I>+<I>k</I> derivatives of <I>P</I>, 
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>,
+
+<!-- MATH: $R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>, then this elimination process holds also
+when 
+<!-- MATH: $P \in C^{r+h+k}({\bf R)}$ -->
+<IMG
+ WIDTH="138" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.gif"
+ ALT="$P \in C^{r+h+k}({\bf R)}$">
+for some 
+<!-- MATH: $r \in {\bf N}_{0}$ -->
+<IMG
+ WIDTH="65" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img119.gif"
+ ALT="$r \in {\bf N}_{0}$">.</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html76"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html74"
+ HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html70"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html77"
+ HREF="node7.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html75"
+ HREF="node4.html">An Elimination Procedure</A>
+<B> Previous:</B> <A NAME="tex2html71"
+ HREF="node5.html">An Elimination Procedure of</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

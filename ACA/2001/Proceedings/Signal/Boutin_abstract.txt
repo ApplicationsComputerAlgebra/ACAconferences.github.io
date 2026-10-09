@@ -1,0 +1,18 @@
+Numerically Invariant Solutions of Geometric Flows
+   
+   Mireille Boutin
+   Department of Mathematics
+   University of Minnesota
+   www.math.umn.edu/~mboutin
+
+   Email:  mboutin@math.umn.edu
+
+   Abstract:
+
+Given a G-invariant differential equation (e.g. a geometric flow), we are
+interested in obtaining numerical solution schemes which are also invariant
+under G.  For example, we would like to obtain affine invariant numerical
+schemes for the affine invariant flow C_t = Css for a curve C in the plane.  We
+do this using an algorithmic method based on moving frames.  The method
+involves solving a set of equations defining a cross-section of the orbits of
+the group action.

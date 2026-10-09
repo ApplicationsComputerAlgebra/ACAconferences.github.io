@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Homotopy Methods for Solving Nonlinear Equations 
+          and their Applications in Circuit Simulation</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Trajkovic">Ljiljana Trajkovic</A><br>
+</h3>
+
+Date: July 19th (Friday)<br>
+Time: ??.??<br>
+
+<center>
+Abstract
+</center>
+
+Finding the dc operating points of transistor circuits is an important task in circuit simulation. The
+problem is equivalent to solving sets of nonlinear algebraic equations describing transistor circuits.
+Existing circuit simulators use Newton's method, or its variants, to achieve this task. Newton's
+method is local and requires a good initial guess for convergence, while its variants globally
+converge under restrictive conditions. Recent mathematical results guarantee the existence of
+constructive, globally convergent homotopy methods for finding zeros of nonlinear maps with
+probability one. We apply these results to the dc operating point problem by constructing various
+homotopies to create a "simple" problem that is solved before proceeding with the continuation
+process that will transform it into the initially stated "difficult" problem. These homotopies
+proved successful in overcoming dc convergence problems often encountered in current circuit
+simulators (ADVICE, TITAN). 
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Barke.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

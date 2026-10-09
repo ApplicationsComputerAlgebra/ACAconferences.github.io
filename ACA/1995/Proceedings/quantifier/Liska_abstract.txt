@@ -1,0 +1,26 @@
+Stability Analysis by Quantifier Elimination
+
+Richard Liska, Stanly Steinberg
+liska@siduri.fjfi.cvut.cz, stanly@crunch.math.unm.edu
+
+
+Abstract
+
+Stability is one of the most important properties of solutions of ordinary
+and partial differential equations and their discrete approximations.
+Generally, stability means that a solution is bounded.  More importantly,
+numerical solutions of a discrete difference equation system are useful
+only if the system is stable.
+
+By using Laplace and Fourier transforms, many important stability properties
+of differential and difference systems can be stated in terms of properties
+of the roots of polynomials, e.g., all roots have negative real part, or all
+roots are inside the unit disk. Checking these properties of polynomials
+are quantifier elimination problems.  As the time complexity of quantifier
+elimination algorithms is extremely high, in the majority of cases, it is
+necessary to preprocess problems i.e. simplify the problems before applying
+the quantifier elimination algorithms. For the preprocessing, we use
+several algorithms including the Routh-Hurwitz criterion, conformal mapping
+polynomial roots sets, and heuristics for polynomial inequalities
+simplification. Our experience in analyzing continuous and discrete problems
+using these algorithms will be presented.

@@ -1,0 +1,229 @@
+<HTML>
+<head>
+  <meta $Jssac: instructions.html,v 1.3 2007/02/27 03:22:55 noriko Exp $>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=euc-jp">
+  <title>講究録用原稿の作成と投稿について</title>
+</head>
+
+<BODY bgcolor="#f0fff0">
+<center>
+<H2>講究録用原稿の作成と投稿について</H2>
+</center>
+<blockquote>
+<hr>
+この注意書きは，
+数理解析研究所で用意した「講究録（原稿）の作成上の注意」に加筆＆修正したものです。
+<hr>
+</blockquote>
+<blockquote>
+<center>
+<hr>
+<H2>お知らせ</H2>
+</center>
+投稿にあたり、以下を記した簡単なレポート（A4で１枚以内）を原稿と
+あわせてお送りください。（すべて自己評価でお願いします。）
+<ol>
+<li>論文のカテゴリー<br>
+投稿する論文をオリジナル研究（速報・ノート・アイデア段階）・
+サーベイ・研究プロポーザル等などに分類し、記入してください。
+完成度も可能であれば記入してください。
+
+<li>オリジナル論文であることの確認<br>
+本論文と同一内容のものが別の論文誌・国際会議に出版も投稿も
+していないことを確認してください。また、本論文を発展させたもの、
+本論文の内容を含むものを論文誌・国際会議等に投稿中もしくは投
+稿予定である場合にはその旨を記入してください。
+
+<li>研究の位置づけと当該分野への貢献度<br>
+研究動向の中で本論文がどのような位置にあり、どのような貢献が
+あるか（可能性も含む）を簡潔に説明してください。
+</ol>
+<hr>
+</blockquote>
+<//blockquote>
+<ol>
+<li>
+<DEL>原稿は別紙の原稿規定に従って作成してください。</DEL><//br>
+ <br>
+原稿は、<A href="ftp://ftp.jssac.org/pub/macros/rims02.sty"><tt>rims02.sty</tt></A>（<tt>ftp://ftp.jssac.org/pub/macros/rims02.sty</tt>）を使って、
+LaTeX（ASCII 日本語 platex）で作成してください。
+<CENTER><TABLE width="80%" border=1 cellpadding=5 bgcolor=#ffffff><TR><TD><tt>
+<tt>\documentclass{jarticle}</tt><br>
+<//br>
+<tt>\usepackage{rims02}</tt><br>
+<tt>\title{原稿のタイトル}</tt><br>
+<tt>\author{<i>著者名</i>\ename{<i>著者名のローマ字表記</i>}%</tt><br>
+［&nbsp;&nbsp; <tt> \thanks{<i>個人毎の謝辞</i>}%</tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;］<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp; \affil{<i>著者の所属</i>}\eaffil{<i>所属のローマ字表記</i>}%</tt><br>
+［&nbsp;&nbsp; <tt>\mail{<i>著者のメールアドレス</i>}%</tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;］<br>
+［&nbsp; <tt>\and</tt> ２番目以降の著者に関する上と同様の記述 &nbsp;］<br>
+<tt>}</tt><br>
+<!----<tt>\date{}</tt><br>---->
+<br>
+<tt>\begin{document}</tt><br>
+<tt>\maketitle</tt><br>
+...<br>
+<br>
+<tt>\end{document}</tt><br>
+</TABLE></CENTER>
+英文のみの原稿とするには、<tt>\usepackage</tt>のオプションを <tt>\usepackage[English]{rims02}</tt> と指定してください。
+<p>
+また、（日本語対応でない）LaTeX を利用する場合は、
+<A href="ftp://ftp.jssac.org/pub/macros/rims02e.sty"><tt>rims02e.sty</tt></A>（<tt>ftp://ftp.jssac.org/pub/macros/rims02e.sty</tt>）を使って（<tt>\usepackage{rime02e}）下さい。
+この場合 <tt>\ename{…}</tt> および <tt>\eaffil{…}</tt> は不要です。
+</p>
+ <p></p>
+やむをえず他の清書システムを使う場合は「<A href="#instructions-j">原稿規定</A>」に従って作成してください。
+  <p></p>
+<li>原稿の枚数は、全体で３００枚以内を標準としていますので、
+<!--一つの講演については約 &nbsp;&nbsp;&nbsp;&nbsp; 枚以内となります。-->
+一つの講演については約 <font color=#f02020>７</font> 枚以内となります。
+  <p></p>
+<li>原稿は和文・欧文のいずれでも結構ですが、Ｂ５版の規格に縮小されますので
+鮮明な原稿にして下さい。
+  <p></p>
+<li><u>講演者（著者）の氏名と所属は、原稿の和文・欧文を問わず、
+漢字とローマ字を必ず併記して下さい。</u>
+  <p></p>
+<!--
+<li>原稿は書き下ろしであることを原則としていますので、学術雑誌等に発表された論文をそのまま代用することは避けてください。
+  <p></p>
+<li>講究録は非公開の出版物ですので、掲載内容を学術雑誌等に発表することは差し支えありません。
+-->
+<li>原稿の形態は、通常の論文（original paper）の他、予報（announcement）、
+既発表論文の要約（resume）、概説（survey article）等でも結構です。
+また、内容的には萌芽的アイデアの紹介、未解決問題の提起、
+意味ありと思われる失敗の報告、理論の背景にある哲学あるいは実験結果、
+将来の展望等、一般の（数理科学の）学術誌への投稿になじまないものも
+（研究代表者が学術的価値ありと判断する限り）歓迎します。
+  <p></p>
+<li><font color=#f02020> 講究録の原稿をそのままの形で他誌に投稿すること、あるいは他誌に発表済または
+投稿中の論文をそのままの形で講究録原稿とすることはお避け下さい。</font>
+  <p></p>
+<li>
+<DEL>
+その他、講究録に関するお問い合わせは、研究代表者または当掛までお申し出下さい。
+<br>
+<u>なお、原稿は各自研究代表者あてに送付願います。</u>
+</DEL>
+<br><br>
+その他、講究録に関するお問い合わせは、<A href="mailto:rims06@jssac.org">研究代表者</A>までお申し出下さい。
+  <p></p>
+
+<li>原稿は電子メールで各自研究代表者宛に送付願います。
+<blockquote>
+<table border=1 bgcolor=#f0f020 cellpadding=5>
+<tr valign="top"><td><b>宛先</b>
+  <td>横山 和弘 (立教大学・理学部）
+      <br><A href="mailto:rims06@jssac.org"><tt>rims06@jssac.org</tt></A>
+<tr valign="top"><td><b>締切</b>
+  <td>２００７年３月１５日（木）
+</table>
+</blockquote>
+<UL>
+<LI>
+LaTeX以外の清書システムで作成された原稿は、印刷物を請求することもあります。
+<LI>
+また、原稿は清書・印刷にあたり修整する場合もあることを、
+あらかじめご承知おきください。
+<LI>
+講究録の内容は、印刷物としての出版のほかに、清書したものをＷＥＢページ上で公開する予定です（PDF やPostScript）。
+公開を希望されない場合は、その旨原稿提出時にお知らせください。
+
+</UL>
+</ol>
+<p><p>
+<!---
+<p align="right">
+京都大学数理解析研究所 &nbsp;&nbsp;<br>共同利用掛 &nbsp;&nbsp;
+<br>Tel. 075-753-7206 &nbsp;&nbsp;
+</p>&nbsp;&nbsp;
+--->
+</p></p>
+<///blockquote>
+</table>
+
+<hr>
+<blockquote>
+<A NAME="instructions-j"></A>
+<TABLE border=1 bgcolor="#ffffff">
+<TR><TH><b><font size=+2>原 稿 規 定（講 究 録）</font></b>
+<TR><TD>
+講究録は原稿をＢ５版に縮小して複写しますので下記のことを厳守して作成して下さい
+<ol>
+<li><DEL>
+和文自筆原稿は、所定の原稿用紙に黒色インクまたは黒ボールペンで書くこと。
+ <br>鉛筆書きは不可です。（原稿用紙が必要な方は共同利用掛に請求下さい。）</DEL>
+  <p></p>
+
+<li>章が改まったときでも、同じ頁に続けて書くこと。
+  <p></p>
+
+<li><DEL>
+和文の字はマス目いっぱいの大きさに、文中の欧文及び数式は２ますに３〜４字詰めて書くこと。
+</DEL>
+  <p></p>
+<li>ワープロを使用される場合は、Ａ４版で 上３cm 下３cm 左２．５cm 右２．５cm
+空けてその範囲内で作成してください。
+<br>両面印刷は避けて下さい。
+  <p></p>
+
+<li><DEL>
+欧文の場合は、Ａ４版タイプ用紙に上記の範囲内で２行おきに６５字程度でタイプ浄書とする。
+</DEL>
+  <p></p>
+
+<li>頁数は、<u>上ではなく必ず下中央に書くこと。</u>
+<br>通し頁数は当研究所で記入します。
+  <p></p>
+  <p></p>
+</ol>
+<center>（例）</center>
+<blockquote>
+２行目：（標題）&nbsp;&nbsp;
+５行目：（所属）（姓名）&nbsp;&nbsp;
+６〜７行目：（所属英語名）
+<br>
+９行目：（本文）
+<br><br>
+<table border=0 width=750>
+<tr><td nowrap>１行目<td>
+<tr><td>２行目<td align=center>（&nbsp; 標 &nbsp; 題 &nbsp; ）
+<tr><td>３行目<td>
+<tr><td>４行目<td>
+<tr><td>５行目<td align=right>京大・数理研 &nbsp; &nbsp; 柏原 &nbsp; 正樹（Masaki Kashiwara）
+<tr><td>６行目<td align=right>Research Institute for Mathematical Sciences,
+<tr><td>７行目<td align=right>Kyoto Univ.
+<tr><td>８行目<td>
+<tr><td>９行目<td>本文
+</blockquote>
+</table>
+</TABLE>
+</blockquote>
+
+
+
+<hr>
+【更新履歴】
+<ul>
+<!--
+<li>日付 by 誰: 概要
+-->
+<li>Feb.27, 2007 by N.Hyodo: お知らせを追加
+<li>Jan.15, 2007 by N.Hyodo: CA-ALIAS'06 用に修正
+<li>Jan.10, 2006 by N.Hyodo: CA-ALIAS'05 用に修正
+<li>Feb.22, 2005 by M.Noro: CA-ALIAS'04 用に修正
+<li>Dec.21, 2003 by M.Noro: CA-ALIAS'03 用に修正
+<li>Dec.10, 2002 by H.Murao: 数研からの最新の配布物の内容に合せる．
+<li>Dec.08, 2002 by H.Murao: 作成
+</ul>
+<hr width="80%" size=3>
+  <A href="/TopPage.html" name="main">Topへ戻る</a>
+<hr>
+  <address>webmaster@jssac.org</address>
+  <address>2007/02/27</address>
+  <pre>
+  Last Modefied $Jssac: instructions.html,v 1.3 2007/02/27 03:22:55 noriko Exp $
+  </pre>
+</BODY>
+</HTML>

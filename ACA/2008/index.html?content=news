@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <link href="styles/master.css" type="text/css" rel="stylesheet" media="all"/>
+   <title>ACA 2008 Applications of Computer Algebra</title>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tbody>
+      <tr>
+        <td class="headerLeft"><a href="/"><img src="./_images/header/schloss21s.jpg" /></a></td>
+        <td width="20px"></td>
+        <td>
+        <table width="100%">
+        <tbody>
+        <tr><td class="headerTitle">Applications of Computer Algebra</td></tr>
+        <tr><td class="headerSub"><a href="/">RISC, Castle of Hagenberg, Austria.</a></td></tr>
+        <tr><td class="headerSub">July 27-30, 2008.</td></tr>
+      	</tbody>
+      	</table>
+        </td>
+      </tr>
+   </tbody>
+ </table>
+
+
+
+<table cellspacing="0" cellpadding="0" class="infobar">
+<tbody><tr><td height=20px></td></tr></tbody></table>
+
+
+<div class="class1">
+	
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspace">
+<tbody>
+<tr>
+<td>
+	
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+
+<td style="width:12px;"></td>          
+<td class="selected">
+	<div>News</div>
+</td>	
+
+<td class="unselected">
+	<div><a href="?content=general">General</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=sessions">Sessions</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=submission">Submission</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=registration">Registration</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=program">Program</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=pictures">Pictures</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=location">Location</a></div>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspaceSub">
+<tbody>
+<tr>
+<td>
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+
+</tr>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table><div id="content">
+<div id="column">
+
+<div class="class2" style="padding-top:10px; padding-bottom:0px; text-indent:0px">
+<h4> Session Schedule</h4><a name="schedule"></a>
+
+The <a href="Schedule.html">session schedule</a> is announced on the <a href="?content=sessions#schedule">session page</a>. 
+
+<h4>Accepted Sessions</h4>
+The first session proposals have already arrived and have been accepted. Find descriptions on the <a href="?content=sessions">session page</a>.
+</div>
+
+<div class="class2" style="padding-top:10px; padding-bottom:0px; text-indent:0px">
+<h4>Session Proposals</h4>
+We accept proposals for special sessions at ACA 2008. Session proposals must be sent to the <a href="?content=general&sub=committees#chairs">conference chairs</a> before June 1, 2008. Information on how to propose sessions is available at the <a href="http://math.unm.edu/aca.html">ACA website</a>.
+</div>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

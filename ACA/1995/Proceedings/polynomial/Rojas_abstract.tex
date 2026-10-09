@@ -1,0 +1,223 @@
+% "Advances in Affine Elimination Theory"
+%  J. Maurice Rojas
+%  rojas@univ-rennes1.fr
+%
+%J. Maurice Rojas
+%IRMAR
+%Campus de Beaulieu
+%35042 Rennes cedex FRANCE
+%rojas@univ-rennes1.fr
+%
+%
+%
+%------LaTeX title and abstract for IMACS submission below-------------------
+\documentstyle{article}
+%\documentstyle[9pt]{article}
+% The default is 10pt, so (due to a LaTeX bug!) if you 
+% want 10pt, do NOT put 10pt within the above brackets!
+\setlength{\topmargin}{-1.5cm}         % margen superior
+\setlength{\textwidth}{16.0 truecm}  % ancho de linea
+\setlength{\textheight}{23 truecm}   % alto del texto
+\setlength{\oddsidemargin}{0cm}     % margen izquierdo
+\setlength{\footheight}{1.0cm}
+
+\newcommand{\mvee}{{\tt MixedVolume}}
+\newcommand{\intnum}{{\tt IntersectionNumber}}
+
+\newtheorem{intno}{\intnum}
+\newtheorem{mv}{\mvee}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conj}{Conjecture}
+\newtheorem{cor}{Corollary}
+\newtheorem{prop}{Proposition}
+\newtheorem{prob}{Problem}
+\newtheorem{main}{Main Theorem}
+\newtheorem{Main}{Main Theorem}
+\newtheorem{alg}{Algorithm}
+\newtheorem{thm}{Theorem}
+\newtheorem{aff}{Affine Point Theorem}
+\newtheorem{curve}{Curve Selection Lemma}
+\newtheorem{rem}{Remark}	
+\newtheorem{rems}{Remarks}
+\newtheorem{ex}{Example}
+\newtheorem{dfn}{Definition}
+\renewcommand{\theaff}{\Roman{aff}}
+
+\newcommand{\mod}{\mbox{mod }}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\cA}{{\cal A}}
+\newcommand{\cD}{{\cal D}}
+\newcommand{\cE}{{\cal E}}
+\newcommand{\cH}{{\cal H}}
+\newcommand{\cK}{{\cal K}}
+\newcommand{\cO}{{\cal O}}
+\newcommand{\cR}{{\cal R}}
+\newcommand{\cS}{{\cal S}}
+\newcommand{\cI}{{\cal I}}
+\newcommand{\cN}{{\cal N}}
+\newcommand{\cP}{{\cal P}}
+\newcommand{\cV}{{\cal V}}
+\newcommand{\ch}{\mbox{char }}
+\newcommand{\V}{{\rm Vol}}
+\newcommand{\Le}{\mbox{Length}}
+\newcommand{\ord}{{\rm ord}}
+\newcommand{\area}{\mbox{Area}}
+\newcommand{\spec}{{\rm Spec}}
+\newcommand{\divisor}{{\rm Div}}
+\newcommand{\codim}{{\rm codim}}
+\newcommand{\supp}{{\rm Supp}}
+\newcommand{\conv}{{\rm Conv}}
+\newcommand{\verte}{{\rm Vert}}
+\newcommand{\hyp}{{\rm Hyper}}
+\newcommand{\lin}{{\rm Lin}}
+\newcommand{\cone}{\mbox{Cone}}
+\newcommand{\shad}{\mbox{Shad}}
+\newcommand{\equator}{\mbox{Eq}}
+\newcommand{\lune}{\mbox{Lune}}
+\newcommand{\res}{\mbox{Res}}
+\newcommand{\sym}{\mbox{Sym}}
+\newcommand{\newt}{\mbox{Newt}}
+\newcommand{\thth}{^{\mbox{\scriptsize \underline{th}}}}
+\newcommand{\st}{^{\mbox{\scriptsize \underline{st}}}}
+\newcommand{\nd}{^{\mbox{\scriptsize \underline{nd}}}}
+\newcommand{\wf}{\widehat{f}}
+
+
+\makeatletter
+\def\Pro{\mathchoice{{\setbox0=\hbox{\rm I}\copy0\kern-0.55\wd0\rm P}}{%
+  {\setbox0=\hbox{\rm I}\copy0\kern-0.55\wd0\rm P}}{%
+  {\setbox0=\hbox{$\m@th\scriptstyle\rm I$}\copy0\kern-0.5\wd0%
+  \scriptstyle\rm P}}{%
+  {\setbox0=\hbox{$\m@th\scriptscriptstyle\rm I$}\copy0\kern-0.6\wd0%
+  \scriptscriptstyle\rm P}}}
+\def\R{\mathchoice{{\setbox0=\hbox{\rm I}\copy0\kern-0.55\wd0\rm R}}{%
+  {\setbox0=\hbox{\rm I}\copy0\kern-0.55\wd0\rm R}}{%
+  {\setbox0=\hbox{$\m@th\scriptstyle\rm I$}\copy0\kern-0.5\wd0%
+  \scriptstyle\rm R}}{%
+  {\setbox0=\hbox{$\m@th\scriptscriptstyle\rm I$}\copy0\kern-0.6\wd0%
+  \scriptscriptstyle\rm R}}}
+\def\L{\mathchoice{{\setbox0=\hbox{\rm I}\copy0\kern-0.55\wd0\rm L}}{%
+  {\setbox0=\hbox{\rm I}\copy0\kern-0.55\wd0\rm L}}{%
+  {\setbox0=\hbox{$\m@th\scriptstyle\rm I$}\copy0\kern-0.5\wd0%
+  \scriptstyle\rm L}}{%
+  {\setbox0=\hbox{$\m@th\scriptscriptstyle\rm I$}\copy0\kern-0.6\wd0%
+  \scriptscriptstyle\rm L}}}
+\def\U{\mathchoice{{\setbox0=\hbox{\rm I}\copy0\kern-0.55\wd0\rm U}}{%
+  {\setbox0=\hbox{\rm I}\copy0\kern-0.55\wd0\rm U}}{%
+  {\setbox0=\hbox{$\m@th\scriptstyle\rm I$}\copy0\kern-0.5\wd0%
+  \scriptstyle\rm U}}{%
+  {\setbox0=\hbox{$\m@th\scriptscriptstyle\rm I$}\copy0\kern-0.6\wd0%
+  \scriptscriptstyle\rm U}}}
+\def\F{\mathchoice{{\setbox0=\hbox{\rm I}\copy0\kern-0.55\wd0\rm F}}{%
+  {\setbox0=\hbox{\rm I}\copy0\kern-0.55\wd0\rm F}}{%
+  {\setbox0=\hbox{$\m@th\scriptstyle\rm I$}\copy0\kern-0.5\wd0%
+  \scriptstyle\rm F}}{%
+  {\setbox0=\hbox{$\m@th\scriptscriptstyle\rm I$}\copy0\kern-0.6\wd0%
+  \scriptscriptstyle\rm F}}}
+\def\N{\mathchoice{{\setbox0=\hbox{\rm I}\copy0\kern-0.55\wd0\rm N}}{%
+  {\setbox0=\hbox{\rm I}\copy0\kern-0.55\wd0\rm N}}{%
+  {\setbox0=\hbox{$\m@th\scriptstyle\rm I$}\copy0\kern-0.5\wd0%
+  \scriptstyle\rm N}}{%
+  {\setbox0=\hbox{$\m@th\scriptscriptstyle\rm I$}\copy0\kern-0.6\wd0%
+  \scriptscriptstyle\rm N}}}
+\def\Z{\mathchoice{{\setbox0=\hbox{\rm Z}\copy0\kern-0.5\wd0\box0}}{%
+  {\setbox0=\hbox{\rm Z}\copy0\kern-0.5\wd0\box0}}{%
+  {\setbox0=\hbox{$\m@th\scriptstyle\rm Z$}\copy0\kern-0.55\wd0\box0}}{%
+  {\setbox0=\hbox{$\m@th\scriptscriptstyle\rm Z$}\copy0\kern-0.6\wd0\box0}}}
+\def\Q{\mathchoice{{\setbox0=\hbox{\rm Q}\kern0.2\wd0 0\kern-0.9\wd0\box0}}{%
+  {\setbox0=\hbox{\rm Q}\kern0.2\wd0 0\kern-0.9\wd0\box0}}{%
+  {\setbox0=\hbox{$\m@th\scriptstyle\rm Q$}\kern0.2\wd0 0\kern-0.9\wd0\box0}}{%
+  {\setbox0=\hbox{$\m@th\scriptscriptstyle\rm Q$}\kern0.2\wd0 0%
+  \kern-0.9\wd0\box0}}}
+\def\C{\mathchoice{{\setbox0=\hbox{\rm C}\kern0.4\wd0%
+  {\vrule height0.9\ht0depth1.1\dp0}\kern-0.4\wd0\box0}}{%
+  {\setbox0=\hbox{\rm C}\kern0.4\wd0%
+  {\vrule height0.9\ht0depth1.1\dp0}\kern-0.4\wd0\box0}}{%
+  {\setbox0=\hbox{$\m@th\scriptstyle\rm C$}\kern0.4\wd0%
+  {\vrule height0.9\ht0depth1.1\dp0}\kern-0.4\wd0\box0}}{%
+  {\setbox0=\hbox{$\m@th\scriptscriptstyle\rm C$}\kern0.4\wd0%
+  {\vrule height0.9\ht0depth1.1\dp0}\kern-0.4\wd0\box0}}}
+\makeatother
+\newcommand{\Sn}{{\cal S}^{n-1}}
+\newcommand{\Zn}{\Z^n}
+\newcommand{\Qn}{\Q^n}
+\newcommand{\Rn}{\R^n}
+\newcommand{\sln}{{\bf S}{\bf L}_n}
+\newcommand{\slnr}{\sln(\R)}
+\newcommand{\Cn}{\C^n}
+\newcommand{\Cs}{\C^*}
+\newcommand{\Ks}{K^*}
+\newcommand{\Kn}{K^n}
+\newcommand{\Knh}{\Kn \! \setminus \! \cH}
+\newcommand{\Kni}{\Kn\!\setminus\!\hyp(I)} 
+\newcommand{\Rsn}{{(\R^*)}^n}
+\newcommand{\Csn}{{(\C^*)}^n}
+\newcommand{\Ksn}{{(K^*)}^n}
+\newcommand{\Krn}{(K^*)^r \! \times \! K^{n-r}}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cM}{{\cal M}}
+\newcommand{\cSM}{{\cal SM}}
+\newcommand{\cQ}{{\cal Q}}
+\newcommand{\cC}{{\cal C}}
+\newcommand{\cF}{{\cal F}}
+\newcommand{\tF}{\widetilde{F}}
+\newcommand{\cT}{{\cal T}}
+\newcommand{\bO}{{\bf O}}
+\newcommand{\qed}{\rule{1.5ex}{1.5ex}}
+
+%%% \renewcommand{\baselinestretch}{3}
+
+\begin{document}
+\newcommand{\levela}{section }
+\newcommand{\levelap}{section. }
+\newcommand{\levelsa}{sections }
+\newcommand{\Levela}{Section }
+\newcommand{\Levelsa}{Sections }
+
+\title{Advances in Affine Elimination Theory\\ (draft)} 
+\author{J. Maurice Rojas$^1$}\footnotetext[1]{This research was
+completed at IRMAR, Rennes and was funded by a Chateaubriand fellowship.}
+\date{\today}
+\maketitle
+\begin{center}
+IRMAR\\
+Campus de Beaulieu\\
+35042 Rennes cedex\\
+France\\
+{\tt e-mail: rojas@univ-rennes1.fr}
+\mbox{}\\
+\mbox{}\\
+\end{center}
+
+\noindent
+{\bf Keywords:}\/ Mixed volume, exact root count, affine, orbit, isolated, 
+upper bound, sparse, polynomial system, resultant, complexity, generic, 
+homotopy, toric variety. 
+
+\begin{abstract}
+Let $K$ be an algebraically closed field of arbitrary characteristic. We 
+consider the problem of computing intersection numbers of complete 
+intersections in certain subsets of $K^n$. In more practical terms, part of 
+our work gives the tightest possible upper bounds on the number of complex 
+isolated roots of a polynomial system, given only which monomial terms appear. 
+Furthermore, we obtain tight upper bounds on the number of isolated roots 
+which can lie in a given coordinate subspace. 
+
+Our results refine and unify the classical B\'ezout 
+theorems and the more recent mixed volume root counts of the Soviet school of 
+Bernshtein, Khovanskii, and Kushnirenko. In particular, the higher dimensional 
+and multihomogeneous B\'ezout theorems follow as special cases of our results, 
+and the mixed volume root counts receive a definitive generalization to 
+affine space. We also reformulate and extend some of the prior combinatorial 
+results of the author on which subsets of coefficients must be chosen 
+generically for our bounds to be exact. 
+ 
+Our methods are based on viewing the problem of root counting within a certain 
+naturally defined toric variety, as opposed to the traditional view of working 
+within projective space. We also describe the practical impact of our results 
+on recent polyhedral methods for solving polynomial systems. Sparse resultant 
+methods and homotopy methods both benefit from our results, and we 
+propose a new ``affine'' resultant. 
+\end{abstract}
+
+\end{document}

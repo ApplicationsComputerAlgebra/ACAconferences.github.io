@@ -1,0 +1,13 @@
+Tomas Recio:
+
+The Euclidean Drawing Tools and the Computer
+
+The talk's goal is to analyse the conceptual implications for math education 
+that arise from the use of computers in two concrete situations:
+
+1) As a tool for geometric reasoning (automatic theorem proving)
+
+2) As a replacement for ruler and compass, the paradigmatic scientific tools 
+of school (computational geometry). The underlying thesis is that popular 
+dynamic geometry programs such as Cabri are far from fulfilling the conceptual
+requirements of the 21st century elementary geometry education.

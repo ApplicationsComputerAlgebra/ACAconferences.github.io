@@ -1,0 +1,30 @@
+Assessing the Use of CAS Technology in Secondary Schools
+
+|AUTHOR:                               |CO-AUTHOR:                    |
+|Karsten Schmidt                       |Wolfgang Moldenhauer          |
+|Faculty of Management Science &       |Thuringian Institute for      |
+|Economics                             |In-service Teacher Training,  |
+|University of Applied Sciences (FH)   |Curriculum Development and    |
+|                                      |Media (ThILLM)                |
+|98574 Schmalkalden                    |99438 Bad Berka               |
+|Germany                               |Germany                       |
+
+In 2003 a project on the effects of using the TI-89 in math education in 8
+upper secondary schools in the German state of Thuringia was completed.  Since
+assessment results showed that its effect on the students' math knowledge was
+slightly positive for most cohorts, and never negative, the authorities
+decided to move forward and allow all schools to decide if they should make the
+use of pocket calculators with a built-in Computer Algebra System (such as the
+TI-89) in math education compulsory.
+
+Meanwhile, more than 25 (of about 100) upper secondary schools opted for the
+use of such calculators, as from grade 10 in most cases.  Starting in 2000, a
+test was carried out every year in November with all grade 11 students from
+schools using the TI-89, and all grade 11 students from selected control
+schools.  Naturally, the use of any electronic calculator was not permitted in
+these tests. This presentation investigates the effects of the use of CAS
+technology on the students' performance.  Overall assessment results from the
+project as well as from recent years are investigated.  It will also be
+analyzed if there are certain mathematical topics where students who had been
+using pocket calculators with built-in CAS tend to be particularly successful
+compared with students from control schools.

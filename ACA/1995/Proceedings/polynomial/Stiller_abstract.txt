@@ -1,0 +1,29 @@
+ "Geometry and Polynomial Systems - Theory and  Application"
+  Peter F. Stiller
+  stiller@alggeo.math.tamu.edu
+
+
+Dr. Peter F. Stiller
+Professor of Mathematics and Computer Science and
+Assistant Director of the Institute for Scientific Computation
+Texas A&M University
+College Station, TX   77843-3368  USA
+stiller@alggeo.math.tamu.edu
+
+
+
+We discuss some general geometric aspects of polynomial systems and  
+their solution by computer algebra systems.  This includes a  
+discussion of certain anomalies that can be introduced when solving  
+certain systems.  If time permits, we will also discuss some  
+applications of computer algebra to solving systems that arise in  
+dexterous manipulation planning problems in robotics and in the  
+problem of indexing geometric databases for content-based retrieval  
+(for example image databases.)  In the first case, the polynomial  
+systems characterize the so-called contact formation cells of a  
+manipulator system.  These are constraint varieties in configuration  
+space that reflect a particular type of grasp.  In the second case,  
+we are concerned with generating the equations that define the  
+correspondence (in the sense of algebraic geometry) between the  
+geometric invariants of certain features of a set of objects and the  
+invariants of the images of those features.  

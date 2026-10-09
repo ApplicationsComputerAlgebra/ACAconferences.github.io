@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Constructing Some Classes of Specialized Numerical O.D.E. Integrators by Means of Computer Algebra Systems </TITLE>
+<META NAME="description" CONTENT="Constructing Some Classes of Specialized Numerical O.D.E. Integrators by Means of Computer Algebra Systems ">
+<META NAME="keywords" CONTENT="KIRSANOV">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="KIRSANOV.css">
+</HEAD>
+<BODY bgcolor=white>
+<H1 ALIGN="CENTER"> 
+Constructing Some Classes of Specialized
+<BR>
+Numerical O.D.E. Integrators by Means of
+<BR>
+Computer Algebra Systems
+</H1>
+<P ALIGN="CENTER"><STRONG>Nikolay O. Kirsanov, Nikolay N. Vassiliev
+<BR> 
+<EM>Institute for Theoretical Astronomy of RAS
+<BR> 
+<EM>St. Petersburg, Russia</EM></EM></STRONG></P>
+<P ALIGN="CENTER"></P>
+<P ALIGN="LEFT"></P>
+
+<B>Extended Abstract</B>
+
+We consider the methods for numerical integration of O.D.E. as the methods for 
+approximation of shift map along trajectories of these O.D.E. From
+this point of view we can study such approximation maps by numerical and
+analytical means.
+
+Highly developed computer algebra systems allow us to construct
+the one-step maps for the defined numerical methods and for
+the defined systems of O.D.E. purely in analytical mode.
+Taking into account all specific features of
+the given O.D.E. we can in many cases use additional possibilities.
+
+A simple approach to one-step high-order method construction lies in the
+Taylor's development of the solution into a power series. We considered
+([3, 4]) alike method [1, 2] for solving the system 
+<!-- MATH: $\vec y
+(\vec x) = \vec f (\vec x, \vec y (\vec x))$ -->
+<IMG
+ WIDTH="135" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\vec y
+(\vec x) = \vec f (\vec x, \vec y (\vec x))$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\vec y_{k+1} = \vec y_k +
+\sum^p_{j=1} h^j {{D^j (y)} \over {j!}}
+
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="185" HEIGHT="59"
+ SRC="img2.gif"
+ ALT="\begin{displaymath}\vec y_{k+1} = \vec y_k +
+\sum^p_{j=1} h^j {{D^j (y)} \over {j!}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where <I>y</I> is the solution (we assume that <I>f</I> is analytical),
+<I>h</I> is a step, <I>D</I> is
+a differential operator along the trajectories of the system.
+When <I>p</I> = 1 this
+method is simply the Euler's method and one may see easily that
+such a method has the order <I>p</I>, i. e. it has the global method
+error <I>o</I>(<I>h</I><SUP><I>p</I></SUP>). Note that the higher
+derivatives of the solution one may determine from the system itself.
+
+The simplicity of constructing the method allowed us to build a Reduce
+program with a rather comfortable interface, giving opportunities
+to straight-forward input of the equation and initial data within
+the frames of an interactive session. The behavior of the integrator
+at respect of its parameters were easily
+investigated online and compared with the 'hand-made'
+<EM>Fortran</EM> integrators of [2] (ours won).
+
+Usually the complexity of a method (and, in particular, of the method (1))
+grows when the method order grows. For our case it is apparent from the
+formula (1), because the method is a polynomial with the power <I>p</I> with
+respect of <I>h</I> and it takes into account all the derivatives of the
+right-hand parts up to the power <I>p</I>.
+
+But when we put into (1) analytical right-hand parts and the numerical
+value of <I>h</I>, we can see that there exists a class of O.D.E. systems such
+that the one-step map for a method of the <I>p</I>-th order is not more complex
+than this
+for the first order. For example, all the linear systems of O.D.E.
+belong to this
+class - it is known that precise solutions of these satisfy the formula:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+y(t + h) = M(h,t)\, y(t)
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="170" HEIGHT="31"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}y(t + h) = M(h,t)\, y(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where <I>M</I> is some matrix, depending on the integration step. If we use the
+formula (2) for the linear equation 
+<!-- MATH: $\dot y = A y$ -->
+<IMG
+ WIDTH="59" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\dot y = A y$">,
+we'll obtain a sequence
+of difference formulae like:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+y(t+h) = M_p(h,t)\, y(t)
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="175" HEIGHT="32"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}y(t+h) = M_p(h,t)\, y(t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where <I>p</I> is the power of the method. When 
+<!-- MATH: $p \rightarrow \infty$ -->
+<IMG
+ WIDTH="58" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$p \rightarrow \infty$">,
+we obtain 
+<!-- MATH: $M_p(h, t) \rightarrow M(h, t)$ -->
+<IMG
+ WIDTH="150" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$M_p(h, t) \rightarrow M(h, t)$">.
+
+Using the explicit formula for one step map for a Taylor-like integrator for
+solving non-linear Henon-Heiles equations [4] one could have the simple
+formula for total degree of the components of this map:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\deg M_n \le n + 1,
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="123" HEIGHT="30"
+ SRC="img8.gif"
+ ALT="\begin{displaymath}\deg M_n \le n + 1,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+which means that for the Taylor-like integrator of order <I>n</I>
+the total degree of
+the components of the method's one-step map is equal or less than
+<I>n</I> + 1. This
+is obviously better than in the case of non-specialized methods.
+
+The specializing methods obviously have not to be linked with Taylor-like
+methods, but it seems useful to keep the 'recursiveness' of constructing the
+method. This can greatly help us to construct integrators for specialized
+classes of O.D.E., e. g. this approach can be used to construct symplectic
+integrators for Hamiltonian systems.
+
+Our formulae thus can be used for an estimation of complexity of
+evaluation of
+the one-step map for a given Hamiltonian and consequently for the
+estimation of the effectiveness of the procedure of the numerical
+integration.
+
+<B>References</B>
+<DL COMPACT>
+<DT>1.
+<DD>Ortega J. M., Poole W. G., Jr. An Introduction to Numerical Methods for
+Differential Equations. - Pitman Publishing Inc., 1981.
+<DT>2.
+<DD>Roberts C. E., Jr. Ordinary differential Equations. A Computational Approach. -
+Englewood Cliff's, N.Y.: Prentice-Hall Inc., 1979.
+
+<DT>3.
+<DD>Vassiliev N. N., Kirsanov N. O. Producing the High Power One-Step Methods in
+Analytical Form to Integrate Asteroid Motions // Asteroid Hassard-95: Abstracts 
+of the Conference. 
+(S.Petersburg,, 23-25 May 1995). ITA RAS publishing, edited by A.G.Sokolsky,
+<B>1</B>, (1995), pp. 20 - 22. 
+
+<DT>4.
+<DD>Vassiliev N. N., Kirsanov N. O. Producing the High Power One-Step Methods in
+Analytical Form to Integrate Henon-Heiles Equations // Structure and Evolution
+of Stellar Systems: Proc. of the Conference. Petrozavodsk, August 13-17, 1995. -
+St. Petersburg, (1997), pp. 4l-44.
+</DL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

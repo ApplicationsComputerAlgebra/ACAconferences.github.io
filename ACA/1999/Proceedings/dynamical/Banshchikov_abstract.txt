@@ -1,0 +1,20 @@
+SOLVING THE PROBLEM OF STABILIZATION OF A GYROSCOPIC SYSTEM WITH THE HELP
+                  OF COMPUTER ALGEBRA.
+     A.V. Banshchikov, L.A. Bourlakova, V.D. Irtegov
+    (Institute of Systems Dynamics and Control Theory SB RAS
+        134, Lermontov St., Irkutsk, 664033, Russia
+            E-mail : irteg@icc.ru )
+
+There is a classic problem of stabilization of a potential system with
+even order of instability by gyroscopic forces. Such systems are critical
+in Lyapunov sense, thus we use second method of stability theory.
+Important subproblem is obtaining sufficient conditions of stabilization
+which are close to necessary conditions.
+In the report we discuss (i) methods of constructing effective Lyapunov
+functions, (ii) problems of investigation of sign-definitiveness of the
+forms, (iii) parametric analysis of conditions of stabilization,
+(iv) influence of nonlinear forces.  Algorithms use abilities of
+computer algebra.  Report contains examples.
+
+Keywords:  Lyapunov functions, potential systems, gyroscopic forces,
+second method of stability theory, computer algebra.

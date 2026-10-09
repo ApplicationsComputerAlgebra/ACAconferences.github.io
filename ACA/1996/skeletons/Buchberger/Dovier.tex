@@ -1,0 +1,101 @@
+\begin{center}
+\LARGE
+Automated deduction scheme 
+
+\end{center}
+
+\begin{center}
+\Large
+Agostino Dovier, Andrea Formisano, Alberto Policriti
+
+\end{center}
+
+\noindent
+Date: July 17th (Wednesday)\\
+Time:  10:45-11:10\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+In this research we discuss the problem of integrating domain-specific
+knowledge within a general framework for theorem proving. Our starting
+point is {\bf T-resolution} [Policriti and Schwartz, 1996], that
+parametrically generalizes standard resolution with respect to a
+theory T (the parameter). T-resolution was introduced to provide a
+general theorem-proving framework in which the power of the basic
+inference rule can grow with the underlying theory T; another
+motivation was to establish criteria to classify first-order theories
+with respect to their suitability for theorem proving. In the
+framework obtained the tedious details of a proof are hidden inside
+the manager of the theory.  Being binary, the T-resolution inference
+rule is simpler than the previously proposed (n-ary) {\bf theory-resolution}
+rule [Stickel, 1985] and more suitable for integration with
+refinements already proposed for (classical) resolution. Moreover, the
+T-resolution rule ensures a complete independence between the
+background level (the T-decider) of the T-theorem prover and its
+foreground reasoner. This could not be the case for theory-resolution,
+where the background reasoner plays an active role in the inference
+steps (residues generation [Stickel, 1985]).  The intrinsic
+non-determinism of T-resolution rule (as well as for
+theory-resolution) would reflect in a potential inefficiency of the
+implementation of a T-theorem prover. However, provided the theory T
+fulfills some simple and uniform requirements (i.e., ground
+decidability), strong-linearity constraints on the resolution tree can
+be imposed, without affecting completeness [Formisano and Policriti,
+1995].  As a matter of fact, linearity is one of the most important
+refinements of resolution strictly linked with the ability to
+integrate domain-specific knowledge and inferential engines. The
+Constraint Logic Programming scheme proposed as a framework to
+integrate efficient constraint solver in the Logic Programming
+paradigm, is in fact another of our starting points.
+
+We show that {\bf CLP(X)} scheme [Jaffar and Lassez, 1986; Jaffar and Maher,
+1994] can be easily embedded inside {\bf linear} T-resolution. In a certain
+sense, CLP(X) stands to Horn-clause programming as T-resolution stands
+to standard resolution.  Extensions of the CLP(X)-scheme using the
+T-resolution inference rule allow to operate beyond equality and its
+drawbacks. For instance it is possible to define/characterize
+particular objects with respect to T, i.e. specify the T-properties of
+(newly introduced) entities.
+
+In this work we will discuss the basics of T-resolution and its
+refinements, as well as its ability to encode the CLP(X) scheme.
+Moreover, we present some results to be used in order to classify
+theories with respect to their suitability for a use within the
+T-resolution scheme.
+
+\bigskip
+\noindent
+{\bf References}
+
+\begin{itemize}
+
+\item
+
+[Formisano, A., and Policriti, A, 1995] T-resolution: Refinements and Model Elimination.
+    Research Report 32/95, Dip. di Matematica e Informatica, Univ. di Udine, 1995. 
+
+\item
+
+[Jaffar, J., and Lassez, J.-L., 1986] Constraint Logic Programming. Tech. rep., Department
+    of Computer Science, Monash University, June 1986. 
+
+\item
+
+[Jaffar, J., and Maher, M. J., 1994] Constraint Logic Programming: A Survey. The Journal of
+    Logic Programming 19-20 (1994), 503-581. 
+
+\item
+
+[Policriti, A., and Schwartz, J. T., 1996] T-theorem proving I. Journal of Symbolic
+    Computation (1996). To appear. 
+
+\item
+
+[Stickel, M. E., 1985] Automated deduction by theory resolution. Journal of Automated
+    Reasoning I (1985). 
+
+\end{itemize}
+

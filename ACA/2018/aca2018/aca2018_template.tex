@@ -1,0 +1,134 @@
+% Abstrat of your communication to the
+% ACA2018 Conference (Santiago de Compostela, 2018).
+% You must use LaTeX format.
+
+
+%====================================================
+% IMPORTANT: DO NOT MODIFY THE FOLLOWING LINES
+%====================================================
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsthm,amsmath, amsfonts, latexsym}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{times}
+
+\setlength{\oddsidemargin}{1.46cm}
+\setlength{\textwidth}{13cm}
+\setlength{\topmargin}{0.0cm}
+\setlength{\textheight}{20.5cm}
+
+\makeatletter
+\newcommand{\TITLE}[2][]{
+  \begin{center} \Large \bfseries #2%
+  \def\@temp{#1}\ifx\@temp\@empty\relax\else\footnote{#1}\fi\end{center}}
+
+\newcommand{\AUTHOR}[2][]{\textbf{#2}%
+  \def\@temp{#1}\ifx\@temp\@empty\relax\else\textsuperscript{#1}\fi}
+
+\newcommand{\ADDRESS}[2]{\noindent
+  \textsuperscript{#1}\parbox[t]{0.9\textwidth}{#2} \vspace{6pt}}
+
+\makeatother
+
+\newcommand{\KEYWORDS}[1]{\paragraph{Keywords:} #1}
+%\newcommand{\MSCLASSIFICATION}[1]{\paragraph{Mathematics Subject Classification 2010:} #1}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{0}
+\pagestyle{empty}
+
+\newcommand{\HEADING}{
+{\noindent \small Applications of Computer Algebra -- ACA2018 \\
+Santiago de Compostela, June 18--22, 2018} \vspace{10pt}}
+
+%===============================================
+% DO NOT MODIFY THE ABOVE LINES
+%===============================================
+
+\begin{document}
+
+\HEADING
+
+
+\TITLE{Write here the title of your communication}
+
+% If you need to thank someone next to the title, please use the next line (and delete the previous one)
+
+% \TITLE[thanks]{Title of talk}
+
+% Write the author names in the order you wish them to appear
+% and underline the one who will give the talk.
+% Identify each one of them with a number
+% in order to give their own affiliations later on. 
+
+\begin{center}
+ \AUTHOR[1]{\underline{First Author}}, % the author who will give the talk
+ \AUTHOR[2]{Second Author}
+% IF two or more authors have the same affiliation, associate to them the same number.
+% For instance, if there are three authors and the first a the second ones have the same affiliation,
+% write as follows:
+% \AUTHOR[1]{Third Author}
+\end{center}
+
+
+% Write now the abstract of your communication. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam. Ut enim ad minim veniam, quis nostrud exerc. Irure dolor in reprehend incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse molestaie cillum. Tia non ob ea soluad incom dereud facilis est er expedit distinct. Nam liber te conscient to factor tum poen legum odioque civiuda et tam. Neque pecun modut est neque nonor et imper ned libidig met, consectetur adipiscing elit, sed ut labore et dolore magna aliquam is nostrud exercitation ullam mmodo consequet. Duis aute in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+
+
+% Write the keywords separated by commas
+
+\KEYWORDS {Keyword1, Keyword2, Keyword3}
+
+% Write the MSC2010 codes corresponding to your communication
+
+%\MSCLASSIFICATION{Code1, Code2}
+
+
+
+% Next include the references you need. 
+% If your abstract includes no references at all, please delete all the lines
+% from \begin{thebibliography} to \end{thebibliography}.
+
+% Please, do not use more than 9 references.
+
+\begin{thebibliography}{9}
+
+  % Model for references to books.
+  \bibitem{label1} \textsc{A. Uthor1; A. Uthor2}, \emph{Title}.
+    Editorial, City, year of publication.
+
+ %  Model for references to articles
+  \bibitem{label2} \textsc{A. Uthor}, Title.
+  \emph{Journal} \textbf{volumen}(number), first page--last page  (year of publication).
+
+  %  Model for references to proceedings. 
+  \bibitem{label3} \textsc{A. Uthor}, Title.
+  In \emph{Title of the proccedings}, names of the editors (eds.),
+   first page--last page. Editorial, City, year of publication.
+
+\end{thebibliography}
+
+\vspace{1cm}
+
+% Full Affiliation of all authors
+\ADDRESS{1}{
+Department1  \\University1 \\
+Posta Address1 \\
+\texttt{e@mail1}
+}
+
+\vspace{.5cm}
+
+\ADDRESS{2}{
+Department1  \\University1 \\
+Posta Address1 \\
+\texttt{e@mail1}
+}
+
+
+\end{document}

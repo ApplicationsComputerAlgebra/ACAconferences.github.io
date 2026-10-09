@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Architecture of the algebraic under constraint solver</TITLE>
+<META NAME="description" CONTENT="Architecture of the algebraic under constraint solver">
+<META NAME="keywords" CONTENT="sawada">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sawada.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html82"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html80"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html74"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html83"
+ HREF="node6.html">Symbolic part</A>
+<B> Up:</B> <A NAME="tex2html81"
+ HREF="node2.html">Algebraic under constraint solver</A>
+<B> Previous:</B> <A NAME="tex2html75"
+ HREF="node4.html">Provided facilities</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00023000000000000000">&#160;</A>
+<A NAME="subsec:architecture">&#160;</A>
+<BR>
+Architecture of the algebraic under constraint solver
+</H2>
+The algebraic under constraint solver consists of two parts: the symbolic part and the numeric part.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig:architecture">&#160;</A><A NAME="30">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 1:</STRONG>
+Architecture of the algebraic under constraint solver</CAPTION>
+<TR><TD><IMG
+ WIDTH="351" HEIGHT="137"
+ SRC="img3.gif"
+ ALT="\begin{figure}
+\begin{center}
+\ \epsfbox{sawada-1.eps}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+Figure&nbsp;<A HREF="node5.html#fig:architecture">1</A> shows the architecture of the algebraic under constraint solver. The constraint set is firstly received by the symbolic part. In the symbolic part, a reduction tree is constructed and the following operations are conducted:
+<DL COMPACT>
+<DT>1.
+<DD>Detecting constraints inconsistent with each other;
+<DT>2.
+<DD>Obtaining new constraints.
+</DL>If inconsistency is found or a new constraint is obtained, it is immediately reported to the designer. Otherwise, the constraint set is sent to the numeric part. In the numeric part, several numerical solutions are computed by making the under constrained problem result in the constraint satisfaction minimizing problem. If there exists no solution, an empty set is returned. In Section&nbsp;<A HREF="node6.html#subsec:symbolic">2.4</A> and <A HREF="node9.html#subsec:numeric">2.5</A>, algorithms used in the numeric part and symbolic part are described. 
+
+<P>
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

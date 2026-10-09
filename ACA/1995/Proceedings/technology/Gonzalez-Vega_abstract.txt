@@ -1,0 +1,14 @@
+Laureano G. Vega, Dept. Mathematics, Unican, Spain (gvega@matsun1.unican.es)
+
+Title:  Mixing Symbolic and Numeric Strategies to Solve the
+        Inverse Kinematics Problem in Robotics.
+
+
+Abstract:   The resolution of the Inverse Kinematics Problem in Robotics 
+            is usually reduced to the computation of the real solutions for 
+            the polynomial system of equations relating the coordinates of 
+            the point to be reached and the internal parameters of the robot.
+            The main objective of this talk is the showing that the mixture of
+            numerical techniques (eigenvalue computations, for example) and
+            symbolic methods (Grobner Basis, for example) leads to a very
+            efficient solution of this problem for some particular robots.

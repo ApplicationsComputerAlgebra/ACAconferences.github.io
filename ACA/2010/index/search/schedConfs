@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Browse Title Index</title>
+	<meta name="description" content="Applicatios of Computer Algebra, University of Vlora June 24-27, 2010" />
+	<meta name="keywords" content="computer algebra; vlora" />
+	<meta name="generator" content="Open Conference Systems 2.1.1.2" />
+	
+
+	<link rel="stylesheet" href="http://aca2010.info/styles/common.css" type="text/css" />
+
+	
+	
+	<link rel="stylesheet" href="http://aca2010.info/styles/sidebar.css" type="text/css" />	<link rel="stylesheet" href="http://aca2010.info/styles/leftSidebar.css" type="text/css" />	<link rel="stylesheet" href="http://aca2010.info/styles/rightSidebar.css" type="text/css" />	<link rel="stylesheet" href="http://aca2010.info/styles/bothSidebars.css" type="text/css" />
+			<link rel="stylesheet" href="http://aca2010.info/plugins/themes/classicNavy/classicNavy.css" type="text/css" />
+	
+	<script type="text/javascript" src="http://aca2010.info/js/general.js"></script>
+	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript" src="http://aca2010.info/js/sizer.js" ></script>
+
+	<!-- Add stylesheets for the font sizer -->
+	<link rel="alternate stylesheet" title="Small" href="http://aca2010.info/styles/fontSmall.css" type="text/css" />
+	<link rel="stylesheet" title="Medium" href="http://aca2010.info/styles/fontMedium.css" type="text/css" />
+	<link rel="alternate stylesheet" title="Large" href="http://aca2010.info/styles/fontLarge.css" type="text/css" />
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+<div id="headerTitle">
+<h1>
+	<img src="http://aca2010.info/public/conferences/1/pageHeaderLogoImage_en_US.jpg" width="186" height="186" alt="UV logo" />
+	ACA 2010, Vlora, Albania,  June 24-27, 2010
+</h1>
+</div>
+</div>
+
+<div id="body">
+
+	<div id="sidebar">
+					<div id="leftSidebar">
+				<div class="block" id="sidebarInformation">
+	<span class="blockTitle">Information</span>
+	<ul>
+		<li><a href="../information/readers">For Readers</a></li>		<li><a href="../information/presenters">For Authors</a></li>	</ul>
+</div>
+<div class="block" id="sidebarUser">
+	<span class="blockTitle">User</span>
+		<form method="post" action="http://aca2010.info/index.php/aca2010/index/login/signIn">
+	<table>
+	<tr>
+		<td><label for="sidebar-username">Username</label></td>
+		<td><input type="text" id="sidebar-username" name="username" value="" size="12" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr>
+		<td><label for="sidebar-password">Password</label></td>
+		<td><input type="password" id="sidebar-password" name="password" value="" size="12" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">Remember me</label></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit" value="Log In" class="button" /></td>
+	</tr>
+	</table>
+	</form>
+	</div>	<div class="block" id="sidebarNavigation">
+		<span class="blockTitle">Conference Content</span>
+		
+		<span class="blockSubtitle">Search</span>
+		<form method="post" action="http://aca2010.info/index.php/aca2010/index/search/results">
+		<table>
+		<tr>
+			<td><input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /></td>
+		</tr>
+		<tr>
+			<td><select name="searchField" size="1" class="selectMenu">
+				<option label="All" value="">All</option>
+<option label="Authors" value="1">Authors</option>
+<option label="Title" value="2">Title</option>
+<option label="Abstract" value="4">Abstract</option>
+<option label="Index terms" value="120">Index terms</option>
+<option label="Full Text" value="128">Full Text</option>
+
+			</select></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Search" class="button" /></td>
+		</tr>
+		</table>
+		</form>
+		
+		<br />
+	
+	
+				<span class="blockSubtitle">Browse</span>
+		<ul>
+			<li><a href="schedConfs">By Conference</a></li>
+			<li><a href="presenters">By Author</a></li>
+			<li><a href="titles">By Title</a></li>
+					</ul>
+			</div>
+<div class="block" id="sidebarFontSize">
+	<span class="blockTitle">Font Size</span>
+	<a href="schedConfs#" onclick="setFontSize('Small');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_small.gif" width="16" height="14" border="0" alt="Small" /></a>&nbsp;
+	<a href="schedConfs#" onclick="setFontSize('Medium');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_medium.gif" width="16" height="14" border="0" alt="Medium" /></a>&nbsp;
+	<a href="schedConfs#" onclick="setFontSize('Large');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_large.gif" width="16" height="14" border="0" alt="Large" /></a>
+</div>
+			</div>
+							<div id="rightSidebar">
+				<div class="block" id="sidebarDevelopedBy">
+	<a class="blockTitle" href="http://pkp.sfu.ca/ocs/" id="developedBy">Open Conference Systems</a>
+</div>	<div class="block" id="sidebarHelp">
+	<a class="blockTitle" href="javascript:openHelp('http://aca2010.info/index.php/aca2010/index/help/view/user/topic/000006')">Conference Help</a>
+</div>
+			</div>
+			</div>
+
+<div id="main">
+<div id="navbar">
+	<ul class="menu">
+		<li><a href="http://aca2010.info/index.php/index/index">Home</a></li>
+		<li><a href="../about">About</a></li>
+					<li><a href="../login">Log In</a></li>
+			<li><a href="../user/account">Account</a></li>
+				<li><a href="../search.1">Search</a></li>
+								<li><a href="../schedConfs/archive">Archive</a></li>							<li><a href="../announcement">Announcements</a></li>
+						
+							<li><a href="http://univlora.edu.al">University of Vlora</a></li>
+					<li><a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/trackPolicies">Special Sessions</a></li>
+					<li><a href="https://sites.google.com/a/univlora.edu.al/aca-schedule/home/schedule">Schedule</a></li>
+			</ul>
+</div>
+
+<div id="breadcrumb">
+	<a href="http://aca2010.info/index.php/index/index/index">Home</a> &gt;
+			<a href="../search.1" class="hierarchyLink">Search</a> &gt;
+		<a href="schedConfs" class="current">Browse Title Index</a>
+</div>
+
+<h2>Browse Title Index</h2>
+
+<div id="content">
+<br />
+
+	<h3><a href="http://aca2010.info/index.php/fiz2010/index/index">First UV International Conference on the History of Quantum Physics</a></h3>
+				<p><!--[if gte mso 9]><xml> <w:WordDocument> <w:View>Normal</w:View> <w:Zoom>0</w:Zoom> <w:PunctuationKerning /> <w:ValidateAgainstSchemas /> <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid> <w:IgnoreMixedContent>false</w:IgnoreMixedContent> <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText> <w:Compatibility> <w:BreakWrappedTables /> <w:SnapToGridInCell /> <w:WrapTextWithPunct /> <w:UseAsianBreakRules /> <w:DontGrowAutofit /> </w:Compatibility> <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel> </w:WordDocument> </xml><![endif]--><!--[if gte mso 9]><xml> <w:LatentStyles DefLockedState="false" LatentStyleCount="156"> </w:LatentStyles> </xml><![endif]--> <!--  /* Style Definitions */  p.MsoNormal, li.MsoNormal, div.MsoNormal 	{mso-style-parent:""; 	margin:0in; 	margin-bottom:.0001pt; 	mso-pagination:widow-orphan; 	font-size:12.0pt; 	font-family:"Times New Roman"; 	mso-fareast-font-family:"Times New Roman";} @page Section1 	{size:8.5in 11.0in; 	margin:1.0in 1.25in 1.0in 1.25in; 	mso-header-margin:.5in; 	mso-footer-margin:.5in; 	mso-paper-source:0;} div.Section1 	{page:Section1;} --> <!--[if gte mso 10]> <style><br />
+ /* Style Definitions */<br />
+ table.MsoNormalTable<br />
+	{mso-style-name:"Table Normal";<br />
+	mso-tstyle-rowband-size:0;<br />
+	mso-tstyle-colband-size:0;<br />
+	mso-style-noshow:yes;<br />
+	mso-style-parent:"";<br />
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;<br />
+	mso-para-margin:0in;<br />
+	mso-para-margin-bottom:.0001pt;<br />
+	mso-pagination:widow-orphan;<br />
+	font-size:10.0pt;<br />
+	font-family:"Times New Roman";<br />
+	mso-ansi-language:#0400;<br />
+	mso-fareast-language:#0400;<br />
+	mso-bidi-language:#0400;}<br />
+</style> <![endif]--> <p class="MsoNormal">First UV International Conference on the History of Quantum Physics organized by Physics Department under the auspices of Vlora University <!--[if gte mso 9]><xml> <w:WordDocument> <w:View>Normal</w:View> <w:Zoom>0</w:Zoom> <w:TrackMoves /> <w:TrackFormatting /> <w:PunctuationKerning /> <w:ValidateAgainstSchemas /> <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid> <w:IgnoreMixedContent>false</w:IgnoreMixedContent> <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText> <w:DoNotPromoteQF /> <w:LidThemeOther>EN-US</w:LidThemeOther> <w:LidThemeAsian>X-NONE</w:LidThemeAsian> <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript> <w:Compatibility> <w:BreakWrappedTables /> <w:SnapToGridInCell /> <w:WrapTextWithPunct /> <w:UseAsianBreakRules /> <w:DontGrowAutofit /> <w:SplitPgBreakAndParaMark /> <w:DontVertAlignCellWithSp /> <w:DontBreakConstrainedForcedTables /> <w:DontVertAlignInTxbx /> <w:Word11KerningPairs /> <w:CachedColBalance /> </w:Compatibility> <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel> <m:mathPr> <m:mathFont m:val="Cambria Math" /> <m:brkBin m:val="before" /> <m:brkBinSub m:val=" " /> <m:smallFrac m:val="off" /> <m:dispDef /> <m:lMargin m:val="0" /> <m:rMargin m:val="0" /> <m:defJc m:val="centerGroup" /> <m:wrapIndent m:val="1440" /> <m:intLim m:val="subSup" /> <m:naryLim m:val="undOvr" /> </m:mathPr></w:WordDocument> </xml><![endif]--><!--[if gte mso 9]><xml> <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"   DefSemiHidden="true" DefQFormat="false" DefPriority="99"   LatentStyleCount="267"> <w:LsdException Locked="false" Priority="0" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Normal" /> <w:LsdException Locked="false" Priority="9" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="heading 1" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" /> <w:LsdException Locked="false" Priority="39" Name="toc 1" /> <w:LsdException Locked="false" Priority="39" Name="toc 2" /> <w:LsdException Locked="false" Priority="39" Name="toc 3" /> <w:LsdException Locked="false" Priority="39" Name="toc 4" /> <w:LsdException Locked="false" Priority="39" Name="toc 5" /> <w:LsdException Locked="false" Priority="39" Name="toc 6" /> <w:LsdException Locked="false" Priority="39" Name="toc 7" /> <w:LsdException Locked="false" Priority="39" Name="toc 8" /> <w:LsdException Locked="false" Priority="39" Name="toc 9" /> <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" /> <w:LsdException Locked="false" Priority="10" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Title" /> <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" /> <w:LsdException Locked="false" Priority="11" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Subtitle" /> <w:LsdException Locked="false" Priority="22" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Strong" /> <w:LsdException Locked="false" Priority="20" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Emphasis" /> <w:LsdException Locked="false" Priority="59" SemiHidden="false"    UnhideWhenUsed="false" Name="Table Grid" /> <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" /> <w:LsdException Locked="false" Priority="1" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="No Spacing" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 1" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 1" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 1" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 1" /> <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" /> <w:LsdException Locked="false" Priority="34" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" /> <w:LsdException Locked="false" Priority="29" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Quote" /> <w:LsdException Locked="false" Priority="30" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 1" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 1" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 1" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 1" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 1" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 2" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 2" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 2" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 2" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 2" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 2" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 2" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 2" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 2" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 3" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 3" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 3" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 3" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 3" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 3" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 3" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 3" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 3" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 4" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 4" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 4" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 4" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 4" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 4" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 4" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 4" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 4" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 5" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 5" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 5" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 5" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 5" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 5" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 5" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 5" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 5" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 6" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 6" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 6" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 6" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 6" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 6" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 6" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 6" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 6" /> <w:LsdException Locked="false" Priority="19" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" /> <w:LsdException Locked="false" Priority="21" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" /> <w:LsdException Locked="false" Priority="31" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" /> <w:LsdException Locked="false" Priority="32" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" /> <w:LsdException Locked="false" Priority="33" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Book Title" /> <w:LsdException Locked="false" Priority="37" Name="Bibliography" /> <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" /> </w:LatentStyles> </xml><![endif]--> <!--  /* Font Definitions */  @font-face 	{font-family:"Cambria Math"; 	panose-1:2 4 5 3 5 4 6 3 2 4; 	mso-font-charset:0; 	mso-generic-font-family:roman; 	mso-font-pitch:variable; 	mso-font-signature:-1610611985 1107304683 0 0 159 0;}  /* Style Definitions */  p.MsoNormal, li.MsoNormal, div.MsoNormal 	{mso-style-unhide:no; 	mso-style-qformat:yes; 	mso-style-parent:""; 	margin:0in; 	margin-bottom:.0001pt; 	mso-pagination:widow-orphan; 	font-size:12.0pt; 	font-family:"Times New Roman","serif"; 	mso-fareast-font-family:"Times New Roman";} .MsoChpDefault 	{mso-style-type:export-only; 	mso-default-props:yes; 	font-size:10.0pt; 	mso-ansi-font-size:10.0pt; 	mso-bidi-font-size:10.0pt;} @page Section1 	{size:8.5in 11.0in; 	margin:1.0in 1.0in 1.0in 1.0in; 	mso-header-margin:.5in; 	mso-footer-margin:.5in; 	mso-paper-source:0;} div.Section1 	{page:Section1;} --> <!--[if gte mso 10]> <style><br />
+ /* Style Definitions */<br />
+ table.MsoNormalTable<br />
+	{mso-style-name:"Table Normal";<br />
+	mso-tstyle-rowband-size:0;<br />
+	mso-tstyle-colband-size:0;<br />
+	mso-style-noshow:yes;<br />
+	mso-style-priority:99;<br />
+	mso-style-qformat:yes;<br />
+	mso-style-parent:"";<br />
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;<br />
+	mso-para-margin:0in;<br />
+	mso-para-margin-bottom:.0001pt;<br />
+	mso-pagination:widow-orphan;<br />
+	font-size:11.0pt;<br />
+	font-family:"Calibri","sans-serif";<br />
+	mso-ascii-font-family:Calibri;<br />
+	mso-ascii-theme-font:minor-latin;<br />
+	mso-fareast-font-family:"Times New Roman";<br />
+	mso-fareast-theme-font:minor-fareast;<br />
+	mso-hansi-font-family:Calibri;<br />
+	mso-hansi-theme-font:minor-latin;<br />
+	mso-bidi-font-family:"Times New Roman";<br />
+	mso-bidi-theme-font:minor-bidi;}<br />
+</style> <![endif]-->, from 28<sup>th</sup> to 30<sup>th</sup><span>  </span>November 2010. <br />The main theme of conference is</p><p class="MsoNormal"><strong><em>“From Plank’s hypotheses to quantum computers”.</em></strong></p> <p class="MsoNormal">The Conference celebrate <em><span style="font-style: normal;">110-th anniversary</span></em><em> of Planck's </em><em><span style="font-style: normal;">quantum</span></em><em> hypotheses </em>and will<em> </em>bring together physicists, academics ,<span> </span>researchers, historians and teachers who work on the history, theoretical and experimental developments and teaching of quantum physics and related disciplines: Mathematics, Chemistry, Engineering and Science.</p></p>
+				<ul>
+											<li>
+					<h4>INTERNATIONAL CONFERENCE ON THE HISTORY OF QUANTUM PHYSICS</h4>
+					November 28, 2010 &ndash; November 30, 2010											<p><!--[if gte mso 9]><xml> <w:WordDocument> <w:View>Normal</w:View> <w:Zoom>0</w:Zoom> <w:PunctuationKerning /> <w:ValidateAgainstSchemas /> <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid> <w:IgnoreMixedContent>false</w:IgnoreMixedContent> <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText> <w:Compatibility> <w:BreakWrappedTables /> <w:SnapToGridInCell /> <w:WrapTextWithPunct /> <w:UseAsianBreakRules /> <w:DontGrowAutofit /> </w:Compatibility> <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel> </w:WordDocument> </xml><![endif]--><!--[if gte mso 9]><xml> <w:LatentStyles DefLockedState="false" LatentStyleCount="156"> </w:LatentStyles> </xml><![endif]--><!--[if !mso]><object  classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object> <style><br />
+st1\:*{behavior:url(#ieooui) }<br />
+</style> <![endif]--> <!--  /* Style Definitions */  p.MsoNormal, li.MsoNormal, div.MsoNormal 	{mso-style-parent:""; 	margin:0cm; 	margin-bottom:.0001pt; 	mso-pagination:widow-orphan; 	font-size:12.0pt; 	font-family:"Times New Roman"; 	mso-fareast-font-family:"Times New Roman"; 	mso-ansi-language:EN-US; 	mso-fareast-language:EN-US;} @page Section1 	{size:612.0pt 792.0pt; 	margin:2.0cm 42.5pt 2.0cm 3.0cm; 	mso-header-margin:36.0pt; 	mso-footer-margin:36.0pt; 	mso-paper-source:0;} div.Section1 	{page:Section1;} --> <!--[if gte mso 10]> <style><br />
+ /* Style Definitions */<br />
+ table.MsoNormalTable<br />
+	{mso-style-name:"Tabella normale";<br />
+	mso-tstyle-rowband-size:0;<br />
+	mso-tstyle-colband-size:0;<br />
+	mso-style-noshow:yes;<br />
+	mso-style-parent:"";<br />
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;<br />
+	mso-para-margin:0cm;<br />
+	mso-para-margin-bottom:.0001pt;<br />
+	mso-pagination:widow-orphan;<br />
+	font-size:10.0pt;<br />
+	font-family:"Times New Roman";<br />
+	mso-ansi-language:#0400;<br />
+	mso-fareast-language:#0400;<br />
+	mso-bidi-language:#0400;}<br />
+</style> <![endif]--> <p class="MsoNormal"><strong><span lang="EN-US">First UV International Conference on the History of Quantum Physics </span></strong><span lang="EN-US">will be held in<strong> </strong>Vlora, Albania, from 28<sup>th</sup> to 30<sup>th</sup> November 2010. The conference will be organized by Physics Department under the auspices of Vlora University. </span></p> <p class="MsoNormal"><span lang="EN-US"> </span></p> <p class="MsoNormal"><span lang="EN-US"><em></em></span></p></p>
+									</li>
+					</ul>
+		<h3><a href="http://aca2010.info/index.php/flossal/index/index">Free and Open Source Software in Balkans</a></h3>
+				<p><p>This conference is an annual meeting of the free software users, developpers and supporters in Balkans. It is going to be organized each year in a different country and place.</p><p>The first conference of this kind is going to be hosted by the University of Vlora, in Albania. The ideators of he conference are Flavia Marzano and James Mike DuPont. The organizers are the University of Vlora, the FLOSSK (Free/Libre Open Source Software Association of Kosova), and FOSS-AL (Free and Open Source Software Association of Albania).</p><p>The aims of the conference are:</p><ul><li>To be a pleasant experience for all the participants and speakers.</li><li>To help the free software users and developers in Balkans to exchange experiences and ideas between them.</li><li>To help them in setting new contacts and relations.</li><li>To promote the collaboration and cooperation between them.</li><li>To promote the usage of free software in the Balkan countries.</li><li>etc.</li></ul><p>Although the scope of the conference is the region of Balkans, speakers from any part of the world (especially from EU and US) are welcome and will be invited.</p><p>Considering the pioneering nature of this conference, the focus will be on the following topics:</p><ul><li>What is free software and open source. </li><li> How can free and open source software help in economic development.</li><li>How can public and private institutions benefit from free and open source software.</li><li>Copyrights, licensing and patents.</li><li>Wikimedia and Free Culture.</li><li>Openstreetmap, and open source geo information systems.<br /></li><li>Use of free and open source software for schools and business.</li><li>How to work with Microsoft using Free Software and Open Source.</li><li>Developers presenting work on their projects.</li></ul><p><br />Authors are encouraged to also submit papers on any other topics not listed above but related to free and open source software.</p><p>The <strong>call for papers and speakers</strong> is open until the <strong>end of April 2010</strong>. The conference is planed on <strong>11-12 September 2010</strong>.</p></p>
+				<ul>
+											<li>
+					<h4>Free Software in Balkans, 2010</h4>
+					September 11, 2010 &ndash; September 12, 2010											<p><p>The Free and Open Source Software in Balkans Conference is an annual meeting of the free software users, developpers and supporters in Balkans. It is going to be organized each year in a different country and place.</p><p>The first conference of this kind is going to be hosted by the University of Vlora, in Albania. The ideators of he conference are Flavia Marzano and James Mike DuPont. The organizers are the University of Vlora, the FLOSSK (Free/Libre Open Source Software Association of Kosova), and FOSS-AL (Free and Open Source Software Association of Albania -- yet to be created and legalized).</p><p>The aims of the conference are:</p><ul><li>To be a pleasant experience for all the participants and speakers (without neccessarily being exhaustive for the organizers).</li><li>To help the free software users and developers in Balkans to exchange experiences and ideas between them.</li><li>To help them in setting new contacts and relations.</li><li>To promote the collaboration and cooperation between them.</li><li>To promote the usage of free software in the Balkan countries.</li></ul></p>
+									</li>
+					</ul>
+		<h3><a href="http://aca2010.info/index.php/grad/index/index">Workshop in computational algebraic geometry</a></h3>
+				<p>This workshop is directed to graduate students who want to work in algebraic geometry. Computational aspects will be emphasized.</p>
+			<h3><a href="http://aca2010.info/index.php/undergrad/index/index">Undergraduate research in mathematics and computer sciences</a></h3>
+				<p>Aiemed at promoting undergraduate research in mathematics, physics, and related areas.</p>
+			<h3><a href="../../aca2010.1">ACA 2010, Applications of Computer Algebra, June 24-27,  Vlora, Albania</a></h3>
+				<p><p><span style="font-family: ARIAL;"><span style="font-family: ARIAL;">The ACA series of conferences is devoted to promoting the applications and development of Computer Algebra and Symbolic Computation. Topics include computer algebra and symbolic computation in engineering, the sciences, medicine, pure and applied mathematics, education, communication and computer science. </span></span></p><p><span class="text"><strong><span style="font-family: Arial;"><span style="font-size: 12px; line-height: 16px;">ACA 2010 will be organized at The University of Vlora, June 24-27, 2010.<br /></span></span></strong></span></p></p>
+				<ul>
+											<li>
+					<h4>ACA&#039;10, Applications of Computer Algebra</h4>
+					June 24, 2010 &ndash; June 27, 2010											<p><h4><span style="color: #667049;"><strong>16<sup>th</sup> International Conference</strong></span></h4> <h2><strong>A</strong>pplications of  		      <strong>C</strong>omputer 	      <strong>A</strong>lgebra,<strong>  ACA 2010</strong></h2></p>
+									</li>
+					</ul>
+		<h3><a href="http://aca2010.info/index.php/awc09/index/index">Algebra Winter Conference, Vlora, Albania</a></h3>
+				<p><p>Algebra Winter Conference is a yearly conference in algebra at the University of Vlora. <span class="text"><span style="font-family: Arial;"><span style="font-size: 12px; line-height: 16px;">The conference is 3-4 days and focuses on some special topic each year.  The main goal is to bring together researchers in a relaxing atmosphere in order to foster cooperation.</span></span></span></p><p>Topics include but are not restricted to:</p><ul><li style="line-height: 0px; color: #000000;"><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;">Error-correcting codes</span></span><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;">, </span></span></li><li style="line-height: 0px; color: #000000;"><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;">cryptography; elliptic curves, RSA, hyperelliptic curve cryptography</span></span><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;"><br /></span></span></li><li style="line-height: 0px; color: #000000;"><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;">algebraic curves, automorphism groups, Jacobians, <br /></span></span><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;">algebraic curves over finite fields</span></span><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;"><br /></span></span></li><li style="line-height: 0px; color: #000000;"><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;">moduli spaces, Hurwitz spaces</span></span><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;"><br /></span></span></li><li style="line-height: 0px; color: #000000;"><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;">computational algebraic geometry</span></span><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;"><br /></span></span></li><li style="line-height: 0px; color: #000000;"><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;">mirror-symmetry, string theory</span></span><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;"><br /></span></span></li><li style="line-height: 0px; color: #000000;"><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;">invariant theory</span></span><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;"><br /></span></span></li><li style="line-height: 0px; color: #000000;"><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;">group theory, computational group</span></span><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;"> theory<br /></span></span></li><li style="line-height: 0px; color: #000000;"><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;">computational algebra</span></span></li><li style="line-height: 0px; color: #000000;"><span style="font-size: x-small; font-family: Arial; color: #000000;"><span style="font-size: 12px; line-height: 16px;">other topics<br /></span></span></li></ul><p><span class="text"><strong><span style="font-family: Arial; color: #006699;"><span style="font-size: 12px; line-height: 16px;">Local accomodations:</span></span></strong><span style="font-family: Arial;"><span style="font-size: 12px; line-height: 16px;">  We will arrange to pick you up from the airport, to help with hotels, etc.  Vlora is one of the beatyful cities of Europe and we have planned trips in the surrounding areas and local attractions.</span></span></span></p></p>
+				<ul>
+											<li>
+					<h4>UV Algebra Winter Conference 2009</h4>
+					December 12, 2009 &ndash; December 13, 2009											<p>A yearly meeting at the University of Vlora to encourage interaction among algebraists and scientists from other areas. The conference takes place during the month of December and lasts usually 2-3 days.</p>
+									</li>
+											<li>
+					<h4>UV Algebra Winter Conference 2010</h4>
+					December 12, 2009 &ndash; December 13, 2009									</li>
+					</ul>
+	
+<br /><br />
+<h3 dir="ltr"><span id="sites-page-title">Sponsors</span></h3><div style="margin: 5px 10px 0pt 0pt; display: inline; float: left;"><br /><br /><br /></div><div style="margin: 5px 10px 0pt 0pt; display: inline; float: left;"><a href="https://sites.google.com/a/univlora.edu.al/conferences-at-uv/aca/UV_Logo.png?attredirects=0"><img src="https://sites.google.com/a/univlora.edu.al/conferences-at-uv/_/rsrc/1263144519874/aca/UV_Logo.png?height=200&width=0" border="0" alt="" width="0" height="200" /></a></div><ul><li><strong>College of Technical Sciences, <a rel="nofollow" href="http://www.univlora.edu.al/">University of Vlora</a></strong></li></ul><ul><li><em><span style="text-decoration: underline;"><a href="http://sites.google.com/site/aulonnapress/" target="_blank"><strong>Aulona Press</strong></a></span></em><br /></li></ul><ul><li><a href="https://sites.google.com/a/univlora.edu.al/albanian-math-society/" target="_blank"><span style="text-decoration: underline;"><strong>Albanian Mathematical Society</strong></span></a></li></ul>
+
+
+
+</div><!-- content -->
+</div><!-- main -->
+</div><!-- body -->
+
+
+
+</div><!-- container -->
+</body>
+</html>

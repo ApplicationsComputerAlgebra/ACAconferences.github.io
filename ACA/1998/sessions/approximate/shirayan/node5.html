@@ -1,0 +1,46 @@
+
+<H2><A NAME="SECTION00032000000000000000"><tex2html_anchor_invisible_mark></A><A NAME="count"><tex2html_anchor_mark></A><BR>
+Counting real roots
+</H2>
+Sturm's algorithm is an algorithm to count the number of all real roots of a
+given polynomial in one variable. Like Buchberger's algorithm,
+Sturm's algorithm also has the problem of intermediate expression swell
+in the size of the coefficients.
+There have been many efforts for improving the algorithm like
+the Sturm-Habicht sequence as found in [#GLRR#<tex2html_cite_mark>#1##<tex2html_cite_mark>#]. But
+in the case where the coefficients are irrational,
+the above problem is still serious.  What if we use floating-point
+computation without the methodology in [#SS#<tex2html_cite_mark>#1##<tex2html_cite_mark>#]?
+Sturm's algorithm is then also unstable.
+
+<P>
+We applied the stabilization techniques to Sturm's algorithm 
+based on floating-point computation. In many cases, the 
+greatest advantage 
+was found for polynomials having irrational coefficients and 
+multiple real roots<A NAME="tex2html12"
+ HREF="footnode.html#foot236"><SUP>9</SUP></A>
+. Namely, while a naive floating-point 
+computation method could not give the correct number 
+(the result varies or oscillates with the precision),
+our methodology stabilized and could give the correct number 
+for a relatively low precision.
+Figure~<A HREF=<tex2html_cr_mark>#fig:sturm#237><tex2html_cr_mark></A> illustrates this phenomenon
+for one polynomial of degree 53 having 26 terms and 3 real roots.
+
+
+
+
+
+
+
+<P>
+<#796#><FONT SIZE="-2"></FONT><BR>
+<DIV ALIGN="CENTER"><A NAME="fig:sturm"><tex2html_anchor_mark></A><A NAME="302"><tex2html_anchor_mark></A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure:</STRONG>
+Effect of stabilizing Sturm's algorithm</CAPTION>
+<TR><TD><tex2html_image_mark>#figure250#</TD></TR>
+</TABLE>
+</DIV><BR><FONT SIZE="-2"></FONT><#796#>
+See [#CL#<tex2html_cite_mark>#1##<tex2html_cite_mark>#] for example for the details of Sturm's algorithm.

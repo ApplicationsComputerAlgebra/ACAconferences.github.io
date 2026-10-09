@@ -1,0 +1,11 @@
+Fraction-free Gaussian elimination and new forms for LU factors
+
+Wenqin Zhou and David Jeffrey
+University of Western Ontario, London, Canada
+
+Students hate fractions.  Teachers do not like fractions.  CAS prefer to avoid
+fractions.  How can we avoid fractions when teaching Gaussian Elimination and
+LU factoring? In computer algebra circles, a form of fraction-free Gaussian
+Elimination has been known for many years.  It can be extended to LU factoring
+as well.  In this talk, fraction-free Gaussian elimination will be described
+and a new form of LU factoring given.

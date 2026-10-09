@@ -1,0 +1,19 @@
+Andrej I. Kirilov* (KirillovAI@mpei.ru) (Russia) 
+
+The Solver HM : A New Software for Studying and Applying Mathematics
+
+The Solver HM consists of a MS Word--CAS interface (WCI) and a hypertextbook
+(HTB).
+
+The WCI takes a selected formula from a MS Word document and sends the formula
+to the CAS that does the required mathematical operations.  The WCI then gets
+the CAS result and inserts it in the document.  The WCI can interact with
+DERIVE, Maple V, MuPAD, and Reduce.  The HTB is a collection of MS Word
+documents with a navigation tool.  The documents contain the examples of
+solutions of about 150 basic problems.  The WCI is available for a user working
+with the HTB.  It is assumed that if the user has a mathematical problem, then
+he or she can find an analogue among the problems collected in the HTB and use
+this analogue as a template, i.e., edit it and use the WCI for doing the
+required mathematical operations.  The Solver helps a student to concentrate on
+the new and essential while the computer does all operations that are already
+known to the student.

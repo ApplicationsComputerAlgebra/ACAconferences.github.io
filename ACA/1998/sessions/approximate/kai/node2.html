@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Hybrid Rational Function Approximation</TITLE>
+<META NAME="description" CONTENT="Hybrid Rational Function Approximation">
+<META NAME="keywords" CONTENT="kai">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="kai.css">
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="kai.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html30"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html28"
+ HREF="kai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html22"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html31"
+ HREF="node3.html">Approximate-GCD by Hribernig and</A>
+<B> Up:</B> <A NAME="tex2html29"
+ HREF="kai.html">Accuracy Analysis of Hybrid</A>
+<B> Previous:</B> <A NAME="tex2html23"
+ HREF="node1.html">Introduction</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00020000000000000000">
+Hybrid Rational Function Approximation</A>
+</H1>
+
+<P>
+Computations of linearized equations (<A HREF="node1.html#eqn:lineq">3</A>)
+in the presence of roundoff errors may lead to the
+following interesting phenomenon. 
+Suppose that the unknown function <I>f</I>(<I>x</I>) is a rational function 
+which is continuous in 
+<!-- MATH: $[x_0,x_{m+n}]$ -->
+[<I>x</I><SUB>0</SUB>,<I>x</I><SUB><I>m</I>+<I>n</I></SUB>].
+Let the actual degrees of the numerator and the denominator polynomials
+of <I>f</I>(<I>x</I>) be <I>m</I>-<I>d</I> and <I>n</I>-<I>d</I>, respectively, for a positive <I>d</I>. That is
+
+<!-- MATH: $f(x)=\bar{r}_{m-d,n-d}(x)=\bar{p}_{m-d}(x)/\bar{q}_{n-d}(x)$ -->
+<IMG
+ WIDTH="296" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$f(x)=\bar{r}_{m-d,n-d}(x)=\bar{p}_{m-d}(x)/\bar{q}_{n-d}(x)$">.
+Here, we consider rational function 
+<!-- MATH: $\bar{r}_{m,n}(x)$ -->
+<IMG
+ WIDTH="60" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\bar{r}_{m,n}(x)$">
+interpolating <I>D</I>such as 
+<!-- MATH: $f_i=f(x_i),\ i=0,\cdots,m+n$ -->
+<IMG
+ WIDTH="210" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$f_i=f(x_i),\ i=0,\cdots,m+n$">.
+There are a lot of rational functions passing the data set <I>D</I> but have
+different degrees.
+There are any polynomials 
+<!-- MATH: $\bar{g}(x)$ -->
+<IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\bar{g}(x)$">
+whose degree is <I>d</I> such as
+
+<!-- MATH: $\bar{r}_{m,n}(x)=(\bar{g}(x)\bar{p}_{m-d}(x))/(\bar{g}(x)\bar{q}_{n-d}(x))$ -->
+<IMG
+ WIDTH="295" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\bar{r}_{m,n}(x)=(\bar{g}(x)\bar{p}_{m-d}(x))/(\bar{g}(x)\bar{q}_{n-d}(x))$">.
+Thus, linearized equations (<A HREF="node1.html#eqn:lineq">3</A>) have no unique solution.
+However, in the floating number computations, because of the presence of
+roundoff errors the numerical solution will produce the pair of
+polynomials <I>P</I>(<I>x</I>) and <I>Q</I>(<I>x</I>) of degrees <I>m</I> and <I>n</I>, respectively.
+The numerical rational interpolation <I>P</I>(<I>x</I>)/<I>Q</I>(<I>x</I>) should approximate one of
+
+<!-- MATH: $\bar{r}_{m,n}$ -->
+<IMG
+ WIDTH="38" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$\bar{r}_{m,n}$">.
+That is 
+<!-- MATH: $P(x)/Q(x)=(g_p(x)p_{m-d}(x))/(g_q(x)q_{n-d}(x))$ -->
+<I>P</I>(<I>x</I>)/<I>Q</I>(<I>x</I>)=(<I>g</I><SUB><I>p</I></SUB>(<I>x</I>)<I>p</I><SUB><I>m</I>-<I>d</I></SUB>(<I>x</I>))/(<I>g</I><SUB><I>q</I></SUB>(<I>x</I>)<I>q</I><SUB><I>n</I>-<I>d</I></SUB>(<I>x</I>)).
+In algebraic computations we can remove 
+<!-- MATH: $\bar{g}(x)$ -->
+<IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\bar{g}(x)$">
+from rational
+function 
+<!-- MATH: $\bar{r}_{m,n}(x)$ -->
+<IMG
+ WIDTH="60" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\bar{r}_{m,n}(x)$">
+by GCD computations. However
+in floating computations the coefficients of <I>P</I>(<I>x</I>)/<I>Q</I>(<I>x</I>)are slightly different from 
+<!-- MATH: $\bar{r}_{m,n}(x)$ -->
+<IMG
+ WIDTH="60" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\bar{r}_{m,n}(x)$">.
+Thus, polynomials <I>g</I><SUB><I>p</I></SUB>(<I>x</I>) and <I>g</I><SUB><I>q</I></SUB>(<I>x</I>) remain in the numerical rational
+interpolation.
+Furthermore, it may occur that for some <I>z</I>we have simultaneously 
+<!-- MATH: $Q(z)=0,~P(z) \neq 0$ -->
+<IMG
+ WIDTH="148" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$Q(z)=0,~P(z) \neq 0$">,
+and
+then the computed ratio <I>P</I>(<I>x</I>)/<I>Q</I>(<I>x</I>)will be a very poor approximation to <I>f</I>(<I>x</I>) at <I>z</I> and near <I>z</I>. 
+In this case, a natural way to improve the
+approximation is to compute
+<I>g</I>(<I>x</I>), an approximate-GCD of <I>P</I>(<I>x</I>)and <I>Q</I>(<I>x</I>), then compute the symbolic quotients
+
+<!-- MATH: $p(x)=P(x)/g(x)$ -->
+<I>p</I>(<I>x</I>)=<I>P</I>(<I>x</I>)/<I>g</I>(<I>x</I>) and 
+<!-- MATH: $q(x)=Q(x)/g(x)$ -->
+<I>q</I>(<I>x</I>)=<I>Q</I>(<I>x</I>)/<I>g</I>(<I>x</I>), and finally
+output <I>p</I>(<I>x</I>)/<I>q</I>(<I>x</I>) as an improved hybrid
+rational interpolation to <I>f</I>(<I>x</I>). We call these procedures <I>Hybrid
+Rational Function Approximation</I> and show the algorithm as follows:
+
+<P>
+<P>
+<DIV><B>Algorithm  2.1</B> (HRFA)  &nbsp; 
+ <BR>
+<B>Input:</B> data set <I>D</I> and parameter <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\epsilon$">
+<BR>
+<B>Output:</B> hybrid rational interpolation <I>p</I>(<I>x</I>)/<I>q</I>(<I>x</I>)
+<BR>
+<B>Method:</B> 
+<DL COMPACT>
+<DT>1.
+<DD>Compute rational interpolation <I>P</I>(<I>x</I>)/<I>Q</I>(<I>x</I>) to interpolate <I>D</I>.
+<DT>2.
+<DD>Obtain the approximate-GCD <I>g</I>(<I>x</I>) of <I>P</I>(<I>x</I>) and <I>Q</I>(<I>x</I>) using the algorithm by Sasaki
+and Noda.
+<DT>3.
+<DD>
+<!-- MATH: $p(x)=\mbox{quo}(P(x)/g(x))$ -->
+<IMG
+ WIDTH="172" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$p(x)=\mbox{quo}(P(x)/g(x))$">
+and 
+<!-- MATH: $q(x)=\mbox{quo}(Q(x)/g(x))$ -->
+<IMG
+ WIDTH="172" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$q(x)=\mbox{quo}(Q(x)/g(x))$">,
+where 
+<!-- MATH: $\mbox{quo}$ -->
+<IMG
+ WIDTH="32" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\mbox{quo}$">
+is a quotient obtained by polynomial division.
+</DL><A NAME="alg:hrfa.sn">&#160;</A></DIV><P></P>
+
+<P>
+Any algorithms for (non-unique) approximate-GCD and for 
+polynomial division are available.
+Several methods of calculating approximate-GCDs have been proposed other than
+Sch&#246;nhage [<A
+ HREF="node7.html#S85">7</A>], Sasaki and Noda [<A
+ HREF="node7.html#SN89">11</A>].
+They use different norms for the definition of approximate-GCDs,
+i.e.
+<I>L</I><SUB>1</SUB> norm (c.f. Pan[<A
+ HREF="node7.html#P96">9</A>], Hribernig and Stetter[<A
+ HREF="node7.html#HS96">8</A>]), 
+<I>L</I><SUB>2</SUB> norm (c.f. Corless, Gianni, Trager and Watt[<A
+ HREF="node7.html#CGTW95">6</A>], Karmarkar and
+Lakshman[<A
+ HREF="node7.html#KL96">5</A>]) 
+or norms estimated in a domain (c.f. Sederberg and Chang[<A
+ HREF="node7.html#SC93">10</A>]).
+For further discussions to establish the error estimate of HRFA,
+we use the approximate-GCD proposed by Hribernig and Stetter.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html30"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html28"
+ HREF="kai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html22"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html31"
+ HREF="node3.html">Approximate-GCD by Hribernig and</A>
+<B> Up:</B> <A NAME="tex2html29"
+ HREF="kai.html">Accuracy Analysis of Hybrid</A>
+<B> Previous:</B> <A NAME="tex2html23"
+ HREF="node1.html">Introduction</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

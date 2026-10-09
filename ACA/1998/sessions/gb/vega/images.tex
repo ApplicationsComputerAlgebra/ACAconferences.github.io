@@ -1,0 +1,1233 @@
+\batchmode
+\documentclass{article}
+\usepackage{ldump}
+\makeatletter
+
+\usepackage{html}
+
+\providecommand{\proof}{\paragraph*{\bf Proof:}}  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+\bodytext{bgcolor=white}
+\par\usepackage[dvips]{color}
+\pagecolor[gray]{.7}
+
+\AtBeginDocument{\input /usr1/home/liska/projects/aca/sessions/gb/vega.aux }
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{} \catcode`\_=\count@
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup}%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup%
+ \let\ifinner=\iffalse }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\def\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA[1]{\lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em\vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\vtop{\vbox{%
+  \kern.1em\kern1.25 pt\hbox{\hglue.17em\copy\sizebox\hglue1.25 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern1.25 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%\dimen1=\ht\sizebox
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize\expandafter\vfill
+  \else\expandafter\vss\fi}%
+\makeatletter \tracingstats = 1 
+
+\latexdump
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\makeatother
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2315}%
+${\rm I\kern -2.2pt K\hskip 1pt}(\relax $%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2317}%
+$\relax )[\relax $%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2319}%
+$\relax ]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2326}%
+${\rm I\kern -2.2pt K\hskip 1pt}[\relax $%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2328}%
+$\relax ,\relax $%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline961}%
+$^{*\dag }$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline967}%
+$\underline{T}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline969}%
+$(T_1,\ldots,T_s)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline971}%
+$\underline{X}=(X_1,\ldots,X_n)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath973}%
+\begin{displaymath}\matrix{F_1(\underline{T},X_1,\ldots,X_n)&\!\!\!\!=0\cr  
+        F_2(\underline{T},X_1,\ldots,X_n)&\!\!\!\!=0\cr  
+        \vdots&\!\!\!\!\hfill\vdots\;\cr  
+        F_m(\underline{T},X_1,\ldots,X_n)&\!\!\!\!=0\cr}\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline977}%
+$\underline{X}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline62}%
+$\mbox{$\mathbf{\circ}$}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline60}%
+$\mbox{$\bullet$}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline979}%
+$F_1,\ldots,F_m$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline989}%
+${\mathchoice {\setbox  0=\hbox{$\displaystyle\rm Q$ }\hbox {\raise  
+0.15\ht0\hbox to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\textstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptscriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}}(\underline{T})[X_1,\ldots,X_n]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1003}%
+${\mathchoice {\setbox  0=\hbox{$\displaystyle\rm Q$ }\hbox {\raise  
+0.15\ht0\hbox to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\textstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptscriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}}[\underline{T},X_1,\ldots,X_n]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1017}%
+${\rm I\kern -2.2pt K\hskip 1pt}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1019}%
+$\underline{X}=(X_1,\dots,X_n)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1021}%
+$\underline{T}=(T_1,\dots,T_m)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1023}%
+$\varphi:{\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]\rightarrow {\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1025}%
+$\varphi({\rm I\kern -2.2pt K\hskip 1pt}[\underline{T}])={\rm I\kern -2.2pt K\hskip 1pt}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1027}%
+$\varphi(X_i)=X_i, i=1,\dots,n$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1029}%
+$t^{(0)}\in{\rm I\kern -2.2pt K\hskip 1pt}^m$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1031}%
+$\varphi^{(0)}(p(\underline{T},\underline{X})):=p(t^{(0)},X)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1033}%
+$p(\underline{T},\underline{X})\in{\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1035}%
+$I=<F_1(\underline{T},\underline{X}),\dots,F_m(\underline{T},  
+\underline{X})>\subseteq  
+{\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1039}%
+${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1041}%
+$G=\{g_1(\underline{T},\underline{X}),\dots,g_s(\underline{T},\underline{X})\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1049}%
+${\rm I\kern -2.2pt K\hskip 1pt}^m$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1051}%
+$t^{(0)}\in W$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1053}%
+$\varphi^{(0)}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1055}%
+$\varphi^{(0)}(G)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1057}%
+$\varphi^{(0)}(I)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1063}%
+${\rm I\kern -2.2pt K\hskip 1pt}(\underline{T})[\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1071}%
+$\tilde W\subset{\rm I\kern -2.2pt K\hskip 1pt}^m$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1073}%
+$\tilde  
+G=\{\tilde g_1(\underline{X}),\dots,\tilde  
+g_s(\underline{X})\}\subset{\rm I\kern -2.2pt K\hskip 1pt}(\underline{T})[\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1075}%
+$\tilde I=<\tilde F_1(\underline{X}),\dots,\tilde  
+F_m(\underline{X})>\subset{\rm I\kern -2.2pt K\hskip 1pt}(\underline{T})[\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1077}%
+$t^{(0)}\in  
+\tilde W$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1079}%
+$\varphi^{(0)}(\tilde G)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1081}%
+$\varphi^{(0)}(\tilde  
+I)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1083}%
+$\tilde W$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1085}%
+$\tilde F_i$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1087}%
+$i=1,\dots,m$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1089}%
+$\tilde g_j$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1091}%
+$j=1,\dots,s$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1097}%
+$\tilde g_j=\sum_{i=1}^m  
+B_{ij}\tilde F_i$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1107}%
+$\tilde I:\tilde g_j$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1109}%
+$\tilde  
+I:\tilde g_j\cap {\rm I\kern -2.2pt K\hskip 1pt}[\underline{T}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1115}%
+$\varphi$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1127}%
+$\underline{X} > \underline{T}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1139}%
+\begin{displaymath}\bf {T}^B\bf {X}^A > \bf {T}^D\bf {X}^C  
+\Longleftrightarrow   
+\matrix{  
+\bf {X}^A >_1 \bf {X}^C\cr{\rm or}\cr  
+\bf {X}^A =\bf {X}^C  
+\hbox{ and }\bf {T}^B  >_2 \bf {T}^D\cr}\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1141}%
+$A,C\in{\rm I\kern -2.1pt N\hskip 1pt}^n$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1143}%
+$B,D\in{\rm I\kern -2.1pt N\hskip 1pt}^m$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1151}%
+$\{lt(f)/f\in H\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1159}%
+$lt_{\varphi}(f)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1161}%
+$f
+\in{\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1163}%
+$U(\underline{T}){\bf X}^A$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1165}%
+${\bf X}^A$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1171}%
+$Lt_{\varphi}(H)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1173}%
+$\{lt_{\varphi}(f)/f\in H\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1175}%
+$I\subset{\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath194}%
+\begin{displaymath}
+Lt(\varphi(I))=\varphi(Lt_{\varphi}(I))\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1185}%
+$\varphi(G)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1187}%
+$\varphi(I)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1193}%
+\begin{displaymath}Lt(I)=<lt(g_1),\dots,lt(g_s)>\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1195}%
+$\varphi(Lt_{\varphi}(I))$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1197}%
+\begin{displaymath}\varphi(Lt_{\varphi}(I))=<\varphi(lt_{\varphi}(g_1)),\dots,
+\varphi(lt_{\varphi}(g_s))>.\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1199}%
+$Lt(\varphi(I))$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1203}%
+$\dim(\langle  
+F_1,\ldots,F_m\rangle)=0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1211}%
+$\underline{X}=(X_1)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1225}%
+\begin{displaymath}\varphi:R\rightarrow {\rm I\kern -2.2pt K\hskip 1pt}\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1229}%
+${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1237}%
+$R[\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1241}%
+${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T}][\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1249}%
+$r\in\{0,\dots,s\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1251}%
+$\varphi(lt(g_i))\neq 0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1253}%
+$i\in\{1,\dots,r\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1255}%
+$\varphi(lt(g_i))= 0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1257}%
+$i\in\{r+1,\dots,s\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1261}%
+$\varphi(g_i)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1263}%
+$\{\varphi(g_1),\dots,\varphi(g_r)\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1277}%
+$R={\rm I\kern -2.2pt K\hskip 1pt}[\underline{T}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1281}%
+${\rm I\kern -2.2pt K\hskip 1pt}(\underline{T})[\underline{X}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1283}%
+\begin{displaymath}g_0=ax^3+byz+c,\quad g_1=dxy+ez^2,\quad g_2=fxz+gy\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1285}%
+\begin{displaymath}\{a,d,f,g,c,b^2e^2,b^2e\}\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1291}%
+${\rm I\kern -2.2pt K\hskip 1pt}[X_0, \ldots, X_n]= {\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1295}%
+$F \in J$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1301}%
+${\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]_s$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1307}%
+$\theta(n, s)={{n+s}
+\choose{s}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1311}%
+\begin{displaymath}J_s=J \cap {\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]_s.\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1315}%
+\begin{displaymath}H_J(s)= \dim_{{\rm I\kern -2.2pt K\hskip 1pt}} {\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]_s/J_s.\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1317}%
+${\rm I\kern -2.2pt K\hskip 1pt}[X_0, \ldots, X_n]_s$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1319}%
+${\rm I\kern -2.2pt K\hskip 1pt}[X_1,  
+\ldots, X_n]_{\leq s}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1321}%
+${\rm I\kern -2.2pt K\hskip 1pt}[X_1,  
+\ldots, X_n]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1325}%
+$\underline{X}=(X_0, \ldots, X_n)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1333}%
+${\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1335}%
+$\sigma$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1337}%
+$G=\{g_1,\ldots,g_k\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1341}%
+\begin{displaymath}H_{Lt_{\sigma}(J)}=H_{Lt_{\sigma}(G)}\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1361}%
+$\phi$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1365}%
+$\overline{\sigma}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1371}%
+$H_{Lt_{\overline{\sigma}}(G)}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1377}%
+$H_{Lt_{\overline{\sigma}}(\phi(G))}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1379}%
+$\phi(G)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1381}%
+\begin{displaymath}H_{Lt_{\overline{\sigma}}(G)}=H_{Lt_{\overline{\sigma}}(\phi(G))}\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1385}%
+$\phi(J)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{proof283}%
+\begin{proof}% latex2html id marker 283
+Any specialization $\psi$\space producing  
+$Lt_{\overline{\sigma}}(G)$\space as set of leading terms for $\psi(J)$\space verifies  
+that $\psi(G)$\space is a Gr\"obner Basis of $\psi(J)$\space and thus $H_{\rm
+generic}:=H_{\psi(J)}$\space is equal to $H_{Lt_{\overline{\sigma}}(G)}$ . But if
+our   specialization $\phi$\space verifies that
+$H_{Lt_{\overline{\sigma}}(\phi(G))}$\space is   equal to the ``generic" Hilbert
+function $H_{\rm generic}$\space then, by applying Theorem \ref{Hilb}, $\phi(G)$ is a Gr\"obner Basis   of  
+$\phi(J)$ .\hbox{}\nobreak\hfill  
+\vrule width 1.4mm height 1.4mm depth 0mm  
+\par\goodbreak \medskip
+\end{proof}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1425}%
+$G=\{g_1,\ldots,g_s\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1435}%
+\begin{displaymath}g_j(\underline{T},\underline{X})=  
+\sum_{i=1}^{m_j}  
+u_{i,j}(\underline{T}){\bf
+X}^{\alpha_{i,j}},\qquad  
+\alpha_{1,j}>_{\overline{\sigma}}\alpha_{2,j}>_{\overline{\sigma}}\ldots \end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1445}%
+$L=[n_1,\ldots,n_s]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1447}%
+$0\leq  
+n_j\leq m_j$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1451}%
+\begin{displaymath}u_{j,1}(\underline{T})=0,\ldots,u_{j,n_j-1}(\underline{T})=0,  
+u_{j,n_j}(\underline{T})\neq 0,\qquad 1\leq j\leq s\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1455}%
+$\{{\bf
+X}^{\alpha_{j,n_i}}:1\leq j\leq s\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1457}%
+$\{{\bf
+X}^{\alpha_{j,1}}:1\leq j\leq s\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1469}%
+$(m_1+1)\cdot  
+\ldots\cdot (m_s+1)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1471}%
+$\geq$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1475}%
+\begin{displaymath}[n_1,\ldots,n_s]\geq[k_1,\ldots,k_s] \quad\Longleftrightarrow\quad  
+n_1\geq k_1,\ldots,n_s\geq k_s.\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{proof336}%
+\begin{proof}It is enough to take into account that if $L<L'$\space then the dimension (as a  
+vector space) of the monomial ideal generated by the condition $L$\space is smaller  
+than or equal to the dimension of the one generated by $L'$\space and thus the  
+corresponding Hilbert functions verify that $H_L'\leq H_L$ . Since, by  
+hypothesis, $H_L<H_{\rm generic}$\space then $L'$\space is bad for specialization: its  
+Hilbert function is different from the generic one.  
+\hbox{}\nobreak\hfill  
+\vrule width 1.4mm height 1.4mm depth 0mm  
+\par\goodbreak \medskip
+\end{proof}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1499}%
+${\bf0}=[0,\ldots,0]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1505}%
+$j\in\{1,\ldots,s\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath959}%
+\begin{displaymath}\begin{array}{cccccc}
+g_1(\underline{T},\underline{X}) \rightarrow  & 
+u_{11}(\underline{T}) & u_{12}(\underline{T}) & u_{13}(\underline{T}) &
+\ldots                &
+u_{1m_1}(\underline{T})\\
+g_2(\underline{T},\underline{X}) \rightarrow  & 
+u_{21}(\underline{T}) & u_{22}(\underline{T}) & u_{23}(\underline{T}) &
+\ldots                &
+u_{2m_2}(\underline{T})\\
+g_3(\underline{T},\underline{X}) \rightarrow  & 
+u_{31}(\underline{T}) & u_{32}(\underline{T}) & u_{33}(\underline{T}) & 
+\ldots                 &
+u_{3m_3}(\underline{T})\\
+   \vdots                                     &
+   \vdots             &      \vdots           & 
+   \vdots             &      \vdots           & 
+\vdots            \\
+g_s(\underline{T},\underline{X}) \rightarrow  & 
+u_{s1}(\underline{T}) & u_{s2}(\underline{T}) & u_{s3}(\underline{T}) & 
+\ldots                &
+u_{sm_s}(\underline{T})\\
+\end{array}
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1513}%
+${\cal A}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1515}%
+$[n_1,\ldots,n_s]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1519}%
+\begin{displaymath}{\cal S}=\{[n_1,\ldots,n_s]\in{\cal A}:[n_1,\ldots,n_s]\;\;
+\hbox{good for specialization}\}\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1525}%
+$L_1,\ldots,L_k$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1527}%
+${\cal S}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1531}%
+$L=[n_1,\ldots,n_s]\leq L_i$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1535}%
+$L_i=[k_1,\ldots,k_s]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1539}%
+$(k_1+1)\cdot\ldots\cdot(k_s+1)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1543}%
+$g_j(\underline{T},\underline{X})$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1545}%
+$u_{ji}(\underline{T})$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1553}%
+$[0,\ldots,0]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath409}%
+\begin{displaymath}
+p_1(\underline{T})=0,\ldots,p_k(\underline{T})=0,  
+q_1(\underline{T})\neq 0,\ldots,q_m(\underline{T})\neq 0\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1555}%
+$k\geq 1$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1557}%
+$m\geq 1$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1571}%
+${\mathchoice {\hbox{$\textstyle {\rm Z\!\!Z}$ }} {\hbox{$\textstyle  
+{\rm Z\!\!Z}$ }} {\hbox{$\scriptstyle {\rm Z\!\!Z}$ }}  
+{\hbox{$\scriptscriptstyle {\rm Z\!\!Z}$ }}}[\underline{T}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1573}%
+$\underline{T}=t$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1575}%
+\begin{displaymath}p(t)=\gcd(p_1(t),\ldots,p_k(t))\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath420}%
+\begin{displaymath}
+p(t)=0,  q_1(t)\neq 0,\ldots,q_m(t)\neq 0\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1583}%
+$\deg(p(t))\geq 1$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1585}%
+\begin{displaymath}Q_{0}(t)=p(t),\qquad
+Q_{i+1}(t)=\frac{Q_i(t)}{\gcd(Q_i(t),q_i(t))},\quad\hbox{if} \;\; i\geq 0\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1587}%
+$p_1(\underline{T}),\ldots,p_k(\underline{T})$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1591}%
+$\underline{X})$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1595}%
+\begin{displaymath}\matrix{  
+F_1=a x t^2 + b y z t -x(x^2+c y^2+d z^2)\cr   
+F_2=a y t^2 + b z x t -x(y^2+c z^2+d x^2)\cr  
+F_3=a z t^2 + b x y t -x(z^2+c x^2+d y^2)\cr},\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1615}%
+${\mathchoice {\setbox  0=\hbox{$\displaystyle\rm Q$ }\hbox {\raise  
+0.15\ht0\hbox to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\textstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptscriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}}[a,b,c,d,x,y,z,t]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1625}%
+\begin{displaymath}{\frac {{n}^{6}+3\,{n}^{5}+6\,{n}^{4}+7\,{n}^{3}+6\,{n}^{2}+3\,n+1}{
+1-n}}  
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1639}%
+\begin{displaymath}{\frac {2\,{n}^{8}+5\,{n}^{7}+5\,{n}^{6}+{n}^{5}-5\,{n}^{4}-7\,{n}^{3}
+-6\,{n}^{2}-3\,n-1}{1-n}}\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1651}%
+${\mathchoice {\setbox  0=\hbox{$\displaystyle\rm Q$ }\hbox {\raise  
+0.15\ht0\hbox to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\textstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptscriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}}[x,y,z,t]/<F_1,F_2,F_3>$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1663}%
+${\bf {X}}^{\alpha}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1665}%
+$u_{i,j}(\underline{T})$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1671}%
+\begin{displaymath}\matrix{ t^3-cut^2-uv^2 - uw^2=0\cr t^3-cvt^2-vu^2-vw^2=0\cr  
+t^3-cwt^2-wu^2-wv^2=0\cr}\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1675}%
+$c\neq 0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1693}%
+\begin{displaymath}\matrix{  
+F_1=a x t^2 + b y z t -x(x^2+c y^2+d z^2)\cr   
+F_2=a y t^2 + b z x t -x(y^2+c z^2+d x^2)\cr  
+F_3=a z t^2 + b x y t -x(z^2+c x^2+d y^2)\cr}\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1707}%
+$c\neq 0, d\neq 0, d^2 - c\neq 0, c^2 - d\neq 0, cd - 1\neq 0, c^4d + cd^4 -
+2c^2d^2 - c^3 - d^3 + 2cd\neq 0,
+c^3 + d^3 - 3cd + 1\neq 0, d^3 - 2cd + 1\neq 0, cd^3 - c^2d - d^2 + c\neq 0, 
+c^2d^2 - 2cd + 1\neq 0, c^3d - cd^2 - c^2 + d\neq 0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1709}%
+$ c^4d + cd^4 - 2c^2d^2 - c^3 - d^3 + 2cd=0, 
+  c\neq 0, d\neq 0, d^2 - c\neq 0, c^2 - d\neq 0, cd - 1\neq 0, cd^3 - c^2d - d^2 + c\neq
+0, c^3 + d^3 - 3cd + 1\neq 0,  
+c^2d^2 - 2cd + 1\neq 0, d^3 - 2cd + 1\neq 0, c^3d - cd^2 - c^2 +d\neq 0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1711}%
+$c=0, d\neq 0, d^2\neq 0, d^3\neq 0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1713}%
+$c\neq 0, d\neq 0, d^2 - c\neq 0, c^2 - d\neq 0, cd - 1\neq 0,
+c^3-2cd+d^3\neq 0,c+d+1\neq 0,d^2+1-d+c^2-c-cd\neq 0,d^3-2cd+1\neq 0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1715}%
+$c^3-2cd+d^3=0, 
+  c\neq 0, d\neq 0, d^2 - c\neq 0, c^2 - d\neq 0, cd - 1\neq 0,  c+d+1\neq 0,
+d^2+1-d+c^2-c-cd\neq 0,d^3-2cd+1\neq 0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1717}%
+$c=0, d\neq 0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1725}%
+$\neq 0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1729}%
+\begin{displaymath}\matrix{
+F_1=2mt^3-7xt^2+mx^2y+mzt^2\hfill\cr
+F_2=3mxt^2+u^2t-2mytu\hfill\cr
+F_3=2mt^3-2t^3+z^2u+xyt-mz^2t\hfill\cr
+F_4=2t^3+z^2u+m^2xyt-mzyt\hfill\cr}\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1733}%
+\begin{displaymath}[m\neq 0, m^2 - 1\neq 0, 2m^2-7\neq 0, 5m^2 + 4m - 7\neq 0]\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+
+\end{document}

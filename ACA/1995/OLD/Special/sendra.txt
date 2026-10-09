@@ -1,0 +1,72 @@
+   Parametric Curves and Applications to Computer Aided Geometric Design 
+
+            J. Rafael Sendra 
+            Departamento de Matematicas 
+            Universidad de Alcala
+            Ap. Correos 20
+            E28871 Alcala de Henares, Madrid (Spain) 
+            Phone. 8854902
+            Fax. 8854953
+                 mtsendra@alcala.es
+
+
+           Rational curves play an important role in the field of Computer 
+          Aided Geometric Design. They arise in practical applications as 
+          computer graphics, geometric modelling or manipulation of offset
+          varieties.
+            Recently, symbolic methods in Computer Algebra are been applied
+          successefully to rational curves. In this session the most 
+          relevant recent advances in the field of parametric curves and 
+          their applications to Computer Aided Geometric Design will be 
+          reported. 
+
+Tentative list of speakers to be invited:
+
+   - J.F. Canny
+     Computer Science Division 
+     University of California (USA)
+     
+    (Research activity in Computer Algebra, implicitization, polynomial 
+     parametrizations, etc). 
+ 
+   - R.T. Farouki 
+     Department of Mechanical Engineering and Applied Mechanics
+     University of Michigan (USA)
+
+    (Research activity in  applications of Computer Algebra to algebraic 
+     curves, offset curves, etc)
+
+
+   - M. Hoij
+     Department of Mathematics
+     University of Nijmegen (The Netherlands)
+      
+     (Research activity in Computer Algebra and parametrizations)
+
+   - C.M. Hoffmann
+     Computer Science Department
+     Purdue University (USA)
+
+     (World leading expert in applications of rational curves to solid 
+      modelling, offset surfaces, etc)
+
+   - T. Recio 
+     Departamento de Matematicas
+     Universidad de Cantabria (Spain)
+
+     (Wellknown expert in Computer Algebra, Robotics, and real 
+      parametrizations of real curves)
+
+    - T.W. Sederberg 
+      Department of Civil Engineering 
+      Birgham Young University (USA)
+
+     (Wellknown expert and pioner in parametrizations and 
+      reparametrizations)
+ 
+    - F. Winkler 
+      Risc-Linz
+      Johannes Kepler Universitat (Austria)
+
+     (Reserach  activity in Computer Algebra, rational parametrizations, 
+      desing of algebraic software in Algebraic Geometry, etc)     

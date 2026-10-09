@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Functional Decomposition and Groebner Basis</TITLE>
+<META NAME="description" CONTENT="Functional Decomposition and Groebner Basis">
+<META NAME="keywords" CONTENT="gutierrez">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="gutierrez.css">
+</HEAD>
+<BODY bgcolor=white>
+
+<P>
+<H1 ALIGN="CENTER">Functional Decomposition and Groebner Basis</H1>
+<P ALIGN="CENTER"><STRONG>Jaime Gutierrez and Rosario Rubio San Miguel
+<BR>
+Universidad de Cantabria
+<BR>
+Departamento de Matematicas, Estadistica y Computacion
+<BR>
+Facultad de Ciencias, Avda. Los Castros s/n
+<BR>
+Santander, Cantabrria, 39005
+<BR>
+Spain
+<BR>
+E-mail:jaime@matesco.unican.es</STRONG></P>
+<P ALIGN="LEFT"></P>
+
+<P>
+<B>Abstract</B>
+
+<P>
+The functional decompositon problem for univariate
+rational functions can be stated as follows (see Zippel (1991)):
+given an univariate rational function <I>f</I>(<I>x</I>) with coefficients in
+an arbitrary field <IMG
+ WIDTH="7" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\K$">,
+
+<!-- MATH: $f \in
+\K(x)$ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$f \in
+\K(x)$">,
+determine whether there exist two rational functions 
+<!-- MATH: $g, h \in
+\K(x)$ -->
+<IMG
+ WIDTH="74" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$g, h \in
+\K(x)$">
+with
+degree larger than one, such that 
+<!-- MATH: $f(x)=g(h(x))$ -->
+<I>f</I>(<I>x</I>)=<I>g</I>(<I>h</I>(<I>x</I>)), and, in the affirmative case,
+compute them. This problem has several applications, for instance,
+faithful re-parameterizing unfaithfully
+parameterized curves, providing a birationality test for subfields of <IMG
+ WIDTH="28" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\K(x)$">,
+computing intermediate fields in a simple purely transcendental
+field extension <IMG
+ WIDTH="7" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\K$">,
+etc. 
+<P>
+The method in Alonso, Gutierrez and Recio (1995) for
+decomposing a univariate rational function used the concept of near-separated
+polynomial: to each univariate rational function
+
+<!-- MATH: $f(x)=f_n(x)/f_d(x)$ -->
+<I>f</I>(<I>x</I>)=<I>f</I><SUB><I>n</I></SUB>(<I>x</I>)/<I>f</I><SUB><I>d</I></SUB>(<I>x</I>),
+ we associate the near-separated polynomial
+
+<!-- MATH: $f_n(x)f_d(y)-f_n(y)f_d(x)$ -->
+<I>f</I><SUB><I>n</I></SUB>(<I>x</I>)<I>f</I><SUB><I>d</I></SUB>(<I>y</I>)-<I>f</I><SUB><I>n</I></SUB>(<I>y</I>)<I>f</I><SUB><I>d</I></SUB>(<I>x</I>), The key of the algorithm is based
+on the following: 
+<P>
+<I>``Given two
+rational functions
+</I>
+<!-- MATH: $f(x), h(x)$ -->
+<I>f</I>(<I>x</I>), <I>h</I>(<I>x</I>)<I>,  there exists a rational function
+</I><I>g</I>(<I>x</I>)<I> such that </I>
+<!-- MATH: $f=g\circ h$ -->
+<IMG
+ WIDTH="71" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$f=g\circ h$"><I> if and only if the near-separated polynomial
+associated to </I><I>h</I><I> divides the one associated to </I><I>f</I><I>"</I>. 
+<P>
+
+<P>
+<BR>
+
+<P>
+The generalization of the decomposition problem to multivariate
+rational functions seems more involved. Similarly, we
+translate the above idea to multivariate functional decomposition. Now, to each
+list of multivariate rational functions
+
+<!-- MATH: $\{f_1(\sub{x}),\dots,f_r(\sub{x})\}$ -->
+<IMG
+ WIDTH="135" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\{f_1(\sub{x}),\dots,f_r(\sub{x})\}$">,
+we consider the near-separated ideal,
+Ideal
+<!-- MATH: $\big( \{f_{in}(\sub x)f_{id}(\sub y)-f_{in}(\sub y)f_{id}(\sub x)
+\hskip2pt|\hskip2pt
+i=1,\dots,r
+\}\bigl)$ -->
+<IMG
+ WIDTH="323" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\big( \{f_{in}(\sub x)f_{id}(\sub y)-f_{in}(\sub y)f_{id}(\sub x)
+\hskip2pt\vert\hskip2pt
+i=1,\dots,r
+\}\bigl)$">,
+of the polynomial ring 
+<!-- MATH: $\K[\sub{x},\sub{y}]$ -->
+<IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\K[\sub{x},\sub{y}]$">.
+Using this new
+concept and  the Gr&#246;bner basis theory, we get the following theorem.
+ In the polynomial ring 
+<!-- MATH: $\K[\sub {x},\sub{y}]$ -->
+<IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\K[\sub{x},\sub{y}]$">
+we have: 
+<P>
+<I>``If the
+near-separated ideal associated to </I>
+<!-- MATH: $\{f_1,\dots,f_r\}$ -->
+<IMG
+ WIDTH="90" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\{f_1,\dots,f_r\}$"><I> is a subset of the
+one associated to </I>
+<!-- MATH: $\{h_1,\dots,h_s\}$ -->
+<IMG
+ WIDTH="93" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\{h_1,\dots,h_s\}$"><I>, then
+  </I>
+<!-- MATH: $\K(f_1(\sub{x}),\dots,f_r(\sub{x}))\subset
+\K(h_1(\sub{x}),\dots,h_s(\sub{x}))\subset \K(\sub{x})$ -->
+<IMG
+ WIDTH="326" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\K(f_1(\sub{x}),\dots,f_r(\sub{x}))\subset
+\K(h_1(\sub{x}),\dots,h_s(\sub{x}))\subset \K(\sub{x})$"><I>."</I> 
+<P>
+The converse holds if we consider the near-separated ideals
+ over 
+<!-- MATH: $S^{-1}\K[\sub{x},\sub{y}]$ -->
+<IMG
+ WIDTH="69" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$S^{-1}\K[\sub{x},\sub{y}]$">,
+the ring
+of fractions of 
+<!-- MATH: $\K[\sub{x},\sub{y}]$ -->
+<IMG
+ WIDTH="40" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\K[\sub{x},\sub{y}]$">
+with denominator <I>S</I>, the multiplicative
+closed
+set generated by all the polynomials in the variables <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\sub{x}$">
+and
+<IMG
+ WIDTH="14" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\sub{y}$">.
+<P>
+
+<P>
+<BR>
+
+<P>
+These results shed a new light on multivariate decomposition
+problem with  application to compute intermediate fields in a purely
+transcendental field extension <IMG
+ WIDTH="7" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\K$">,
+which is a classical topic in Algebra
+(see Sweedler  (1993)).
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,36 @@
+New DERIVE Instructions concerning Eigenvalues and Eigenvectors
+
+Pablo Roa and A. de la Villa
+
+Universidad Pontificia Comillas. ETSII (ICAI)
+Departamento de Matematica Aplicada
+Alberto Aguilera, 23 28015. Madrid, Spain
+
+roaprietop@gmail.com, avilla@upcomillas.es
+
+
+                                  Abstract:
+
+
+In Engineering Schools in Spain on the topic of Linear Algebra, it is very
+common to study, in a general way, eigenvalues and eigenvectors.
+
+With the current DERIVE instructions, it is necessary to make the process of
+calculation of the canonical Jordan form J and the corresponding matrix P,
+associated with the matrix A, step by step.  In addition, if the matrix A is
+not diagonalizable, the process to find the invariant generalized subspaces is
+tedious.  For that reason, we have implemented some DERIVE instructions that
+allow, in quite general circumstances, to obtain the invariant generalized
+subspaces associated with the eigenvalues, the corresponding canonical Jordan
+form and also, through a single instruction, the calculation of the canonical
+Jordan form J and the matrix P.  The limitations of the procedures can be of
+two types: The impossibility of the exact calculation of the eigenvalues and
+DERIVE limitations, if the matrix is of a high order.  For that reason, it is
+also possible to work in approximated mode to get the canonical Jordan form and
+the matrix P with very good results.
+
+We hope that the new instructions will be a very didactical tool to enhance the
+learning of our students.
+
+In the presentation, several examples of the different situations will be
+analysed.

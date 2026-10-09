@@ -1,0 +1,15 @@
+                    A Lie Algebraic Approach
+                           Jan Sanders
+
+                    Wiskunde en Informatica,
+                  Vrije Universiteit Amsterdam
+                      e-mail: jansa@can.nl
+
+    Two  examples are given of algorithms based on the  imbedding 
+in  a Lie algebra of a given linear operator.  The first  is  the 
+computation   of  non-semisimple  normal  forms  of  systems   at 
+equilibrium,  using sl(2) and the second the computation of  e.g. 
+conservation  laws  of PDEs using the  3  dimensional  Heisenberg 
+algebra  as an extension of the total  differentiation  operator. 
+Both algorithms have been implemented in Maple programs producing
+Form code.

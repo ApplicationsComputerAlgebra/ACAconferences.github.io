@@ -1,0 +1,23 @@
+Title: A Computer Algebra-Based Expert System for Diagnosis of Anorexia
+
+Authors: Cristina Perez-Carretero (1)
+         Luis M. Laita            (1)
+         Eugenio Roanes-Lozano    (2)
+         Luis Lazaro              (3)
+         Jesus Gonzalez-Cajal     (3,4)
+
+         (1) Dept. Artificial Intelligence, Univ. Politecnica Madrid
+         (2) Dept. Algebra, Univ. Complutense Madrid
+         (3) C.U. Cardenal Cisneros
+         (4) Hospital de la Princesa
+
+Abstract:
+
+This paper deals with the construction of a Logic and Computer Algebra-based
+expert system devoted to diagnosis of anorexia. Predisposition, triggering
+and maintenance factors, together with symptoms of the illness, behave as
+logical antecedents of production rules. These production rules lead,
+through the partial measure of the intensity of the factors and symptoms,
+to a final diagnosis. The inference engine works with polynomial expressions
+which are the translation of the production rules. The inference processes
+are translated to ideal membership problems.

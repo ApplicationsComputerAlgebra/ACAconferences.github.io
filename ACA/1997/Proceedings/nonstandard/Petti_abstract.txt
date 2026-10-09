@@ -1,0 +1,17 @@
+       Progress in Natural Language Query in Macsyma
+       ---------------------------------------------
+          by Richard Petti
+          President, Macsyma Inc.
+
+For most users, the critical issue for using math software is ease of use.
+Help systems and other factors affecting ease of use will be reviewed, with
+emphasis on features of Macsyma(R) and PDEase(R).
+
+Macsyma 2.2 includes the Mathtips(tm) natural language query capability.  Users
+can describe their problems in their own words, and Macsyma responds with a
+number of suggestions, or "tips".  Each "tip" consists of a terse verbal
+description of a mathematical task, a short example problem and a proposed
+solution which the user can execute without typing anything.
+
+Time permitting, I will mention some of the progress in mathematical
+capabilities of Macsyma.

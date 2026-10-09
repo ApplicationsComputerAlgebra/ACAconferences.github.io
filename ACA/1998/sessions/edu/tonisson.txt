@@ -1,0 +1,26 @@
+"The Use of Computer Algebra in a Step-by-step Solution of Problems"
+
+Eno Tonisson
+University of Tartu
+Liivi 2-209
+Tartu EE2400
+Estonia
+E-mail: eno@ut.ee
+
+
+
+The role of computer algebra in the change of teaching and learning  
+mathematics is very important. 
+Computer algebra enables solving of many problems in such a 
+way that after entering of the problem (e.g. equation) the final solution 
+appears immediately. 
+But from the point of view of the learning process, such a capacity is not 
+always very useful. Especially if one of the aims is learning to know the 
+process of solution. 
+The presentation will handle the possibilities of computer algebra 
+in a step-by-step solution of problems. For example, the 
+solving of an equation in a way that tranformations between the problem 
+and the final solution would not be lost. An important question is with 
+which topics it is reasonable to use such a step-by-step approach and 
+which topics might be better dealt with using a one-step solution process. 
+The examples are based mainly on Maple.

@@ -1,0 +1,40 @@
+A Clinical Histories-Based ``Gravitational'' Decision Support System
+
+Eugenio Roanes-Lozano (1), Basilio de la Torre (2,3), Luis M. Laita (4),
+Eugenio Roanes-Macias (1)
+
+(1) Algebra Dept., Universidad Complutense de Madrid
+(2) Guadalajara Universitary Hospital 
+(3) Surgery Dept., Universidad de Alcala
+(4) Artificial Inteligence Dept., 
+    Universidad Politecnica de Madrid
+
+Rule based expert systems (RBES) in Medicine are frequently oriented to medical
+diagnosis and are usually based upon the intrinsic knowledge of a panel of
+experts.  Meanwhile, statistical methods are usually applied to experimentally
+support or reject a theory or hypothesis.
+
+We have found a need for a simple decision support system that could try to
+predict the result of a certain treatment or surgery, based on a set of
+clinical histories collecting data from different variables of the patients and
+including a rating of the result of such surgery or treatment.  We suppose that
+these variables are reasonably (or statistically) correlated to the ``result''
+variable.
+
+We have considered a ``gravitational'' distance-depending model.  It is similar
+to the k-nearest neighbors algorithm for k = ``size of the sample'', but
+instead of using simple majority within the neighbors to decide, all initial
+data influence the value predicted (conversely to the square of its distance to
+the new point).
+
+Unlike in an expert system, there is no knowledge base or inference engine.
+They are substituted by a data set and a statistical-algebraic algorithm.  The
+system automatically checks the number of patients in the sample and the number
+of variables of the patients in the clinical histories (i.e., the dimension of
+the space).
+
+As the systems handles lists, summations, plots... a computer algebra system
+(Maple) has been chosen to implement it (for the authors' convenience).
+
+This work is partially supported by the research project MTM2004-03175
+(Ministerio de Educacion y Ciencia, Spain.)

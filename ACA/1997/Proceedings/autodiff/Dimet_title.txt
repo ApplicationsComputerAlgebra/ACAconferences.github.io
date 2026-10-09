@@ -1,0 +1,7 @@
+TITLE : Data Assimilation in Meteorology: A Quest for Automatic Differentiation
+AUTHOR : Francois-Xavier Le Dimet
+AFFILIATION : 
+Laboratoire de Modelisation et Calcul,
+Universite Joseph Fourier,
+38041 GRENOBLE cedex 9,
+FRANCE.

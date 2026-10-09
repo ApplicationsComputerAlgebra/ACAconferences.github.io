@@ -1,0 +1,23 @@
+  Title:        Development and Analysis of 3D Non-Split Optimally 
+                Stable Lax-Wendroff Type Difference Scheme for 
+                Conservation Laws
+  Authors:      M. Kucharik ^1, R. Liska* ^1, S. Steinberg ^2, 
+                B. Wendroff ^3
+
+  Affiliation:  ^1 Czech Technical University, Prague, Czech Republic
+                ^2 University of New Mexico, Albuquerque, U.S.A.
+                ^3 Los Alamos National Laboratory, Los Alamos, U.S.A.
+  Abstract:
+Direct generalization of a 2D non-split optimally stable Lax-Wendroff (LW) type
+finite difference scheme to 3D is unconditionally unstable.  A variation of
+this scheme is sub-optimally stable.  On the other hand the 3D split extension
+of the 1D optimally stable LW scheme is also optimally stable.  We start with
+this optimally stable 3D split scheme, assume linearity of fluxes and derive a
+new 3D non-split scheme.  As the transformation is linear and stability
+analysis is done using scalar advection, the new scheme remains optimally
+stable.  The new scheme is second order both for scalar advection and a general
+non-linear conservation law.  Derivation and analysis of the new scheme has
+involved processing of large complicated formulas on a 3D stencil (basic and
+staggered) and has heavily relied on computer algebra facilities.  Computer
+algebra tools have been used for scheme transformation, stability analysis,
+truncation error analysis and modified equation construction.

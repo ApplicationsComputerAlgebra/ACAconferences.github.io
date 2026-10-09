@@ -1,0 +1,25 @@
+"Computer Algebra Support for Dynamical System Study"
+
+V. Govorukhin (*), V. Tsybulin
+Rostov State University, Faculty of Mechanics and Mathematics
+Dept. of Comput. Mathematics
+Zorge str. 5
+Rostov-on-Don, 344090
+Russia
+E-mail:vgov@ms.math.rsu.ru
+
+
+In this talk the application of computer algebra system Maple for the 
+support of nonlinear dynamic teaching is presented. We combine Maple and 
+DESIR program (dynamical systems researching tool). The result of this 
+approach is rather successful. The students were capable to execute all 
+research works and master both packages. Moreover, we find that separate 
+learning of dynamical systems theory and advanced computer tools takes 
+more time and efforts than combined approach.
+Firstly, we formulate a number of research works on nonlinear dynamics 
+and list the demands to computer algebra system. Then we explain the 
+necessity of combined using of special program for dynamical system  
+investigation and briefly describe a package Desir created by 
+V.Govorukhin. Finally we present application of Maple and Desir to study 
+one-dimensional polynomial map and nonlinear ordinary differential 
+equations systems.

@@ -1,0 +1,29 @@
+Session 17
+General Session on Computer Algebra
+
+#@@@ Tuesday
+
+The FunctionAdvisor: extending information on mathematical functions with computer algebra algorithms
+Edgardo Cheb-Terrab, Maplesoft R&D, Canada
+http://math.unm.edu/~aca/ACA/2017/General/Cheb-Terrab_FunctionAdvisor.pdf
+### also speaking in Education, prefers all talks early and on 1 or 2 days
+
+The four double-hypergeometric Appell functions, a complete implementation in a computer algebra system
+Edgardo Cheb-Terrab, Maplesoft R&D, Canada
+http://math.unm.edu/~aca/ACA/2017/General/Cheb-Terrab_Appell.pdf
+### also speaking in Education, prefers all talks early and on 1 or 2 days
+
+#@@@ Thursday
+
+The International Mathematical Knowledge Trust
+Ingrid Daubechies, Patrick Ion and Stephen M. Watt, USA and Canada
+http://math.unm.edu/~aca/ACA/2017/General/Daubechies.pdf
+### not Monday
+
+How a code for verifying our conjecture opened new directions
+Eli Bagno, Jerusalem College of Technology, Israel
+http://math.unm.edu/~aca/ACA/2017/General/Bagno.pdf
+
+Using Gr\"obner basis theory for an interval method solving undetermined equations
+Bartłomiej Jacek Kubica, Warsaw University of Life Sciences, Poland
+http://math.unm.edu/~aca/ACA/2017/General/Kubica.pdf

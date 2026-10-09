@@ -1,0 +1,13 @@
+Gary A. Harris* (USA), harris@math.ttu.edu
+The Use of Mathematics Specific Technology in Capstone Mathematics Teacher
+   Preparation Courses
+
+We describe how the computer algebra system MAPLE is used in two capstone
+mathematics courses taken by students who are preparing to teach mathematics at
+the middle school or high school level. Both courses use materials developed by
+the author and have been taken by over 300 students.
+
+Our philosophy is simple: Mathematics is the focus, technology is a tool.  We
+will share what we have learned in the development and conduct of these
+courses.  We will provide examples of the course materials and we will discuss
+issues involving student achievement and assessment.

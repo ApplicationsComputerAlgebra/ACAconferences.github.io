@@ -1,0 +1,20 @@
+  Title:        The SNPE2 Solver Developed for the MATLAB
+                Environment
+  Authors:      Valentine D. Borisevich, Valeriy G. Potemkin
+  Affiliation:  Moscow State Engineering Physics Institute
+                (Technical Univ.) 
+  Abstract:
+For the latest 10 years the toolbox for solving Systems of Nonlinear Polynomial
+Equations (SNPE) including more than 30 modules has been under developing.  By
+now on the basis of this toolbox there is accomplished the solver named as
+SNPE2 for finding solutions of SNPE with two variables and one parameter.  The
+SNPE2 Solver is designed as a GUI application in the MATLAB environment.  The
+Solver is based on a new generation of mixed symbolic-numerical algorithms.  It
+provides finding all real and complex solutions by means of only pure algebraic
+operations; calculating for a number of equations that may not coincide with a
+number of variables; evaluating residuals and time of execution. making
+calculations with the accuracy within the range of 10^-8 up to 10^-14.  Users
+of the toolbox developed include students of secondary and higher schools,
+engineers, and applied mathematicians involved in solving problems of ODE,
+robotics, and CAD systems, as well as the experts in algebraic geometry, mixed
+ordinary and algebraic equations, and nonlinear PDEs.

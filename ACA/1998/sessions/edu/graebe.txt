@@ -1,0 +1,16 @@
+"Symbolic computations with algebraic numbers"
+
+Hans-Gert Graebe
+Universitaet Leipzig, Institut f. Informatik
+Augustusplatz 10/11
+D-04109 Leipzig
+Germany
+E-mail:graebe@informatik.uni-leipzig.de
+
+
+Abstract: The aim of the talk is to show the role of algebraic numbers 
+in symbolic computations, advantages of the RootOf notation, 
+trigonometric algebraic numbers, some mathematics behind that, 
+algebraic extension towers, and what and how these things (currently) 
+may be done with the different general purpose CAS (i.e. Axiom, 
+Derive, Macsyma, Maple, Mma, MuPAD, Reduce).

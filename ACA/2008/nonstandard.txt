@@ -1,0 +1,23 @@
+                 Nonstandard Applications of Computer Algebra
+
+   at ACA'2008 to be held July 27-30, 2008 at RISC, Castle of
+   Hagenberg, Austria
+
+   Organizers:
+
+   Eugenio Roanes-Lozano
+   Michael Wester
+   Stanly Steinberg
+
+   Overview:
+
+   In many of the ACA conferences from 1996 onwards, we have chaired a
+   session devoted to ``Nonstandard Applications of Computer Algebra''.
+   The session traditionally collects contributions that, while using
+   Computer Algebra techniques and/or Computer Algebra Systems, can not
+   be easily allocated in the ``standard'' sessions. Examples of topics
+   treated in papers presented in previous editions of the conference
+   are: Verification and Development of Expert Systems (using algebraic
+   techniques), Railway Traffic Control, Artificial Intelligence,
+   Thermodynamics, Molecular Dynamics, Statistics, Electrical Networks,
+   Logic, Robotics, Sociology ...

@@ -1,0 +1,16 @@
+Algorithm stabilization techniques and their application to 
+symbolic computation of generalized inverses
+
+Author : Hiroyuki Minakuchi, Hiroshi Kai, Kiyoshi Shirayanagi and 
+         Matu-Tarow Noda
+
+Abstract: 
+
+We give an algorithm to compute the Moore-Penrose generalized inverse of a
+matrix, which permits the use of limited precision computation in a convergent
+fashion, based on Greville's algorithm.  This does not mean that Greville's
+algorithm may be directly computed with limited precision computation in a
+convergent fashion, but rather the algorithm is amenable to the stabilization
+techniques proposed by Shirayanagi and Sweedler, and we apply these
+stabilization techniques to the algorithm.  Computations were done on a
+computer algebra system Risa/Asir.

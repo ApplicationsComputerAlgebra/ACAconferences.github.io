@@ -1,0 +1,163 @@
+% Abstrat of your communication to the
+% ACA2018 Conference (Santiago de Compostela, 2018).
+% You must use LaTeX format.
+
+
+%====================================================
+% IMPORTANT: DO NOT MODIFY THE FOLLOWING LINES
+%====================================================
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsthm,amsmath,amsfonts,latexsym}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{times}
+
+\setlength{\oddsidemargin}{1.46cm}
+\setlength{\textwidth}{13cm}
+\setlength{\topmargin}{0.0cm}
+\setlength{\textheight}{20.5cm}
+
+\makeatletter
+\newcommand{\TITLE}[2][]{
+  \begin{center} \Large \bfseries #2%
+  \def\@temp{#1}\ifx\@temp\@empty\relax\else\footnote{#1}\fi\end{center}}
+
+\newcommand{\AUTHOR}[2][]{\textbf{#2}%
+  \def\@temp{#1}\ifx\@temp\@empty\relax\else\textsuperscript{#1}\fi}
+
+\newcommand{\ADDRESS}[2]{\noindent
+  \textsuperscript{#1}\parbox[t]{0.9\textwidth}{#2} \vspace{6pt}}
+
+\makeatother
+
+\newcommand{\KEYWORDS}[1]{\paragraph{Keywords:} #1}
+\newcommand{\MSCLASSIFICATION}[1]{\paragraph{Mathematics Subject Classification 2010:} #1}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{0}
+\pagestyle{empty}
+
+\newcommand{\HEADING}{
+{\noindent \small Applications of Computer Algebra -- ACA2018 \\
+Santiago de Compostela, June 18--22, 2018} \vspace{10pt}}
+
+%===============================================
+% DO NOT MODIFY THE ABOVE LINES
+%===============================================
+
+
+\bibliographystyle{alpha}
+
+\begin{filecontents}{abstract.bib}
+
+@inproceedings{Junges2013,
+	author = {Junges, Sebastian and Loup, Ulrich and Corzilius, Florian and Abraham, Erika},
+	 title = {{On Gr{\"{o}}bner Bases in the Context of Satisfiability-Modulo-Theories Solving over the Real Numbers}},
+ booktitle = {CAI'13},
+	series = {LNCS},
+	volume = {8080},
+	  year = {2013},
+	 pages = {186--198},
+ publisher = {Springer}
+}
+
+@inproceedings{Corzilius2011,
+	author = {Corzilius, Florian and Abraham, Erika},
+	 title = {{Virtual Substitution for SMT Solving}},
+ booktitle = {FCT'11},
+	series = {LNCS},
+	volume = {6914},
+	  year = {2011},
+	 pages = {360--371},
+ publisher = {Springer}
+}
+@inproceedings{Kremer2016,
+	author = {Kremer, Gereon and Corzilius, Florian and Abraham, Erika},
+	 title = {{A Generalised Branch-and-Bound Approach and its Application in SAT Modulo Nonlinear Integer Arithmetic}},
+ booktitle = {CASC'16},
+	series = {LNCS},
+	volume = {9890},
+	  year = {2016},
+	 pages = {315-335},
+ publisher = {Springer},
+	   doi = {10.1007/978-3-319-45641-6_21}
+}
+
+\end{filecontents} 
+
+\begin{document}
+
+\HEADING
+
+
+\TITLE{Computer Algebra and Computer Science}
+
+% If you need to thank someone next to the title, please use the next line (and delete the previous one)
+
+% \TITLE[thanks]{Title of talk}
+
+% Write the author names. Identify each one of them with a number
+% in order to give their own affiliations later on.
+\begin{center}
+ \AUTHOR[1]{Gereon Kremer}
+% IF two or more authors have the same affiliation, associate to them the same number.
+% For instance, if there are three authors and the first a the second ones have the same affiliation,
+% write as follows:
+ % \AUTHOR[1]{Third Author}
+\end{center}
+
+
+% Write now the abstract of your communication.
+
+Certain fields within computer science commonly make use of methods from computer algebra.
+A prominent example for that is satisfiability modulo theories (SMT) solving that extends the traditional question of satisfiability of propositional logic formulas to first-order theories.
+We consider nonlinear real problems in particular which produces a need for methods to deal with nonlinear real constraints.
+
+This topic is also an important topic in computer algebra, a community that deals with very similar questions but is surprisingly disjoint from the SMT solving community.
+The disjointness of these groups used to be a significant obstacle for any transfer of knowledge.
+The SC$^2$ project tries to resolve this hurdle by forging new collaborations between the communities of satisfiability checking and symbolic computation.
+
+We present SMT solving as an application of methods from computer algebra and motivate functional requirements and use cases for these methods that are uncommon but very important for SMT solving.
+Though we can modify existing methods to a certain degree, we as computer scientists depend on the computer algebra community to solve some issues.
+We show several projects that yielded successful adaptations of methods like Gr??bner bases\cite{Junges2013}, virtual substitution\cite{Corzilius2011} or cylindrical algebraic decomposition\cite{Kremer2016} to our applications.
+
+Finally we give multiple examples of existing implementations of methods from computer algebra -- CoCoALib and Maple -- that we struggled to integrate in a meaningful way.
+We provide insights into the actual problems and hope to suggest new directions of research that ease the cooperation between computer science and computer algebra in the future.
+
+
+
+
+% Write the keywords separated by commas
+
+\KEYWORDS {Computer Algebra, Computer Science, Satisfiability Modulo Theories Solving, Gr??bner Bases, Cylindrical Algebraic Decomposition, Virtual Substitution}
+
+% Write the MSC2010 codes corresponding to your communication
+
+%\MSCLASSIFICATION{Code1, Code2}
+
+
+
+% Next include the references you need.
+% If your abstract includes no references at all, please delete all the lines
+% from \begin{thebibliography} to \end{thebibliography}.
+
+% Please, do not use more than 9 references.
+
+
+\bibliography{abstract}
+
+\vspace{1cm}
+
+% Full Affiliation of all authors
+\ADDRESS{1}{
+Theory of Hybrid Systems  \\ RWTH Aachen University \\
+52056 Aachen Germany \\
+\texttt{gereon.kremer@cs.rwth-aachen.de}
+}
+
+
+\end{document}

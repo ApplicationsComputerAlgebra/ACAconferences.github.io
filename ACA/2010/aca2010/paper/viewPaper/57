@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Slavyanov</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="http://aca2010.info/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="http://aca2010.info/styles/paperView.css" type="text/css" />
+
+			<link rel="stylesheet" href="http://aca2010.info/plugins/themes/classicNavy/classicNavy.css" type="text/css" />
+	
+	<script type="text/javascript" src="http://aca2010.info/js/general.js"></script>
+	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript" src="http://aca2010.info/js/sizer.js" ></script>
+
+	<!-- Add stylesheets for the font sizer -->
+	<link rel="alternate stylesheet" title="Small" href="http://aca2010.info/styles/fontSmall.css" type="text/css" />
+	<link rel="stylesheet" title="Medium" href="http://aca2010.info/styles/fontMedium.css" type="text/css" />
+	<link rel="alternate stylesheet" title="Large" href="http://aca2010.info/styles/fontLarge.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="body">
+
+<div id="main">
+
+<h2>University of Vlora - Conference Center,&nbsp;ACA&#039;10, Applications of Computer Algebra</h2>
+
+<div id="navbar">
+	<ul class="menu">
+		<li><a href="http://aca2010.info/index.php/index/index" target="_parent">Home</a></li>
+		<li><a href="../../about" target="_parent">About</a></li>
+					<li><a href="../../login" target="_parent">Log In</a></li>
+			<li><a href="../../user/account" target="_parent">Account</a></li>
+				<li><a href="../../search" target="_parent">Search</a></li>
+								<li><a target="_parent" href="../../../index/schedConfs/archive">Archive</a></li>							<li><a href="../../announcement" target="_parent">Announcements</a></li>
+						
+							<li><a href="http://univlora.edu.al" target="_parent">University of Vlora</a></li>
+					<li><a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/trackPolicies" target="_parent">Special Sessions</a></li>
+					<li><a href="https://sites.google.com/a/univlora.edu.al/aca-schedule/home/schedule" target="_parent">Schedule</a></li>
+			</ul>
+</div>
+
+<div id="breadcrumb">
+	<a href="../../index" target="_parent">Home</a> &gt;
+	<a href="../../../aca2010.4" target="_parent">ACA 2010, Applications of Computer Algebra, June 24-27,  Vlora, Albania</a> &gt;
+	<a href="../../index" target="_parent">ACA&#039;10, Applications of Computer Algebra</a> &gt;
+	<a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/presentations" target="_parent">Computation of Special Functions</a> &gt;
+	<a href="../view/57/0" class="current" target="_parent">Slavyanov</a>
+</div>
+
+<div id="content">
+	<div id="topBar">
+		<div id="paperFontSize">
+			Font Size:&nbsp;
+			<a href="57#" onclick="setFontSize('Small');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_small.gif" width="16" height="14" border="0" alt="Small" /></a>&nbsp;
+			<a href="57#" onclick="setFontSize('Medium');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_medium.gif" width="16" height="14" border="0" alt="Medium" /></a>&nbsp;
+			<a href="57#" onclick="setFontSize('Large');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_large.gif" width="16" height="14" border="0" alt="Large" /></a>
+		</div>
+	</div>
+
+	<h3>ANTIQUANTIZATION AND INTEGRAL RELATIONS   	FOR HEUN EQUATIONS AND SYMMETRIES FOR THE   	CORRESPONDING PAINLEVE EQUATIONS</h3>
+	<div><em>Sergey Yuryevich Slavyanov, Alexandr Ya. Kazakov, Filip R. Vukajlovic</em></div>
+	<br />
+
+	<blockquote>
+							Last modified:&nbsp;2010-03-30<br/>
+	</blockquote>
+
+		<h4>Abstract</h4>
+	<br />
+	<div>Special functions play significant role in Computer <br />    Algebra packages. Here we can mention all-purpose <br />    packages like Mathematika or Maple as well as <br />    specialized packages as SFTools. <br />    Further development would without doubt be focused <br />    on more sophisticated Heun functions and closely <br />    related Painleve transcendents. Partly the <br />    relationship between Heun equations and Painleve <br />    equations is presented in the <br />    package SFTools. However new studies induce revision <br />    of presentation of these relations. The <br />    items of these revisions are the following.<br />    1. Relations between equations belonging to Heun class, <br />    the corresponding deformed equations with added <br />    apparent singularity and the corresponding 2x2 systems<br />    and 3x3 systems of first order equations. <br />    2. Integral  transforms linking <br />    different equations belonging to Heun class. <br />    3. Antiquantization as a tool of derivation <br />    Painleve-type equations from linear equations.<br />    4. Derivation  of Okamoto-type symmetries <br />    for Painleve equations.<br /> </div>
+	<br />
+	
+						
+
+</div>
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+<!--
+	// Open "Define Terms" context when double-clicking any text
+	function openSearchTermWindow(url) {
+		var term;
+		if (window.getSelection) {
+			term = window.getSelection();
+		} else if (document.getSelection) {
+			term = document.getSelection();
+		} else if(document.selection && document.selection.createRange && document.selection.type.toLowerCase() == 'text') {
+			var range = document.selection.createRange();
+			term = range.text;
+		}
+		if (url.indexOf('?') > -1) openRTWindowWithToolbar(url + '&defineTerm=' + term);
+		else openRTWindowWithToolbar(url + '?defineTerm=' + term);
+	}
+
+	if(document.captureEvents) {
+		document.captureEvents(Event.DBLCLICK);
+	}
+	document.ondblclick = new Function("openSearchTermWindow('http://aca2010.info/index.php/aca2010/aca2010/rt/context/57/0/96')");
+// -->
+
+</script>
+
+</body>
+</html>

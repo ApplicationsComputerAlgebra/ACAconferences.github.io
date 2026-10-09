@@ -1,0 +1,484 @@
+\documentstyle[11pt]{article}
+\oddsidemargin -1mm
+\evensidemargin -1mm
+\topmargin 0mm
+\headheight 0pt
+\headsep 0pt
+\footheight 12pt
+\footskip 30pt
+\textheight 234mm
+\textwidth 160mm
+\columnsep 10pt
+\columnseprule 0pt
+\topsep 1pt plus 2pt minus 4pt
+\itemsep 1pt plus 2pt minus 1pt
+\marginparwidth 0pt
+\oddsidemargin -.5cm
+\evensidemargin -.5cm
+\marginparsep 0pt
+\topmargin -.5cm
+\textwidth 17cm
+\textheight 23cm
+\sloppy
+\font\eirm=cmr8
+
+\def \ce{\centering}
+\def \N{{\rm I\kern -2.1pt N\hskip 1pt}}
+\def \R{{\rm I\kern -2.2pt R\hskip 1pt}}
+\def \Z{{\rm Z\!\!Z}}
+\def \Q{\hskip2pt {\rm 0\kern -7pt Q}}
+\def \C{{\rm C\kern -4.6pt
+     \vrule height 6.8pt width 0.3pt depth -0.5pt}\hskip4pt}
+\def \P{{\rm I\kern -2.2pt P\hskip 1pt}}
+\def \K{{\rm I\kern -2.2pt K\hskip 1pt}}
+\def \E{{\rm I\kern -2.2pt E\hskip 1pt}}
+\def \H{{\rm I\kern -2.2pt H\hskip 1pt}}
+\def \L{{\rm I\kern -2.2pt L\hskip 1pt}}
+\def \I{{\rm I\kern -2.2pt I\hskip 1pt}}
+\def \F{{\rm I\kern -2.2pt F\hskip 1pt}}
+\def \D{{\rm I\kern -2.2pt D\hskip 1pt}}
+\def \B{{\rm I\kern -2.2pt B\hskip 1pt}}
+
+
+
+
+\begin{document}
+\title{Parametric Curves and Applications in CAGD: Introduction and some 
+Special Issues}
+\author{ $\begin{array}{ccc} \mbox{T. Recio}\thanks{
+Partially supported by CICyT PB 92/0498/C02/01 (Geometr\'{\i}a 
+Real y Algoritmos), Esprit/Bra 6846 (Posso), and TIC-1026-CE} & & 
+\mbox{J.R. Sendra \& J. Sendra}\thanks{Partially supported by 
+Univ. Alcal\'a Proy. 030/95} \\ 
+\mbox{Dpto. de Matem\'aticas} & & \mbox{Dpto. de Matem\'aticas} \\ 
+\mbox{Universidad de Cantabria} & & \mbox{Universidad de Alcal\'a} \\ 
+\mbox{Santander 39071 (Spain)} & & \mbox{Madrid 28871 (Spain)}   \\ 
+\mbox{recio@matsun1.unican.es} & & \mbox{mtsendra@alcala.es} 
+\end{array}$}
+\date{}
+\maketitle
+%\vspace{0.5 cm} 
+In this paper we briefly introduce the notion and main 
+problems related to parametric curves, and we focus on two issues specially 
+interesting in applications: the problem of computing real reparametrization 
+of real parametric curves, and the rationality analysis and parametrization 
+of offset curves of parametric curves.
+
+Let $\K$ be a field of characteristic zero and ${\cal K}$ its algebraic 
+clousure. An algebraic variety ${\cal V}$ in the affine $n$-space 
+${\cal K}^{n}$ implicitely defined by the system of polynomial equations
+\[ {\cal V}=\{ f_{1}(x_{1},\ldots,x_{n})=0,\ldots, 
+f_{r}(x_{1},\ldots,x_{n})=0 \} \]
+$f_{1},\ldots,f_{r}\in \K[x_{1},\ldots,x_{n}]$, is called parametric if 
+there exist rational functions $p_{1},\ldots,p_{n} \in 
+{\cal K}(t_{1},\ldots,t_{m})$ such that 
+$f_{i}(p_{1}(t_{1},\ldots,t_{m}),\ldots,p_{n}(t_{1},\ldots,t_{m}))$
+is identically zero for $i=1,\ldots,r$. Then, we say that $
+(p_{1},\ldots,p_{n})$ is a rational  parametrization of ${\cal V}$. 
+Every parametrization of ${\cal V}$ can also 
+be seen as a map ${\cal P}$ from ${\cal K}^{m}$ to ${\cal K}^{n}$ such that 
+for almost every parameter value $\bar{t}=(t_{1},\ldots,t_{m})\in 
+{\cal K}^{m}$ (i.e. for all but a finite number of exceptions) 
+${\cal P}(\bar{t})=
+(p_{1}(\bar{t}),\ldots,p_{n}(\bar{t}))$ is a point of the variety 
+${\cal V}$.
+
+Here we deal with parametric curves; more particularly with parametric 
+plane curves. Geometric questions related to parametric curves in higher 
+dimension spaces can be studied considering birationally equivalent plane 
+curves. Thus, we are dealing with varieties ${\cal C}$ in 
+${\cal K}^{2}$ that can be  represented implicitaly by a polynomial 
+$f(x,y)\in \K[x,y]$ 
+\[ {\cal C}=\{ (a,b)\in {\cal K}^{2} \,/\, f(a,b)=0 \} \]
+or parametricaly as ${\cal P}(t)=(p_{1}(t),p_{2}(t))$, where 
+$p_{1},p_{2}\in {\cal K}(t)$. 
+
+If one starts from the implicit representation of the variety the question 
+of computing  rational parametric representations arises 
+(parametrization problem), and the preliminary subproblem of deciding 
+whether the curve can be parametrized has also to be considered 
+(rationality problem). Parametric curves, or rational curves, are exactly  
+the irreducible curves of genus zero. The genus is a birational invariant 
+of the curve, that measures the deficient between the maximum allowable 
+limit of singularities and the number of singularities of the curve, 
+counted properly with multiplicities (if the curve has degree $d$ then 
+$\frac{(d-1)(d-2)}{2}$ bounds the number of double points). Thus, 
+parametric  curves  are the irreducible curves with the maximum allowable 
+number of singularities; for instance: conics, cubics with one double 
+point, $\ldots$. Hence, the rationality of the curve can be decided 
+analyzing the multiplicity of the singularitites. Recently, several 
+algorithms for computing the genus and rational parametrizations have 
+been proposed [1],[13],[17],[21],[22]. 
+
+If one starts from the parametric representation of the variety, the 
+natural question of determining the  defining polynomial, or defining 
+system of polynomials in the higher dimension case, appears 
+(implicitization problem).  Implicitization procedures can be found for 
+instance in [6],[11]. Also, many authors have addressed the problem of 
+computing {\it good} parametrizations; where {\it good} affects to the 
+degree of the rational functions in the parametrization, to the algebraic 
+field extension where the parametrization is expressed, and to the  
+coefficient lenght in the parametrization.  Proper parametrizations (i.e. 
+parametrizations with optimal degree) are reached in [1],[13],[17],[21],
+[22]. Reparametrization methods for improperly parametrized curves, and 
+ algorithmic criteria for the existence of polynomial parametrizations are  
+also available, for instance, in [2],[6],[11]. In [22] a procedure for 
+determining parametrizations expressed over the smallest possible field 
+extension of the ground field is presented. Similar theoretical results 
+can be found in [17]. Nevertheless, purely arithmetic questions (for 
+instance, the determination of upper bounds of the lenght of the 
+coefficients of the rational functions involved in the parametrization) 
+are still open questions. 
+
+In addition, complexity analysis of some of these problems have been 
+presented in [14],[23], and computer packages for dealing with algebraic 
+curves and rational function fields are developed in [4],[10].
+
+Parametric curves play an important role in the field of Computer Aided 
+Geometric Design. They arise in practical applications as computer 
+graphics, geometric modeling or manipulation of offset varieties. The 
+natural field of applications of rational curves is Computer Aided 
+Design.  Indeed, real varietes are the most common ones in Geometric 
+Design. However, since Algebraic Geometry is mainly developed over 
+algebraically closed fields, the majority of the previous 
+algorithms are checked only over  the complex numbers. Thus, the usually 
+forgotten reality issues are not treated. Special exceptions are: 
+[3],[5],[9] where the existence of real parametrizations is analyzed, 
+[16] where a real reparametrization algorithm is presented, 
+and [22] where a  parametrization algorithm, that computes real 
+parametrizations when they exist, is given. 
+
+An interesting problem to mention is the algebraic manipulation of offset  
+curves. Offset curves of a given curve, or more formerly parallel curves, 
+are defined as the envelopes of systems of circles with centres on the 
+original curve and fixed radious. They  arise in practical applications 
+as tolerance a\-na\-ly\-sis, geometric control, robot path-planning and 
+numerical-control machining problems.  In [7],[8] the principal 
+geometric and topological properties of offset curves are stated, and  
+an algorithmic approach, based on resultants, to compute the implicit 
+equation of an offset plane curve is provided. Similarly, in [12] it is 
+shown how to use  Computer Algebra techniques as Gr\"obner Basis (or any 
+other algebraic equation solver as Characteristic Sets)  to determine 
+implicit equations of the offset of rational surfaces. One of the main 
+problems in offset curves manipulation is that the rationality of the 
+original curve is not preserved (in general) when the offset curve is 
+considered. Pottman gives explicit formulas to produce rational plane 
+curves and surfaces whose offsets have rational components [15]. 
+Nevertheless, it is not algorithmically clear how to deduce if a given 
+curve has an offset with  rational components, and how to compute a 
+rational offset parametrization, if they exist. In [19],[20] a complete 
+rationality analysis of the offset curves is presented, and symbolic 
+algorithms to parametrize the rational components of the offset curves 
+to parametric curves are derived. 
+
+In the sequel, we present the main ideas of the real reparametrization 
+algorithm developed in [16], and we briefly summarize the rationality 
+analysis and parametrization algorithm for offset curves given in [19],[20].
+\newpage
+%\vspace{1 mm}
+%\newline
+\begin{center}
+{\bf Real Reparametrizations of Curves}
+\end{center}
+\vspace{1 mm}
+Let ${\cal C}$ be a plane curve 
+defined by a real polynomial $f \in \R[x,y]$, with $f$ irreducible 
+over the complexes. Let us assume that ${\cal C}$ is rational, 
+and let ${\cal P}(t)$ be a rational  proper complex 
+parametrization of ${\cal C}$. Then, we study the existence 
+and computation --by re\-pa\-ra\-me\-tri\-za\-tions of ${\cal P}(t)$-- 
+of real parametrizations of ${\cal C}$.  For  this purpose, we associate 
+with ${\cal C}$ an additional curve  that provides the complex parameter 
+values that generates --via ${\cal P}$-- the real points on ${\cal C}$. 
+
+More precisely, let $\bar{t}=t_1 + i\,t_{2},\,\, t_1,t_2 \in \R$, denote a 
+generic complex number. Then the parametrization ${\cal P}(t)$ can be 
+written in the form:
+\[ {\cal P}(\tilde{t})=(\frac{h_{1}(t_1,t_2)+i\,\, 
+f_{1}(t_1,t_2)}{m_{1}(t_1,t_2)}, \frac{h_{2}(t_1,t_2)+i\,\, 
+f_{2}(t_1,t_2)}{m_{2}(t_1,t_2)}) \]
+where $m_1,m_2,h_1,h_2,f_1,f_2 \in \R[x,y]$. Now, if ${\cal C}$ is 
+parametrizable over the reals, there exist infinitely many  points 
+$(t_1,t_2)\in \R^{2}$ such that ${\cal P}(t_1+i\,t_{2})$ is a real point 
+on ${\cal C}$. Therefore 
+the curves ${\cal F}_{1}$, ${\cal F}_{2}$, defined respectively by 
+$f_{1}(t_1,t_2)$ and $f_{2}(t_1,t_2)$, have infinitely many common 
+points, and hence, they have common components. Let  $\tilde{{\cal C}}$ 
+be the curve defined by the common components of ${\cal F}_{1}$ and 
+${\cal F}_{2}$. Observe that $\tilde{{\cal C}}$ has  real points, and that 
+the mapping 
+\[ \begin{array}{ccc}
+\varphi:\tilde{{\cal C}} & \longrightarrow & {\cal C} \\ 
+\,\,\,\,\,\,\,\,\,\,\,\,(a,b) &\longrightarrow & {\cal P}(a+ \,i \,b) 
+\end{array} 
+\]
+is a one-to-one mapping  of the set of almost all  real points of 
+$\tilde{{\cal C}}$ (i.e. all but a finite number of exceptions) onto 
+the set of almost all  real points of ${\cal C}$.
+
+The following theorem states the algebraic properties of 
+$\tilde{{\cal C}}$ and the mapping $\varphi$ that allow us to construct 
+the real reparametrization algorithm. 
+\vspace{1 mm}
+\newline
+{\sc Theorem 1.} 
+\vspace{1 mm}
+\newline
+\hspace*{8 mm}
+(1) $\tilde{{\cal C}}$ has exactly one real component. 
+Furthermore, it is either a real circle or a real line. In the 
+\newline
+\hspace*{13 mm} sequel, although it may be a line,  we will refer to the 
+real component ${\cal C}^{\star}$ of $\tilde{{\cal C}}$ as the 
+{\it associated} 
+\newline
+\hspace*{13 mm} {\it real conic} with ${\cal C}$. 
+\vspace{1 mm}
+\newline
+\hspace*{8 mm}
+(2)   ${\cal C}$ is parametrizable over $\R$ if and only if 
+$\tilde{{\cal C}}$ has a real circle or a real line as a component.
+\vspace{1 mm}
+\newline
+\hspace*{8 mm}
+(3)  If ${\cal C}$ is parametrizable over $\R$ then for every 
+real parametrization 
+$(\frac{m_{1}(t)}{m_{2}(t)},\frac{m_{3}(t)}{m_{4}(t)})$ of 
+${\cal C}^{\star}$ it 
+\newline
+\hspace*{13 mm}
+holds that ${\cal P}(\frac{m_1}{m_2}+
+i\,\frac{m_3}{m_4})$ is a proper real parametrization of ${\cal C}$.
+\vspace{2 mm}
+\newline
+Thus, since ${\cal C}^{*}$ is rational (it is a circle or a line) and it 
+is easy to check whether it has real points. The previous ideas can be 
+summarized in an algorithm. Given a proper complex parametrization 
+${\cal P}(t)$ of an affine plane curve ${\cal C}$, the algorithm  
+decides whether ${\cal C}$ can be parametrized over the reals, and if so a 
+proper real parametrization is computed.
+\newline
+\underline{Algorithm} 
+\newline
+1.  Take $\bar{t}=t_1+\,i\,t_2$ and compute
+${\cal P}(\bar{t})=(\frac{h_{1}(t_1,t_2)+i\,\, 
+f_{1}(t_1,t_2)}{m_{1}(t_1,t_2)}, \frac{h_{2}(t_1,t_2)+i\,\, 
+f_{2}(t_1,t_2)}{m_{2}(t_1,t_2)})$ 
+\newline
+\hspace*{3 mm} 
+where $m_1,m_2,h_1,h_2,f_1,f_2 \in \R[x,y]$.
+\newline
+2. Find the real factors of  $\tilde{g}(t_1,t_2)=gcd(f_1,f_2)$. 
+\newline
+3. If $\tilde{g}$ has neither a real circle  nor a line as a  real factor, 
+ then {\sc Return} that ${\cal C}$ is not real. 
+\newline
+4. Take $g^{\star}(t_1,t_2)$ as the real circle factor or the real line 
+ factor of $\tilde{g}(t_{1},t_{2})$. 
+\newline
+5. Obtain a real proper parametrization 
+$(\frac{m_{1}(t)}{m_{2}(t)},\frac{m_{3}(t)}{m_{4}(t)})$   
+ of   $g^{\star}(t_1,t_2)$. 
+\newline
+7. {\sc Return} ${\cal P}(\frac{m_1}{m_2}+
+i\,\frac{m_3}{m_4})$.
+\newpage
+%\vspace{1 mm}
+%\newline
+\begin{center}
+{\bf Parametrization  of Offset Curves}
+\end{center}
+\vspace{1 mm}
+Let ${\cal C}$ be a parametric curve over ${\cal K}$ given by ${\cal P}(t)=
+ (p_{1}(t),p_{2}(t)), p_{1},p_{2} \in {\cal K}(t)$ (we exclude the trivial 
+case where ${\cal C}$ is a line). Then, the offset 
+curve to ${\cal C}$ at distance $d$ is the set of all 
+points of the affine plane  over ${\cal K}$ given by the formula 
+\[ {\cal P}(t) \pm \frac{d}{m(t)} \,{\cal N}(t),
+\]
+where ${\cal N}(t)=(-p'_{2}(t), p'_{1}(t))$ is the normal vector,  and 
+$m(t)= \sqrt{p'_{1}(t)^{2}+p'_{2}(t)^{2}}$ is its length. In the sequel, we 
+denote by ${\cal O}_{d}$ the offset curve to ${\cal C}$ at distance $d$. 
+Note that ${\cal O}_{d}$ is the envelope of the system of circles with 
+centre on ${\cal C}$ and  radious $d$. 
+
+One of the main problems in offset curves manipulation is that the 
+rationality of the original curve is not preserved (in general) when the 
+offset curve is considered. In the following we give a characterization of 
+those parametric curves with parametric offsets, as well as an algorithm 
+for parametrizing parametric offsets. 
+
+For this purpose,  we introduce the 
+following notion: let ${\cal P}(t)=(p_{1}(t),p_{2}(t))$ be a proper 
+parametrization of ${\cal C}$. Then, {\it the curve of reparametrization of 
+${\cal O}_{d}$  associated with ${\cal P}$} is defined as the plane curve 
+given by the primitive part --w.r.t $y$-- of the  numerator of 
+$2p_{2}'(x)y+p_{1}'(x)(y^{2}-1)$, and it is denoted as 
+${\cal G}_{{\cal P}}$. Then one has the following characterizations:
+\vspace{1 mm}
+\newline
+{\sc Theorem 2.}  The following statements are equivalent 
+\vspace{1 mm}
+\newline
+\hspace*{8 mm} 
+(1) All the components of ${\cal O}_{d}$ are rational 
+\vspace{1 mm}
+\newline
+\hspace*{8 mm} 
+(2) There exists  $\varphi \in {\cal K}(t)$ of degree at most two, 
+and a rational proper parametrization ${\cal P}(t)$ of 
+\newline
+\hspace*{13 mm} 
+${\cal C}$ such that the normal vector of ${\cal P}(\varphi(t))$ has 
+rational length.
+\vspace{1 mm}
+\newline
+\hspace*{8 mm} 
+(3) There exists a  proper parametrization ${\cal P}$  of ${\cal C}$ 
+such that  at least one component of ${\cal G}_{{\cal P}}$ is 
+\newline
+\hspace*{13 mm} rational. Furthermore, if $(R_{1},R_{2})$ parametrizes 
+the component of ${\cal G}_{{\cal P}}$ then ${\cal P}(R_{1}(t))$ has 
+\newline
+\hspace*{13 mm} normal vector with rational length.
+\vspace{2 mm}
+\newline
+As a consequence of theorem 2  one may deduce that the rationality of the 
+offset curves does not depened on the distance. That is, either all the 
+components of ${\cal O}_{d}$ are rational at any  nonzero distance,  or  
+both components have positive genus  at any  nonzero distance. Therefore, 
+the geometric analysis of the offest can be done at a fixed distance. 
+Indeed, one may be more precise and distinguishes the cases of rational 
+offsets or offsets with two rational components.
+\vspace{1 mm}
+\newline
+{\sc Theorem 3.} The following statements are equivalent
+\vspace{1 mm}
+\newline
+\hspace*{8 mm}
+(1)  ${\cal O}_{d}$ is rational 
+\vspace{1 mm}
+\newline
+\hspace*{8 mm}
+(2) There exists a rational parametrization  ${\cal P}$ of ${\cal C}$
+such that ${\cal G}_{\cal P}$ is rational.
+\vspace{1 mm}
+\newline
+\hspace*{8 mm}
+(3) For every rational parametrization ${\cal P}$ of ${\cal C}$ the curve 
+${\cal G}_{\cal P}$ is rational.
+\vspace{2 mm}
+\newline
+{\sc Theorem 4.} The following statements are equivalent:
+\newline
+\hspace*{8 mm}
+(1)  ${\cal O}_{d}$ has two rational components
+\vspace{1 mm}
+\newline
+\hspace*{8 mm}
+(2) There exists a rational proper parametrization  ${\cal P}$ of 
+${\cal C}$ such that ${\cal G}_{\cal P}$ is reducible.
+\vspace{1 mm}
+\newline
+\hspace*{8 mm}
+(3) For every rational proper parametrization ${\cal P}$ of ${\cal C}$ 
+the curve ${\cal G}_{\cal P}$ is reducible.
+\vspace{2 mm}
+\newline
+We finish this paper  with the algorithm  that summarizes the previous 
+ideas. Given a proper  parametrization ${\cal P}(t)$ of an affine plane 
+curve ${\cal C}$, it decides whether the components of ${\cal O}_{d}$  
+are rational, and if so,  rational  parametrizations of all the components 
+are computed.
+\newline
+\underline{Algorithm} 
+\footnotesize
+\begin{tabbing}
+aa \= 1. \=  aaaa \= 5.3. \= aaaa \= \kill
+\\
+\> 1. \> ${\cal N}:=(-p'_{2},p'_{1})$; {\bf If} $|| {\cal N} || \in 
+{\cal K}(t)$ {\bf then return} \\
+\> \> \>  $\ll$ ${\cal O}_{d}$ has two rational components; 
+${\cal P}\pm \frac{d}{|| {\cal N} ||} {\cal N}$ parametrizes the 
+components of ${\cal O}_{d}$ $ \gg$   \\
+\> 2. \> Compute the genus  $g$ of the curve ${\cal G}_{\cal P}$
+defined by  $2p'_{2}(x)y+p'_{1}(x)(y^2-1)$. \\
+\> 3. \>   {\bf If} $g\neq 0$ {\bf then return} $\ll$ no component of 
+${\cal O}_{d}$ is rational $\gg$  {\bf else} \\
+\> \> \> 3.1. \> Determine a rational parametrization 
+${\cal R}=(R_{1},R_{2})$ of  ${\cal G}_{\cal P}$. \\
+\> \> \> 3.2. \> {\bf Return} $\ll {\cal O}_{d}$ is rational and  
+${\cal Q}={\cal P}(R_{1})+ \frac{2\,d\,R_{2}}{n_{2}(R_{1})(R^2_{2}
++1)}{\cal N}(R_{1})$ parametrizes ${\cal O}_{d}$ $\gg$.
+\end{tabbing}
+\footnotesize
+\begin{thebibliography}{20}
+\bibitem{} Abhyankar S.S, Bajaj C.L., (1988), {\it Automatic 
+parametrization of rational curves and surfaces III: Algebraic plane 
+curves}. Computer Aided Geometric Design {\bf 5}, 390-321.
+\bibitem{} Abhyankar S., (1990), {\it Algebraic Geometry for scientists 
+and engineers}. Mathematical surveys and monographs, 35. A.M.S. 1990.
+\bibitem{} Alonso C., Guti\'errez J., Recio T., 
+{\it Reconsidering algorithms for real parametric curves}. To appear  
+in J. AAECC.
+\bibitem{} Alonso C., Guti\'errez J., Recio T., (1994), {\it FRAC: 
+A Maple package for computing in the rational function field $K(X)$}. 
+MapleV: Mathematics and Its Applications, pp. 107-115. (Ed. R.J. Lopez)  
+Birkhauser (1994).
+\bibitem{} Bajaj C., Royappa A. V., (1992), {\it Finite 
+representations of real parametric curves and surfaces}. Technical 
+Report, CAPO Report CER-92-28. Purdue University, september 1992.
+\bibitem{} Cox D., Little J., O'Shea D., (1992), {\it Ideals, 
+varieties and algorithms (An Introduction to Computational Algebraic 
+Geometry and Commutative Algebra)}. Springer Verlag
+\bibitem{} Farouki R. T., Neff C.A. (1990), {\it Analytic properties of 
+plane offset curves}. Comput. Aided Geom. Design {\bf 7} 83-99.
+\bibitem{} Farouki R. T., Neff C.A. (1990), {\it Algebraic properties of 
+plane offset curves}. Comput. Aided Geom. Design {\bf 7} 100-127.
+\bibitem{} Guti\'errez J., Recio T., (1992), {\it Rational 
+function decomposition and Groebner basis in the parametrization 
+of a plane curve}. LATIN 92. L.N.C.S. 583, Springer-Verlag. 1992, 
+pp. 231-246.
+\bibitem{} Gebauer R., Kalkbrener M., Wall B. and Winkler F.,(1991), 
+{\it CASA: A Computer Algebra Package for Constructive Algebraic 
+Geometry}. In S. M. Watt  (ed.) Proc. ISSAC'91, 403-410, ACM Press.
+\bibitem{} Hoffmann C., (1989) {\it Geometric and Solid Modeling: An 
+Introduction}. Morgan Kaufmann, USA (1989). 
+\bibitem{} Hoffman C. (1990), {\it Algebraic and Numerical Techniques for 
+Offsets and Blends}. W. Dahmen et al. (eds.), Computation of Curves and 
+Surfaces, (Kluwer Ac. Publ.) 499-528.
+\bibitem{} van Hoeij M. (1994), {\it Computing parametrizations of 
+rational algebraic curves}. In J. von zur Gathen (ed.), Proc. ISSAC94 
+187-190, ACM Press.
+\bibitem{} M\"nuk M., Sendra J.R., Winkler F. (1993), {\it On the 
+Complexity of Parametrizing Curves}. Techn. Rep. RISC 93-51, Research 
+Inst. Symb. Comp., Univ. Linz.
+\bibitem{} Pottman H.,  (1994), {\it Rational curves and surfaces with 
+rational offsets}. Tech. Rep. Nr.1. Institut f\"ur Geometrie, Technische. 
+Univ. Wien.
+\bibitem{} Recio T., J.R. Sendra (1995) {\it Real Reparametrizations of 
+Real Curves}. Technical Report. Dep. Matem\'aticas, Universidad de 
+Cantabria.
+\bibitem{} Schicho J., (1992) {\it On the choice of pencils in 
+the parametrization of curves}. J. Symbolic Computation 
+{\bf  14,} 557-576.
+\bibitem{} Sederberg, T.W. (1986), {\it Improperly parametrized 
+rational curves}. Computer Aided Geometric Design {\bf 3}, 67-75.
+\bibitem{} Sendra J.R., Sendra J. (1995), {\it On the  Rationality of 
+Offset  Curves}. Techn. Rep. RISC 95-02, Research 
+Inst. Symb. Comp., Univ. Linz.
+\bibitem{} Sendra J.R., Sendra J. (1995), {\it Curvas Offset Racionales}. 
+Preprint.
+\bibitem{} Sendra J.R., Winkler F. (1991), 
+{\it Symbolic Parametrization of Curves}. J. Symbolic Computation 
+{\bf 12/ 6,} 607-631.
+\bibitem{} Sendra J.R., Winkler F. (1994), 
+{\it Optimal Parametrization of Algebraic Curves.} 
+Techn. Rep. RISC 94-65, Research Inst. Symb. Comp., Univ. Linz.
+\bibitem{} Teitelbaum J. (1989), {\it On the Computational Complexity of 
+the resolution of plane curve singularities}. ISSAC-89 LNCS no. 358, 
+pp. 285-292. Springer Verlag
+\bibitem{} Walker R.J. (1950), {\it  Algebraic Curves.} Princeton 
+Unversity Press.
+\end{thebibliography}
+\end{document}

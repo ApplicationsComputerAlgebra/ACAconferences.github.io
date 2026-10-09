@@ -1,0 +1,38 @@
+                  Local Approximation Study of Johnson's
+                  Method for 2D Elasticity Problems
+
+                  V.G. Ganzha*) and E.V. Vorozhtsov
+
+             Institute of Theoretical and Applied Mechanics,
+          Russian Academy of Sciences, Novosibirsk 630090, Russia
+          -----------------------
+          *) At the moment, the University of Kassel, Kassel D 34127, Germany
+
+    The Lagrangian finite-difference method, which was developed by G.R. Johnson
+in 1976 for the numerical solution of two-dimensional high velocity impact
+problems within the framework of the elasticity and plasticity theories, has
+gained a widespread acceptance. We investigate the local approximation of this
+method with the aid of the computer algebra systems. The problem under
+consideration involves tremendous intermediate expressions. We present an
+algorithm of decomposition of a complex approximation problem into a finite
+set of simpler subproblems whose union provides the solution of the original
+approximation problem. The results obtained with the aid of this algorithm
+show that the Johnson's method has no approximation in the case when the
+accelerations of the nodes are computed on the basis of four triangular
+elements surrounding a given node of the triangular mesh. In the case of six
+elements and of the uniform triangular mesh, the approximation takes place
+only if the lumped mass in the given node is equal to two thirds of the sum of
+masses of the six elements having their vertices at the given node. In this
+particular case, the Johnson's method has the second order of approximation
+in space and the first order of approximation in time. But in the case of
+irregular, distorted Lagrangian mass elements the Johnson's method has no
+approximation of the original elasticity equations also in the case of the
+six triangular elements surrounding the given node of the mesh. It is shown
+that the first-order approximation in the case of irregular elements takes
+place only in the case of small deviations of the shapes of the elements from
+their regular shapes. The validity of the obtained results was checked by
+using two different computer algebra systems: REDUCE and Maple.
+It follows from the results obtained that the Johnson's method as applied to
+high-velocity impact problems should be augmented by an algorithm for the
+local mesh rezoning in the subdomains of strong distortions of the Lagrangian
+mass elements to ensure the local approximation.

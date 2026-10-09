@@ -1,0 +1,279 @@
+\documentstyle[12pt]{article}
+
+\title{Verification of Knowledge Based Systems \\ with Commutative Algebra
+       and \\ Computer Algebra Techniques}
+
+\author{Eugenio Roanes-Lozano \thanks{eroanes@fi.upm.es}
+        \and
+   Luis M. Laita
+   \thanks{laita@fi.upm.es \newline Partially supported by DGICYT of Spain} }
+
+\date{}
+%---------------- Nuevos caracteres ------------
+\newcommand{\RR}{\mbox{{\sl I}}\!\mbox{{\sl R}}}      % R de n£meros reales
+\newcommand{\ZZ}{\mbox{{\sl Z}}\!\!\mbox{{\sl Z}}}  % Z de n£meros reales
+%---------------- Comienzo documento -----------
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-1.2cm}
+
+\begin{center}
+  {\small * Dept. Algebra, Universidad Complutense de Madrid  \\
+    \dag \ Dept. Artificial Intelligence,
+           Universidad Polit\'ecnica de Madrid}
+\end{center}
+
+\begin{center}
+  {\bf Keywords: Verification of KBSs, Boolean Algebras, Ideals,
+                 Applications of Computer Algebra Systems}
+\end{center}
+
+%************************
+%*       ABSTRACT       *
+%************************
+
+\section*{Abstract}
+\noindent In a previous paper [LR1], given a propositional Boolean algebra,
+an isomorphic polynomial Boolean algebra ${\cal A}$, that is also a k-algebra,
+was constructed.
+Ideals and filters were principal, and preserved by this isomorphism.
+Moreover, the ideals of the polynomial Boolean algebra are the same
+as those of the polynomial k-algebra.  \\
+\indent Later, this construct was used to build an algebraic model of
+Knowledge Based Systems
+(KBSs) based on bivalent logic [LR3]. To do so it is enough to consider
+the natural epimorphism onto ${\cal A}/J$, where $J$ is the ideal generated
+by the polynomial images of the negation of the rules, facts
+and constraints of the KBS. \\
+\indent With this modelization, the forward reasoning inconsistency
+of a given KBS can be
+interpreted as the degeneracy of the polynomial residual class
+ring ${\cal A}/J$ into $\{0\}$ (i.e., $J=<\!1\!>$).   \\
+\indent An implementation in a Computer Algebra System (Maple V)
+has been developed.
+
+\vspace{2cm}
+
+%************************
+%*    INTRODUCCION      *
+%************************
+
+\section{Introduction}
+
+    When a Knowledge Based System (KBS), usually known as Expert System, is
+  constructed, the expert (a human) gives a list of rules, facts and
+  constraints. The knowledge of the expert would be supposed not to lead to
+  any contradiction. Nevertheless, structural problems actually appear in most
+  KBSs. Therefore much attention has been paid lately to check the
+  reliability of the KBSs, because safety is the main goal in some
+  applications, as clinical practice guidelines (diagnosis in Medicine) and
+  decision taking in nuclear power-stations. The celebration of more than 20
+  international conferences and workshops on this topic since 1988 testify
+  its importance.  \\
+\indent  Checking the forward reasoning consistency of a KBS is a very hard
+ and still not completely closed problem. Usually the KBS is broken into small
+ pieces (that look independent) and they are manually checked using diagrams.
+ Other techniques use random checking and Petri-nets checking.   \\
+\indent  In our approach we give an interpretation of forward reasoning
+  consistency using ideals of Boolean algebras. Then we construct an
+  isomorphic polynomial K-algebra and use elementary techniques from Theory of
+  Ideals (now ideals of a polynomial ring) to check the logic consistency of
+  the knowledge of the expert (in an exhaustive way).           \\
+\indent Although the ideal membership problem is involved, due to the kind
+  of polynomial rings involved, Gr\"obner Basis are not used.
+
+
+
+%************************
+%*    SECCION 2         *
+%************************
+
+\section{Implementation in Maple V}
+
+If the propositional variables of the propositional Boolean algebra
+are $P, Q ,...,$ $R$, the class ring
+  ${\cal A}$ is $(\ZZ/2\ZZ)[p,q,...,r]/\!<\!p^2-p,q^2-q,...,r^2-r\!>$ .
+To move from the polynomial ring $(\ZZ/2\ZZ)[p,q,...,r]$
+to the class ring ${\cal A}$ can be implemented using Maple's command
+{\sf convert( \ ,mod2)} (from the point of view of simplification, it is
+enough to reduce modulus 2 both coefficients and powers).  \\
+\indent Logical operators can be implemented very easily as
+{\bf \&or}, {\bf \&and} and {\bf \&neg} just taking into account the
+corresponding arithmetic definitions. For example:
+
+\begin{flushleft}
+{\sf
+$\rhd$ '\&or':=proc(alfa,beta)                                  \\
+$\rhd$ \ \ \ \ convert(expand(alfa+beta+alfa*beta),mod2);           \\
+$\rhd$ end;                                                     \\
+}
+\end{flushleft}
+
+The procedure baseideal, that returns the generator element of any given
+ideal (let us remember that all ideals are principal ones), is also
+very easy to implement in Maple V.
+
+\begin{flushleft}
+{\sf
+$\rhd$ baseideal:=proc(S : list)                                   \\
+$\rhd$\ \ \ \ local i,gen;                                              \\
+$\rhd$\ \ \ \ gen := 0;                                                 \\
+$\rhd$\ \ \ \ for i to nops(S) do
+              gen := convert(expand(gen \&or op(i,S)),mod2) od;      \\
+$\rhd$\ \ \ \ gen;                                                      \\
+$\rhd$\ \ end;
+}
+\end{flushleft}
+
+
+\indent The implementation of the criteria just checks if the generator
+element of $J$ is equal to 1 or not.
+
+
+
+%************************
+%*    SECCION 3         *
+%************************
+
+\section{Complexity}
+
+As we say above, the problem is very hard: double-exponential space
+consuming (with respect to the number of variables or rules) in the
+worse case (with our approach).   \\
+\indent Let us observe that, if the Boolean
+algebra has $n$ propositional
+variables, then it has $2^n$ atoms and $2^{(2^n)}$ elements.   \\
+\indent Anyway the implementation can handle KBSs (such that the ideal $J$
+is generated by polynomials not involving many different propositional
+variables) in a 486-PC.
+
+
+
+%************************
+%*    CONCLUSIONES      *
+%************************
+
+\section{Final Remark}
+
+    We think that this is a very innovative approach in the use of elementary
+  techniques that are of common usage in Algebraic Geometry and in Computer
+  Algebra to an important problem of Artificial Intelligence.  \\
+    Curiously, handling Boolean interpretations of propositional Boolean
+  rings is more frequent in the work of the pioneers of Logic than
+  in modern approaches.
+  CA techniques have made possible to
+  use in real problems certain known results that were almost curiosities,
+  because they were too laborious (Sturm's Theorem, Wu's
+  pseudoremainder method,...).
+  We think that, in a similar way, nowadays CAS can produce a revival of
+  polynomial approaches to certain problems in Logic.
+
+
+
+%**************
+% BIBLIOGRAFIA
+%**************
+
+\section*{Literature}
+
+\begin{itemize}
+
+\item[{\bf [dA]}]  {\bf A. de Antonio}: {\it Una interpretaci\'on algebraica
+            de la verificaci\'on de sistemas basados en el conocimiento}.
+            Doctoral Dissertation
+            (Directors: {\bf L. M. Laita} and {\bf A. P\'erez}).
+            Universidad Polit\'ecnica de Madrid, 1994.
+
+\vspace{-1.5mm}
+
+\item[{\bf [C1]}] {\bf B.W. Char et al.}:
+           {\it Maple V Language Reference Manual}.
+           Sprin\-ger-Verlag, 1991.
+
+\vspace{-1.5mm}
+
+\item[{\bf [C2]}] {\bf B.W. Char et al.}:
+           {\it Maple V Library Reference Manual}.
+           Sprin\-ger-Verlag, 1991.
+
+\vspace{-1.5mm}
+
+\item[{\bf [C3]}] {\bf B.W. Char et al.}:
+           {\it First Leaves: A Tutorial Introduction
+           to Maple}. Springer-Verlag, 1991.
+
+\vspace{-1.5mm}
+
+\item[{\bf [GC]}] {\bf K.O. Geddes, S.R. Czapor, G. Labahn}: {\it Algorithms
+               for Computer Algebra}. Kluwer Academic Pub., 1992.
+
+\vspace{-1.5mm}
+
+\item[{\bf [Ha]}] {\bf P.R. Halmos}: {\it Lectures on Boolean Algebras}.
+                             Springer-Verlag, 1974.
+
+\vspace{-1.5mm}
+
+\item[{\bf [He]}] {\bf A. Heck}: {\it Introduction to Maple}.
+                 Springer-Verlag, 1993.
+
+\vspace{-1.5mm}
+
+\item[{\bf [Hr]}] {\bf H. Hermes}: {\it La teor\'{\i}a de ret\'{\i}culos y su
+               aplicaci\'on a la l\'ogica mate\-m\'a\-ti\-ca}. Conf. Mat. VI.
+               CSIC-Madrid, 1963.
+
+
+\vspace{-1.5mm}
+
+\item[{\bf [LR1]}] {\bf L. M. Laita, L. de Ledesma, E. Roanes L.,
+                  E . Roanes M.}:
+               {\it An Interpretation of the Propositional Boolean Algebra
+               as a k-algebra. Effective Calculus}. In: {\bf J. Campbell,
+               J. Calmet} (editors): {\it Proceedings of the Second
+               International Workshop/Conference on Artificial Intelligence
+               and Symbolic Mathematical Computing (AISMC-2)}.
+               Lecture Notes in Computer Science.
+               Springer-Verlag. To appear.
+
+\vspace{-1.5mm}
+
+\item[{\bf [LR2]}] {\bf E. Roanes L., L. M. Laita}:
+               {\it Verification of Knowledge Based Systems: An Algebraic
+               Interpretation. Effective calculus}.
+               Preprint.
+
+\vspace{-1.5mm}
+
+\item[{\bf [LR3]}] {\bf E. Roanes L., L. M. Laita, E . Roanes M.}:
+               {\it Maple V in A.I.: The Boolean Algebra Associated to a
+               KBS.} Computer Algebra Nederland, Nieuwsbrief 14,
+               abril 1995 (pp. 65-70).
+
+\vspace{-1.5mm}
+
+\item[{\bf [LC]}] {\bf L. M. Laita, J. Couto, L. de Ledesma,
+                  A. Fern\'andez-Mar\-ga\-rit}:
+               {\it Formal Model for Knowledge-Based System Verification}.
+               International Journal of Intelligent
+               Systems, vol. 9,9, 1994 (pp. 769-786).
+
+\vspace{-1.5mm}
+
+\item[{\bf [Mo]}] {\bf D. Monk}: {\it Handbook of Boolean Algebras}.
+                        North-Holland, 1989.
+
+\vspace{-1.5mm}
+
+\item[{\bf [MNG]}] {\bf A. Montes, M. Noguera, A. Grau}: {\it Apuntes de
+           Maple V}. Universitat Polit\`ecnica de Catalunya, 1994.
+
+\end{itemize}
+
+
+
+\end{document}

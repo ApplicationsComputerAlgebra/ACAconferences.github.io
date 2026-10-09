@@ -1,0 +1,27 @@
+# Created by rsalamon@yucca on Thu Jul  4 13:37:25 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Aslaksen.html
+Path=0/conference/IMACS96/skeletons/Wester/Aslaksen.html
+
+Name=Bernardin.html
+Path=0/conference/IMACS96/skeletons/Wester/Bernardin.html
+
+Name=Graebe.html
+Path=0/conference/IMACS96/skeletons/Wester/Graebe.html
+
+Name=Postel.html
+Path=0/conference/IMACS96/skeletons/Wester/Postel.html
+
+Name=Robidoux.html
+Path=0/conference/IMACS96/skeletons/Wester/Robidoux.html
+
+Name=Steinberg.html
+Path=0/conference/IMACS96/skeletons/Wester/Steinberg.html
+
+Name=Wester.html
+Path=0/conference/IMACS96/skeletons/Wester/Wester.html
+
+Name=Zimmermann.html
+Path=0/conference/IMACS96/skeletons/Wester/Zimmermann.html
+

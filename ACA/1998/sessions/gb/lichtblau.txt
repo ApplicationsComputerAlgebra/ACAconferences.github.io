@@ -1,0 +1,20 @@
+     "Practical Computations with Gr\"obner Bases"
+
+     Daniel Lichtblau
+     Wolfram Research, Incorporated
+     100 Trade Centre Dr.
+     Champaign, IL, 61820
+     USA
+     E-mail:danl@wolfram.com
+	      
+
+Gr\"obner bases have become a pervasive tool in computational mathematics.
+In this paper we show several sorts of Gr\"obner basis computations in
+Mathematica. We discuss computations of approximate Gr\"obner bases, with
+applications to solving systems and implicitization. We also show how to
+use the built-in GroebnerBasis function to compute polynomial
+greatest-common-divisors over various fields, series inverses, syzygy
+modules, and more. Much of this is by now classical; the emphasis is not
+on new results but rather on effective use of off-the-shelf technology.
+We will point out areas where existing functionality needs enhancement,
+and note some directions for future work.

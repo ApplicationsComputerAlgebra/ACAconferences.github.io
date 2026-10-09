@@ -1,0 +1,15 @@
+Title: Differential Elimination Algorithms and Deformations of Symmetric
+       Differential Systems
+
+Author: Greg Reid
+www.orrca.on.ca/~reid
+Greg.Reid@uwo.ca
+
+Affiliation: University of London, Ontario
+
+Abstract: 
+
+Novel approaches, specialized C-implementations, probabilistic and classical
+symbolic differential elimination algorithms are discussed.  Determination of
+approximate symmetry groups and algebraic-geometric properties of differential
+systems are also discussed.

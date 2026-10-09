@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Molecular Orbital integrals using MAPLE in MATLAB</TITLE>
+   <META NAME="description" CONTENT="No Title">
+   <META NAME="keywords" CONTENT="wang">
+   <META NAME="resource-type" CONTENT="document">
+   <META NAME="distribution" CONTENT="global">
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (X11; I; Linux 2.0.0 i586) [Netscape]">
+   <META NAME="Description" CONTENT="Molecular Orbital integrals using MAPLE in MATLAB">
+   <META NAME="Keywords" CONTENT="MAPLE MATLAB">
+</HEAD>
+<BODY BGCOLOR=white LANG="EN">
+
+<H3 ALIGN=CENTER>Molecular Orbital integrals using MAPLE in MATLAB</H3>
+
+<H4 ALIGN=CENTER>Jun Bai Wang </H4>
+
+<CENTER><P>Department of Physics, University of Bergen, Bergen, Norway</P></CENTER>
+
+<P>Time-dependent Schr&ouml;dinger equation for description of atomic collisions
+The approach to atomic collisions used in this work is called semiclassical,
+referring to the fact that only the electrons are treated as quantal particles,
+while the atomic motion is simulated by a classical trajectory. This leads
+to time-dependent Schr&ouml;dinger equation for the active electrons, in
+the present case one active electron. The matrix formulation of this problem
+arises from expansion of the unknown electron wavefunction <IMG SRC="img1.gif" ALT="tex2html_wrap_inline47" HEIGHT=24 WIDTH=47 ALIGN=CENTER>
+in a set of basis functions <IMG SRC="img2.gif" ALT="tex2html_wrap_inline49" HEIGHT=24 WIDTH=33 ALIGN=CENTER>
+, much in analogy with Fourier series or expansions using orthogonal polynomials
+</P>
+
+<P><IMG SRC="img3.gif" ALT="equation6" HEIGHT=22 WIDTH=500 ALIGN=BOTTOM>
+</P>
+
+<P>The unknown quantities to be found are the expansion coefficients, which
+form a vector. In this formulation, the time-dependent Schr&ouml;dinger
+equation </P>
+
+<P>&nbsp; <IMG SRC="img4.gif" ALT="equation10" HEIGHT=32 WIDTH=500 ALIGN=BOTTOM>
+</P>
+
+<P>is replaced by a set of coupled differential equations, which are conveniently
+expressed by matrix notation </P>
+
+<P><IMG SRC="img5.gif" ALT="displaymath51" HEIGHT=77 WIDTH=428 ALIGN=BOTTOM>
+</P>
+
+<P>In practical work, the most demanding part of the analysis is the evaluation
+of matrix elements of the hamitonian between the basis states. This contribution
+describes one particular task, related to finding instantaneous eigenstates
+of the hamiltonian. The problem is close to finding the molecular orbitals
+in the so called LCAO (linear combination of atomic orbitals) approach.
+</P>
+
+<P>The method is based on earlier work of Hansen and Kocbach, using momentum
+wavefunctions for hydrogen-like states on each of the two colliding nuclei
+and obtaining analytic expressions for the matrix elements. These expressions
+are in the form of text strings, which are directly used as programs for
+numerical evaluation. </P>
+
+<P>The setup of the problem is performed by a MATLAB program, which also
+calls the integrated MAPLE kernel for symbolic manipulations and evaluations.
+Finally, the same MATLAB program also uses the above mentioned text representations
+of the analytic formulae to perform numeric evaluations. This is made possible
+by MATLAB's function eval() (this takes any text and treats it as a program).
+The data are then further treated by the numerical part of MATLAB. </P>
+
+<P>MATLAB is first of all optimized for numerical calculations, so that
+the presented approach is quite efficient with respect to the speed of
+numerical calculations. </P>
+
+<ADDRESS>For more information <A HREF="mailto:junbai@kvark.fi.uib.no">junbai@kvark.fi.uib.no</A>.
+</ADDRESS>
+
+</BODY>
+</HTML>

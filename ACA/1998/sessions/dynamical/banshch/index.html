@@ -1,0 +1,3193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="banshch">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="banshch.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<DIV ALIGN="CENTER">
+<B>Computer algebra and problems of motion stability</DIV>
+</B>
+<DIV ALIGN="CENTER"><B>
+Banshchikov Andrej V., Bourlakova Larissa A.  </B></DIV>
+<DIV ALIGN="CENTER"><B>
+Institute of System Dynamics and Control Theory SB RAS</B></DIV>
+<DIV ALIGN="CENTER"><B>
+134, Lermontov St., Irkutsk, 664033, Russia</B></DIV>
+<DIV ALIGN="CENTER"><B>
+E-mail : irteg@icc.ru </B></DIV>
+<P>
+<B><A NAME="tex2html1"
+ HREF="banshch.ps.gz">Full paper in compressed Postscript *.ps.gz</A>
+</B>
+<P>
+<B>The paper describes the algorithms for investigation of stability of
+mechanical systems. These algorithms are implemented with the aid of
+the computer algebra system (CAS) in the software package "STABILITY".
+Package investigates stability and stabilization of mechanical systems
+in both pure symbolic and numerical-symbolic forms [1].
+ </B>
+<P>
+<B>Let's consider the stability task for trivial solution of matrix
+differential equation
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+M \ddot x\ + (2G+D)\dot x\ + (K+P)x\ =Q(x,\dot x )\ , \eqno (1)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="477" HEIGHT="36"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}M \ddot x\ + (2G+D)\dot x\ + (K+P)x\ =Q(x,\dot x )\ , \eqno (1) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>where </B>
+<!-- MATH: $M=M^{T}>0\ ,\ D=D^{T}\ ,\ G=-G^{T}\ ,\ K=K^{T}\ , \ P=-P^{T}\ -$ -->
+<IMG
+ WIDTH="541" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$ M=M^{T}>0\ ,\ D=D^{T}\ ,\ G=-G^{T}\ ,\ K=K^{T}\ , \ P=-P^{T}\ - $"><B>are </B>
+<!-- MATH: $(n\times n)$ -->
+<IMG
+ WIDTH="69" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$(n\times n)$"><B> matrices of dissipative,
+gyroscopic, potential and nonconservative (circulatory) forces;
+</B>
+<!-- MATH: $\ Q(x,\dot x)\ -$ -->
+<IMG
+ WIDTH="96" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\ Q(x,\dot x)\ -$"><B> is single-column matrix of nonlinear forces, </B>
+<!-- MATH: $\ Q(0,0)=0\$ -->
+<IMG
+ WIDTH="114" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\ Q(0,0)=0\ $"><B>.
+</B>
+<P>
+<B>This presentation is possible for differential equations of perturbed
+movement in the neighborhood of stationary motion or invariant set of
+stationary motions.  Algorithm to reduce equations to form (1) and
+algorithm to classify nonlinear forces </B>
+<!-- MATH: $\ Q(x,\dot x )\$ -->
+<IMG
+ WIDTH="80" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\ Q(x,\dot x )\ $"><B> suitable for
+implementation with CAS are described in [2].  There are three specific
+groups of the tasks.
+</B>
+<P>
+<B><B>Investigation of stability in the first approximation.</B>
+The question of asymptotical stability or instability can be investigated
+by studying of the first approximation equations  
+( when in eq. (1) </B>
+<!-- MATH: $\ Q(x,\dot x )=0$ -->
+<IMG
+ WIDTH="110" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\ Q(x,\dot x )=0$"><B>) ,
+if we'd use classic Lyapunov's theorems.
+</B>
+<P>
+<B>Step 1. Construct characteristic equation of the system (1):
+ </B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+det\left(M \lambda^{2}\ + (2G+D)\lambda\ + (K+P)\ \right)=0\ . \eqno (2)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="473" HEIGHT="41"
+ SRC="img8.gif"
+ ALT="\begin{displaymath}det\left(M \lambda^{2}\ + (2G+D)\lambda\ + (K+P)\ \right)=0\ . \eqno (2)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>Coefficients of characteristic polynomial are calculated in symbolic or
+numerical-symbolic form.  In the latter case they contain certain parameters.
+Values of these parameters must be selected from the condition of
+asymptotical stability.
+</B>
+<P>
+<B>Step 2. Analyze the structure of the polynomial (2).
+</B>
+<P>
+<B>Step 2.1. If polynomial (2) contains all powers of </B><IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\lambda $"><B> ,
+then we construct the Hurwitz matrix and write out all Routh-Hurwitz
+conditions and their analogies.
+It gives us necessary and sufficient conditions that all roots of (2)
+have negative real parts.  If these conditions are met, then the motion
+is asymptotically stable, independently from nonlinearities </B>
+<!-- MATH: $\ Q(x,\dot x )\$ -->
+<IMG
+ WIDTH="80" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\ Q(x,\dot x )\ $"><B>.
+These condition comprise the system of algebraic inequalities of system
+parameters (matrix elements of equation (1), amplification coefficients
+in linear controlling forces, etc).  Inequalities are written out in either
+symbolic or numerical-symbolic form.
+A description of some algorithms for solving the systems
+of algebraic inequalities is given in [2].
+The software implementation of these algorithms allows us to solve following
+tasks:
+</B>
+<P>
+<B>
+a). Finding the domains, which satisfy the inequalities
+of one-parameter polynomials with numerical coefficients
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f_ {i} (p) = a_{n}^{(i)}\ p^n + a_{n-1}^{(i)}\ p^{n-1} +
+\ldots + a_0^{(i)}\ \geq 0 \ \ \ \ (\leq 0)\ ,
+\ \ \ (\ i = 1,\ldots, n_1\ )\ . \eqno (3)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="578" HEIGHT="62"
+ SRC="img10.gif"
+ ALT="\begin{displaymath}f_ {i} (p) = a_{n}^{(i)}\ p^n + a_{n-1}^{(i)}\ p^{n-1} +
+\ldo...
+...\ \ \ \ (\leq 0)\ ,
+\ \ \ (\ i = 1,\ldots, n_1\ )\ . \eqno (3) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>The solution (the domain obtained) is represented as a union of
+disjoint intervals of the numerical axis.
+</B>
+<P>
+<B>
+b). Search and graphical constructing of two-dimensional
+domains corresponding to a system of algebraic inequalities
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f_{i}\ (p_1\ ,\ p_2) \ \geq 0 \ \ \ \ \ (\leq 0) \ ,
+\ \ \ (\ i = 1,\ldots,n_2\ ) \ , \eqno (4)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="486" HEIGHT="36"
+ SRC="img11.gif"
+ ALT="\begin{displaymath}f_{i}\ (p_1\ ,\ p_2) \ \geq 0 \ \ \ \ \ (\leq 0) \ ,
+\ \ \ (\ i = 1,\ldots,n_2\ ) \ , \eqno (4) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B>
+where </B><IMG
+ WIDTH="37" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\ p_1\ $"><B> is the parameter reckoned on the abscissa axis,
+and </B><IMG
+ WIDTH="37" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\ p_2\ $"><B> is the parameter reckoned on the axis of ordinates.
+The boundaries of variation of the parameters </B><IMG
+ WIDTH="37" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\ p_1\ $"><B> and  </B><IMG
+ WIDTH="37" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\ p_2\ $"><B>for constructing 2D - domains are determined as the solutions of problem (a).
+</B>
+<P>
+<B>Step 2.2. If in polynomial (2) some powers of </B><IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\lambda $"><B> are absent,
+we must conclude that the system is structurally unstable.
+ </B>
+<P>
+<B>Step 2.2.1. Let in polynomial (2)  all coefficients be
+ </B>
+<!-- MATH: $\ a_{2k-1}=0\ \ (k=1,\ldots , n) .$ -->
+<IMG
+ WIDTH="228" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\ a_{2k-1}=0\ \ (k=1,\ldots , n) .$"><B>This is always true if in linear part of the system are present
+(i) positionary forces (potential or non-conservative) or
+(ii) together with potential forces are present gyroscopic ones.
+Stability of such a system is possible only in a critical case when
+all roots of characteristic polynomial are imaginary or(and) zero.
+Let's substitute </B>
+<!-- MATH: $\lambda ^{2}=\nu \$ -->
+<IMG
+ WIDTH="69" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$ \lambda ^{2}=\nu \ $"><B> in equation (2).  For resulting
+equation of power </B><I>n</I><B> let's write out the conditions when all
+roots of the polynomial are negative (different) real numbers [3].
+This way we get the stability conditions of linear system and necessary
+conditions of stability of nonlinear system (1).
+ </B>
+<P>
+<B>Direct calculation of characteristic equation (2) requires
+us to calculate large determinants.  Thus it's preferable to use some methods
+of decomposition.
+Let's suppose that lagrangian </B><IMG
+ WIDTH="32" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\ L\ $"><B> of the system allows presentation in the
+form
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+L(x_{1},\ldots , x_{n},\dot {x}_{1},\ldots , \dot {x}_{n}) =
+\tilde {L} \ +\ \tilde{\tilde{L}}\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="304" HEIGHT="36"
+ SRC="img17.gif"
+ ALT="\begin{displaymath}L(x_{1},\ldots , x_{n},\dot {x}_{1},\ldots , \dot {x}_{n}) =
+\tilde {L} \ +\ \tilde{\tilde{L}}\ ,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\rm where} \ \ \ \tilde{L}=
+\tilde{ L}(x_{1},\ldots , x_{m},x_{m+1},\ldots , x_{k},\dot {x}_{1},\ldots ,
+\dot {x}_{m},\dot {x}_{m+1},\ldots , \dot {x}_{k})\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="560" HEIGHT="36"
+ SRC="img18.gif"
+ ALT="\begin{displaymath}{\rm where} \ \ \ \tilde{L}=
+\tilde{ L}(x_{1},\ldots , x_{m},...
+...\ldots ,
+\dot {x}_{m},\dot {x}_{m+1},\ldots , \dot {x}_{k})\ ,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\tilde{ \tilde{L}}=
+\tilde{\tilde{ L}}(x_{m+1},\ldots , x_{k},x_{k+1},\ldots , x_{n},\dot {x}_{m+1},\ldots ,
+\dot {x}_{k},\dot {x}_{k+1},\ldots , \dot {x}_{n})\ . \eqno(5)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="563" HEIGHT="36"
+ SRC="img19.gif"
+ ALT="\begin{displaymath}\tilde{ \tilde{L}}=
+\tilde{\tilde{ L}}(x_{m+1},\ldots , x_{k}...
+...\dot {x}_{k},\dot {x}_{k+1},\ldots , \dot {x}_{n})\ . \eqno(5)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>For the lagrangian (5) let's construct Lagrange equations of second kind,
+that can be transformed to form (1).  When constructing characteristic
+equation for the system, where lagrangian is quadratic with respect to
+coordinates and velocities, we must calculate determinants of dimension
+</B>
+<!-- MATH: $\ (k-m),\ (m), \ (n-k)\ .$ -->
+<IMG
+ WIDTH="216" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\ (k-m),\ (m), \ (n-k)\ .$"><B> Indeed, considering (5), characteristic matrix
+</B><IMG
+ WIDTH="35" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\ B\ $"><B> of the system has blocked structure:
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+B=\left (\begin{array}{ccccc}
+k-m & m & n-k &          \\
+ \overbrace{B_{11}} & \overbrace{B_{12}} & \overbrace{B_{13}} & \} & k-m \\
+ B_{21} & B_{22}& 0 & \} & m \\
+ B_{31} & 0 & B_{33} & \} & n-k
+ \end{array} \right )\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="359" HEIGHT="114"
+ SRC="img22.gif"
+ ALT="\begin{displaymath}B=\left (\begin{array}{ccccc}
+k-m & m & n-k & \\
+\overbrac...
+... \\
+B_{31} & 0 & B_{33} & \} & n-k
+\end{array} \right )\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>If matrices </B><IMG
+ WIDTH="49" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$\ B_{22}\ $"><B> and </B><IMG
+ WIDTH="49" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$\ B_{33}\ $"><B> are nondegenerate, then
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+det B=\left |\ B_{11}\ -\ B_{13}B^{-1}_{33}B_{31}\ -
+\ B_{12}B^{-1}_{22}B_{21}\ \right | \left |B_{22}\right | \left |B_{33}\right | .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="480" HEIGHT="41"
+ SRC="img25.gif"
+ ALT="\begin{displaymath}det B=\left \vert\ B_{11}\ -\ B_{13}B^{-1}_{33}B_{31}\ -
+\ B_...
+...left \vert B_{22}\right \vert \left \vert B_{33}\right \vert .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>This formula can be generalized for the case when the matrix form of
+characteristic equation has the form
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left |\begin{array}{ccccc}
+B_{11} & B_{12} & B_{13} & \ldots & B_{1N} \\
+B_{21} & B_{22} & 0 & \ldots & 0 \\
+B_{31} & 0 & B_{33} & \ldots & 0 \\
+\ldots      & \ldots   & \ldots  & \ldots & \ldots  \\
+B_{21} & 0 & 0 & \ldots & B_{NN}
+\end{array} \right | \ =\ 0 .\ \  \eqno(6)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="445" HEIGHT="129"
+ SRC="img26.gif"
+ ALT="\begin{displaymath}\left \vert\begin{array}{ccccc}
+B_{11} & B_{12} & B_{13} & \l...
+...\ldots & B_{NN}
+\end{array} \right \vert \ =\ 0 .\ \ \eqno(6)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>Here </B>
+<!-- MATH: $\ B_{ii}\ (i=1,\ldots , \ N)\$ -->
+<IMG
+ WIDTH="176" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\ B_{ii}\ (i=1,\ldots , \ N)\ $"><B> are </B>
+<!-- MATH: $\ (n^{i}\times n^{i})\$ -->
+<IMG
+ WIDTH="93" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\ (n^{i}\times n^{i})\ $"><B>matrices </B>
+<!-- MATH: $\ ( \ \sum n_{i}=n\ ) .$ -->
+<IMG
+ WIDTH="122" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$\ ( \ \sum n_{i}=n\ ) .$"><B>For example, this is the structure of characteristic polynomial for
+differential equations, describing a motion of system of connected bodies
+in potential field.  If </B>
+<!-- MATH: $\ det B_{ii}\neq 0\ \ \ (i=2,\ldots , N)\ ,$ -->
+<IMG
+ WIDTH="250" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\ det B_{ii}\neq 0\ \ \ (i=2,\ldots , N)\ , $"><B> then (6)
+can be written out in the form
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left |\ B_{11}\ -\ B_{1N}B^{-1}_{NN}B_{N1}\ - \ldots \ -
+\ B_{12}B^{-1}_{22}B_{21}\ \right | \left |B_{22}\right |\ldots
+\left |B_{NN}\right | =0\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="558" HEIGHT="41"
+ SRC="img31.gif"
+ ALT="\begin{displaymath}\left \vert\ B_{11}\ -\ B_{1N}B^{-1}_{NN}B_{N1}\ - \ldots \ -...
+... B_{22}\right \vert\ldots
+\left \vert B_{NN}\right \vert =0\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>Consequentially, calculation of characteristic determinant is reduced
+to calculation of several determinants of significantly lesser dimension.
+It allows us to study the systems with much more degrees of freedom.
+</B>
+<P>
+<B><B>Investigation of stability by second Lyapunov's method.</B>
+Sufficient conditions of stability, asymptotic stability or instability
+can be obtained by using theorems of second Lyapunov's method.
+</B>
+<P>
+<B>In
+critical cases , only the Lyapunov's second method is used.
+But then there arises the
+problem of the proximity of sufficient stability conditions to necessary
+conditions,
+i.e. of a "good" choice of the Lyapunov function .
+As investigations show, in critical cases sufficiently soft stability
+conditions
+are obtained when the first integral of the differential
+equations of motion is taken as the Lyapunov function.
+</B>
+<P>
+<B><I>Definition. The relation </I></B>
+<!-- MATH: $\ df(\dot {x}, x)/dt=F_ {1}(\dot {x}, x)\$ -->
+<IMG
+ WIDTH="203" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\ df(\dot {x}, x)/dt=F_ {1}(\dot {x}, x)\ $"><B><I>is said to be the differential consequence of equations (1) if it holds
+for all solutions of the system.</I> 
+</B>
+<P>
+<B>In the theorems of the Lyapunov's second method, we shall use
+differential
+consequences of equations (1). One of the algorithms for constructing
+differential consequences is described in [1] and involves the
+following procedure : we multiply (1) on the left by matrices of the form
+</B>
+<!-- MATH: $\ x^ {T} L_ {1}\ , \ \dot x^ {T} L_ {2}\ , \ \ddot x^ {T} L_ {3}\ ,$ -->
+<IMG
+ WIDTH="198" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\ x^ {T} L_ {1}\ , \ \dot x^ {T} L_ {2}\ , \ \ddot x^ {T} L_ {3}\ ,$"><B> and
+transform the final expressions by selecting the symmetric parts.
+The matrices </B>
+<!-- MATH: $\ L_ {i} \$ -->
+<IMG
+ WIDTH="38" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\ L_ {i} \ $"><B> are equal to those of the initial equation or their
+combinations. </B>
+<P>
+<B><FONT SIZE="-1"><B>Example 1</B>. Let </FONT></B>
+<!-- MATH: $\ L_ {3} =GM^ {-1}\ ,\ L_ {2} =KM^ {-1}\$ -->
+<IMG
+ WIDTH="248" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.gif"
+ ALT="$\ L_ {3} =GM^ {-1}\ ,\ L_ {2} =KM^ {-1}\ $"><B><FONT SIZE="-1">,
+and </FONT></B>
+<!-- MATH: $\ L_{1} =GM^ {-1}\$ -->
+<IMG
+ WIDTH="121" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$\ L_{1} =GM^ {-1}\ $"><B><FONT SIZE="-1">. After selecting the full derivative, we
+obtain three consequences.
+We combine them into one bunch :
+</FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{ d\over dt} (\dot {x} ^ {T} (4G^ {T} M^ {-1} G + K) \dot {x} + {x} ^ {T} (KM^
+{-1} K -2GM^ {-1} G) x + 2 {x} ^ {T} (KM^ {-1} G + PM^ {-1} G-G) \dot {x}) =
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="725" HEIGHT="50"
+ SRC="img37.gif"
+ ALT="\begin{displaymath}{ d\over dt} (\dot {x} ^ {T} (4G^ {T} M^ {-1} G + K) \dot {x}...
+...-1} G) x + 2 {x} ^ {T} (KM^ {-1} G + PM^ {-1} G-G) \dot {x}) =
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+= -2 \dot {x} ^ {T} (GM^ {-1} G^ {T} M^ {-1} D + KM^ {-1} D + G^ {T} M^ {-1} P)
+\dot {x} -2x^ {T} (G^ {T} M^ {-1} K + G^ {T} M^ {-1} P) x +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="687" HEIGHT="36"
+ SRC="img38.gif"
+ ALT="\begin{displaymath}= -2 \dot {x} ^ {T} (GM^ {-1} G^ {T} M^ {-1} D + KM^ {-1} D +...
+...P)
+\dot {x} -2x^ {T} (G^ {T} M^ {-1} K + G^ {T} M^ {-1} P) x +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ 2x^ {T} (2KM^ {-1} G^ {T} M^ {-1} D - 2PM^ {-1} GM^ {-1} D-G^ {T} M^ {-1} D-P^
+{T} M^ {-1} K) \dot x\ . \eqno (7)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="581" HEIGHT="62"
+ SRC="img39.gif"
+ ALT="\begin{displaymath}+ 2x^ {T} (2KM^ {-1} G^ {T} M^ {-1} D - 2PM^ {-1} GM^ {-1} D-G^ {T} M^ {-1} D-P^
+{T} M^ {-1} K) \dot x\ . \eqno (7) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1">Now, by </FONT></B><IMG
+ WIDTH="40" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\ W\ $"><B><FONT SIZE="-1"> we denote the form in (7) on the right. If in (7) the
+form under the sign of  derivative has the fixed sign and the
+form </FONT></B><IMG
+ WIDTH="40" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\ W\ $"><B><FONT SIZE="-1"> has the fixed sign with an opposite sign, in accordance
+with Lyapunov's theorem the trivial solution of the system is
+asymptotically stable irrespective of nonlinear forces.
+If the form </FONT></B><IMG
+ WIDTH="40" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\ W\ $"><B><FONT SIZE="-1"> in (7) is of constant signs (the sign opposite
+to that  of the form on the left), and the set
+</FONT></B>
+<!-- MATH: $\ {\cal L} =\ \{\ x,\ \dot x\ :\ W=0\ \}$ -->
+<IMG
+ WIDTH="216" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$\ {\cal L} =\ \{\ x,\ \dot x\ :\ W=0\ \} $"><B><FONT SIZE="-1">does not contain the full trajectories except for </FONT></B>
+<!-- MATH: $\ x=\dot x=0\$ -->
+<IMG
+ WIDTH="103" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.gif"
+ ALT="$\ x=\dot x=0\ $"><B><FONT SIZE="-1">, then
+the trivial solution of the linear system (1) is asymptotically stable.
+</FONT> </B><IMG
+ WIDTH="21" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$ \lhd $">
+<P>
+<B>Let's define the function </B><IMG
+ WIDTH="35" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.gif"
+ ALT="$\ V\ $"><B> :
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V=y^{T}{\cal N}y + aF(y)= \dot{x}^{T}N \dot{x}
++x^{T}Lx+x^{T}B^{T}\dot{x}+
+\dot{x}^{T}Bx+aF(x, \dot{x})\ , \eqno(8)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="568" HEIGHT="36"
+ SRC="img45.gif"
+ ALT="\begin{displaymath}V=y^{T}{\cal N}y + aF(y)= \dot{x}^{T}N \dot{x}
++x^{T}Lx+x^{T}B^{T}\dot{x}+
+\dot{x}^{T}Bx+aF(x, \dot{x})\ , \eqno(8)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B>
+here
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+L=L^{T}\ ,\ \ \ N=N^{T}\ ,\ \ \ \ {\cal N}= {\cal N^{T}}=
+\left ( \begin{array}{cc}
+L & B \\
+B^{T} & N
+\end{array}
+\right )\ ,
+\ \ \ \ y =
+\left ( \begin{array}{c}
+x \\
+\dot x
+\end{array}
+\right )\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="568" HEIGHT="59"
+ SRC="img46.gif"
+ ALT="\begin{displaymath}L=L^{T}\ ,\ \ \ N=N^{T}\ ,\ \ \ \ {\cal N}= {\cal N^{T}}=
+\le...
+...=
+\left ( \begin{array}{c}
+x \\
+\dot x
+\end{array}\right )\ ,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><I>a</I><B> is constant that can be equal to 0 or 1; </B><IMG
+ WIDTH="53" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.gif"
+ ALT="$\ F(y) $"><B> - function of
+power bigger than two.
+</B>
+<P>
+<B>Let's calculate derivative of function (8) for equation (1):
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\dot V =y^{T}( A^{T}{\cal N }\ + \  {\cal N }A)y \ +
+\tilde{Q}^{T}M^{-1} {\cal N}y + y^{T}{\cal N}M^{-1}\tilde{Q} \ +
+a \frac{\partial F}{\partial y}(Ay\ +\ M^{-1}\tilde{Q})\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="604" HEIGHT="54"
+ SRC="img48.gif"
+ ALT="\begin{displaymath}\dot V =y^{T}( A^{T}{\cal N }\ + \ {\cal N }A)y \ +
+\tilde{Q}...
+...\ +
+a \frac{\partial F}{\partial y}(Ay\ +\ M^{-1}\tilde{Q})\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>here
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A=
+\left ( \begin{array}{cc}
+0 & E \\
+-M^{-1} (K+P) & -M^{-1}(D+2G)
+\end{array}
+\right ),\ \ \ \ \
+\tilde{Q}=
+\left ( \begin{array}{c}
+0  \\
+Q
+\end{array}
+\right )\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="522" HEIGHT="59"
+ SRC="img49.gif"
+ ALT="\begin{displaymath}A=
+\left ( \begin{array}{cc}
+0 & E \\
+-M^{-1} (K+P) & -M^{-1...
+...de{Q}=
+\left ( \begin{array}{c}
+0 \\
+Q
+\end{array}\right )\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>We require that this derivative was presented in the form:
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\dot V\ =\ \alpha V\ +\  y^{T} Wy\ + \Phi (y)\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="252" HEIGHT="36"
+ SRC="img50.gif"
+ ALT="\begin{displaymath}\dot V\ =\ \alpha V\ +\ y^{T} Wy\ + \Phi (y)\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>Here  
+</B>
+<!-- MATH: $\ \Phi (y)$ -->
+<IMG
+ WIDTH="52" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.gif"
+ ALT="$ \ \Phi (y)$"><B> is nonlinear function of power bigger than two.
+Then we obtain the equation system:
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A^{T}{\cal N }\ + \  {\cal N }A \ -\ \alpha {\cal N}\ = W\ ;  \eqno(9)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="414" HEIGHT="36"
+ SRC="img52.gif"
+ ALT="\begin{displaymath}A^{T}{\cal N }\ + \ {\cal N }A \ -\ \alpha {\cal N}\ = W\ ; \eqno(9)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+Q^{T}M^{-1} ( N\dot x + Bx ) + ( \dot x^{T}N + x^{T}B^{T})M^{-1}Q \ +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="387" HEIGHT="36"
+ SRC="img53.gif"
+ ALT="\begin{displaymath}Q^{T}M^{-1} ( N\dot x + Bx ) + ( \dot x^{T}N + x^{T}B^{T})M^{-1}Q \ +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++\ a\ (\ \frac{\partial F}{\partial x}\dot x \ -
+\ \frac {\partial F}{\partial \dot x}M^{-1}((D+2G)\dot x\ +
+\ (K + P)x \ - \ Q )\ )\ = \  a\alpha F\  +\ \Phi (x,\dot x)\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="595" HEIGHT="50"
+ SRC="img54.gif"
+ ALT="\begin{displaymath}+\ a\ (\ \frac{\partial F}{\partial x}\dot x \ -
+\ \frac {\pa...
+...
+\ (K + P)x \ - \ Q )\ )\ = \ a\alpha F\ +\ \Phi (x,\dot x)\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>From last equation we find </B>
+<!-- MATH: $\Phi (x,\dot x)\ .$ -->
+<IMG
+ WIDTH="78" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\Phi (x,\dot x)\ .$"><B>For equation (9) we will consider several possibilities.
+</B>
+<P>
+<B><I>Variant 1.</I> </B><IMG
+ WIDTH="40" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\ W\ $"><B> is given definitively positive (negative) matrix.
+From classical theorems it is known that if at least one of
+characteristic equation (2) roots has positive real part,
+for equation (9) there always exist such
+</B>
+<!-- MATH: $\ \alpha >0 \$ -->
+<IMG
+ WIDTH="67" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="$ \ \alpha >0 \ $"><B> and </B>
+<!-- MATH: $\ {\cal N}$ -->
+<IMG
+ WIDTH="32" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.gif"
+ ALT="$\ {\cal N}$"><B> that </B>
+<!-- MATH: $\ y^{T}{\cal N}y \$ -->
+<IMG
+ WIDTH="70" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\ y^{T}{\cal N}y \ $"><B> isn't
+sign-definite with sign, opposite to sign of </B><IMG
+ WIDTH="45" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.gif"
+ ALT="$\ W\ .$"><B> 
+Vice versa, if for equation (9) with
+</B><IMG
+ WIDTH="76" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\ W>0\ $"><B> are found </B>
+<!-- MATH: $\ \alpha >0 \$ -->
+<IMG
+ WIDTH="67" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="$ \ \alpha >0 \ $"><B> and </B>
+<!-- MATH: $\ {\cal N}\$ -->
+<IMG
+ WIDTH="32" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.gif"
+ ALT="$\ {\cal N}$"><B> and 
+</B>
+<!-- MATH: $\ y^{T}{\cal N}y \$ -->
+<IMG
+ WIDTH="70" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\ y^{T}{\cal N}y \ $"><B> is not definitively negative, then trivial solution 
+of equation (1) is not stable and some roots </B>
+<!-- MATH: $\ \lambda\$ -->
+<IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\lambda $"><B> of eq. (2) 
+have positive real part.
+</B>
+<P>
+<B><I>Variant 2.</I> </B>
+<!-- MATH: $\ \alpha =0\ ,\ W\$ -->
+<IMG
+ WIDTH="110" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.gif"
+ ALT="$\ \alpha =0\ ,\ W\ $"><B> is given definitively negative (positive) matrix.
+It is known that if all roots of characteristic equation (2) of system (1) 
+have negative real parts, then in (9) there is only one solution for 
+</B>
+<!-- MATH: $\ {\cal N}$ -->
+<IMG
+ WIDTH="32" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.gif"
+ ALT="$\ {\cal N}$"><B>. In these conditions obtained matrix is definitively positive 
+(negative).  Vice versa, if with given
+</B>
+<!-- MATH: $\ W<0 \ (>0)\$ -->
+<IMG
+ WIDTH="128" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$\ W<0 \ (>0)\ $"><B> it's found solution </B><IMG
+ WIDTH="32" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.gif"
+ ALT="$\ {\cal N}$"><B> of equation (9)  and
+</B>
+<!-- MATH: $\ y^{T}{\cal N}y>0\  (<0)\$ -->
+<IMG
+ WIDTH="158" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.gif"
+ ALT="$\ y^{T}{\cal N}y>0\ (<0)\ $"><B>, then zero solution of equation (1) is
+asymptotically stable and all </B><IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\lambda $"><B> of equation (2) have negative 
+real parts.
+</B>
+<P>
+<B>If roots </B><IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\lambda $"><B> of equation (2) are such that
+</B>
+<!-- MATH: $\ \sum m_{i} \lambda _{i} \neq 0\ \ (\ i=1,\ldots , n,\ \sum m_{i}=2\ )$ -->
+<IMG
+ WIDTH="343" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$\ \sum m_{i} \lambda _{i} \neq 0\ \ (\ i=1,\ldots , n,\ \sum m_{i}=2\ )$"><B> and
+some of them have positive real part, then equation (9) have single solution
+</B>
+<!-- MATH: $\ {\cal  N}$ -->
+<IMG
+ WIDTH="32" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.gif"
+ ALT="$\ {\cal N}$"><B> and </B>
+<!-- MATH: $\ y^{T}{\cal N}y\$ -->
+<IMG
+ WIDTH="70" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\ y^{T}{\cal N}y \ $"><B> is not definitively positive (negative).
+Zero solution of system (1) is unstable.
+</B>
+<P>
+<B><I>Variant 3.</I> </B><IMG
+ WIDTH="81" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.gif"
+ ALT="$\ W=0\ .$"><B> Then equation (9) is equivalent to equation [4] :
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\cal C}{\it x}= 0\ , \eqno(10)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="326" HEIGHT="36"
+ SRC="img66.gif"
+ ALT="\begin{displaymath}{\cal C}{\it x}= 0\ , \eqno(10)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>where 
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\it x}=
+\left ( \begin{array}{c}
+{\cal N}_{1*}^{T} \\
+.  \\
+     . \\
+     . \\
+{\cal N}_{2n*}^{T} \\
+\end{array}
+\right )\ ,\ \ \ \ {\cal C}= (A-\alpha E)\otimes E\ +\ E\otimes A \ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="430" HEIGHT="129"
+ SRC="img67.gif"
+ ALT="\begin{displaymath}{\it x}=
+\left ( \begin{array}{c}
+{\cal N}_{1*}^{T} \\
+. \\...
+...)\ ,\ \ \ \ {\cal C}= (A-\alpha E)\otimes E\ +\ E\otimes A \ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>This equation has nontrivial solution
+</B>
+<!-- MATH: $\ \Longleftrightarrow \alpha =\lambda _{r}+ \lambda _{s}\ ,$ -->
+<IMG
+ WIDTH="167" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$\ \Longleftrightarrow \alpha =\lambda _{r}+ \lambda _{s}\ ,$"><B> 
+where </B>
+<!-- MATH: $\ \lambda_{r},\ \lambda _{s}\$ -->
+<IMG
+ WIDTH="72" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$\ \lambda_{r},\ \lambda _{s}\ $"><B> are eigenvalues of matrix </B><IMG
+ WIDTH="39" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img70.gif"
+ ALT="$\ A\ .$">
+<P>
+<B>Let's write out equation (10) in the form :
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+B\ +\ B^{T}\ -\ (D-2G)M^{-1}N\  -\ NM^{-1}(D+2G) \ -\ \alpha N\ =\ 0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="559" HEIGHT="36"
+ SRC="img71.gif"
+ ALT="\begin{displaymath}B\ +\ B^{T}\ -\ (D-2G)M^{-1}N\ -\ NM^{-1}(D+2G) \ -\ \alpha N\ =\ 0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(K-P)M^{-1}N - NM^{-1}(K+P) + B^{T}M^{-1}(D+2G) - (D-2G)M^{-1}B
++ \alpha (B^{T}-B) = 0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="700" HEIGHT="36"
+ SRC="img72.gif"
+ ALT="\begin{displaymath}(K-P)M^{-1}N - NM^{-1}(K+P) + B^{T}M^{-1}(D+2G) - (D-2G)M^{-1}B
++ \alpha (B^{T}-B) = 0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\alpha ((K-P)M^{-1}N\ +\ NM^{-1}(K+P)\ +\ B^{T}M^{-1}(D+2G)\ +
+\ (D-2G)M^{-1}B)\ +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="626" HEIGHT="36"
+ SRC="img73.gif"
+ ALT="\begin{displaymath}\alpha ((K-P)M^{-1}N\ +\ NM^{-1}(K+P)\ +\ B^{T}M^{-1}(D+2G)\ +
+\ (D-2G)M^{-1}B)\ +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++\ \alpha ^{2}(B^{T}+B)\ +\ 2((K-P)M^{-1}B\ +\ B^{T}M^{-1}(K+P))=\ 0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="543" HEIGHT="36"
+ SRC="img74.gif"
+ ALT="\begin{displaymath}+\ \alpha ^{2}(B^{T}+B)\ +\ 2((K-P)M^{-1}B\ +\ B^{T}M^{-1}(K+P))=\ 0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+2L = (K-P)M^{-1}N + NM^{-1}(K+P)+ B^{T}M^{-1}(D+2G) + (D-2G)M^{-1}B +
+\alpha (B+B^{T})\ . \eqno(11)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="712" HEIGHT="62"
+ SRC="img75.gif"
+ ALT="\begin{displaymath}2L = (K-P)M^{-1}N + NM^{-1}(K+P)+ B^{T}M^{-1}(D+2G) + (D-2G)M^{-1}B +
+\alpha (B+B^{T})\ . \eqno(11)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>If eigenvalues of matrix </B><IMG
+ WIDTH="27" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.gif"
+ ALT="$\ A$"><B> are known and none of them have real part
+equal to zero, then stability task can be solved without using 
+Lyapunov functions. Let's put limitations on structure of </B><IMG
+ WIDTH="40" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.gif"
+ ALT="$\ V\ .$">
+<P>
+<B>Let </B><IMG
+ WIDTH="76" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$\ B=0\ .$"><B> Then matrix </B><IMG
+ WIDTH="30" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.gif"
+ ALT="$\ N$"><B> is a solution of over-defined system :
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(D-2G)M^{-1}N\  +\ NM^{-1}(D+2G) \ +\ \alpha N\ =\ 0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="440" HEIGHT="36"
+ SRC="img80.gif"
+ ALT="\begin{displaymath}(D-2G)M^{-1}N\ +\ NM^{-1}(D+2G) \ +\ \alpha N\ =\ 0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(K-P)M^{-1}N\ -\ NM^{-1}(K+P)\ =\ 0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="356" HEIGHT="36"
+ SRC="img81.gif"
+ ALT="\begin{displaymath}(K-P)M^{-1}N\ -\ NM^{-1}(K+P)\ =\ 0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(K-P)M^{-1}N\ +\ NM^{-1}(K+P)\ =\ 0\ . \eqno(12)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="469" HEIGHT="36"
+ SRC="img82.gif"
+ ALT="\begin{displaymath}(K-P)M^{-1}N\ +\ NM^{-1}(K+P)\ =\ 0\ . \eqno(12)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>If system (12) has a solution </B><IMG
+ WIDTH="44" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img83.gif"
+ ALT="$\ N^{*}\ $"><B>, then </B>
+<!-- MATH: $(N^{*}+N^{*T})\$ -->
+<IMG
+ WIDTH="113" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.gif"
+ ALT="$(N^{*}+N^{*T})\ $"><B>,
+</B>
+<!-- MATH: $\ (N^{*}-N^{*T})\$ -->
+<IMG
+ WIDTH="120" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.gif"
+ ALT="$\ (N^{*}-N^{*T})\ $"><B>and  </B>
+<!-- MATH: $\ ({\cal Q}^{T}N^{*}{\cal P}\ + \ {\cal P}^{T}N^{*}{\cal Q})\ ,$ -->
+<IMG
+ WIDTH="213" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.gif"
+ ALT="$\ ({\cal Q}^{T}N^{*}{\cal P}\ + \ {\cal P}^{T}N^{*}{\cal Q})\ , $"><B>( where </B>
+<!-- MATH: $\ {\cal P},\ {\cal Q}\$ -->
+<IMG
+ WIDTH="66" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$\ {\cal P},\ {\cal Q}\ $"><B> are commutative matrices of
+</B>
+<!-- MATH: $\ M^{-1}(D+2G)\ ,\ M^{-1}(K+P)\$ -->
+<IMG
+ WIDTH="274" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$\ M^{-1}(D+2G)\ ,\ M^{-1}(K+P)\ $"><B>) are solutions too.
+</B>
+<P>
+<B>From first equation it follows that 
+</B>
+<!-- MATH: $\ \alpha=-(\mu_{r}+\mu_{s})\ , \ \mu_{r},\ \mu_{s}\$ -->
+<IMG
+ WIDTH="226" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.gif"
+ ALT="$\ \alpha=-(\mu_{r}+\mu_{s})\ , \ \mu_{r},\ \mu_{s}\ $"><B> are eigenvalues 
+of matrix </B>
+<!-- MATH: $\ M^{-1}(D+2G)\ .$ -->
+<IMG
+ WIDTH="145" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.gif"
+ ALT="$\ M^{-1}(D+2G)\ .$"><B> Second equation always have set of 
+nontrivial solutions. From second and third equations
+if follows the condition </B>
+<!-- MATH: $\ det (K+P)= 0\$ -->
+<IMG
+ WIDTH="154" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img91.gif"
+ ALT="$\ det (K+P)= 0\ $"><B> when system (1) is critical.
+Then third equation (12) has nontrivial solution. The solution of system (12) 
+can be used as Lyapunov function </B>
+<!-- MATH: $\ V=V(\dot x)\ ,$ -->
+<IMG
+ WIDTH="108" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="$\ V=V(\dot x)\ ,$"><B> because if </B><IMG
+ WIDTH="30" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.gif"
+ ALT="$\ N$"><B> 
+satisfies system (12) then </B><IMG
+ WIDTH="74" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img93.gif"
+ ALT="$\ L=0\ .$">
+<P>
+<B><FONT SIZE="-1"><B>Example 2</B>. Consider a system with two degrees of freedom :
+</FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\ddot x_{1}+ c_{11}\dot x_{1}+ c_{12}\dot x_{2}+
+q_{11}x_{1}+q_{12}x_{2}=Q_{1}\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="345" HEIGHT="35"
+ SRC="img94.gif"
+ ALT="\begin{displaymath}\ddot x_{1}+ c_{11}\dot x_{1}+ c_{12}\dot x_{2}+
+q_{11}x_{1}+q_{12}x_{2}=Q_{1}\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\ddot x_{2}+ c_{12}\dot x_{1}+ c_{22}\dot x_{2}+
+q_{12}x_{1}+q_{22}x_{2}=Q_{2}\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="345" HEIGHT="35"
+ SRC="img95.gif"
+ ALT="\begin{displaymath}\ddot x_{2}+ c_{12}\dot x_{1}+ c_{22}\dot x_{2}+
+q_{12}x_{1}+q_{22}x_{2}=Q_{2}\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1">Eigenvalues of matrix </FONT></B>
+<!-- MATH: $\ (D+2G)=C\$ -->
+<IMG
+ WIDTH="142" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="$\ (D+2G)=C\ $"><B><FONT SIZE="-1"> are solutions of the equation
+</FONT></B>
+<P>
+
+<!-- MATH: $\ \mu^{2}-\mu (c_{11}+c_{22})+c_{11}c_{22}-c_{12}c_{21}=0\ .$ -->
+<IMG
+ WIDTH="344" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.gif"
+ ALT="$\ \mu^{2}-\mu (c_{11}+c_{22})+c_{11}c_{22}-c_{12}c_{21}=0\ .$"><B><FONT SIZE="-1">System (12) has the form :
+</FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+n_{11}(\alpha + 2c_{11})+n_{12}c_{21}=0\ ; \ \ \
+n_{22}(\alpha + 2c_{22})+n_{12}c_{12}=0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="487" HEIGHT="36"
+ SRC="img98.gif"
+ ALT="\begin{displaymath}n_{11}(\alpha + 2c_{11})+n_{12}c_{21}=0\ ; \ \ \
+n_{22}(\alpha + 2c_{22})+n_{12}c_{12}=0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+n_{11}c_{12}+n_{12}(\alpha + c_{11}+ c_{22})+n_{22}c_{21}=0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="342" HEIGHT="36"
+ SRC="img99.gif"
+ ALT="\begin{displaymath}n_{11}c_{12}+n_{12}(\alpha + c_{11}+ c_{22})+n_{22}c_{21}=0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+n_{11}q_{11}+n_{12}q_{21}=0\ ;\ \ \ \ n_{12}q_{12}+n_{22}q_{22}=0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="371" HEIGHT="35"
+ SRC="img100.gif"
+ ALT="\begin{displaymath}n_{11}q_{11}+n_{12}q_{21}=0\ ;\ \ \ \ n_{12}q_{12}+n_{22}q_{22}=0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+n_{12}(q_{11}+q_{22})+n_{11}q_{12}+n_{22}q_{21}=0\ ;\ \ \ \ \
+n_{12}(q_{11}-q_{22})-n_{11}q_{12}+n_{22}q_{21}=0\ ; \eqno(13)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="584" HEIGHT="62"
+ SRC="img101.gif"
+ ALT="\begin{displaymath}n_{12}(q_{11}+q_{22})+n_{11}q_{12}+n_{22}q_{21}=0\ ;\ \ \ \ \
+n_{12}(q_{11}-q_{22})-n_{11}q_{12}+n_{22}q_{21}=0\ ; \eqno(13)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1">Value for </FONT></B><IMG
+ WIDTH="18" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img102.gif"
+ ALT="$\alpha $"><B><FONT SIZE="-1"> must be chosen from </FONT></B>
+<!-- MATH: $\ -(\mu _{r}+\mu_{s}).$ -->
+<IMG
+ WIDTH="111" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.gif"
+ ALT="$\ -(\mu _{r}+\mu_{s}).$">
+<P>
+<B><FONT SIZE="-1"><I>Solution 1.</I> Let </FONT></B>
+<!-- MATH: $\ \alpha = -(c_{11}+c_{22})\ .$ -->
+<IMG
+ WIDTH="164" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.gif"
+ ALT="$\ \alpha = -(c_{11}+c_{22})\ .$"><B><FONT SIZE="-1"> When </FONT></B>
+<!-- MATH: $\ c_{12}=-c_{21}=2g\ ,
+\ c_{11}=c_{22}=c\ ,\  q_{11}=q_{22}=q_{12}=q_{21}=0\$ -->
+<IMG
+ WIDTH="513" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.gif"
+ ALT="$\ c_{12}=-c_{21}=2g\ ,
+\ c_{11}=c_{22}=c\ ,\ q_{11}=q_{22}=q_{12}=q_{21}=0\ $"><B><FONT SIZE="-1"> system (13)
+allows the solution :
+</FONT></B>
+<!-- MATH: $\ n_{11}=n_{22}=n\ ,\ n_{12}=0\ .$ -->
+<IMG
+ WIDTH="226" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.gif"
+ ALT="$\ n_{11}=n_{22}=n\ ,\ n_{12}=0\ .$"><B><FONT SIZE="-1"> Consequently (8) has the form :
+</FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V(\dot x)=n(\dot x_{1}^{2}+ \dot x_{2}^{2})>>0 \ \ (n>0)\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="293" HEIGHT="36"
+ SRC="img107.gif"
+ ALT="\begin{displaymath}V(\dot x)=n(\dot x_{1}^{2}+ \dot x_{2}^{2})>>0 \ \ (n>0)\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\dot V= V_{1}=-2cV+2n(Q_{1}\dot x_{1}+ Q_{2}\dot x_{2})\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="315" HEIGHT="36"
+ SRC="img108.gif"
+ ALT="\begin{displaymath}\dot V= V_{1}=-2cV+2n(Q_{1}\dot x_{1}+ Q_{2}\dot x_{2})\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1">If system (13) contains only dissipative and gyroscopic forces, then for
+</FONT></B><IMG
+ WIDTH="63" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.gif"
+ ALT="$\ c > 0\ $"><B><FONT SIZE="-1"> trivial solution is asymptotically stable with respect to velocities
+despite any nonlinear forces </FONT></B>
+<!-- MATH: $\ Q=Q(\dot x)$ -->
+<IMG
+ WIDTH="96" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img110.gif"
+ ALT="$\ Q=Q(\dot x)$"><B><FONT SIZE="-1"> because </FONT></B>
+<!-- MATH: $\ V_{1}<<0\ .$ -->
+<IMG
+ WIDTH="95" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.gif"
+ ALT="$\ V_{1}<<0\ .$"><B><FONT SIZE="-1">If </FONT></B><IMG
+ WIDTH="57" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.gif"
+ ALT="$ c<0\ $"><B><FONT SIZE="-1"> trivial solution is unstable because </FONT></B>
+<!-- MATH: $\ V_{1}>0\ .$ -->
+<IMG
+ WIDTH="80" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.gif"
+ ALT="$\ V_{1}>0\ .$">
+<P>
+<B><FONT SIZE="-1"><I>Solution 2.</I> Let </FONT></B>
+<!-- MATH: $\ \alpha = -2c_{11}\ .$ -->
+<IMG
+ WIDTH="112" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.gif"
+ ALT="$\ \alpha = -2c_{11}\ .$"><B><FONT SIZE="-1"> Then from system (13) we obtain :
+</FONT></B>
+<!-- MATH: $\ c_{12}=d_{12}+2g=0\ ,\ q_{11}=k_{11}=0\ ,\ q_{12}=k_{12}+p=0\$ -->
+<IMG
+ WIDTH="472" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img115.gif"
+ ALT="$\ c_{12}=d_{12}+2g=0\ ,\ q_{11}=k_{11}=0\ ,\ q_{12}=k_{12}+p=0\ $"><B><FONT SIZE="-1">,
+</FONT></B>
+<!-- MATH: $\ q_{22}\neq 0\$ -->
+<IMG
+ WIDTH="78" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img116.gif"
+ ALT="$\ q_{22}\neq 0\ $"><B><FONT SIZE="-1">, </FONT></B>
+<!-- MATH: $\ q_{21}=k_{12}-p\neq 0\ ,\ c_{21}=d_{12}-2g\neq 0\ ,
+\ c_{11}\neq 0\$ -->
+<IMG
+ WIDTH="422" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img117.gif"
+ ALT="$\ q_{21}=k_{12}-p\neq 0\ ,\ c_{21}=d_{12}-2g\neq 0\ ,
+\ c_{11}\neq 0\ $"><B><FONT SIZE="-1">( in the system are present dissipative, gyroscopic, potential and
+nonconservative positional forces), 
+</FONT></B>
+<!-- MATH: $\ n_{12}= 0\ ,\ n_{22}=0\ ,\ n_{11}\neq 0\ .$ -->
+<IMG
+ WIDTH="256" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.gif"
+ ALT="$\ n_{12}= 0\ ,\ n_{22}=0\ ,\ n_{11}\neq 0\ .$"><B><FONT SIZE="-1">Lyapunov function has the form </FONT></B>
+<!-- MATH: $\ V=\dot x_{1}^{2}\$ -->
+<IMG
+ WIDTH="80" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img119.gif"
+ ALT="$\ V=\dot x_{1}^{2}\ $"><B><FONT SIZE="-1">. For eqs. (13)
+</FONT></B>
+<!-- MATH: $\ dV/dt= V_{1}=-2c_{11}\dot x^{2}+ \dot x_{1}Q_{1}\ .$ -->
+<IMG
+ WIDTH="281" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img120.gif"
+ ALT="$\ dV/dt= V_{1}=-2c_{11}\dot x^{2}+ \dot x_{1}Q_{1}\ .$"><B><FONT SIZE="-1"> When </FONT></B>
+<!-- MATH: $\ c_{11}>0 \$ -->
+<IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$\ c_{11}>0 \ $"><B><FONT SIZE="-1">and </FONT></B>
+<!-- MATH: $\ Q_{1}= Q_{1}(\dot x_{1})\$ -->
+<IMG
+ WIDTH="126" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.gif"
+ ALT="$\ Q_{1}= Q_{1}(\dot x_{1})\ $"><B><FONT SIZE="-1"> trivial solution is asymptotically stable 
+with respect to </FONT></B>
+<!-- MATH: $\dot x_{1}\ .$ -->
+<IMG
+ WIDTH="37" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.gif"
+ ALT="$\dot x_{1}\ .$"><B><FONT SIZE="-1"> When </FONT></B>
+<!-- MATH: $\ c_{11}<0 \$ -->
+<IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.gif"
+ ALT="$\ c_{11}<0 \ $"><B><FONT SIZE="-1"> trivial solution is
+unstable.</FONT> </B><IMG
+ WIDTH="21" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$ \lhd $">
+<P>
+<B><I>Variant 4.</I> </B>
+<!-- MATH: $\ \alpha =0\ ,\ W=0\ .$ -->
+<IMG
+ WIDTH="152" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img125.gif"
+ ALT="$\ \alpha =0\ ,\ W=0\ .$"><B> Then we obtain two groups of
+conditions when equation (1) has first integral of form (8) :
+</B>
+<P>
+<B>a)
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+B\ +\ B^{T}\ -\ (D-2G)M^{-1}N\  -\ NM^{-1}(D+2G) \  =\ 0\ ;\eqno(14)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="554" HEIGHT="36"
+ SRC="img126.gif"
+ ALT="\begin{displaymath}B\ +\ B^{T}\ -\ (D-2G)M^{-1}N\ -\ NM^{-1}(D+2G) \ =\ 0\ ;\eqno(14)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(K-P)M^{-1}N\ -\ NM^{-1}(K+P)\ +\ B^{T}M^{-1}(D+2G)\ -\ (D-2G)M^{-1}B\
+=\ 0\ ; \eqno(15)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="634" HEIGHT="62"
+ SRC="img127.gif"
+ ALT="\begin{displaymath}(K-P)M^{-1}N\ -\ NM^{-1}(K+P)\ +\ B^{T}M^{-1}(D+2G)\ -\ (D-2G)M^{-1}B\
+=\ 0\ ; \eqno(15)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(K-P)M^{-1}B\ +\ B^{T}M^{-1}(K+P)=\ 0\ ; \eqno(16)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="469" HEIGHT="36"
+ SRC="img128.gif"
+ ALT="\begin{displaymath}(K-P)M^{-1}B\ +\ B^{T}M^{-1}(K+P)=\ 0\ ; \eqno(16)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+2L\ =\ (K-P)M^{-1}N\ +\ NM^{-1}(K+P)+\ B^{T}M^{-1}(D+2G)\ +\
+(D-2G)M^{-1}B\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="642" HEIGHT="36"
+ SRC="img129.gif"
+ ALT="\begin{displaymath}2L\ =\ (K-P)M^{-1}N\ +\ NM^{-1}(K+P)+\ B^{T}M^{-1}(D+2G)\ +\
+(D-2G)M^{-1}B\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B>b)
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{\partial F}{\partial x}
++2NM^{-1}Q-(D-2G)M^{-1}\frac{\partial F}{\partial \dot{x}}=0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="358" HEIGHT="50"
+ SRC="img130.gif"
+ ALT="\begin{displaymath}\frac{\partial F}{\partial x}
++2NM^{-1}Q-(D-2G)M^{-1}\frac{\partial F}{\partial \dot{x}}=0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+2B^{T}M^{-1}Q-(K-P)M^{-1}\frac{\partial F}{\partial \dot{x}}=0\ ;
+\ \ \ \ \ \ Q^{T}M^{-1}\frac{\partial F}{\partial \dot{x}}=0\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="492" HEIGHT="50"
+ SRC="img131.gif"
+ ALT="\begin{displaymath}2B^{T}M^{-1}Q-(K-P)M^{-1}\frac{\partial F}{\partial \dot{x}}=...
+... \ \ \ \ \ Q^{T}M^{-1}\frac{\partial F}{\partial \dot{x}}=0\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>Equations of group (a) give necessary and sufficient conditions of first
+integral existence fir linear system (1) and existence of quadratic part 
+of the integral of form (8) for nonlinear system.
+</B>
+<P>
+<B>Equations of group (b) are used to build </B>
+<!-- MATH: $F(x,\dot{x})$ -->
+<IMG
+ WIDTH="67" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.gif"
+ ALT="$F(x,\dot{x})$"><B> if it exists or
+to find such </B><IMG
+ WIDTH="34" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img133.gif"
+ ALT="$\ Q\ $"><B> that eq. (8) is an integral. 
+Function </B>
+<!-- MATH: $\ F(x,\dot{x})\$ -->
+<IMG
+ WIDTH="67" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.gif"
+ ALT="$F(x,\dot{x})$"><B> must fulfill the conditions:
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{\partial^{2} F}{\partial \dot{x}_{i}\partial \dot{x}_{j}}=
+\frac{\partial^{2} F}{\partial \dot{x}_{j}\partial \dot{x}_{i}}\ , \ \ \ \
+\frac{\partial^{2} F}{\partial x_{i}\partial x_{j}}=
+\frac{\partial^{2} F}{\partial x_{j}\partial x_{i}}\ ,\ \ \ \
+\frac{\partial ^{2} F}{\partial \dot{x}\partial x}=
+\frac{\partial ^{2} F}{\partial x\partial \dot{x}}\ \ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="522" HEIGHT="57"
+ SRC="img134.gif"
+ ALT="\begin{displaymath}\frac{\partial^{2} F}{\partial \dot{x}_{i}\partial \dot{x}_{j...
+...al x}=
+\frac{\partial ^{2} F}{\partial x\partial \dot{x}}\ \ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(\ i,\ j\ = 1,\ldots ,n\ )
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="155" HEIGHT="36"
+ SRC="img135.gif"
+ ALT="\begin{displaymath}(\ i,\ j\ = 1,\ldots ,n\ )
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B>System (a) (14)-(16) always has trivial solution
+</B>
+<!-- MATH: $\ N=0,\ B=0\ (\ B^{T}=0\ )$ -->
+<IMG
+ WIDTH="231" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img136.gif"
+ ALT="$\ N=0,\ B=0\ (\ B^{T}=0\ )$"><B>.
+It is a system of uniform linear equations and can have (i) only trivial
+solution or (ii) set of solutions.
+If there exists nontrivial solution </B>
+<!-- MATH: $\ N^{*}\ ,\ B^{*}\$ -->
+<IMG
+ WIDTH="90" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img137.gif"
+ ALT="$\ N^{*}\ ,\ B^{*}\ $"><B> then
+</B>
+<!-- MATH: $\ N_{1}^{*}=N^{*}\pm N^{*T}\ ,\ B_{1}^{*}=B^{*}\pm B^{*T}\$ -->
+<IMG
+ WIDTH="310" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img138.gif"
+ ALT="$\ N_{1}^{*}=N^{*}\pm N^{*T}\ ,\ B_{1}^{*}=B^{*}\pm B^{*T}\ $"><B>,
+</B>
+<!-- MATH: $\ N^{**}={\cal P}N^{*}{\cal Q}^{T}+{\cal Q}N^{*}{\cal P}^{T}\ ,\
+B^{**}={\cal P}^{T}B^{*}{\cal Q}+{\cal Q}^{T}B^{*}{\cal P}\$ -->
+<IMG
+ WIDTH="474" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img139.gif"
+ ALT="$ \ N^{**}={\cal P}N^{*}{\cal Q}^{T}+{\cal Q}N^{*}{\cal P}^{T}\ ,\
+B^{**}={\cal P}^{T}B^{*}{\cal Q}+{\cal Q}^{T}B^{*}{\cal P}\ $"><B> ( where
+</B>
+<!-- MATH: ${\cal P},\ {\cal Q}\ -$ -->
+<IMG
+ WIDTH="75" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img140.gif"
+ ALT="${\cal P},\ {\cal Q}\ -$"><B> are matrices commutative with </B>
+<!-- MATH: $\ M^{-1}(D+2G)\ ,
+\ M^{-1}(K+P)$ -->
+<IMG
+ WIDTH="274" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$\ M^{-1}(D+2G)\ ,\ M^{-1}(K+P)\ $"><B> ) are solutions too.
+Existence conditions for nontrivial solution give us limitations on
+matrices of original system.
+</B>
+<P>
+<B><FONT SIZE="-1"><B>Example 3</B>. Let  </FONT></B>
+<!-- MATH: $\ D=0\ ,\ P=0\ ,\ Q=0\$ -->
+<IMG
+ WIDTH="218" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.gif"
+ ALT="$\ D=0\ ,\ P=0\ ,\ Q=0\ $"><B><FONT SIZE="-1"> ( system with
+potential and gyroscopic forces).
+Solution </FONT></B>
+<!-- MATH: $\ N=K-4GM^{-1}G\ ,\ B=2G^{T}M^{-1}K\$ -->
+<IMG
+ WIDTH="343" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img142.gif"
+ ALT="$\ N=K-4GM^{-1}G\ ,\ B=2G^{T}M^{-1}K\ $"><B><FONT SIZE="-1"> determines first integral
+</FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\ V_{1}=\dot{x}^{T}K\dot{x} +(Kx +2G\dot{x})^{T}M^{-1}(Kx+2G\dot{x})=
+const\ . \ \ \ \ \lhd \eqno(17)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="573" HEIGHT="36"
+ SRC="img143.gif"
+ ALT="\begin{displaymath}\ V_{1}=\dot{x}^{T}K\dot{x} +(Kx +2G\dot{x})^{T}M^{-1}(Kx+2G\dot{x})=
+const\ . \ \ \ \ \lhd \eqno(17)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>
+Let's outline some properties of matrix equations of special form that
+can be obtained by transformation of equations (14)-(16) :
+</B>
+<P>
+<B>(i) equation </B>
+<!-- MATH: $\ AX-XA^{T}=0 \ \ (\ A,\ X\$ -->
+<IMG
+ WIDTH="230" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img144.gif"
+ ALT="$\ AX-XA^{T}=0 \ \ (\ A,\ X\ $"><B> are </B>
+<!-- MATH: ${n\times n}\$ -->
+<IMG
+ WIDTH="60" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img145.gif"
+ ALT="${n\times n}\ $"><B> matrices ) 
+always has symmetric nontrivial solution; 
+skewed-symmetric solution exists if matrix </B><IMG
+ WIDTH="27" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.gif"
+ ALT="$\ A$"><B> has multiple eigenvalues 
+with corresponding prime elementary divisors and/or different Jordan blocks;
+</B>
+<P>
+<B>(ii) equation </B>
+<!-- MATH: $\ AX+XA^{T}=0\$ -->
+<IMG
+ WIDTH="155" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img146.gif"
+ ALT="$\ AX+XA^{T}=0\ $"><B> has nontrivial solution
+if some of roots of characteristic polynomial </B><IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img147.gif"
+ ALT="$ f(\mu )\ $"><B> of matrix 
+</B><IMG
+ WIDTH="27" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.gif"
+ ALT="$\ A$"><B> are equal to zero and/or </B><IMG
+ WIDTH="51" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img147.gif"
+ ALT="$ f(\mu )\ $"><B> is even function.
+</B>
+<P>
+<B>Let's discuss obvious variants for system (a) (14)-(16).
+</B>
+<P>
+<B><I>Variants 4.1.</I> </B>
+<!-- MATH: $\ B=-B^{T} \ .$ -->
+<IMG
+ WIDTH="109" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.gif"
+ ALT="$\ B=-B^{T} \ .$"><B> The solution of </B><IMG
+ WIDTH="30" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.gif"
+ ALT="$\ N$"><B> would be
+nontrivial if characteristic polynomial of matrix
+</B>
+<!-- MATH: $\ M^{-1}(D+2G)\$ -->
+<IMG
+ WIDTH="140" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img149.gif"
+ ALT="$ \ M^{-1}(D+2G)\ $"><B> must be even or </B>
+<!-- MATH: $\ det(D+2G)=0\$ -->
+<IMG
+ WIDTH="162" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img150.gif"
+ ALT="$ \ det(D+2G)=0\ $"><B>;
+characteristic polynomial of matrix </B>
+<!-- MATH: $\ M^{-1}(K+P)\$ -->
+<IMG
+ WIDTH="131" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img151.gif"
+ ALT="$\ M^{-1}(K+P)\ $"><B> must have multiple
+roots ( if </B>
+<!-- MATH: $\ B\neq 0 \$ -->
+<IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img152.gif"
+ ALT="$\ B\neq 0 \ $"><B>).
+Consequence of eqs. (14)-(16) is the equation:
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(K-P-D+2G)M^{-1}(N+B) - (N+B)M^{-1}(K+P+D+2G) = 0\ , \ \
+(\ A_{1}X=XA_{2}\ ) \eqno(18)
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="682" HEIGHT="62"
+ SRC="img153.gif"
+ ALT="\begin{displaymath}(K-P-D+2G)M^{-1}(N+B) - (N+B)M^{-1}(K+P+D+2G) = 0\ , \ \
+(\ A_{1}X=XA_{2}\ ) \eqno(18)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>Equation (18) has nontrivial solution if some of eigenvalues
+</B><IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img154.gif"
+ ALT="$\chi\ $"><B> of matrix 
+</B>
+<P>
+<!-- MATH: ${\cal C}_{1}=(K-P-D+2G)M^{-1}\otimes E\ -\ E\otimes (K-P+D-2G)M^{-1}\$ -->
+<IMG
+ WIDTH="580" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img155.gif"
+ ALT="$ {\cal C}_{1}=(K-P-D+2G)M^{-1}\otimes E\ -\ E\otimes (K-P+D-2G)M^{-1}\ $"><B>are equal to zero; </B>
+<!-- MATH: $\ \chi = \mu _{s}-\nu _{r}\ ,$ -->
+<IMG
+ WIDTH="123" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img156.gif"
+ ALT="$\ \chi = \mu _{s}-\nu _{r}\ ,$"><B> where </B><IMG
+ WIDTH="31" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img157.gif"
+ ALT="$\ \mu_{s}$"><B> are
+eigenvalues of matrix </B>
+<!-- MATH: $\ M^{-1}(K+P-D-2G)\$ -->
+<IMG
+ WIDTH="222" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img158.gif"
+ ALT="$\ M^{-1}(K+P-D-2G)\ $"><B>, </B>
+<!-- MATH: $\ \nu _{r}\$ -->
+<IMG
+ WIDTH="36" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img159.gif"
+ ALT="$\ \nu _{r}\ $"><B> 
+are eigenvalues of matrix </B>
+<!-- MATH: $\ M^{-1}(K+P+D+2G)\ .$ -->
+<IMG
+ WIDTH="227" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img160.gif"
+ ALT="$\ M^{-1}(K+P+D+2G)\ .$"><B> 
+The number of solutions is
+</B>
+<!-- MATH: $\ n_{1}=\sum \delta _{sr}\$ -->
+<IMG
+ WIDTH="108" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img161.gif"
+ ALT="$\ n_{1}=\sum \delta _{sr}\ $"><B>, where </B>
+<!-- MATH: $\ \delta _{sr}\$ -->
+<IMG
+ WIDTH="42" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$\ \delta _{sr}\ $"><B> is a power of
+maximal common denominator 
+</B>
+<!-- MATH: $\ (\mu -\mu_{s})^{p_{s}}\$ -->
+<IMG
+ WIDTH="104" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img163.gif"
+ ALT="$\ (\mu -\mu_{s})^{p_{s}}\ $"><B> and </B>
+<!-- MATH: $\ (\mu -\nu_{r})^{q_{r}}\$ -->
+<IMG
+ WIDTH="101" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img164.gif"
+ ALT="$\ (\mu -\nu_{r})^{q_{r}}\ $"><B>of characteristic polynomials of these matrices.  Let's build equations
+</B>
+<!-- MATH: $\ det{\cal C}_{1}\ = \ 0\$ -->
+<IMG
+ WIDTH="112" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img165.gif"
+ ALT="$\ det{\cal C}_{1}\ = \ 0\ $"><B> and find existence conditions for </B><IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img154.gif"
+ ALT="$\chi\ $"><B>equal to zero.
+If the equation (18) has a solution </B><IMG
+ WIDTH="45" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img166.gif"
+ ALT="$\ X^{*}\ $"><B> then also exist a
+solution </B>
+<!-- MATH: $\ X^{**}={\cal P}_{1}X^{*}{\cal P}_{2}\$ -->
+<IMG
+ WIDTH="147" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.gif"
+ ALT="$\ X^{**}={\cal P}_{1}X^{*}{\cal P}_{2}\ $"><B>, where matrix
+</B>
+<!-- MATH: $\ {\cal P}_{1}\$ -->
+<IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img168.gif"
+ ALT="$\ {\cal P}_{1}\ $"><B> is commutative with </B><IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img169.gif"
+ ALT="$\ A_{1}\ $"><B>, </B>
+<!-- MATH: $\ {\cal P}_{2}\$ -->
+<IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img170.gif"
+ ALT="$\ {\cal P}_{2}\ $"><B> is
+commutative with </B>
+<!-- MATH: $\ A_{2}\ .$ -->
+<IMG
+ WIDTH="47" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img171.gif"
+ ALT="$\ A_{2}\ .$">
+<P>
+<B>Let's select symmetrical and skewed-symmetrical parts of solution
+</B><IMG
+ WIDTH="120" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img172.gif"
+ ALT="$\ X=N+B\ $"><B> and substitute them to equations (14) ¨ (16).  Then we
+obtain conditions on system matrices.
+</B>
+<P>
+<B><FONT SIZE="-1"><B>Example 4.</B>
+</FONT></B>
+<P>
+<B><FONT SIZE="-1">4.1. Let </FONT></B>
+<!-- MATH: $\ K=0\ ,\ P=0\ ,\ D=0\ ,\ Q=0\$ -->
+<IMG
+ WIDTH="294" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img173.gif"
+ ALT="$\ K=0\ ,\ P=0\ ,\ D=0\ ,\ Q=0\ $"><B><FONT SIZE="-1"> (system with  gyroscopic forces).
+System (14)-(16) has solution </FONT></B>
+<!-- MATH: $\ B=G\ ,\ N=M\$ -->
+<IMG
+ WIDTH="163" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img174.gif"
+ ALT="$\ B=G\ ,\ N=M\ $"><B><FONT SIZE="-1">.
+Equation (1) has first integral
+</FONT></B>
+<!-- MATH: $\ \dot x^{T}M\dot x\ -\ 2x^{T}GM^{-1}Gx\ +\ 2\dot xGx=const.$ -->
+<IMG
+ WIDTH="379" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img175.gif"
+ ALT="$\ \dot x^{T}M\dot x\ -\ 2x^{T}GM^{-1}Gx\ +\ 2\dot xGx=const.$">
+<P>
+<B><FONT SIZE="-1">4.2. Let </FONT></B>
+<!-- MATH: $\ K+P=M{\cal K}\ ,\ (\ {\cal K}={\cal K}^{T}\ )\ ,\ \
+D+2G=M\Gamma\ , \ (\ \Gamma =-\Gamma ^{T}\ ).$ -->
+<IMG
+ WIDTH="536" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img176.gif"
+ ALT="$\ K+P=M{\cal K}\ ,\ (\ {\cal K}={\cal K}^{T}\ )\ ,\ \
+D+2G=M\Gamma\ , \ (\ \Gamma =-\Gamma ^{T}\ ).$"><B><FONT SIZE="-1"> Then matrices
+</FONT></B>
+<!-- MATH: $\ A_{1},\ A_{2}\ (18)\$ -->
+<IMG
+ WIDTH="120" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img177.gif"
+ ALT="$\ A_{1},\ A_{2}\ (18)\ $"><B><FONT SIZE="-1"> are identical.
+The task is reduced to calculation of matrices commutative with
+</FONT></B>
+<!-- MATH: $\ (\ {\cal K}+\Gamma\ ).$ -->
+<IMG
+ WIDTH="98" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img178.gif"
+ ALT="$\ (\ {\cal K}+\Gamma\ ).$"><B><FONT SIZE="-1"> Also, </FONT></B>
+<!-- MATH: $\ {\cal K}B=B{\cal K}\ ,
+\ \Gamma N=N\Gamma\ .$ -->
+<IMG
+ WIDTH="221" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img179.gif"
+ ALT="$\ {\cal K}B=B{\cal K}\ ,
+\ \Gamma N=N\Gamma\ .$"><B><FONT SIZE="-1">Note that if </FONT></B>
+<!-- MATH: $\ {\cal K}$ -->
+<IMG
+ WIDTH="28" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img180.gif"
+ ALT="$\ {\cal K} $"><B><FONT SIZE="-1"> does not have multiple eigenvalues then 
+</FONT></B><IMG
+ WIDTH="76" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$\ B=0\ .$"><IMG
+ WIDTH="21" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$ \lhd $">
+<P>
+<B><I>Variant 4.1.1.</I> Let </B><IMG
+ WIDTH="78" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img181.gif"
+ ALT="$\ N=0\ .$"><B> Then from eq. (14) follows
+</B>
+<!-- MATH: $\ B=-B^{T}\ .$ -->
+<IMG
+ WIDTH="109" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.gif"
+ ALT="$\ B=-B^{T} \ .$"><B>This solution is possible if above-mentioned conditions are true:
+characteristic polynomial of matrix
+</B>
+<!-- MATH: $\ M^{-1}(D+2G)\$ -->
+<IMG
+ WIDTH="140" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img149.gif"
+ ALT="$ \ M^{-1}(D+2G)\ $"><B> must be even or </B>
+<!-- MATH: $\ det(D+2G)=0\$ -->
+<IMG
+ WIDTH="162" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img150.gif"
+ ALT="$ \ det(D+2G)=0\ $"><B>;
+characteristic polynomial of matrix </B>
+<!-- MATH: $\ M^{-1}(K+P)\$ -->
+<IMG
+ WIDTH="131" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img151.gif"
+ ALT="$\ M^{-1}(K+P)\ $"><B> must have multiple roots.
+</B>
+<P>
+<B><FONT SIZE="-1"><B>Example 5.</B>
+</FONT></B>
+<P>
+<B><FONT SIZE="-1">5.1. Let </FONT></B>
+<!-- MATH: $\ D=0\ ,\ P=0\ ,\ K=\alpha M\ ,\  Q=0\$ -->
+<IMG
+ WIDTH="317" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img182.gif"
+ ALT="$\ D=0\ ,\ P=0\ ,\ K=\alpha M\ ,\ Q=0\ $"><B><FONT SIZE="-1"> ( system with gyroscopic
+and potential forces ). System (14)-(16) has solution </FONT></B>
+<!-- MATH: $\ B=G ,\ N=0\$ -->
+<IMG
+ WIDTH="145" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img183.gif"
+ ALT="$\ B=G ,\ N=0\ $"><B><FONT SIZE="-1">That gives first integral of the equation (1) 
+</FONT></B>
+<!-- MATH: $\ V_{3}= 2\dot x^{T}Gx\ +\ x^{T}GM^{-1}Gx= const\ .$ -->
+<IMG
+ WIDTH="341" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img184.gif"
+ ALT="$\ V_{3}= 2\dot x^{T}Gx\ +\ x^{T}GM^{-1}Gx= const\ .$">
+<P>
+<B><FONT SIZE="-1">5.2. Let </FONT></B>
+<!-- MATH: $\ K=P=0\ , \ D\neq 0\ ,\ G\neq 0\ ,\ Q=0\ .$ -->
+<IMG
+ WIDTH="341" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img185.gif"
+ ALT="$\ K=P=0\ , \ D\neq 0\ ,\ G\neq 0\ ,\ Q=0\ .$"><B><FONT SIZE="-1">Solution </FONT></B>
+<!-- MATH: $\ B=G\ ,\ N=0\$ -->
+<IMG
+ WIDTH="145" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img183.gif"
+ ALT="$\ B=G ,\ N=0\ $"><B><FONT SIZE="-1"> with 
+</FONT></B>
+<!-- MATH: $\ GM^{-1}D+DM^{-1}G=0\$ -->
+<IMG
+ WIDTH="223" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img186.gif"
+ ALT="$\ GM^{-1}D+DM^{-1}G=0\ $"><B><FONT SIZE="-1"> determines first integral of equation
+(1):
+</FONT></B>
+<!-- MATH: $\ V_{4}= 2x^{T}G\dot x\ +\ x^{T}GM^{-1}(D+2G)x=const.$ -->
+<IMG
+ WIDTH="400" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img187.gif"
+ ALT="$\ V_{4}= 2x^{T}G\dot x\ +\ x^{T}GM^{-1}(D+2G)x=const.$"><B> 
+</B><IMG
+ WIDTH="21" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$ \lhd $">
+<P>
+<B><I>Variant 4.2</I>. Let </B><IMG
+ WIDTH="71" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img188.gif"
+ ALT="$\ B=0\ $"><B>. Then it remains a system of two
+equations :
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(D-2G)M^{-1}N + NM^{-1}(D+2G) = 0\ ; \ \ \
+(K-P)M^{-1}N - NM^{-1}(K+P) =0\ . \eqno(19)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="638" HEIGHT="62"
+ SRC="img189.gif"
+ ALT="\begin{displaymath}(D-2G)M^{-1}N + NM^{-1}(D+2G) = 0\ ; \ \ \
+(K-P)M^{-1}N - NM^{-1}(K+P) =0\ . \eqno(19)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>First equation has nontrivial solution if </B>
+<!-- MATH: $\ det(D+2G)=0\$ -->
+<IMG
+ WIDTH="162" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img150.gif"
+ ALT="$ \ det(D+2G)=0\ $"><B> or characteristic
+polynomial of that matrix is even function.  Second equation always has
+symmetric solution. The solution of this system satisfies the equation
+</B>
+<!-- MATH: $\ (K-P-D+2G)M^{-1}N - N(K+P+D+2G) = 0\$ -->
+<IMG
+ WIDTH="480" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img190.gif"
+ ALT="$\ (K-P-D+2G)M^{-1}N - N(K+P+D+2G) = 0\ $"><B> and existence conditions for
+nontrivial solution, similarly to eq. (18).
+</B>
+<P>
+<B><FONT SIZE="-1"><B>Example 6.</B>
+</FONT></B>
+<P>
+<B><FONT SIZE="-1">6.1. Let  </FONT></B>
+<!-- MATH: $\ D=0\ ,\ P=0\ ,\ Q=0\$ -->
+<IMG
+ WIDTH="218" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.gif"
+ ALT="$\ D=0\ ,\ P=0\ ,\ Q=0\ $"><B><FONT SIZE="-1"> ( system with potential and gyroscopic
+forces ).
+Then in eq. (18) </FONT></B>
+<!-- MATH: $\ A_{1}=A^{T}_{2}\$ -->
+<IMG
+ WIDTH="93" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img191.gif"
+ ALT="$\ A_{1}=A^{T}_{2}\ $"><B><FONT SIZE="-1">, characteristic polynomials of
+matrices are identical.  
+There exist a solution </FONT></B>
+<!-- MATH: $\ N=M\ ,\ B=0\$ -->
+<IMG
+ WIDTH="157" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img192.gif"
+ ALT="$\ N=M\ ,\ B=0\ $"><B><FONT SIZE="-1"> that satisfies
+eqs. (14) and (16).  The system allows a first integral
+</FONT></B>
+<!-- MATH: $\ V_{2}=\dot x^{T}M\dot x \ +\ x^{T}Kx\ = const.$ -->
+<IMG
+ WIDTH="284" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.gif"
+ ALT="$\ V_{2}=\dot x^{T}M\dot x \ +\ x^{T}Kx\ = const.$"><B><FONT SIZE="-1">From theorems of Lyapunov's second method it follows that if </FONT></B><IMG
+ WIDTH="73" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img194.gif"
+ ALT="$\ K>0\ $"><B><FONT SIZE="-1">then trivial solution of linear system (1) is stable with respect to
+variables </FONT></B>
+<!-- MATH: $\ \dot x, x\$ -->
+<IMG
+ WIDTH="50" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img195.gif"
+ ALT="$\ \dot x, x\ $"><B><FONT SIZE="-1">. 
+If matrix </FONT></B><I>K</I><B><FONT SIZE="-1"> is not definitely positive, we generate a bunch
+of forms </FONT></B><IMG
+ WIDTH="38" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img196.gif"
+ ALT="$\ V_{2}\ $"><B><FONT SIZE="-1"> and </FONT></B>
+<!-- MATH: $\ V_{1}\ (17)\$ -->
+<IMG
+ WIDTH="79" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img197.gif"
+ ALT="$\ V_{1}\ (17)\ $"><B><FONT SIZE="-1">.
+Conditions of sign-definitiveness of this band give sufficient
+conditions of
+stability for the critical system in question.
+</FONT></B>
+<P>
+<B><FONT SIZE="-1">6.2. Let </FONT></B>
+<!-- MATH: $\ K=P=0\ , \ Q=0\$ -->
+<IMG
+ WIDTH="188" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img198.gif"
+ ALT="$\ K=P=0\ , \ Q=0\ $"><B><FONT SIZE="-1">( system with dissipative and gyroscopic forces).
+System (19) has solution </FONT></B>
+<!-- MATH: $\  N=GM^{-1}D\ +\ 2GM^{-1}G\$ -->
+<IMG
+ WIDTH="252" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img199.gif"
+ ALT="$\ N=GM^{-1}D\ +\ 2GM^{-1}G\ $"><B><FONT SIZE="-1"> where
+</FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\ GM^{-1}D+DM^{-1}G=0\ .\eqno(20)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="394" HEIGHT="36"
+ SRC="img200.gif"
+ ALT="\begin{displaymath}\ GM^{-1}D+DM^{-1}G=0\ .\eqno(20)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1">First integral of equation (1) has the form:
+</FONT></B>
+<!-- MATH: $\ V_{5}= \dot{x}^{T}(GM^{-1}D\ +\ 2GM^{-1}G)\dot x=const\ .$ -->
+<IMG
+ WIDTH="379" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img201.gif"
+ ALT="$\ V_{5}= \dot{x}^{T}(GM^{-1}D\ +\ 2GM^{-1}G)\dot x=const\ .$"><B><FONT SIZE="-1">If </FONT></B>
+<!-- MATH: $\ V_{5}<<0\$ -->
+<IMG
+ WIDTH="89" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img202.gif"
+ ALT="$\ V_{5}<<0\ $"><B><FONT SIZE="-1"> then trivial solution of linear equation (1) is stable
+with respect to </FONT></B><IMG
+ WIDTH="29" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img203.gif"
+ ALT="$\dot x\ .$"><B><FONT SIZE="-1">Note that condition (20) is met only when </FONT></B><IMG
+ WIDTH="36" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img204.gif"
+ ALT="$\ D\ $"><B><FONT SIZE="-1"> is matrix of variable sign.
+In particular, if </FONT></B><IMG
+ WIDTH="82" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img205.gif"
+ ALT="$\ M=E\ $"><B><FONT SIZE="-1"> then </FONT></B>
+<!-- MATH: $\ trD=0\ .$ -->
+<IMG
+ WIDTH="93" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.gif"
+ ALT="$\ trD=0\ .$">
+<P>
+<B><FONT SIZE="-1">6.3. Let </FONT></B>
+<!-- MATH: $\ P=0\ , \ Q=0\ ,\ K=\beta K_{1}\ ,$ -->
+<IMG
+ WIDTH="251" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img207.gif"
+ ALT="$\ P=0\ , \ Q=0\ ,\ K=\beta K_{1}\ , $"><B><FONT SIZE="-1"> 
+where </FONT></B>
+<!-- MATH: $\ K_{1} = GM^{-1}D + 2GM^{-1}G\$ -->
+<IMG
+ WIDTH="246" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img208.gif"
+ ALT="$\ K_{1} = GM^{-1}D + 2GM^{-1}G\ $"><B><FONT SIZE="-1">(system with dissipative, gyroscopic and potential forces) and condition
+(20) is met.  Linear equation (1) has first integral
+</FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V_{6}= \dot{x}^{T}K_{1}\dot x\ +\ \beta x^{T}K_{1}M^{-1}K_{1}x\ =const\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="362" HEIGHT="35"
+ SRC="img209.gif"
+ ALT="\begin{displaymath}V_{6}= \dot{x}^{T}K_{1}\dot x\ +\ \beta x^{T}K_{1}M^{-1}K_{1}x\ =const\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1">If </FONT></B>
+<!-- MATH: $\ (GM^{-1}D\ +\ 2GM^{-1}G)<<0\ ,\ \beta <0\$ -->
+<IMG
+ WIDTH="344" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img210.gif"
+ ALT="$\ (GM^{-1}D\ +\ 2GM^{-1}G)<<0\ ,\ \beta <0\ $"><B><FONT SIZE="-1"> then </FONT></B>
+<!-- MATH: $\ V_{6}<<0\ ,$ -->
+<IMG
+ WIDTH="95" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img211.gif"
+ ALT="$\ V_{6}<<0\ , $"><B><FONT SIZE="-1"> and
+trivial solution of eq. (1) is stable with respect to </FONT></B>
+<!-- MATH: $\ x,\ \dot x.$ -->
+<IMG
+ WIDTH="55" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img212.gif"
+ ALT="$\ x,\ \dot x.$"><IMG
+ WIDTH="21" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$ \lhd $">
+<P>
+<B>Other variants of solutions of systems (a) and (b) are discussed in [2].
+Integral of the linear system can be used as Lyapunov function for
+nonlinear system too.
+</B>
+<P>
+<B>The calculated first integrals (or their bunches) can be used to construct
+Lyapunov functions  in proving the stability of the trivial solution
+for the system (1) if Sylvester's inequalities of sing-definiteness of
+the quadratic part of the integral (8) with respect to all variables of the
+problem are satisfied.
+</B>
+<P>
+<B> <B>Systems with decomposition.</B>
+Let system (1) be separable to primary and secondary subsystems:
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left( \begin{array}{cc} M_{11} & M_{12}  \\
+M_{12}^{T} & M_{22} \end{array} \right) \
+\left( \begin{array}{c} \ddot x_{1} \\\ddot x_{2} \end{array} \right) \ +
+\left( \begin{array}{cc} D_{11} & D_{12}  \\D_{12}^{T}& D_{22} \end{array}
+\right) \
+\left( \begin{array}{c} \dot x_{1} \\\dot x_{2} \end{array} \right) \ +
+2 \left( \begin{array}{cc} G_{11} & G_{12}  \\-G_{12}^{T}& G_{22}
+\end{array} \right) \
+\left( \begin{array}{c} \dot x_{1} \\\dot x_{2} \end{array}
+\right) \ +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="663" HEIGHT="59"
+ SRC="img213.gif"
+ ALT="\begin{displaymath}\left( \begin{array}{cc} M_{11} & M_{12} \\
+M_{12}^{T} & M_{...
+...egin{array}{c} \dot x_{1} \\ \dot x_{2} \end{array}\right) \ + \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++\left( \begin{array}{cc} P_{11} & P_{12}  \\-P_{12}^{T}& P_{22}
+\end{array} \right) \ \left( \begin{array}{c} x_{1} \\x_{2}\end{array} \right) \ +
+\left( \begin{array}{cc} K_{11} & K_{12}  \\K_{12}^{T}& K_{22} \end{array}
+\right) \ \left( \begin{array}{c} x_{1} \\x_{2} \end{array} \right) \  = \left(
+\begin{array}{c}Q_{1} \\Q_{2} \end{array} \right) \ \eqno(21)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="565" HEIGHT="82"
+ SRC="img214.gif"
+ ALT="\begin{displaymath}+\left( \begin{array}{cc} P_{11} & P_{12} \\ -P_{12}^{T}& P_{...
+...\begin{array}{c}Q_{1} \\ Q_{2} \end{array} \right) \ \eqno(21)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>For such representation of a system we can write out differential
+consequences and use them in more "subtle" theorems than Lyapunov theorems
+on stability and asymptotic stability.
+</B>
+<P>
+<B>For example, if </B><IMG
+ WIDTH="70" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img215.gif"
+ ALT="$\ P=0 \ $"><B> then from a differential consequence
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{d\over dt}(\dot{x}^{T}M\dot{x} + x^{T}Kx  ) =
+2\dot{x}^{T}Q - 2 \dot{x}^{T}D\dot{x} - 2\dot{x}^{T}Px \
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="405" HEIGHT="50"
+ SRC="img216.gif"
+ ALT="\begin{displaymath}{d\over dt}(\dot{x}^{T}M\dot{x} + x^{T}Kx ) =
+2\dot{x}^{T}Q - 2 \dot{x}^{T}D\dot{x} - 2\dot{x}^{T}Px \
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>by Krasovsky theorem it follows a modification of theorem in [5] :  
+</B>
+<P>
+<B><I>Theorem .</I> If </B>
+<!-- MATH: $\ D_{11}>0\ , \ D_{22}\geq 0\ , \ D_{12}=0\ , \ K>0\$ -->
+<IMG
+ WIDTH="340" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img217.gif"
+ ALT="$\ D_{11}>0\ , \ D_{22}\geq 0\ , \ D_{12}=0\ , \ K>0\ $"><B>and set </B>
+<!-- MATH: ${\cal L} = \{(x_{1},x_{2},\dot x_{1},\dot x_{2})\ :\
+\dot x_{1}^{T}D_{11}\dot x_{1}+ \dot x_{2}^{T}D_{22}\dot x_{2}=0\}\$ -->
+<IMG
+ WIDTH="423" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img218.gif"
+ ALT="${\cal L} = \{(x_{1},x_{2},\dot x_{1},\dot x_{2})\ :\
+\dot x_{1}^{T}D_{11}\dot x_{1}+ \dot x_{2}^{T}D_{22}\dot x_{2}=0\}\ $"><B>does not contain full non-zero trajectory, then zero solution of a system
+(21) (</B><I>P</I>=0<B>) is asymptotically stable with respect to
+</B>
+<!-- MATH: $\ \dot{x}\ ,\ x\$ -->
+<IMG
+ WIDTH="50" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img195.gif"
+ ALT="$\ \dot x, x\ $"><B> with any non-linear gyroscopic and potential forces.
+</B><IMG
+ WIDTH="21" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img219.gif"
+ ALT="$\Box$">
+<P>
+<B>If </B><IMG
+ WIDTH="70" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img220.gif"
+ ALT="$\ Q=0\ $"><B> then conditions of non-existence of full trajectory
+on a set </B>
+<!-- MATH: $\ {\cal L}\$ -->
+<IMG
+ WIDTH="33" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img221.gif"
+ ALT="$\ {\cal L}\ $"><B> lead to the statement that a system
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+M_{12}\ddot x_{2} -2G_{12}\dot x_{2}+K_{12}x_{2}=0
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="246" HEIGHT="34"
+ SRC="img222.gif"
+ ALT="\begin{displaymath}M_{12}\ddot x_{2} -2G_{12}\dot x_{2}+K_{12}x_{2}=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+M_{22}\ddot x_{2} + (D_{22}+2G_{22})\dot x_{2}+K_{22}x_{2}=0
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="316" HEIGHT="36"
+ SRC="img223.gif"
+ ALT="\begin{displaymath}M_{22}\ddot x_{2} + (D_{22}+2G_{22})\dot x_{2}+K_{22}x_{2}=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>has only a zero solution </B>
+<!-- MATH: $\ x_{2}=0\$ -->
+<IMG
+ WIDTH="74" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img224.gif"
+ ALT="$\ x_{2}=0\ $"><B> [5].
+</B>
+<P>
+<B>As it can be seen from presented theorems, studying of a system
+stability is reduced to searching of the conditions of sign-definitiveness,
+sign-constantness and equality to zero for matrices. Note that the task of
+sign-constantness for matrices cannot be solved on a computer without
+symbolic calculations.  This is why existing numerical packages for
+stability investigation can work only with rough systems.  This is also
+true for application of N.N. Krasovsky and other theorems based
+on Lyapunov functions with constant sign derivatives, where we must solve
+a question about absence of full trajectories of the system on some
+manifold.
+</B>
+<P>
+<B>Let's present one of possible algorithms for solution of this task.
+</B>
+<P>
+<B>
+1). Choosing a Lyapunov function </B>
+<!-- MATH: $\ V(x,\dot x)\$ -->
+<IMG
+ WIDTH="81" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img225.gif"
+ ALT="$\ V(x,\dot x)\ $"><B> and calculation
+</B><IMG
+ WIDTH="35" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img226.gif"
+ ALT="$\ \dot V\ $"><B> by equations of disturbed motion (1).
+</B>
+<P>
+<!-- MATH: $1^{\prime}).\$ -->
+<IMG
+ WIDTH="40" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img227.gif"
+ ALT="$1^{\prime}).\ $"><B> Choosing a differential consequence .
+</B>
+<P>
+<B>
+2). Checking sign-constantness of a function
+</B><IMG
+ WIDTH="35" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img226.gif"
+ ALT="$\ \dot V\ $"><B> ( if  </B>
+<!-- MATH: $\ \dot V \geq 0\ ,$ -->
+<IMG
+ WIDTH="76" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img228.gif"
+ ALT="$\ \dot V \geq 0\ ,$"><B> then a group of values
+</B>
+<!-- MATH: $(x,\ \dot x)$ -->
+<IMG
+ WIDTH="58" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img229.gif"
+ ALT="$(x,\ \dot x)$"><B> when </B>
+<!-- MATH: $\ \dot V = 0\$ -->
+<IMG
+ WIDTH="71" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img230.gif"
+ ALT="$\ \dot V = 0\ $"><B> will define a manifold we seek for).
+</B>
+<P>
+<B>
+3). If a manifold represents some surface
+</B>
+<P>
+<!-- MATH: $F(x_1, \ldots,\ x_n,\ \dot x_1, \ldots ,\ \dot x_n) = 0\ ,\$ -->
+<IMG
+ WIDTH="285" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img231.gif"
+ ALT="$ F(x_1, \ldots,\ x_n,\ \dot x_1, \ldots ,\ \dot x_n) = 0\ ,\ $"><B>then matrix condition:
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\partial F \over \partial x}\dot x + {\partial F \over \partial \dot x}
+(\ M^{-1}Q - M^{-1}(D+2G)\dot x - M^{-1}(K+P)x\ )\neq 0
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="517" HEIGHT="50"
+ SRC="img232.gif"
+ ALT="\begin{displaymath}{\partial F \over \partial x}\dot x + {\partial F \over \part...
+...dot x}
+(\ M^{-1}Q - M^{-1}(D+2G)\dot x - M^{-1}(K+P)x\ )\neq 0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>(i.e. if left part isn't equal to zero at least sometimes)
+is a sufficient for non-existence of full trajectories in the manifold.
+</B>
+<P>
+<B>Note :
+</B>
+<P>
+<B>
+a). if during  solution of specific tasks a sign-constant function
+</B><IMG
+ WIDTH="35" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img226.gif"
+ ALT="$\ \dot V\ $"><B> can be factorized to
+</B>
+<!-- MATH: $\ \dot V = (\ z_1\ )^{m_1}(\ z_2 \ )^{m_2}\ldots (\ z_k\ )^{m_k}\ ,\$ -->
+<IMG
+ WIDTH="300" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img233.gif"
+ ALT="$\ \dot V = (\ z_1\ )^{m_1}(\ z_2 \ )^{m_2}\ldots (\ z_k\ )^{m_k}\ ,\ $"><B>then instead of function </B><IMG
+ WIDTH="34" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img234.gif"
+ ALT="$\ F\ $"><B> (which determines a manifold equation)
+we must use all independent situations
+</B>
+<!-- MATH: $\ \ F_i = z_i = 0\ , \hskip .4cm (\ i=1,\ldots, j\ ,\ \ j \leq k \ )$ -->
+<IMG
+ WIDTH="347" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img235.gif"
+ ALT="$\ \ F_i = z_i = 0\ , \hskip .4cm (\ i=1,\ldots, j\ ,\ \ j \leq k \ ) $"><B>and investigate a question about non-existence of full trajectories for
+each of them.
+</B>
+<P>
+<B>
+b). if </B><IMG
+ WIDTH="35" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img226.gif"
+ ALT="$\ \dot V\ $"><B> isn't a function of all variables in the task, like
+</B>
+<P>
+<!-- MATH: $\ \dot V = \dot V(x_1,\ldots,\ x_{i_1},\ \dot x_1,\ldots,\
+\dot x_{i_2})\ ,\$ -->
+<IMG
+ WIDTH="304" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img236.gif"
+ ALT="$\ \dot V = \dot V(x_1,\ldots,\ x_{i_1},\ \dot x_1,\ldots,\
+\dot x_{i_2})\ ,\ $"><B> £¤¥ </B>
+<!-- MATH: $\ i_1+i_2 < 2n\$ -->
+<IMG
+ WIDTH="120" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img237.gif"
+ ALT="$\ i_1+i_2 < 2n\ $"><B> then we can use
+</B>
+<!-- MATH: $\ \ x_1=\ldots =\ x_{i_1}=\ \dot x_1=\ldots =\ \dot x_{i_2} = 0\ ,$ -->
+<IMG
+ WIDTH="348" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img238.gif"
+ ALT="$\ \ x_1=\ldots =\ x_{i_1}=\ \dot x_1=\ldots =\ \dot x_{i_2} = 0\ ,$">
+<!-- MATH: $\ x_{i_1+j}\neq 0 \ \ (j=1,\ldots,n-i_1)\ , \ \ \dot x_{i_2+j}\neq 0\
+\ \ (j=1,\ldots,n-i_2)\$ -->
+<IMG
+ WIDTH="543" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img239.gif"
+ ALT="$ \ x_{i_1+j}\neq 0 \ \ (j=1,\ldots,n-i_1)\ , \ \ \dot x_{i_2+j}\neq 0\
+\ \ (j=1,\ldots,n-i_2)\ $"><B> as the manifold for investigation.
+</B>
+<P>
+<B>
+This algorithm is implemented in programming language of "Mathematica"
+system [6].
+</B>
+<P>
+<B><B>An example of using the "STABILITY" package.</B>
+We conduct parametric analysis of asymptotic stability
+conditions of the equilibrium position of a satellite with controlled
+gravitational stabilizer on circular orbit [7] (not considering elasticity of
+the rod and without a gyrowheel in a satellite).
+Linear equations of motion are subdivided to two subsystems.
+In pitch angle (</B>
+<!-- MATH: $\ \theta \$ -->
+<IMG
+ WIDTH="29" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img240.gif"
+ ALT="$\ \theta \ $"><B>) they have form
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+c\ \ddot \theta + f\ \ddot \alpha + 3\omega^2\
+[\ (b-a)\ \theta +f\ \alpha\ ]\ =\ 0
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="341" HEIGHT="36"
+ SRC="img241.gif"
+ ALT="\begin{displaymath}c\ \ddot \theta + f\ \ddot \alpha + 3\omega^2\
+[\ (b-a)\ \theta +f\ \alpha\ ]\ =\ 0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f\ \ddot \theta + g\ \ddot \alpha + 3\omega^2 f\ (\ \theta +\alpha\ )\ =\
+Q_{\alpha}\ \ , \eqno(22)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="445" HEIGHT="36"
+ SRC="img242.gif"
+ ALT="\begin{displaymath}f\ \ddot \theta + g\ \ddot \alpha + 3\omega^2 f\ (\ \theta +\alpha\ )\ =\
+Q_{\alpha}\ \ , \eqno(22)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>where </B><IMG
+ WIDTH="32" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img243.gif"
+ ALT="$\ \omega\ $"><B> is an absolute value of orbital angular
+velocity;
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+b = J_x + m\ r\ (r+d) + \frac{1}{3}\ m\ d^{\ 2} + m_0\ (r+d)^2\ ;
+\ \ c = J_z + m\ r\ (r+d) + \frac{1}{3}\ m\ d^{\ 2} + m_0\ (r+d)^2\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="699" HEIGHT="49"
+ SRC="img244.gif"
+ ALT="\begin{displaymath}b = J_x + m\ r\ (r+d) + \frac{1}{3}\ m\ d^{\ 2} + m_0\ (r+d)^...
+... J_z + m\ r\ (r+d) + \frac{1}{3}\ m\ d^{\ 2} + m_0\ (r+d)^2\ ; \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+a = J_y\ ;\ \ \ g = (\frac{1}{3}\ m + m_0\ )\ d^{\ 2}\ ;
+\ \ \ f = \frac{1}{2}\ m\ r\ d + \frac{1}{3}\ m\ d^{\ 2} + m_0\ d\ (r+d)\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="577" HEIGHT="49"
+ SRC="img245.gif"
+ ALT="\begin{displaymath}a = J_y\ ;\ \ \ g = (\frac{1}{3}\ m + m_0\ )\ d^{\ 2}\ ;
+\ \ ...
+...ac{1}{2}\ m\ r\ d + \frac{1}{3}\ m\ d^{\ 2} + m_0\ d\ (r+d)\ ; \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<!-- MATH: $m\ ,\ m_0\$ -->
+<IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img246.gif"
+ ALT="$ m\ ,\ m_0\ $"><B> are, respectively, masses of the rod and the weight on its end ;
+</B><IMG
+ WIDTH="65" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img247.gif"
+ ALT="$\ d > 0\ $"><B> is the length of the rod ;
+</B><IMG
+ WIDTH="64" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img248.gif"
+ ALT="$\ r > 0\ $"><B> is the distance between the mass center of the system and
+attachment point of the rod;
+</B>
+<!-- MATH: $\ J_x\ ,\ J_y\ ,\ J_z\$ -->
+<IMG
+ WIDTH="120" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img249.gif"
+ ALT="$\ J_x\ ,\ J_y\ ,\ J_z\ $"><B> are the principal moments of inertia of the satellite ;
+</B><IMG
+ WIDTH="18" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img102.gif"
+ ALT="$\alpha $"><B> is the rotation angle of the rod relative to the satellite body.
+</B>
+<P>
+<B>If </B>
+<!-- MATH: $\ Q_{\alpha} = Q_{\beta} = 0\$ -->
+<IMG
+ WIDTH="131" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img250.gif"
+ ALT="$\ Q_{\alpha} = Q_{\beta} = 0\ $"><B>, then potential forces influence the system.
+They are determined by forces of gravitational attraction and by the motion
+along the orbit. Such a system cannot be asymptotically stable.
+Indeed, the differential equations allow for the integral of energy
+(example 6.1) :
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+c\dot \theta ^{2}+g\dot \alpha ^{2}+2f\dot \theta \dot \alpha
++3\omega ^{2}(b-a)\theta ^{2}+ 3\omega ^{2} f\alpha ^{2}
+=const.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="440" HEIGHT="36"
+ SRC="img251.gif"
+ ALT="\begin{displaymath}c\dot \theta ^{2}+g\dot \alpha ^{2}+2f\dot \theta \dot \alpha
++3\omega ^{2}(b-a)\theta ^{2}+ 3\omega ^{2} f\alpha ^{2}
+=const.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B>
+The requirements of definite positiveness of this quadratic form
+give conditions for secular stability of the system.
+</B>
+<P>
+<B>Let's consider following control actions at the attachment point:
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\ Q_{\alpha} = k_{\theta}^{\prime}\ \dot \theta -
+k_{\alpha}^{\prime}\ \dot \alpha\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="159" HEIGHT="36"
+ SRC="img252.gif"
+ ALT="\begin{displaymath}\ Q_{\alpha} = k_{\theta}^{\prime}\ \dot \theta -
+k_{\alpha}^{\prime}\ \dot \alpha\ . \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>The system is being influenced by potential forces (with matrix </B><IMG
+ WIDTH="37" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img253.gif"
+ ALT="$\ K\ $"><B>),
+gyroscopic forces (with matrix </B><IMG
+ WIDTH="34" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img254.gif"
+ ALT="$\ G\ $"><B>) and dissipative forces
+(with matrix </B><IMG
+ WIDTH="36" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img204.gif"
+ ALT="$\ D\ $"><B>) :
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+M\ =\ \left( \begin{array}{cc} c & f \\f & g \end{array} \right)\ ; \ \ \ \ \
+K\ =\ 3\omega^2\ \left( \begin{array}{cc} b-a & f \\f & f
+\end{array} \right)\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="420" HEIGHT="59"
+ SRC="img255.gif"
+ ALT="\begin{displaymath}M\ =\ \left( \begin{array}{cc} c & f \\ f & g \end{array} \ri...
+...eft( \begin{array}{cc} b-a & f \\ f & f
+\end{array} \right)\ ; \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+G\ =\ \left( \begin{array}{cc} 0 & {k_{\theta}^{\prime}}/2
+\\{-k_{\theta}^{\prime}}/2 & 0 \end{array} \right)\ ; \ \ \ \ \
+D\ =\ \left( \begin{array}{cc} 0 & {-k_{\theta}^{\prime}}/2
+\\{-k_{\theta}^{\prime}}/2 & k_{\alpha}^{\prime} \end{array} \right)\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="490" HEIGHT="59"
+ SRC="img256.gif"
+ ALT="\begin{displaymath}G\ =\ \left( \begin{array}{cc} 0 & {k_{\theta}^{\prime}}/2
+\\...
+...heta}^{\prime}}/2 & k_{\alpha}^{\prime} \end{array} \right)\ . \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B>Let parameters of the system be :
+</B>
+<!-- MATH: $\ \ d = 12$ -->
+<IMG
+ WIDTH="75" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img257.gif"
+ ALT="$\ \ d = 12 $"><B> m ; </B>
+<!-- MATH: $\ \ r = 2.5$ -->
+<IMG
+ WIDTH="79" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img258.gif"
+ ALT="$\ \ r = 2.5 $"><B> m ; </B>
+<!-- MATH: $m_0 = 1.531\ kg\ ;$ -->
+<IMG
+ WIDTH="141" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img259.gif"
+ ALT="$ m_0 = 1.531\ kg\ ;$">
+<P>
+<!-- MATH: $m = 0.0143\ kg\ ;\ \ \omega = 0.0011$ -->
+<IMG
+ WIDTH="252" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img260.gif"
+ ALT="$ m = 0.0143\ kg\ ;\ \ \omega = 0.0011 $"><B> rad/s. ;
+</B>
+<!-- MATH: $\ \ J_y = 28\ kgm^2\ ;$ -->
+<IMG
+ WIDTH="148" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img261.gif"
+ ALT="$\ \ J_y = 28\ kgm^2\ ;$">
+<!-- MATH: $J_x = 75\ kgm^2\ ; \ \ J_z = 76\ kgm^2\ .$ -->
+<IMG
+ WIDTH="280" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img262.gif"
+ ALT="$ J_x = 75\ kgm^2\ ; \ \ J_z = 76\ kgm^2\ . $"><B>With these values, domain where parameters
+</B>
+<!-- MATH: $\ k_{\theta}^{\prime}\ ,\ k_{\alpha}^{\prime}\$ -->
+<IMG
+ WIDTH="79" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img263.gif"
+ ALT="$\ k_{\theta}^{\prime}\ ,\ k_{\alpha}^{\prime}\ $"><B> could be chosen is
+presented on figure 1.
+<BR>
+<IMG
+ WIDTH="901" HEIGHT="588" ALIGN="BOTTOM" BORDER="0"
+ SRC="img264.gif"
+ ALT="\begin{picture}(380,240)
+\put(20,240){\special{em:graph degree20.pcx}}
+\end{picture}">
+<BR></B>
+<P>
+<B>Figure 1.
+</B>
+<P>
+<B>
+This domain is found by program </B><IMG
+ WIDTH="81" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img265.gif"
+ ALT="$\ Region\ $"><B> that plots 2D solutions of
+numerical-symbolic algebraic inequalities (in this case Routh-Hurwitz
+conditions).
+</B>
+<P>
+<B>It is known that the problem about damping of transient process in the system
+is connected with evaluation of the degree of stability (i.e. with the
+evaluation of a disposition of the roots of characteristic equation
+in left-hand half-plane).
+Also there is an important task of choosing the parameters of the system
+in question, so its degree of stability will be larger or equal than
+a given value </B>
+<!-- MATH: $\ \varepsilon\$ -->
+<IMG
+ WIDTH="28" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img266.gif"
+ ALT="$\ \varepsilon\ $"><B>.
+Let's study this question for the system (22).
+For the characteristic equation
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+det\ \Vert\ M\ (\ \mu - \varepsilon\ )^2 + D\ (\ \mu - \varepsilon\ ) +
+G\ (\ \mu - \varepsilon\ )+ K\ \Vert =
+\sum^4_{i=0}\ {\tilde a}_{i}(\varepsilon,\ k_{\theta}^{\prime},\ k_{\alpha}^{\prime})
+\ \mu^i\ =\ 0\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="613" HEIGHT="62"
+ SRC="img267.gif"
+ ALT="\begin{displaymath}det\ \Vert\ M\ (\ \mu - \varepsilon\ )^2 + D\ (\ \mu - \varep...
+...,\ k_{\theta}^{\prime},\ k_{\alpha}^{\prime})
+\ \mu^i\ =\ 0\ , \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B>
+( where </B>
+<!-- MATH: $\ \varepsilon > 0\ -\$ -->
+<IMG
+ WIDTH="86" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img268.gif"
+ ALT="$\ \varepsilon > 0\ -\ $"><B> is the degree of stability (offset from
+imaginary axis)) with the help of package "Stability" we obtained
+Routh-Hurwitz conditions and made parametric analysis of these conditions.
+The analysis showed, that the domain for choosing parameters
+</B>
+<!-- MATH: $\ k_{\theta}^{\ \prime}\ ,\ k_{\alpha}^{\ \prime}\$ -->
+<IMG
+ WIDTH="79" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img263.gif"
+ ALT="$\ k_{\theta}^{\prime}\ ,\ k_{\alpha}^{\prime}\ $"><B>exists only when </B>
+<!-- MATH: $\ \ \varepsilon\ \in \ \ ]\ 0\ ,\ 0.00035\ ]\$ -->
+<IMG
+ WIDTH="192" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img269.gif"
+ ALT="$\ \ \varepsilon\ \in \ \ ]\ 0\ ,\ 0.00035\ ]\ $"><B>.
+For example, when </B>
+<!-- MATH: $\ \varepsilon = 0.0001\$ -->
+<IMG
+ WIDTH="108" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img270.gif"
+ ALT="$\ \varepsilon = 0.0001\ $">
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\tilde a}_0\ (\ k_{\alpha}^{\prime},\ k_{\theta}^{\prime}\ )\ =\
+1.74217\ 10^{-6}\ (\ 0.312446 - 1.\ k_{\alpha}^{\prime} - 0.710183\ k_{\theta}^{\prime}\ )\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="561" HEIGHT="36"
+ SRC="img271.gif"
+ ALT="\begin{displaymath}{\tilde a}_0\ (\ k_{\alpha}^{\prime},\ k_{\theta}^{\prime}\ )...
+... 1.\ k_{\alpha}^{\prime} - 0.710183\ k_{\theta}^{\prime}\ )\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\tilde a}_1\ (\ k_{\alpha}^{\prime},\ k_{\theta}^{\prime}\ )\ =\
+0.0025402\ (\ -0.156841 + 1.\ k_{\alpha}^{\prime} + 0.69747\ k_{\theta}^{\prime}\ )\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="540" HEIGHT="36"
+ SRC="img272.gif"
+ ALT="\begin{displaymath}{\tilde a}_1\ (\ k_{\alpha}^{\prime},\ k_{\theta}^{\prime}\ )...
+...+ 1.\ k_{\alpha}^{\prime} + 0.69747\ k_{\theta}^{\prime}\ )\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\tilde a}_2\ (\ k_{\alpha}^{\prime},\ k_{\theta}^{\prime}\ )\ =\
+1.19704\ (\ 0.222583 - 1.\ k_{\alpha}^{\prime} - 0.669716\ k_{\theta}^{\prime}\ )\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="515" HEIGHT="36"
+ SRC="img273.gif"
+ ALT="\begin{displaymath}{\tilde a}_2\ (\ k_{\alpha}^{\prime},\ k_{\theta}^{\prime}\ )...
+... 1.\ k_{\alpha}^{\prime} - 0.669716\ k_{\theta}^{\prime}\ )\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\tilde a}_3\ (\ k_{\alpha}^{\prime},\ k_{\theta}^{\prime}\ )\ =\
+399.015\ (\ -0.168512 + 1.\ k_{\alpha}^{\prime} + 0.669716\ k_{\theta}^{\prime}\ )\ ;
+\ \ \ {\tilde a}_4\ =\ 16809.7\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="630" HEIGHT="36"
+ SRC="img274.gif"
+ ALT="\begin{displaymath}{\tilde a}_3\ (\ k_{\alpha}^{\prime},\ k_{\theta}^{\prime}\ )...
+...6\ k_{\theta}^{\prime}\ )\ ;
+\ \ \ {\tilde a}_4\ =\ 16809.7\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\Delta\ (\ k_{\alpha}^{\prime},\ k_{\theta}^{\prime}\ )\ = \
+0.935921\ (\ 0.00214592 - 0.0521656\ k_{\alpha}^{\prime} +
+0.401952\ {k_{\alpha}^{\prime}}^2  - 1.\ {k_{\alpha}^{\prime}}^3\ -
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="637" HEIGHT="36"
+ SRC="img275.gif"
+ ALT="\begin{displaymath}\Delta\ (\ k_{\alpha}^{\prime},\ k_{\theta}^{\prime}\ )\ = \
+...
+...1952\ {k_{\alpha}^{\prime}}^2 - 1.\ {k_{\alpha}^{\prime}}^3\ - \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+-\ 0.0349361\ k_{\theta}^{\prime}\ +\
+0.541983\ k_{\alpha}^{\prime}\ k_{\theta}^{\prime}
+\ -\ 2.03313\ {k_{\alpha}^{\prime}}^2\ k_{\theta}^{\prime}\ +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="470" HEIGHT="36"
+ SRC="img276.gif"
+ ALT="\begin{displaymath}-\ 0.0349361\ k_{\theta}^{\prime}\ +\
+0.541983\ k_{\alpha}^{\...
+...
+\ -\ 2.03313\ {k_{\alpha}^{\prime}}^2\ k_{\theta}^{\prime}\ + \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++\ 0.182602\ {k_{\theta}^{\prime}}^2\ -\
+1.37769\ k_{\alpha}^{\prime}\ {k_{\theta}^{\prime}}^2\
+-\ 0.311139\ {k_{\theta}^{\prime}}^3\ )
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="444" HEIGHT="36"
+ SRC="img277.gif"
+ ALT="\begin{displaymath}+\ 0.182602\ {k_{\theta}^{\prime}}^2\ -\
+1.37769\ k_{\alpha}^...
+..._{\theta}^{\prime}}^2\
+-\ 0.311139\ {k_{\theta}^{\prime}}^3\ ) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B>
+and the output of the program
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+Region[\ \{\ \Delta > 0,\ a_0 > 0,\ a_1 > 0,\ a_2 > 0,\ a_3 > 0\ \},\ \
+\{\ k_{\theta}^{\prime},\ 0,\ 1.2\ \},\
+        \{\ k_{\alpha}^{\prime},\ 0,\ -1\ \}\ ]
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="677" HEIGHT="36"
+ SRC="img278.gif"
+ ALT="\begin{displaymath}Region[\ \{\ \Delta > 0,\ a_0 > 0,\ a_1 > 0,\ a_2 > 0,\ a_3 >...
+...rime},\ 0,\ 1.2\ \},\
+\{\ k_{\alpha}^{\prime},\ 0,\ -1\ \}\ ]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B>
+will be the solution (domain) :
+<BR>
+<IMG
+ WIDTH="979" HEIGHT="598" ALIGN="BOTTOM" BORDER="0"
+ SRC="img279.gif"
+ ALT="\begin{picture}(380,240)
+\put(20,240){\special{em:graph degree22.pcx}}
+\end{picture}">
+<BR></B>
+<P>
+<B>Figure 2.
+</B>
+<P>
+<B>On this picture it can be seen that asymptotical stability for given
+degree of stability could be reached by adding an accelerating dissipative
+force to the system, because </B>
+<!-- MATH: $\ k_{\alpha}^{\prime} <0\  .$ -->
+<IMG
+ WIDTH="80" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img280.gif"
+ ALT="$ \ k_{\alpha}^{\prime} <0\ .$">
+<P>
+<DIV ALIGN="CENTER"><B>
+<B>REFERENCES</B></DIV></B>
+<P>
+<B><B>
+1. Banshchikov A.V., Bourlakova L.A. Information and Research System
+"Stability". //Informations RAS. The theory and control systems. (Izvestia RAN.
+Teoria i sistemi upravlenia.)
+</B></B>
+<!-- MATH: $\ 1996.\ N^ {0} \ 2.\ 13 - 20.$ -->
+<IMG
+ WIDTH="186" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img281.gif"
+ ALT="$\ 1996.\ N^ {0} \ 2.\ 13 - 20.$"><B><B> (in Russian).
+</B></B>
+<P>
+<B><B>
+2. Banshchikov A.V., Bourlakova L.A. On algorithms of symbolic computation
+at the research of the stability. // Programming. (Programirovanie.)
+</B></B>
+<!-- MATH: $\ 1997.\ N^ {0} \ 3,\ 72-80.$ -->
+<IMG
+ WIDTH="189" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img282.gif"
+ ALT="$\ 1997.\ N^ {0} \ 3,\ 72-80.$"><B><B> (in Russian).
+</B></B>
+<P>
+<B><B>
+3. Meierov M.V. Criterion of an aperiodicity of regulation. // Izvestia AN SSSR.
+Otdelenie tehnicheskix nauk. 1945. </B></B>
+<!-- MATH: $\ N^{0}\ 12,\ 1169-1178.$ -->
+<IMG
+ WIDTH="187" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img283.gif"
+ ALT="$\ N^{0}\ 12,\ 1169-1178.$"><B><B> (in Russian).
+(Bulletin DE L'ACAD&#201;MIE DES SCIENSES DE L'URSS. Classe des sciences
+techniques. )
+</B></B>
+<P>
+<B><B>
+4. Lankaster P. Theory of matrices. Academic Press. New York - London, 1969.
+</B></B>
+<P>
+<B><B>
+5. Potapenko E.M. Robust stability of controlled dynamical systems.
+// Izvestia RAN. Mehanika tverdogo tela. </B></B>
+<!-- MATH: $\ 1993.\ V.5,\ 15-22.$ -->
+<IMG
+ WIDTH="175" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img284.gif"
+ ALT="$\ 1993.\ V.5,\ 15-22.$"><B><B> (in Russian).
+</B></B>
+<P>
+<B><B>
+6. Wolfram S. Mathematica: A System for Doing Mathematics by Computer.
+Addison-Wesley Publ.Co. 1988.
+</B></B>
+<P>
+<B><B>
+7. Potapenko E.M. Dynamics of a spacecraft with line active control by a
+gravitational stabilizer. // Space researches. (Kosmicheskie issledovania.)
+</B></B>
+<!-- MATH: $\ 1988.\ V.\ 26.\ N^{0}\ 5,\ 699-708.$ -->
+<IMG
+ WIDTH="264" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img285.gif"
+ ALT="$\ 1988.\ V.\ 26.\ N^{0}\ 5,\ 699-708.$"><B><B> (in Russian).
+</B></B>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

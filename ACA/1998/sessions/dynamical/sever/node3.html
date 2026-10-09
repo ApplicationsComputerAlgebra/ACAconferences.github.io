@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Fractal Approximation of Sets (Barnsley's algorithm)</TITLE>
+<META NAME="description" CONTENT="Fractal Approximation of Sets (Barnsley's algorithm)">
+<META NAME="keywords" CONTENT="sever">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sever.css">
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="sever.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html46"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html44"
+ HREF="sever.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html38"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html47"
+ HREF="node4.html">Neural Network Algorithms</A>
+<B> Up:</B> <A NAME="tex2html45"
+ HREF="sever.html">No Title</A>
+<B> Previous:</B> <A NAME="tex2html39"
+ HREF="node2.html">Iterated Function Systems</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00030000000000000000">&#160;</A>
+<A NAME="sec:FAoS">&#160;</A>
+<BR>
+Fractal Approximation of Sets (Barnsley's algorithm)
+</H1>
+
+<P>
+We can conveniently work in the unit square 
+<!-- MATH: $S=[0,1] \times [0,1]
+\subset {{\rm I\!R}}^2$ -->
+<IMG
+ WIDTH="170" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$S=[0,1] \times [0,1]
+\subset {{\rm I\!R}}^2$">
+
+<!-- MATH: $S=[0,1] \times [0,1] \subset {{\rm I\!R}}^2$ -->
+<IMG
+ WIDTH="170" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$S=[0,1] \times [0,1]
+\subset {{\rm I\!R}}^2$">
+for the
+space <I>X</I>. The IFS under consideration is
+appropriately scaled to fit into <I>S</I>.
+
+<P>
+In practice, we are dealing with <I>approximations</I> of fractals
+rather than with fractals themselves.
+We work not in the space <I>X</I> but in its pixel representation
+<IMG
+ WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\tilde X$">
+and, therefore, we deal not with 
+<!-- MATH: $({\cal H}(X),h)$ -->
+<IMG
+ WIDTH="77" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$({\cal H}(X),h)$">but with  
+<!-- MATH: $({\cal H}(\tilde X),h)$ -->
+<IMG
+ WIDTH="77" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$({\cal H}(\tilde X),h)$">
+and, correspondingly, with
+
+<!-- MATH: $\tilde F = (\tilde f_1, \dots, \tilde f_q)$ -->
+<IMG
+ WIDTH="121" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\tilde F = (\tilde f_1, \dots, \tilde f_q)$">
+and <IMG
+ WIDTH="17" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\tilde S$">.
+In what follows under <I>S</I>, <I>F</I> and <I>f</I> we mean <IMG
+ WIDTH="17" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\tilde S$">,
+<IMG
+ WIDTH="18" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\tilde F$">and <IMG
+ WIDTH="15" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\tilde f$">,
+respectively.
+
+<P>
+One way to build a fractal [<A
+ HREF="node13.html#Bressloff">4</A>], specified by IFS,
+looks as follows. We take an initial 
+<!-- MATH: $A_0 \in {\cal H}(X)$ -->
+<IMG
+ WIDTH="88" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$A_0 \in {\cal H}(X)$">
+and
+define
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+A_{n+1}=F(A_n) \equiv \bigcup_{i=1}^q f_i(A_n),
+\hspace*{10mm} n=0, \dots, \infty.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="355" HEIGHT="58"
+ SRC="img19.gif"
+ ALT="\begin{displaymath}A_{n+1}=F(A_n) \equiv \bigcup_{i=1}^q f_i(A_n),
+\hspace*{10mm} n=0, \dots, \infty.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+The sequence 
+<!-- MATH: $\{A_n\}_{n=0}^\infty$ -->
+<IMG
+ WIDTH="69" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\{A_n\}_{n=0}^\infty$">
+converges to <I>A</I><SUB><I>F</I></SUB> in the Hausdorff
+metric. We do <I>N</I> iterations of <I>F</I>.
+When the number <I>N</I> of iterations becomes great enough, we have an
+approximation
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+F^N(A_0) \approx A_F.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="107" HEIGHT="31"
+ SRC="img21.gif"
+ ALT="\begin{displaymath}F^N(A_0) \approx A_F.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+Barnsley's deterministic algorithm [<A
+ HREF="node13.html#Barnsley">2</A>] for building a
+fractal implies the calculation of each <IMG
+ WIDTH="55" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$f_k \in F$">
+for every point
+<IMG
+ WIDTH="50" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$s_i \in S$">,
+
+<!-- MATH: $i \in \{1, \dots, |S|\}$ -->
+<IMG
+ WIDTH="114" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$i \in \{1, \dots, \vert S\vert\}$">
+for every iteration. When we
+wish to rebuild the fractal, we have to repeat the whole above
+procedure.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html46"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html44"
+ HREF="sever.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html38"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html47"
+ HREF="node4.html">Neural Network Algorithms</A>
+<B> Up:</B> <A NAME="tex2html45"
+ HREF="sever.html">No Title</A>
+<B> Previous:</B> <A NAME="tex2html39"
+ HREF="node2.html">Iterated Function Systems</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

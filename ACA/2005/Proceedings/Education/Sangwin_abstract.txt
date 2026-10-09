@@ -1,0 +1,29 @@
+The Practice of Practise:
+Persuading a Computer Algebra System to Help Mark Your Students' Work
+
+Christopher J. Sangwin
+Maths, Stats & OR Network, part of the Higher Education Academy
+School of Mathematics 
+University of Birmingham, Birmingham, B15 2TT
+
+In learning and teaching Computer Algebra Systems (CAS) usually take the role
+of a {\em sophisticated calculator} which the student is expected to use.  The
+well-documented purposes of using such a tool include, for example, reducing
+the computational load, so that attention may be focused on other aspects of a
+problem or to facilitate explorations by allowing rapid re-calculation.
+
+This paper considers quite a different use for CAS: to support assessment by
+evaluating students' answers automatically as part of an online computer aided
+assessment or computer based learning system.  In such a system the {\em
+student-provided answers} are evaluated using the CAS, resulting in an
+objective test.  Note that a student does {\em not} select one (or more)
+teacher-provided answers as would be the case in a multiple response, or
+multiple choice question.  Pedagogically this is an important distinction.
+
+This paper compares systems which have taken this approach, including AiM,
+Wallis, CABLE and Stack.  The comparison draws on the experiences of the author
+over the last five years with university mathematics students.  It will include
+mathematical topics where such systems were used effectively, students'
+experiences and differences between implementations.  In particular the
+differences between existing CAS systems used for this application will be
+considered.

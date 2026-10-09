@@ -1,0 +1,94 @@
+%From berk@info.ssu.samara.ru Fri Apr 30 01:54 MDT 1999
+%Date: Fri, 30 Apr 1999 13:04:19 +0500 (KSD)
+%From: "Lev M. Berkovich" <berk@info.ssu.samara.ru>
+%To: wester@math.math.unm.edu
+%cc: neun@zib.de
+%Subject: submissin
+%Status: RO
+
+\documentstyle[12pt]{article}
+\textheight 245mm
+\textwidth 175mm
+\hoffset -2.0cm
+\voffset -3.0cm
+\unitlength=1mm
+\pagestyle{plain}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\begin{document}
+\begin{center}
+{\large \bf SOLDE: A REDUCE Package for Solving  of Second Order
+Linear Ordinary Differential Equations}\\
+{\large Lev M. Berkovich\\
+Department of Algebra \& Geometry of Samara State
+University\\
+443011,~ Samara,~ Russia,~ e-mail: berk@info.ssu.samara.ru}
+\end{center}
+
+This paper uses abilities of the language REDUCE and the graphic
+package GNUPLOT for the representation of solutions of the second order
+linear differential equations. The procedure of searching solutions in
+the analitic form uses the package SOLDE [1, 2], and the graphic output
+of the found solutions uses the program in [3].
+
+The algorithmic procedure SOLDE differents from known algorithms
+(J.~Kovacic,~ M.~Singer).
+
+The procedure, named SOLDE, finds the Liouvillian solutions of the
+nonhomogeneous second order linear ordinary differential equations
+$$
+Ly\equiv a_2(x)y''+a_1(x)y'+a_0(x)y=f(x),
+$$
+where $a_2(x), a_1(x), a_0(x)$ and $f(x)$ belong to some differential
+field $(k(x), D)$,~ $k$ is number field of the characteristics
+$0$,~$D=d/dx$ is a derivation on $k(x)$. A differential field extension
+of $(k(x),D)$ is a Liouvillian extension $(K(x),D)$
+such that $K(x)\supset\overline{k}(x)$, and $D$ is a derivation on
+$K(x)$.
+
+It provides a user with the following information on the equation
+being investigated.
+
+
+$\bullet$ The Kummer--Liouville transformation
+$$
+y=v(x)z(t),~~dt=u(x)dx,
+$$
+that reduces the homogeneous equation $Ly=0$ to one with constant
+coefficients
+$$
+z''(t)+b_1z'(t)+b_0z(t)=0.
+$$
+
+$\bullet$ The factorization
+$$
+Ly\equiv (D-\alpha_2)(D-\alpha_1)y=0,~ \alpha_i=\alpha_i(x)\in
+K(x),~i=1,2.
+$$
+
+$\bullet$ The fundamental set of solutions $y_1(x),~y_2(x)$ of $Ly=0$.
+
+$\bullet$ The partial solution $y_*$ of $Ly=f(x)$.
+
+$\bullet$ Ly=0 has no Liouvillian solution.
+\vspace{3mm}
+
+{\bf \large References}
+\vspace{2mm}
+
+[1] Berkovich, L.M.~
+{\it Factorization and transformations of ordinary differential 
+equations}, Saratov University Publ., 1989, 192 P.
+
+[2] Berkovich, L.M. and Berkovich, F.L.~ {\it Transformation and
+factorization of second order linear ordinary differential equations
+and its implementation in REDUCE}, Publ. Elektr. Fak. Univ. Beograd,
+Ser. Mat., 1995, N 6,~11--24.
+
+[3] Berkovich L.M., Frolov I.S. {\it Representation of the second order
+linear differential equations solutions using the language REDUCE and
+graphic pacckage GNUPLOT}, Vestnik Samarskogo gos. universiteta,
+1997 N 2(4), 109--114.
+
+\end{document}
+

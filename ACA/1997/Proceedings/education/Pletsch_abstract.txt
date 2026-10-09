@@ -1,0 +1,9 @@
+Computer Algebra Systems in Beginning College Mathematics Instruction
+
+Bill Pletsch
+
+The role of computer algebra systems in the mathematics classroom, especially
+the first two years of college, will be discussed.  The progress of a specific
+project, The New Mexico Initiative for Math Reform, which is concerned with
+just this issue, will be reported.  In the process, a new software package,
+Scientific Notebook, will be demonstrated.

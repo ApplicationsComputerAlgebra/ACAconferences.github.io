@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <link href="styles/master.css" type="text/css" rel="stylesheet" media="all"/>
+   <title>ACA 2008 Applications of Computer Algebra</title>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tbody>
+      <tr>
+        <td class="headerLeft"><a href="/"><img src="./_images/header/schloss21s.jpg" /></a></td>
+        <td width="20px"></td>
+        <td>
+        <table width="100%">
+        <tbody>
+        <tr><td class="headerTitle">Applications of Computer Algebra</td></tr>
+        <tr><td class="headerSub"><a href="/">RISC, Castle of Hagenberg, Austria.</a></td></tr>
+        <tr><td class="headerSub">July 27-30, 2008.</td></tr>
+      	</tbody>
+      	</table>
+        </td>
+      </tr>
+   </tbody>
+ </table>
+
+
+
+<table cellspacing="0" cellpadding="0" width="100%" class="infobar">
+	<tbody><tr><td height=20px>
+	<marquee scrollamount="2" scrolldelay="1" behavior=slide loop=1>
+	<b><a href="?content=pictures">NEWS: ACA 2008 is over, pictures are available ... </a></b>
+	</marquee>
+</td></tr></tbody></table>
+
+
+<div class="class1">
+	
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspace">
+<tbody>
+<tr>
+<td>
+	
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+
+<td style="width:12px;"></td>          
+<td class="unselected">
+	<div><a href="?content=news">News</a></div>
+</td>
+<td class="selected">
+	<div>General</div>
+</td>	
+
+<td class="unselected">
+	<div><a href="?content=sessions">Sessions</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=submission">Submission</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=registration">Registration</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=program">Program</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=pictures">Pictures</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=location">Location</a></div>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspaceSub">
+<tbody>
+<tr>
+<td>
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+<td style='width:150px;'></td>
+<td class="unselectedSub">
+	<a href="?content=general&amp;sub=scope">Scope</a>
+</td>
+<td class="unselectedSub">
+	<a href="?content=general&amp;sub=dates">Dates</a>
+</td>
+<td class="unselectedSub">
+	<a href="?content=general&amp;sub=committees">Committees</a>
+</td>
+<td class="selectedSub">
+	Related</td>	
+
+
+</tr>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table><div id="content">
+<div id="column">
+<table class="class2" cellspacing="0" cellpadding="0" style="padding-top:5px">
+<tbody>
+<tr>
+<td class="leftColumn">
+<img width="200" src="_images/photos/2006-09-22_14-19-20.jpg" alt="Castle-sky"/>
+<img width="200" style="padding-top:7px;" src="_images/photos/castle-fishview.jpg" alt="Castle-fishview"/>
+<img width="200" style="padding-top:7px;" src="_images/photos/2006-09-22_14-10-55.jpg" alt="Castle"/>
+
+</td>
+<td class="centerColumnGen">
+
+
+
+<h4>RISC Summer 2008</h4>
+ACA 2008 is a part of the <a href="http://www.risc.uni-linz.ac.at/conferences/summer2008">RISC Summer 2008</a> event that
+consists of conferences and schools organized by RISC in summer 2008.
+<p/>
+
+<h4>Previous ACA Conferences</h4>
+<ul>
+<LI><A HREF="http://www2.oakland.edu/aca/index.cfm">ACA'2007</A> held at
+    Oakland University, Rochester, Michigan, USA (July 19-22)
+    </LI>
+
+<LI><A HREF="http://www.math.bas.bg/ACA2006/">ACA'2006</A> held in Varna,
+    Bulgaria (June 26-29)</LI>
+<LI><A HREF="http://www.jssac.org/Conference/ACA/">ACA'2005</A> held at Nara
+    Women's University, Nara, Nara, Japan (July 31-August 3)
+    </LI>
+<LI><A HREF="http://buchberger.cs.lamar.edu/ACA2004/">ACA'2004</A> held in
+    Beaumont, Texas, USA (July 21-23)<BR>
+    </LI>
+<LI><A HREF="http://math.unm.edu/ACA/2003/2003.html">ACA'2003</A> held in Raleigh, North Carolina,
+    USA (July 28-31)
+    </LI>
+
+<LI><A HREF="http://math.unm.edu/ACA/2002/aca2002.html">ACA'2002</A> held in Volos, Greece
+    (June 25-28)
+    </LI>
+<LI><A HREF="http://math.unm.edu/ACA/2001/2001.html">ACA'2001</A> held in Albuquerque, New Mexico,
+    USA (May 31-June 3)
+    (<A HREF="http://math.unm.edu/ACA/2001/Proceedings/MainPage.html">electronic proceedings</A>)
+    </LI>
+<LI><A HREF="http://math.unm.edu/ACA/2000/index.html">ACA'2000</A> held in Saint Petersburg, Russia
+    (June 25-28)
+
+    (<A HREF="http://math.unm.edu/ACA/2000/Proceedings/MainPage.html">electronic proceedings</A>)
+    </LI>
+<LI><A HREF="http://math.unm.edu/ACA/1999.html">ACA'99</A> held in El Escorial, Spain
+    (June 24-27)
+    (<A HREF="http://math.unm.edu/ACA/1999/Proceedings/MainPage.html">electronic proceedings</A>)
+    </LI>
+<LI><A HREF="http://math.unm.edu/ACA/1998/index.html">ACA'98</A> held in Prague, Czech Republic
+    (August 9-11)
+
+    (<A HREF="http://math.unm.edu/ACA/1998/proceedings.html">electronic proceedings</A>)
+    </LI>
+<LI><A HREF="http://math.unm.edu/ACA/1997.html">IMACS-ACA'97</A> held in Wailea, Maui, Hawaii, USA
+    (July 24-26)
+    (<A HREF="http://math.unm.edu/ACA/1997/Proceedings/MainPage.html">electronic proceedings</A>)
+    </LI>
+<LI><A HREF="http://math.unm.edu/ACA/1996/imacs.html">IMACS-ACA'96</A> held at RISC, Linz,
+    Austria (July 17-20)</LI>
+
+<LI><A HREF="http://math.unm.edu/ACA/1995.html">IMACS-ACA'95</A> held in Albuquerque, New Mexico,
+    USA (May 16-19)
+    (<A HREF="http://math.unm.edu/ACA/1995/Proceedings/MainPage.html">electronic proceedings</A>)
+    </LI>
+</ul>
+
+<h4>Related Links</h4>
+<ul>
+<LI><a href="http://math.unm.edu/aca.html">Main ACA Site</a>.</LI>
+</ul>
+</td>
+<td class="rightColumnGen">
+<img width="135" src="_images/photos/schloss01.JPG" alt="Castle"/>
+<img width="135" style="padding-top:7px;" src="_images/photos/schloss31.jpg" alt="Schloss"/>
+</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+
+</body>
+</html>

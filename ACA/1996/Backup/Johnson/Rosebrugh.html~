@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Database tools for category theory</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Rosebrugh">Bob Rosebrugh</A><br>
+</h3>
+
+Date: July 18th (Thursday)<br>
+Time: ??.??<br>
+
+<center>
+Abstract
+</center>
+
+We have developed an interactive system in C to store and manipulate
+    finitely-presented categories and functors among them. The tools allow, among other things,
+    determination of equality of composed arrows, sums, products and so on. Also implemented
+    are calculations of right and left kan extensions of finite-set valued functors. These include
+    computation of finitely presented limits and colimits of finite sets. The talk will indicate
+    some of the algorithms used and demonstrate program output. (This is joint work with M.
+    Fleming and R. Gunther.) 
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Johnson.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

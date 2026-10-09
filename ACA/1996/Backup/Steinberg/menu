@@ -1,0 +1,30 @@
+# Created by rsalamon@yucca on Thu Jul  4 11:17:29 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Brown.ps
+Path=9/conference/IMACS96/skeletons/Steinberg/Brown.ps
+
+Name=Dolzmann.html
+Path=0/conference/IMACS96/skeletons/Steinberg/Dolzmann.html
+
+Name=GonzalezCampos.html
+Path=0/conference/IMACS96/skeletons/Steinberg/GonzalezCampos.html
+
+Name=Hong.html
+Path=0/conference/IMACS96/skeletons/Steinberg/Hong.html
+
+Name=Hong1.html
+Path=0/conference/IMACS96/skeletons/Steinberg/Hong1.html
+
+Name=Jiangqian.html
+Path=0/conference/IMACS96/skeletons/Steinberg/Jiangqian.html
+
+Name=Jirstrand.html
+Path=0/conference/IMACS96/skeletons/Steinberg/Jirstrand.html
+
+Name=Liska.html
+Path=0/conference/IMACS96/skeletons/Steinberg/Liska.html
+
+Name=Weispfenning.ps
+Path=9/conference/IMACS96/skeletons/Steinberg/Weispfenning.ps
+

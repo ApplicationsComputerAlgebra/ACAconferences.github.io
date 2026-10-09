@@ -1,0 +1,81 @@
+Reza Abbasian		Texas Lutheran University, Seguin, Texas, USA
+Michael Abramson	Institute for Defense Analysis, Princeton, N. J., USA
+Victor Adamchik		Carnegie Mellon University, Pittsburgh, Penn., USA
+Bengt Ahlander		Ostrabogymnasiet, Trollhaettan, Sweden
+Joachim Apel		MSRI, Berkeley, California, USA
+Elizabeth Arnold	Texas A&M University, College Station, Texas, USA
+Teijo Arponen		Helsinki University of Technology, Espoo, Finland
+Angel Balderas Puga	Universidad Autonoma de Queretaro, Queretaro, Mexico
+Michel Beaudin		Ecole de Technologie Superieure, Montreal, Canada
+Gabor Bodnar		RISC, University of Linz, Austria
+Valentine Borisevich	Moscow State Engineering Physics Institute, Russia
+Mireille (Mimi) Boutin	University of Minnesota. Minneapolis, Minnesota, USA
+Anthony Breitzman	Drexel University, Philadelphia, Pennsylvania, USA
+Malgorzata Brothers	Texas Instruments Incorporated, Dallas, Texas, USA
+Bonifacio Castano	Universidad de Alcala, Madrid, Spain
+Ivan Cnop		Vrije Universiteit, Brussels, Belgium
+Mary Ann Connors	United States Military Academy, West Point, N. Y., USA
+Robert M. Corless	ORCA, U. of Western Ontario, London, Ontario, Canada
+Willem de Graaf		University of Utrecht, The Netherlands
+Carl DeVore		University of Delaware, Newark, Delaware, USA
+David C. Diminnie	Texas Instruments, Incorporated, Dallas, Texas, USA
+Tomas Dohnal		University of New Mexico, Albuquerque, New Mexico, USA
+Michael A. Faia		College of William & Mary, Williamsburg, Virginia, USA
+Karin Gatermann		Konrad-Zuse-Zentrum fuer Informations, Berlin, Germany
+Vladimir Gerdt		Joint Institute for Nuclear Research, Dubna, Russia
+Francine Grandsard	Vrije Universiteit, Brussels, Belgium
+Edward L. Green		Virginia Tech, Blacksburg, Virginia, USA
+Gary A. Harris		Texas Tech University, Lubbock, Texas, USA
+Ralf Hemmecke		RISC-Linz, Johannes Kepler University, Linz, Austria
+Hoon Hong 		North Carolina State University, Raleigh, N. C., USA
+Gerard Jacob		Universite Lille I, Paris, France
+Alejandro Silvio Jakubi	Universidad de Buenos Aires, Buenos Aires, Argentina
+Abdul Salam Jarrah	New Mexico State University, Las Cruces, N. M., USA
+Jeremy R. Johnson	Drexel University, Philadelphia, Pennsylvania, USA
+Raya Khanin		DAUTP, University of Cambridge, United Kingdom
+Vlasta Kokol-Voljc	University of Maribor, Pfuj, Slovenia
+Ilias Kotsireas		University of Western Ontario, London, Ontario, Canada
+Bernhard Kutzler	Austrian Center for Didactics of CA, Linz, Austria
+Alexander Levin		Catholic University of America, Washington, D.C., USA
+Jerome Lebrun		Swiss Federal Institute of Tech., Lausanne, Switzerland
+Robert H. Lewis		Fordham University, Bronx, New York, USA
+Weidong Liao		Kent State University. Kent, Ohio, USA
+Franz Lichtenberger	RISC-Linz, Hagenberg, Austria
+Gerrard F. Liddell	University of Otago, New Zealand (Tucson, Arizona, USA)
+Richard Liska		Czech Technical University, Prague, Czech Republic
+Mary Lloyd-Evans	New Hampshire Technical Institute, Concord, N. H., USA
+Robert J. Lopez		Rose-Hulman Inst. of Tech., Terre Haute, Indiana, USA
+Nik Lygeros		University Lyon-I, Villerrbanne, France
+Manfred Minimair	North Carolina State University, Raleigh, N. C., USA
+Ed Mosteig		Tulane University, New Orleans, Lousiana, USA
+Meinard Mueller		Universitaet Bonn, Bonn, Germany
+Peter Paule		RISC, J. Kepler University, Linz, Austria
+Gilles Picard		Ecole de Technologie Superieure, Montreal, Canada
+Kathleen Pineau		Ecole de Technologie Superieure, Montreal, Canada
+Nikos Pitsianis		Duke University, Durham, North Carolina, USA
+Jean Francois Pommaret	CERMICS, ENPC, Darne La Vallee, France
+Frank Postel		University of Paderborn, Paderborn, Germany
+Valeriy Potemkin	Moscow State Engineering Physics Institute, Russia
+Markus Pueschel		Carnegie Mellon University, Pittsburgh, Penn., USA
+Martyn Quigley		Universiti Brunei Darussalam, Tungku, Brunei Darussalam
+Stefan Ratschan		RISC, Johannes Kepler University, Linz, Austria
+Greg Reid		University of Western Ontario, London, Ontario, Canada
+Albert D. Rich		Honolulu, Hawaii, USA
+Eugenio Roanes-Lozano	Universidad Complutense de Madrid, Madrid, Spain
+Martin Roetteler	Universitaet Karlsruhe, Karlsruhe, Germany
+Rosario Rubio		Universidad Antonio de Nebrija, Madrid, Spain
+Yosuke Sato		Ritsumeikan University, Kusatu, Shiga, Japan
+Karsten Schmidt		Fachhochschule Schumalkalden, Schmalkalden, Germany
+Mikhail Shashkov	LANL, Los Alamos, New Mexico, USA
+Alan Shuchat		Wellesley College, Wellesley, Massachusetts, USA
+Stanly Steinberg	University of New Mexico, Albuquerque, N. M., USA
+Arne Storjohann		University of Western Ontario, London, Ontario, Canada
+Thomas Sturm		Universitaet Passau, Passau, Germany
+Rekha Thomas		University of Washington, Seattle, Washington, USA
+Quoc-Nam Tran		Lamar (Texas State) University, Beaumont, Texas, USA
+Yoshio Uwano		Kyoto University, Kyoto, Japan
+Nader Vadiee		University of New Mexico, Albuquerque, New Mexico, USA
+Uli Walther		Purdue University, West Lafayette, Indiana, USA
+Michael Wester		Cotopaxi, Albuquerque, New Mexico, USA
+Franz Winkler		RISC-Linz, Austria
+Yang Zhang		University of Western Ontario, London, Ontario, Canada

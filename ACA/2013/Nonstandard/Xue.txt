@@ -1,0 +1,36 @@
+An algebraic approach to geometric proof using a Computer Algebra System 
+
+Michael Xue
+Vroom Laboratory for Advanced Computing (US)
+mxue@vroomlab.com
+
+Abstract
+
+Geometric proof is often considered to be a challenging subject in mathematics.
+The traditional approach seeks a tightly knitted sequence of statements linked
+together by strict logic to prove that a theorem is true.  Moving from one
+statement to the next in traditional proofs often demands clever, if not
+ingenious reasoning.  An algebraic approach to geometric proof, however, is
+more direct and algorithmic in nature.  It is based on the assumption that
+proving a geometric theorem essentially means solving a problem in algebra.
+More precisely, it means solving a system of algebraic equations.  An algebraic
+approach typically consists of the following steps: 
+
+Step-0. An appropriate coordinate system is chosen. 
+
+Step-1. The relationships between geometric elements are translated into a
+        system of algebraic equations based on geometric data (e.g., 
+        coordinates of points, lengths and slopes of line segments, areas of 
+        figures, etc.).  The expression that implies the thesis statement is 
+        identified.
+
+Step-2. Solving equations in Step-1 by built-in solver in the existing Computer
+        Algebra software.  The thesis statement is then shown to be a
+        consequence of evaluating the expression identified in Step-1 using the 
+        appropriate solution(s).
+
+Due to the tremendous amount of calculation involved in the process, the
+algebraic approach becomes feasible only with the aide of Computer Algebra
+System’s (CAS) powerful symbol manipulation capability.  This presentation will
+demonstrate the algebraic approach to geometric proof by using Omega, an online
+CAS Explorer. 

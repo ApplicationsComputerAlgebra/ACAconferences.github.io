@@ -1,0 +1,35 @@
+The Learning Style of Students and Utilization of CAS in Exploration-based
+Learning
+
+Tadashi Takahashi
+Department of Intelligence and Informatics
+Konan University
+8-9-1 Okamoto, Higashinada, Kobe
+Hyogo 658-8501, JAPAN
+Phone: (Japan)+78-435-2533
+E-mail: takahasi@konan-u.ac.jp
+
+The utilization of CAS can support an exploration-based learning style.  Up to
+now, CAS has been used in mathematics education mainly as a device for
+explanation.  And rather than serving as a neutral tool, it has often been
+imposed on students by the teacher.  The use of CAS is also limited by the
+learning content, and because teachers have a strong influence over the
+interpretation of teaching materials, in order to make the learning content
+intuitively understandable, CAS significantly limits the activities and
+knowledge of students.
+
+In order to overcome this problem, CAS must be used in a precise way, in
+accordance with the aims of learning activities.  If this is not possible then
+CAS use will be merely enjoyable, but the learning content will be unclear, and
+students will not be able to appreciate the value of using CAS.  CAS is in
+essence a tool to support exploratory thinking.
+
+Accordingly, since it was developed, CAS has been a tool of experts.  In order
+to utilize it as a tool for mathematics education, CAS must be employed not as
+a device for explanation, but as a tool for the support of thinking―otherwise
+it is not being used in an essential way.  People turn over ideas in their
+minds and put them to the test, finally building several ideas.  Using CAS as a
+tool to support this thinking process is the real way to utilize it as an
+effective tool for learning mathematics. By analyzing the learning styles of
+students and the use of CAS in exploration-based learning, we can shed light on
+the relationship between them.

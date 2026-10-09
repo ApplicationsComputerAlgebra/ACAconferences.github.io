@@ -1,0 +1,25 @@
+Title:      Computer Aided Geometric Design and Computer Algebra
+Organizers: L. Gonzalez-Vega (Universidad de Cantabria, Spain)
+            gvega@matesco.unican.es
+            and
+            J. R. Sendra (Universidad de Alcala, Spain)
+            mtsendra@alcala.es
+
+The aim of this session is to bring together the diverse groups
+working on applications of Computer Algebra methods to Computer
+Aided Geometric Design.  In previous IMACS-ACA Conferences, sessions with
+the same kind of topics were organized:  "Parametric Curves and
+Applications to Computer Aided Geometric Design (IMACS-ACA 1995)" and
+"Geometric Modelling and Algebraic Methods in CAD (IMACS-ACA 1996)".
+
+More precisely, this session is devoted to show the advantages and
+disadvantages of using Computer Algebra when dealing with geometric
+problems arising in Computer Aided Geometric Design in order
+to manipulate curves and surfaces.
+
+The problems to be addressed by this special session will cover at least
+the following topics: implicitation, parametrization and reparametrization
+algorithms, CAGD with exact arithmetic, algebraic-geometric manipulation of
+offsets, roundings and blendings, algebraic computations with geometric
+objects given approximately, solid modelling with implicit surfaces,
+efficient computation with trimmed surfaces, etc.

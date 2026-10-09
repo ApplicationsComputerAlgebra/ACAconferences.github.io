@@ -1,0 +1,677 @@
+\documentstyle{report}
+%\voffset   .45truein
+\makeindex
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+%\hoffset   .52truein
+%\vsize =  8.35truein
+\input{amssym.def}
+\input{amssym.tex}
+\input{diagrams}
+%\input{cyracc.def}
+\newdimen\printercorrection
+\printercorrection=0 true mm
+\oddsidemargin=210 true mm % standard A4 paper width
+\advance\oddsidemargin by -\textwidth
+\oddsidemargin=.5\oddsidemargin
+\advance\oddsidemargin by -1 true in
+\advance\oddsidemargin by \printercorrection
+\evensidemargin=\oddsidemargin
+\topmargin=297 true mm % standard A4 paper length
+\advance\topmargin by -\textheight
+\advance\topmargin by -\headheight
+\advance\topmargin by -\headsep
+\advance\topmargin by -\footheight
+\advance\topmargin by -\footskip
+\topmargin=.5\topmargin
+\advance\topmargin by -1 true in
+\newfont{\eufm}{eufm10}
+\newfont{\eurm}{eurm10}
+\newfont{\eusm}{eusm10}
+\newfont{\euex}{euex10}
+\newfont{\cyr}{wncyr10}
+\newcommand{\lied}{\mbox{\eufm d}}
+\newcommand{\lieg}{\mbox{\eufm g}}
+\newcommand{\lief}{\mbox{\eufm f}}
+\newcommand{\lieh}{\mbox{\eufm h}}
+\newcommand{\lier}{\mbox{\eufm r}}
+\newcommand{\lien}{\mbox{\eufm n}}
+\newcommand{\R}{\mbox{\Bbb R}}
+\newcommand{\liegl}{\mbox{\eufm gl}}
+\def\operatorname#1{\mathop{\fam0 #1}\nolimits}
+\def\Der{\operatorname{Der}}
+\def\End{\operatorname{End}}
+\def\Hom{\operatorname{Hom}}
+\def\ad{\operatorname{ad}}
+\def\im{\operatorname{Im}}
+\def\ker{\operatorname{Ker}}
+\def\id{\operatorname{Id}}
+\def\d{\operatorname{d}}
+\def\sym{\operatorname{Sym}}
+\def\Cov{\operatorname{Cov}}
+\def\Tr{\operatorname{Tr}}
+\def\Str{\operatorname{Str}}
+\def\Wedge{\hbox{\large$\wedge$}}
+\def\cY{{{\cal Y}}}
+\def\cT{{{\cal T}}}
+\def\cZ{{{\cal Z}}}
+\def\cL{{{\cal L}}}
+\def\cC{{{\cal C}}}
+\def\cD{{{\cal D}}}
+\def\cS{{{\cal S}}}
+\def\cCD{{{\cal C}\!D}}
+\def\Yp{{\cal Y}^{{\it pol}}}
+\def\hYp{\hat{\cY}^{\it pol}}
+\def\boldsymbol#1{#1}
+\newtheorem{Algorithm}{Algorithm}
+\newtheorem{Proposition}{Proposition}
+\newtheorem{Remark}{Remark}
+\hsize =  5.7truein
+\begin{document}
+\bibliographystyle{alpha}
+\title{
+Hodge decomposition and conservation laws}
+\author{
+Jan Sanders \\
+Jing Ping Wang\\
+Vrije Universiteit, Amsterdam\\
+}
+\maketitle
+\tableofcontents
+\newpage
+\pagestyle{myheadings}
+\newtheorem{Definition}{Definition}
+\markboth{Sanders, Wang}{Hodge decomposition and conservation laws}
+\chapter{Introduction}\label{Sec0}
+This paper generalizes results in \cite{SR94} for conservation laws of evolution
+equations to conservation laws for systems defined by differential forms
+(like physical laws, which usually derive from some conserved quantity).
+To this end, we give an algorithm for the Hodge decomposition of horizontal 
+differential forms
+depending on arbitrary functions and their derivatives.
+This allows us to reformulate the problem of finding conservation laws as a problem for finding integrating factors. This makes it amenable for computer algebra.
+
+In the calculus of variations, and especially in the inverse problem,
+i.e. the determination of the Lagrangian from the differential equations,
+the so called variational bicomplex plays a prominent role. We show
+how one can move in a controlled manner in this complex using the unique
+decompositions defined in this paper.
+\chapter{The basic algorithm}\label{Sec20}
+\section{Theory}
+First we formulate a slight generalization of Algorithm 1 and 2 in \cite{SR94}.
+Let \(U \subset \R^n \) be an open domain.
+Instead of polynomials in the dependent variables and their derivatives with  
+constant coefficients, we now allow the coefficients to be \(  
+C^\infty\)-functions on \(ker\ F\).
+Clearly this does not affect the nilpotency of \(F\),
+which is the main ingredient in the algorithm.
+The operator \(\mu^E\) is defined by
+\( \mu^E=\sum_{\sigma} \mu^\sigma \pi_\sigma \),
+where the \(\sigma\)'s are eigenvalues of \(E\) and
+the \(\pi_\sigma\) projections on the eigenspaces.
+In our context this means that the dependent variables
+are scaled with \(\mu\).
+Let \(\cT(\R)\) be a tensor space of the space
+of variables \(u_i\), \( i=0 , \cdots , \infty \) and
+coefficients in \(C^\infty (U,\R)\).
+The algorithm applies to elements like
+\[c(x) exp(u w^2) w_x u_{xx}^3 \,du \wedge du_{xxx} \wedge dw_{xx} \] with
+\(c\in C^\infty (U,\R)\), \( exp(u w^2) \in C^\infty (\ker\,F) \) and \( w_x  
+u_{xx}^3 \,du \wedge du_{xxx} \wedge dw_{xx} \in \cT(\R)\).
+\begin{Algorithm}\label{Alg4} Let $v\in C^\infty (\ker\,F) \otimes \cT(\R)$.
+\begin{enumerate}
+\item Put $v^{(0)}=v$, and let $m=0$.
+\item {\bf while} $v^{(m)} \neq 0$ {\bf do}
+\begin{enumerate}
+\item Put
+		$v^{(m+1)}=F v^{(m)}$.
+\item Let $m=m+1$.
+\end{enumerate}
+{\bf od}
+\item Put $w^{(m)}=0$.
+\item {\bf while} $m \neq 0$ {\bf do}
+\begin{enumerate}
+\item Put
+  $ \displaystyle
+	u^{(m-1)}=\int \int w^{(m)}\, \mu^{-1}d\mu d\lambda $.
+\item Put \( w^{(m-1)}= D u^{(m-1)} + \mu^E ( v^{(m-1)}-D  
+u^{(m-1)}\bigm|_{\lambda=1,\mu=1} )\).
+\item Let $m=m-1$.
+\end{enumerate}
+{\bf od}
+\item Put $\int v=w^{(0)}\bigm|_{\lambda=0,\mu=1}$ and
+$\partial v =u^{(0)} \bigm|_{\lambda=1,\mu=1}$.
+\end{enumerate}
+Then \(v=\int v + D \partial v \).
+\end{Algorithm}
+%\newtheorem{Example}{Example}
+\section{Example}
+Let \( v=Q(x;u)(u_{xx}+u_x^2)\).
+Then \(v^{(0)}=Q(x;u)(u_{xx}+u_x^2)\), \( v^{(1)}=2Q(x;u)(u_x+u u_x)\),
+\(v^{(2)}=2Q(x;u)u(1+u)\in ker\,F\).
+We now put \(w^{(3)}=0\).
+Then \(u^{(2)}=0\) and \(w^{(2)}=2 Q(x;\mu u)(\mu u +\mu^2 u^2) \)
+We decrease \(m\) from \(3\) to \(2\).
+Then \(u^{(1)}= \int \int w^{(2)}\, \mu^{-1}d\mu d\lambda =
+2  \lambda \int Q(x;\mu u)(u +\mu u^2) d\mu \).
+Now \[
+Du^{(1)}=
+2 \lambda u \int Q_x(x;\mu u)(1 +\mu u) d\mu
++ 2  \lambda \mu Q(x;\mu u)(1 +\mu u)u_x
+\]
+It follows that\begin{eqnarray}
+\lefteqn{w^{(1)}=}\nonumber\\
+&=&2 \lambda u \int Q_x(x;\mu u)(1 +\mu u) d\mu
++ 2  \lambda \mu Q(x;\mu u)(1 +\mu u)u_x\nonumber\\
+&&- 2 u \int Q_x(x;\mu u)(1 +\mu u) d\mu \nonumber
+\end{eqnarray}
+We decrease \(m\) from \(2\) to \(1\).
+Then
+\begin{eqnarray}
+u^{(0)}&=&\int \int 2 \lambda \mu
+Q(x;\mu u) (1 +\mu u)u_x \, \mu^{-1}d\mu d\lambda
+\nonumber\\
+&&+
+\int \int 2 \lambda u \int Q_x(x;\nu u)(1 +\nu u) d\nu
+\, \mu^{-1}d\mu d\lambda\nonumber\\
+&&- \int \int 2 u \int Q_x(x;\nu u)(1 +\nu u) d\nu
+\, \mu^{-1}d\mu d\lambda \nonumber\\
+&=&  \lambda^2 u_x\int
+Q(x;\mu u) (1 +\mu u) \,d\mu
+\nonumber\\
+&&+ ( 2 \lambda -\lambda^2) u \int log(\mu)Q_x(x;\mu u)(1 +\mu u)
+\, d\mu \nonumber
+\end{eqnarray}
+We find that
+\begin{eqnarray}
+Du^{(0)}
+&=&  \lambda^2 u_{xx}\int
+Q(x;\mu u) (1 +\mu u) \,d\mu
+\nonumber\\
+%&&+  \lambda^2 u_{x}\int
+%Q_{x}(x;\mu u) (1 +\mu u) \,d\mu
+%\nonumber\\
+&&+ \frac{u_{x}^2}{u} \lambda^2
+Q(x;\mu u) (1 +\mu u)
+\nonumber\\
+&&- \frac{u_{x}^2}{u} \lambda^2
+\int Q(x;\mu u) (1 +\mu u) \, d\mu
+\nonumber\\
+&&+ ( 2 \lambda -\lambda^2) log(\mu)Q_{xx}(x;\mu u)(1 +\mu u) u
+\nonumber\\
+&&- 2 ( \lambda -\lambda^2) u_x \int Q_x(x;\mu u)(1 +\mu u)\, d\mu
+\nonumber
+\end{eqnarray}
+Therefore
+\begin{eqnarray}
+w^{(0)}
+&=& u_{xx}\int \lambda^2
+Q(x;\mu u) (1 +\mu u) \,d\mu
+\nonumber\\
+%&&+ u_{x}\int \lambda^2
+%Q_{x}(x;\mu u) (1 +\mu u) \,d\mu
+%\nonumber\\
+&&+ \frac{u_{x}^2}{u} \lambda^2
+Q(x;\mu u) (1 +\mu u)
+\nonumber\\
+&&- \frac{u_{x}^2}{u} \lambda^2
+\int Q(x;\mu u) (1 +\mu u) \, d\mu
+\nonumber\\
+&&+ ( 2 \lambda -\lambda^2) log(\mu)Q_{xx}(x;\mu u)(1 +\mu u) u
+\nonumber\\
+&&- 2 ( \lambda -\lambda^2) u_x \int Q_x(x;\mu u)(1 +\mu u)\, d\mu
+\nonumber\\
+&&+ \mu^E ( \frac{Q(x;u)}{u} (u u_{xx} - u_{x}^2)
+\nonumber\\
+&&- \frac{1}{u}(u u_{xx} - u_{x}^2 )
+\int Q(x;\mu u) (1 +\mu u) \, d\mu
+\nonumber\\
+&&- u \int log(\mu)Q_{xx}(x;\mu u)(1 +\mu u)
+\, d\mu ) \nonumber
+\end{eqnarray}
+So \begin{eqnarray}
+\int v &= &
+\frac{1}{u} (u u_{xx} - u_{x}^2) ( Q(x;u)
+-\int Q(x;\mu u) (1 +\mu u) \, d\mu)
+\nonumber\\
+&&- u \int log(\mu)Q_{xx}(x;\mu u)(1 +\mu u)
+\, d\mu \nonumber
+\end{eqnarray}
+ and
+\begin{eqnarray}
+\partial v &= &
+u_x\int
+Q(x;\mu u) (1 +\mu u) \,d\mu
+\nonumber\\
+&&+  u \int log(\mu)Q_x(x;\mu u)(1 +\mu u)
+\, d\mu . \nonumber
+\end{eqnarray}
+%\end{Example}
+\chapter{The variational complex}\label{Sec1}
+\section{Theory}
+\newtheorem{Theorem}{Theorem}
+Let \( U \subset \R^n\).
+We consider differential forms of the type
+\[
+\omega = \sum_{I} f_I dx_I
+\]
+where \(f_I \in  \cT(\R^n)\), and \(\cT(\R^n)\) is a tensor space of the space
+of variables \(u_J^i\), with \( J = \{ j_1 , \cdots , j_n \} \) and
+coefficients in \(C^\infty (U,\R)\).
+The total differential operators \(D_k\) are defined as
+shifts on the variables: \( D_k  u_J^i = u_{J+1_k}^i \).
+Here \( J\pm 1_k \) is short for \(  \{ j_1 , \cdots , j_k \pm 1 , \cdots ,  
+j_n \} \).
+In \cite{SR94} it is shown how expressions in \(f \in \cT(\R^n)\) can be
+uniquely decomposed in \( f = f_k^0 + D_k f_k^1 \) with
+\( f_k^0 \in \ker F_k\), where \( F_k u_J^i = j_k u_{J-1_k}^i\)
+We denote in the sequel \( f_k^0 = \int_k f \) and \( f_k^1 = \partial_k f \).
+We see that \( [ \partial_k , D_k ] = \int_k \).
+
+We define (as usual) an operator \( d_h : \bigwedge^p \longrightarrow
+\bigwedge^{p+1} \)
+by \[ d_h \omega = \sum_{k \in I^\complement} D_k f_I dx_k dx_I .\]
+We now dualize by defining \( \delta_h : \bigwedge^p \longrightarrow
+\bigwedge^{p-1} \) by
+\[\delta_h \omega = \sum_{k \in I} (-1)^{\#k+1} \partial_k f_I dx_{I-1_k} .\]
+Here \( \#k \) denotes the position of \( k \) in \(I\),
+to take account of the antisymmetry of the differential forms.
+For each \(f_I\) denote by \(\Delta_f\) the set of all indices
+\( i \in I \) such that \( \partial_i f_I \neq 0 \),
+and let \( \#(f) \) denote \( \# \Delta_f \).
+
+We now compute \( \Delta_h = \delta_h d_h + d_h \delta_h : \bigwedge^p
+\longrightarrow \bigwedge^p \).
+\begin{eqnarray}\nonumber
+\lefteqn{ ( \delta_h d_h +d_h \delta_h  ) f_I dx_{I} = }\\\nonumber
+&=& \delta_h \sum_{k \in I^\complement} D_k f_I dx_k dx_{I} \\\nonumber
+&&+ d_h \sum_{m \in I} (-1)^{\#m+1}\partial_m f_I dx_{I-1_m} \\\nonumber
+&=& \sum_{m \in I} (-1)^{\#m} \partial_m  \sum_{k \in I^\complement} D_k f_I  
+dx_k dx_{I-1_m} \\\nonumber
+&&+  \sum_{k \in I^\complement} \partial_k D_k f_I dx_{I} \\\nonumber
+&&+ \sum_{k \in I^\complement} D_k \sum_{m \in I}(-1)^{\#m+1} \partial_m f_I  
+dx_k dx_{I-1_m} \\\nonumber
+&&+ \sum_{k \in I} D_k \partial_k f_I dx_{I} \\\nonumber
+&=& \sum_{k \in I^\complement} \partial_k D_k f_I dx_{I}
++ \sum_{k \in I} D_k \partial_k f_I dx_{I} \\\nonumber
+&=& \sum_{k \in I^\complement} f_I dx_{I}
++ \sum_{k \in I} f_I dx_{I}
+- \sum_{k \in I} \int_k f_I dx_{I} \\\nonumber
+&=& ( n-p + \#(f_I) )  f_I dx_I
+- \sum_{k \in \Delta(f_I) } \int_k f_I dx_{I} \\\nonumber
+\end{eqnarray}
+Since \( \#(\int_k f_I) < \#(f_I) \),
+this allows us to express \(\omega\) in terms
+of its components in \( im \ \delta_h \) and \( im\  d_h \) plus
+terms with smaller \( \# \)-value.
+(Algorithmically one might have to split \(\omega\) first
+into \(  |I|\)-homogeneous parts).
+Applying \( \delta_h d_h + d_h \delta_h \) to these terms will
+eventually lead to a decomposition of \( \omega \) over
+\( im \ \delta_h \) and \( im \ d_h \),
+except in the case \( | I|=n \)
+(i.e. \(  n-p = 0 \)), where there are also
+{\em harmonic} terms, i.e. terms in \( \ker \ \delta_h \bigcap \ker \ d_h \).
+We remark that \( \ker \ \Delta_h =  \ker \ \delta_h \bigcap \ker \ d_h \),
+since both \( ( n-p + \#(f_I) )  f_I dx_I \) and
+\(  \sum_{k \in \Delta(f_I) } \int_k f_I dx_{I} \) have
+to vanish (since they have different \( \# \)-values).
+Thus one has \( n-p =0 \), implying \( d_h \omega = 0 \)
+and \(\#(f_I) =0 \), implying \(\delta_h=0\).
+%\end{Algorithm}
+\begin{Theorem}\label{Theorem1}
+Let \( \omega \in \bigwedge^p\). Then for \( p<n\), \( \omega\)
+can be written as \( \omega = d_h \alpha + \delta_h \beta \),
+while for \( p=n \) we have \( \omega  = d_h \alpha + \gamma \),
+where \( \alpha \in \bigwedge^{p-1} , \beta \in \bigwedge^{p+1} \)
+and \( \gamma \in \ker \ d_h \bigcap \ker \ \delta_h \).
+\end{Theorem}
+We now have to prove that this decomposition is unique.
+The same inductive reasoning leads us to the conclusion
+that the space of differential forms can be split into eigenspaces of
+\(\Delta_h\) with positive integer eigenvalues.
+In particular we have a decomposition \( ker \ \Delta_h \oplus im \ \Delta H_h \).
+Since \( im \ d_h \bigcap im \delta_h \subset ker \ \Delta_h \),
+we have \( im \ \Delta_h = im \ d_h \oplus im \ \delta_h \).
+\begin{Theorem}\label{Theorem01}
+\( \bigwedge^p =ker \ \Delta_h \oplus im \ \Delta H_h \)
+and \(  im \ \Delta H_h =  im \ d_h \oplus im \ \delta_h \).
+\end{Theorem}
+The proof of the Hodge decomposition is algorithmic.
+One can give a slight reformulation of it by using the fact that 
+multiples of the form are to be substracted in the process.
+\begin{Algorithm}\label{Alg2}
+Let \(\omega \in \bigwedge^p\) and define
+\(\omega^{(i)}=\Delta_h^{i} \omega \) for \(i=0, \cdots , p\).
+Let \( f(x)=\prod_{i=n-p+1}^{2n-p} (x-i) = \sum_{i=0}^{p} f_i x^i \).
+Then
+\[
+\omega= \omega^{(p+1)} - \Delta_h \sum_{i=1}^{p}  \frac{f_i}{f_0} \omega^{(i)} ,
+\]
+with \(\omega^{(p+1)} \in \ker \Delta_h\), gives the desired decomposition
+over \( ker \ \Delta_h \oplus im \ \Delta H_h\).
+\end{Algorithm}
+We can now try to compute {\bf conservation laws} as follows.
+Suppose we are given a vanishing form \(\omega\), e.g. \( 0 = \omega = (u_t -u_{xx} ) dt \wedge dx \) for the heat equation.
+If we can find a \(Q\) such that \( Q \omega = d_h \alpha \),
+then we have a conservation law, since \( \int_{\partial U} \alpha =
+\int_{U} d_h \alpha = \int_{U} Q \omega = 0 \), since \(\omega \) vanishes
+on \(U\), which makes \(\alpha\) a conserved quantity.
+Finding the integrating factor \(Q\) is highly nontrivial. We come back to this in section \ref{SecCons}.
+ \section[A horizontal example]{A horizontal  example}\label{Sec2}
+In this section we consider the following example in two variables:
+\[
+\omega = u_x u_{yy} \,dx \wedge dy \in \bigwedge_0^2 ( \cT(\R^2)) .
+\]
+Clearly, \(d\omega=0\).
+Let \( f_{11}=u_x u_{yy} \). We have \( F_x f_{11} = u u_{yy} \in \ker F_x \)
+and therefore \( \partial_1 f_{11} = \frac{1}{2} u u_{yy} \).
+Now the other variable: \( F_y f_{11} = 2 u_x u_y \) and \( F_y^2 f_{11} = 2  
+u u_x \in \ker F_y \).
+Denoting by the power in \(\lambda\) the distance from \( \ker F_y \),
+we have \(  F_y f_{11} = u_x u_y - u u_{xy} + \lambda ( u_x u_y + u u_{xy} ) \).
+It follows that \( \partial_2 f_{11} = \frac{3}{4} u_x u_y - \frac{1}{4} u
+u_{xy} \).
+We combine these results to obtain
+\[
+\delta_h \omega = \frac{1}{2} u u_{yy} dy - \frac{1}{4} ( 3 u_x u_y - u
+u_{xy} ) dx .
+\]
+It follows that
+\[
+d_h \delta_h \omega = \frac{1}{4} ( 5 u_x u_{yy} + u u_{xyy} + 2 u_y u_{xy} )  
+\,dx \wedge dy .
+\]
+We now let \( \omega^{(1)} = 2 \omega - \Delta_h \omega =
+ \frac{1}{4} ( 3 u_x u_{yy} - u u_{xyy} - 2 u_y u_{xy} ) \,dx \wedge dy \).
+Define \( f_{11}^{(1)} =  \frac{1}{4} ( 3 u_x u_{yy} - u u_{xyy} - 2 u_y
+u_{xy} ) \).
+We now repeat the algorithm.
+We find that \( F_x f_{11}^{(1)} = \frac{1}{2} (u u_{yy} - u_y^2 ) \in \ker F_x \).
+Thus \( \partial_1 f_{11}^{(1)} = \frac{1}{4} (u u_{yy} - u_y^2 ) \).
+On the other hand \( F_y  f_{11}^{(1)} = u_x u_y - u u_{xy} \in \ker F_y \)
+and \( \partial_2  f_{11}^{(1)} = \frac{1}{2} (  u_x u_y - u u_{xy}  ) \).
+We have
+\[ \delta_h \omega^{(1)} =  \frac{1}{4} (u u_{yy} - u_y^2 ) d y - \frac{1}{2}  
+(  u_x u_y - u u_{xy}  ) dx .
+\]
+It follows that
+\[
+\Delta_h  \omega^{(1)} = d_h \delta_h  \omega^{(1)} =
+\frac{1}{4} ( 3 u_x u_{yy} - u u_{xyy} -2 u_y u_{xy} ) \,dx \wedge dy .
+\]
+We define \( \omega^{(2)} = \omega^{(1)} - \Delta_h \omega^{(1)}  \) and see
+that it is equal to zero. It follows that \( \gamma =0 \) in Theorem \ref{Theorem1}.
+It follows that \( \omega = \frac{1}{2} \Delta_h ( \omega + \omega^{(1)} ) \).
+We find that \(  \frac{1}{2} ( \omega + \omega^{(1)} ) = \frac{1}{8} ( 7 u_x u_{yy}
+- u u_{xyy} - 2 u_y u_{xy} ) \,dx \wedge dy \).
+Using our earlier computations we see that
+\[
+\alpha = \delta_h \frac{1}{2} ( \omega + \omega^{(1)} ) =
+\frac{1}{8} (( 3 u u_{yy} - u_y^2 )\,dy - ( 5 u_x u_y - 3 u u_{xy} ) \,dx ) .
+\]
+\chapter{Vertical (and mixed) forms}\label{Sec3}
+\section{Theory}
+We now consider the case \( \cT(\R^n) = \Yp\otimes (\bigwedge_\cdot \cY_\infty) \).
+\begin{Definition}
+One defines an operator \(d_v :\Yp\otimes (\bigwedge_q \cY_\infty) \rightarrow
+ \Yp\otimes (\bigwedge_{q+1} \cY_\infty)\) by
+\(d_v \sum_{I} f_I du^I =\sum_{I} \sum_{k \in I} D_k f_I du_k du^I \).
+\end{Definition}
+\begin{Definition}
+ One defines an operator \(\delta_v :\Yp\otimes (\bigwedge_q \cY_\infty) \rightarrow
+\Yp\otimes (\bigwedge_{q-1} \cY_\infty)\) by
+\(\delta_v \sum_{I} f_I du^I =\sum_{I} \sum_{k \in I} (-1)^{\#k}  u_k  f_I
+du^{I -1_k}\).
+\end{Definition}
+We can now define (co)homology theory much as in the ordinary de Rham case.
+We define \(\Delta_v = d_v \delta_v + \delta_v d_v \).
+As in the ordinary case, we find for homogeneous expressions that
+\( \Delta _v f[u] = E f[u]\), where \( E = \sum_{k=0}^\infty u_k
+\frac{\partial}{\partial u_k} \). This makes the algorithm clear.
+
+What remains to be shown is that the decomposition is unique,
+i.e. \[im\ d_v \bigcap im\  \delta_v = 0 .\]
+Since \( \Yp\otimes (\bigwedge_q \cY_\infty) \bigcap ker \ \Delta_v = 0 \)
+and \( im \ d_v \bigcap im \ \delta_v \subset  ker \ \Delta_v \)
+this follows immediately.
+We now give the diagram describing all the maps so far:
+We denote by \(\bigwedge_{p}^q \cY_\infty\) the space of
+forms \( du_{i_1} \wedge \cdots \wedge du_{i_p} \otimes
+dx_{j_1} \wedge \cdots \wedge dx_{j_q}\), i.e. \( \bigwedge_p \otimes \bigwedge^q\).
+\begin{diagram}
+\Yp\otimes (\bigwedge_{p-1}^{q-1} \cY_\infty)&\pile{\rTo^{d_h} \\  
+\lTo_{\delta_h} }& \Yp\otimes (\bigwedge_{p-1}^q \cY_\infty) &  
+\pile{\rTo^{d_h} \\ \lTo_{\delta_h} }& \Yp\otimes (\bigwedge_{p-1}^{q+1}  
+\cY_\infty)\\
+\dTo^{d_v} \uTo_{\delta_v}& &\dTo^{d_v} \uTo_{\delta_v}
+& &\dTo^{d_v} \uTo_{\delta_v}\\
+\Yp\otimes (\bigwedge_{p}^{q-1} \cY_\infty)&\pile{\rTo^{d_h} \\  
+\lTo_{\delta_h} }& \Yp\otimes (\bigwedge_{p}^q \cY_\infty) & \pile{\rTo^{d_h}  
+\\ \lTo_{\delta_h} }& \Yp\otimes (\bigwedge_{p}^{q+1} \cY_\infty)\\
+\dTo^{d_v} \uTo_{\delta_v}& &\dTo^{d_v} \uTo_{\delta_v}
+& &\dTo^{d_v} \uTo_{\delta_v}\\
+\Yp\otimes (\bigwedge_{p+1}^{q-1} \cY_\infty)&\pile{\rTo^{d_h} \\  
+\lTo_{\delta_h} }& \Yp\otimes (\bigwedge_{p+1}^q \cY_\infty) &  
+\pile{\rTo^{d_h} \\ \lTo_{\delta_h} }& \Yp\otimes (\bigwedge_{p+1}^{q+1}  
+\cY_\infty)\\
+\end{diagram}
+\section[A vertical example]{A vertical example}\label{Sec4}
+Take \( \omega = u^2 u_x^2 \,du \wedge du_{xxx} \in \bigwedge_2^0 ( \cT(\R))\).
+Then \[ d_v \omega =- 2 u^2 u_x \,du \wedge du_x \wedge du_{xxx} \] and
+\[  \delta_v \omega = u^3 u_x^2 du_{xxx} - u^2 u_x^2 u_{xxx} du .\]
+It follows that \begin{eqnarray}
+\delta_v d_v \omega
+&=&-2u^3 u_x \,du_x \wedge du_{xxx}
++ 2 u^2 u_x^2 \,du \wedge du_{xxx} \nonumber\\
+&&- 2 u^2 u_x u_{xxx} \,du \wedge du_x \nonumber
+\end{eqnarray}
+and
+\begin{eqnarray}
+d_v \delta_v \omega
+&=&2u^3 u_x \, du_x \wedge du_{xxx}
++ 3 u^2 u_x^2\,du \wedge du_{xxx} \nonumber\\
+&&+ 2 u^2 u_x u_{xxx} \,du \wedge du_x
++ u^2 u_x^2 \,du \wedge du_{xxx} .\nonumber
+\end{eqnarray}
+Adding the two expressions results in
+\begin{eqnarray}
+\Delta_v \omega
+&=&6 u^2 u_x^2 \,du \wedge du_{xxx} \nonumber \\
+&=& 6 \omega  \nonumber
+\end{eqnarray}
+This leads to \[ \omega =\frac{1}{6} ( \delta_v  ( - 2 u^2 u_x \,du \wedge du_x  
+\wedge du_{xxx} ) + d_v ( u^3 u_x^2 \,du_{xxx} - u^2 u_x^2 u_{xxx} \,du  )), \]
+the desired Hodge decomposition.
+\section[A 3-dimensional mixed example]{A 3-dimensional mixed example}\label{Sec6}
+In this section we consider the following example in three variables:
+\[
+\omega = (u_{tt}-u_{xx}-u_{yy}) \,du \wedge dx \wedge dy \wedge dt \in \bigwedge_1^3
+( \cT(\R^3)).
+\]
+We do the vertical splitting first. \( \omega = ( \frac{1}{2} d_v (u u_{tt}
+-u u_{xx}-u u_{yy})+ \frac{1}{2} \delta_v\,( du_{tt} \wedge du -du_{xx} \wedge du
+- du_{yy} \wedge du) )\,dx\wedge dy\wedge dt \). Using partial integration  
+assuming the
+underlying space has no boundary or the forms vanish on the boundary, we obtain:
+$$\omega \equiv \frac{1}{2} d_v (u u_{tt}-u u_{xx}-u u_{yy})\,dx\wedge  
+dy\wedge dt.$$
+Then we do the horizontal splitting to the form:
+$$ \frac{1}{2} (u u_{tt}-u u_{xx}-u u_{yy})\,dx\wedge  dy\wedge dt.$$
+It follows that
+$$\omega \equiv \frac{1}{4} d_v(u u_{tt}-u_{t}^2-u u_{xx}+u_{x}^2
+-u u_{yy}+u_{y}^2)\, dx\wedge  dy\wedge dt.$$
+In fact, $d_v \omega=0$ is the condition that $\omega$ is the Euler-Lagrange
+expression for some variational problem. We notice the Lagrangian is unique
+up to equivalence and is given by
+\[
+L=\frac{1}{4} \int (u u_{tt}-u_{t}^2-u u_{xx}+u_{x}^2
+-u u_{yy}+u_{y}^2)\, dx\wedge  dy\wedge dt.
+\]
+
+It is obvious that the vertical splitting and the horizontal splitting are
+commutative. So we obtain the same result if we do the horizontal splitting
+first. But we can easily determine whether $d_v \omega=0$ in this way.
+\begin{eqnarray}
+\omega
+&\equiv& (\frac{1}{4}u_{tt} du-\frac{1}{2}u_{t} du_{t}+\frac{1}{4}u du_{tt}
+-\frac{1}{4}u_{xx} du + \frac{1}{2}u_{x} du_{x} \nonumber\\
+&&-\frac{1}{4}u du_{xx}-\frac{1}{4}u_{yy} du + \frac{1}{2}u_{y} du_{y}
+-\frac{1}{4}u du_{yy})\, dx\wedge dy\wedge dt.\nonumber
+\end{eqnarray}
+\chapter{Computing conservation laws}\label{SecCons}
+\section{The axially symmetric wave equation}
+We consider the equation
+\[
+u_{tt}-u_{rr}-\frac{1}{r}u_r = 0.
+\]
+This leads to the form
+\[
+\omega =( r(u_{tt}-u_{rr}) -u_r ) dt \wedge dr \in \bigwedge_0^2
+( \cT(\R^2)).
+\]
+As multiplier we take:
+\[
+Q=h^{(1)} u + h^{(2)} u_r + h^{(3)} u_t .
+\]
+We apply the Hodge decomposition to the form \(Q \omega\).
+The harmonic part of this form constitutes the obstruction for \(Q \omega\)
+to be a conservation law. Solving the obstruction equations
+\begin{eqnarray}
+0&=& h_t^{(2)}-h_{r}^{(3)}=0\\
+0&=&-2 h^{(1)}
++h^{(2)}
+-h_{r}^{(2)}
++h_{t}^{(3)}\\
+0&=&2h^{(1)}
+-\frac{1}{r}h^{(2)}
+-h_{r}^{(2)}
++ h_{t}^{(3)}\\
+0&=&-2 h_{rr}^{(1)}
++2 h_{tt}^{(1)}
++\frac{1}{r} h_{rr}^{(2)}
++h_{rrr}^{(2)}
+-\frac {1}{r} h_{tt}^{(2)}
+-h_{ttr}^{(2)}
++h_{trr}^{(3)}
+-h_{ttt}^{(3)}
+\end{eqnarray}
+we obtain
+\begin{eqnarray}
+h^{(1)}&=&t h_0^{(1)}+h_0^{(2)}\\
+h^{(2)}&=&2r(t h_0^{(1)}+h_0^{(2)})\\
+h^{(3)}&=&r^2 h_0^{(1)}+t^2 h_0^{(1)}+2 t h_0^{(2)}+h_0^{(3)}
+\end{eqnarray}
+This leads to the following three conservation laws.
+The first conservation law is:
+\begin{eqnarray}
+&&(
+-3\,t^{2}r\,uu_{tr}
++5\,t^{2}r\,u_{r}u_{t}
++t^{2}uu_{t}
+-6\,t\,r^{2}uu_{tt}
++8t\,r^{2}u_{r}^{2}\nonumber\\
+&&+2t\,r^{2}u_{t}^{2}
++2t\,r\,uu_{r}
++t\,u^{2}
+-3\,r^{3}uu_{tr}
++5\,r^{3}u_{r}u_{t}
+-r^{2}uu_{t}){\it dt}
+\nonumber\\
+&&+ (-3\,t^{2}r\,uu_{rr}+
+t^{2}r\,u_{r}^{2}
++4t^{2}r\,u_{t}^{2}
+-2t^{2}uu_{r}\nonumber\\
+&&-6\,t\,r^{2}uu_{tr}
++10\,t\,r^{2}u_{r}u_{t}
+-4tr\,uu_{t}
+-3\,r^{3}uu_{rr}\nonumber\\
+&&+r^{3}u_{r}^{2}
++4r^{3}u_{t}^{2}
+-4r^{2}uu_{r}
++r\,u^{2}){\it dr},
+\end{eqnarray}
+The second
+\begin{eqnarray}
+&&(-6\,t\,r\,uu_{tr}+
+10\,t\,r\,u_{r}u_{t}+
+2t\,uu_{t}
+-6\,r^{2}uu_{tt}\nonumber \\
+&&+8r^{2}u_{r}^{2}
++2r^{2}u_{t}^{2}+
+2r\,uu_{r}
++u^{2}){\it dt}\nonumber\\
+&&+
+(-6\,t\,r\,uu_{rr}
++2t\,r\,u_{r}^{2}
++8t\,r\,u_{t}^{2}
+-4t\,uu_{r}\nonumber\\
+&&-6\,r^{2}uu_{tr}
++10\,r^{2}u_{r}u_{t}
+-4r\,uu_{t}){\it dr},
+\end{eqnarray}
+and the third
+\begin{eqnarray}
+&&\left (-
+3\,r\,uu_{tr}
++5\,r\,u_{r}u_{t}
++uu_{t}\right ){\it dt}\nonumber\\
+&&+\,\left (-
+3\,r\,uu_{rr}
++r\,u_{r}^{2}
++4r\,u_{t}^{2}
+-2uu_{r} \right ){\it dr}.
+\end{eqnarray}
+\section{The Khoklov-Zabolotskaya equation}
+The Khoklov-Zabolotskaya equation (Cf \cite{Sha89}) is given by
+\[
+0=\frac{1}{2} \frac{\partial^2(u^2)}{\partial q_1^2}
+-\frac{\partial^2u}{\partial q_1 \partial q_2}
++\frac{\partial^2 u}{\partial q_3^2}
++\frac{\partial^2 u}{\partial q_4^2} ,
+\ \ q_1 , q_2 >0
+\]
+and describes the propagation of sound in nonlinear media without dispersion
+and absorption. We consider the form 
+\[
+\omega =(
+ \frac{1}{2} \frac{\partial^2(u^2)}{\partial q_1^2}
+-\frac{\partial^2u}{\partial q_1 \partial q_2}
++\frac{\partial^2 u}{\partial q_3^2}
++\frac{\partial^2 u}{\partial q_4^2}) \,dq_1 \wedge dq_2 \wedge dq_3 \wedge dq_4
+\in \bigwedge_0^4 ( \cT(\R^4))\]
+and we see, using Algorithm \ref{Alg2}, that in order for the harmonic  
+component of \(Q \omega\), with \(Q=h^{(1)}(q_1,q_2,q_3,q_4)\),
+to vanish we have to require that
+\begin{eqnarray}\label{Condh1}
+\frac{\partial^2 h^{(1)}}{\partial q_1^2} &=& 0
+\\\label{Condh2}
+\frac{\partial^2 h^{(1)}}{\partial q_1 \partial q_2}&=&
+\frac{\partial^2 h^{(1)}}{\partial q_3^2} +\frac{\partial^2 h^{(1)}}{\partial  
+q_4^2}
+\end{eqnarray}
+The conservation law is (Cf. \cite{Sha89}, p. 92)
+\begin{eqnarray}
+\alpha&=&  (  - \frac{1}{2} h^{(1)} u_{q_2}
++\frac{1}{2} \frac{\partial h^{(1)}}{\partial q_2} u  + h^{(1)} u u_{q_1}
+ - \frac{1}{2} h^{(1)} u^2 )
+\,dx_2  \wedge dx_3  \wedge dx_4\nonumber \\
+&&+ ( - h^{(1)} u_{q_4} + \frac{\partial h^{(1)}}{\partial q_4} u )
+\,dx_1  \wedge dx_2  \wedge dx_3\nonumber\\
+&&+( h^{(1)} u_{q_3}  - \frac{\partial h^{(1)}}{\partial q_3} u )
+\,dx_1  \wedge dx_2  \wedge dx_4\nonumber\\
+&&+\frac{1}{2} h^{(1)}(  u_{q_1}  -  u )
+\,dx_1  \wedge dx_3  \wedge dx_4 ,
+ \end{eqnarray}
+i.e. \( \omega = d_h \alpha \) under (\ref{Condh1}) and (\ref{Condh2}).
+Clearly the equation itself is a conservation law.
+\bibliography{kdv}
+\end{document}
+-------------------------------------------------------
+| Jan Sanders               Managing  Director RIACA  |
+| CAN/RIACA                 Email:jansa@can.nl        |
+| Kruislaan 419             Phone +31 20 5608460      |
+| 1098 VA Amsterdam                                   | 
+| The Netherlands                                     |
+-------------------------------------------------------
+

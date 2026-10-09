@@ -1,0 +1,140 @@
+% Abstrat of your communication to the
+% ACA2019 Conference (ÉTS, Montréal, Canada, 2019).
+% You must use LaTeX format.
+
+
+%====================================================
+% IMPORTANT: DO NOT MODIFY THE FOLLOWING LINES
+%====================================================
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsthm,amsmath, amsfonts, latexsym}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{times}
+
+\setlength{\oddsidemargin}{1.46cm}
+\setlength{\textwidth}{13cm}
+\setlength{\topmargin}{0.0cm}
+\setlength{\textheight}{20.5cm}
+
+\makeatletter
+\newcommand{\TITLE}[2][]{
+  \begin{center} \Large \bfseries #2%
+  \def\@temp{#1}\ifx\@temp\@empty\relax\else\footnote{#1}\fi\end{center}}
+
+\newcommand{\AUTHOR}[2][]{\textbf{#2}%
+  \def\@temp{#1}\ifx\@temp\@empty\relax\else\textsuperscript{#1}\fi}
+
+\newcommand{\ADDRESS}[2]{\noindent
+  \textsuperscript{#1}\parbox[t]{0.9\textwidth}{#2} \vspace{6pt}}
+
+\makeatother
+
+\newcommand{\KEYWORDS}[1]{\paragraph{Keywords:} #1}
+%\newcommand{\MSCLASSIFICATION}[1]{\paragraph{Mathematics Subject Classification 2010:} #1}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{0}
+\pagestyle{empty}
+
+\newcommand{\HEADING}{
+{\noindent \small Applications of Computer Algebra -- ACA2019 \\
+\'Ecole de technologie sup\'erieure, July 16--20, 2019} \vspace{10pt}}
+
+%===============================================
+% DO NOT MODIFY THE ABOVE LINES
+%===============================================
+
+\begin{document}
+
+\HEADING
+
+
+\TITLE{Computer algebra analysis of tree-like sentences}
+
+% If you need to thank someone next to the title, please use the next line (and delete the previous one)
+
+% \TITLE[thanks]{Title of talk}
+
+% Write the author names in the order you wish them to appear
+% and underline the one who will give the talk.
+% Identify each one of them with a number
+% in order to give their own affiliations later on. 
+
+\begin{center}
+ \AUTHOR[1]{\underline{Gilbert Labelle}}, % the author who will give the talk
+ \AUTHOR[2]{Louise Laforest}
+% IF two or more authors have the same affiliation, associate to them the same number.
+% For instance, if there are three authors and the first a the second ones have the same affiliation,
+% write as follows:
+% \AUTHOR[1]{Third Author}
+\end{center}
+
+
+% Write now the abstract of your communication. 
+
+A \emph{sentence} over a finite alphabet $A$, is a finite sequence of non-empty words over $A$. More generally, we define a \emph{graphical sentence} over $A$ by attaching a non-empty word over $A$ to each arrow and each loop of a connected directed graph (digraph, for short). Each word is written according to the direction of its corresponding arrow or loop. Graphical sentences can be used to encode sets of sentences in a compact way: the \emph{readable sentences} of a graphical sentence being the sentences corresponding to directed paths in the digraph. We apply computer algebra to analyze various parameters in classes of tree-like sentences. These are graphical sentences constructed on tree-like digraphs. This provides to advanced students in combinatorics a stimulating example of the application of P\'olya theory, generating functions and computer algebra methods to analyse various parameters in a discrete situation.  
+
+
+% Write the keywords separated by commas
+
+\KEYWORDS {P\'{o}lya theory, combinatorial structures, digraphs, tree-like sentences}
+
+% Write the MSC2010 codes corresponding to your communication
+
+%\MSCLASSIFICATION{Code1, Code2}
+
+
+
+% Next include the references you need. 
+% If your abstract includes no references at all, please delete all the lines
+% from \begin{thebibliography} to \end{thebibliography}.
+
+% Please, do not use more than 9 references.
+
+\begin{thebibliography}{9}
+
+  % Model for references to books.
+  \bibitem{BLL} \textsc{F. Bergeron; G. Labelle; P. Leroux }, \emph{Combinatorial species and tree-like structures}.
+    Encyclopedia of Mathematics and its Applications 67, Cambridge University Press, Cambridge 1998.
+
+%  Model for references to articles
+  \bibitem{Joyal} \textsc{A. Joyal}, Une th\'{e}orie combinatoire des s\'{e}ries formelles.
+  \emph{Advances in Mathematics} \textbf{volume}(42), 1--82  (1981).
+
+ %  Model for references to articles
+  \bibitem{LabLab} \textsc{J.-P. Labb\'{e}; G. Labelle}, Counting types of runs in classes of arborescent words.
+  \emph{Open Journal of Discrete Mathematics} \textbf{volume}(3), 7--15  (2013).
+
+%  Model for references to articles
+  \bibitem{LabLaf} \textsc{G. Labelle; L. Laforest}, A Combinatorial Analysis of Tree-Like Sentences.
+  \emph{Open Journal of Discrete Mathematics} \textbf{volume}(5), 32--53  (2015).
+
+
+\end{thebibliography}
+
+\vspace{1cm}
+
+% Full Affiliation of all authors
+\ADDRESS{1}{
+D\'ep. de math\'ematiques + LaCIM  \\U. du Qu\'ebec \`a Montr\'eal (UQAM) \\
+C.P. 8888, Succ. Centre-ville, \\
+Montr\'eal (Qu\'ebec) Canada H3C 3P8\\
+\texttt{labelle.gilbert@uqam.ca}
+}
+
+\vspace{.5cm}
+
+\ADDRESS{2}{
+D\'ep. d'informatique + LaCIM  \\U. du Qu\'ebec \`a Montr\'eal (UQAM) \\
+C.P. 8888, Succ. Centre-ville, \\
+Montr\'eal (Qu\'ebec) Canada H3C 3P8\\
+\texttt{laforest.louise@uqam.ca}
+}
+
+
+\end{document}

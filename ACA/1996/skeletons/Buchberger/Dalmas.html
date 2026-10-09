@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">A Deductive Database for Mathematical formulas</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Dalmas">St&#233;phane Dalmas</A>,
+<A HREF="../../participants.html#Gaetano">Marc Ga&euml;tano</A>,
+<A HREF="../../participants.html#Huchet">Claude Huchet</A><br>
+
+</h3>
+
+Date: July 17th (Wednesday)<br>
+Time: 10:20-10:45<br>
+
+<center>
+Abstract
+</center>
+
+In this talk, we present <B>mfd2</B>, a deductive database for mathematical
+formulas. Mathematical relations such as the ones defined in the <IT>
+Handbook of mathematical functions</IT> (by M. Abramovitz and I. Stegun) can be
+stored in and retrieved from <B>mfd2</B>.<BR>
+The database itself is a stand-alone program which can run as a client in a
+client/server environment and it has been designed to be a powerful assistant
+for computer algebra systems as well as for other applications. For example,
+<B>mfd2</B> could be the heart of an electronic handbook of mathematical
+relations or could be used as a lemma database for a theorem prover.
+The information stored in <B>mfd2</B> is accessed through a specialized query
+language.<BR>
+A formula is always associated with its conditions of validity. These
+conditions are central to the retrieval mechanism of the database: <B>mfd2</B>
+usually answers to a query conditionaly. For example, if we ask the simple
+query <I><MATH>e<SUP>x</SUP> > 0 </MATH></I> for <I>x</I> complex ?</MATH> <B>mfd2</B> would not just answer
+<I>false</I> but it would answer <I>true</I> if <I>x</I> is real''.
+<BR>At the heart of <B>mfd2</B> is a deduction engine based on an algorithm for
+associate-commutative unification that takes care of the conditions
+associated with the formulas. To solve a particular query, the engine first
+tries to find a ``close enough'' formula in the database using
+associate-commutative unification. If it fails, the engine tries to analyse
+the failure reasons to generate some equations that can make the formula and
+the query to match. It then tries to solve these new equations using the
+statements contained in the database and some built-in mathematical
+transformations.  This can produce some new conditions (conditions for some
+solution to hold) that are in turn  analyzed by calling the database
+recursively. The complexity of this process is controlled by carefully
+chosing an order on the formulas in the database, depending on the query.
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="../../skeletons/Buchberger.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

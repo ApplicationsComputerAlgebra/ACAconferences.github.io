@@ -1,0 +1,10 @@
+Indexed elementary functions in Maple
+
+David Jeffrey
+University of Western Ontario, Canada
+
+Multi-branched functions cause troubles for mathematicians (particularly
+students) and computers.  I present implementations of the inverses of the
+elementary functions sin,cos,tan,exp, ^m which handle the branches by
+labelling them.  The new functions are more elegant, easier to work with and
+easier to understand. At least that is what I think.

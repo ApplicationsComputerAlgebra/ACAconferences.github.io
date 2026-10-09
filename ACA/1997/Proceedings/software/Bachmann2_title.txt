@@ -1,0 +1,4 @@
+Accomplishing Software Integration: Dynamic Linking vs Interprocess
+Communications
+
+Olaf Bachmann, Simon Gray, Andreas Sorgatz & Hannes Schoenemann

@@ -1,0 +1,8 @@
+Using DERIVE in Deriving the Numerical Quadrature Formulas
+
+Adam Marlewski
+Institute of Mathematics, Poznan University of Technology
+ul. Piotrowo 3a
+60-295 Poznan
+Poland
+E-mail:amarlew@math.put.poznan.pl

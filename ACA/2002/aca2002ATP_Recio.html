@@ -1,0 +1,336 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="GENERATOR" content="Mozilla/4.74C-CCK-MCD {C-UDP; 
+EBM-APPLE} (Macintosh; U; PPC) [Netscape]">
+    <title>ACA'2002 Automatic Theorem Proving </title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#5500EE" vlink="#551A8B" 
+alink="#551A8B">
+&nbsp;
+<table>
+<caption><tbody>
+<br></tbody></caption>
+
+<tr>
+<td WIDTH="74">&nbsp;</td>
+
+<td WIDTH="898">
+<blockquote>&nbsp;
+<center>
+<p><b><font face="verdana, arial, helvetica"><font 
+color="#000000"><font size=+2><a 
+href="http://www.orcca.on.ca/%7Eilias/aca2002.html">ACA'2002,
+June 25-28, 2002, Volos, Greece</a></font></font></font></b>
+<p><b><font face="verdana, arial, helvetica"><font 
+color="#993300"><font size=+2>Session
+on&nbsp;</font></font></font></b>
+<br><b><font face="verdana, arial, helvetica"><font 
+color="#993300"><font size=+2>AUTOMATIC
+THEOREM PROVING&nbsp;</font></font></font></b>
+<br><b><font face="verdana, arial, helvetica"><font 
+color="#993300"><font size=+2>in
+elementary geometry</font></font></font></b>
+<p><b><font face="verdana, arial, helvetica"><font size=+1><font 
+color="#993300">Organized
+by&nbsp; <a href="mailto:recio@matesco.unican.es">Tomas 
+Recio</a></font><font color="#DC143C">&nbsp;</font></font></font></b>
+<br><b><font face="verdana, arial, helvetica"><font 
+color="#993300"><font size=+1>(Universidad
+de Cantabria)</font></font></font></b>&nbsp;<font 
+size=+2>&nbsp;</font></center>
+
+<br><font size=+2></font>&nbsp;
+<p><br>
+<p><font face="verdana, arial, helvetica">This session will be devoted
+to present some of my&nbsp; favourite trends on Automatic Geometry Theorem
+Proving:</font>
+<menu>
+<li>
+<font face="verdana, arial, helvetica">Applications to Computer Aided Geometric
+Design, through Geometric Constraint Solving (see abstracts no. <a 
+href="#2">2</a>
+and <a href="#6">6</a> below)</font></li>
+
+<li>
+<font face="verdana, arial, helvetica">Applications to education, cooperation
+with dynamic geometry software (see abstracts no. <a href="#1">1</a> and
+<a href="#5">5</a> below)</font></li>
+
+<li>
+<font face="verdana, arial, helvetica">New results and methods on the 
+algebrization
+of Geometry Theorem proving and discovery (see abstracts no. <a href="#3">3</a>, <a href="#4">4</a>
+and <a href="#7">7</a> below)</font></li>
+</menu>
+<font face="verdana, arial, helvetica">Hopefully, besides the invited speakers,
+there will be time for a few submitted contributions as short 
+talks.&nbsp;&nbsp;</font>
+<br><b><font face="verdana, arial, helvetica">You are welcome to submit
+your work on the topic!</font></b><font face="verdana, arial, 
+helvetica"></font>
+<p><font face="verdana, arial, helvetica">For more information and/or to
+present a paper at the session, please contact the session organizer by
+e-mail.</font><font face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">Confirmed invited speakers (in
+alphabetic order):</font><font face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">&nbsp;&nbsp;&nbsp;<a NAME="1"></a>1-
+<b>Francisco Botana</b> (U. Vigo, Spain)</font><font face="verdana, 
+arial, helvetica"></font>
+<p><b><font face="verdana, arial, 
+helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Automatic determination of plane loci</font></b>
+<br><font face="verdana, arial, 
+helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(joint work with J.L. Valcarce)</font><font face="verdana, arial, 
+helvetica"></font>
+<p><font face="verdana, arial, helvetica">This talk will describe a successful
+implementation of a software tool for determining plane loci using the
+Groebner basis method. The program consists of a graphical interface linking
+a standard dynamic geometry environnment and a computer algebra system.
+The user can do any ruler and compass construction and impose geometric
+conditions to some elements of the construction in order to get the locus
+of a point. The dynamic geometry module translates its geometric knowledge
+into an algebraic one, and exports it to a computer algebra system (CoCoA
+or Mathematica), where it is carried out an elimination process. The result
+of this elimination includes the locus polynomial. This locus is then returned
+twofold: as the implicit equation of the algebraic curve and as a graphic
+object in the screen.</font>
+<br><font face="verdana, arial, helvetica">Apart from the obvious implications
+for mathematics education, the program can be used for geometric discovery,
+linkage design and testing, computer aided geometric design and related
+fields. Some experimental improvements of the software, such as generating
+dynamic loci and returning loci which are semialgebraic sets, will also
+be discussed.</font><font face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">A demo can be downloaded at 
+<a 
+href="http://rosalia.uvigo.es/sdge/lugares">http://rosalia.uvigo.es/sdge/lugares</a></font>
+<br><font face="verdana, arial, helvetica"></font>&nbsp;
+<br><font face="verdana, arial, helvetica"></font>&nbsp;<font 
+face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">&nbsp;&nbsp;&nbsp;&nbsp;<a 
+NAME="2"></a>2-<b>Robert
+Joan-Arinyo</b> (U. Polit&eacute;cnica de Catalunya, 
+Barcelona)</font><font face="verdana, arial, helvetica"></font>
+<p><b><font face="verdana, arial, 
+helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ruler and compass geometric constraint solving</font></b><b><font 
+face="verdana, arial, helvetica"></font></b>
+<p><font face="verdana, arial, helvetica">Geometric constraint solving
+techniques have received considerable attention in recent years. The problem
+is to take as input an sketch of a geometric drawing annotated with geometric
+constraints like distances between points, angles between straight lines,
+tangencies between lines and circles and so forth, and either generate&nbsp;
+a drawing that actually fulfills the set of constraints or determine that
+such a geometric object does not exists.</font>
+<br><font face="verdana, arial, helvetica">This talk will focus on the
+ruler-and-compass based,constructive</font>
+<br><font face="verdana, arial, helvetica">geometric constraint solving
+approach. After reviewing the data</font>
+<br><font face="verdana, arial, helvetica">representation and the constructive
+rules considered, we will</font>
+<br><font face="verdana, arial, helvetica">characterize the method as a
+rewriting system. The questions of termination and confluence will be 
+considered.&nbsp;
+Then we will show how the constructive technique can be easily combined
+with equational techniques without mapping one problem domain to the 
+other.&nbsp;
+A&nbsp; practical demo on the BCNsolver prototype developed by our group
+will close the talk.</font>
+<br><font face="verdana, arial, helvetica"></font>&nbsp;<font 
+face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">&nbsp;&nbsp;<a 
+NAME="3"></a>3-<b>Deepak
+Kapur</b> (U. New Mexico, Albuquerque, USA)</font>
+<br><font face="verdana, arial, helvetica">&nbsp;&nbsp;&nbsp;</font>
+<br><font face="verdana, arial, helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Geometric Reasoning and Dixon Resultants</b>
+<br><br>
+Recent results on the generalized Dixon resultant formulation
+proposed by Kapur, Saxena and Yang (ISSAC'94) will be
+reviewed. Conditions on multivariate polynomial systems for which
+the Dixon formulation computes the resultants exactly will be
+discussed.  In many cases, the degree of the extraneous factor in
+the projection operator computed using the Dixon resultant
+formulation can be predicted as well. These results have
+implications for geometry theorem proving.
+<br>
+A construction for Sylvester-like matrices based on the
+generalized resultant formulation for simultaneously eliminating
+many variables from a polynomial system will be discussed.  This
+construction has found to be especially effective for mixed
+polynomial systems.
+</font>
+<br><font face="verdana, arial, helvetica"></font>&nbsp;
+<br><font face="verdana, arial, helvetica"></font>&nbsp;<font 
+face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">&nbsp;&nbsp;&nbsp;&nbsp;<a 
+NAME="4"></a>4-
+<b>Hongbo Li</b> (Institute of&nbsp; Systems Science, Chinese Academy of
+Sciences, Beijing, China)</font><b><font face="verdana, arial, 
+helvetica"></font></b>
+<p><b><font face="verdana, arial, helvetica">&nbsp;&nbsp;&nbsp;&nbsp; Short
+Proof Generation with Cayley Algebra and Bracket&nbsp;&nbsp;&nbsp; 
+Algebra.</font></b><b><font face="verdana, arial, 
+helvetica"></font></b>
+<p><font face="verdana, arial, helvetica">Cayley algebra and bracket algebra
+are an important approach to automated theorem proving in projective geometry.
+Recently we established the Cayley expansion theory on factored and&nbsp;</font>
+<br><font face="verdana, arial, helvetica">shortest expansions of typical
+Cayley expressions. Based on the</font>
+<br><font face="verdana, arial, helvetica">classification of these expansions,
+we set up a group of Cayley factorization formulas and simplification 
+techniques
+in bracket&nbsp;</font>
+<br><font face="verdana, arial, helvetica">computation. These techniques
+contribute to producing extremely short proofs for projective geometric
+theorems (<a 
+href="http://www.mmrc.iss.ac.cn/annal/li1.ps">http://www.mmrc.iss.ac.cn/annal/li1.ps</a>).&nbsp;</font><font 
+face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">Furthermore, by studying different
+representations of geometric</font>
+<br><font face="verdana, arial, helvetica">constructions and relations
+in projective conic geometry with Cayley algebra and bracket algebra, we
+came up with several powerful&nbsp; simplification techniques for bracket
+computation involving conic points, and an algorithm for&nbsp; rational
+Cayley factorization. By these techniques, we can produce extremely short
+proofs for difficult theorems in conic geometry. Our central idea to generate
+readable proofs in projective geometry is "BREEFS'' -- Backet-oriented
+Representation, Elimination and</font>
+<br><font face="verdana, arial, helvetica">Expansion for Factored&nbsp;
+and Shortest results (<a 
+href="http://www.mmrc.iss.ac.cn/annal/li2.ps">http://www.mmrc.iss.ac.cn/annal/li2.ps</a>).</font><font 
+face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">&nbsp;&nbsp;&nbsp;<a NAME="5"></a>5-
+<b>Nicolas Peltier</b> (CNRS- IMAG, Grenoble, France)</font><font 
+face="verdana, arial, helvetica"></font>
+<p><b><font face="verdana, arial, helvetica">HOARD-ATINF: a Logical 
+Theorem-Prover
+for Teaching Proof&nbsp;</font></b>
+<br><b><font face="verdana, arial, helvetica">in&nbsp; 
+Geometry</font></b><font face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">There is still an important gap
+between Automated Deduction tools and their use for educational purpose,
+particularly for young students. The reason is that automated reasoning
+systems should be able not only to construct proofs, but also to integrate
+most of the features that play a central role in the human way of thinking.
+These features are often neglected by existing systems. Ideally, an ATP
+aimed to be used in educational tasks should include, for example, the
+following features:</font>
+<br><font face="verdana, arial, helvetica">&nbsp; -Good presentation of
+proofs. In particular, the level of details of the proof and the considered
+axiomatisation (available axioms and theorems) should be flexible and should
+depend on the level of knowledge of the student.</font>
+<br><font face="verdana, arial, helvetica">&nbsp; -Automated verification
+of the student's proofs</font>
+<br><font face="verdana, arial, helvetica">&nbsp; -Automated construction
+of counter-examples (for disproving conjectures, helping a student to correct
+wrong intuitions etc.).</font>
+<br><font face="verdana, arial, helvetica">&nbsp; -Automatic detection
+of analogies between formulae and/or proofs.</font><font 
+face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">The gap is even more important
+in the field of Geometry. Indeed, the most powerful geometry theorem provers
+are based on algebraic approaches, which makes the integration of such&nbsp;
+"advanced'' features very difficult.</font><font face="verdana, 
+arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">The (<a 
+href="http://www-baghera.imag.fr">http://www-baghera.imag.fr</a>)
+Baghera project (presently</font>
+<font face="verdana, arial, helvetica">developed in a framework of
+a european cooperation) intends to develop theoretical and methodological
+foundations to guide the computer modelling and conception of learning
+environments. The chosen domain knowledge is the teaching of proof in 
+Geometry.</font>
+<br><font face="verdana, arial, helvetica">In this talk we will focus 
+essentially
+on the automated reasoning part of the Baghera plateform.</font>
+<br><font face="verdana, arial, helvetica">We will describe the Theorem
+Prover HOARD-ATINF (specially developed to be used in this project), its
+theoretical basis and main fonctionalities.</font>
+<br><font face="verdana, arial, helvetica">HOARD-ATINF is a generic prover,
+based on a logical calculus including equality. It incorporates several
+features useful in helping educational agents to analyse student's proofs
+or to propose alternative proofs.</font>
+<br><font face="verdana, arial, helvetica">The interested reader can see
+<a 
+href="http://www-leibniz.imag.fr/ATINF/Welcome-ENG.html">http://www-leibniz.imag.fr/ATINF/Welcome-ENG.html</a>
+here for</font>
+<br><font face="verdana, arial, helvetica">additional details about the
+ATINF project.</font>
+<br><font face="verdana, arial, helvetica"></font>&nbsp;
+<br><font face="verdana, arial, helvetica"></font>&nbsp;<font 
+face="verdana, arial, helvetica"></font>
+<p><a NAME="6"></a><font face="verdana, arial, helvetica">6- <b>Meera 
+Sitharam</b>
+(University of Florida, USA)</font><font face="verdana, arial, 
+helvetica"></font>
+<p><b><font face="verdana, arial, helvetica">Outstanding Problems in Geometric
+Constraint Solving:</font></b>
+<br><b><font face="verdana, arial, helvetica">approaches and connections
+to geometry theorem proving.</font></b><font face="verdana, arial, 
+helvetica"></font>
+<p><font face="verdana, arial, helvetica">After a brief introduction to
+geometric constraint solving and its many applications, we introduce a
+list of&nbsp; key&nbsp; issues that geometric constraint solvers need to
+address, and describe briefly how our geometric 
+constraint solver FRONTIER
+<a
+href="http://www.cise.ufl.edu/~sitharam">  http://www.cise.ufl.edu/~sitharam </a>
+addresses some of&nbsp; them.&nbsp; Outstanding issues are how to deal
+with:</font>
+<br><font face="verdana, arial, 
+helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(i)&nbsp;&nbsp; ambiguities and inconsistencies in the input constraint
+system</font>
+<br><font face="verdana, arial, 
+helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(ii)&nbsp; soft constraints</font>
+<br><font face="verdana, arial, 
+helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(iii)&nbsp; parameterless constraints.</font>
+<br><font face="verdana, arial, helvetica">To deal with these, we suggest&nbsp;
+initial approaches that leverage FRONTIER's existing advantages. We also
+indicate how these issues overlap with automated (or at least computer
+assisted) geometry theorem proving.</font>
+<br><font face="verdana, arial, helvetica"></font>&nbsp;<font 
+face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">&nbsp;&nbsp;</font><font 
+face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">&nbsp;&nbsp;<a NAME="7"></a>7-
+<b>Dingkang Wang</b> (Institute of&nbsp; Systems Science, Chinese Academy
+of Sciences, Beijing, China)</font><font face="verdana, arial, 
+helvetica"></font>
+<p><b><font face="verdana, arial, helvetica">The projection of quasi varieties
+and its application on geometry theorem proving</font></b>
+<br><font face="verdana, arial, helvetica"></font>&nbsp;<font 
+face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">In this paper, we present a 
+projection
+method whereby not only&nbsp;</font>
+<br><font face="verdana, arial, helvetica">to prove whether a given geometric
+theorem is true, but also to obtain the sufficient and necessary conditions
+under which the theorem is true, if such conditions exist. This method
+also can be used to geometric formula deduction. The detail algorithm has
+been implemented and several&nbsp; examples are reported in this paper
+to show the algorithm of practical value.</font>
+<br><font face="verdana, arial, helvetica"></font>&nbsp;<font 
+face="verdana, arial, helvetica"></font>
+<p><font face="verdana, arial, helvetica">--&nbsp;</font>
+<br><font face="verdana, arial, helvetica">Papers presented at the session
+will be considered for publication at a special issue of the <a 
+href="http://www.academicpress.com/jsc">Journal
+of Symbolic Computation</a> titled Applications of Computer Algebra. The
+<a href="http://www.orcca.on.ca/%7Eilias/aca2002SpecialIssueJSC.html">call
+for papers </a>is available.</font>
+<br>&nbsp;
+<br>&nbsp;</blockquote>
+</td>
+
+<td WIDTH="74">&nbsp;</td>
+</tr>
+</table>
+
+</body>
+</html>

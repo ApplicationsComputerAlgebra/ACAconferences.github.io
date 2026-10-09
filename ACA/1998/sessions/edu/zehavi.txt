@@ -1,0 +1,27 @@
+"CAS, Educational Microworlds, and the Internet"
+
+Nurit Zehavi 
+Weizmann Institute of Science, Israel 
+Email: ntzehavi@weizmann.weizmann.ac.il
+
+
+Constructing learning environments that incorporate CAS, elements of 
+educational microworlds, and the Internet can boost the implementation 
+and utilization of these technologies in mathematics education. The  
+desire to provide educational materials over the Internet has led us 
+to consider integrating our experience in developing open tutoring 
+systems and in creating non-routine problems to be solved using a CAS. 
+An open tutoring system should enable students to find solutions in  
+their own ways, and an on-line guidance, in the form of hints, should 
+provide support. Investigating non-routine questions using CAS 
+encourages diverse mathematical thinking and independent work. With  
+this in mind we have analyzed the types of mathematical knowledge that 
+were applied in solving specific problems and identified the 
+relationships and the 'Webs of meanings' involved in the solution 
+processes. We utilized computer software tools commonly used in the  
+Internet, such as html, CGI, Java Script, and e-mail to design an 
+interactive guidance system in the format of Web pages. The pilot 
+studies in this new development dealt with Magic circles obtained by 
+composing linear functions, and with a specific sequence of Extrema  
+problems. The progress so far indicates that the work to be done is  
+indeed a triple challenge.

@@ -1,0 +1,28 @@
+Speaker:      Jean-Charles Faugere and Fabrice Rouillier
+Title:        Design of filter and filter banks using dedicated Computer
+              Algebra Tools
+Affiliation:  Equipe Calcul Formel (LIP6)  
+              Chercheur CNRS 
+              and
+              Loria / Inria-Lorraine 
+URL:          http://posso.lip6.fr/~jcf/ and http://www.loria.fr/~rouillie/ 
+EMail:        Jean-Charles.Faugere@lip6.fr and Fabrice.Rouillier@loria.fr
+
+Abstract
+
+In theory it is well known that Computer Algebra techniques and more especially
+polynomial systems solving methods can be used to design filter or filter
+banks.  On the other hand general computer algebra systems are not powerful
+enough to handle such problems.
+
+Fortunately, recent progress in algorithms for solving polynomial systems have
+enhanced the computational capabilities of dedicated computer algebra systems.
+On the basis of the prospective work done in the European Frisco project we
+consider in this talk five problems in Signal Theory that lead to algebraic
+systems.  We describe new algorithms and software that have been used for
+solving these problems. In particular we mention very efficient algorithms for
+computing exactly all the real roots of a zero dimensional system.  A
+surprising fact is that very often the algebraic systems are not zero
+dimensional so that we need special algorithms and software to ``solve'' such
+systems: decomposition of the variety, special routine to draw curve of high
+degree, testing emptiness of hyper surfaces.

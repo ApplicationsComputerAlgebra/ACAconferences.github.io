@@ -1,0 +1,32 @@
+Speaker:      Ivan Selesnick
+Title:        Groebner Bases and Wavelet Design
+Affiliation:  Electrical Engineering
+              Polytechnic University
+              Brooklyn, New York USA
+URL:          http://taco.poly.edu/selesi/
+Email:        selesi@taco.poly.edu
+
+Abstract
+
+The most convenient approach to the construction of orthonormal wavelet bases
+is based on the spectral factorization of an appropriately designed
+autocorrelation sequence. However, that approach does not extend to many
+generalizations of the standard type of wavelet basis. For example, the design
+of certain multiwavelet bases and wavelet frames demand the solution to
+nonlinear design equations. In this talk we describe some problems in
+specialized wavelet design, and describe our experiences using Groebner bases
+to solve the nonlinear design equations that arise. We focus on the design of
+wavelet bases possessing properties that make them useful for signal processing
+applications.
+
+Using Groebner bases in practice can be a challenge because of the high
+computational and memory requirements. In one example (albeit atypical), the
+calculation of a Groebner basis (GB) took us 4 weeks on a 200MHz Sun Ultra 2.
+The size of the resulting ASCII file, into which the GB itself was written, was
+18.9 Mbytes. However, removing repeated roots by polynomial factorization, and
+recomputing the GB, the GB file was reduced to only 370 Kbytes.
+
+Despite their high computational and memory requirements, our experiences and
+results support the utility of GBs in solving certain nonlinear design
+problems. However, the effective use of GBs requires a knowledge of how apply
+operations like GB factorization, the FGLM algorithm, etc.

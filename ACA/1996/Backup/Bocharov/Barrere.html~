@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Functional Generic Algorithms for Symbolic Approximations</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Barrere">R. Barrere</A><br>
+</h3>
+
+Date: July 20th (Saturday)<br>
+Time: ??:??<br>
+
+<center>
+Abstract
+</center>
+
+Function space methods provide constructive tools for the computation of
+symbolic approximations. When implemented in the functional programming style,
+they lead to generic algorithms, the code of which can be made independent
+from the detailed characteristics of the equations.
+
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Bocharov.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

@@ -1,0 +1,11 @@
+Title: Distributed symbolic computation with the black box representation
+Authors:  Angel D\'iaz  and   Erich Kaltofen
+
+Abstract:  The DSC system for distributing a symbolic computation
+over a network of processors was designed with the intention of distributing
+computational tasks, such as factorization or sparse interpolation,
+on symbolic expressions represented by black boxes for their
+evaluations.  We have begun of implementing these algorithms both
+as Maple prototypes and as a high-speed compilable special purpose
+system (FoxBox).  We will report on our goals and exhibit the current
+functionality of our implementation on test problems.

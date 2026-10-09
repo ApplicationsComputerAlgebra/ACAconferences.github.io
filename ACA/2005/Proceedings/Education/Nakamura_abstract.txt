@@ -1,0 +1,13 @@
+Simulation Software Integrated with Java and Computer Algebra System
+
+Yasuyuki NAKAMURA
+Graduate School of Information Science, Nagoya University, Japan
+
+In a physics class, a demonstration of a motion of physical system is helpful
+for students to understand.  In order to develop simulation software, Java is
+often used because of its flexibility of programming and graphical
+presentation.  In many cases, only parameters or initial conditions can be set
+by users and equation of motion itself can not be set because symbolic
+computation is necessary.  In this talk, we would like to propose developing
+simulation software integrated with Java and computer algebra system.
+Specifically, Maple and its API OpenMaple are used.

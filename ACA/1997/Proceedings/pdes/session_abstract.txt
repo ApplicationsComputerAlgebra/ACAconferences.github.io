@@ -1,0 +1,40 @@
+Algorithmic Analysis of PDEs
+Organizers: Alexei Bocharov, Greg Reid and Thomas Wolf
+
+Confirmed participants:
+
+Alexei Bocharov (Wolfram Research) and Vladimir Gerdt
+   (algorithmic analysis of integrability conditions and software for
+    geometrical methods for partial differential equations);
+Greg Reid (University of British Columbia)
+Ian Lisle (University of Canberra)
+   (Cartan structure of infinite Lie pseudogroups)
+
+Possible speakers:
+
+Francois Boulier, Elizabeth Mansfield,
+Guiseppa Carra-Ferro, Colin Rust and William Sit (Differential Algebra);
+George Wilkens (exterior differential systems and control theory);
+Michel Petitot (control theory and differential algebra);
+David Hartley and Robin Tucker (exterior systems);
+Fritz Schwarz, Mark Hickman, Willy Hereman, Khai Vu and Thomas Wolf
+(software for Lie methods for PDE);
+Gabriel Thomas and Evelyn Hubert (Grenoble);
+Werner Seiler (formal jet space methods).
+
+Abstract:
+
+We wish to provide a forum in which to discuss theory, different algorithmic
+approaches and implementations of algorithms for PDEs.  One particular aspect
+will be the recent remarkable theoretical advances and related implementations
+for normal and involutive form algorithms for polynomially nonlinear systems of
+PDEs.  Already the original PDE-ODE session has split into two, the other on
+ODEs being organised by Vladimir Gerdt.  If there are sufficient numbers it is
+hoped that the current session will also split into two: one with its emphasis
+on symmetry and integrability related methods; and the other with its emphasis
+on the analysis of overdetermined systems.  Also of interest are applications
+to numerical analysis and symmetry and integrability analysis of PDE.
+
+We hope to gather representatives from the main approaches to PDEs: exterior
+systems, jet space methods, differential-algebraic methods, symmetry methods,
+symbolic-numeric methods, integrability and solitonic methods, etc.

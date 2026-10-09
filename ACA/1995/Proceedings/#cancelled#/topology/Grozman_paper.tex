@@ -1,0 +1,276 @@
+%From: Larry Lambe <lambe@matematik.su.se>
+%Date: Wed, 15 Mar 1995 11:08:51 +0100
+%To: wester@math.unm.edu
+%Subject: D. Leites abstract (amsTeX)
+%Cc: lambe@insanus.matematik.su.se
+
+\documentstyle{amsppt}
+\pageheight{25cm}
+\pagewidth{17cm}
+
+\define  \ad{\operatorname{ad}}
+\define \adx {(\operatorname{ad} x)}
+\define  \rank{\operatorname{rank}}
+
+\define \fg {{\goth{g}}}
+\define \fgl {{\goth{gl}}}
+\define \fsl {{\goth{sl}}}
+
+\topmatter
+\title
+Computerizable programs: from supergravity to ballbearings\endtitle
+
+\author P.~Grozman, D.~Leites\endauthor 
+
+\affil Dept\. of Math., Stokholm University\endaffil
+\address Roslagsv. 101, 
+Kr\"aftriket hus 6,  
+S-106 91, Stockholm, Sweden
+\endaddress
+
+\thanks Financial support of the Swedish Institute and NFR is greatefully
+acknowledged.\endthanks
+
+\keywords cohomology, differential equations, defining relations, gravity, 
+Lie algebras, Lie superalgebras, optimal control\endkeywords 
+
+%\subjeclass \endsubjeclass 
+
+
+\endtopmatter
+\document
+
+\subhead 1. Background: supergravity\endsubhead
+In 1972, following Berezin's ideas, Leites introduced what is nowadays 
+called {\it superschemes}. (Actually, he introduced a more general notion 
+pertaining to nonsupercommutaive geometry, cf. Berezin, Shubin, {\it
+Schr\"odinger equation},
+Kluwer, 1987.) These ideas were not readily shared untill quite recently.
+However, after
+Wess and Zumino explained (1974) some of physical  advantages of
+supersymmetries, the \lq\lq
+super" mathematics gained a great deal  of currency. At present a
+particular branch of
+supermanifold theory, the superstring theory, seem to be an accepted
+language of Grand
+Unification Theories of fundamental forces (SUSY GUTs). 
+
+In 1970s physicists started to the believe that $N=8$ supergravity is a
+good candidate for a
+GUT. This theory is free of divergences. This pest of earlier theories
+manifests only an
+inadequate mathematical description of the physical reality. Still, nobody
+could explain what
+is the analog of the Riemann tensor for $N$-extended supergravities ---
+SUGRA($N$)s  ---
+(whereas there are hundreds of papers attempting to do this) since 1974. 
+
+In 70s every physical department had a group working on SUGRA but
+eventually only few
+entusiasts (or lucky to get grants) continued to persue the topic. 
+
+To write $N=1$ SUGRA equations it took 2 years of trial and error (1974--76). 
+
+The next two steps ($N=2, 3$) were done (with the same  method) by the group of
+V.~Ogievetsky in 1984 in JINR, Dubna. A.~Galperin,  E.~Ivanov,
+V.~Ogievetsky, E. Sokachev
+found out, among other things, that for $N>1$ the original model of the
+Minkowski superspace
+does not allow one to write SUGRA compatible with  the
+Einstein equations on the underlying Minkowski space. (Our results show
+that even for $N=1$
+the standard model should be reconsidered ...) Even conceding that the
+superization of the
+Poincar\'e group is correctly found, nobody knows which quotients of the
+superPoincar\'e group should we take for THE Minkowski superspace.
+ 	
+Moreover, for $N>3$ the analog of the Riemann tensor is not derived yet in
+physical
+literature. 
+
+Since it is difficult to seriously discuss for almost 20 years an unwritten
+ equation,
+though (hypothetically) it is remarkable, the interest to  SUGRA did dry
+out everywhere
+we must admit. It does not even help that some latest CERN experiments were
+interpreted as
+the proof of the existence of supersymmetry.
+
+\subhead 2. From supergravity to ballbearings and gyroscopes\endsubhead
+Some time ago Leites understood the cause of the difficulty in writing
+SUGRA. It is not the 
+odd coordinates of the Minkowski superspace (whatever it is for a large $N$). 
+The trouble is that for $N>0$ Minkowski superspaces are examples of a 
+{\it nonholonomic} supermanifold, i.e., a supermanifold with a nonintegrable 
+distribution. 
+
+For nonholonomic manifolds there was no regular method to measure the 
+local curvature, such as Riemann tensor for a manifold with a metric. For a
+review of
+honholonomic problems see [VG] (A.~Vershik,  V.~Gershkovich, Itogi Nauki i
+texniki.
+Sovr. Probl. matematiki. Fund.  napravleniya, v.18 (Dinamicheskie
+sistemy-7) VINITI,1987; in
+Russian, to be translated by Springer in Soviet Math. Encyclop. series).
+Vershik and 
+Gershkovich review numerous problems which go back to Gauss, Carnot, Hertz 
+(who coined the term \lq\lq nonholonomic"), Appell, Caratheodory, Schouten, 
+et. al.
+
+The simplest example of a nonholonomic system is a ball on a rough plane. More
+advanced examples are ballbearings or gyroscopes. The possibility to define an
+analog of the Riemann tensor is important in the study of nonholonomic systems:
+for instance, it is known that the sign of the curvature is responsible for
+stochastisity.
+
+\subhead 3. Optimal control and differential equations\endsubhead
+In [VG] and Agrachev's talk at the 1994 Math Congress there were mentioned
+problems
+of optimal control leading to nonlinear constraints  on generalized
+velocities (fields
+of cones, spheres, etc.). There are numerous works on (hypoelliptic)
+differential equations
+(e.g., H\"ormander's) that lead to nonholonomic distributions.
+
+Vershik and Gershkovich gloomily stated that there were no language 
+to even formulate the integrability problems for nonholonomic systems 
+(with linear constraints to say nothing about nonlinear ones).
+	
+\subhead 4. How to calculate the local curvature of a nonholonomic
+(super)manifold\endsubhead 
+Recently we developped a formalism which allows one to 
+mathematically rigorously state the integrability problem for any 
+nonholonomic system with any constraints. The solution is rather simple,
+actually, and
+amounts to computing certain Lie (super)algebra cohomology. Being a simple
+problem of linear algebra in principle, it is equivalent to an enourmously huge
+system of linear  equations. 
+
+In 1992 Grozman wrote a MATHEMATICA based package for calculations of Lie
+algebra
+(co)homology. He first computed analogues of the Riemann tensor for certain
+models of
+extended Minkowski superspace. We can now write $N$-SUGRA equations for any
+$N=1 - 8$. We
+can also corrected calculations of Wess-Zumino constraints from textbooks:
+some of the
+conditions are redundant.
+
+The huge amount of calculations one has to overcome for $N>1$ does not 
+leave any hope to get even a partial answer for large $N$ by trial and
+error or by hand
+even if we know what to compute and how. (For $N=8$ our program requires
+about 255 years to
+consider all cases: a day per case.) 
+
+
+\subhead 5. Formal integrability of partial differential relations\endsubhead
+A theorem of S.~Lie states that a symmetry of a differential equation can
+be induced from
+either 0-jets or from 1-jets of the manifold on which it is considered. For the
+first case the criteria of formal integrability are known (Bryan et al.
+{\it Exterior
+differential systems}, Springer, 1984). 
+
+For the second case our technique gives the answer. We can go even further
+and consider not
+only equations but certain relations (like those considered by Gromov) as well.
+
+\subhead 6. Noncommutative geometry. (Parastatistics and high temperature
+superconductivity)\endsubhead
+{\it Super}\-sym\-metry naturally unifies bose and fermi particles. {\it
+Metasymmetry}
+introduced by Leites and Serganova (Phys. Lett. B, v. 252, n1, 91--96)
+naturally describes
+particles of anyon type. There is a manifest symmetry wider than
+supersymmetry of the 
+conventional Lagrangeans if the conventional Minkowski superspaces are
+considered as objects
+in the category of metaspaces. This seem to be very tempting in connection
+with recent
+studies of anyons and high temperature superconductivity.
+ 	
+This is also a not too noncommutative generalization of algebraic geometry:
+unlike any other
+noncommutative geometry, this one preserves all paraphernalia of the usual
+differential
+geometry: vector fields (hence,  diferential equations), integral, etc.
+
+A further study shows that {\it Volichenko algebras} --- the local versions
+of metasymmetry
+groups, like Lie algebras ---  introduced and partly classified by Leites
+and Serganova
+embrace the examples of parasymmetry that appeared in physical papers  of
+Rubakov-Spiridonov-Vinet, Bechers-Debergh et al. (Volichenko algebras are
+\lq\lq deformations" of 
+Lie algebras in a totally new sence, they \lq\lq connect" Lie algebras and
+Lie superalgebras.
+Their enveloping algebras resemble quantum groups.)
+
+Remarkably, the technique from sec. 4 for computing local invariants can be
+applied to a
+Minkowski metamanifold  yielding a theory even more general than SUSY GUT,
+since it would
+describe particles more general than bose-fermi particles.
+
+\subhead 7. Computerizable problems of mathematical physics\endsubhead
+It turned out that in order to write a program for calculating the
+analogues of Riemannian
+tensor mentioned in secs. 2--6 (or other cohomology needed to describe the
+structure of Verma
+modules, list invariant differentail operators, derive integrability
+criteria for
+differential equations or relations; or just of a pure mathematical
+interest and unswering
+some of I.~Gelfand's questions at the 1970 Math. Congress) we have to better
+understand the structure of such classical notions as simple Lie algebras
+of vector fields.
+
+In particular, we have to calculate their defining relations. (In the end
+this leads to 
+$q$-quantization of infinite dimensional Lie algebras such as the Poisson
+algebra, $\fsl
+(\infty)$ and $\fsl(\lambda)$ for a complex $\lambda$.) This is of interest
+{\it per se} 
+but also in connection with attempts to quantize and $q$-quantize infinite
+dimensional 
+dynamical systems (like Korteveg-de Vries or Kadomtsev-Petviashvily hierarchies,
+etc.) 
+
+Starting with an example of the first complete solution of the {\it
+super-Liouville equation}
+Leznov and Saveliev taught us a powerful method to formally solve 2-dimensional
+equations of mathematical physics. This method requires some knowledge of
+representation theory (description of the principal embeddings of $\fsl(2)$,
+calculation of Shapovalov's determinant, etc.). Grozman's package allows
+one to solve such
+problems. We got a presentation of Lie algebras of polynomial vector fields and 
+its simple subalgebras. 
+
+\subhead 7.1. Classification of invariant differential operators\endsubhead
+This problem is important in applications (see Schouten's 
+{\it Tensor calculus for physicists}). All equations of mathematical
+physics should
+are formulated in invariant terms and certain examples of such 
+operators are well known: the exterior differential is the only {\it unary}
+invariant operator; Lie derivative, Poisson bracket, Schouten bracket are
+examples of {\it binary} operators (classified by Grozman).  To completely
+list such operators is {\it Veblen's problem} at 1928 Math. Congress;
+Schouten and Niuenhuis returned  to it at later Math Congresses. This
+problem can be reduced
+to certain Lie  (super)algebra cohomology. This way we discovered plenty of
+new operators.
+
+\subhead Conclusion\endsubhead
+The above looks as a short summary of major branches of mathematics.
+Indeed, Lie algebra
+cohomology are ubiquitous. Our package is a set of tools that helps to
+calculate many of
+these (co)homologies and related problems of linear algebra (Shapovalov
+determinant or
+defining relations are examples) but to make it really user-friendly (at
+least for experts in
+MATEMATICA or, for a version, in LISP) is still "a long way to go".
+
+
+\enddocument

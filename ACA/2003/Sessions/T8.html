@@ -1,0 +1,257 @@
+<html><head><title>ACA 2003 Session T8: Elimination Theory</title></head>
+
+<body>
+
+
+<h1> T8: Elimination Theory </h1>
+
+ACA 2003:  
+<a href="http://math.unm.edu/ACA/2003/2003.html">Home</a>,
+<a href="http://math.unm.edu/ACA/2003/Sessions.html">Sessions</a> 
+
+
+<h2>Organizers</h2>
+<ul>
+
+<li> <a href="mailto:cdandrea@math.berkeley.edu">Carlos D'Andrea</a> (UC Berkeley, USA)
+
+</li><li> <a href="mailto:" khetan@math.umass.edu="">Amit Khetan </a> (U. Massachusetts Amherst , USA)
+
+</li></ul>
+
+
+<h2>Overview</h2>
+<ul>
+
+<li> <h3> Problem </h3>
+Elimination Theory is the study of eliminating unknowns from equations
+(polynomial or differential). Some of the typical computational tools
+in this area are <p>
+</p><ul>
+  <li> Groebner bases
+  </li><li> resultants
+  </li><li> characteristic sets
+</li></ul>
+
+It is our intention to invite researchers working currently in this area in
+order to have a general overview of recent developments, applications
+and future directions.
+
+<p>
+  
+
+</p></li><li> <h3> Motivation and Importance </h3>
+     
+Elimination theory is classical topic that has been studied for
+hundreds of years. Recent extentions to the realm of symbolic
+computation has led to numerous applications such as solving algebraic
+equations, geometric theorem proving, computational algebraic geometry
+and Computer Aided Graphic Design.  
+
+In this session we investigate how modern techniques in symbolic
+computation  can be used to effectively solve a variety of problems from
+different domains that fall under the general heading of elimination
+theory.
+<p>
+
+</p></li></ul>
+
+
+<h2>Talks/Abstracts</h2>
+<ul>
+
+<li><h3> Elimination theory of non-commutative algebras of differential invariants </h3>
+    <a href="mailto:aszanto@ncsu.edu">Agnos Szanto</a> (NC State, USA)<br> 
+    <p>
+    <strong>Abstract</strong>: We consider non-commutative algebras
+     comprising of non-linear invariantized differential equations
+     with invariant differential operators acting on them.  The
+     structure differs from standard differential algebras in that the
+     application of the invariant differential operators introduces
+     error terms. By close inspection of the error terms we are able
+     to prove that an extended non-commutative version of the
+     differential Gr\"obner basis algorithm terminates in algebras of
+     differential invariants.  Applications include classical
+     invariant theory, geometric integration and invariant numerical
+     schemes.
+    </p><p>         
+
+</p></li><li><h3> Differential Resolvents of Minimal Order and Weight </h3>
+    <a href="mailto:resolvent@juno.com">John Nahay</a> 
+    <p>
+    <strong>Abstract</strong>: Any univariate polynomial whose
+    coefficients lie in a differential field of characteristic zero
+    possesses an associated nonzero linear ordinary differential
+    equation called an alpha-resolvent of the polynomial. In the case
+    that the distinct roots of the polynomial are differentially
+    independent over constants, we will determine the minimal number
+    of powers of alpha that appear with nonzero coefficient in a
+    resolvent of smallest possible order. We will then give an upper
+    bound on the weight of a resolvent of smallest possible
+    weight. The difficult part of calculating this upper bound was
+    generalizing the known case of simple roots to multiple roots. I
+    will present the various ways I eliminated the roots with the help
+    of computer algebra before figuring out the proper symbolic
+    formula.
+    </p><p>        
+
+</p></li><li><h3> Sylvester-type matrices via the Dixon resultant
+formulation and their optimizations </h3>
+<a href="mailto:cherba@uwyo.edu">Arthur Chtcherba </a> (U. Wyoming, USA)<br> 
+<p>
+<strong>Abstract</strong>: The computation of a resultant of a
+polynomial system is one of the fundamental problems in computer
+algebra. The significance of the resultants rapidly grows with
+advancement of technology as well as the efficiency of methods to
+compute them.  Since most efficient methods reduce resultant
+computation to the computation of the determinant of a symbolic
+matrix, the matrix size is a major bottleneck in the computation of
+the resultant of a polynomial system. 
+</p><p>
+In this talk we outline a new construction of Sylvester-type
+resultant matrices which is derived from the Dixon/Bezout
+formulation. We show that in practice these matrices are usually much
+smaller than the Sylvester-type resultant matrix based on other
+constructions.  Consequently, a resultant method based on such
+matrices is of lower overall complexity. Moreover, it is possible to
+select certain construction parameters based on the support structure
+of an input polynomial system to minimize the size of these matrices.
+The method has been implemented, tried on a variety of examples and
+compared with other resultant methods.
+</p><p>
+</p></li><li><h3> Developments in resultants of composed polynomials </h3>
+<a href="mailto:manfred@minimair.com">Manfred Minimair </a> (Seton Hall U., USA)<br> 
+<p>
+<strong>Abstract</strong>: We give a survey on toric (sparse)
+resultants of composed polynomials. By the toric (sparse) resultant,
+we mean an irreducible polynomial in the coefficients of a set of
+given polynomials that vanishes if the given polynomials have a common
+zero. By a composed polynomial we mean the polynomial obtained from a
+given polynomial by replacing each variable by a polynomial.  We give
+an overview of previous findings as well as of a recent one, all
+providing the irreducible factors of resultants of various composed
+polynomials. Furthermore, we discuss open questions.  This line of
+research is motivated by the need for efficiently eliminating
+variables from composed polynomials.
+</p><p>
+</p></li><li><h3> Implicitization of rational surfaces with toric varieties
+</h3> <a href="mailto:khetan@math.umass.edu">Amit Khetan </a>
+(U. Massachusetts Amherst, USA)<br> 
+
+<strong>Abstract</strong>: Implicitization of parametric surfaces in
+P^3 is an important problem in CAGD and there have been a number of
+new techniques in recent years. Following a suggestion by Bernd
+Sturmfels, we reduce the computation of the implicit equation to the
+computation of the Chow form of a certain toric surface which projects
+onto our rational surface.  Exact formulas for the latter were found
+by the speaker in his Ph.D. thesis. In many cases this leads to
+an exact determinantal formula for the implicit equation, for example
+in the case of no base points or more generally if the base points are
+isolated local complete intersections. Projection from a toric variety
+often leads to far fewer basepoints and smaller matrices then
+previously studied methods.
+<p>
+
+</p></li><li><h3> Implicitizing rational surfaces using approximation complexes
+</h3> <a href="mailto:buse@math.unice.fr">Laurent Buse </a>
+(Universite de Nice, France)<br>
+<p>
+<strong> Abstract </strong> The implicitization problem asks for an
+implicit equation of a rational hypersurface given by a
+parameterization map from P^(n-1) to P^n, with n&gt;=2. This problem
+received recently a particular interest, especially in the cases n=2
+and n=3, corresponding respectively to curves and surfaces
+implicitization, because it is a key-point in computer aided geometric
+design and modeling. In this talk I will report on joint works with
+Marc Chardin (University of Paris IV) and Jean-Pierre Jouanolou
+(University of Strasbourg) using approximation complexes to solve this
+problem when the base points of the parameterization map are isolated
+and locally a complete intersection. I will also try to show the close
+link with the so-called method of moving surfaces for curves and
+surfaces implicitization.
+</p><p>
+
+</p></li><li><h3> Recent advances in triangular decomposition methods
+</h3> <a href="mailto:moreno@lifl.fr">Marc Moreno Maza </a>
+(Universite Lille I, France)<br>
+<p>
+<strong> Abstract </strong> Like Groebner bases of polynomial ideals,
+triangular decompositions of algebraic varieties are computed by means
+of rewriting techniques and offer important features such as
+canonicity. The drawback is their theoretical complexity which is
+superior to that of probabilistic methods for solving polynomial
+systems.
+</p><p>
+Most of the effort in the area of triangular decompositions
+was devoted in the recent years to the design of algorithms
+for processing arbitrary systems of algebraic or differential
+equations. However, many systems of equations arising in practice
+have structural properties.
+</p><p>
+We will present new developments based on this observation
+(and others) leading to algorithms for triangular decompositions
+whose practical complexity is far improved.
+</p><p>
+
+</p></li><li><h3> Recent advances in polynomial system solving and an application in Chaos Theory </h3> <a href="http://math.berkeley.edu/%7Eakhetan/ikotsire@wlu.ca">Ilias Kotsireas </a> (Wilfrid Laurier University, Canada) <br>
+<p>
+
+<strong> Abstract </strong> Polynomial systems of equations
+arise ubiquitously in Mathematics (Differential Equations, Graph
+Theory, Topology etc), Physics, Chemistry and many other branches of
+Science. Often the polynomial systems arising naturally in these areas
+exhibit  some sort of symmetry that can be accounted for rigorously
+using group theoretic ideas such  as representations and invariant
+theory of finite groups. I will discuss some aspe cts of a joint work
+with R. Corless (UWO, Canada) and K. Gatermann (ZIB-Berlin, Germany)
+on solving efficiently polynomial systems with symmetries. To
+illustrate the method I will discuss an application from Chaos
+Theory, namely the determination of bifurcation points of the
+logistic map. The logistic map is the prototype of one-dimensional
+mappings of the interval and although it is the simplest example of
+a nonlinear dynamical system, it captures remarkably many features
+of more general nonlinear systems. The global structure of the
+bifurcation diagram for instance, is a universal property.
+</p><p>
+
+</p></li><li><h3> An approximation approach to molecular conformational search </h3>
+<a href="http://math.berkeley.edu/%7Eakhetan/ming@mdanderson.org">Ming Zhang </a> (U. of Texas M.D. Anderson CancerCenter, USA) <br>
+<p>
+<strong> Abstract </strong> Searching for molecular conformations with
+respect to geometric and energy constraints is frequent in
+computational biology and chemistry. The conformational search often
+can be reduced to solving systems of polynomial equations. These
+equations, however, have number of unknowns and degree beyond the
+scope of the available algebraic systems.
+</p><p>
+Realizing solving for the exact solutions is a too difficult task, we
+turn to seek the approximations. I will present two methods that we
+have investigated to find the real solutions of the polynomial
+equations.
+</p><p>
+The first method computes the number of solutions in regions of the
+parameter space. By subdividing the regions into smaller and smaller
+sizes, we get closer and closer approximations to the solutions. This
+method uses bilinear mappings induced by the polynomials defining the
+boundaries of the regions, and obtains the solution counts from the
+positive and negative eigenvalues of the bilinear mappings. The
+mappings, however, are computed using Groebner bases or resultant
+matrices. We experienced very big computational complexities from
+them. This method thus still remains theoretical.
+</p><p>
+The second method focuses on eliminating regions that contain no
+solutions in the parameter space instead of obtaining number of
+solutions within the regions. This method also carries a subdivision
+process. With enough steps, the regions become so small that the
+values of the original polynomials can be approximated by evaluating
+at any point inside the regions. The final small regions after the
+subdivision process are reported as the approximations of the
+solutions. This method, with an initial implementation, has "solved"
+systems of six polynomials equations (degree 10) rising from the
+docking problems in computer-assisted drug design. To our knowledge,
+no other deterministic algebraic methods have solved these equations.
+</p><p>
+
+</p></li></ul>
+
+</body></html>

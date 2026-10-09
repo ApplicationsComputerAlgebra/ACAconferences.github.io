@@ -1,0 +1,12 @@
+Marilo Lopez Gonzalez, Javier Rodrigo Hitos* (Spain), mate@icai.upco.es
+Searching roots for three degree polynomials with the help of Mathematica
+
+Mathematica is a mathematical computer program that represents an
+exceptional tool to create and teach mathematics.  At present, the
+visualization and model of maths with mathematical assistants such us
+Mathematica, play a very important role in the teaching of mathematics.  In
+this paper features of Mathematica have been used to find polynomial roots.  A
+new method has been developed  to find exact polynomial roots, without using
+complicated techniques, with the help of the program. This method is presented
+for three degree polynomials. It is supported in reducing a general polynomial
+to one in the form x^3-b, whose roots are easily calculated.

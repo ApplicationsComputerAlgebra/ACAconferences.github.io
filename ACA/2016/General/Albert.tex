@@ -1,0 +1,132 @@
+%    Latex Template for ACA 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS BELOW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{url}
+
+\usepackage{todonotes}
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS ABOVE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\vspace{-0.8cm}
+\begin{flushleft}
+\Large \textbf{\noindent
+%%% PLEASE INSERT THE TITLE OF YOUR TALK HERE %%%%%%%
+Computation of Hilbert Schemes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5cm}
+\normalsize
+ %%%%%%             NAMES OF AUTHORS         %%%%%%
+ %%%%%% NAME OF SPEAKER SHOULD BE UNDERLINED %%%%%%%%%
+\normalsize{
+ %%%%%% FOR EXAMPLE %%%%%
+ M. Albert$^1$
+ %%%%%%%%%%%%%%%%%%%%%%%%
+} \\
+\vspace{5mm}
+\textit{\footnotesize
+ %%%%%% AFFILIATION OF AUTHORS %%%%%%
+$^1$ University of Kassel, Germany,
+albert@mathematik.uni-kassel.de\\
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+\end{flushleft}
+
+Hilbert schemes are a basic topic in Algebraic Geometry \cite{groth,Sernesi}.
+Methods related to Gr\"obner bases are fundamental here, as Hartshorne's proof
+of the connectedness of Hilbert schemes via generic initial ideals demonstrates
+\cite{HartThesis}. For many purposes, the explicit construction of Hilbert
+schemes is important. Classical approaches lead to prohibitively large
+equations. Newer ideas like Gr\"obner strata \cite{ext,Lederer} lead to
+improvements,
+but do
+not provide open covers.
+Despite all advances, it has remained a great challenge to construct Hilbert
+schemes even for very small Hilbert polynomials.
+
+A novel approach replacing Gr\"obner bases by $J$-marked bases \cite{BLR,CR} was
+proposed by the group of Margharita Roggero. For every strongly stable ideal J,
+one obtains here a larger family which corresponds to an open subscheme and
+which can be described by equations of low degree.
+
+We have implemented several of the new algorithms in the computer algebra system
+\textsc{CoCoALib} \cite{cocoalib}. In the talk we are going to explain these
+algorithms and give some ideas to improve these algorithms. In addition to that
+we present some first practical experience which we have made during first
+computations. Furthermore we report some experiences which we have made when we
+tried to parallelize these algorithms.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{00}
+\addcontentsline{toc}{chapter}{References}
+\setlength{\itemsep}{-1mm}
+\footnotesize
+\bibitem{groth}
+A.~Grothendieck.
+\newblock Techniques de construction et th{\'e}or{\`e}mes d'existence en
+  g{\'e}om{\'e}trie alg{\'e}brique. {IV}. {L}es sch{\'e}mas de {H}ilbert.
+\newblock In {\em S{\'e}minaire {B}ourbaki, {V}ol.\ 6}, pages Exp.\ No.\ 221,
+  249--276. Soc. Math. France, Paris, 1995.
+
+\bibitem{Sernesi}
+E.~Sernesi.
+\newblock {\em Deformations of algebraic schemes}, volume 334 of {\em
+  Grundlehren der Mathematischen Wissenschaften [Fundamental Principles of
+  Mathematical Sciences]}.
+\newblock Springer-Verlag, Berlin, 2006.
+
+\bibitem{HartThesis}
+R.~Hartshorne.
+\newblock Connectedness of the {H}ilbert scheme.
+\newblock {\em Inst. Hautes {\'E}tudes Sci. Publ. Math.}, (29):5--48, 1966.
+
+\bibitem{ext}
+Jerome Brachat, Paolo Lella, Bernard Mourrain, and Margherita Roggero,
+  \emph{Extensors and the {H}ilbert scheme}, Annali della Scuola Normale
+  Superiore di Pisa, Classe di Scienze (2015), Article in Press,
+  doi:10.2422/2036-2145.201407\_003.
+
+\bibitem{Lederer}
+Mathias Lederer, \emph{Gr{\"o}bner strata in the {H}ilbert scheme of points},
+  J. Commut. Algebra \textbf{3} (2011), no.~3, 349--404.
+
+
+\bibitem{BLR}
+C.~Bertone, P.~Lella and M.~Roggero.
+\newblock A {B}orel open cover of the {H}ilbert scheme.
+\newblock {\em J. Symbolic Comput.}, 53:119--135, 2013.
+
+\bibitem{CR}
+F.~Cioffi and M.~Roggero.
+\newblock Flat families by strongly stable ideals and a generalization of
+  {G}r{\"o}bner bases.
+\newblock {\em J. Symbolic Comput.}, 46(9):1070--1084, 2011.
+
+\bibitem{cocoalib}
+Abbott, J., Bigatti, A.: \textsc{CoCoALib}: a {C++} library for doing
+  computations in commutative algebra (2016),
+  \url{http://cocoa.dima.unige.it/cocoalib}
+\end{thebibliography}
+\normalsize
+\end{document}

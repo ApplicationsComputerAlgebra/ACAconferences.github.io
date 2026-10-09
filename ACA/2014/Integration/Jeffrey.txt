@@ -1,0 +1,7 @@
+Rubi and Integration as term re-writing: integrals containing tangent
+
+David Jeffrey, Albert Rich
+
+Recent progress in the long-term project RUBI is presented.  We describe, as a
+case study, how a large class of integrands containing tangent functions can be
+integrated using RUBI's term-rewriting rules.

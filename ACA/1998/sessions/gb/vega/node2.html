@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Gr&#246;bner bases under specializations.</TITLE>
+<META NAME="description" CONTENT="Gr&#246;bner bases under specializations.">
+<META NAME="keywords" CONTENT="vega">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="vega.css">
+</HEAD>
+<BODY bgcolor=white>
+
+<H1><A NAME="SECTION00020000000000000000">
+Gr&#246;bner bases under specializations.</A>
+</H1>  
+  
+This section is devoted to present the state of the art in this kind of  
+techniques. Let 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}$ -->
+<IMG
+ WIDTH="22" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}$">
+be a field and 
+<!-- MATH: $\underline{X}=(X_1,\dots,X_n)$ -->
+<IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\underline{X}=(X_1,\dots,X_n)$">,
+
+<!-- MATH: $\underline{T}=(T_1,\dots,T_m)$ -->
+<IMG
+ WIDTH="129" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\underline{T}=(T_1,\dots,T_m)$">
+sets of variables. We call <I>specialization</I> any  ring  homomorphism  
+
+<!-- MATH: $\varphi:{\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]\rightarrow {\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$ -->
+<IMG
+ WIDTH="158" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\varphi:{\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]\rightarrow {\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$">
+such that  
+
+<!-- MATH: $\varphi({\rm I\kern -2.2pt K\hskip 1pt}[\underline{T}])={\rm I\kern -2.2pt K\hskip 1pt}$ -->
+<IMG
+ WIDTH="106" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\varphi({\rm I\kern -2.2pt K\hskip 1pt}[\underline{T}])={\rm I\kern -2.2pt K\hskip 1pt}$">
+and 
+<!-- MATH: $\varphi(X_i)=X_i, i=1,\dots,n$ -->
+<IMG
+ WIDTH="180" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\varphi(X_i)=X_i, i=1,\dots,n$">.
+The  
+<I>specialization associated to </I> a point  
+
+<!-- MATH: $t^{(0)}\in{\rm I\kern -2.2pt K\hskip 1pt}^m$ -->
+<IMG
+ WIDTH="79" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$t^{(0)}\in{\rm I\kern -2.2pt K\hskip 1pt}^m$">
+is the one defined by  
+
+<!-- MATH: $\varphi^{(0)}(p(\underline{T},\underline{X})):=p(t^{(0)},X)$ -->
+<IMG
+ WIDTH="197" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$\varphi^{(0)}(p(\underline{T},\underline{X})):=p(t^{(0)},X)$">,
+for  
+
+<!-- MATH: $p(\underline{T},\underline{X})\in{\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$ -->
+<IMG
+ WIDTH="142" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$p(\underline{T},\underline{X})\in{\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$">.
+  
+Let  
+
+<!-- MATH: $I=<F_1(\underline{T},\underline{X}),\dots,F_m(\underline{T},
+\underline{X})>\subseteq  
+{\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$ -->
+<IMG
+ WIDTH="318" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$I=<F_1(\underline{T},\underline{X}),\dots,F_m(\underline{T},
+\underline{X})>\subseteq
+{\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$">
+be an ideal,  
+&gt; a monomial ordering in 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$ -->
+<IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$">
+and  
+
+<!-- MATH: $G=\{g_1(\underline{T},\underline{X}),\dots,g_s(\underline{T},\underline{X})\}$ -->
+<IMG
+ WIDTH="219" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$G=\{g_1(\underline{T},\underline{X}),\dots,g_s(\underline{T},\underline{X})\}$">
+a Gr&#246;bner basis of <I>I</I> with respect to  
+&gt;.  
+  
+The most practical question that we would like to solve is to determine the  
+subset <I>W</I> of 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}^m$ -->
+<IMG
+ WIDTH="35" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img29.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}^m$">
+such that 
+<!-- MATH: $t^{(0)}\in W$ -->
+<IMG
+ WIDTH="67" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$t^{(0)}\in W$">
+if and only if its associated  
+specialization 
+<!-- MATH: $\varphi^{(0)}$ -->
+<IMG
+ WIDTH="34" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$\varphi^{(0)}$">
+verifies that 
+<!-- MATH: $\varphi^{(0)}(G)$ -->
+<IMG
+ WIDTH="60" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\varphi^{(0)}(G)$">
+is a  
+Gr&#246;bner basis of 
+<!-- MATH: $\varphi^{(0)}(I)$ -->
+<IMG
+ WIDTH="56" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\varphi^{(0)}(I)$">.
+From a computational point of view  
+this is the most interesting aspect, as once we have computed <I>W</I>, every  
+time that we are given a value to the parameters we  just have to test if  
+it belongs or not to <I>W</I> to determine if we have or not a Gr&#246;bner basis.   
+  
+There are two possibilities to deal with this problem: to perform the initial  
+Gr&#246;bner Bases computation in 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}(\underline{T})[\underline{X}]$ -->
+<IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}(\underline{T})[\underline{X}]$">
+or in  
+
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$ -->
+<IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$">.
+  
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html42"
+ HREF="node3.html">Working in 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}(\underline{T})[\underline{X}]$ -->
+<IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}(\underline{T})[\underline{X}]$">.</A>
+<LI><A NAME="tex2html43"
+ HREF="node4.html">Working in 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$ -->
+<IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$">.</A>
+<UL>
+<LI><A NAME="tex2html44"
+ HREF="node5.html">Gianni's approach.</A>
+</UL>
+<LI><A NAME="tex2html45"
+ HREF="node6.html">Kalkbrener's approach.</A>
+<LI><A NAME="tex2html46"
+ HREF="node7.html">GPT Strategy.</A>
+<LI><A NAME="tex2html47"
+ HREF="node8.html">Conclusion.</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

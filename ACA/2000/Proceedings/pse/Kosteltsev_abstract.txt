@@ -1,0 +1,27 @@
+A.V. Kosteltsev, Abstract etc requested June 28
+
+Operating Modeling Environment on Multi-syntax Language Base
+
+New way of constructing Environments for solution the ordinary differential
+equations (ODE), recurrence, analog machine scheme, etc. are considered.
+Proposed the new (object oriented) struct of algorithmic (computer) model
+(computer object file format), that support: the different forms of mathematic
+models (ODE, recurrence, analog machine scheme, etc.), transformation (for
+example, ODE system to computer model, analog machine scheme to ODE system,
+etc.).  New multi-syntax language that support the new object file format and
+different forms of mathematical models (which can write in the natural
+mathematic languages or different graphic forms (analog machine schemes, for
+example)).  In the part of technology and mathematics support I'm considered:
+
+   * The fundamental questions of the new - dynamic theory of errors of
+     numerical methods of discretization of ordinary differential equations
+     (ODE).
+   * Terms of dynamic errors, dynamic characteristics, areas of dynamic
+     correlation of numerical methods of discretization; sources are shown and
+     character of disturbance of structure of fundamental matrix (system of
+     solutions) of ODE system (mathematical model) at its transformation to
+     algorithmic (computer) model.
+   * Characteristic of the new  way of constructing and new methods of ODE
+     discretization.  Its advantages from existing ways of constructing and
+     methods of ODE discretization are considered in details from the point of
+     view of dynamic theory of errors.

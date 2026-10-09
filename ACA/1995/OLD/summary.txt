@@ -1,0 +1,39 @@
+IMACS Conference on Applications of Computer Algebra current summary
+
+Numbers include the organizers.
+	I = Invited
+	C = Confirmed
+	N = Needs money and then will come.
+	D = Declined
+
+Organizer(s)         |  I  |  C  |  N  |  D  | Session
+=====================+=====+=====+=====+=====+=================================
+Abdallah-Dorato      |  5  |  5  |  0  |  0  | Methods in Control
+---------------------+-----+-----+-----+-----+
+Bruno-Edneral        | 32  |  8  |  3  |  6  | ODE Normal Forms
+---------------------+-----+-----+-----+-----+
+Doffou-Grossman      |  6  |  ?  |  ?  |  1  | Differential Algebra/Equations
+---------------------+-----+-----+-----+-----+
+Ganzha-Vorozhtsov    |  9  |  4  |  1  |  ?  | Numerical Methods for PDEs
+---------------------+-----+-----+-----+-----+
+Assadi               | 11  |  5  |  5  |  ?  | Computational Topology/Algebra
+---------------------+-----+-----+-----+-----+
+Kaltofen-Villiard    | 11  |  9  | >=1 |  0  | Parallel Computer Algebra
+---------------------+-----+-----+-----+-----+
+Liska-Jahn           | 12  |  2  |  3  |  2  | Quantifier Elimination
+---------------------+-----+-----+-----+-----+
+Nuttall-Ingber       |     |  6  |     |     | Engineering Education
+---------------------+-----+-----+-----+-----+
+Roque-Vega           | 12  |  4  |  ?  |  5  | Technology
+---------------------+-----+-----+-----+-----+
+Sendra               |  7  |  5  |  1  |  ?  | Parametric Curves/CAD
+---------------------+-----+-----+-----+-----+
+Schwarz              | 23  |  8  |  3  |  6  | Symmetries and DE Solutions
+---------------------+-----+-----+-----+-----+
+Trott                |  7  |  5  |  1  |  >2 | Stochastic Methods
+---------------------+-----+-----+-----+-----+
+Wang                 | 10  |  5  |  3  |  2  | Automated Theorem Proving
+---------------------+-----+-----+-----+-----+
+Wood-Lakshman        | 10  |  4  |  2  |  0  | Polynomial Systems
+*********************+*****+*****+*****+*****+
+TOTAL                |     | 66  |     |     |

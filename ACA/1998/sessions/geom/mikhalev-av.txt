@@ -1,0 +1,13 @@
+"Linear recurring sequences over rings and modules"
+
+A.V.Mikhalev* and A.A.Nechaev, Moscow State
+University, Russia.
+
+Abstract:
+
+The aim of the talk is to extend some fundamental and applied results
+of the theory of linear recurring sequences over fields to the case of
+polylinear recurring sequences over rings and modules.
+Quasi-Frobenius modules and Galois rings play a very special role
+in this project.
+

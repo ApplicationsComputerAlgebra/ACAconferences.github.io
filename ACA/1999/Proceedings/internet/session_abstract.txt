@@ -1,0 +1,18 @@
+Title: Mathematics on the Internet
+
+Abstract:
+
+The subject of the session is the general problem of putting
+mathematics on the Internet.  A non-exclusive list of topics is:
+
+   -  placing math formulas in web documents
+   -  attaching semantic meaning to expression trees
+   -  standardizing the representation of expression trees/graphs
+      and procedures that generate mathematical objects or
+      that apply them to inputs (black box math objects)
+   -  transmitting math objects across the web
+   -  brokering services with math objects between servers and
+      clients
+   -  standardizing programming interface and hierarchy
+      of math objects
+   -  standardizing math character encodings

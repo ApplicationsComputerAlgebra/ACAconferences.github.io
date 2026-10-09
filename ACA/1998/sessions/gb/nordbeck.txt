@@ -1,0 +1,29 @@
+    "Factor-SAGBI Bases: a Tool for Computations in Subalgebras of Factor
+     Algebras"
+
+    Patrik Nordbeck.
+    Department of Mathematics, Lund
+    Box 118
+    Lund, S-221 00
+    Sweden
+    E-mail:nordbeck@maths.lth.se
+	
+
+We introduce canonical bases for subalgebras of quotients of polynomial rings.
+Canonical bases for subalgebras of polynomial rings were introduced by Kapur
+and Madlener, and independently by Robbiano and Sweedler. Using the language of
+Robbiano and Sweedler and referring to the ``non-quotient'' case as SAGBI bases
+theory (Subalgebra Analog to Groebner Bases for Ideals), we consequently call
+the canonical bases in our factor algebra setting Factor-SAGBI bases.
+
+SAGBI bases theory is (as the previous parenthesis indicates) strongly
+influenced by the theory of Groebner bases, introduced by Bruno Buchberger in
+his thesis; in e.g. the paper by Robbiano and Sweedler we find the notion of
+(subalgebra) reduction, the characterization (test) theorem using critical
+pairs (generalized S-polynomials), and the completion procedure of constructing
+bases. To make the theory work in our factor algebra setting, we need just
+complete the SAGBI theory at a few points. We try, as far as possible, to work
+in the normal complements of the ideals we factor out, so e.g. our subalgebra
+reduction also includes the usual Groebner basis reduction. In the test and
+construction of our bases we are forced to consider, besides critical pairs,
+one additional type of element.

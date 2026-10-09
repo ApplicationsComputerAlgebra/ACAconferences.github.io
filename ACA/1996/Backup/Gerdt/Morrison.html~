@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">A Generalization of Rosenfeld's Lemma</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Morrison">Sally D. Morrison</A><br>
+</h3>
+
+Date: July 17th (Wednesday)<br>
+Time: ??.??<br>
+
+<center>
+Abstract
+</center>
+
+ In this paper we explore connections between Mansfield's work on differential
+    Gröbner bases and Boulier's work on differential radical ideals. In particular, we obtain a
+    generalization of the result in differential algebra known as Rosenfeld's Lemma. This
+    generalization replaces Rosenfeld's `auto-reduced' hypothesis (very effectively used by
+    Boulier in his computation of radical differential ideals) with Mansfield's weaker `almost
+    complete' hypothesis, and thus permits some of Boulier's techniques to be adapted to the
+    more general case. 
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Gerdt.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

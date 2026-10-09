@@ -1,0 +1,18 @@
+Data Envelopment Analysis with Maple 13
+Wm C Bauldry
+Boone, NC
+BauldryWC@appstate.edu
+
+We will present the ``Data Envelopment Analysis'' (DEA) technique using
+Maple 13.  DEA is an operations research tool that uses the simplex algorithm
+to evaluate the relative efficiency of `decision- making units' (DMU's) in
+an organization.  We will illustrate DEA by applying the method to analyze
+the 16 departments of the College of Arts & Sciences at Appalachian State
+University.  Computer algebra is best at easily handling the large scale
+computations intrinsic to DEA studies.  The College of Arts & Sciences
+DEA analysis, a simplified example, requires 16 simplex optimizations
+each over 16 variables with 3 constraints.  A significant DEA study would
+likely involve 30 or more simplex optimizations with a much larger number
+of variables and of constraints for each run.  The original Input-Output
+ratio form of DEA is nonlinear and is quite difficult to compute; Maple
+makes it feasible to attempt.

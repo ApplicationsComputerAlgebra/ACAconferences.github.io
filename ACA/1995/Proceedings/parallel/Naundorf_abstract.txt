@@ -1,0 +1,8 @@
+Parallelism in MuPAD
+
+The parallel paradigms of MuPAD and espessially the motivating ideas
+will be explained. First experiences with microparallelism, one of the
+two kinds of parallelism in MuPAD will be presented.
+
+Holger Naundorf
+snoo@uni-paderborn.de

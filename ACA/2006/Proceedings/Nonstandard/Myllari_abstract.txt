@@ -1,0 +1,19 @@
+Joint Distribution of the Number of Vertices with Given Different Outdegrees
+in Galton--Watson Forest
+
+T. Myll\"ari
+Department of Mathematics
+\AA bo Akademy University
+\AA bo, Finland
+
+
+A Galton--Watson forest consisting of N roots (or trees) and n non-root
+vertices is considered.  _Outdegree of a vertex_ is the number of branches
+emanating from this vertex.  We study limit distributions of the number of
+vertices of a given outdegree in such a forest.  Earlier, the local limit
+theorems for this characteristic were proved.  It was shown that the limiting
+distribution is normal with parameters depending on  how N and n approach
+infinity.  Now, more general case, namely joint distribution of the number of
+vertices with k given different outdegrees, is considered.  Local limit theorem
+for this characteristic is proved.  In this case the normal limiting
+distribution is obtained too.

@@ -1,0 +1,40 @@
+@charset "iso-8859-1";
+
+BODY {font: 70% georgia, sans-serif;
+	line-height: 1.4;
+		color: #667049; 
+		margin: 0; 
+		padding: 0;
+	}
+	
+td { 
+	font: 70% georgia, sans-serif;
+	line-height: 1.4;
+	margin: 3; 
+	padding: 3;
+	}
+
+/* Les liens */
+A:link{ 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #667049;
+	}
+A:active { 
+	font-weight: bold;
+	text-decoration: none;
+	color: #667049; 
+	}
+A:visited { 
+	font-weight: bold;
+	text-decoration: none;
+	color: #667049;
+	}
+A:hover { 
+	font-weight: bold;
+	text-decoration: underline;
+	color: #667049; 
+	}
+
+
+HR {COLOR: #194157; WIDTH: 525;}

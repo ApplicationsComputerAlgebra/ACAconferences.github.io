@@ -1,0 +1,1022 @@
+<HTML>
+<HEAD>
+<TITLE>ACA'98 Sessions</TITLE>
+</HEAD>
+<BODY bgcolor="#f9c0a0">
+<H1>ACA'98 Sessions</H1>
+<P>
+<H3>
+1998 IMACS Conference on Applications of Computer Algebra
+<P>
+List of sessions, session organizers and talks (preliminary)
+</H3>
+<HR>
+
+<OL>
+<LI><A HREF="#grobner-sess">
+    Applications of Gr&ouml;bner Bases</A>
+</LI>
+<LI><A HREF="#ai1-sess">
+    Applications to Artificial Intelligence and to other Nonstandard Applications I</A>
+</LI>
+<LI><A HREF="#ai2-sess">
+    Applications to Artificial Intelligence and to other Nonstandard Applications II</A>
+</LI>
+<LI><A HREF="#approx1-sess">
+    Approximate Algebraic Computation I</A>
+</LI>
+<LI><A HREF="#approx2-sess">
+    Approximate Algebraic Computation II</A>
+</LI>
+<LI><A HREF="#autodif-sess">
+    Automatic Differentiation for adjoint codes generation</A>
+</LI>
+<LI><A HREF="#geom-sess-I">
+    Computation in Algebra and Geometry I</A>
+</LI>
+<LI><A HREF="#geom-sess-II">
+    Computation in Algebra and Geometry II</A>
+</LI>
+<LI><A HREF="#biology-sess">
+    Computer Algebra Applications in Biology, Ecology and Medicine</A>
+</LI>
+<LI><A HREF="#odes-sess">
+    Computer Algebra Methods in Integration and Symmetry Analysis of ODEs</A>
+</LI>
+<LI><A HREF="#control-sess">
+    Control Theory</A>
+</LI>
+<LI><A HREF="#dynamical-sess-I">
+    Dynamical Systems and Mechanics I</A>
+</LI>
+<LI><A HREF="#dynamical-sess-II">
+    Dynamical Systems and Mechanics II</A>
+</LI>
+<LI><A HREF="#edu-sess-I">
+    Education meets Computer Algebra: A Double Challenge I</A>
+</LI>
+<LI><A HREF="#edu-sess-II">
+    Education meets Computer Algebra: A Double Challenge II</A>
+</LI>
+<LI><A HREF="#edu-sess-III">
+    Education meets Computer Algebra: A Double Challenge III</A>
+</LI>
+<LI><A HREF="#edu-sess-IV">
+    Education meets Computer Algebra: A Double Challenge IV</A>
+</LI>
+<LI><A HREF="#gr-sess">
+    General Relativity</A>
+</LI>
+<LI><A HREF="#hep-sess">
+    High Energy Physics</A>
+</LI>
+<LI><A HREF="#highper1-sess">
+    High Performance Symbolic Computing I</A>
+</LI>
+<LI><A HREF="#highper2-sess">
+    High Performance Symbolic Computing II</A>
+</LI>
+<LI><A HREF="#hist-sess">
+    History of Computer Algebra Applications</A>
+</LI>
+<LI><A HREF="#indust-sess">
+    Industrial Applications</A>
+</LI>
+<LI><A HREF="#pse-sess">
+    Problem Solving Environments</A>
+</LI>
+<LI><A HREF="#quantum-sess">
+    Quantum Theory</A>
+</LI>
+<LI><A HREF="#robot-sess">
+    Robotics</A>
+</LI>
+</OL>
+
+<HR>
+
+<OL>
+<!-- --- GB ---------------------------------------------------1M[6]1A- -->
+<LI><A NAME="grobner-sess" HREF="sessions/groebner.html"><STRONG>Applications
+       of Gr&ouml;bner Bases</STRONG></A><BR>
+    <EM>Organizer:</EM>
+    <A HREF="mailto:tran.quoc.nam@risc.uni-linz.ac.at">Quoc-Nam Tran</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/gb/buchberger.txt">Computer Support for Inventing 
+    Gr&ouml;bner Bases Theory</A><BR>
+    (Bruno Buchberger)
+    </LI>
+<LI><A HREF="sessions/gb/gonzalez-lopez.txt">Polynomial System Solving 
+    with Parameters: Gr&ouml;bner Bases
+    Specialization through Hilbert Functions</A><BR>
+    (M.-J. Gonzalez-Lopez, L. Gonzalez-Vega, C. Traverso &amp; A. Zanoni)
+    </LI>
+<LI><A HREF="sessions/gb/tran.txt">Solving Systems of Nonlinear
+    Algebraic Equations by Using the Gr&ouml;bner Walk
+    Method and Its Improvements</A><BR>
+    (Quoc-Nam Tran)
+    </LI>
+<LI><A HREF="sessions/gb/carra.txt">Gr&ouml;bner Bases in 
+    Fractional Polynomial Rings and their
+    Applications</A><BR>
+    (Giuseppa Carra'-Ferro)
+    </LI>
+<LI><A HREF="sessions/gb/bodnar.txt">On Algorithmic Desingularization
+    of Hypersurfaces</A><BR>
+    (Gabor Bodnar &amp; Josef Schicho)
+    </LI>
+<LI><A HREF="sessions/gb/pauer.txt">Systems of Laurent Polynomial 
+    Equations and Gr&ouml;bner Bases</A><BR>
+    (Franz Pauer)
+    </LI>
+<LI><A HREF="sessions/gb/nordbeck.txt">Factor-SAGBI Bases:
+    a Tool for Computations in Subalgebras of Factor
+    Algebras</A><BR>
+    (Patrik Nordbeck)
+    </LI>
+<LI><A HREF="sessions/gb/gatermann.txt">Sparse Structual 
+    Gr&ouml;bner Basis Detection</A><BR>
+    (Karin Gatermann)</LI>
+<LI><A HREF="sessions/gb/gutierrez.txt">Functional Decomposition 
+    and Gr&ouml;bner Basis</A><BR>
+    (Jaime Gutierrez &amp; Rosario Rubio San Miguel)
+    </LI>
+<LI><A HREF="sessions/gb/kotsireas.txt">Using Gr&ouml;bner Bases 
+    and Invariant Theory to Check a Conjecture in
+    Celestial Mechanics</A><BR>
+    (Ilias Kotsireas)
+    </LI>
+<LI><A HREF="sessions/gb/lichtblau.txt">Practical Computations
+    with Gr&ouml;bner Bases</A><BR>
+    (Daniel Lichtblau)
+    </LI>
+</OL>
+<!-- --- Approx I ----------------------------------1A(grobner-sess)- -->
+<LI><A NAME="approx1-sess" HREF="sessions/approximate.html"><STRONG>Approximate
+       Algebraic Computation I</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:noda@cs.ehime-u.ac.jp">M. Noda</A>
+       &amp;
+    <A HREF="mailto:sasaki@math.tsukuba.ac.jp">T. Sasaki</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/approximate/rupprecht/index.html">Approximate Algebraic
+    Computation - IMACS 98</A><BR>
+    (David Rupprecht)
+    </LI>
+<LI><A HREF="sessions/approximate/pan/index.html">Computation of Approximate
+    Polynomial Gcds and an Extension</A><BR>
+    (Victor Y. Pan)
+   </LI>
+</OL>
+<!-- --- Approx II ----------------------------------2M- -->
+<LI><A NAME="approx2-sess" HREF="sessions/approximate.html"><STRONG>Approximate
+       Algebraic Computation II</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:noda@cs.ehime-u.ac.jp">M. Noda</A>
+       &amp;
+    <A HREF="mailto:sasaki@math.tsukuba.ac.jp">T. Sasaki</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/approximate/kai/index.html">Accuracy Analysis of Hybrid
+    Rational Interpolation</A><BR>
+    (Hiroshi Kai* &amp; Matu-Tarow Noda)
+    </LI>
+<LI><A HREF="sessions/approximate/nagasaka/index.html">Approximate Multivariate
+    Factorization and Its Time Complexity</A><BR>
+    (Kosaku Nagasaka &amp; Tateaki Sasaki*)
+    </LI>
+<LI><A HREF="sessions/approximate/shirayan/index.html">Remarks on Automatic
+    Algorithm Stabilization</A><BR>
+    (Kiyoshi Shirayanagi* &amp; Moss Sweedler)
+    </LI>
+<LI><A HREF="sessions/approximate/vega/index.html">Approximate Implicitation of
+    Rational Surfaces</A><BR>
+    (L. Gonzalez-Vega* &amp; I. Necula)
+    </LI>
+<LI><A HREF="sessions/approximate/terui/index.html">``Approximate Zero-points''
+    of Univariate Polynomial with Small Error Terms</A><BR>
+    (Akira Terui* &amp; Tateaki Sasaki)
+    </LI>
+<LI><A HREF="sessions/approximate/sasaki/index.html">Cancellation Errors in
+    Multivariate Resultant Computation with Floating-Point Numbers</A><BR>
+    (Tateaki Sasaki* &amp; Tomoyuki Sato)
+    </LI>
+</OL>
+<!-- --- PSE -------------------------------------------------------2A- -->
+<LI><A NAME="pse-sess" HREF="sessions/pse.html"><STRONG>Problem Solving
+    Environments</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:jjohnson@mcs.drexel.edu">J. Johnson</A>
+       &amp;
+    <A HREF="mailto:stanly@math.unm.edu">S. Steinberg</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/pse/wolters.txt">The Application Driven Ctadel
+    Environment</A><BR>
+    (Robert van Engelen, Lex Wolters* &amp; Gerard Cats)
+    </LI>
+<LI><A HREF="sessions/pse/steinberg.txt">SciNapse: A Problem Solving
+    Environment</A><BR>
+    (Stanly Steinberg)
+    </LI>
+<LI><A HREF="sessions/pse/petti.txt">Perspectives on Integrating Mathematics
+    and Software</A><BR>
+    (Richard Petti)
+    </LI>
+<LI><A HREF="sessions/pse/amberg.txt">Numerical Simulations by Symbolic
+    Computations?</A><BR>
+    (Gustav Amberg)
+    </LI>
+<LI><A HREF="sessions/pse/kuechlin.txt">Wrapping Computer Algebra Components
+    with Java and CORBA</A><BR>
+    (Wolfgang Kuechlin)
+    </LI>
+<LI><A HREF="sessions/pse/johnson.txt">PSE Construction using Software
+    Components</A><BR>
+    (Bruce Char, Jeremy Johnson* &amp; Lakshman Y. N.)
+    </LI>
+</OL>
+<!-- --- Industry ---------------------------------------------------3M- -->
+<LI><A NAME="indust-sess"><STRONG>Industrial Applications</STRONG></A><BR>
+    <EM>Organizer:</EM>
+    <A HREF="mailto:Sabine.Stifter@risc.uni-linz.ac.at">S. Stifter</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/industr/cohen/index.html">Industrial Design Aided by
+    Computer Algebra</A><BR>
+    (Arjeh M. Cohen)
+    </LI>
+<LI><A HREF="sessions/industr/gonzalez-vega.txt">
+    Polynomial System Solving for Industrial Problems: A Report from the FRISCO
+    Project</A><BR>
+    (Laureano Gonzalez-Vega)
+    </LI>
+<LI><A HREF="sessions/industr/veltkamp.html">CGAL: A Library for Flexible
+    Geometric Computing</A><BR>
+    (Remco Veltkamp)
+    </LI>
+<LI><A HREF="sessions/industr/sawada/index.html">The Algebraic Under Constraint
+    Solver as a Design Tool</A><BR>
+    (Hiroyuki Sawada)
+    </LI>
+</OL>
+<!-- --- High per I ----------------------------------3M(indust-sess)- -->
+<LI><A NAME="highper1-sess"
+       HREF="http://www.inf.ethz.ch/personal/bernardi/aca98/"><STRONG>High
+       Performance Symbolic Computing and Challenges of Computer
+       Algebra I</STRONG></A>(Special Issue in preparation)<BR>
+    <EM>Organizer:</EM>
+    <A HREF="mailto:bernardin@inf.ethz.ch">L. Bernardin</A>
+    </LI>
+<OL>
+<LI>Towards Computing the Composition Factors of Permutation Groups of Degree
+    100,000,000<BR>
+    (John Cannon)
+    </LI>
+<LI><A HREF="http://www.inf.ethz.ch/personal/bernardi/aca98/roch.html">
+    Data-flow Multithreaded Parallelism in Computer Algebra Algorithms</A><BR>
+    (Jean-Louis Roch, Thierry Gautier*, Jean-Guillaume Dumas &amp; Gilles
+     Villard)
+    </LI>
+<LI><A HREF="http://www.inf.ethz.ch/personal/bernardi/aca98/lewis.html">Solving
+    the Six-Line Problem with the Dixon Resultant</A><BR>
+    (Robert Lewis* &amp; George Nakos)
+    </LI>
+</OL>
+<!-- --- High per II ----------------------------------3A------------- -->
+<LI><A NAME="highper2-sess"
+       HREF="http://www.inf.ethz.ch/personal/bernardi/aca98/"><STRONG>High
+       Performance Symbolic Computing and Challenges of Computer
+       Algebra II</STRONG></A>(Special Issue in preparation)<BR>
+    <EM>Organizer:</EM>
+    <A HREF="mailto:bernardin@inf.ethz.ch">L. Bernardin</A>
+    </LI>
+<OL>
+<LI><A HREF="http://www.inf.ethz.ch/personal/bernardi/aca98/kaltofen.html">
+    Challenges of Symbolic Computation: My Favorite Open Problems+</A><BR>
+    (Erich Kaltofen)
+    </LI>
+<LI>Correct and Useful Simplification of Complex-valued Functions - What can be
+    Done?<BR>
+    (Rob Corless)
+    </LI>
+<LI><A HREF="http://www.inf.ethz.ch/personal/bernardi/aca98/wehmeier.ps">
+    Towards High-Performance Symbolic Computing in MuPAD: Multi-Polynomial
+    Quadratic Sieve using Macro Parallelism and Dynamic Modules</A><BR>
+    (Thomas Metzner, Manfred Radimersky, Andreas Sorgatz* &amp; Stefan
+     Wehmeier*)
+    </LI>
+<LI>Constructing Fast Algorithms: The Computational Approach<BR>
+    (Laurent Bernardin)
+    </LI>
+</OL>
+<!-- --- Fake sess ----------------------------------------------1M- -->
+<!--
+<LI><A NAME="fake-sess-I"><STRONG>
+    No session   </STRONG></A><BR>
+    <EM> </EM>
+    </LI>
+<OL>
+<LI>Full up!!++++++<BR>
+    ( )
+    </LI>
+</OL>
+-->
+<!-- --- Edu I --------------------------------------------1A- -->
+<LI><A NAME="edu-sess-I" HREF="sessions/education.html"><STRONG>Education meets
+       Computer Algebra: A Double Challenge I</STRONG></A>(Special Issue in
+       preparation)<BR>
+    <EM>Organizer:</EM>
+    <A HREF="mailto:kutzler@eunet.at">B. Kutzler</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/edu/miller.txt">The TI-92 as a Vehicle for Teaching
+    Algebraic Thinking</A><BR>
+    (Edward Miller* &amp; Laura Bracken*)
+    </LI>
+<LI><A HREF="sessions/edu/barkats.txt">Computer Algebra and Education. Examples
+    of Exercises with the Help of MAPLE</A><BR>
+    (Frederique Barkats)
+    </LI>
+<LI><A HREF="sessions/edu/smith.txt">Symbolic Maximum Likelihood Estimation
+    with MATHEMATICA</A><BR>
+    (Colin Rose &amp; Murray Smith*)
+    </LI>
+<LI><A HREF="sessions/edu/schofield.txt">Error Correcting Codes with DERIVE for
+    Windows</A><BR>
+    (Peter Schofield)
+    </LI>
+<LI><A HREF="sessions/edu/cohen.txt">IDA: an Interactive Document on
+    Algebra</A><BR>
+    (Arjeh M. Cohen)
+    </LI>
+<LI><A HREF="sessions/edu/graebe.txt">Symbolic Computations with 
+    Algebraic Numbers</A><BR>
+    (Hans-Gert Graebe)
+    </LI>
+</OL>
+<!-- --- Edu II ---------------------------------------------------2M- -->
+<LI><A NAME="edu-sess-II" HREF="sessions/education.html"><STRONG>Education
+       meets Computer Algebra: A Double Challenge II</STRONG></A><BR>
+    <EM>Organizer/Chair:</EM>
+    <A HREF="mailto:kutzler@eunet.at">B. Kutzler</A>/T. Jebelean
+    </LI>
+<OL>
+<LI><A HREF="sessions/edu/welke.txt">Teaching Basic Concepts in Analysis with
+    Dynamical Geometry Programs</A><BR>
+    (Stefan Welke)
+    </LI>
+<LI>Solving Systems of Linear Equation with the TI-92 - An Example for the
+    Scaffolding Method<BR>
+    (Bernhard Kutzler)
+    </LI>
+<LI><A HREF="sessions/edu/drska.txt">Complex Application of CA / ICS in
+    High-Tech Engineering Education</A><BR>
+    (Ladislav Drska*, Richard Liska &amp; Milan Sinor)
+    </LI>
+<LI><A HREF="sessions/edu/weinzweig.txt">Visualizing Mathematics and
+    Mathematical Processes</A><BR>
+    (Izzie Weinzweig)
+    </LI>
+<LI><A HREF="sessions/edu/esebbag.txt">Computer Algebra in Teaching Chemistry:
+    a Package for Balancing Chemical Equations (MAPLE)</A><BR>
+    (Juan Llovet &amp; Carlos Esebbag*)
+    </LI>
+<LI><A HREF="sessions/edu/ruhoff.txt">Computer Algebra Systems in Applied
+    Mathematics Education: Experiences and Future Directions</A><BR>
+    (Peder Thusgaard Ruhoff)
+    </LI>
+<LI><A HREF="sessions/edu/spiridonova.txt">Use of Formulae Bases in Teaching
+    and Learning Mathematics (MATHEMATICA)</A><BR>
+    (Margarita Spiridonova)
+    </LI>
+</OL>
+<!-- --- Edu III --------------------------------------------------2A- -->
+<LI><A NAME="edu-sess-III" HREF="sessions/education.html"><STRONG>Education
+       meets Computer Algebra: A Double Challenge III</STRONG></A><BR>
+    <EM>Organizer/Chair:</EM>
+    <A HREF="mailto:kutzler@eunet.at">B. Kutzler</A>/M. Rayes
+    </LI>
+<OL>
+<LI><A HREF="sessions/edu/ersoy.txt">Introducing and Implementing 
+    CAS into Pre- and Inservice Education and Training</A><BR>
+    (Yasar Ersoy)
+    </LI>
+<LI><A HREF="sessions/edu/al-jumeily.txt">Should Students Do Algebra when
+    Computer Algebra Systems Can Do it for Them?</A><BR>
+    (Paul Strickland &amp; Dhiya Al-Jumeily*)
+    </LI>
+<LI><A HREF="sessions/edu/tonisson.txt">The Use of Computer Algebra in a
+    Step-by-step Solution of Problems (MAPLE)</A><BR>
+    (Eno Tonisson)
+    </LI>
+<LI><A HREF="sessions/edu/wiesenbauer.txt">Chances and Risks of Heuristic
+    Reasoning: Some Examples using DERIVE</A><BR>
+    (Johann Wiesenbauer)
+    </LI>
+<LI><A HREF="sessions/edu/gerbracht.txt">Graphing Elementary Real Functions:
+    What Can and Cannot Be Done with a CAS (MAPLE)</A><BR>
+    (Eberhard H.A. Gerbracht* &amp; Werner Struckmann)
+    </LI>
+<LI><A HREF="sessions/edu/quesada.txt">Should Recursion Be Part of the
+    Secondary Student's Mathematics Toolbox?</A><BR>
+    (Antonio Quesada)
+    </LI>
+<LI><A HREF="sessions/edu/buchberger.txt">Using Theorema for Mathematical
+    Education (MATHEMATICA)</A><BR>
+    (Bruno Buchberger &amp; Tudor Jebelean*)
+    </LI>
+</OL>
+<!-- --- Edu IV -------------------------------------------------3M- -->
+<LI><A NAME="edu-sess-IV" HREF="sessions/education.html"><STRONG>Education
+       meets Computer Algebra: A Double Challenge IV</STRONG></A><BR>
+    <EM>Organizer/Chair:</EM>
+    <A HREF="mailto:kutzler@eunet.at">B. Kutzler</A>/P. Schofield
+    </LI>
+<OL>
+<LI><A HREF="sessions/edu/pletsch.txt">The Computer Classroom Lecture</A><BR>
+    (Bill Pletsch)
+    </LI>
+<LI><A HREF="sessions/edu/govorukin.txt">Computer Algebra Support for Dynamical
+    System Study (MAPLE)</A><BR>
+    (Vasiliy Govorukhin* &amp; V. Tsybulin)
+    </LI>
+<LI><A HREF="sessions/edu/dupee.txt">Composite Algorithms in the Teaching of
+    Mathematical Methods (AXIOM)</A><BR>
+    (Brian Dupee*, Raquel Martinez &amp; Santiago Tapia)
+    </LI>
+<LI><A HREF="sessions/edu/nisheva.txt">On the Applicability of Intelligent
+    Computer Algebra Systems in Mathematics Education</A><BR>
+    (Maria Nisheva-Pavlova)
+    </LI>
+<LI><A HREF="sessions/edu/jenks.txt">How To Create Textbooks With Live
+    Mathematics Using LaTeX</A><BR>
+    (Richard D. Jenks)
+    </LI>
+<LI>Using DERIVE in Deriving the Numerical Quadrature Formulas<BR>
+    (Adam Marlewski)
+    </LI>
+<LI><A HREF="sessions/edu/zehavi.txt">CAS, Educational Microworlds, and the
+    Internet</A><BR>
+    (Nurit Zehavi)
+    </LI>
+</OL>
+<!-- --- Fake sess ----------------------------------------------3A- -->
+<!--
+<LI><A NAME="fake-sess-II"><STRONG>
+    No Session   </STRONG></A><BR>
+    <EM> </EM>
+    </LI>
+<OL>
+<LI>No talk++++++<BR>
+    ( )
+    </LI>
+</OL>
+-->
+<!-- --- ODEs ------------------------------------------------------1M- -->
+<LI><A NAME="odes-sess" HREF="sessions/odes.html"><STRONG>Computer Algebra
+       Methods in Integration and Symmetry Analysis of ODEs</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:Fritz.Schwarz@gmd.de">F. Schwarz</A>
+       &amp;
+    <A HREF="mailto:gerdt@jinr.dubna.su">V. Gerdt</A>
+<OL>
+<LI><A HREF="sessions/odes/andrianov.txt">Symbolic Computation of Approximate
+    Symmetries for Ordinary Differential Equations</A><BR>
+    (Serge Andrianov)
+    </LI>
+<LI><A HREF="sessions/odes/carriere.txt">Applications of Computer Algebra to
+    Gasdynamic Problems of Ballistic</A><BR>
+    (Alain Carriere* &amp; Louis-Remi Oudin*)
+    </LI>
+<LI><A HREF="sessions/odes/vafeades.txt">The Automatic Investigation of the
+    ODEs of Nonlinear Elasticity</A><BR>
+    (Peter Vafeades)
+    </LI>
+<LI><A HREF="sessions/odes/berth.txt">Invariants of Ordinary Differential
+    Equations</A><BR>
+    (Matthias Berth)
+    </LI>
+<LI><A HREF="sessions/odes/gerdt.txt">Involution and Lie Symmetry Analysis of
+    Differential Equations</A><BR>
+    (Vladimir Gerdt)
+    </LI>
+</OL>
+<!-- --- Dynam I ----------------------------------------------------1A- -->
+<LI><A NAME="dynamical-sess-I" HREF="sessions/dynamical.html"><STRONG>Dynamical
+       Systems and Mechanics I</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:edneral@theory.npi.msu.su">V. Edneral</A>
+       &amp;
+    <A HREF="mailto:vasiliev@ita.runnet.ru">N. Vassiliev</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/dynamical/banshch/index.html">Computer Algebra 
+     and Problems of Motion Stability</A><BR>
+    (Andrej V. Banshchikov &amp; Larissa A. Bourlakova*)
+    </LI>
+<LI><A HREF="sessions/dynamical/irtegov/index.html">The Usage 
+    of the system MATHEMATICA in some Problems of Mechanics</A><BR>
+    (Valentin D. Irtegov* &amp; Tatyana N. Titorenko)
+    </LI>
+<LI><A HREF="sessions/dynamical/gutnik/index.html">Symbolic-Numeric
+    Investigations for Stability Analysis of Lagrange
+    Systems</A><BR>
+    (Sergey Gutnik)
+    </LI>
+<LI>Formal Integral and Symplectic Mapping<BR>
+    (Nikolay N. Vassiliev)
+    </LI>
+<LI><A HREF="sessions/dynamical/kirsanov/index.html">Constructing Some 
+    Classes of Specialized Numerical ODE. Integrators by
+    Means of Computer Algebra Systems</A><BR>
+    (Nikolay N. Vassiliev* &amp; Nikolay O. Kirsanov)
+    </LI>
+<LI><A HREF="sessions/dynamical/andrian/index.html">Symplectification 
+    of Truncated Maps for Hamiltonian Systems</A><BR>
+    (Serge N. Andrianov)
+    </LI>
+<LI><A HREF="sessions/dynamical/berkov/index.html">The Integration 
+    of Ordinary Differential Equations: Factorization and
+    Transformations</A><BR>
+    (Lev M. Berkovich)
+    </LI>
+</OL>
+<!-- --- Autodif ---------------------------------------------------2M- -->
+<LI><A NAME="autodif-sess" HREF="sessions/auto-diff.html"><STRONG>Automatic
+       Differentiation for adjoint codes generation</STRONG></A><BR>
+    <EM>Organizer:</EM>
+    <A HREF="mailto:Christele.Faure@sophia.inria.fr">C. Faure</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/auto-diff/tadjouddine-abs.txt">Reduction of Storage of
+    Variables in Automatic Computation of Adjoint Code</A><BR>
+    (Mohamed Tadjouddine)
+    </LI>
+<LI><A HREF="sessions/auto-diff/charpentier-abs.txt">Generation of the Adjoint
+    Code of the Meteorological Model Meso-NH</A><BR>
+    (Isabelle Charpentier)
+    </LI>
+<LI><A HREF="sessions/auto-diff/giering-abs.txt">Using TAMC to Generate
+    Efficient Adjoint Code</A><BR>
+    (Ralph Giering &amp; Thomas Kaminski*)
+    </LI>
+<LI><A HREF="sessions/auto-diff/mancini-abs.txt">Hierarchical Approach to
+    Automatic Differentiation</A><BR>
+    (Marco Mancini)
+    </LI>
+<LI><A HREF="sessions/auto-diff/naumann-abs.txt">Joys and Pains of Implementing
+    the Reverse Mode of Automatic Differentiation by Overloading</A><BR>
+    (Uwe Naumann)
+    </LI>
+</OL>
+<!-- --- AI I ----------------------------------------2M(autodif-sess)- -->
+<LI><A NAME="ai1-sess" HREF="sessions/ai.html"><STRONG>Applications to
+       Artificial Intelligence and to other Nonstandard
+       Applications I</STRONG></A><BR>
+    <EM>Organizer:</EM>
+    <A HREF="mailto:eroanes@eucmos.sim.ucm.es">E. Roanes-Lozano</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/ai/roanes-lozano/index.html">Railway Interlocking 
+    Systems and Gr&ouml;bner Bases</A><BR>
+    (Eugenio Roanes-Lozano*, Luis M. Laita &amp; Eugenio Roanes-Macias)
+    </LI>
+<LI>Structural Modeling of Internal Combustion Engines with Maple V<BR>
+    (Andrey Sokolov)
+    </LI>
+</OL>
+<!-- --- AI II ---------------------------------------2A-------------- -->
+<LI><A NAME="ai2-sess" HREF="sessions/ai.html"><STRONG>Applications to
+       Artificial Intelligence and to other Nonstandard
+       Applications II</STRONG></A><BR>
+    <EM>Organizer:</EM>
+    <A HREF="mailto:eroanes@eucmos.sim.ucm.es">E. Roanes-Lozano</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/ai/ledesma/index.html">Boole's Logic Revisited 
+    from Computer Algebra. A Partial Validation of
+    Boole's Inference Procedures</A><BR>
+    (Luis M. Laita, Luis de Ledesma*, Eugenio Roanes-Lozano &amp; Aurora Purez)
+    </LI>
+<LI><A HREF="sessions/ai/nakagawa/index.html">Simplification for 
+    the Laplace--Beltrami Operator</A><BR>
+    (Shigekazu Nakagawa*, Hiroki Hashiguchi &amp; Naoto Niki)
+    </LI>
+<LI><A HREF="sessions/ai/soukup/index.html">Approximate Bayesian
+    Computations with Symbolic Integration</A><BR>
+    (Lubomir Soukup)
+    </LI>
+<LI><A HREF="sessions/ai/wiesenbauer/index.html">"Brainy" Functions 
+    in DERIVE</A><BR>
+    (Johannn Wiesenbauer)
+    </LI>
+<LI><A HREF="sessions/ai/martinez/index.html">On the Computation of 
+    the Greatest Common Divisor of Multivariate
+    Polynomials with Straight-Line Programs</A><BR>
+    (R. Martinez*, J. Llovet &amp; B. Castano)
+    </LI>
+<LI><A HREF="sessions/ai/marlewski/index.html">A CAS Aid 
+    in the Elaboration of the Expert System Supporting the Managing
+    the Monolithic Construction Process</A><BR>
+    (Magdalena Hajdasz &amp; Adam Marlewski*)
+    </LI>
+</OL>
+<!-- --- Geom II ---------------------------------------------3M[7]3A- -->
+<LI><A NAME="geom-sess-II" HREF="sessions/geometry.html"><STRONG>Computation in
+       Algebra and Geometry II</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:mikhalev@cnit.math.msu.su">A.V. Mikhalev</A>,
+    <A HREF="mailto:aamikh@cnit.math.msu.su">A.A. Mikhalev</A>
+       &amp;
+    <A HREF="mailto:Guenter.Pilz@jk.uni-linz.ac.at">G.F. Pilz</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/geom/wiesenbauer.txt">Polynomial Arithmetic
+     mod p using DERIVE</A><BR>
+    (J. Wiesenbauer)
+    </LI>
+<LI><A HREF="sessions/geom/rubio/index.html">Polynomial Multivariate
+    Decomposition</A><BR>
+    (Jaime Gutierrez &amp; Rosario Rubio San Miguel*)
+    </LI>
+<LI><A HREF="sessions/geom/volcheck.txt">On Computing the Weierstrass Points of
+    a Plane Algebraic Curve</A><BR>
+    (Mark Heiligman &amp; Emil Volcheck*)
+    </LI>
+<LI><A HREF="sessions/geom/glazunov/index.html">Computation of Moduli, Periods
+    and Modular Symbols</A><BR>
+    (Nikolaj Glazunov)
+    </LI>
+<LI><A HREF="sessions/geom/gonzalez-diaz.txt">An Approach to Computing 
+    the Action of Steenrod Squares on the Cohomology
+    of Polyhedral Simplicial Sets</A><BR>
+    (Rocio Gonzalez-Diaz &amp; Pedro Real Jurado)
+    </LI>
+<LI><A HREF="sessions/geom/goloubitsky/index.html">The Involutive 
+    Gr&ouml;bner Walk</A><BR>
+    (O. Goloubitsky)
+    </LI>
+<LI><A HREF="sessions/geom/nechaev/index.html">Weight Characteristics of Linear
+    Recurrences and Linear Codes over Galois Rings</A><BR>
+    (A.S. Kuzmin &amp; Alexander A. Nechaev*)
+    </LI>
+<!-- Lunch -->
+<LI>Software MAGNUS Presentation++<BR>
+    (G. Baumslag &amp; A. Myasnikov)
+    </LI>
+<LI>Round Table: Open problems in computer algebra and geometry+++<BR>
+    ( )
+    </LI>
+</OL>
+<!-- --- HEP -------------------------------------------------------1M- -->
+<LI><A NAME="hep-sess" HREF="sessions/highen.html"><STRONG>High Energy
+       Physics</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:Denis.Perret-Gallix@cern.ch">D. Perret-Gallix</A>
+       &amp;
+    <A HREF="mailto:edneral@theory.npi.msu.su">V. Edneral</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/highen/vargas/index.html">Algebraic Computer Algorithms 
+     and Path Integral Methods</A><BR>
+    (Edwin J. Vargas Sanchez)
+    </LI>
+<LI><A HREF="sessions/highen/bityukov/index.html">Optimizing the Process of 
+    Production of Crystals for LHC</A><BR>
+    (Serge S. Bityukov)
+    </LI>
+<LI><A HREF="sessions/highen/edneral1/index.html">CompHEP - 
+    Integrated Computer Algebra System for Calculation in High Energy
+    Physics</A><BR>
+    (Victor F. Edneral)
+    </LI>
+</OL>
+<!-- --- GR ---------------------------------------1M(hep-sess)- -->
+<LI><A NAME="gr-sess" HREF="sessions/gr.html"><STRONG>General
+       Relativity</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:t.wolf@maths.qmw.ac.uk">T. Wolf</A>
+       &amp;
+    <A HREF="mailto:klioner@rcs.urz.tu-dresden.de">S. Klioner</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/gr/petti2.txt">Facilities for General Relativity in
+    Macsyma</A><BR>
+    (Richard J. Petti)
+    </LI>
+<LI><A HREF="sessions/gr/petti1.txt">Two Applications of Macsyma in General
+    Relativity</A><BR>
+    (Richard J. Petti)
+    </LI>
+<LI><A HREF="sessions/gr/klioner/index.html">A Package for Computation with
+    Indexed Objects within Mathematica and its Applications to Metric Gravity
+    Theories</A><BR>
+    (Sergei Klioner)
+    </LI>
+<LI><A HREF="sessions/gr/vasiliev.txt">Simplifications of Tensor Expressions
+    and Computations with Kerr-Schild Metrics</A><BR>
+    (Nikolay N. Vassiliev)
+    </LI>
+</OL>
+<!-- --- Quantum -----------------------------------------1A- -->
+<LI><A NAME="quantum-sess" HREF="sessions/quantum.html"><STRONG>Quantum
+    Theory</STRONG></A><BR>
+    <EM>Organizer:</EM>
+    <A HREF="mailto:Ladislav.Kocbach@fi.uib.no">L. Kocbach</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/quantum/jeanne/jeanne.html">The Perturbed Eigenvalue
+    Problem and its Application to the Resolution of the Schr&ouml;dinger
+    Equation by a kP Perturbation Method</A><BR>
+    (C.-P. Jeannerod*, N. Maillard &amp; E. Pfl&uuml;gel)
+    </LI>
+<LI><A HREF="sessions/quantum/kocb/kocb.html">Symbolic-Numeric Codes and
+    Computer Algebra Systems</A><BR>
+    (L. Kocbach)
+    </LI>
+<LI><A HREF="sessions/quantum/imad/imad.html">Generation of Numerical Codes for
+    Evaluation of Atomic Scattering Quantities by Computer Algebra
+    Systems</A><BR>
+    (I. Ladadwa)
+    </LI>
+<LI><A HREF="sessions/quantum/wang/wang.html">Molecular Orbital Integrals using
+    MAPLE in MATLAB</A><BR>
+    (J.B. Wang)
+    </LI>
+<LI><A HREF="sessions/quantum/navara.html">Computer algebra systems as 
+    a tool for computer proofs in quantum logic theory</A><BR>
+    (Miroslav Hamouz &amp; Mirko Navara*)
+    </LI>
+<LI><A HREF="sessions/quantum/voitik/voitik.html">TE and TM Dynamics of
+    Semiconductor Lasers with Tensile and Compressive Strained Quantum
+    Wells</A><BR>
+    (S. V. Voitikov* &amp; R. Kragler)
+    </LI>
+</OL>
+<!-- --- Control ----------------------------------------------------2M- -->
+<LI><A NAME="control-sess" HREF="sessions/control.html"><STRONG>Control
+       Theory</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:peter@eece.unm.edu">P. Dorato</A>
+       &amp;
+    <A HREF="mailto:chaouki@eece.unm.edu">C. Abdallah</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/control/dorato/index.html">Applications of Quantifier
+    Elimination Software to Control System Design: An Overview</A><BR>
+    (Peter Dorato)
+    </LI>
+<LI><A HREF="sessions/control/anai/index.html">Solving LMI and BMI Problems by 
+    Quantifier Elimination</A><BR>
+    (Hirokazu Anai)
+    </LI>
+<LI><A HREF="sessions/control/jirstrand/index.html">Application of QEPCAD
+    Software to Stabilization of Continuous-Time Polynomial Systems</A><BR>
+    (Mats Jirstrand &amp; Dragan Nesi'c)
+    </LI>
+<LI><A HREF="sessions/control/abdallah/index.html">Application of Mixed
+    QE/Probabilistic Methods for Nonlinear Feedback Design</A><BR>
+    (Chaouki T. Abdallah)
+    </LI>
+</OL>
+<!-- --- Robot ----------------------------------------2M(control-sess)- -->
+<LI><A NAME="robot-sess" HREF="sessions/robot.html"><STRONG>Robotics</STRONG>
+    </A><BR>
+    <EM>Organizer:</EM>
+    <A HREF="mailto:jpfalz@cosy.sbg.ac.at">J. Pfalzgraf</A>
+    </LI>
+<OL>
+<LI>Some Geometric and Computer Algebra Aspects on Modeling Robot Arms<BR>
+    (Jochen Pfalzgraf)
+    </LI>
+<LI><A HREF="sessions/robot/gutierrez/index.html">A Practical Implementation of
+    an Algorithm for Decomposing Sine-Cosine Equations with Parametric
+    Coefficients</A><BR>
+    (Jaime Gutierrez)
+    </LI>
+</OL>
+<!-- --- Biology -------------------------------------------------2A- -->
+<LI><A NAME="biology-sess" HREF="sessions/biology.html"><STRONG>Computer
+       Algebra Applications in Biology, Ecology and Medicine</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:vttu@user.unibel.by">N.I. Gurin</A>,
+    <A HREF="mailto:demis@econics.msk.su">N.K. Zaitsev</A>
+       &amp;
+    <A HREF="mailto:edneral@theory.npi.msu.su">V. Edneral</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/biology/gurin2/index.html">Methods of Computer 
+    Algebra for Deciding the Incorrect Problems in
+    Chemical Technologies</A><BR>
+    (Nikolai I. Gurin* &amp; G.F. Pinaev)
+    </LI>
+<LI><A HREF="sessions/biology/weber/index.html">Computing Threshold Conditions 
+    for Models of Infectious Diseases with
+    Reinfections</A><BR>
+    (Paul Milligan &amp; Andreas Weber*)
+    </LI>
+<LI><A HREF="sessions/biology/voitik/index.html">Fractal Time Series Analysis 
+    and Predictions for Tumor Spreading</A><BR>
+    (Margarita V. Voitikova, presented by N.Gurin*)
+    </LI>
+<LI><A HREF="sessions/biology/gurin2/index.html">Using a Symbol 
+    Transformation System Maple for Modeling of Soiling
+    Atmosphere</A><BR>
+    (Nikolai I. Gurin* &amp; V.L. Kolesnikov)
+    </LI>
+</OL>
+<!-- --- Dynam II -------------------------------------------3M[6]3A- -->
+<LI><A NAME="dynamical-sess-II" HREF="sessions/dynamical.html"><STRONG>Dynamical
+       Systems and Mechanics II</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:edneral@theory.npi.msu.su">V. Edneral</A>
+       &amp;
+    <A HREF="mailto:vasiliev@ita.runnet.ru">N. Vassiliev</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/dynamical/glazunov/index.html">Computer Algebra 
+    of Vector Bundles and Complex Foliations of Polynomial
+    Dynamical Systems</A><BR>
+    (Nikolaj M. Glazunov)
+    </LI>
+<LI><A HREF="sessions/dynamical/carra/index.html">Systems of Nonlinear
+    and Algebraic Nonlinear Ordinary Differential
+    Equations</A><BR>
+    (Giuseppa Carra'-Ferro)
+    </LI>
+<LI><A HREF="sessions/dynamical/sit/index.html">On Initial Value 
+    Problems for Ordinary Differential-Algebraic Equations+</A><BR>
+    (F. Leon Pritchard* &amp; William Sit*)
+    </LI>
+<LI><A HREF="sessions/dynamical/aranson/index.html">Calculations and 
+    Applications of Newton Polyhedrons</A><BR>
+    (Alexander B. Aranson)
+    </LI>
+<LI><A HREF="sessions/dynamical/vernov/index.html">Construction 
+    of Doubly Periodic Solutions via the Poincare-Lindstedt Method
+    in the Case of Massless $\varphi^4$ Theory</A><BR>
+    (Sergey Yu. Vernov)
+    </LI>
+<LI><A HREF="sessions/dynamical/sever/index.html">Automata Network
+     Dynamical Systems for Construction of Fractal Objects</A><BR>
+    (Vasily M. Severyanov)
+    </LI>
+<LI><A HREF="sessions/dynamical/deprit/index.html">Generalized Normal 
+    Forms by Relegation</A><BR>
+    (Andre Deprit, Jesus Palacian Subiela, Etienne Deprit* &amp; J.-F. San Juan)
+    </LI>
+<LI><A HREF="sessions/dynamical/saad/index.html">Symbolic Computation
+    of the Periodic Solutions of the Barbanis-Contopoulos
+    System by the Lindstedt-Poincare method</A><BR>
+    (Benbachir Saad)
+    </LI>
+<LI><A HREF="sessions/dynamical/mikram/index.html">On Structure 
+    Preserving Normal Forms of Hamiltonian Dynamical Systems</A><BR>
+    (J. Mikram &amp; Fouad Zinoun*)
+    </LI>
+<LI><A HREF="sessions/dynamical/edneral2/index.html">Normal Form Method
+    and Approximated Solutions ODEs till the 4th Order
+    Dimension</A><BR>
+    (Victor F. Edneral)
+    </LI>
+<LI>Discussion++<BR>
+    ( )
+    </LI>
+</OL>
+<!-- --- History ------------------------------------------------1M[6]1A- -->
+<LI><A NAME="hist-sess" HREF="sessions/history.html"><STRONG>History of
+       Computer Algebra Applications</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:grosheva@inmech.msu.su">M. Grosheva</A>
+       &amp;
+    <A HREF="mailto:efimov@applmat.msk.su">G.B. Efimov</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/history/spiridonova/index.html">On Some Computer Algebra
+    Applications in Bulgaria</A><BR>
+    (Margarita Spiridonova*, A. Gerov &amp; M. Nisheva-Pavlova)
+    </LI>
+<LI><A HREF="sessions/history/efimov-grosheva.txt">The History of Computer
+    Algebra Application in Mechanics in Russia (Soviet Union)+</A><BR>
+    (G.B. Efimov* &amp; M.V. Grosheva)
+    </LI>
+<LI><A HREF="sessions/history/bourlakova/index.html">Experience of Development
+    and Usage of Packages of Symbolic Computations Intended for Investigation
+    of Mechanical Systems</A><BR>
+    (Andrej V. Banshchikov, Larissa A. Bourlakova*, Galina N. Ivanova,
+     Valentin D. Irtegov, Mikhal A. Novichov &amp; Tatyana N. Titorenko)
+    </LI>
+<LI><A HREF="sessions/history/efimov2.txt">Computer Algebra at Keldysh
+    Institute</A><BR>
+    (G.B. Efimov*, I.B. Tshenkov &amp; E. Yu. Zueva)
+    </LI>
+<LI>Survey<BR>
+   (G.B.Efimov)
+   </LI>
+<LI>Discussion<BR>
+   ( )
+   </LI>
+<LI>Discussion+<BR>
+   ( )
+   </LI>
+</OL>
+<!-- --- Geom I -----------------------------------------------2M[6]2A- -->
+<LI><A NAME="geom-sess-I" HREF="sessions/geometry.html"><STRONG>Computation in
+       Algebra and Geometry I</STRONG></A><BR>
+    <EM>Organizers:</EM>
+    <A HREF="mailto:mikhalev@cnit.math.msu.su">A.V. Mikhalev</A>,
+    <A HREF="mailto:aamikh@cnit.math.msu.su">A.A. Mikhalev</A>
+       &amp;
+    <A HREF="mailto:Guenter.Pilz@jk.uni-linz.ac.at">G.F. Pilz</A>
+    </LI>
+<OL>
+<LI><A HREF="sessions/geom/baumslag.txt">Parallel Poly-Pushdown Automatic
+    Groups</A><BR>
+    (Gilbert Baumslag)
+    </LI>
+<LI>Computations in Free Groups<BR>
+    (Alexei Myasnikov)
+    </LI>
+<LI><A HREF="sessions/geom/plotkin/index.html">Category of Representations of
+    Elementary Knowledge</A><BR>
+    (B. Plotkin &amp; T. Plotkin)
+    </LI>
+<LI><A HREF="sessions/geom/winkler/index.html">Optimal Parametrization of
+    Algebraic Curves</A><BR>
+    (Franz Winkler)
+    </LI>
+<LI><A HREF="sessions/geom/yu.txt">Determining Coordinates for Polynomial
+    Algebras</A><BR>
+    (Jie-Tai Yu)
+    </LI>
+<LI><A HREF="sessions/geom/mikhalev-aa.txt">Computation of Standard Bases
+     of Ideals of Free Noncommutative Algebras</A><BR>
+    (A.A. Mikhalev* &amp; A.A. Zolotykh)
+    </LI>
+<!-- 12.00 -- 12.30 To be announced -->
+<LI><A HREF="sessions/geom/mikhalev-av.txt">Linear Recurring Sequences
+    over Rings and Modules</A><BR>
+    (Alexander V. Mikhalev* &amp; A.A. Nechaev)
+    </LI>
+<LI><A HREF="sessions/geom/levin.txt">Computation of Multivariable Differential
+    Dimension Polynomials</A><BR>
+    (Alexander Levin)
+    </LI>
+<LI><A HREF="sessions/geom/peralta.txt">Graded Codes</A><BR>
+    (Justo Peralta Lopez)
+    </LI>
+<LI><A HREF="sessions/geom/pan/index.html">On the complexity of the Solution of
+    Polynomial Equations and Systems of Equations</A><BR>
+    (Victor Y. Pan)
+    </LI>
+<LI><A HREF="sessions/geom/kreines.txt">Matrix Mappings Preserving Diedonne
+    Determinant and their Algorithmic Constructions</A><BR>
+    (Elena Kreines)
+    </LI>
+<LI><A HREF="sessions/geom/gouterman.txt">Graded Mappings of Frobenius Type and
+    their Algorithmic Constructions</A><BR>
+    (Alexander Gouterman)
+    </LI>
+<!-- 17.30 -- 18.00 To be announced -->
+</OL>
+<!-- --- Fake sess ----------------------------------------------3M- -->
+<!--
+<LI><A NAME="fake-sess-III"><STRONG>
+    No Session   </STRONG></A><BR>
+    <EM> </EM>
+    </LI>
+<OL>
+<LI>No talk+<BR>
+    ( )
+    </LI>
+</OL>
+-->
+<!-- --- Math Q&A ------------------------------3M(fake-sess-III)- -->
+<!--
+<LI><A NAME="Math-QA"><STRONG>
+     Mathematica: Q &amp;A</STRONG></A><BR>
+    <EM> </EM>
+    </LI>
+<OL>
+<LI> Come to this session if you have questions, want to learn 
+     about new features or looking for a job at Wolfram research Inc.+++<BR>
+    (Quoc-Nam Tran &amp; Daniel Lichtblau)
+    </LI>
+</OL>
+-->
+</OL>
+<P>
+<HR>
+<A HREF="sess-req.html">Session requirements - deadlines</A>.
+<HR>
+Back to <A HREF="index.html"> the IMACS ACA'98 homepage</A>.
+<HR>
+<ADDRESS>
+For more information ask at
+<A HREF="mailto:aca98@siduri.fjfi.cvut.cz">aca98@siduri.fjfi.cvut.cz</A>.
+</ADDRESS>
+</BODY>
+</HTML>

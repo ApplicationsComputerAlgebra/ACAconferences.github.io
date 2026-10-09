@@ -1,0 +1,245 @@
+<html><head><title>ACA 2003 Session T2: Symbolic Summation</title></head>
+
+<body>
+
+
+<h1> T2: Symbolic Summation </h1>
+
+ACA 2003:  
+<a href="http://math.unm.edu/ACA/2003/2003.html">Home</a>,
+<a href="http://math.unm.edu/ACA/2003/Sessions.html">Sessions</a> 
+
+
+<h2>Organizers</h2>
+<ul>
+
+<li> <a href="mailto:abramov@ccas.ru"> Sergei A. Abramov </a> 
+(Dorodnicyn Computing Centre
+of the Russian Academy of Sciences, Russia)
+
+</li><li> <a href="mailto:Marko.Petkovsek@fmf.uni-lj.si"> Marko Petkovsek </a> 
+(University of Ljubljana, Slovenia)
+
+</li><li> <a href="mailto:ezima@uwaterloo.ca"> Eugene V. Zima </a> 
+(University of Waterloo, Canada)
+
+</li></ul>
+
+
+<h2>Overview</h2>
+<ul>
+
+<li> <h3> Problem </h3>
+     Finding sums in closed form
+     <p>
+  
+
+</p></li><li> <h3> Motivation and Importance </h3>
+
+The problem of finding closed-form expressions for various sums is among 
+the most ancient and attractive mathematical problems. While formulas for sums
+with polynomial and exponential summands have been known for a long time, 
+systematic search for algorithms dealing with more general classes of
+summands began only rather recently. Some notable early achievements were
+Abramov's algorithms for indefinite rational summation (1971) and minimal 
+rational-sum decomposition (1975), as well as Gosper's algorithm for 
+indefinite hypergeometric summation (1978). A general algorithm for indefinite 
+summation in the so-called &#928;-&#931; 
+fields was designed by Karr (1981, 1985).
+In the early nineties, symbolic summation received a dramatic boost with the 
+creation of Zeilberger's algorithm for definite hypergeometric summation, and 
+its various offspring. Since then this area of research has experienced steady 
+and solid growth. To mention just a few of the numerous results, the efficiency
+of Zeilberger's algorithm has been significantly improved by various strategies 
+and algorithmic results such as automatic filtering, creative substituting, 
+creative symmetrizing, greatest factorial factorization, complete algorithmic 
+characterization of applicability of the algorithm,
+nontrivial lower bounds for the order of the minimal telescopers,
+and even a direct computation of this order in the case of rational 
+input. The Wilf-Zeilberger conjecture about holonomic hypergeometric
+functions has been resolved. Creative telescoping based on Karr's
+algorithm, as well as for Abel-type sums has been developed. More
+generally, the creation of a successful Galois theory of difference 
+equations opened the way to solutions of many related problems, 
+such as finding all Liouvillian solutions of difference equations.	
+<br><br>
+The purpose of this session is to present some recent developments in
+the area of symbolic summation, to highlight some current directions
+of research, and also to identify important problems to be investigated
+in the future. Reports on the research in symbolic solution of
+difference equations and related fields are also most welcome.
+
+<p>
+Some key-words:
+</p><p>
+</p><ul> 
+<li> rational summation
+</li><li> hypergeometric summation
+</li><li> holonomic summation
+</li><li> Abel-type sums
+</li><li> summation of special functions
+</li><li> summation by means of integral representations
+</li><li> asymptotics of sums
+</li><li> exact solution of recurrences
+</li><li> solution of recurrences by means of generating functions
+</li><li> Galois theory of difference equations
+</li></ul> 
+
+     <p>
+
+</p></li></ul>
+
+
+<h2>Talks/Abstracts</h2>
+<ul>
+
+<li><h3> Summation in Difference-Differential Rings </h3>
+    <a href="mailto:Burkhard.Zimmermann@risc.uni-linz.ac.at">
+    Burkhard Zimmermann </a> 
+    (RISC, University of Linz, Austria)
+    <p>
+    <strong>Abstract</strong>: 
+We present summation algorithms for a certain class of summands,
+which we call the "level-2-sequences". They include
+(<i>q</i>-)hypergeometric sequences, <i>P</i>-finite sequences, and many
+sequences involving special functions from mathematical physics.
+
+The algorithms of Sister Celine and Kurt Wegschaider are generalized
+for computing (multiple) sums of level-2-sequences.
+In the single sum case, F.Chyzak's extension of Zeilberger's algorithm
+can be adapted to level-2-sequences in a straightforward way.
+
+All algorithms presented are implemented in Mathematica.
+
+    </p><p>         
+
+</p></li><li><h3> Symbolic summation in Maple </h3>
+    <a href="mailto:jgerhard@maplesoft.com"> Juergen Gerhard </a> (MapleSoft, Canada) <br>
+    <a href="mailto:hqle@scg.uwaterloo.ca"> Ha Le </a> (University of Waterloo, Canada)
+    <p>
+    <strong>Abstract</strong>: 
+The talk gives an overview of the symbolic
+summation capabilities and recent developments
+in Maple. Feedback is very much appreciated.
+
+    </p><p>        
+
+</p></li><li><h3> Fast <i>p</i>-adic algorithms for dispersion </h3>
+    <a href="mailto:mwg@uwaterloo.ca"> Mark Giesbrecht </a> (University of Waterloo, Canada)
+    <p>
+    <strong>Abstract</strong>: 
+We present a new algorithm for computing the dispersion set of two
+integer polynomials.  The approach is similar to that of Man and Wright
+(1994), but only requires <i>p</i>-adic factorization of the input
+polynomials.  We present a rigourous analysis and implementation
+experiments comparing this method with previous approaches.  We also
+describe extensions to computing dispersion of polynomials over number
+fields and of polynomials with parameters.
+
+This is joint work with Jurgen Gerhard, Arne Storjohann and Eugene
+Zima.
+    </p><p>        
+
+</p></li><li><h3> Symbolic Summation in <i>&#928;-&#931;</i>-Fields </h3>
+    <a href="mailto:cschneid@risc.uni-linz.ac.at"> Carsten Schneider </a> 
+    (RISC, University of Linz, Austria)
+    <p>
+    <strong>Abstract</strong>: 
+<b> Sigma </b> is a summation package, implemented in the computer
+algebra system Mathematica, that enables to discover and prove nested
+multisum identities. Based on Karr's difference field theory
+(1981) this package allows to find all solutions of parameterized
+linear difference equations in a very general difference field
+setting, so called <i>&#928;-&#931;</i>-fields. With a refined version of this
+difference field machinery indefinite multisums can be simplified
+by minimizing the depth of nested sum-quantifiers. In addition,
+<b> Sigma</b> provides several algorithms in order to discover closed form
+evaluations of definite nested multisums. Here one first tries to
+compute a recurrence for a given definite sum by applying
+Zeilberger's creative telescoping idea in the difference field
+setting. Second one attempts to solve this recurrence in terms of
+d'Alembertian solutions, a subclass of Liouvillian solutions. As
+it turns out, our indefinite summation algorithm plays a major
+role in order to simplify those solutions further. Combining these
+simplified solutions one finally may find a closed form evaluation
+of a definite multisum. All these aspects will be illustrated by
+various examples.
+
+    </p><p>        
+
+</p></li><li><h3> Symbolic Computation of Series and Products in Terms of the Multiple Gamma
+and Related Functions </h3>
+    <a href="mailto:adamchik@cs.cmu.edu"> Victor Adamchik </a> 
+    (Carnegie Mellon University, USA)
+    <p>
+    <strong>Abstract</strong>: 
+The mutiple gamma function, defined by a recurrence-functional equation as a
+generalization of the Euler gamma function, was originally introduced by
+Kinkelin, Glaisher, and Barnes around 1900. Today, due to the pioneer work
+of Conrey, Katz and Sarnak, interest in this function has been revived. In
+this talk I will discuss some theoretical aspects of the multiple gamma
+function and its applications to summation of series and infinite products.
+
+    </p><p>        
+
+</p></li><li><h3> Rational definite summation </h3>
+    <a href="mailto:hoeij@zeno.math.fsu.edu"> Mark van Hoeij </a> 
+    (Florida State University, USA)
+    <p>
+    <strong>Abstract</strong>: 
+Let <i>F(n,k)</i> be a rational function in two variables. For positive
+integers <i>n</i>, let <i>R(n)</i> be the sum of <i>F(n,k)</i> for <i>k</i> from 
+0 to <i>n</i>.
+We present a method, that we conjecture to be a complete algorithm,
+to compute <i>R(n)</i> if <i>R(n)</i> is a rational function in <i>n</i>.
+    </p><p>        
+
+</p></li><li><h3> Gosper's and Zeilberger's algorithms revisited </h3>
+    <a href="mailto:abramov@ccas.ru"> Sergei A. Abramov </a> 
+    (Dorodnicyn Computing Centre of the Russian Academy of Sciences, Russia) <br>
+    <a href="mailto:Marko.Petkovsek@fmf.uni-lj.si"> Marko Petkovsek </a> 
+    (University of Ljubljana, Slovenia)
+    <p>
+    <strong>Abstract</strong>: 
+Gosper's algorithm takes as input a univariate hypergeometric term
+<i>t<sub>k</sub></i> and computes, if possible, a rational function <i>R(k)</i> such that
+<i>s<sub>k</sub> = R(k) t<sub>k</sub></i> satisfies the recurrence 
+<i>s<sub>k+1</sub> - s<sub>k</sub> = t<sub>k</sub></i>. However,
+<i>R(k)</i> can have integer poles and hence this recurrence need not be valid
+for all integer <i>k</i>. Similarly, Zeilberger's algorithm takes as input a
+bivariate hypergeometric term <i>F(n,k)</i> and computes, if possible, a rational
+function <i>R(n,k)</i>, and a linear recurrence operator <i>L</i> with polynomial
+coefficients (depending only on <i>n</i>), such that <i>G(n,k) = R(n,k) F(n,k)</i>
+satisfies the recurrence <i>G(n,k+1) - G(n,k) = L F(n,k)</i>. Again, <i>R(n,k)</i>
+can have integer singularities and hence this recurrence need not be valid
+for all integer <i>n</i> and <i>k</i>. In this talk, we discuss this phenomenon
+and its influence on the correctness of the final result.
+
+    </p><p>        
+
+</p></li><li><h3> Issues in symbolic definite integration </h3>
+    <a href="mailto:danl@wolfram.com"> Daniel Lichtblau </a> 
+    (Wolfram Research Inc., USA)
+    <p>
+    <strong>Abstract</strong>: 
+The computation of definite integrals presents one with a variety of
+choices. There are various methods such as Newton-Leibniz or Slater's
+convolution method. There are issues such as whether to split or merge
+sums, how to search for singularities on the path of integration, when
+to issue conditional results, how to assess (possibly conditional)
+convergence, and more. These various considerations moreover interact
+with one another in ways that are not necessarily comfortable.
+
+This talk will discuss these various issues, with examples. I will
+describe some of the successful strategies and some of the open areas
+(read: not terribly successful to date) for further work. The focus
+is not technical in regard to the specifics of integration methods, but
+rather is on illustrating some of the problems one faces in constructing
+a practical implementation. It is based on my work on Mathematica's
+definite integration over the past year and a half.
+
+    </p><p>        
+
+</p></li></ul>
+
+</body></html>

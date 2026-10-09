@@ -1,0 +1,359 @@
+
+\documentclass[a4paper]{article} %
+\usepackage{graphicx,amssymb} %
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\DeclareMathOperator {\LT}{LT}
+\DeclareMathOperator {\LC}{LC}
+\DeclareMathOperator {\NF}{NF}
+\theoremstyle{definition} \newtheorem{defn}{Definition}
+\theoremstyle{definition} \newtheorem{thm}{Theorem}
+\theoremstyle{definition} \newtheorem{lem}{Lemma}
+\theoremstyle{definition} \newtheorem{prop}{Proposition}
+\theoremstyle{definition} \newtheorem{rem}{Remark}
+
+
+\textwidth=15cm \hoffset=-1.2cm %
+\textheight=25cm \voffset=-2cm %
+
+\pagestyle{empty} %
+
+\date{} %
+
+\def\keywords#1{\begin{center}{\bf Keywords}\\{#1}\end{center}} %
+
+\def\titulo#1{\title{#1}} %
+\def\autores#1{\author{#1}} %
+
+% Please, do not change any of the above lines
+
+
+
+
+
+
+
+
+\begin{document}
+
+% Type down your paper title
+\titulo{Modeling reliability in propositions using computer algebra techniques}
+
+% Authors
+\autores{Antonio Hernando\\ %
+       Universidad Polit\'ecnica de Madrid (Spain)\\ \\ % Affiliation 1
+       \tt{ahernando@eui.upm.es} % Only one corresponding e-mail
+       }%
+
+
+\maketitle
+
+\thispagestyle{empty}
+
+
+
+% The abstract
+
+\begin{abstract}
+
+
+
+We present an algebraic method designed to deal with with reliability in propositional logic. Our approach may be regarded as an extension of classical bivalued propositional logics, in which each propositional formula is assigned a certain degree of unreliability. According to this approach, each formula will be used in the context of reasoning depending 
+on how much reliability it is associated with. The more reliable a formula is, the more likely will it be employed
+in order to get a logical conclusion. This approach involves a quite different concept to that of probabilistic logics, since the logical notions of tautological consequence and consistency of a set of formulae are reformulated on behalf of the foreseen unreliability values. Here we state a relation between these unreliability values associated to tautological consequence and the calculation of reduced Groebner bases on an ideal of Boolean polynomials. In this way, our method for assigning these unreliability values to information and reasoning turns out to have a straightforward translation into algebraic terms. Thus, any knowledge system using our model can be implemented in a mathematical program, like Maple, CoCoA or specialized software on Boolean polynomials like Polybori.
+This work is related to the algebraic approaches used for multivalued logics. However, these algebraic approaches result to be impractical since they deal with polynomials of high degree. Otherwise, since our approach involves only Boolean polynomials, we think that this may be interesting for implementing expert system managing uncertainty information. 
+
+
+
+\end{abstract}
+
+\keywords{Expert Systems, Boolean logic, Groebner Basis} % Write down at least 3 Keywords
+
+
+
+
+
+
+ \section{Introduction}
+
+This paper presents an algebraic method for considering uncertainty on knowledge described by Boolean propositional logic. This may be regarded as an refinement of the model presented in \cite{Hernando}. Unlike the algebraic model presented previously, we here present an algebraic model which involves only Boolean polynomials. This fact implies an important advantage above the previous one, since we improve the efficiency of inference under uncertainty by means of specialized software on Boolean polynomials (like Polybori) which runs much faster than a non-specialized computer algebra system.
+
+This work may be related to the algebraic approaches used for multivalued logics. Nevertheless, these algebraic approaches are impractical since they deal with polynomials of high degree. Otherwise, since our approach involves only Boolean polynomials, we think that this may be interesting for implementing expert systems managing uncertainty information. As an example, we have implemented our approach using the CAS CoCoA.
+
+\section{Reasoning with unreliability}
+
+
+In this section, we will consider formal definitions involved in our model, which were presented in \cite{Hernando}. 
+
+\begin {defn} [Formula] Let $X_1,...,X_m$ be variables. A formula is defined recursively as follows:
+\begin{itemize}
+\item $X_i$, where $X_i \in {X_1,...,X_m}$ is a variable (also usually called a proposition)
+\item $\neg B$, where $B$ is a formula
+\item $B \lor C$, where $B$ and $C$ are formulae
+\end{itemize}
+\end {defn}
+
+Each formula in our model is associated to a certain  unreliability degree, indicating how dubious the information contained in that formula is to the knowledge system. This unreliability degree can go from $0$ to $2^n-1$, where $n$ is any natural number. Throughout this paper, we will use letter $q$ referring to $2^n$, being the number of possible unreliability degrees we can assign to any formula. In this way, the definition of an unreliable formula runs as follows: 
+
+\begin {defn} [Unreliable formula] Let $X_1,...,X_m$ be variables. An unreliable formula is a formula $A$ along with a value $g(A)\in\mathbb{N}$, such that $0\leq g(A)\leq q$.
+\end {defn}
+We will make use of $\mathcal{C}$ to denote the set of unreliable formulae.
+
+\begin {defn} [Valuation] Let $A\in \mathcal{C}$. Let $x_1^*,...,x_m^* \in \{0,1\}$, a valuation of the formula $A$, $A(x_1^*,...,x_m^*)$, is defined recursively as follows:
+\begin{itemize}
+\item If $A\equiv X_i$, then $A(x_1^*,...,x_m^*)=x_i^*$
+\item If $A\equiv \neg B$, then we have that 
+\begin{equation*}
+A(x_1^*,...,x_m^*) = \left \{
+\begin{array}{ll}
+1 & \text{if } B(x_1^*,...,x_m^*)=0\\
+0 & \text{otherwise }
+\end{array} \right.
+\end {equation*}
+\item If $A\equiv B \lor C$, then
+\begin{equation*}
+A(x_1^*,...,x_m^*) = \left \{
+\begin{array}{ll}
+1 & \text{if } B(x_1^*,...,x_m^*)=1 \\
+1 & \text{if } C(x_1^*,...,x_m^*)=1\\
+0 & \text{otherwise }
+\end{array} \right.
+\end {equation*}
+\end{itemize}
+\end {defn}
+
+\begin{rem} We will say that a formula $A$ holds for a valuation $(x^*_1,...,x^*_m)$ if and only if $A(x_1^*,...,x_m^*)=1$.
+\end{rem}
+
+In classic propositional logic, a set of formulae is said to be consistent if it is possible that all these formulae hold for a valuation. Now, we will generalize this concept for unreliable formulae. A set of unreliable formulae is said to be consistent to a certain degree, $v$, ($v$-consistent) if the subset of formulae with an unreliability degree equal or lesser than $v$ is consistent in the usual sense of classical logic.    
+\begin{defn} [Consistent] \label{defn:consistency}
+Let $0 \leq v \leq q$. \\
+Let $A_1,...,A_r \in \mathcal{C}$. \\
+    $\{A_1,...,A_r\}$ is $v$-consistent  
+$\Leftrightarrow \exists x^*_1,...,x^*_m\in \{0,1\}$ such that:
+\begin{center}
+ if $A_i \in \{A_1,...,A_r\}$ and $g(A_i)\leq v$, then $A_i(x^*_1,...,x^*_m)=1$
+\end{center}
+\end {defn}
+
+
+Next we will provide a generalization of the notion of tautological consequence in terms of our model. As was the case with the concept of consistence, we will reach a redefinition of tautological consequence as applied to unreliable formulae. An unreliable formula, $B$, is said to be a tautological consequence to a certain degree, $v$, of a set of formulae ($v$-tautological consequence) when $B$ is a tautological consequence (in the usual sense of classic propositional logic) of the subset of formulae with an unreliability degree equal or lesser than $v$.   
+
+\begin{defn} [Tautological Consequence] \label {defn:TautologicalConsequence}
+Let $0\leq v \leq q$. \\
+Let $A_1,...,A_r, B \in \mathcal{C}$. \\
+$B$ is a $v$-tautological consequence of $\{A_1,...,A_r\}$ if and only if $\forall x_1^*,...,x_m^* \in \{0,1\}$ the following holds:\\
+if $\forall A_i \in \{A_1,...,A_r|g(A_i)\leq v\} ~ A_i(x_1^*,...,x_m^*)=1$, then $B(x_1^*,...,x_m^*)=1$.
+\end {defn}
+
+\begin{rem} $B$ is a $v$-tautological consequence of $\{A_1,...,A_r\}$ independently of the unreliability degree of $B$, $g(B)$.
+\end{rem}
+
+
+\section{Algebraic approach}
+In this section we will focus on the procedure to translating logical formulae into polynomials, we will study some properties about the resulting polynomials, while analyzing  the relation between such polynomials and the logical formulae they stand for.
+
+First of all, we will define the ideal (in order to define Boolean polynomials):
+
+\begin{defn} [Ideal J] \label{defn:J} We define the following ideal in $\mathbb{Z}_2[x_1,x_2,\ldots,x_m,y_1,\ldots,y_q]$
+$$J=\langle x_1^2+x_1,x_2^2+x_2, \ldots, x_m^2+x_m,y_1^2+y_1, \ldots,y_q^2+y_q\rangle$$
+\end{defn}
+
+We will associate a polynomial in $\mathbb{Z}_2[x_1,x_2,\ldots,x_m,y_1,\ldots,y_q]$ to each unreliable formula in $\mathcal{C}$. This will enable us to focus in an algebraic way the problem of determining the consistency degree of a set of  unreliable formulae and the deduction degree of an unreliable formula as derived from others.
+
+
+In our translating procedure we make use of a normal form, $\NF$, of the polynomials on the ideal $J$. The use of the normal form interests us because it produces `simpler' polynomials. Prior to translating formulae affected by unreliability values, we will define the translation into polynomials of single formulae with no associated unreliability degrees.
+
+\begin{defn} [polynomial of a formula] \label{defn:qA}
+Let $A\in \mathcal{C}$.
+The polynomial associated to the formula $A$, $q_A \in \mathbb{Z}_2[x_1,...,x_m]$, is recursively defined as follows:
+\begin{itemize}
+    \item If $A\equiv X_i$, where $X_i$ is a variable, then $q_A=x_i$
+    \item If $A\equiv \lnot B$, then $q_A=\NF(q_B+1,J)$
+    \item If $A \equiv B \lor C$, then $q_A=\NF(q_B \cdot q_C,J)$
+\end{itemize}
+\end {defn}
+
+\begin{rem} The polynomial $q_A$ associated to the formula $A$ is defined regardless of the unreliability degree of the formula $A$, $g(A)$.
+\end{rem}
+
+Next, on the basis of Definition \ref{defn:qA}, we define another kind of polynomials associated to each unreliable formula, but also taking into account the unreliability degree of the formulae. These polynomials will be helpful for determining the consistency degree of formulae and the deduction degree as derived from others.
+
+\begin{defn}[polynomial of an unreliable formula] \label{defn:pA}
+Given an unreliable formula $A\in \mathcal{C}$ such that $g(A)=v$, the polynomial associated to the unreliable formula $A$, $p_A\in \mathbb{Z}_2[x_1,...,x_m,y_1,\ldots,y_n]$, is defined as follows:
+$$p_A=q_A\cdot y_1y_2\cdot y_v$$
+
+\end {defn}
+
+\begin{rem} Since the normal form is here used, the indeterminates $x_1, ..., x_m,y_1,\ldots y_q$ are never to a power greater than 1.
+\end{rem}
+
+\begin{rem}
+When the unreliability degree of a formula $A$ is $0$, that is to say, $g(A)=0$, then $p_A=q_A$.
+\end{rem}
+
+Next, we will present the main result of this paper:
+
+\begin {thm} \label {thm:main}
+Let $A_1,...,A_r,C \in \mathcal{C}$.\\
+We have that:
+\begin{itemize}
+\item $B$ is $v$-tautological consequence of $ \{A_1,\ldots A_r\}$ $\Leftrightarrow$ $y_1\ldots y_v\cdots q(B) \in \langle q(A_1)\ldots q(A_r)\rangle$
+\item $\{A_1,\ldots,A_r\}$ is $v$-consistent $\Leftrightarrow$
+$y_1\cdot \ldots \cdot y_v\not \in \langle q(A_1)\ldots q(A_r)\rangle$
+\end{itemize}
+
+\end {thm}
+
+According to the previous result, any knowledge system managing uncertainty on Boolean propositional can be implemented in a computer algebra system, like CoCoA or Polybori.
+
+\section*{Acknowledgment}
+This work was partially supported by the research projects
+TIN2012-32682 (Ministerio de Educaci\'on y Ciencia, Spain).
+
+\section{Conclusions}
+In this paper we have presented an algebraic model for managing knowledge  affected by different degrees of unreliability. This model may be regarded as an extension on classical propositional logics, with addition of unreliability values associated to each proposition. The usual logical notions of tautological consequence and consistency of a given set of formulae have been redefined on behalf of the unreliability values. The main contribution of this work is concerned with the link between the unreliability values associated to tautological consequence and the calculation of reduced Groebner bases on an ideal of polynomials.
+
+
+\begin{thebibliography}{1}
+
+
+\bibitem{AB}   J. A. Alonso, E. Briales,
+               L\'ogicas Polivalentes y Bases de Gr\"obner.
+               In: C. Martin (ed.),
+               Actas del V Congreso de Lenguajes Naturales y Lenguajes
+               Formales. University of Seville, Seville, 1995, pp. 307-315.
+
+
+\bibitem{Becker}
+T. Becker, V. Weisspfenning, Gr\"obner bases. A computational approach to commutative algebra, Berlin, Graduate Studies in Mathematics-Springer, 1993.
+
+
+\bibitem{Buchberger}
+               B. Buchberger: An Algorithm for Finding a Basis
+               for the Residue Class Ring of a Zero-Dimensional Polynomial Ideal
+               (Ph.D. Thesis in German). Math. Institute - University of
+               Innsbruck, 1965.
+
+\bibitem{Buchberger1}
+               B. Buchberger, Applications of Gr\"{o}bner
+               Bases in Non-Linear Computational Geometry. In: J. R.
+               Rice (ed.),
+               Mathematical Aspects of Scientific Software.
+               Springer-Verlag, New York, 1988, pp. 60-88.
+
+\bibitem{CoCoA-1} 
+A. Capani, G. Niesi, CoCoA User’s Manual v. 3.0b, Genova, 
+Department of Mathematics, University of Genova, 1996: See CoCoA,
+2004 http://cocoa.dima.unige.it.
+
+
+\bibitem {Cha} J. Chazarain, A. Riscos, J. A. Alonso, E.
+               Briales,
+               Multivalued Logic and Gr\"{o}bner Bases with Applications to Modal
+               Logic, Journal of Symbolic Computation 11 (1991) 181-194.
+
+\bibitem{Cooman-Hermans}
+G. de Cooman, F. Hermans, Imprecise probability trees: Bridging two theories of imprecise probability, Artificial Intelligence 172 (2008) 1400-1427.
+
+\bibitem {Cox} D. Cox, J. Little, D. O'Shea, Ideals, Varieties, and Algorithms. An Introduction to Computational Algebraic Geometry and Commutative Algebra, Springer, New York, 1992.
+
+\bibitem{Cozman-Campos-Ferreira}
+F. G. Cozman, C. P. de Campos, J. C. Ferreira da Rocha, Probabilistic logic with independence, Int. Journ. Approximate Reasoning 49 (2008) 3-17.
+
+
+\bibitem{Faugere3}
+               J. C. Faug\`ere,
+               A new efficient algorithm for computing Gr\"obner
+               bases without reduction to zero.
+               In: T. Mora (ed.),
+               Proceedings of the 2002 International Symposium
+               on Symbolic and Algebraic Computation
+               (ISSAC 2002), ACM Press, 2002, pp. 75--83.
+
+
+
+\bibitem{Gerdt} V. P. Gerdt, M. V. Zinin,
+                A Pommaret Division Algorithm for Computing
+                Gr\"obner Bases in Boolean Rings. In:
+                J. R. Sendra, L. González-Vega (eds.),
+                Symbolic and Algebraic Computation,
+                International Symposium ISSAC 2008,
+                ACM Press, 2008, pp. 95--102.
+
+\bibitem{Gerla}
+G. Gerla, Inferences in Probability Logic, Artificial Intelligence 70(1-2) (1994) 33-52.
+
+\bibitem{hansen-jaumard}
+P. Hansen, B. Jaumard, Probabilistic satisfiability, Report G-96-31. Les Cahiers du GERAD, \'Ecole Polytechnique de Montr\'eal, 1996.
+
+\bibitem{Hs}   J. Hsiang,
+               Refutational Theorem Proving using Term-Rewriting
+               Systems, Artificial Intelligence 25 (1985)
+               255-300.
+
+\bibitem{Hernando} A. Hernando, E. Roanes-Lozano, J. Montero, An algebraic method for managing reliability in propositional logic, In: Proceedings of the 2010 International Conference on Intelligent Systems and Knowledge Engineering (ISKE), 2010, pp. 147--152.
+
+\bibitem {HernandoRoanesLaita} A. Hernando, E. Roanes-Lozano, L.M. Laita: A Polynomial Model for Logics with a Prime Power Number of Truth Values. Journal of Automated Reasoning 46 (2011), pp. 205--221.
+
+\bibitem{KN}   D. Kapur, P. Narendran,
+               An Equational Approach to Theorem Proving in First-Order
+               Predicate Calculus. In:
+               Proceedings of the 9th International Joint Conference on
+               Artificial Intelligence (IJCAI-85), vol. 2,  1985, pp.
+               1146-1153.
+
+\bibitem{Krause-Clark1993}
+P. Krause, D. Clark, Representing Uncertain Knowledge, Kluwer, Dordrecht, 1993.
+
+
+
+\bibitem{medicos} L.M. Laita, E. Roanes-Lozano, V. Maojo,
+               L. de Ledesma, L. Laita: An Expert System for Managing
+               Medical Appropriateness Criteria Based on Computer Algebra Techniques.
+               Computers and Mathematics with Applications 51/5 (2000) 473--481.
+
+
+\bibitem{Lukasiewicz1999}
+T. Lukasiewicz, Probabilistic deduction with conditional constraints over basic events, Journal of Artificial Intelligence Research 10 (1999) 199-241.
+\bibitem{Lukasiewicz2005}
+T. Lukasiewicz, Weak nonmonotonic probabilistic logics, Artificial Intelligence 168 (2005) 119-161.
+\bibitem{Lukasiewicz2008}
+T. Lukasiewicz, Expressive probabilistic description logics, Artificial Intelligence 172 (2008) 852-883.
+
+\bibitem{Nilsson1986}
+N. J. Nilsson, Probabilistic logic, Artificial Intelligence 28 (1986) 71-87.
+
+\bibitem{Pearl1988}
+J. Pearl, Probabilistic Reasoning in Intelligent Systems, Morgan Kaufman, San Mateo (CA), 1988.
+
+\bibitem{Anore} C. P\'erez-Carretero, L.M. Laita, E. Roanes-Lozano, L. L\'azaro, J.
+                Gonz\'alez-Cajal, L. Laita,
+                A Logic and Computer Algebra-Based Expert System for Diagnosis
+                of Anorexia,
+                Mathematics and Computers in Simulation 58 (2002) 183--202.
+
+
+\bibitem{CoCoA-2}
+D. Perkinson, (2000). CoCoA 4.0 online help (electronic file acompanying CoCoA v.4.0).
+
+
+
+\bibitem{Walley1996}
+P. Walley, Measures of uncertainty in expert systems, Artificial Intelligence 83 (1996) 1-58.
+
+\bibitem{Walley2000}
+P. Walley, Towards a unified theory of imprecise probability, Int. Jour. Approximate Reasoning 24 (2000) 125-148.
+
+\bibitem {Winkler}
+Winkler, F., Polynomial algorithms in computer algebra,  Springer, Vienna, 1996.
+
+
+
+
+\end{thebibliography}
+
+
+\end{document}

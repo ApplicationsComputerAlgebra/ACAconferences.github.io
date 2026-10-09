@@ -1,0 +1,30 @@
+Speaker:      Jeremy Johnson
+Title:        A Language for FFT Algorithms
+Affiliation:  Mathematics and Computer Science
+              Drexel University and Carnegie Mellon University
+              Philadelphia, PA USA
+URL:          http://mcs.drexel.edu/~jjohnson
+Email:        jjohnson@mcs.drexel.edu
+
+Abstract
+
+In an effort to efficiently implement the Fast Fourier Transform (FFT) on
+different computer architectures many variants of the FFT have been discovered
+and utilized.  The major difference between the various FFT algorithms are the
+order in which data elements are accessed throughout the algorithm (dataflow).
+Changes in dataflow can have a significant effect on performance.
+
+Viewing FFT algorithms as matrix factorizations (see the summary by Van Loan in
+the book "Computational Frameworks for the Fast Fourier Transform") provides a
+uniform way of describing and deriving variants of the FFT.  The matrix
+factorizations corresponding to different FFT algorithms can be viewed as
+formulas involving matrix operations such as composition, direct sum, and
+tensor product and families of special matrices.  These formulas can be
+translated into computer programs and hence the frameworks in Van Loan provide
+direct implementations of FFT algorithms.
+
+In this talk I will describe a programming language called TPL (tensor product
+language).  Programs in TPL are mathematical formulas such as the ones
+corresponding to matrix factorizations in Van Loan.  In addition to describing
+TPL, I will describe a prototype compiler for the language and various tools
+which automatically transform and generate TPL programs.

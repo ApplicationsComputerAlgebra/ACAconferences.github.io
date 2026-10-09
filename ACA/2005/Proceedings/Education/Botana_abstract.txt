@@ -1,0 +1,33 @@
+Dynamic Geometry Meets Computer Algebra: A Close Future
+
+Francisco Botana
+
+Department of Applied Mathematics I,
+University of Vigo at Pontevedra,
+Campus A Xunqueira,
+36005 Pontevedra, Spain
+fbotana@uvigo.es
+
+The last two decades have seen an impressive spread of dynamic geometry
+software in the teaching and learning of elementary geometry.  Two well-known
+programs, Cabri Geometry and The Geometer's Sketchpad, mostly filled the
+practice of this paradigm.  However, new academic developments have lately
+arisen.  Cinderella, designed by German investigators at ETZH and Berlin, and
+Geometry Expert, developed at the MMRC of the Chinese Academy of Sciences, are
+being used more and more.  Their main characteristic, shared with other
+proposals such as Dongming Wang's Geother or our own system, GDI, consists of
+paying special attention to the use of mathematical techniques for obtaining
+sound results.  Old approaches (such as "visual proving") have been efficiently
+replaced by symbolic methods (Groebner bases, Wu's method, ...) allowing
+further steps in dynamic geometry uses.
+
+This talk gives a short review of the state of the art in the integration of
+dynamic geometry and symbolic methods for automated geometric proof and
+discovery.  Pros and cons about using computer algebra systems for symbolic
+methods are discussed, and the new approach is compared with the standard
+systems in some common teaching tasks.  Some flaws of these new systems
+(concerning availability, cost, ease of use, ...) are also considered.
+Furthermore, the need for a common language in the field is highlighted, as it
+has been simultaneously perceived by different developers.  Some proposals from
+other authors and groups, and the goals and preliminary results of an ongoing
+project on this point are presented.

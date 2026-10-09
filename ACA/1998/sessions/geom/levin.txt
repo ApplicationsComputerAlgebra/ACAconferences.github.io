@@ -1,0 +1,21 @@
+
+    COMPUTATION OF MULTIVARIABLE DIFFERENTIAL DIMENSION POLYNOMIALS
+
+                        Alexander Levin
+                    Department of Mathematics
+                 The Catholic University of America
+                     Washington, D.C. 20064      
+                        e-mail: LEVIN@cua.edu
+          
+Abstract:
+          Let  F  be a differential field of zero characteristic and let a
+partition of the basic set of derivation operators of the field  F  into  p  
+disjoint subsets be fixed. We introduce a special type of reduction in the ring
+of differential polynomials over  F  and develop the appropriate technique of
+characteristic sets that allows to prove the existence and find methods of
+computation of differential dimension polynomials in  p  variables associated
+with finitely generated differential field extensions of  F .  We also show
+that the multivariable differential dimension polynomials (associated with
+various partitions of the basic set of derivation operators) give differential
+birational invariants that are not carried by the Kolchin dimension polynomial.
+

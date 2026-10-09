@@ -1,0 +1,37 @@
+                         Computer Algebra in Education
+
+   at ACA'2008 to be held July 27-30, 2008 at RISC, Castle of
+   Hagenberg, Austria
+
+      http://www.risc.uni-linz.ac.at/conferences/aca2008/
+
+   Organizers:
+
+   Alkis Akritas    (akritas@uth.gr)
+   Michael Wester   (wester@math.unm.edu)
+   Berhnard Kutzler (b.kutzler@aon.at)
+   Bill Pletsch     (bpletsch@cnm.edu)
+
+   Overview:
+
+   Education has become one of the fastest growing application areas for
+   computers in general and computer algebra in particular. Computer
+   algebra tools such as TI-Nspire CAS, TI Voyage 200, TI-89, Axiom, Derive,
+   Maple, Maxima, Mathematica, MuPAD, or Reduce, make powerful teaching
+   tools in mathematics, physics, chemistry, biology, economy, etc.
+
+   The goal of this session is to exchange ideas and experiences, to hear
+   about classroom experiments, and to discuss all issues related with
+   the use of computer algebra tools in classroom (such as assessment,
+   new teaching and learning styles, change of curricula, new support material,
+   ...)
+
+   If you are interested in presenting a paper, please contact one of the
+   organizers.
+
+   ACA 2008 is a part of the RISC Summer 2008 event that consists of
+   conferences and schools organized by the Research Institute for Symbolic
+   Computation (RISC) in summer 2008:
+
+      http://www.risc.uni-linz.ac.at/conferences/summer2008/
+

@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Approximate Algebraic Computation - IMACS 98</TITLE>
+<META NAME="description" CONTENT="Approximate Algebraic Computation - IMACS 98">
+<META NAME="keywords" CONTENT="rupprecht">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="rupprecht.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1 ALIGN="CENTER">Approximate Algebraic Computation - IMACS 98</H1>
+<P ALIGN="CENTER"><STRONG>David Rupprecht
+<BR>
+Laboratoire de Math&#233;matiques, Universit&#233;
+de Nice-Sophia Antipolis
+<BR><TT>rupprech@math.unice.fr</TT></STRONG></P>
+<P ALIGN="CENTER"></P>
+<P ALIGN="LEFT"></P>
+
+<P>
+
+<P>
+<DIV ALIGN="CENTER">
+<B><FONT SIZE="+1">Abstract</FONT></B>
+</DIV>
+<P>
+<DL COMPACT>
+<DT>1.
+<DD><B>Approximate GCD of </B><I>n</I><B> univariate polynomials.</B>
+<P>
+We study the approximate GCD of <I>n</I> univariate polynomials
+
+<!-- MATH: $P_1,\cdots, P_n$ -->
+<IMG
+ WIDTH="87" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$P_1,\cdots, P_n$">
+: we look for small perturbations (with respect to a
+tolerance 
+<!-- MATH: $\varepsilon$ -->
+<IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\varepsilon$">)
+of the coefficients which give a maximum degree
+GCD. We use both algebraic and numeric methods. We propose a generalized
+Sylvester matrix for <I>n</I> polynomials and so, generalized subresultants
+<I>Sylv</I><SUB><I>k</I></SUB>. Using Singular Value Decomposition, we can easily find an
+upper bound for the degree of an approximate GCD. Moreover, we can give
+an algorithm to compute some set of perturbations for the polynomials
+and give some bounds for these perturbations. These bounds give us a
+lower bound for the degree. Using these two bounds, we can give a
+certification theorem for the degree of an approximate GCD and an
+algorithm to compute a candidate GCD. Moreover, we refine a previous
+theorem for 2 polynomials and give new bounds which are asymptotically
+optimal.
+
+<P>
+<DT>2.
+<DD><B>Multiple roots of a polynomial</B>
+
+<P>
+Using similar methods as for <I>n</I> univariate polynomials, we try to
+give some bounds and algorithm for finding multiple roots of a
+polynomial <I>P</I>, that is to say a perturbated polynomials which is the
+'most singular' polynomial near <I>P</I>. The problem is more difficult.
+Indeed, for independent polynomials, we have a good filtration for an
+answer : the degree. For multiple roots, the degree of a GCD is not a
+good answer. We have to take into account the multiplicity of the roots.
+That gives us different filtrations and so different answers (for
+instance, would it be better to have the maximal degree or the maximal
+multiplicity ?). In this part, I decide to fix the maximal multiplicity
+and give some results for multiplicity 2 (and maybe 3).
+
+<P>
+<DT>3.
+<DD><B>Exact absolute factorization of a rational bivariate
+polynomial using numerical methods (with A.Galligo)</B>
+
+<P>
+Let <I>P</I>(<I>x</I>,<I>y</I>) be a bivariate polynomial with degree <I>n</I>. We compute a
+numerical Taylor expansion of the roots of <I>P</I>(0,<I>y</I>) :
+
+<!-- MATH: $\phi_i(y)=x_i+a_iy+b_iy+\cdots$ -->
+<IMG
+ WIDTH="222" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\phi_i(y)=x_i+a_iy+b_iy+\cdots$">,
+for <I>i</I>=1..<I>n</I>. If a subset <I>J</I>corresponds to a factor of <I>P</I>, we must have 
+<!-- MATH: $\sum_J b_i=0$ -->
+<IMG
+ WIDTH="83" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\sum_J b_i=0$">.
+Moreover,
+we can show that, after a generic change of coordinates, this condition
+is sufficient. Then we construct some (approximate) factors in the fiber
+<I>y</I>=0 and compute the factors of <I>P</I> with Hensel liftings. This methods
+could be a start for an algorithm for factorizing numerical bivariate
+polynomials.
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

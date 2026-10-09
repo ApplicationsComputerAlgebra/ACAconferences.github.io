@@ -1,0 +1,16 @@
+Badr Defouad* (France), bdefouad@magic.fr
+Instrumentation processes underlying the use of TI92 at high school level
+
+During two years, we have been involved in a research project dealing with the
+integration of the calculator TI92 at high school level. The purpose was to
+analyse:
+* the processes underlying the instrumentation of the TI92.
+* the mathematical knowledge required for this instrumentation.
+* the articulation between this kind of knowledge and the one expected by
+  the institution.
+The data include questionnaires, classroom observations, assesments and a
+biographical study of 9 students.
+
+We will focus on the biographical study of the students, presented through the
+results of two interviews and a specific assesment, particularly on the part
+concerning a classical task at this level of schooling : function study.

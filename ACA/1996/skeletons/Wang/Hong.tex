@@ -1,0 +1,35 @@
+\begin{center}
+\LARGE
+Volume of Parameterized Polyhedra 
+
+\end{center}
+
+\begin{center}
+\Large
+Hoon Hong, Manfred Minimair
+
+\end{center}
+
+\noindent
+Date:  July 19th (Friday)\\
+Time:  16:00-16:30\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+In this talk, we study the problem of computing the volume of the polyhedron defined by a given
+system of linear equalities. In fact, we study a parametric version of the problem: given a
+parametric system of linear inequalities, to find an expression (in the parameters) for the volume. 
+
+This problem naturally arise in automatic parallelization of programs (in particular vectorization
+of loops). It is also needed in computer aided design, where some mechanical parts are modeled by
+polyhedron and we need to know their volumes for cost/weight computation. 
+
+We describe an algorithm (improvement/completion of the previous algorithms). It essentially
+carries out recursion on the variables, where each recursion consists of projection (variables
+elimination) and lifting (symbolic integration in suitable measure). In order to control the huge
+intermediate result swell, inconsistent and redundant computational branches are detected and
+eliminated. 
+

@@ -1,0 +1,6 @@
+Algebra is Not Analysis
+
+Jacques Carette, Rob Corless, David Jeffrey and Stephen Watt
+
+The subject is Maple's attempts to address mathematical problems that do not
+fit into the usual mould of algebraic computation.

@@ -1,0 +1,30 @@
+Freshmen Engineering:  Computing using Mathematica
+
+Jeanine Ingber and Eric Nuttall
+College of Engieering
+University of New Mexico
+Albuquerque, New Mexico 87131
+
+A first course in engineering computing is typically taught using
+a programming language such as FORTRAN, C or C++.  Symbolic
+software packages are often thought of as "tools" that are either too
+advanced or otherwise not appropriate for use at the Freshman
+level.  At the University of New Mexico, Mathematica was
+introduced in Fall94 and Spring95 during the last five weeks of the
+traditional Engineering Computing course; FORTRAN77 was used
+the first ten weeks.  Students were surveyed at the end of the
+semester.  Of the 170 students surveyed 86% responded they had
+learned enough Mathematica to be useful and that Mathematica
+should continue to be taught in the Engineering Computing course. 
+The University of New Mexico has a centralized computing system
+and a University site license for Mathematica.  Labs for the
+Engineering Computing course are taught in classrooms equipped
+with 20 xterms and a projector system.  The site license makes it
+convenient for students to use Mathematica in all of their classes.  Of
+the students surveyed, 25% responded that they were already using
+Mathematica in their other classes and 88% responded they expected
+to use Mathematica in future classes.  This presentation will show
+how Mathematica was introduced as a programming environment
+for freshman level engineering students.  Numerous solutions to
+engineering application problems using Mathematica will be
+presented.

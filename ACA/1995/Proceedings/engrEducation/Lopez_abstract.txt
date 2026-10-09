@@ -1,0 +1,30 @@
+Advanced Engineering Math Through Symbolic Software
+
+Robert Lopez
+Math department at Rose-Hulman.
+(r.lopez@rose-hulman.edu)  or
+lopez@nextwork.rose-hulman.edu
+
+The course typically called "Advanced Engineering Mathematics."
+supported by numerous texts of the same name, samples material from at
+least six standard mathematics courses.  In particular, chapters of any
+of these texts have titles like Ordinary Differential Equations,
+Boundary Value Problems, Complex Variables, Linear Algebra, Numerical
+Analysis, Vector Calculus, Optimization, etc.
+
+We are beginning to see appear Advanced Engineering Math texts that
+reference the use of symbolic software packages like Maple and
+Mathematica.  However, to date, these texts still follow a traditional
+methodology and view the symbolic software package as a useful
+calculator to be invoked in the solution of some of the problems.
+
+Given the power of these software packages, it is time to begin seeing
+texts written from the perspective that the symbolic software is the
+tool of ordinary recourse for teaching and learning, as well as doing,
+engineering analysis.  This talk will consist of examples taken from
+the speaker's courses at Rose-Hulman Institute of Technology where the
+standard learning environment is a computer-equipped classroom.  These
+examples will illustrate why it is necessary that texts, and courses,
+begin to reflect a pedagogy predicated on a universal and ubiquitous
+access to appropriate software facilities during class, during exams,
+and during all forms of instructional activities.

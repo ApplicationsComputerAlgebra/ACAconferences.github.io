@@ -1,0 +1,44 @@
+\begin{center}
+\LARGE
+Algebra for Optical Computing and Quantum Computing
+\end{center}
+
+\begin{center}
+\Large
+Thomas Beth, Markus Grassl, Joern Mueller-Quade
+
+\end{center}
+
+\noindent
+Date:  July 19th (Friday)\\
+Time: 14:30-15:00\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+Optical and quantum mechanical systems enjoy a great intrinsic parallelism that can be used to
+speed-up computations. As both types of systems are linear, designing these systems leads to the
+problem of factoring a given matrix into matrices corresponding to the computational primitives
+of the physical system. 
+We present an algebraic approach to this ``programming'' problem for optical computing and
+quantum computing. 
+For optical systems, the computational primitives are diffractive elements corresponding to
+diagonal matrices and wave propagation modelled by the Fresnel transformation. We show that, in
+principle, any linear transformation can be realized optically up to a scalar factor, but possibly
+with many diffractive elements. In practice, optical setups with a small number of diffractive
+elements are of interest. We present a divide and conquer algorithm for the design of 8f-systems,
+i. e., systems with up to four lenses and three arbitrary diffractive elements. 
+Computations in quantum mechanical systems are specified by unitary matrices acting on a Hilbert
+space which is a tensor product of smaller subspaces. The computational primitives are unitary
+transformations acting on these subspaces. In principle, any unitary transformation can be factored
+into such basic transformations. For complexity reasons we are interested in a factorization with a
+small number of factors. We present an algebraic approach to find a "factorization" similar to that
+for optical systems. 
+Solving the equations arising in the design problem is equivalent to computing the inverse of a
+rational mapping. For this mapping, a decomposition can be derived from a tower of unirational
+function fields. We discuss how to compute the intermediate fields using Groebner bases and
+primary decomposition. Algorithms using such a functional decomposition solve the nonlinear
+equations faster than more universal methods. 
+

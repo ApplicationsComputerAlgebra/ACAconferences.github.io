@@ -1,0 +1,154 @@
+\documentclass[11p,a4paper]{article}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{psfig}
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\C}{{\mathbb C}}
+
+\begin{document}
+
+\noindent
+{\Large \bf Symbolic Computation of Formal  Solutions
+for 2 and 3 Dimensional Dynamical Systems}
+\\
+
+\noindent
+G\'erard Eichenm\"uller\footnote{The work of the author has 
+been supported by the Gottlieb Daimler- und Karl Benz-Stiftung}, \\
+\noindent
+LMC--IMAG, B. P. 53, 51 Rue des 
+Math\'{e}matiques, 38041 Grenoble Cedex 9, France, 
+{\tt gerard.eichenmueller@imag.fr}
+\\
+
+\begin{center}
+{\large \bf Abstract}
+\end{center}
+
+\noindent
+First we will consider 2-dimensional autonomous dynamical systems 
+\begin{equation}\label{sys}
+	\dot X = F(X),\ X={x \choose y},\ F={f \choose g},\ f,g\in \C[x,y]
+\end{equation}
+and present the implementation of an algorithm proposed by A. Bruno 
+that can be used
+to find parametrized formal solutions $(x(t),y(t))$ 
+in the neighbourhood of the origin 
+for these systems if the origin is a simple point or an isolated singularity.
+Then we will give some examples how this algorithm can be extended
+for the integration of 3-dimensional dynamical systems.
+\\
+
+The algorithm is split into three parts according to the classification 
+of the dynamical systems into 3 cases:
+\begin{itemize}
+\item    the origin is a simple point if $F(0)\neq 0$. 
+\item    it is an elementary singular point if $F(0)= 0$ and the linear 
+part is not nilpotent.
+\item    it is a nonelementary singular point if $F(0)= 0$ and the linear 
+part is nilpotent.
+\end{itemize}
+In the case of a simple point we can apply the flow box theorem to transform 
+the initial system into 
+\[
+     \dot {\tilde X}= {1 \choose 0}
+\]
+and use Taylor series to find the transformation $X=H(\tilde X)$.
+
+If the origin is an elementary singular point we can apply normal 
+form constructions to
+reduce the initial system to an integrable system. We compute the 
+Poincar\'e-Dulac normal form if the eigenvalues $\lambda_1$ and 
+$\lambda_2$ of the linear part are in $\R$ or if we have complex 
+coefficients in F. If we have only rational coefficients in F and 
+$\lambda_1,\lambda_2 \in \C$ we calculate the rational normal form 
+which is linear, 
+if $\lambda_1$ and $\lambda_2$ are purely imaginary we use 
+the rational normal form and polar coordinates.
+
+In the case of a nonelementary singular point the Newton polygon is used to
+divide the neighbourhood of the origin into sectors. Now we calculate formal
+solutions valid on these sectors. For all sectors corresponding to 
+vertices of the Newton polygon we apply a new time transformation and a 
+power transformation to transform the initial system to an system that 
+has an elementary singular point in the origin. On the sectors 
+corresponding to edges of the Newton polygon we use 
+directional blowing up to desingularize the singularity. This  
+leads to a finite number of systems that can be integrated using the 
+methods described above. 
+
+The program has been implemented in Maple. It can be used and tested online at
+{\tt http://www-lmc.imag.fr/lmc-cf/Gerard.Eichenmueller/Software/}. 
+We will treat some examples to illustrate each of the possible cases and 
+to show how the algorithm works.
+
+This algorithm can be applied to integrate 3-dimensional dynamical 
+system 
+\[
+\dot X = F(X),\ X=\left( \begin{array}{c}x\\y\\z \end{array} \right),\ 
+F=\left( \begin{array}{c}f\\g\\h \end{array} \right),\ f,g,h \in \C[x,y,z]
+\]
+if the origin is an elementary singular point and the 
+Poincar\'e-Dulac normal form 
+\[
+\left\{ \begin{array}{lrl}\frac{dx}{dt}= & \lambda_1 x + \sigma_1 y & 
++ x \sum_{\langle Q,\Lambda \rangle=0} a_Q X^Q\\
+\frac{dy}{dt}= & \lambda_2 y + \sigma_2 z & + y 
+\sum_{\langle Q,\Lambda \rangle=0} b_Q X^Q \\
+\frac{dz}{dt}= & \lambda_3 z & + z \sum_{\langle Q,\Lambda \rangle=0} 
+c_Q X^Q 
+\end{array}\right.
+\]
+has its support on a plane. That means that the resonance equation 
+\[
+\langle Q, \Lambda \rangle = 0
+\]
+has 2 linearly independent solutions in $\N^3$. Then the 
+3-dimensional system can be reduced to a 2-dimensional system using 
+a change of coordinates 
+described by a power transformation. The resulting sytem has a nonlementary 
+singularity in 
+the origin and we can find a division of the neighbourhood into sectors 
+and formal solution on those sectors. The two-dimensional solutions 
+can be retransformed into $(x,y,z)$ coordinates. But the approbiate 
+power transformation that reduces the system does not always exist. 
+We will show when it is possible to find it
+and how to construct it if it exists.
+
+\begin{thebibliography}{99}
+
+\bibitem{bruno1}
+	A. Bruno {\sf Local methods in non linear differential equations}
+	Springer Verlag 1989.
+
+\bibitem{jean}
+	J. Della Dora {\sf Introduction to normal form theory}, Preprint.
+
+\bibitem{stolo}
+	L. Stolovitch {\sf Syst\`emes dynamiques et formes normales, rapport 
+	de recherche}, technical report, INPG, 1992.
+
+\bibitem{vallier}
+	L. Vallier {\sf An Algorithm for the computation of Normal Forms and 
+	invariant Manifolds}, ISAAC, page 225-233, edit. Manuel Bronstein, 
+	1993.
+
+\bibitem{pelletier}
+M.~Pelletier.
+{\sf Eclatements quasi-homog\`enes.}
+Technical Report 92-04, Universit\'e de Bourgogne, 1992.
+
+\bibitem{hale}
+Jack K.~Hale, Shui-Nee~Chow.
+{\sf Methods of Bifurcation Theory}.
+Springer-Verlag, 1986.
+
+\end{thebibliography}
+
+
+\end{document}

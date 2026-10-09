@@ -1,0 +1,10 @@
+Title:    Toric Initial Ideals without Embedded Primes
+
+Speaker:  Rekha R. Thomas, Math, University of Washington, Seattle
+
+In this talk, we give characterizations and examples of toric initial ideals
+without embedded primes.  Such ideals give rise to families of integer programs
+in which every program can be solved by the classical Gomory group
+relaxations.
+
+Joint work with Serkan Hosten.

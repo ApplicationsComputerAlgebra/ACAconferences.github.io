@@ -1,0 +1,20 @@
+Investigating Young Group Double Cosets with Computer Algebra
+
+Bill Pletsch
+Technical Vocational Institute, Albuquerque, New Mexico, USA
+
+Let us consider a deuteron colliding with another deuteron ignoring charge and
+spin.  In the case where after the collision two deuterons are returned there
+are only two possible reactions.  Either nothing happened or a particle was
+exchanged.  Generalizing this simple problem from scattering theory results in
+an excursion into Polya's theory of counting and the theory of double cosets.
+
+Until the advent of computer algebra, the theory of double cosets has been
+restricted to a few elegant but computationally impossible theorems.
+Impossible in the sense that in principle the calculation can be done but it
+will take ten thousand years.
+
+Today, using Computer Algebra much can be calculated quickly.  Using Macsyma
+and Maple in the special case of Young group generated double cosets, we will
+see just how valuable Computer Algebra can be.  Some surprising and stimulating
+patterns emerge after a just few computer algebra experiments.

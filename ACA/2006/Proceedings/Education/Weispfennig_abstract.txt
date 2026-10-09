@@ -1,0 +1,21 @@
+A Didactic Top-down Approach to CAD
+
+Volker Weispfenning
+
+CAD (cylindrical algebraic cell decomposition) and the resulting real QE
+(quantifier elimination) as developped by George Collins and his school are
+important algorithmic tools in real algebra and geometry.  Hence they deserve a
+thorough treatment in a course on computer algebra and its applications.  On
+the other hand a complete mathematical verification of the methods requires an
+abundance of rather subtle algebraic facts that cannot be proved in a limited
+time frame.  Moreover this wealth of technical machinery tends to obscure the
+simple and straightforward basic ideas of the method.
+
+The talk will outline a modified approach to CAD and QE for class-room
+presentation.  It emphazises the basic ideas and introduces technical tools in
+a top-down manner only as required.  At the expense of an increased asymptotic
+complexity it introduces modified projection sets and does away with
+subresultant theory relying almost entirely on basic real calculus and the
+theorem of Sturm-Sylvester.  The approach has been tested successfully in a
+class on "Elimination Algorithms with Applications" at the University of
+Passau.

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="https://scale.gtu.edu.tr/style/aca.css">
+    <script src="https://kit.fontawesome.com/a7b75b42fc.js" crossorigin="anonymous"></script>
+    <title>CASC - SCALE 2022</title>
+
+    <script>
+       $(function(){
+         $("#sponsors").load("sponsors.html");
+       });
+     </script>
+     <script>
+        $(function(){
+          $("#footer").load("footer.html");
+        });
+      </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <button aria-label="Close button" class="close-nav-btn"><i class="fas fa-bars"></i></button>
+            <a class="logo-href logo-mobile" href="index.html">
+                <img src="images/Scale.png" alt="">
+            </a>
+            <nav class="nav-mobile">
+                <a class="logo-href fit-logo" href="index.html">
+                    <img src="images/Scale.png" alt="">
+                </a>
+                <ul>
+                    <li><a href="casc.html#event-home" class="active-link">Home</a></li>
+                    <li><a href="casc.html#event-dates">Dates</a></li>
+                    <li><a href="http://casc-conference.org/">Official Webpage</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main>
+            <section id="event-home" class="event-hero">
+                <h1>CASC 2022</h1>
+                <h2 class="caption">Computer Algebra in Scientific Computing</h2>
+                <h2 class="dateLeft">22-26 August 2022</h2>
+                <br>
+                <br>
+                  <h2><a href="http://casc-conference.org/">The webpage of CASC 2022</a></h2>
+                  <br>
+                  <br>
+                <p>The tools of Scientific Computing play an important role in the natural sciences and engineering. Computer Algebra Systems and the underlying algorithms for Symbolic Computation play an increasingly important role within Scientific Computation. The CASC workshop series has been running for over two decades to explore the interaction of these topics, their implementation, and their application.
+                </p>
+            </section>
+
+
+            <section id="event-dates" class="section-container">
+                <h2 class="twentyPixel">Important Dates</h2>
+                <div class="about-info">
+                    <dl>
+                        <dd>Paper submission deadline</dd><dt>Sunday 8th May 2022</dt>
+                        <br>
+                        <dd>Notification of acceptance</dd><dt>Monday 13th June 2022</dt>
+                        <br>
+                        <dd>Submission of final version</dd><dt>Sunday 26th June 2022</dt>
+                    </dl>
+                </div>
+            </section>
+
+
+        </main>
+
+
+    </div>
+    <div id="sponsors"></div>
+    <div id="footer"></div>
+
+    <div class="copyright-section">
+        <div class="container">
+            <p>Copyright © 2021 - 2022 • Scale</p>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/navbar.js"></script>
+
+</body>
+
+</html>

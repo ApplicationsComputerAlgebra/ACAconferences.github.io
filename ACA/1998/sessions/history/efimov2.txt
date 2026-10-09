@@ -1,0 +1,113 @@
+
+
+              "COMPUTER ALGEBRA AT KELDYSH INSTITUTE"
+
+                 G.B.Efimov, I.B.Tshenkov, E.Yu.Zueva
+             Keldysh Institute of Applied Mathematics RAS
+		Moskow, 125047, Miusskaya sq.4, Russia
+                     efimov@applmat.msk.su       
+
+Keldysh  Institute of Applied Mathematics of Russian Academia  of 
+Science  (RAS)  was founded by M.V.Keldysh and  A.N.Tichonov  for 
+solving  difficult  scientific problems of  national  importance, 
+such as nuclear physics, cybernetics, space mechanics and others. 
+At  the Institute  experts on different areas -   mathematicians, 
+physicists,  mechanicians,  computer scientists -   were  working 
+together,  in  close  contacts  with  each  others.  Such  famous 
+scientists as K.I.Babenko, I.M.Gelfand, A.A.Liapunov, I.B.Zeldo-
+vich, D.E.Okhozimsky,   A.A.Samarsky,   V.S.Yablonsky, M.R.Shura-
+Bura, A.N.Miamlin, S.P.Kurdiumov, T.M.Eneev were  among them. 
+
+Idea of Computer Algebra became attractive for experts on Applied 
+Mathematics due to existence of numerous difficult problems to be 
+solved  with it, as well as due to enthusiasm caused  by  success 
+of  early computers. First experiments were made as early as  the 
+beginning of sixties. Manipulations with trigonometric and  power 
+series were implemented with soviet computer "Strela" by Z.Vlasova 
+and I.Zadyhaylo (non-published). In 1964  D.E.Okhozimsky proposed 
+to built the solution of cosmodynamics problem in the form of two 
+asymptotic   power   series   near   two   singularities.   These 
+assimptotics  were  conjugated by common  numerical  solution  in 
+the  regular area. G.Efimov realized this approach  for  simplest 
+Poisson series (1970).
+
+>From  1963  M.L.Lidov  with his group  did  numerous  experiments  
+concerned  CA application  to  sputnik dynamics problems.  Method  
+united   both analytical  and numerical approaches was  proposed.  
+For   elliptic  orbits   and  distortions  of  different   sorts,  
+analytical  approach was  used  for Hamilton disturbing  function  
+H*  building.  Then, coordinate  transformation  and  calculation 
+of  right  parts  of disturbed  motion  equations, in every  step 
+of     integration,    is   done     via    Hamilton     function  
+differentiation.   This   approach provides high accuracy  method 
+of  motion  calculation  and  allows  to  avoid   labor-consuming 
+calculations. Unfortunately, requirements to CA  systems  to   be 
+used  in  this  scheme  were  rather  high,   and  available   CA  
+systems  were not capable to  satisfy  them.  Thus,  these   very  
+interesting   experiments   didn't  produce   practically  usable 
+integrated (analytically-numerical) system. 
+
+>From 1970 A.P.Markeev used CA for Gamilton's systems normalization 
+and periodic solution stability analysis. The next steps in  this  
+direction were done by A.G.Sokolsky. This work was later continued 
+in MAI and ITA RAS by the same scientific school.
+
+V.A.Saryshev  and S.A.Gutnik used CA for the problem  of  sputnik 
+equilibrium stability (1984). 
+
+G.B.Efimov  created  a  system for derivation  the  equations  of 
+motion and used it in Robotics applications.
+
+V.F.Tourchin  created an original computer language REFAL  (1969) 
+based  on  new  principle  of  programming -   associative   text  
+processing,   without   directly  addressed  control.    Computer 
+Algebra  was   among potential  areas   of   REFAL  applications.  
+However,   first  REFAL realization was rather "scientific"  then 
+practical,  since  it   was isolated  and   not  compatible  with 
+"ordinary"   soft   -  numerical  packages,    library   support,  
+memory  allocation  and   so   on. Additional   efforts  of  many  
+people   required   to   do    REFAL  modifications   practically  
+usable, in  particular  for  Computer Algebra Applications. There 
+were  REFAL-LISP  comparison   by L.K.Eisymont,  the  project  by 
+I.B.Zadyhailo  and A.N.Miamlin   of  specialized   REFAL-computer  
+creation  with  REFAL approach  realized  on  hardware level, and 
+others.  I.B.Tshenkov  and M.Yu. Shashkov  developed  specialized 
+Computer  Algebra  REFAL system (DISLAN) used for  operators  
+differential scheme creation. 
+
+The   result  of the last work was  positively    evaluated    by  
+A.A.Samarsky,    leader    in   soviet  mathematical    modeling.  
+Samarsky    supported    organization    of   Computer    Algebra 
+Conference  in Gorky (Nijniy Novgorod) in  1984. This  Conference 
+was the first meeting of Computer Algebra experts from all Soviet 
+Union. The results of about 20 years research, as well as  future 
+plans  and  perspective  directions,  were   discussed.   Keldysh 
+Institute  presented  a number of papers devoted to  CA  systems, 
+mechanical applications, and two reviews on CA applications - on 
+Applied Mathematics  and  Mechanics. 
+
+To  generalize the experience of common work  of  mathematicians, 
+mechanicians  and programmers, some classification work was  done 
+by  G.B.Efimov and M.V.Grosheva. There were reviews of CA systems 
+and CA applications for mechanical problems. Tables of CA systems 
+features  were  presented  for  users.  These  reviews   provided 
+convenient  tool  for  CA systems comparison  and  selection  for 
+potential users - experts in applied areas.
+
+Last   years,   "authorized"  systems  created   especially   for 
+solving  some  concrete problems  and  used   mostly  by  authors 
+themselves,   became   out  of dated.  Instead,  general  purpose 
+systems of common  usage  such as MATHEMATIKA, MAPLE, REDUCE  and 
+programs written for them became popular.             
+
+Most  important works of last years at Keldysh Institute are  the 
+following.  Several Hydrodynamics problems were resolved by  I.B. 
+Tshenkov and Ya.M. Kajdan with aid of REFAL-based CA program  and 
+by  M.Yu.Shashkov  and L.Platonova in REDUCE. A.D.Bruno  and  his 
+followers   obtained   interesting   results.   In    particular, 
+V.F.Edneral realized some algorithms of normalization in Hamilton 
+systems.  S.Yu.  Sadov  with Vahedov  investigated  stability  of 
+motion for celestial mechanics problems.
+
+     The work was carried out under support of RFFI grant N 96-15
+-97229, N 98-01-00941.

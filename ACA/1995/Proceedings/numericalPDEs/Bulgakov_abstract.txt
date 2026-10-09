@@ -1,0 +1,33 @@
+Aider Ya. BULGAKOV
+Mathematical Depart.
+Selcuk University
+KONYA, TURKEY
+e-mail: bulgk@trselcuk.bitnet
+  		        
+Algorithm for Solving Riccati Matrix Equation with Guaranteed Accuracy
+
+			Abstract
+     
+        Speaking about the algorithms with guaranteed accuracy we mean
+such algorithms which result either in the solution of the problem with
+all true digits or in detecting its ill-condition. This scientific direction
+is presented by S.K.Godunov, U.Kulisch, A.J.Laub, G.W.Stewart, L.N.Trefethen
+and others.
+        The paper presents the algorithm for solving Riccati matrix equation
+based on the solution of the two point boundary problem. The algorithm
+includes the series of orthogonal transformations of the matrix made up of
+the Riccati equation coefficients. As a result we obtain the system of
+equations whose condition is not worse than the condition of the Riccati
+matrix equation. As a mesure of condition we use four numerical characteristics
+which are the norms of the solution of the four matrix equations: the initial
+and dual equations and two Lyapunov matrix equations.
+        This characteristics is the development of the notion of the quantity
+of stability parametre suggested by author (1980). The parametre is equivalent
+to the notion of the distance from unstable matrices ( C. Van Loan) but is
+more effective in computer realization. The similar parametre was suggested
+independently by Eising (1984). At present such parametres found application in
+the Stability Theory and in the Automatical Control Theory.
+        A complete analysis of the influence of round-off errors and
+uncertainties in the data has been made. The analysis has shown that the
+algorithm is as fast as the known algorithm of the sign-function type but
+is more stable.

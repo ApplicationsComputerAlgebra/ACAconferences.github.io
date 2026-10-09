@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <link href="styles/master.css" type="text/css" rel="stylesheet" media="all"/>
+   <title>ACA 2008 Applications of Computer Algebra</title>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tbody>
+      <tr>
+        <td class="headerLeft"><a href="/"><img src="./_images/header/schloss21s.jpg" /></a></td>
+        <td width="20px"></td>
+        <td>
+        <table width="100%">
+        <tbody>
+        <tr><td class="headerTitle">Applications of Computer Algebra</td></tr>
+        <tr><td class="headerSub"><a href="/">RISC, Castle of Hagenberg, Austria.</a></td></tr>
+        <tr><td class="headerSub">July 27-30, 2008.</td></tr>
+      	</tbody>
+      	</table>
+        </td>
+      </tr>
+   </tbody>
+ </table>
+
+
+
+<table cellspacing="0" cellpadding="0" width="100%" class="infobar">
+	<tbody><tr><td height=20px>
+	<marquee scrollamount="2" scrolldelay="1" behavior=slide loop=1>
+	<b><a href="?content=pictures">NEWS: ACA 2008 is over, pictures are available ... </a></b>
+	</marquee>
+</td></tr></tbody></table>
+
+
+<div class="class1">
+	
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspace">
+<tbody>
+<tr>
+<td>
+	
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+
+<td style="width:12px;"></td>          
+<td class="unselected">
+	<div><a href="?content=news">News</a></div>
+</td>
+<td class="selected">
+	<div>General</div>
+</td>	
+
+<td class="unselected">
+	<div><a href="?content=sessions">Sessions</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=submission">Submission</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=registration">Registration</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=program">Program</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=pictures">Pictures</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=location">Location</a></div>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspaceSub">
+<tbody>
+<tr>
+<td>
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+<td style='width:150px;'></td>
+<td class="unselectedSub">
+	<a href="?content=general&amp;sub=scope">Scope</a>
+</td>
+<td class="selectedSub">
+	Dates</td>	
+
+<td class="unselectedSub">
+	<a href="?content=general&amp;sub=committees">Committees</a>
+</td>
+<td class="unselectedSub">
+	<a href="?content=general&amp;sub=related">Related</a>
+</td>
+
+</tr>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table><div id="content">
+<div id="column">
+<table class="class2" cellspacing="0" cellpadding="0" style="padding-top:5px">
+<tbody>
+<tr>
+<td class="leftColumn">
+<img width="200" src="_images/photos/2006-09-22_14-19-20.jpg" alt="Castle-sky"/>
+<img width="200" style="padding-top:7px;" src="_images/photos/castle-fishview.jpg" alt="Castle-fishview"/>
+<img width="200" style="padding-top:7px;" src="_images/photos/2006-09-22_14-10-55.jpg" alt="Castle"/>
+
+</td>
+<td class="centerColumnGen">
+
+
+<h4>Sessions &amp; Submissions</h4>
+<ul>
+<li><FONT COLOR="#FB0000">June 1, 2008:</FONT> Deadline for session proposals.</li>
+<li><FONT COLOR="#FB0000">June 8, 2008:</FONT> Session program fixed.</li>
+<li>Deadline for paper submission depends on <a href="?content=sessions">session organizers</a>.</li>
+</ul>
+
+<h4>Conference</h4>
+<ul>
+<li>Sunday&ndash;Wednesday, July 27&ndash;July 30, 2008.</li>
+</ul>
+
+</td>
+<td class="rightColumnGen">
+<img width="135" src="_images/photos/schloss01.JPG" alt="Castle"/>
+<img width="135" style="padding-top:7px;" src="_images/photos/schloss31.jpg" alt="Schloss"/>
+</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+
+</body>
+</html>

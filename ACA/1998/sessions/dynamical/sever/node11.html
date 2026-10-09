@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Evolving Algebras</TITLE>
+<META NAME="description" CONTENT="Evolving Algebras">
+<META NAME="keywords" CONTENT="sever">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sever.css">
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="sever.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html127"
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html125"
+ HREF="sever.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html119"
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html128"
+ HREF="node12.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html126"
+ HREF="sever.html">No Title</A>
+<B> Previous:</B> <A NAME="tex2html120"
+ HREF="node10.html">Iterated Function Systems as</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00060000000000000000">
+Evolving Algebras</A>
+</H1>
+
+<P>
+<I>Evolving Algebras</I> have been proposed by Yuri Gurevich
+in 1988 [<A
+ HREF="node13.html#Gurevich88">9</A>,<A
+ HREF="node13.html#Gurevich91">10</A>] as models for arbitrary
+computational processes. They are finite, dynamic algebras
+representing state transitions and describing operational semantics
+of discrete dynamical systems. They may be tailored to any desired level
+of abstraction. System states are represented here as static
+algebras.
+
+<P>
+An evolving algebra is a structure
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\psi=(\Sigma, S, I_0, T),
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="122" HEIGHT="31"
+ SRC="img86.gif"
+ ALT="\begin{displaymath}\psi=(\Sigma, S, I_0, T),\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where:
+<UL>
+<LI><IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img87.gif"
+ ALT="$\Sigma$">
+is a signature (a set of operational (or functional)
+symbols with their arities);
+<LI><I>S</I> is a superuniverse, 
+<!-- MATH: $\qquad \{true, false\} \subset S;$ -->
+<IMG
+ WIDTH="171" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$\qquad \{true, false\} \subset S;$">
+<LI><I>I</I><SUB>0</SUB> - an initial interpretation (a finite, static, many-sorted
+algebra);
+<LI><I>T</I> - a set of transition rules.
+</UL>
+<P>
+<I>I</I><SUB>0</SUB> gives an initial interpretation of the signature's
+operational symbols:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+I_0: \Sigma \rightarrow \bigcup_{n \ge 0}(S^n \rightarrow S) \qquad
+\forall f \in \Sigma \quad I_0(f): S^n \rightarrow S.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="373" HEIGHT="50"
+ SRC="img89.gif"
+ ALT="\begin{displaymath}I_0: \Sigma \rightarrow \bigcup_{n \ge 0}(S^n \rightarrow S) \qquad
+\forall f \in \Sigma \quad I_0(f): S^n \rightarrow S.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+There are four kinds of transition rules (or updates):
+<DL COMPACT>
+<DT>1.
+<DD><B>Function updates</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f(t_1,\dots,t_n) := t_0 \qquad f \in \Sigma, \;\; n \ge 0
+\end{displaymath} -->
+
+<IMG
+ WIDTH="258" HEIGHT="31"
+ SRC="img90.gif"
+ ALT="\begin{displaymath}f(t_1,\dots,t_n) := t_0 \qquad f \in \Sigma, \;\; n \ge 0\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><DT>2.
+<DD><B>Conditional</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+if \; b \; then \; C
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="82" HEIGHT="30"
+ SRC="img91.gif"
+ ALT="\begin{displaymath}if \; b \; then \; C\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><DT>3.
+<DD><B>Extension of universes</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+extend \; U \subset S \; by \; x_1, \dots, x_m
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="199" HEIGHT="30"
+ SRC="img92.gif"
+ ALT="\begin{displaymath}extend \; U \subset S \; by \; x_1, \dots, x_m\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><DT>4.
+<DD><B>Contraction of universes</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+discard \; t \; from \; U
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="126" HEIGHT="30"
+ SRC="img93.gif"
+ ALT="\begin{displaymath}discard \; t \; from \; U\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P></DL>
+<P>
+Iterative application of evolving algebra <IMG
+ WIDTH="17" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="$\psi$">
+to sequentially arising states (static
+algebras) <I>I</I><SUB><I>i</I></SUB>, starting from the initial state <I>I</I><SUB>0</SUB>, may give a
+terminated computation:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+I_0 \stackrel{\psi}{\longrightarrow} I_1
+\stackrel{\psi}{\longrightarrow} I_2
+      \stackrel{\psi}{\longrightarrow} \dots
+      \stackrel{\psi}{\longrightarrow} I_M .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="233" HEIGHT="31"
+ SRC="img95.gif"
+ ALT="\begin{displaymath}I_0 \stackrel{\psi}{\longrightarrow} I_1
+\stackrel{\psi}{\lo...
+...\longrightarrow} \dots
+\stackrel{\psi}{\longrightarrow} I_M .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+We plan to use the very flexible and powerful formalism of evolving algebras for
+description of our above-mentioned algorithms.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html127"
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html125"
+ HREF="sever.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html119"
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html128"
+ HREF="node12.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html126"
+ HREF="sever.html">No Title</A>
+<B> Previous:</B> <A NAME="tex2html120"
+ HREF="node10.html">Iterated Function Systems as</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

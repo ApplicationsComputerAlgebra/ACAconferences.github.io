@@ -1,0 +1,75 @@
+\documentstyle[12pt]{article}
+\textheight 9in
+\textwidth  6.5in
+\topmargin -0.5in
+\oddsidemargin 0in
+\pagestyle{empty}
+\begin{document}
+\begin{center}
+\begin{huge}
+{\bf IMACS-ACA'2000}
+\end{huge}
+%
+\vskip 0.25in
+%
+\begin{Large}
+International Association for Mathematics \\ and Computers in Simulation \\
+6$^{\rm th}$ International Conference on \\[.1in]
+Applications of Computer Algebra
+\end{Large}
+%
+\vskip 0.5in
+%
+\begin{LARGE}
+June 25--28, 2000 \\[.1in]
+Saint Petersburg, Russia
+\end{LARGE}
+\end{center}
+%
+\vskip 0.5in
+%
+\noindent
+\begin{tabular}{@{}lll}
+{\em General Chair}:  & Nikolay Vassiliev & (vasiliev@pdmi.ras.ru)      \\
+{\em Program Chairs}: & Victor Edneral    & (edneral@theory.npi.msu.su) \\
+                      & Richard Liska     & (liska@siduri.fjfi.cvut.cz) \\
+                      & Michael Wester    & (wester@math.unm.edu)       \\
+\end{tabular}
+%
+\vskip 0.25in
+%
+\noindent {\sf Scope:}
+
+The meeting will focus on actual or possible applications of nontrivial
+computer algebra techniques to other fields and substantial interactions of
+computer algebra with other fields.
+
+\noindent {\sf Meeting Format:}
+
+The meeting will be run in the standard IMACS format where individuals are
+invited to organize a special session.  Individuals can propose a special
+session by contacting the program chairs.  All paper submissions must be
+directed to an organizer of an appropriate special session.
+%
+\vskip 0.25in
+%
+\noindent
+Sponsored by: \\
+Steklov Institute of Mathematics at Saint Petersburg \\
+Euler International Mathematical Institute \\
+Saint Petersburg Mathematical Society \\
+Saint Petersburg State University
+%
+\vfill
+%
+\begin{center}
+\begin{Large}
+For more information, please see \\[.1in]
+\parbox{4.75in}{
+{\sf http://www.pdmi.ras.ru/EIMI/2000/imacs/} \quad or \\
+{\sf http://math.unm.edu/aca.html} (main ACA page)
+}
+\end{Large}
+\end{center}
+\end{document}
+

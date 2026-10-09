@@ -1,0 +1,18 @@
+          Duality in Effective Algebraic Geometry.
+
+                     Bernard Mourrain
+                   INRIA, Nice, France
+            Bernard.Mourrain@sophia.inria.fr
+
+In this presentation, we will focus on the use of duality in effective
+computations on polynomials.  Its links with the theory of inverse
+systems and an application to the construction of the local ring of an
+isolated point will be described.  Its correlation with structured
+matrices and some natural extensions to the multivariate case will be
+discussed including multivariate Toeplitz, Hankel, and Van der Monde
+matrices, Bezoutians, algebraic residues and relations between them.
+Some applications to root finding problems for a system of
+multivariate polynomial equations will be given. Finallym, we will
+show how this techniques enable us to obtain a better insight into the
+major problems of multivariate polynomial computations and to improve
+substantially some known algorithms.

@@ -1,0 +1,15 @@
+Bernhard Kutzler* (Austria), b.kutzler@eunet.at
+CAS as pedagogical tools
+
+Computer algebra systems automate much of what we teach today . Many ways of
+using such tools for teaching at virtually all grade levels have been proposed
+in the past few years. We develop a two level framework for understanding,
+categorizing, and planning the use of technology in teaching and learning. At
+the first level we distinguish between the two basic uses of "automation" and
+"compensation". At the second level we discuss the four applications as
+pedagogical tools for "trivialization", "experimentation", "visualization", and
+"concentration". Based on this framework we develop the "scaffolding method" as
+a pedagogically justified sequence of using and not using technology to achieve
+a given teaching goal. We demonstrate the method with two examples: Teaching
+the solving of linear equations and teaching the solving of systems of linear
+equations. Finally we discuss the implication of technology to assessment.

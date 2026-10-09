@@ -1,0 +1,427 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>An Elimination Procedure of One Differential Variable</TITLE>
+<META NAME="description" CONTENT="An Elimination Procedure of One Differential Variable">
+<META NAME="keywords" CONTENT="carra">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="carra.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html68"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html66"
+ HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html60"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html69"
+ HREF="node6.html">An Elimination Procedure of</A>
+<B> Up:</B> <A NAME="tex2html67"
+ HREF="node4.html">An Elimination Procedure</A>
+<B> Previous:</B> <A NAME="tex2html61"
+ HREF="node4.html">An Elimination Procedure</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00031100000000000000">
+An Elimination Procedure of One Differential Variable</A>
+</H3>
+Let <I>N</I>=max{<I>n</I>,<I>q</I><SUB><I>i</I></SUB>,<I>r</I><SUB><I>j</I></SUB>: 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">}.
+
+<P>
+Let 
+<!-- MATH: $P^{(1)}=P(y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},v_{1},\ldots,
+v_{k})^{(1)}=
+P^{(1)}(y,y^{(1)},\ldots,\\y^{(N)},y^{(N+1)},z_{1},\ldots,z_{h},
+z_{1}^{(1)},\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k},v_{1}^{(1)},\ldots,
+v_{k}^{(1)})$ -->
+<IMG
+ WIDTH="1021" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$P^{(1)}=P(y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},v_{1},\ldots,
+v_{k})^{(1)...
+...1}^{(1)},\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k},v_{1}^{(1)},\ldots,
+v_{k}^{(1)})$">
+and let <I>J</I><SUB>1</SUB> be the ideal (<I>P</I>, <I>P</I><SUP>(1)</SUP>,
+
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>, 
+<!-- MATH: $R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>,
+
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">)
+in the polynomial ring 
+<!-- MATH: $R[y,\ldots,y^{(N)},
+y^{(N+1)},z_{1},\ldots,z_{h},z_{1}^{(1)},\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k},
+v_{1}^{(1)},\\\ldots,v_{k}^{(1)}]$ -->
+<IMG
+ WIDTH="581" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.gif"
+ ALT="$R[y,\ldots,y^{(N)},
+y^{(N+1)},z_{1},\ldots,z_{h},z_{1}^{(1)},\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k},
+v_{1}^{(1)},\\ \ldots,v_{k}^{(1)}]$">.
+
+<P>
+Let 
+<!-- MATH: $\sigma_{1}$ -->
+<IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$\sigma_{1}$">
+be the lexicographic term ordering on the set of power
+products in 
+<!-- MATH: $\{y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},z_{1}^{(1)},
+\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k},v_{1}^{(1)},\ldots,v_{k}^{(1)}\}$ -->
+<IMG
+ WIDTH="528" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.gif"
+ ALT="$\{y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},z_{1}^{(1)},
+\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k},v_{1}^{(1)},\ldots,v_{k}^{(1)}\}$">,
+with
+
+<!-- MATH: $y<\ldots<y^{(N)}<y^{(N+1)}<z_{1}<z_{1}^{(1)}<\ldots<z_{h}<
+z_{h}^{(1)}<v_{1}<v_{1}^{(1)}<\ldots<v_{k}<v_{k}^{(1)}$ -->
+<IMG
+ WIDTH="694" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.gif"
+ ALT="$y<\ldots<y^{(N)}<y^{(N+1)}<z_{1}<z_{1}^{(1)}<\ldots<z_{h}<
+z_{h}^{(1)}<v_{1}<v_{1}^{(1)}<\ldots<v_{k}<v_{k}^{(1)}$">.
+
+<P>
+Let <I>G</I><SUB>1</SUB> be the reduced Gr&#246;bner basis of the ideal <I>J</I><SUB>1</SUB> with respect
+to 
+<!-- MATH: $\sigma_{1}$ -->
+<IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$\sigma_{1}$">
+<BR>[<A
+ HREF="node9.html#BU1"><I>Buchberger (1976)</I></A>,<A
+ HREF="node9.html#BU2"><I>Buchberger (1976)</I></A>]. Since <I>P</I><SUP>(1)</SUP>=
+
+<!-- MATH: $\frac{\partial}{\partial v_{k}^{(1)}}(P^{(1)})v_{k}^{(1)}+T_{1}$ -->
+<IMG
+ WIDTH="164" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="$\frac{\partial}{\partial v_{k}^{(1)}}(P^{(1)})v_{k}^{(1)}+T_{1}$">
+and
+
+<!-- MATH: $R_{k}v_{k}^{(1)}-R_{k}^{(1)}$ -->
+<I>R</I><SUB><I>k</I></SUB><I>v</I><SUB><I>k</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>k</I></SUB><SUP>(1)</SUP> have degree one in 
+<!-- MATH: $v_{k}^{(1)}$ -->
+<I>v</I><SUB><I>k</I></SUB><SUP>(1)</SUP>, then
+<I>P</I> and <I>S</I><SUB>1</SUB>=
+<!-- MATH: $R_{k}T_{1}+\frac{\partial}{\partial v_{k}^{(1)}}(P^{(1)})
+R_{k}^{(1)}$ -->
+<IMG
+ WIDTH="192" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$R_{k}T_{1}+\frac{\partial}{\partial v_{k}^{(1)}}(P^{(1)})
+R_{k}^{(1)}$">
+are in 
+<!-- MATH: $J_{1} \cap R[y,\ldots,y^{(N+1)},z_{1},\ldots,
+z_{h},z_{1}^{(1)},\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k},v_{1}^{(1)},
+\ldots,v_{k-1}^{(1)}]$ -->
+<IMG
+ WIDTH="582" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$J_{1} \cap R[y,\ldots,y^{(N+1)},z_{1},\ldots,
+z_{h},z_{1}^{(1)},\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k},v_{1}^{(1)},
+\ldots,v_{k-1}^{(1)}]$">.
+So it is possible to eliminate 
+<!-- MATH: $v_{k}^{(1)}$ -->
+<I>v</I><SUB><I>k</I></SUB><SUP>(1)</SUP>between <I>P</I><SUP>(1)</SUP> and 
+<!-- MATH: $R_{k}v_{k}^{(1)}-R_{k}^{(1)}$ -->
+<I>R</I><SUB><I>k</I></SUB><I>v</I><SUB><I>k</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>k</I></SUB><SUP>(1)</SUP> and by using equalities
+
+<!-- MATH: $z_{i}^{(1)}=Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>=<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB> a polynomial
+<I>P</I><SUB>1</SUB>'=
+<!-- MATH: $P_{1}'(y,y^{(1)},\ldots,y^{(N+1)},z_{1},\ldots,
+z_{h},v_{1},\ldots,v_{k},\\v_{1}^{(1)},\ldots,v_{k-1}^{(1)})$ -->
+<IMG
+ WIDTH="478" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.gif"
+ ALT="$P_{1}'(y,y^{(1)},\ldots,y^{(N+1)},z_{1},\ldots,
+z_{h},v_{1},\ldots,v_{k},\\ v_{1}^{(1)},\ldots,v_{k-1}^{(1)})$">
+is obtained with
+
+<!-- MATH: $P_{1}' \neq P$ -->
+<IMG
+ WIDTH="68" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.gif"
+ ALT="$P_{1}' \neq P$">.
+
+<P>
+If <I>v</I><SUB><I>k</I></SUB> does not appear in <I>P</I><SUB>1</SUB>', then <I>P</I><SUB>1</SUB>' is in
+
+<!-- MATH: $J_{1} \cap R[y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},\\
+v_{1},\ldots,v_{k-1},v_{1}^{(1)},\ldots,v_{k-1}^{(1)}]$ -->
+<IMG
+ WIDTH="490" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.gif"
+ ALT="$J_{1} \cap R[y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},\\
+v_{1},\ldots,v_{k-1},v_{1}^{(1)},\ldots,v_{k-1}^{(1)}]$">.
+If <I>v</I><SUB><I>k</I></SUB> appears in <I>P</I><SUB>1</SUB>', then
+
+<!-- MATH: $1 \leq deg_{v_{k}}P_{1}'\leq deg_{v_{k}}P$ -->
+<IMG
+ WIDTH="192" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="$1 \leq deg_{v_{k}}P_{1}'\leq deg_{v_{k}}P$">
+and the resultant of <I>P</I> and
+<I>P</I><SUB>1</SUB>' with respect to the variable <I>v</I><SUB><I>k</I></SUB> is in 
+
+<!-- MATH: $J_{1} \cap F[y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},z_{1}^{(1)},
+\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k-1},v_{1}^{(1)},\ldots,v_{k-1}^{(1)}]$ -->
+<IMG
+ WIDTH="596" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.gif"
+ ALT="$J_{1} \cap F[y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},z_{1}^{(1)},
+\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k-1},v_{1}^{(1)},\ldots,v_{k-1}^{(1)}]$">.
+So there exists at least one differential polynomial <I>P</I><SUB>1</SUB> in 
+
+<!-- MATH: $G_{1} \cap F[y,\ldots,y^{(N+1)},z_{1},\ldots,\\z_{h},z_{1}^{(1)},
+\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k-1},v_{1}^{(1)},\ldots,v_{k-1}^{(1)}]$ -->
+<IMG
+ WIDTH="600" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.gif"
+ ALT="$G_{1} \cap F[y,\ldots,y^{(N+1)},z_{1},\ldots,\\ z_{h},z_{1}^{(1)},
+\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k-1},v_{1}^{(1)},\ldots,v_{k-1}^{(1)}]$">by definition of Gr&#246;bner basis <BR>
+with respect to a lexicographic
+term ordering.
+
+<P>
+Let <I>G</I><SUB>11</SUB>=
+<!-- MATH: $G_{1} \cap R[y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},z_{1}^{(1)},
+\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k-1},v_{1}^{(1)},\\\ldots,v_{k-1}^{(1)}]$ -->
+<IMG
+ WIDTH="603" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.gif"
+ ALT="$G_{1} \cap R[y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},z_{1}^{(1)},
+\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k-1},v_{1}^{(1)},\\ \ldots,v_{k-1}^{(1)}]$">.
+Since <I>G</I><SUB>11</SUB> is the reduced Gr&#246;bner basis of
+<I>J</I><SUB>11</SUB>=
+<!-- MATH: $J_{1} \cap R[y,\ldots,y^{(N+1)},\\z_{1},\ldots,z_{h},z_{1}^{(1)},
+\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k-1},v_{1}^{(1)},\ldots,v_{k-1}^{(1)}]$ -->
+<IMG
+ WIDTH="595" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.gif"
+ ALT="$J_{1} \cap R[y,\ldots,y^{(N+1)},\\ z_{1},\ldots,z_{h},z_{1}^{(1)},
+\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k-1},v_{1}^{(1)},\ldots,v_{k-1}^{(1)}]$">with respect to 
+<!-- MATH: $\sigma_{1}$ -->
+<IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$\sigma_{1}$">
+and <BR>
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i},
+R_{j}v_{j}^{(1)}-R_{j}^{(1)} \in J_{11}$ -->
+<IMG
+ WIDTH="276" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.gif"
+ ALT="$z_{i}^{(1)}-Q_{i}^{(1)}z_{i},
+R_{j}v_{j}^{(1)}-R_{j}^{(1)} \in J_{11}$">
+for all 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k-1$ -->
+<IMG
+ WIDTH="140" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.gif"
+ ALT="$j=1,\ldots,k-1$">,
+then 
+<!-- MATH: $P_{1} \in G_{11}$ -->
+<IMG
+ WIDTH="81" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.gif"
+ ALT="$P_{1} \in G_{11}$">
+and <I>P</I><SUB>1</SUB>=
+<!-- MATH: $P_{1}(y,\ldots,
+y^{(N+1)},z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-1},
+v_{1}^{(1)},\ldots,v_{k-1}^{(1)})$ -->
+<IMG
+ WIDTH="459" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.gif"
+ ALT="$P_{1}(y,\ldots,
+y^{(N+1)},z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-1},
+v_{1}^{(1)},\ldots,v_{k-1}^{(1)})$">.
+If 
+<!-- MATH: $deg_{v_{k-1}^{(1)}}P_{1}$ -->
+<I>deg</I><SUB><I>v</I><SUB><I>k</I>-1</SUB><SUP>(1)</SUP></SUB><I>P</I><SUB>1</SUB>=<I>d</I>, then
+the pseudoremainder <I>P</I><SUB>1</SUB><SUP>*</SUP> of <I>P</I><SUB>1</SUB> with respect to
+
+<!-- MATH: $R_{k-1}v_{k-1}^{(1)}-R_{k-1}^{(1)}$ -->
+<I>R</I><SUB><I>k</I>-1</SUB><I>v</I><SUB><I>k</I>-1</SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>k</I>-1</SUB><SUP>(1)</SUP> as polynomials in  
+<!-- MATH: $v_{k-1}^{(1)}$ -->
+<I>v</I><SUB><I>k</I>-1</SUB><SUP>(1)</SUP> is
+in <I>J</I><SUB>11</SUB> and 
+<!-- MATH: $v_{k-1}^{(1)}$ -->
+<I>v</I><SUB><I>k</I>-1</SUB><SUP>(1)</SUP> does not appear in <I>P</I><SUB>1</SUB><SUP>*</SUP>. So we can
+assume that <I>P</I><SUB>1</SUB>=
+<!-- MATH: $P_{1}(y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},v_{1},
+\ldots,v_{k-1},v_{1}^{(1)},\ldots,v_{k-2}^{(1)})$ -->
+<IMG
+ WIDTH="459" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.gif"
+ ALT="$P_{1}(y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},v_{1},
+\ldots,v_{k-1},v_{1}^{(1)},\ldots,v_{k-2}^{(1)})$">.
+
+<P>
+<P>
+<DIV><B>REMARK  2</B> &nbsp; 
+The elimination of the differential variable <I>v</I><SUB><I>k</I></SUB> in the system <IMG
+ WIDTH="33" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$(\beta)$">can be also obtained in the following ways.
+
+<P>
+(i) By using the Ritt process of differential
+reduction for the extended characteristic set, it is sufficient to find
+the extended characteristic set of the differential polynomials <I>P</I>and 
+<!-- MATH: $R_{k}v_{k}^{(1)}-R_{k}^{(1)}$ -->
+<I>R</I><SUB><I>k</I></SUB><I>v</I><SUB><I>k</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>k</I></SUB><SUP>(1)</SUP>. It riquires the
+pseudo division of <I>P</I><SUP>(1)</SUP> by 
+<!-- MATH: $R_{k}v_{k}^{(1)}-R_{k}^{(1)}$ -->
+<I>R</I><SUB><I>k</I></SUB><I>v</I><SUB><I>k</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>k</I></SUB><SUP>(1)</SUP> as
+polynomials in 
+<!-- MATH: $R[y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},z_{1}^{(1)},
+\ldots,\\z_{h}^{(1)},v_{1},\ldots,v_{k},v_{1}^{(1)},\ldots,v_{k-1}^{(1)}]
+[v_{k}^{(1)}]$ -->
+<IMG
+ WIDTH="581" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.gif"
+ ALT="$R[y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},z_{1}^{(1)},
+\ldots,\\ z_{h}^{(1)},v_{1},\ldots,v_{k},v_{1}^{(1)},\ldots,v_{k-1}^{(1)}]
+[v_{k}^{(1)}]$">
+and the extended characteristic set of the partial remainder
+of the above pseudodivision <I>R</I><SUB>1</SUB> and <I>P</I> [<A
+ HREF="node9.html#RT1"><I>Ritt (1950</I></A>].
+
+<P>
+(ii) By using the differential resultant theory, e.g. by finding the
+differential resultant of the differential polynomials <I>P</I> and
+
+<!-- MATH: $R_{k}v_{k}^{(1)}-R_{k}^{(1)}$ -->
+<I>R</I><SUB><I>k</I></SUB><I>v</I><SUB><I>k</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>k</I></SUB><SUP>(1)</SUP>, as differential polynomials in
+
+<!-- MATH: $R\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-1}\}\{v_{k}\}$ -->
+<IMG
+ WIDTH="282" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.gif"
+ ALT="$R\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k-1}\}\{v_{k}\}$">.
+By differential
+resultant theory such differential resultant is equal to the resultant of
+the polynomials <I>P</I>, <I>P</I><SUP>(1)</SUP> and 
+<!-- MATH: $R_{k}v_{k}^{(1)}-R_{k}^{(1)}$ -->
+<I>R</I><SUB><I>k</I></SUB><I>v</I><SUB><I>k</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>k</I></SUB><SUP>(1)</SUP> in the
+polynomial ring 
+<!-- MATH: $R[y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},z_{1}^{(1)},\\
+\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k-1},v_{1}^{(1)},\ldots,v_{k-1}^{(1)}]
+[v_{k},v_{k}^{(1)}]$ -->
+<IMG
+ WIDTH="624" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.gif"
+ ALT="$R[y,\ldots,y^{(N+1)},z_{1},\ldots,z_{h},z_{1}^{(1)},\\
+\ldots,z_{h}^{(1)},v_{1},\ldots,v_{k-1},v_{1}^{(1)},\ldots,v_{k-1}^{(1)}]
+[v_{k},v_{k}^{(1)}]$">
+[<A
+ HREF="node9.html#CA2"><I>Carra' Ferro (1997)</I></A>]. <BR>
+In all such elimination procedures of one differential variable the differential
+polynomials <I>P</I>, <I>P</I><SUP>(1)</SUP> and 
+<!-- MATH: $R_{k}v_{k}^{(1)}-R_{k}^{(1)}$ -->
+<I>R</I><SUB><I>k</I></SUB><I>v</I><SUB><I>k</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>k</I></SUB><SUP>(1)</SUP> are involved.
+
+<P>
+(iii) By using the differential Gr&#246;bner basis theory with respect to
+an elimination differential term ordering [<A
+ HREF="node9.html#CA1"><I>Carra' Ferro (1987)</I></A>,<A
+ HREF="node9.html#OL1"><I>Ollivier (1990)</I></A>] <BR>[<A
+ HREF="node9.html#WE1"><I>Weispfenning (1993)</I></A>].</DIV><P></P>
+
+<P>
+<P>
+<DIV><B>REMARK  3</B> &nbsp; 
+The same elimination procedures hold if the variable <I>z</I><SUB><I>h</I></SUB> has to be eliminated in
+the system <IMG
+ WIDTH="33" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$(\beta)$">.
+It is sufficient to work with the differential
+polynomials <I>P</I>, <I>P</I><SUP>(1)</SUP> and 
+<!-- MATH: $z_{h}^{(1)}-Q_{h}^{(1)}z_{h}$ -->
+<I>z</I><SUB><I>h</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>h</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>h</I></SUB>.</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html68"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html66"
+ HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html60"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html69"
+ HREF="node6.html">An Elimination Procedure of</A>
+<B> Up:</B> <A NAME="tex2html67"
+ HREF="node4.html">An Elimination Procedure</A>
+<B> Previous:</B> <A NAME="tex2html61"
+ HREF="node4.html">An Elimination Procedure</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

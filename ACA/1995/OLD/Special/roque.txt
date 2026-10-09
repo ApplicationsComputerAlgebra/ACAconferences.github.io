@@ -1,0 +1,58 @@
+		  Computer Algebra Applied to Technology 
+		  ======================================
+                       	 Special session proposal
+						 
+	 
+               IMACS Conference on Applied Computer Algebra 
+              University of New Mexico, 16-20th of May, 1995
+                      Chair: Prof. Stanly Steinberg
+     
+                     
+        	  	     Waldir L. Roque
+         	     Institute of Mathematics - UFRGS		
+		    	    roque@mat.ufrgs.br
+				   				   
+	 
+     During the last few years we have notice an increasing
+number in the applications of computer algebra techniques and
+systems to investigate technological problems. Applications can
+be seen in fields like:
+ 
+-- Aerodynamics
+-- Bifurcation phenomena in condensed-phase surface combustion
+-- Elasticity
+-- Eletronics
+-- Fluid mechanics
+-- Information management systems
+-- Kinetics and mechanical systems
+-- Microwave technology
+-- Nonlinear control systems
+-- Robotics
+-- Etc...
+ 
+   The motivation of this special session is: i) to provide a
+forum to discuss new results and contributions in this domain,
+ii) to promote the exchange of ideas, iii) to stimulate
+collaborations and development of joint projects,  and iv) to a
+great extent, to attract industrial partners.
+ 
+   Those that are interested in attending and submitting a paper
+to this session please forward an email to roque@mat.ufrgs.br.
+   
+   A preliminary (incomplete) list of potential speakers is
+given below. The names suggested have made no commitment to
+attend the conference.
+ 
+ 
+Andre Heck, RIACA, CAN, The Netherlands
+Arjeh M. Cohen, RIACA, The Netherlands
+B. Beauzamy, University of Paris, France
+Bram de Jager, Eidenhoven University of Technology, The Netherlands
+Herwig Mayr, RISC, Austria
+Man Kan Kwong, Argonne National Lab., USA	  
+Marc Garbey, Ecole Normale Superieure de Lyon, France
+M. A. Hussain, General Eletric Company, USA
+Sabine Stifter, RISC, Austria
+ 
+ 
+                ======================

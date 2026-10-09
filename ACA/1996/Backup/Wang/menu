@@ -1,0 +1,36 @@
+# Created by rsalamon@yucca on Thu Jul  4 12:00:39 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Carra.ps
+Path=9/conference/IMACS96/skeletons/Wang/Carra.ps
+
+Name=Faugere.ps
+Path=9/conference/IMACS96/skeletons/Wang/Faugere.ps
+
+Name=Gatermann.html
+Path=0/conference/IMACS96/skeletons/Wang/Gatermann.html
+
+Name=Miller.html
+Path=0/conference/IMACS96/skeletons/Wang/Miller.html
+
+Name=Noro.html
+Path=0/conference/IMACS96/skeletons/Wang/Noro.html
+
+Name=Pauer.html
+Path=0/conference/IMACS96/skeletons/Wang/Pauer.html
+
+Name=Pauer.ps
+Path=9/conference/IMACS96/skeletons/Wang/Pauer.ps
+
+Name=Saccomani.html
+Path=0/conference/IMACS96/skeletons/Wang/Saccomani.html
+
+Name=Stetter.html
+Path=0/conference/IMACS96/skeletons/Wang/Stetter.html
+
+Name=Wang.html
+Path=0/conference/IMACS96/skeletons/Wang/Wang.html
+
+Name=Yang.html
+Path=0/conference/IMACS96/skeletons/Wang/Yang.html
+

@@ -1,0 +1,136 @@
+%%-----------------------------------------------------
+%%   And the last abstract from Rabat. The e-mail of
+%%authors is:  mikram@fsr.ac.ma
+%%----------------------------------------------------
+%% This document created by Scientific Word (R)
+%% Version 2.0
+
+
+\documentclass[11pt,thmsa]{article}
+\newcommand{\R}{\mbox{\rm\bf R}} % the field of reals
+%\usepackage{amsfonts}
+%%%%%
+%\usepackage{sw20lart}
+
+%TCIDATA{TCIstyle=Article/art4.lat,lart,article}
+
+%\input tcilatex
+\begin{document}
+
+
+\begin{center}
+\textbf{Computation of Normal Forms of Hamiltonian Systems}
+
+\textbf{in the Presence of Poisson Commuting integrals}
+
+(Liouville-Integrability and Birkhoff Normal Forms)\\[0.2cm]
+\end{center}
+
+\begin{center}
+\textit{J. Mikram \& F. Zinoun}
+
+\textit{D\'epartement de Math\'ematiques et Informatique}
+
+\textit{Facult\'e des Sciences de Rabat, Morocco}\\[1cm]
+\end{center}
+Consider a Hamiltonian system with $n$ degrees of freedom having the
+origin as an equilibrium point, and assume that the Hamiltonian function $%
+H(z)$ is of class $C^\infty $ in a neighborhood of the origin. By setting $%
+H(0)=0$, the Hamiltonian function can be written as 
+\[
+H=\frac 12\left\langle Sz,z\right\rangle +O\left( \left| z\right| ^3\right) 
+\]
+and the corresponding Hamiltonian system is 
+\begin{equation}
+\frac{dz}{dt}=JH_z=JS_z+O\left( \left| z\right| ^2\right) ,\;\;\;J=\left( 
+\begin{array}{cc}
+0 & I \\ 
+-I & 0
+\end{array}
+\right) 
+\end{equation}
+where $S$ is the Hessian matrix of $H$ at the origin, $\left\langle
+.,.\right\rangle $ denotes the Euclidean inner product of {\R}$^{2n}$, $I$
+is the identity matrix of degree $n$ and $O\left( \left| z\right| ^d\right) $
+is a function whose Taylor expansion at the origin begins with terms of
+order $\geq d$. If the origin is an elliptic equilibrium point, we can find
+a (real) linear canonical transformation so that the Hamiltonian function is
+of the form 
+\[
+H=\frac 12\sum\limits_{j=1}^n\lambda _j\left( x_j^2+y_j^2\right) +O\left(
+\left| z\right| ^3\right) ,\;\;\lambda _j\in \R\
+\]
+A preliminary reduction to normal form consists in carrying out a canonical
+change in variables allowing to pass from the Hamiltonian $H$ to a simpler
+(normal form) $\widetilde{H}$, satisfying 
+\[
+adH_2\left( \widetilde{H}\right) =0
+\]
+$adH_2$ being the linear operator $\left\{ H_2,-\right\} $ where $H_2=\frac
+12\sum\limits_{j=1}^n\lambda _j\left( x_j^2+y_j^2\right) $ and the brackets
+denote the canonical Poisson bracket 
+\[
+\left\{ F,G\right\} =\sum\limits_{j=1}^n\left( \frac{\partial F}{\partial
+x_j}\frac{\partial G}{\partial y_j}-\frac{\partial F}{\partial y_j}\frac{%
+\partial G}{\partial x_j}\right) 
+\]
+The aim of this talk is to show how one can take profitably the
+existence of first integrals (i.e., quantities $F$ that are preserved by the
+flow of the Hamiltonian system, or equivalently $\left\{ H,F\right\} =0$) to
+produce a simplified normal form.\\ The motivation for considering the first
+integrals of the Hamiltonian (1) in view of a further reduction of the
+normal form comes from the following fact:\\ Let $F$ be a first integral of
+(1), that is 
+\[
+\left\{ H,F\right\} =0
+\]
+Suppose we have taken $H$ into a normal form $\widetilde{H}$ via a canonical
+coordinate transformation $T$. Then, if we consider the transformation of $F$
+under $T$, writing $F\circ T\equiv \widetilde{F}$ (not necessarily in normal
+form!), we have 
+\[
+\left\{ \widetilde{H},\widetilde{F}\right\} =0
+\]
+because $T$ is canonical and then it preserves the Poisson bracket.
+Therefore, the presence of a first integral for (1) will pose some
+restriction to the normal form $\widetilde{H}$. In fact, while in general $%
+\widetilde{H}$ only satisfies (with obvious notation) 
+\[
+\widetilde{H}\in Ker\left( adH_2\right) \;\;,
+\]
+in the presence of the first integral we will also have 
+\[
+\widetilde{H}\in Ker\left( ad\widetilde{F}\right) 
+\]
+which can lead to a simplification of the normal form.\\[0.2cm] This
+obvious, but important, fact prompts to examine in a more general context
+for general Hamiltonian structures the role of first integrals in further
+reducing the normal form unfolding of Hamiltonian systems. The result is
+that, via a normal form approach, we can reduce simultaneously and in an
+algorithmic way the Hamiltonian together with its Poisson commuting
+integrals into a joint normal form which is given a simple characterization.\\[0.2cm] A prominent class of Hamiltonian systems for illustrating the
+joint normal form approach are Liouville-integrable systems, i.e., roughly, $%
+n$ degrees of freedom Hamiltonians with $n$ functionally independent and
+Poisson commuting integrals. We have shown that a number of interesting
+results on computation of Birkhoff normal forms for Liouville-integrable
+Hamiltonian systems can be seen as a direct consequence of the joint normal
+form approach.\\[0.2cm] As a Computer Algebra Application, we choose an
+integrable case of the generalized H\'enon-Heiles system. This provides an
+interesting example to show the importance of the joint normal form
+algorithm in taking to Birkhoff normal form (and then solving)
+Liouville-integrable Hamiltonian systems.\\[0.2cm] This work is an extension
+(and application to physical problems) of a previous work communicated in
+IMACS-ACA'98. A part of the overall algorithm has been implemented in the
+computer algebra system \textsc{MAPLE V}.\\[1cm] \textbf{References:}\\[0.2cm]  1 - G. Cicogna and G. Gaeta, \textit{Poincar\'e normal forms and
+Lie point symmetries}, J. Phys. A (Math. Gen.) 27 (1994) 461-476.\\  2 - G.
+Cicogna and G. Gaeta, \textit{Normal forms and nonlinear symmetries}, J.
+Phys. A (Math. Gen.) 27 (1994) 7115-7124.\\  3 - H. Ito, \textit{Convergence
+of Birkhoff normal forms for integrable systems}, Comment. Math. Helv. 64
+(1989) 412-461.\\  4 - H. Ito, \textit{Some aspects of integrability and
+action-angle variables}, Sugaku Expositions, vol. 3, no. 2 (1990) 213-232.\\ 
+5 - H. Ito, \textit{Integrability of Hamiltonian systems and Birkhoff normal
+forms in the simple resonance case}, Math. Ann. 292 (1992) 411-444.\\
+6 - S. Walcher, \textit{Algebraishe Probleme bei Normalformen Gew\"ohnlicher
+Differentialgleichungen}, Preprint Technische Universit\"at M\"unchen, 1990.
+
+\end{document}

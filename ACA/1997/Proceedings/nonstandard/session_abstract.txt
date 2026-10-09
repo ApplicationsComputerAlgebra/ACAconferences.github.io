@@ -1,0 +1,79 @@
+CALL FOR PAPERS:    Session "NON-STANDARD APPLICATIONS OF COMPUTER ALGEBRA"
+Session chair:      Eugenio Roanes-Lozano (eroanes@eucmos.sim.ucm.es)
+
+Conference:         IMACS Applied Computer Algebra ACA '97 Conference
+Dates:              July, 24-26 1997
+Place:              Aston Wailea Resort, Maui, Hawaii, USA
+Session:            Non-Standard Applications of Computer Algebra
+Gen. Chair:         Michael Wester   (wester@math.unm.edu)
+Program chairs:     Jacques Calmet   (calmet@ira.uka.de)
+                    Vladimir Gerdt   (gerdt@jinr.dubna.su)
+Local arrangements: Stanly Steinberg (stanly@math.unm.edu)
+                    Nicolas Robidoux
+
+Some notes about the conference:
+  This is the 3rd IMACS Applied Computer Algebra Conference. Previous ones
+were held at New Mexico University (chair: Stanly Steinberg) and RISC-Linz
+(chairs: Bruno Buchberger and Stanly Steinberg).
+
+For more information about the Conference, see:
+   http://math.unm.edu/ACA/1997.html
+(observe that the conference takes place at the same place and immediately
+after PASCO'97 and ISSAC'97).
+
+ABOUT THE SESSION "Non-Standard Applications of CA":
+  There are several sessions in these conferences -individuals are invited
+to organize special sessions-. This particular one is focused to applications
+of CA other than the classic ones or that use a new approach to treat a
+well known problem. Emphasis is put on the novelty.
+  This session was organized for the first time in 1996. As an orientation,
+the papers in that 1996 session treated the following topics:
+   Artificial Intelligence and CA (J. Calmet)
+   Differential Equations (S. Steinberg et al.)
+   Electrical Networks (A. Montes)
+   Thermodynamics and CA I & II (R. Taylor)
+   CA and Statistics (S. Nakagawa et al.)
+   Railway Interlockings (E. Roanes & L. Laita)
+   Regular Expressions (A. Trejo & G. Fernandez)
+These papers together with some others regarding:
+   CA and Field Theories (J. Calmet & W.M. Seiler)
+   CA and Education: Calculations involving physical units with a CAS (J.Boehm)
+                     Introducing real numbers and CASs (T. Recio & M.J. Gzlez.)
+   Molecular Dynamics (D. Isbister et al.)
+   Straight-Line Programs (J. Llovet et al.)
+   CA and Multi-Valued Logics (E. Roanes & L. Laita)
+have been collected to produce a special issue of MATHEMATICS AND COMPUTERS
+IN SIMULATION (the main IMACS Journal, published by Elsevier, under the
+North-Holland imprint), to appear soon (editors: E. Roanes, S. Steinberg,
+H. Hong).
+  As can be seen above, there is no restriction in the topics treated, that
+already cover a wide area. Some papers give an general overview of a certain
+topic while others treat a very specific problem. Some treat research topics
+while other are more related to educational issues. Observe that the later
+have not been restricted to university education.
+  The only precondition is that the paper should be "self-contained" (in the
+sense that a mathematician that is used to CA's techniques must be able to
+follow it). Therefore in papers from other sciences, engineering or industry,
+an explanatory introduction together with the required definitions (even if
+elementary in its field) should be included.
+  There is no condition or even recommendation about the CAS or piece of CAS
+to use (or to develop!). Anyway it is recommended to avoid the inclusion of
+detailed long (tedious) and complicated code. In such case the inclusion of
+commented CAS-independent algorithms and/or easy-to-follow "worksheets" is
+encouraged. When including code try to comment it in a way such that the idea
+in the background can be followed by anyone not knowing the particular CA
+language used.
+
+PROPOSALS for talks to be included at this session are welcome.
+
+Best wishes,
+Eugenio
+
+
+  **************************************************************************
+  *  DDr. Eugenio Roanes-Lozano  *   e-mail:  eroanes@eucmos.sim.ucm.es    *
+  *  Dept. Algebra, Desp. 3517   *            eroanes@fi.upm.es            *
+  *  Edificio "La Almudena"      *******************************************
+  *  Paseo Juan XXIII s/n        *   Phone (voice only):  + 34 1 394 6248  *
+  *  E-28040 (SPAIN)             *                                         *
+  ************************************************************************+*

@@ -1,0 +1,47 @@
+    "Sparse structual Gr\"obner basis detection"
+
+    Karin Gatermann.
+    Konrad-Zuse-Zentrum Berlin
+    Takustr. 7
+    D-14195 Berlin
+    Germany
+    E-mail:gatermann@zib.de
+	
+The detection of a term order such that an existing set of polynomials
+is a Gr\"obner basis is an important question since
+there are several techniques known to convert a Gr\"obner basis
+with respect to some term order to another Gr\"obner basis
+with respect to another term order.
+The well-known conversion techniques include FGLM-class algorithms
+exploiting linear algebra technique as well as the Gr\"obner walk
+by Collart, Kalbrener and Mall and its improvement, the fractal walk
+by Amrhein and Gloor. 
+Also the Hilbert series driven version of the Buchberger algorithm
+uses the knowledge of a Gr\"obner basis with respect 
+to some term order which is different from the order one is interested in.
+
+Sturmfels and Wiegelmann gave a method in order to find a term order such that
+the initial forms with respect to this term order form a Gr\"obner basis
+by the 1. Buchberger criterion (Structual Gr\"obner basis detection). 
+That means that the leading monomials are coprime. 
+Their method is based on searching for a  maximal matching in
+a weighted bipartite graph and integer programming. In case there are more variables
+than polynomials partitions of the variables are considered.
+
+We analyse this approach for the case that the polynomials are sparse.
+Then first the appearance of monomials is investigated in order to bound the
+number of useful partitions. There are three informations necessary.
+First the supports (set of variables) of all appearing monomials are extracted. 
+Then for each support
+the polynomials which include monomials with this support are extracted.
+The third information is a table with supports and the degrees of the polynomials
+in these variable groups.
+Based on the first two informations the partitions which makes sense for the 
+structual Gr\"obner basis detection problem are determined.
+Secondly, the data of the 
+weighted bipartite graphs are easily obtained from the table.
+This rearrangement of steps result in much fewer matching problems,
+much easier available data during this process and also less 
+integer programming problems. Thus the complexity of the 
+sparse structual Gr\"obner basis detection is much better than without
+exploiting sparsity. We will demonstrate this with examples.

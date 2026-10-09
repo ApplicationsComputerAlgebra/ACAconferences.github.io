@@ -1,0 +1,312 @@
+<html><head><title>ACA 2003 Session T5: Applications of Groebner Bases</title></head>
+
+<body>
+
+
+<h1> T5: Applications of Groebner Bases </h1>
+
+ACA 2003:  
+<a href="http://math.unm.edu/ACA/2003/2003.html">Home</a>,
+<a href="http://math.unm.edu/ACA/2003/Sessions.html">Sessions</a> 
+
+
+<h2>Organizers</h2>
+<ul>
+
+<li> <a href="mailto:tranqn@hal.lamar.edu">Quoc-Nam Tran</a> (Lamar University, USA)
+
+</li><li> <a href="mailto:levin@cua.edu">Alexander Levin</a> (CUA, USA)
+
+</li></ul>
+
+
+<h2>Overview</h2>
+<ul>
+
+<li> <h3> Problem </h3>
+     This session is a continuation of a series of sessions on the
+      theory of Groebner bases and its applications organized at
+      previous ACA conferences and other workshops. The method of
+      Groebner bases has become one of the most important techniques in
+      providing exact solutions of nonlinear problems in multivariate
+      polynomial ideal theory, in computational commutative algebra, in
+      elimination theory, in solving systems of algebraic equations, and
+      in many other related areas. It is also being used fruitfully in a
+      variety of seemingly unrelated research areas such as geometrical
+      theorem proving, integer programming, solid modeling and
+      engineering. The method is implemented in all major computer
+      algebra systems.
+     <p>
+  
+
+</p></li><li> <h3> Motivation and Importance </h3>
+     Nevertheless, the field is still under active development both in
+      the direction of improving the method by new theoretical insights
+      and in finding new applications. This time we will concentrate on
+      efforts to improve the method including:
+
+      (a) enlarged criteria for detecting useless zero reductions;
+
+      (b) basis conversion;
+
+      (c) involutive algorithms and Janet bases;
+
+      (d) nontrivial applications of the method of Groebner basies in
+      computer aided design, modeling, mathematics, sciences,
+      engineering, logic, education and other research areas.
+     <p>
+
+</p></li></ul>
+
+
+<h2>Talks/Abstracts</h2>
+<ul>
+
+<li><h3>ACGB on Varities</h3>
+    <a href="mailto:ysato@rs.kagu.tus.ac.jp">Yosuke Sato</a> (Tokyo University of Science, Japan)<br> 
+    <a href="mailto:ysato@rs.kagu.tus.ac.jp">Akira Suzuki</a> (Kobe University, Japan)<br> 
+    <a href="mailto:ysato@rs.kagu.tus.ac.jp">Katsusuke Nabeshima</a> (Ritsumeikan University, Japan)
+    <p>
+    <strong>Abstract</strong>: 
+    In construction of parametric Gr\"obner bases, we
+      usually assume that
+      parameters can take arbitrary values. In case, however, there exist
+      some constraints among parameters, it is more natural to construct
+      parametric Gr\"obner bases for only parameters satisfying such
+      constraints.
+      Using this idea, we formalized parametric Gr\"obner bases in terms of
+      ACGB(Alternative Comprehensive Gr\"obner Bases) which we proposed in
+      ISSAC2002.
+      This natural formalization leads us to an interesting and
+      desirable fact
+      that is discrete comprehensive Gr\"obner bases studied by us can be
+      naturally defined and generalized as special instances of ACGB.
+    </p><p>         
+
+</p></li><li><h3>Groebner Bases w.r.t. Several Orderings and Difference Dimension Polynomials</h3>
+    <a href="mailto:levin@cua.edu">Alexander Levin</a> (CUA, USA)
+    <p>
+    <strong>Abstract</strong>: 
+    Let $K$ be a partial difference field with a basic set
+      $\sigma$ and let a partition of $\sigma$ into $p$ disjoint subsets
+      be fixed. We consider a generalization of the Grobner basis method
+      to free difference modules and apply the new technique to the
+      study of difference dimension.
+    </p><p>        
+
+</p></li><li><h3>Comparison of the parallellization quality of algorithms for computing Groebner and involutive bases</h3>
+    <a href="mailto:">V. Mityunin, Pankratev</a> (Moscow State University, Russia)
+    <p>
+    <strong>Abstract</strong>: 
+    Let K be a partial difference field with a basic set S
+      and let a partition of S into p disjoint subsets be fixed. We
+      consider a generalization of the Gröbner basis method to free
+      difference modules and apply the new technique to the study of
+      difference dimension. In particular, we generalize the author's
+      theorems on difference dimension polynomials and obtain new
+      invariants of a finitely generated difference field extension.
+    </p><p>        
+
+</p></li><li><h3>Efficient Groebner Basis Computation for Finding Implicit Representations of Geometric Objects</h3>
+    <a href="mailto:tranqn@hal.lamar.edu">Quoc-Nam Tran</a> (Lamar University, USA)
+    <p>
+    <strong>Abstract</strong>: 
+    The author uses new results and techniques from the 
+method of Groebner bases to devise an efficient and 
+reliable algorithm for finding implicit representations 
+of geometric objects. The process of finding implicit 
+representations is also known as implicitization. 
+Implicitization is an "established" research topic, which 
+is studied in several research areas such as computer 
+aided geometric design (CAGD), visualization and solid 
+modeling. However, until now there is no method for 
+implicitization that is both reliable and efficient. 
+The implicitization method using Groebner bases is 
+reliable but not efficient and the other two main 
+approaches, namely Dixon's resultants and moving 
+surfaces, are more efficient but not reliable. In the 
+context of this research, a reliable method is a method 
+that theoretically never fails to give a correct 
+answer. An efficient method is a method that has a 
+better complexity or a more reasonable running time and 
+consumes less memory space in order to support 
+interaction between the designer/user and the computer. 
+
+In this paper, the author investigates the use of the 
+deterministic Groebner walk method to convert a 
+parametric representation of a surface into its 
+implicit form. For rational parametric surfaces, the 
+author uses a different approach to deal with base 
+points in that the calculation of a Groebner basis for 
+the starting cone is no longer needed. This approach 
+will help to improve the efficiency of the algorithms 
+because the usual calculation of the implicit 
+representation, which often consumes a lot of time and 
+memory space, is replaced by a sequence of small 
+calculations along the walking path and then lift the 
+results using linear transformations. 
+
+Another important task of this research is to reduce 
+the number of terms of the intermediate polynomials and 
+find criteria for detecting unnecessary reduction. 
+Experimental results with the deterministic Groebner 
+walk conversion method show that most of the time for 
+implicitization is used for reducing the minimal bases 
+after lifting. Obviously, not all of the polynomials 
+need to be reduced; for example, at the last cone most 
+of the polynomials do not need to be reduced. 
+Therefore, detecting all unnecessary reductions would 
+be a leap in improving the efficiency of algorithms for 
+implicitization. This will also significantly reduce 
+the memory space needed for the calculation. 
+
+This research will hopefully produce improved 
+algorithms for implicitization, which will never fails, 
+faster and consume less memory space. Such an efficient 
+and reliable algorithm will make an impact on research 
+areas dealing with designing curves and surfaces. For 
+example, it can be used for finding the intersection of 
+surfaces, to verify whether or not a point lies on a 
+surface, etc.
+    </p><p>        
+
+</p></li><li><h3>Using Groebner basis for determining the equivalence of linear codes.</h3>
+    <a href="mailto:edgar.martinez.ieee.org">Edgar Martinez-Moro</a> (Universidad de Valladolid,Spain)
+    <p>
+    <strong>Abstract</strong>: 
+    Two linear codes are permutation-equivalent if they are
+      equal up to  a
+      permutation on the codeword coordinates. We present an invariant
+      for the
+      class of linear codes, i.e. a mapping such that any two permutation
+      equivalent codes take the  same value. This mapping is closely
+      related to the
+      ideas behind FGLM (Faugere, Gianni, Lazard and Mora 1993), mainly
+      to the
+      presence of linear algebra techniques into the framework of some
+      Groebner
+      bases tools. We show how these Groebner basis tools can be used to
+      determine
+      if two linear codes are equivalent or not.
+    </p><p>        
+
+</p></li><li><h3>Graphs of involutive divisions</h3>
+    <a href="mailto:%20kate_late@mail.ru">Ekaterina S. Shemyakova</a> (Moscow State Univrsity, Russia)
+    <p>
+    <strong>Abstract</strong>: 
+    In this article the definitions of projections of
+      involutive divisions and graphs are formulated.
+      With their help, series of new examples of involutive divisions
+      are constructed.
+      The criteria of completeness and globalness of involutive
+      divisions in the language of the graphs are formulated and proved.
+      It is obtained and proved the criterion of noetherian global
+      involutive division corresponds to the given graph.
+    </p><p>        
+
+</p></li><li><h3>Computing Groebner Bases for Vanishing Ideals of Finite Sets of Point</h3>
+    <a href="mailto:jeffref@ces.clemson.edu">Jeff Farr, Suhong Gao</a> (Clemson, USA)
+    <p>
+    <strong>Abstract</strong>: 
+    We present an algorithm that incrementally computes a
+      Gr\"obner basis for
+      the vanishing ideal of any finite set of points in
+      ${\mathbb{F}}^m$ under
+      any given monomial order, and we apply this algorithm to multivariate
+      polynomial interpolation and rational function interpolation. Our
+      algorithm is polynomial in the dimension, $m$, and the number of
+      points,
+      $n$. This approach is completely different from the several forms
+      which
+      rely on Gauss elimination and is, in fact, a natural
+      generalization of
+      univariate Newton interpolation.
+    </p><p>        
+
+</p></li><li><h3>An Application of Algebraic Geometry in Statistical Disclosure Limitation</h3>
+    <a href="mailto:sesa@stat.cmu.edu">Aleksandra Slavkovic</a> (Carnegie Mellon University, USA)
+    <p>
+    <strong>Abstract</strong>: 
+    Statistical disclosure limitation applies statistical tools to address 
+the problem of limiting sensitive information releases about 
+individuals/groups while maintaining proper statistical inferences.  
+Within this context, Dobra and Fienberg (2000,2002) have recently
+employed 
+Gr\"obner bases in connection with graphical models given a set of 
+marginal counts to establish bounds and distributions for cell entries
+in 
+contingency tables.  Building on their work and that of Garcia et. al. 
+(2003), we explore the applicability of Gr\"obner bases in connection
+with 
+Bayesian networks to address the issue of data confidentiality when the 
+released information is in the form of an arbitrary collection of 
+conditional and marginal distributions.
+    </p><p>        
+
+</p></li><li><h3>A Maple package for fast conversion of Groebner bases</h3>
+    <a href="mailto:">Quoc-Nam Tran</a> (Lamar University, USA)
+    <p>
+    <strong>Abstract</strong>: 
+    In this talk, the author will present a new Maple
+      package that uses the deterministic Groebner walk
+      method for fast conversion of Groebner bases. Previous
+      efforts to implement the Groebner walk method
+      encountered some technical problems, which resulted in
+      packages with many limitations. This new package
+      overcame most of the known"&gt;Edgar Martinez-Moro (Universidad de Valladolid,Spain)
+    </p><p>
+    <strong>Abstract</strong>: 
+    Two linear codes are permutation-equivalent if they are
+      equal up to  a
+      permutation on the codeword coordinates. We present an invariant
+      for the
+      class of linear codes, i.e. a mapping such that any two permutation
+      equivalent codes take the  same value. This mapping is closely
+      related to the
+      ideas behind FGLM (Faugere, Gianni, Lazard and Mora 1993), mainly
+      to the
+      presence of linear algebra techniques into the framework of some
+      Groebner
+      bases tools. We show how these Groebner basis tools can be used to
+      determine
+      if two linear codes are equivalent or not.
+    </p><p>        
+
+</p></li><li><h3>Computing foveal wavelets</h3>
+    <a href="mailto:schost@gage.polytechnique.fr">Eric Schost, Erwan Le Pennec</a> (Ecole polytechnique, France)
+    <p>
+    <strong>Abstract</strong>: 
+    Foveal approximation spaces were introduced by Mallat, with a view
+towards efficient approximation of real-valuated functions with
+isolated singularities. Le Pennec and Mallat then showed how to use
+these techniques for image compression, using bandelet bases.
+
+In this talk, we study foveal spaces generated by successive
+dilatations of two mother foveal wavelets. We detail the computations
+necessary to obtain foveal wavelets with good approximation
+properties, and present their practical performance.
+
+To ensure an approximation error with small amplitude, the families of
+wavelets under consideration must reproduce high degree polynomials,
+and decay fast enough at zero and infinity.  In particular, for fixed
+d, foveal wavelets that reproduce polynomials up to degree d and have
+minimal support are solutions of a suitable polynomial system. We have
+solved these systems for a degree $d$ up to 10.
+
+Additional regularity requirements can be put on the mother wavelets,
+so as to ensure regularity of the approximations. Then wavelets with
+minimal support and minimal oscillation are solutions of non-algebraic
+systems. We present the performance of wavelets obtained by solving
+polynomial approximations of these systems.
+
+To solve the polynomial systems, we used the Kronecker package
+developped in Magma by Lecerf. This package offers an alternative to
+Groebner bases for polynomial system solving, on the basis of the
+work of Giusti, Heintz, Pardo and collaborators in the TERA
+project.
+
+    </p><p>        
+
+</p></li></ul>
+
+</body></html>

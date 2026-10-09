@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Stark's Neural Network Algorithm</TITLE>
+<META NAME="description" CONTENT="Stark's Neural Network Algorithm">
+<META NAME="keywords" CONTENT="sever">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sever.css">
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html79"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html77"
+ HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html71"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html80"
+ HREF="node7.html">Our Neural Network Algorithm</A>
+<B> Up:</B> <A NAME="tex2html78"
+ HREF="node4.html">Neural Network Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html72"
+ HREF="node5.html">Neural Networks</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00042000000000000000">
+Stark's Neural Network Algorithm</A>
+</H2>
+
+<P>
+Stark's algorithm [<A
+ HREF="node13.html#Stark">3</A>,<A
+ HREF="node13.html#Bressloff">4</A>] implies the transition
+from a given IFS <I>F</I> to the corresponding neural network <B>W</B>.
+To do such a passage, it is enough to consider any
+one iteration of <I>F</I>.
+
+<P>
+Let 
+<!-- MATH: $X \equiv S^u \subset {\rm I\!R}^2$ -->
+<IMG
+ WIDTH="107" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$X \equiv S^u \subset {\rm I\!R}^2$">,
+<I>S</I><SUP><I>u</I></SUP> - a unit square digitized
+with respect to fixed resolutions <IMG
+ WIDTH="28" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$\Delta_x$">
+and <IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\Delta_y$">.
+Every
+<I>A</I><SUB><I>n</I></SUB> has its indicator function, 
+<!-- MATH: $y: S^u \rightarrow \{0,1\}$ -->
+<IMG
+ WIDTH="114" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$y: S^u \rightarrow \{0,1\}$">,
+such
+that:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\forall s \in S^u: \;\; y_s(n)=
+\left\{ \begin{array}{ll}
+                   1 & \mbox{if $s \in A_n$ } \\
+                   0 & \mbox{if $s \not\in A_n$ }
+                \end{array}
+        \right.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="249" HEIGHT="48"
+ SRC="img32.gif"
+ ALT="\begin{displaymath}\forall s \in S^u: \;\; y_s(n)=
+\left\{ \begin{array}{ll}
+1...
+..._n$ } \\
+0 & \mbox{if $s \not\in A_n$ }
+\end{array} \right.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+If we define
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+w_{ss\prime}=
+\left\{ \begin{array}{lll}
+                1 & \mbox{if $f_i(s\prime)=s$ }
+                                         & \mbox{for some $i$ } \\
+                0 & {\rm otherwise} &
+                \end{array}
+        \right.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="275" HEIGHT="48"
+ SRC="img33.gif"
+ ALT="\begin{displaymath}w_{ss\prime}=
+\left\{ \begin{array}{lll}
+1 & \mbox{if $f_i(...
+...for some $i$ } \\
+0 & {\rm otherwise} &
+\end{array} \right.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(9)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+then the dynamics of <I>y</I><SUB><I>s</I></SUB>(<I>n</I>) is given by
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+y_s(n+1)=g\Bigl(\sum_{s\prime
+\in S}w_{ss\prime}y_{s\prime}(n)\Bigr),
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="223" HEIGHT="49"
+ SRC="img34.gif"
+ ALT="\begin{displaymath}y_s(n+1)=g\Bigl(\sum_{s\prime
+\in S}w_{ss\prime}y_{s\prime}(n)\Bigr),
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+where <I>g</I> is a step function.
+
+<P>
+Thus, we have the binary neural network with |<I>S</I><SUP><I>u</I></SUP>| neurons
+<I>y</I><SUB><I>s</I></SUB> and synaptic weights 
+<!-- MATH: $w_{ss\prime}$ -->
+<IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.gif"
+ ALT="$w_{ss\prime}$">
+that
+realizes the IFS <I>F</I>.
+
+<P>
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

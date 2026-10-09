@@ -1,0 +1,20 @@
+Date: Mon, 11 Aug 1997 11:37:41 -0400
+From: "Robert H. Lewis" <lewis@bway.net>
+
+   I am on this panel because I have created a small, effective, and
+efficient computer algebra system, named Fermat.  It is free to all.  I
+am not, therefore, interested in selling systems and, unlike others, do
+not care how many people invest in computer algebra firms.  I am a
+developer who was first a mathematician and is an end user of the system
+as well its designer.  
+   Everyone on this panel wants to see computer algebra become more
+influential.  Computer algebra will become important when it solves
+important problems, whether the problems arise in pure mathematics,
+applied mathematics, science, or engineering.  Unlike textbook examples,
+such problems inevitably require enormous space and time resources, and
+this will always be the case.  Since most of the people who would like
+to work on these problems are in universities and do not have access to
+super computers, it is crucially important that the computer algebra
+systems be as efficient as possible.  This implies that they be focused
+to specific areas of mathematics, rather than attempting to do "all of
+mathematics".

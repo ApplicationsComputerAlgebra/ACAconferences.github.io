@@ -1,0 +1,23 @@
+Computer Algebra in Stochastic System Identification.
+-----------------------------------------------------
+Tom Issaevitch, Wolfram Research
+
+The problem of identifying general state-space linear systems using a
+consistent statistical framework and current algorithms results in a
+nonlinear optimization problem that is difficult to solve.  In
+particular, for high-dimensional systems, the situation is hopeless.
+As a result, a number of ad-hoc approaches have been developed which are
+tractable, but have no rigorous statistical basis.  In particlar, the
+Ho-Kalman realization algorithm requires only singular value decomposition.
+However, the Kalman-Ho algorithm does not arise from any statistical
+proceedure (e.g., maximum likelihood) and so there is no way to judge it's
+optimality or accuracy.
+
+In my talk, I will describe the use of Mathematica in performing a
+perturbative identification of state space models using the maximum likelihood
+method under the assumption of Guassian noise.  In addition to providing
+full statistical information about the estimated parameters, the method 
+uses singular value decomposition and so retains most of the computational
+simplicity of the Kalman-Ho algorithm.  In particular, the method
+does not suffer from the problem of spurious local minima common to
+nonlinear methods in high dimensions.

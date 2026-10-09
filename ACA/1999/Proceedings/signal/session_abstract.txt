@@ -1,0 +1,31 @@
+ ACA'99
+ 1999 IMACS Conference on Applications of Computer Algebra
+
+Special Session: Applications of Computer Algebra to Signal Processing
+
+Session Organizers:
+
+Jeremy Johnson, jjohnson@mcs.drexel.edu, http://www.mcs.drexel.edu/~jjohnson
+Dept. of Mathematics and Computer Science, Drexel University,
+Philadelphia, PA, U.S.A. 
+
+Markus Pueschel, pueschel@ece.cmu.edu, http://avalon.ira.uka.de/home/pueschel/
+Dept. of Electrical and Computer Engineering, Carnegie Mellon University,
+Pittsburgh, PA, U.S.A.
+
+Beginning with Winograd's work on the arithmetic complexity of signal
+processing algorithms such as convolution, digital filtering, and the discrete
+Fourier transform, there has been much work devoted to the application of
+algebraic methods in the design and implementation of signal processing
+algorithms.  More recently a theory of fast generalized signal transforms has
+been developed where techniques from computational group theory play a
+significant role.  Various computer algebra systems have been utilized to
+implement these and other ideas.  This session is devoted to exploring areas in
+signal processing for which algebra and algebraic computation may be
+beneficial.
+
+List of potential topices:
+*  Design and implementation of fast signal transforms
+*  Design and implementation of digital filters
+*  Application of customized signal transforms
+*  Enhancing existing signal processing toolboxes with computer algebra

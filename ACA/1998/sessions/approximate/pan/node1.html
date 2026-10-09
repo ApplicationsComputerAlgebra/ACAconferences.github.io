@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction</TITLE>
+<META NAME="description" CONTENT="Introduction">
+<META NAME="keywords" CONTENT="pan">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL="STYLESHEET" HREF="pan.css">
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="pan.html">
+<LINK REL="up" HREF="pan.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html21"
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html19"
+ HREF="pan.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html13"
+ HREF="pan.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html22"
+ HREF="node2.html">Models of computing</A>
+<B> Up:</B> <A NAME="tex2html20"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html14"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00010000000000000000">&#160;</A><A NAME="sec1">&#160;</A>
+<BR>
+Introduction
+</H1>
+Historically, the algorithms for numerical computations and for symbolic
+and algebraic  computations were designed and developed by two distinct
+groups of people having rather little interaction with each other. The
+basic principles, tools and techniques used in these two groups
+ were also quite different from each other. 
+ Numerical computations are typically performed with a fixed
+(single or double) finite precision and    the propagation
+and magnification of roundoff errors is usually  avoided  by means of various 
+techniques of error
+and perturbation analysis and approximation theory. Symbolic and algebraic
+computations typically assume exact computations with no roundoff errors,
+that is, for an exact input, the output yields exact solution to the computational
+problem. To maintain exact solution computation, the typical tools and
+techniques of rational computations are applied, such as the Chinese
+remainder algorithm, <I>p</I> -adic (Newton-Hensel's) lifting and the extended
+Euclidean (continued fraction approximation) algorithm. In spite of using
+these sophisticated techniques, a certain price is to be paid for reaching
+the exact rather than an approximate solution: typically, the algebraic
+computations require substantially more resources of computer time and
+memory space than numerical computations for the  problems
+of the same size.
+
+<P>
+The recent trend, however, is to merge both groups of algebraic and
+numerical tools and techniques to develop most effective algorithms for
+both exact and approximate solution of algebraic and  geometric
+ computational problems.
+Such a  development is of benefit in both cases, 
+accentuanting the power of
+each group of techniques. The reader is referred to [<A
+ HREF="node7.html#P92">P92</A>] and 
+[<A
+ HREF="node7.html#BP94">BP94</A>] for some further material on this subject.
+
+<P>
+An important point is that the customary tools and algorithms for the
+computations in applied linear algebra were typically developed by
+numerical analysts whereas advanced polynomial computations belong to the
+traditional domain of computer algebra based on the tools of symbolic
+computation. An effective bridge between numerical computation with
+matrices and symbolic computation with polynomials can be built based on the
+manipulation with dense structured matrices (such as Toeplitz, Hankel,
+Vandermonde and Cauchy matrices and the matrices having similar
+structures). The latter matrices can be treated by the known numerical
+techniques ensuring numerically stable computations. On the other hand,
+there is a tight link between the dense structured matrices and
+polynomials, in terms of the associated operators of displacement and
+scaling. Such a link enables equivalent interpretation of various
+polynomial computation problems in terms of computations with  dense
+structured matrices. These observations are exploited  explicitly or
+implicitly in most of our algorithms. 
+
+<P>
+In the present paper we  
+survey 
+ our  recent progress in the 
+study
+ of
+symbolic/numeric computations. We cover the following particular topics:
+solution of a 
+polynomial equation and a polynomial  system of equations, computation of approximate polynomial
+greatest common divisors and computations with dense  structured matrices
+with their further applications to polynomial and rational interpolation
+and multipoint polynomial evaluation. Each of these topics is a well-known
+classical 
+algebraic subject, important for the
+theory and practice of computing  and still highly popular 
+among the researchers. We seek approximate solutions by combining
+algebraic and numerical techniques to improve the known algorithms. In
+some cases we yield output approximations in nearly optimal time and/or
+improve by order of magnitude  the known computational complexity estimates; 
+ in other cases
+our gain is the improved numerical stability. We omit or keep very brief the
+discussion on the (usually well-known) importance of the presented
+computational problems and the full description of  the algorithms,
+referring the reader to our  bibliography,
+which also
+ contains  further references. 
+
+<P>
+Our range of topics is quite broad
+but personal and by no means complete, even regarding our own research. 
+For instance,   we do not cover important progress  recently achieved by combining
+numerical and algebraic techniques for the computation of the sign of 
+algebraic and  algebraic-geometric predicates. This progress  includes 
+in particular the computation of the sign of matrix determinant, 
+which is a major problem of practical geometric computations 
+[<A
+ HREF="node7.html#BEPP97">BEPP97</A>], [<A
+ HREF="node7.html#BEPP99">BEPP99</A>], [<A
+ HREF="node7.html#PY99">PY99</A>].
+
+<P>
+We organize the
+paper as follows. In the next section, we will specify our models of computing.
+Then we cover polynomial rootfinding in section 3, solution  of  a polynomial
+ system of equations in section 4, computation of approximate polynomial 
+gcd in section 5 and computations with dense structured matrices 
+(with applications to polynomial and rational interpolation and 
+multipoint evaluation) in section 6.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html21"
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html19"
+ HREF="pan.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html13"
+ HREF="pan.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html22"
+ HREF="node2.html">Models of computing</A>
+<B> Up:</B> <A NAME="tex2html20"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html14"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

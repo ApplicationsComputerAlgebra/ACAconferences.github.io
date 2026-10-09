@@ -1,0 +1,140 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA 1996</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Evaluations of Series</H1>
+
+<h3>Organizers</h3>
+<p>
+<UL>
+
+<li>
+Victor Edneral
+(<a href="mailto:edneral@theory.npi.msu.su">edneral@theory.npi.msu.su</a>)<br>
+Institute for Nuclear Physics of Moscow University, <br>
+Leninskie Gory, Moscow, 119899, Russia<br>
+Tel: (+7-095)230-75-04, Fax: (+7-095)939-03-97
+
+<li>
+Nikolay Vasiliev 
+(<a href="mailto:vasiliev@ita.spb.su">vasiliev@ita.spb.su</a>)<br>
+Institute of Theoretical Astronomy, RAS,
+10, Nab.Kutuzova, St.Petersburg, 191187, Russia
+Tel: (+7-812)275-44-13 Fax: (+7-812)272-79-68
+</UL>
+
+<p>
+
+<h3>Description</h3>
+There are many partial approaches to evaluation of series (finite and 
+infinite, formal and convergent, over different algebraic objects) but 
+we would like to look at the situation in general. We wish to understand 
+the possibility of using different kinds of series and to have different 
+algebraic structures for the approximation of the 
+solutions of realistic problems. 
+In particular, we are interested in searching solutions of algebraic and 
+differential equations defined by formal multivariate power series.
+We are looking forward to present at the section different packages
+for manipulating formal series in CA systems and new algorithms in this
+field. We also propose several examples of different kinds of series,
+their evaluation, application and related algorithms.
+
+
+<p>
+
+
+<h3>Talks</h3>
+Date: July 19th (Friday)
+<dl>
+  <dt> 14:00--14:25
+  <dd>
+      <a href="../participants.html#Mourrain">Bernard  Mourrain</a><br>
+      <b> Some Applications of Duality Between Polynomials and Formal Series</b><br>
+      <a href="Edneral/Mourrain.html"><em>Abstract</em></a>
+
+  <dt> 14:25--14:45
+  <dd>
+      <a href="../participants.html#Edneral">Victor Edneral</a><br>
+      <b> "NORT" Package for Treating Multivariate Power Series and 
+      Applications</b><br>
+      <a href="Edneral/Edneral.html"><em>Abstract</em></a>
+
+  <dt> 14:45--15:10
+  <dd>
+      <a href="../participants.html#Koepf">Wolfram Koepf</a><br>
+      <b> Series Representations and Generating Functions of 
+      Special Functions with Mathematica</b><br>
+      <a href="Edneral/Koepf.ps"><em>Abstract</em></a>
+
+  <dt> 15:10--15:30
+  <dd>
+      <a href="../participants.html#Vasiliev">Nikolay Vasiliev</a>,
+      <a href="../participants.html#Edneral">Victor Edneral</a><br>
+      <b> About an Algorithm to Construct a Canonical Basis 
+      for the Ideals in the Ring of Formal Power Series</b><br>
+      <a href="Edneral/Vasiliev.html"><em>Abstract</em></a>
+
+  <dt> <hr>
+      <p>
+  <dt> 15:30--16:15
+  <dd> Coffee Break
+      <p>
+  <dt>   <hr>
+      
+  <dt> 16:15--16:40
+  <dd>
+      <a href="../participants.html#Walcher">Sebastian Walcher</a><br>
+      <b> Normalizer Elements and Integrating Factors</b><br>
+      <a href="Edneral/Walcher.ps"><em>Abstract</em></a>
+
+  <dt> 16:40--17:00
+  <dd>
+      <a href="../participants.html#Abad">A. Abad</a>, 
+      <a href="../participants.html#Elipe">A. Elipe</a>, 
+      <a href="../participants.html#Palacian">J. Palacian</a>, 
+      <a href="../participants.html#San-Juan">J.F. San-Juan</a><br>
+      <b> ATESAT: A Symbolic Processor for Artificial Satellite</b><br>
+      <a href="Edneral/Abad.ps"><em>Abstract</em></a>
+
+  <dt> 17:20--17:30
+  <dd>
+      <a href="../participants.html#Vasiliev">Nikolay Vasiliev</a><br>
+      <b> Formal Lie Series and Applications to the Hamiltonian Mechanics</b><br>
+      <a href="Edneral/Vasiliev1.html"><em>Abstract</em></a>
+      
+  <dt> 17:10--17:30
+  <dd> 
+      <a href="../participants.html#Edneral">Victor Edneral</a><br>
+      <b> Symbolic Approximation of Periodic Solutions and Trajectories
+       of Henon--Heiles' System by the Normal Form Method</b><br>
+      <a href="Edneral/Edneral1.html"><em>Abstract</em></a>
+
+      
+</dl>
+
+<P><IMG SRC="../line-risc.gif" ALIGN=middle
+        ALT="________________________________________________________"><P>
+
+<A HREF=
+   "../program-plan.html">
+<IMG SRC="../up-button.gif" ALT="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<IMG ALT="RISC", SRC="../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<IMG ALT="SWP", SRC="../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<IMG ALT="Linz", SRC="../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<IMG ALT="Austria", SRC="../austria-button.gif">
+</A>
+</BODY>
+</HTML>
+

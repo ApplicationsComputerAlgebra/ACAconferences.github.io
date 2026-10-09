@@ -1,0 +1,126 @@
+\documentstyle[11pt]{article}
+\setlength{\oddsidemargin}{.2in}
+\setlength{\topmargin}{.25in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.1in}
+
+\setlength{\unitlength}{3mm}
+\renewcommand{\baselinestretch}{1.35}
+
+\newcommand{\singlespacing}%
+{\renewcommand{\baselinestretch}{1.0}\small\normalsize}
+\newcommand{\RR}{\rm I \kern -0.2em R}
+\newcommand{\C}{\rm I \kern -0.5em C}
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Lemma}{Lemma}[section]
+\newtheorem{Corollary}{Corollary}[section]
+\newtheorem{Proposition}{Proposition}[section]
+\newtheorem{Definition}{Definition}[section]
+\newtheorem{Remark}{Remark}[section]
+\newtheorem{note}{Note}[section]
+\newtheorem{Algorithm}{Algorithm}[section]
+
+\def\TIME{\hbox{${\cal T}\!{\cal I}\!{\cal M}{\cal E}$}}
+\def\DTIME{\hbox{${\cal D}\!{\cal T}\!{\cal I}\!{\cal M}{\cal E}$}}
+\def\NTIME{\hbox{${\cal N}\!{\cal T}\!{\cal I}\!{\cal M}{\cal E}$}}
+\def\P{\hbox{${\cal P}$}}
+\def\NP{\hbox{${\cal N}\!{\cal P}$}}
+\def\coNP{\hbox{{\it co-}$\!{\cal N}\!{\cal P}$}}
+\def\EXP{\hbox{${\cal E}\!{\cal X}\!{\cal P}$}}
+\def\NEXP{\hbox{${\cal N}\!{\cal E}\!{\cal X}\!{\cal P}$}}
+\def\SUBEXP{\hbox{${\cal S}\!{\cal U}\!{\cal B}\!{\cal E}\!{\cal X}\!{\cal P}$}}
+\def\nbP{\hbox{{\bf \#}\P}}
+\def\PH{\hbox{${\cal P}\!{\cal H}$}}
+\def\PP{\hbox{${\cal P}\!{\cal P}$}}
+\def\BPP{\hbox{${\cal B}\!{\cal P}\!{\cal P}$}}
+\def\R{\hbox{${\cal R}$}}
+\def\coR{\hbox{{\it co-}$\!{\cal R}$}}
+\def\ZPP{\hbox{${\cal Z}\!{\cal P}\!{\cal P}$}}
+\def\VPP{\hbox{${\cal V}\!{\cal P}\!{\cal P}$}}
+\def\SPACE{\hbox{${\cal S}\!{\cal P}\!{\cal A}{\cal C}\!{\cal E}$}}
+\def\DSPACE{\hbox{${\cal D}\!{\cal S}\!{\cal P}\!{\cal A}{\cal C}\!{\cal E}$}}
+\def\NSPACE{\hbox{${\cal N}\!{\cal S}\!{\cal P}\!{\cal A}{\cal C}\!{\cal E}$}}
+\def\NPSPACE{\hbox{${\cal N}\!{\cal P}\!{\cal S}\!{\cal P}\!{\cal A}{\cal C}\!{\cal E}$}}
+\def\LOGSPACE{\hbox{${\cal L}\!{\cal O}\!{\cal G}\!{\cal S}\!{\cal P}\!{\cal A}{\cal C}\!{\
+cal E}$}}
+\def\NLOGSPACE{\hbox{${\cal N}\!{\cal L}\!{\cal O}\!{\cal G}\!{\cal S}\!{\cal P}\!{\cal A}{
+\cal C}\!{\cal E}$}}
+\def\POLYLOGSPACE{\hbox{${\cal P}\!{\cal O}\!{\cal L}\!{\cal Y}\!{\cal L}\!{\cal O}\!{\cal
+G}\!{\cal S}\!{\cal P}\!{\cal A}{\cal C}\!{\cal E}$}}
+\def\PSPACE{\hbox{${\cal P}\!{\cal S}\!{\cal P}\!{\cal A}{\cal C}\!{\cal E}$}}
+\def\EXPSPACE{\hbox{${\cal E}\!{\cal X}\!{\cal P}\!{\cal S}\!{\cal P}\!{\cal A}{\cal C}\!{\
+cal E}$}}
+\def\NEXPSPACE{\hbox{${\cal N}\!{\cal E}\!{\cal X}\!{\cal P}\!{\cal S}\!{\cal P}\!{\cal A}{
+\cal C}\!{\cal E}$}}
+\def\SIZE{\hbox{${\cal S}\!{\cal I}\!{\cal Z}\!{\cal E}$}}
+\def\USIZE{\hbox{${\cal U}\!{\cal S}\!{\cal I}\!{\cal Z}\!{\cal E}$}}
+\def\PSIZE{\hbox{${\cal P}\!{\cal S}\!{\cal I}\!{\cal Z}\!{\cal E}$}}
+\def\DEPTH{\hbox{${\cal D}\!{\cal E}\!{\cal P}\!{\cal T}\!{\cal H}$}}
+\def\UDEPTH{\hbox{${\cal U}\!{\cal D}\!{\cal E}\!{\cal P}\!{\cal T}\!{\cal H}$}}
+\def\LOGDEPTH{\hbox{${\cal L}\!{\cal O}\!{\cal G}\!{\cal D}\!{\cal E}\!{\cal P}\!{\cal T}\!
+{\cal H}$}}
+\def\POLYLOGDEPTH{\hbox{${\cal P}\!{\cal O}\!{\cal L}\!{\cal Y}\!{\cal L}\!{\cal O}\!{\cal
+G}\!{\cal D}\!{\cal E}\!{\cal P}\!{\cal T}\!{\cal H}$}}
+\def\POLYLOGTIME{\hbox{${\cal P}\!{\cal O}\!{\cal L}\!{\cal Y}\!{\cal L}\!{\cal O}\!{\cal G
+}\!{\cal T}\!{\cal I}\!{\cal M}{\cal E}$}}
+\def\SC{\hbox{${\cal S}\!{\cal C}$}}
+\def\NC{\hbox{${\cal N}\!{\cal C}$}}
+\def\COMM{\hbox{${\cal C}\!{\cal O}\!{\cal M}\!{\cal M}$}}
+\def\NCOMM{\hbox{${\cal N}\!{\cal C}\!{\cal O}\!{\cal M}\!{\cal M}$}}
+
+\begin{document}
+%  Define the variable \boxwidth
+\newlength{\boxwidth}
+\boxwidth \textwidth
+\addtolength{\boxwidth}{-0.125 in}
+
+\begin{center}
+\huge\bf
+Complexity of Systems and Control Theory Problems\\[0.5in]
+\normalsize \rm
+\normalsize
+\begin{center}
+\begin{tabular}{cccccc}
+P.W. Goldberg & & & & &C.T. Abdallah and G.L. Heileman\footnotemark\\
+ICS Group& & & & & ICS Group\\
+Dpt. of Computer Science& & & & &
+Dpt. of Electr. \& Comp. Engineering\\
+The University of New Mexico& & & &  &
+The University of New Mexico\\
+Albuquerque, NM 87131-1356&  & & & &
+Albuquerque, NM 87131-1356
+\end{tabular}
+\end{center}
+\end{center}
+\vspace*{2in}
+
+\footnotetext{The research of C. Abdallah and G. Heileman 
+was supported by Boeing Computer Services under 
+contract W-300445.}
+%\newpage
+
+\begin{abstract}
+\noindent
+Recently, reserach has been conducted to address
+the computational difficulty associated with many
+control and systems problems.  This paper will review the state-of-the-art
+in this area.
+In particular, we study the problem of using
+decoupled static output feedback to control linear, time-invariant~(LTI) 
+systems.
+We use complexity-theoretic techniques to show that the problem of
+determining whether an LTI system can be made stable using decoupled 
+static output
+feedback is an $\NP$-hard problem, implying that an unreasonable amount of time 
+may be needed to find the desired feedback parameters in large LTI systems.
+Specifically, under the strongly held assumption that $\P$ does not equal $\NP$,
+these results demonstrate that a polynomial time~(in the order of the LTI
+system) algorithm does not exist for solving the decoupled static output 
+feedback problem.
+\end{abstract}
+
+\bibliographystyle{abbrv}
+\bibliography{robust,control}
+\end{document}

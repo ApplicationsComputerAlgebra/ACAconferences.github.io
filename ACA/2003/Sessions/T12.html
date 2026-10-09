@@ -1,0 +1,287 @@
+<html><head><title>ACA 2003 Session T12: Symbolic-Numeric methods for Curves and Surfaces</title></head>
+
+<body>
+
+
+<h1> T12: Symbolic-Numeric methods for Curves
+                                 and Surfaces </h1>
+
+ACA 2003:  
+<a href="http://math.unm.edu/ACA/2003/2003.html">Home</a>,
+<a href="http://math.unm.edu/ACA/2003/Sessions.html">Sessions</a> 
+
+
+<h2>Organizers</h2>
+<ul>
+
+<li> <a href="mailto:jschicho@risc.uni-linz.ac.at">Josef Schicho</a> (RISC, Austria)
+
+</li><li> <a href="mailto:shalaby@risc.uni-linz.ac.at">Mohamed Shalaby</a> (RISC, Austria)
+
+</li></ul>
+
+
+<h2>Overview</h2>
+<ul>
+
+<li> <h3> Problem </h3> This session aims to present some up-to-date
+symbolic-numerical methods for curves and surfaces and theirs
+applications to Computer Aided Geometric Design (CAGD), Solid Modeling
+and Visualization. Topics of the session include, but are not limited
+to :
+<ul>
+  <li>  Symbolic-Numerical methods for curves/surfaces parameterization.</li>
+  <li>  Symbolic-Numerical methods for curves/surfaces implicitization.</li>
+  <li> Symbolic-Numerical methods for resolution of singularities for curves/surfaces.</li>
+  <li> Mathematical methods for CAGD.</li>
+  <li> Methods for evaluation and visualization of offsets and intersections of surfaces.</li>
+  <li> Symbolic-Numerical methods for polynomial solving.</li>
+  <li> Intersection of Bezier and B-spline curves and surfaces.</li>
+  <li> Bernstein bases versus monomial bases.</li>
+  <li> Gröbner Bases and CAGD.</li>
+  <li> Industrial application.
+</li></ul>
+   
+     <p>
+  
+
+</p></li><li> <h3> Motivation and Importance </h3>
+     The combination of symbolic and numerical methods has lead to various interesting new applications in CAGD. 
+Several new algorithms/methods have been developed in the recent years.
+In this special session, we want to bring together as many as possible of these various approaches,
+in the hope to inspire fruitful discussions and interactions.
+     <p>
+
+</p></li></ul>
+
+
+<h2>Talks/Abstracts</h2>
+<ul>
+
+<li><h3>Minkowski geometric algebra of complex sets.</h3>
+    <a href="mailto:farouki@algol.engr.ucdavis.edu">Rida Farouki</a> (University of California, Davis, USA) 
+    <p>
+    <strong>Abstract</strong>: 
+    Algebraic operations on sets of complex numbers produce remarkably 
+rich geometrical structures, with diverse applications and
+connections to 
+science and engineering. For "simple" operands, such as circular
+disks, 
+precise descriptions of their algebraic combinations are available
+in 
+terms of the Cartesian and Cassini ovals, and higher-order
+generalizations. 
+Algorithms can be formulated to approximate algebraic operations on
+complex 
+sets with general (piecewise-smooth) boundaries to a given
+precision. This 
+"Minkowski algebra of complex sets" is the natural generalization of
+(real) 
+interval arithmetic to sets of complex numbers. It provides a
+versatile 
+two-dimensional "shape operator" language, with connections to
+mathematical 
+morphology, geometrical optics, and stability analysis of dynamic
+systems.
+    </p><p>         
+
+</p></li><li><h3>A complete symbolic-numeric linear method for camera pose
+                               determination.</h3>
+    <a href="mailto:reid@uwo.ca">Greg Reid</a> (University of Western Ontario, Canada)<br>
+    <a href="mailto:jtang@mmrc.iss.ac.cn">Jianliang Tang</a> (Chinese Academy of Sciences, China)<br>
+<a href="mailto:lzhi@mmrc.iss.ac.cn">Lihong Zhi</a> (Chinese Academy of Sciences, China)
+    <p>
+    <strong>Abstract</strong>: 
+    Camera pose estimation is the problem of
+determining the position and orientation of an internally
+calibrated camera from known 3D reference points and their images.
+We briefly survey several existing methods for pose estimation,
+then introduce our new complete linear method, which is based on a
+symbolic-numeric method from the geometric (Jet) theory of partial
+differential equations. The new  method is stable and robust. In
+particular, it can deal with the points near critical
+configurations. Numerical experiments are given to show the
+performance of the new method.
+    </p><p>        
+</p></li><li><h3>Bounding the Radius of Irreducibility of Multivariate
+                               Polynomials.</h3>
+<a href="mailto:%0A%20%20%20%20%20%20%20kaltofen@math.ncsu.edu">Erich
+Kaltofen</a> (North Carolina State University, USA)<br>
+<a href="mailto:%0A%20%20%20%20%20%20%20jpmay@math.ncsu.edu">John May</a> (North Carolina State University, USA)
+       
+<p>
+<strong>Abstract</strong>: 
+Given an irreducible polynomial in two or more variable with complex
+floating 
+point coefficients we find a lower bound on its distance to a
+reducible
+polynomial of the same degrees.  This is accomplished by using
+generalizations
+of an irreducibility test of Ruppert together with theory of bounding 
+matrices away from those with lower ranks which involves singular
+value
+decompositions, and psuedo-inverses. We compare a couple different
+ways of 
+computing these bounds. 
+</p><p>
+</p></li><li><h3>Spline Implicitization of Planar Curves and Applications</h3>
+<a href="mailto:bert.juettler@jku.at%0A%20%20%20%20%20%20%20">Bert Jüttler</a> (Johannes Kepler University, Austria)<br>
+<a href="mailto:jschicho@risc.uni-linz.ac.at%0A%20%20%20%20%20%20%20">Josef Schicho</a> (Johannes Kepler University, Austria)<br>
+<a href="mailto:shalaby@risc.uni-linz.ac.at%0A%20%20%20%20%20%20%20">Mohamed Shalaby</a> (Johannes Kepler University, Austria)
+<p>
+<strong>Abstract</strong>: 
+We present a new method for constructing a low degree C1 implicit
+spline representation of a given parametric planar curve.  To ensure
+the low degree condition, quadratic B-splines are used to approximate
+the given curve via orthogonal projection in Sobolev spaces. Adaptive
+knot removal, which is based on spline wavelets, is used to reduce the
+number of segments. The B-spline segments are implicitized. After
+multiplying the implicit B--spline segments by suitable polynomial
+factors the resulting bivariate functions are joined along suitable
+transversal lines. This yields to a globally C1 bivariate
+function. Some applications of the proposed method is presented.
+</p><p>
+
+</p></li><li><h3>Symbolic-Numeric Sparse Interpolation of Multivariate
+                               Polynomials. </h3>
+<a href="mailto:%0A%20%20%20%20%20%20%20mwg@scg.math.uwaterloo.ca">Mark Giesbrecht</a> (University of Western Ontario, Canada)<br>
+<a href="mailto:glabahn@scg.math.uwaterloo.ca,%0A%20%20%20%20%20%20%20">George Labahn</a> (University of Western Ontario, Canada)<br>
+<a href="mailto:ws2lee@scg.math.uwaterloo.ca,%0A%20%20%20%20%20%20%20">Wen-shin Lee</a> (University of Western Ontario, Canada)
+<p>
+<strong>Abstract</strong>:
+We consider the problem of interpolating a multivariate polynomial
+that is given as a black box. When the target polynomial is sparse,
+there are efficient algorithms taking advantage of this situation, 
+such as Zippel's probabilistic algorithm and the Ben-Or/Tiwari algorithm. 
+These methods are developed for exact arithmetic environments.
+
+Interestingly, the method of Ben-Or and Tiwari is similar to that
+of Prony's from 1795 for interpolating a sum of exponential
+functions. Recent work by Golub, Milanfar, and Varah recasting
+Prony's method as a generalized eigenvalue problem may provide the
+key to a numerically sound symbolic-numeric sparse polynomial
+interpolation. This method avoids explicitly constructing and solving 
+the generating polynomial in the interpolation process. Furthermore, in
+the finite precision arithmetic, evaluating the black box at
+appropriate primitive roots of unity may not only improve the
+condition embedded in the interpolation steps, but also provide a
+numeric method for recovering all variables at once in the target
+polynomial.
+
+In addition to the standard power basis, our approach can be
+applied to polynomials represented in some non-standard bases.
+
+We discuss general issues and a framework for sparse, black-box,
+approximate polynomial interpolation, our algorithm for solving this
+problem, and details of our numerical experiments.
+</p><p>
+
+</p></li><li><h3>Symbolic-numeric method for computing surface
+                               self-intersection. </h3>
+<a href="mailto:bastl@kma.zcu.cz">Bohumir Bastl</a> (
+University of West Bohemia, Czech Republic)<p>
+<strong>Abstract</strong>:
+This talk presents a new symbolic-numeric method for computing
+self-intersection of surface with arbitrary rational parameterization.
+The
+problem of finding surface self-intersection can be stated as a problem
+of
+solving system of non-linear algebraic equations (for surface with
+rational
+parameterization). Symbolic part of this method uses Groebner bases
+method for
+solving given system of non-linear algebraic equations which can be
+easily
+replaced by resultant method. Any of these elimination methods gives on
+the output
+one-dimensional algebraic set represented by the polynomial P(u,v) = 0.
+Every algebraic set of this type
+consist of open and closed components. The algorithm computes start
+points on
+all components which correspond to surface self-intersection. Then
+component
+splitting is used to partition the domain such that each resulting
+region
+contains only one component. Finally, tracing is used to evaluate the
+curve on the
+given region and to obtain appropriate part of the surface
+self-intersection. The technique to handle singularities is also
+presented. The
+algorithm has been implemented in MathWorks Matlab 6.1 and CoCoA 4.2 is
+used for
+reduced Groebner basis computations.
+</p><p>
+
+</p></li><li><h3>Implicit Polynomial Support Optimized for Sparseness.</h3>
+<a href="mailto:ikotsire@wlu.ca">Ilias S. Kotsireas</a> (Wilfrid Laurier University, Canada)<br>
+<a href="mailto:emiris@di.uoa.gr%0A%20%20%20%20%20%20%20">Ioannis Z. Emiris</a> (National University of Athens, Greece)
+       <p>
+<strong>Abstract</strong>:
+We propose the use of various tools from algebraic geometry, with an
+emphasis on toric (or sparse) elimination theory, in order to predict
+the
+support of the implicit equation of a parametric hypersurface. The
+problem
+of implicitization lies at the heart of several algorithms in
+geometric
+modeling and computer-aided design. In the case of two specific
+implicitization algorithms IPSOS results in tremendous efficiency
+improvements. Other implicitization methods shall probably be able to
+benefit from our work. More specifically, we use information on the
+support of the toric resultant, and degree bounds, formulated in terms
+of
+the mixed volume of Newton polytopes. The computed support of the
+implicit
+equation depends on the sparseness of the parametric expressions and
+is
+much tighter than the one predicted by degree arguments. Our Maple
+implementation illustrates many examples in which we always obtain the
+exact support. 
+</p><p>
+
+</p></li><li><h3>A symbolic method for defining test functions which satisfy
+ellipticity, boundary conditions lower order field behaviors exactly.  </h3>
+<a href="mailto:malsch@civil.columbia.edu%0A%20%20%20%20%20%20%20">Elisabeth Malsch</a> (Columbia University, USA)<p>
+<strong>Abstract</strong>: 
+Given a set of nodal points which define a polygonal geometry, such as
+the vertices of a convex or concave polygon, a smooth and bounded test
+function can be constructed in explicit algebraic form.  It smoothly 
+distributes the given values at the nodes over the interior of the 
+domain.  The closed form representation is constructed by combining 
+simple geometric descriptions, such as boundary edge length and area. 
+The smooth test function on a convex polygon can be constructed as the
+rational combination of the product of areas.  Accordingly the 
+representation is rational polynomial.  The test function on a concave
+or multiply-connected polygon is constructed as the function of areas 
+and edge lengths.  Accordingly, a square root term enters the 
+representation.
+Computer algebra is a uniquely suited for developing such test 
+functions which satisfy required geometric conditions exactly, such as
+boundary conditions,  and approximates unknown behavior reasonably, 
+such as domain behavior. A method for constructing linear edged test 
+functions satisfying constant and linear field conditions will be 
+presented.
+</p><p>
+
+</p></li><li><h3>Computational algebra visits number theory:
+Trigonometric polynomials, planar extremal packings, and Groebner
+bases. </h3>
+<a href="mailto:%20%0A%20%20%20%20%20%20danl@wolfram.com%0A%20%20%20%20%20%20%20">Daniel Lichtblau</a> (Wolfram Research, USA)<p>
+<strong>Abstract</strong>:
+A few years ago S-H Kim investigated some problems at the boundary
+of number theory, optimization, and geometry. One  question regarded
+an optimal packing of certain "triangular oval" planar curves and
+another looked at some related transformations of R^2 to R^2. While
+these were cast using trigonometric functions in a calculus setting,
+it turns out that a tool from computational polynomial algebra,
+Groebner bases, may be used to advantage. The goal is to convey some
+sense of where and how computational technology can be of use in
+approaching and illustrating the theory behind that work.
+</p><p>
+
+
+
+
+</p></li></ul>
+
+</body></html>

@@ -1,0 +1,52 @@
+\documentclass[11pt, draft]{article}
+\topmargin=0mm
+\oddsidemargin=0mm
+\textwidth170mm
+\textheight230mm
+\begin{document}
+%\pagestyle{empty}
+\language=0
+%\hyphenation{}
+
+\begin{center}
+{\bf
+COMPUTATION OF JANET BASES. II.POLYNOMIAL BASES}\\
+\vspace {0.3cm}
+{Vladimir Gerdt$^1$, Yuri Blinkov$^2$, Denis Yanovich$^1$}\\
+{\it \small$^1$Laboratory of Computing Techniques and Automation, Joint Institute for Nuclear
+Research, 141980 Dubna, Russia, e-mail: gerdt@jinr.ru\ \ yan@cv.jinr.ru \\
+$^2$Department of Mathematics and Mechanics, Saratov University, 410071 Saratov, Russia
+\\ e-mail: BlinkovUA@info.sgu.ru}
+\end{center}
+\vspace {1.0cm}
+Involutive bases of polynomial ideals~\cite{GB} and linear differential
+ideals~\cite{G99} are Gr\"{o}bner bases of special form. Though involutive
+bases are generally redundant as Gr\"{o}bner ones, their use makes
+more accessible the structural information of polynomial and
+differential ideals. Janet bases may be cited as typical representatives
+of involutive bases and have been used in algebraic and Lie symmetry
+analysis of differential equations. In this talk we present the first
+versions of programs in C, C++ and Reduce implementing the involutive
+algorithms for construction of Janet bases of polynomial ideals. We compare the
+timings for these programs with those for computer algebra system
+{\em Singular} running on the same computer platform. As benchmarks
+we consider those collected in~\cite{BM} and have been widely used for
+Gr\"{o}bner bases software.
+\vskip 0.5cm
+
+\begin{thebibliography}{10}
+
+\bibitem{GB} Gerdt V.P., Blinkov A.Yu. {\em Involutive Bases of Polynomial
+    Ideals}. Mathematics and Computers in Simulation 45 (1998)
+    pp.519-542; {\em Minimal Involutive Bases}, ibid., pp.543-560. \\
+    URL: http://arXiv.org/abs/math.RA/9912027
+    and http://arXiv.org/abs/math.RA/9912029.
+\bibitem{G99} Gerdt V.P. {\em Completion of Linear Differential Systems to
+    Involution}. In: "Computer Algebra in Scientific Computing
+    / CASC'99", Springer-Verlag, Berlin, 1999, pp. 115-137. \\
+    URL: http://arXiv.org/abs/math.AP/9909114.
+\bibitem{BM} Bini D. and Mourrain B. {\em Polynomial Test Suite}, 1996. \\
+    URL: http://www-sop.inria.sr/saga/POL.
+
+\end{thebibliography}
+\end{document}

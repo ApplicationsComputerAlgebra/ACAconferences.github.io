@@ -1,0 +1,317 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction</TITLE>
+<META NAME="description" CONTENT="Introduction">
+<META NAME="keywords" CONTENT="kai">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="kai.css">
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="kai.html">
+<LINK REL="up" HREF="kai.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html20"
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html18"
+ HREF="kai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html12"
+ HREF="kai.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html21"
+ HREF="node2.html">Hybrid Rational Function Approximation</A>
+<B> Up:</B> <A NAME="tex2html19"
+ HREF="kai.html">Accuracy Analysis of Hybrid</A>
+<B> Previous:</B> <A NAME="tex2html13"
+ HREF="kai.html">Accuracy Analysis of Hybrid</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00010000000000000000">
+Introduction</A>
+</H1>
+
+<P>
+Let 
+<!-- MATH: $x_0<x_1<\cdots<x_{m+n}$ -->
+<IMG
+ WIDTH="166" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$x_0<x_1<\cdots<x_{m+n}$">
+be <I>m</I>+<I>n</I>+1 distinct points,
+and let 
+<!-- MATH: $f_i:=f(x_i),i=0,\cdots,m+n$ -->
+<IMG
+ WIDTH="209" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$f_i:=f(x_i),i=0,\cdots,m+n$">,
+where <I>f</I>(<I>x</I>) is an unknown function.
+They are changed to a set of data
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+D = \{(x_0,f_0),\ (x_1,f_1),\ \cdots, (x_{m+n},f_{m+n})\}.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eqn:dataset">&#160;</A><IMG
+ WIDTH="317" HEIGHT="31"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}D = \{(x_0,f_0),\ (x_1,f_1),\ \cdots, (x_{m+n},f_{m+n})\}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+The classical algebraic problem of rational interpolation is
+to compute a pair of polynomials <I>P</I>(<I>x</I>) and <I>Q</I>(<I>x</I>) satisfying
+the relations 
+<!-- MATH: ${\rm deg}\ P(x) \le m$ -->
+<IMG
+ WIDTH="108" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="${\rm deg}\ P(x) \le m$">,
+
+<!-- MATH: ${\rm deg}\ Q(x) \le n$ -->
+<IMG
+ WIDTH="104" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="${\rm deg}\ Q(x) \le n$">,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\frac{P(x_i)}{Q(x_i)}=f_i,\ i=0, \cdots,m+n,
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eqn:ClassicalRationalInterpolation">&#160;</A><IMG
+ WIDTH="214" HEIGHT="48"
+ SRC="img6.gif"
+ ALT="\begin{displaymath}\frac{P(x_i)}{Q(x_i)}=f_i,\ i=0, \cdots,m+n,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+for a given pair of nonnegative integers <I>m</I> and <I>n</I>.
+The rational interpolation (<A HREF="node1.html#eqn:ClassicalRationalInterpolation">2</A>)
+is computed by several methods, e. g. linearized equations,
+Thiele interpolating continued fraction and so on. Here the
+linearized equations are expressed as following.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+P(x_i)-f_i\cdot Q(x_i)=0,\ i=0,\cdots,m+n.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eqn:lineq">&#160;</A><IMG
+ WIDTH="292" HEIGHT="31"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}P(x_i)-f_i\cdot Q(x_i)=0,\ i=0,\cdots,m+n.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+If we put 
+<!-- MATH: $P(x)=a_mx^m+a_{m-1}x^{m-1}+\cdots+a_0$ -->
+<IMG
+ WIDTH="280" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$P(x)=a_mx^m+a_{m-1}x^{m-1}+\cdots+a_0$">
+and
+
+<!-- MATH: $Q(x)=b_nx^n+b_{n-1}x^{n-1}+\cdots+1$ -->
+<IMG
+ WIDTH="255" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$Q(x)=b_nx^n+b_{n-1}x^{n-1}+\cdots+1$">,
+then we can compute the values
+<I>a</I><SUB><I>i</I></SUB> and <I>b</I><SUB><I>j</I></SUB> for 
+<!-- MATH: $i=0,\cdots,m$ -->
+<IMG
+ WIDTH="93" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$i=0,\cdots,m$">,
+
+<!-- MATH: $j=1,\cdots,n$ -->
+<IMG
+ WIDTH="90" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$j=1,\cdots,n$">
+by solving the equations.
+However, there are two difficulties in which a rational function
+satisfying linearized equations would not be considered as a solution of
+the problem above:
+<UL>
+<LI>There may arise the rational interpolation of the form 
+<!-- MATH: $\frac{0}{0}$ -->
+<IMG
+ WIDTH="16" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\frac{0}{0}$">
+at <I>x</I><SUB><I>i</I></SUB>,
+i.e. <I>unattainable point</I>.
+<LI>There may be poles between the points of interpolation.
+</UL>In the latter case,
+if a function <I>f</I>(<I>x</I>) is continuous in 
+<!-- MATH: $[x_0,x_{m+n}]$ -->
+[<I>x</I><SUB>0</SUB>,<I>x</I><SUB><I>m</I>+<I>n</I></SUB>],
+an interpolated rational function <I>P</I>(<I>x</I>)/<I>Q</I>(<I>x</I>) of <I>f</I><SUB><I>i</I></SUB> 
+becomes a poor approximation at the poles
+and near of the poles.
+Braess proved a condition showing that the interpolated
+rational function approximation of <I>f</I>(<I>x</I>) has no poles [<A
+ HREF="node7.html#B86">1</A>].
+However, there is no discussion on the condition for a data set 
+defined as <I>D</I>.
+
+<P>
+To avoid the difficulties, several rational interpolations 
+have been proposed.
+One of them is called linear rational interpolation by 
+Berrut and Mittelmann [<A
+ HREF="node7.html#BM97">2</A>].
+This interpolation has
+no unattainable points and no poles in the interval of the interpolation 
+
+<!-- MATH: $[x_0,x_{m+n}]$ -->
+[<I>x</I><SUB>0</SUB>,<I>x</I><SUB><I>m</I>+<I>n</I></SUB>]. 
+However, the degree of the approximation will become very high to obtain
+better approximation of <I>f</I>(<I>x</I>). Thus it is difficult to use the approximation 
+in other hybrid applications, e.g. hybrid integral.
+
+<P>
+If <I>Q</I>(<I>x</I>) has zeros in 
+<!-- MATH: $[x_0,x_{m+n}]$ -->
+[<I>x</I><SUB>0</SUB>,<I>x</I><SUB><I>m</I>+<I>n</I></SUB>], i.e. 
+a rational interpolation has poles, and <I>P</I>(<I>x</I>) has close zeros to the
+zeros of <I>Q</I>(<I>x</I>), 
+hybrid rational function approximation (HRFA) [<A
+ HREF="node7.html#NMK92">4</A>] based
+on symbolic-numeric hybrid computation 
+is available to remove the poles in 
+<!-- MATH: $[x_0,x_{m+n}]$ -->
+[<I>x</I><SUB>0</SUB>,<I>x</I><SUB><I>m</I>+<I>n</I></SUB>].
+However, if unattainable points occur in the data set <I>D</I>,
+HRFA becomes ill-conditioned.
+Hereafter is a detailed discussion of HRFA.
+
+<P>
+In HRFA, the approximate-GCD by Sasaki and Noda [<A
+ HREF="node7.html#SN89">11</A>] is used
+to remove the undesired poles in 
+<!-- MATH: $[x_0,x_{m+n}]$ -->
+[<I>x</I><SUB>0</SUB>,<I>x</I><SUB><I>m</I>+<I>n</I></SUB>]. 
+For the computation of approximate-GCD, the quantity
+
+<!-- MATH: $p(x_i) - f_i \cdot q(x_i)$ -->
+<IMG
+ WIDTH="124" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$p(x_i) - f_i \cdot q(x_i)$">
+in general is different from zero
+(even if it may be closed to zero), where <I>p</I>(<I>x</I>) and <I>q</I>(<I>x</I>) are the
+numerator and denominator polynomials of rational function obtained by HRFA.
+We must estimate the accuracy <IMG
+ WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\delta$">
+of the hybrid rational interpolation 
+<!-- MATH: $r_{k,l}(x)$ -->
+<I>r</I><SUB><I>k</I>,<I>l</I></SUB>(<I>x</I>) as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+|f(x_i)-r_{k,l}(x_i)|=\left|f(x_i)-\frac{p_k(x)}{q_l(x)}\right|\leq\delta,\ i=0,\cdots,m+n.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eqn:nri">&#160;</A><IMG
+ WIDTH="415" HEIGHT="48"
+ SRC="img16.gif"
+ ALT="\begin{displaymath}\vert f(x_i)-r_{k,l}(x_i)\vert=\left\vert f(x_i)-\frac{p_k(x)}{q_l(x)}\right\vert\leq\delta,\ i=0,\cdots,m+n.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where degrees of <I>p</I><SUB><I>k</I></SUB>(<I>x</I>) and <I>q</I><SUB><I>l</I></SUB>(<I>x</I>) are <I>k</I> and <I>l</I> respectively and
+
+<!-- MATH: $k\leq m,l\leq n$ -->
+<IMG
+ WIDTH="96" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$k\leq m,l\leq n$">.
+<IMG
+ WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\delta$">
+is small positive real number.
+
+<P>
+In this paper, we propose a method of the error estimation of HRFA.
+For this purpose, the approximate-GCD proposed by Hribernig and 
+Stetter is used. 
+HRFA and 
+the approximate-GCD are briefly summarized in <B>2</B> and <B>3</B>,
+respectively.
+In <B>4</B>, We show a theorem of the accuracy of HRFA using 
+the approximate-GCD.
+A symbolic-numeric hybrid example is shown in <B>5</B>.
+The result satisfies the theorem.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html20"
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html18"
+ HREF="kai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html12"
+ HREF="kai.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html21"
+ HREF="node2.html">Hybrid Rational Function Approximation</A>
+<B> Up:</B> <A NAME="tex2html19"
+ HREF="kai.html">Accuracy Analysis of Hybrid</A>
+<B> Previous:</B> <A NAME="tex2html13"
+ HREF="kai.html">Accuracy Analysis of Hybrid</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

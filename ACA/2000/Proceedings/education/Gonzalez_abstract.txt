@@ -1,0 +1,24 @@
+Francisco Javier Gonzalez (Mexico), Alfonsa Garcia*, Francisco Garcia,
+Alvaro Franco, Pedro Franco, Agustin de la Villa, Sara Hoya, Gerardo Rodriguez
+(Spain),  garcial@eui.upm.es, avilla@dmc.icai.upco.es, gerardo@gugu.usal.es
+
+Learning Calculus of Several Variables with New Technologies
+
+In this paper, the authors, teachers of different universities working as a
+team, show how they have been working with Computer Algebra Systems (CAS) such
+as Mathematica or Maple, focussing them to analyze different topics of calculus
+of several variables.
+
+Applying the power of computers to make calculations and facilitate the
+understanding of problems through their visualization, we emphasize concepts
+like limit, partial differentiation, derivative, integration, etc.  We have
+prepared two different kinds of documents for each topic: The first one, easy
+to follow and understand, includes instructions written on paper on how to use
+the CAS in order to learn calculus.  The second is an interactive file,
+including experiments and different functions specially developed for the CAS
+used, in order to solve mathematical problems.  This one requires a deeper
+knowledge of the CAS used, Mathematica or Maple.  We try to offer a different
+point of view from that presented previously in books and electronic material.
+This work is specially suited for students majoring in physics or engineering.
+We like to show trough several examples, realized with Maple or Mathematica,
+the main goals, the advantages and disadvantages of this kind of tools.

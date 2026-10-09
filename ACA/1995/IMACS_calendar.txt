@@ -1,0 +1,71 @@
+***********************IMACS Calendar of Events********************************
+                           September 1994
+
+For more information on the events described below, contact Karen Hahn 
+at the IMACS Secretariat by e-mail: imacs@cs.rutgers edu; by fax: 908-445-0537;
+or, by regular mail at: IMACS Secretariat, Dept. of Computer Science, 
+Rutgers University, Piscataway, NJ  08855, USA.
+*******************************************************************************
+
+------------------------------------------------------------------------------
+1995, Amsterdam, The Netherlands / an IMACS Symposium to celebrate the 100th 
+anniversary of the beginning of Runge Kutta methods
+------------------------------------------------------------------------------
+May 9-12, 1995, Brussels, Belgium / First IMACS International Symposium on
+Mathematical Modelling and Simulation in Agriculture & Bio-Industries
+------------------------------------------------------------------------------
+May 1995, University of New Mexico, Albuquerque, NM, USA / IMACS Conference 
+on Applications of Computer Algebra
+------------------------------------------------------------------------------
+June 11-14, 1995, Blagoevgrad, Bulgaria / Second IMACS International 
+Symposium on Iterative Methods in Linear Algebra (co-sponsored by The Center 
+of Informatics and Computer Technology-Bulgarian Academy of Sciences)
+------------------------------------------------------------------------------
+June 26-30, 1995, Technical University Berlin, Germany / 5th. IMACS 
+International Symposium on Systems Analysis and Simulation - IMACS-SAS'95) 
+------------------------------------------------------------------------------
+August 22-24, 1995, Beijing, P.R. of CHINA / Third Beijing International 
+Conference on System Simulation and Scientific Computing (BICSC'95)
+(Co-sponsored by IMACS)
+------------------------------------------------------------------------------
+August 28-30, 1995, Gyor, Hungary / IMACS European Simulation Meeting
+Organized by IMACS/Hungary
+------------------------------------------------------------------------------
+September 4-7, 1995, Venice, Italy / IEEE-IMACS International Workshop 
+on Mathematical Foundations and Application of Neural Networks
+------------------------------------------------------------------------------
+September 11-15, 1995, Vienna, Austria / EUROSIM CONGRESS '95
+------------------------------------------------------------------------------
+September 13-15, 1995, Lausanne, Switzerland / IMACS-COST Conference on 
+Computational Fluid Dynamics: Three-Dimensional Complex Flows
+------------------------------------------------------------------------------
+September 26-29, 1995, Bergische Universitaet Wuppertal, Germany
+IMACS/GAMM International Symposium on Scientific Computing, 
+Computer Arithmetic, and Validated Numerics - SCAN-95
+------------------------------------------------------------------------------
+October 18-21, 1995, Seoul, Korea / IMACS International Symposium on 
+Robotics, Mechatronics and Manufacturing Systems, (organized by the IMACS 
+Technical Committee on Control Systems and Robotics)
+------------------------------------------------------------------------------
+November 27-30, 1995, University of Newcastle, NSW, Australia /
+International Congress on Modelling and Simulation - MODSIM95
+Co-sponsored by IMACS
+------------------------------------------------------------------------------
+July 8-10, 1996, Ecole Centrale de Lille, France / IMACS Conference on 
+Computational Intelligence for Systems Applications /
+(Organized by the IMACS Technical Committee on Control Systems and Robotics)
+------------------------------------------------------------------------------
+September, 1996, St. Nazaire, France / 5th. IMACS Conference on Electrical 
+Machines, Converters and Systems  (Organized by the IMACS Technical Committee 
+on Modelling and Simulation of Electrical Machines - TC1)
+-------------------------------------------------------------------------------
+1996 (tentative), Lille, France / IMACS Conference on Parallel Linear Algebra
+-------------------------------------------------------------------------------
+February 1997, Technische Universitaet, Vienna / IMACS Symposium on 
+Mathematical Modelling - MATHMOD2  (organized by the IMACS Technical Committee
+on Mathematical Modelling)
+-------------------------------------------------------------------------------
+June 2-7 1997, Tampere, Finland / IMEKO XIV World Congress
+-------------------------------------------------------------------------------
+Summer 1997, Berlin, Germany
+15th IMACS WORLD CONGRESS

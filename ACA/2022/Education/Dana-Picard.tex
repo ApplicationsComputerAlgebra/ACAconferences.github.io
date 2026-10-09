@@ -1,0 +1,78 @@
+% This file should be rename with the speaker's last name. (e.g : smith)
+
+% Write the author names in the order you wish them to appear
+% and underline the one who will give the talk.
+
+% Only the speaker's email address is required.
+
+\begin{abstract_online}{Simplified models of planetary orbits, virtual space mandalas and beyond}{%
+        \underline{Thierry Dana-Picard}$^{1}$}{[ndp@jct.ac.il]
+        }{%
+        $^1$ Department of Mathematics, Jerusalem College of Technology, Jerusalem, Israel}
+
+Generally, in books such as [1] and online catalogues of plane curves, such as [2,3], the curves are presented individually. In many cases, strong connections can be revealed.
+Studying isoptic curves in [4], we showed a strong connection between conic sections and toric sections. The toric section are quartics, sometimes called also spiric curves. An important property is that they are the intersection of self-intersecting tori with a plane, which is not frequent in the literature. Internal connections between these curves have been shown in [5], as the Hessian of a spiric is also a spiric. This enabled to determine the points of inflexion of these curves.
+
+Networking between a Computer Algebra System (CAS) and a Dynamic Geometry System (DGS), as in [6], we study some plane curves given by parametric presentations. The ubiquitous articles in newspapers about spacecrafts, in particular about the triple launch towards Mars 2 years ago, incited students to ask questions about their trajectories and , in general, about modeling planetary orbits. Using simple models of circular orbits centered at the Sun, with constant velocity, we defined the loci of some virtual points (we mean points which do not have a strong physical meaning, but can be studied with mathematical methods). Figure \ref{fig mandalas}(a) has been obtained with software, using GeoGebra's \textbf{Locus} command and an animation. Figure \ref{fig mandalas}(b) is Kepler hand-drawing of Mars's orbit viewed from the Earth [7]. This yields a great number of curves, which artists call mandalas. We obtain also generalizations of Lissajous curves. Moreover, the above mentioned catalogues describe families of curves called epitrochoids, hypotrochoids, etc. Exploration with software reveals a uniforming framework for these families.
+
+\begin{figure}[htb]
+\centering
+\mbox{
+       \subfigure[The midpoint of Mars and the Earth]{\epsfig{file=mars-earth-midpoint.eps,width=5cm}}
+       \quad
+       \subfigure[Mars viewed from the Earth, by Kepler]{\epsfig{file=Kepler_Mars_from_the_Earth.eps,width=5cm}}
+       }
+\caption{Two space mandalas}
+\label{fig mandalas}
+\end{figure}
+
+The needed orbital data is obtained from dedicated websites. The students discover that most of the data is not made of integer numbers, and that every website makes its own decisions regarding the  decimal approximations. The usage of a slider bar enables to explore the influence of the precision on the obtained mandalas. At this stage, mostly curves given by parametrizations of the form
+\begin{equation*}
+\begin{cases}
+x(t)=\cos t + r  \cos(\frac th)\\
+y(t)=\sin t + r  \sin (\frac th )
+\end{cases}
+\end{equation*}
+where $r$ encodes the ratio of orbital radii and $h$ the ratio of orbital velocity, taking here the Earth as the first planet. Its distance to the Sun is equal to 1 AU (astronomical unit) and its orbital period is 1 year.
+
+This is where a double slider is useful.
+
+As a generalization, we explore a model with an additional  $3^{rd}$ planet. In this talk, we prefer to show more abstract situations, where the hypothetic $3^{rd}$ object runs in reverse direction, which is encoded in a parametrization of the form
+ \begin{equation*}
+\begin{cases}
+x(t)=\cos t + b  \cos(\omega_1 t) + c \sin (\omega_2 t)\\
+y(t)=\sin t + b  \sin (\omega_1 t ) + c \cos (\omega_2 t)
+\end{cases}
+\end{equation*}
+Once again, the first coefficient is equal to 1 as the distance from Earth to the Sun is defined as 1 astronomical unit (AU).  For a similar reason, the angular velocity of the Earth is put as 1 (orbital period equal to 1 year).
+Changing the parameters reveals curves with symmetries of non trivial order (we mean of order 7, 9 , 11, etc.), which are generally not constructed with simple tools. Two examples are on display in Figure \ref{fig generalizations} .
+\begin{figure}[htb]
+\centering
+\mbox{
+       \subfigure[Rotational symmetry of order 5]{\epsfig{file=5-fold-curve.eps,width=5cm}}
+       \quad
+       \subfigure[Rotational symmetry of order 9]{\epsfig{file=9-fold-curve.eps,width=5cm}}
+       }
+\caption{Two generalizations of mandalas}
+\label{fig generalizations}
+\end{figure}
+
+The symmetries can be enhanced by two means: visually by playing on the plotting intervals and changing the colors, with automated methods by plotting a "basic part" of the curve, then using the automated commands for rotations, algebraically using substitution and trigonometric identities.
+
+Finally, we wish to recall that STEM Education is well-known and documented. During the past decade, new developments occurred and an A has been added, A for Arts, defining STEAM Education [8]. The proposed activities, dominated by M, S and T have a nice A aspect with the space mandalas.  that the kind of activities that we propose here is typical of STEAM Education. We have here a mathematical topic with strong connections with the real world and the cultural background of the students (here the daily newspapers),  Physics (true, we used a very simplified model) and artistic creation. Technology is the medium which enables to build these connections.
+
+
+\textbf{Keywords} \newline{} Automated exploration, parametric curves, mandalas, visual arts, STEM Education
+
+\textbf{References} \newline{}
+[1] \textsc{R.J. Walker}. \emph{Algebraic Curves}, NY: Springer, 1950.\newline{}
+[2] \textsc{R. Ferr\' eol}. \href{http://mathcurve.com}{Mathcurve}, retrieved 2022.\newline{}
+[3] \textsc{MacTutor} \href{https://mathshistory.st-andrews.ac.uk/Curves/}{Famous Curves Index}, retrieved 2022. \newline{}
+[4] \textsc{Th. Dana-Picard, G. Mann and N. Zehavi}. \href{https://scholarworks.umt.edu/tme/vol6/iss3/13}{\emph{From conic intersections to toric intersections: the case of the isoptic curves of an ellipse}}, The Montana Mathematical Enthusiast 9 (1), 59--76 (2011).\newline{}
+[5] \textsc{Th. Dana-Picard} Inflexion of spirics: a tale of two tori, \emph{ACA 2021}.\newline{}
+[6] \textsc{Th. Dana-Picard and Z. Kovács}: \href{https://php.radford.edu/~ejmt/deliveryBoy.php?paper=eJMT_v15n1p3}{Networking of technologies: a dialog between CAS and DGS}, \emph{The electronic Journal of Mathematics and Technology} (eJMT) 15 (1), 17 pages (2021)\newline{}
+[7] \textsc{Kepler, J.} \emph{Astronomia Nova}, 1609.\newline{}
+[8] Aguilera, D. and Ortiz-Revilla, J. (2021). STEM vs. STEAM Education and Student Creativity: A Systematic Literature Review, Education Sciences 11,
+331. \url{https://doi.org/10.3390/educsci1107033}
+
+\end{abstract_online}

@@ -1,0 +1,30 @@
+                             Gregory Reid
+                           reid@math.ubc.ca
+
+           Differential-Algebraic and Differential-Geometric
+               Elimination Algorithms for Systems of PDEs
+
+We hope to invite speakers to cover each of the major approaches to
+Differential Elimination Algorithms: Differential-Algebraic methods,
+Differential-Geometric methods, Riquier-Janet based approaches, and
+approaches based on Exterior Differential Systems; one objective being
+to highlight the similarities and differences between these evolving methods. 
+
+It is planned that this area will begin with a half-hour survey lecture
+(by one of the organisers) which is introductory in nature; and will end
+with a half-hour open chaired discussion which will include following topics:
+mathematical difficulties in differential-algebraic and differential-geometric
+methods for systems of PDEs; the issue of efficiency; future directions and
+applications.
+
+Differential-Algebraic (Groebner) Methods:
+  G. Carra-Ferro, F. Ollivier.
+
+Differential-Geometric Methods:
+  W. Seiler
+
+Approaches using Exterior-Differential Systems: 
+  D. Hartley, R. Tucker
+
+Riquier-Janet based Approaches:  
+  F. Schwarz, V. Topunov.

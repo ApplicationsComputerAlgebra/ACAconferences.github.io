@@ -1,0 +1,18 @@
+  Title:        Symbolic and Numeric Computation of the Barnes
+                Function
+  Authors:      Victor Adamchik
+  Affiliation:  Dept. Computer Science, Carnegie Mellon Univ.
+  Abstract:
+The Barnes G function, defined by a functional equation as a generalization of
+the Euler gamma function,  is used in many applications of pure and applied
+mathematics, and theoretical physics.  The theory of the Barnes function has
+been related to certain spectral functions in mathematical physics, to the
+study of functional determinants of Laplacians of the n-sphere, to the Hecke
+L-functions, and to the Selberg zeta function.  There is a wide class of
+definite integrals and infinite sums appeared in statistical physics (the Potts
+model) and lattice theory which can be computed by means of the G function.
+This talk presents new integral representations, asymptotic series and some
+special values of the Barnes function.  An explicit representation by means of
+the Hurwitz zeta function and its relation to the determinants of Laplacians
+are also discussed.  Finally, we propose an efficient numeric procedure for
+evaluating the G function.

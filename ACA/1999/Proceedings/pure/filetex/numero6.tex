@@ -1,0 +1,73 @@
+\documentclass{article}
+
+
+\begin{document}
+
+\begin{center}
+{\bf Slopes in submodules of a free module.}
+\end{center}
+
+\begin{center}
+Jose Mar\'{\i}a Ucha Enr\'{\i}quez.
+
+Dpto. Algebra. Universidad de Sevilla.
+
+ucha@algebra.us.es
+
+954 55 69 69, FAX: 954 55 69 38
+\end{center}
+
+
+\noindent
+Let ${\cal A} = A_n ({\bf C}) = {\bf C}[X]<D>= {\bf C}[x_1, ..., x_n]
+<\partial_1, ..., \partial_n>$ 
+be the $n$-th Weyl algebra, and $L: {\bf Q}^2 \longrightarrow 
+{\bf Q}$ a linear form with possitive coeficients.
+  
+Let us consider the free module ${\cal A}^p$ and ${\cal N}$ a submodule.
+The $L$-order of an element is the maximum of the values of 
+$L(|\beta|,\beta_1 - \alpha_1)$ over the exponents $(\alpha, \beta)$ in any 
+component of the element.  This order induces a $L$-filtration and an 
+associated graduated module $gr^L ({\cal A}^p)$.
+    
+We will say that $L$ is a slope of ${\cal M} = {\cal A}^p/{\cal N}$
+if the ideal
+$$
+\sqrt{A^{\cal M}_L} = \sqrt{Ann_{gr^L ({\cal A})} (gr^L ({\cal A}^p)
+/gr^L({\cal N}))}
+$$
+is not $(F,V)$-bihomogeneous, where $F$ 
+is the graduation respect to the order on $D$
+and $V$ is the graduation of Malgrange-Kashiwara.
+
+In this work we generalize ``How to calculate the slope of a ${\cal D}$-
+module'' from Assi-Castro-Granger, and  
+``Homogenising differential operators'' from Castro-Narvaez. 
+We provide an algorithm of effective calculus of 
+slopes as well, that we have implemented in COMMON LISP. 
+Eventually, we use MACAULAY to calculate radicals of ideals of 
+polynomial rings. 
+
+
+
+Some concrete examples are treated:
+\begin{itemize} 
+\item Syzygy modules. 
+\item Modules of the form 
+${\cal O}[1/f]/{\cal O}$ with $f$ a surface.
+\item ${\cal A}^2 /{\cal N}$ with ${\cal N} 
+= I_1 \oplus I_2$, and each $I_i$ a left ideal of ${\cal A}$ with known 
+slopes.
+\end{itemize} 
+   
+
+
+\end{document}
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+Applying the Factorization Technique for Simplification
+of Expressions Involving Differential Operator Inverses
+
+Serguei P. Tsarev
+
+Department of Mathematics
+Krasnoyarsk State Pedagogical University
+Lebedevoi, 89
+660049, Krasnoyarsk, Russia
+e-mail: tsarev@edk.krasnoyarsk.su
+
+Using the formal theory of linear ordinary differential operators we develop
+simplification and normalization techniques for manipulation of expressions
+involving inverses of linear ordinary differential operators alongside with the
+usual D=d/dx.  Applications to investigation of symmetries of nonlinear PDE are
+discussed.

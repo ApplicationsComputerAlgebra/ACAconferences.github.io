@@ -1,0 +1,118 @@
+/* $Jssac: jssac.css,v 1.3 2007/02/02 05:03:03 saito Exp $ */
+/* Top Page Style def */
+.tops   {
+      background-color:#090970;
+      color:#86d1f9;
+}
+
+.menus {
+      background-color:#e7ffff;
+      color:#090970;
+}
+.menus div {
+      color:#ff9900;
+}
+
+.main {
+      background-color:#e8e8e8;
+      color:#000000;
+}
+.main ul {
+      font-size:larger
+}
+.warning {
+		color:#ff0000;
+}
+/* 数式処理 style */
+.sss {
+		background-color:#ffffcc;
+}
+
+/* rims style */
+.rims {
+      background-color:#ffffe0;
+      margin-right:10%;
+      margin-left:10%;
+}
+.rims table td {
+      background-color:#e0ffff;
+}
+
+/* 大会用 style */
+.taikai {
+      background-color:#e0ffe0;
+      color:#000000;
+}
+/* 大会用 table color */
+.taikai td {
+      background-color:#ffffff;
+}
+/* 大会前書き style */
+.pre td {
+      background-color: #f0ffff;
+}
+/* 大会後書き style */
+.tail td {
+      background-color: #e0ffe0;
+}
+/* 大会セッション style */
+.taikai th[colspan] {
+      background-color: #80c080;
+      text-align: left
+}
+/* 大会時刻記述 style*/
+.taikai th[rowspan] {
+      background-color: #a0e0a0
+}
+
+/* 議事録 def */
+.giji {
+      background-color:#ffffcc;
+}
+
+/* 組織 def */
+.org {
+      background-color:#e0e0ff;
+}
+
+/* 会則 def */
+.low {
+     background-color:#e0f0e0;
+     font-size:large;
+}
+
+/* 投稿規定等 def */
+.contri {
+      background-color:#ffe8e8;
+      font-size:large;
+      margin-right:10%;
+      margin-left:10%;
+}
+.contri .src{
+      background-color:#ffff00;
+      color:#000000;
+}
+.contri .warning {
+      background-color:#ff0000;
+      color:#00ffff;
+}
+/* 会員管理部門 style */
+.member {
+      background-color:#e0f0e0;
+      font-size:large;
+      margin-left:5%;
+      margin-right:5%;
+}
+.member .req {
+      background-color:#ffff00;
+}
+
+#TOPNAV {
+	text-align:center;
+	color:#000000;
+	background-color:#cccccc;
+}
+#TOPNAV  a:link {color:#0000ff}
+#TOPNAV  a:visited {color:#0000ff}
+#TOPNAV  a:hover {color:rgb(128,000,128)}
+#TOPNAV  a:hover {color:fuchsia}

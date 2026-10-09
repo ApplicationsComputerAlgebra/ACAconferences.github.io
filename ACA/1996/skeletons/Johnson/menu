@@ -1,0 +1,24 @@
+# Created by rsalamon@yucca on Thu Jul  4 09:49:25 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Brown.html
+Path=0/conference/IMACS96/skeletons/Johnson/Brown.html
+
+Name=Buckland.html
+Path=0/conference/IMACS96/skeletons/Johnson/Buckland.html
+
+Name=Gates.html
+Path=0/conference/IMACS96/skeletons/Johnson/Gates.html
+
+Name=Lawvere.html
+Path=0/conference/IMACS96/skeletons/Johnson/Lawvere.html
+
+Name=Rosebrugh.html
+Path=0/conference/IMACS96/skeletons/Johnson/Rosebrugh.html
+
+Name=Takeyama.html
+Path=0/conference/IMACS96/skeletons/Johnson/Takeyama.html
+
+Name=Walters.html
+Path=0/conference/IMACS96/skeletons/Johnson/Walters.html
+

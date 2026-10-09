@@ -1,0 +1,270 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Computational Category Theory</H1>
+
+<h3>Organizer</h3>
+<p>
+<ADDRESS>
+Michael Johnson
+(<a href="mailto:mike@mpce.mq.edu.au">mike@mpce.mq.edu.au</a>)<br>
+School of Maths and Computing<br>
+Macquarie University<br>
+Sydney, 2109, Australia.<br>
+Tel:  +61 2 850 9583<br>
+Fax:  +61 2 850 9551<br>
+</ADDRESS>
+<p>
+
+<h3>Description</h3>
+
+The application of computer algebra techniques to category theory
+is still relatively little developed, but in the last five to ten years 
+significant progress has been made, and there is now a growing
+group of people working in the field.
+<p>
+Computational category theory is particularly interesting because
+not only is category theory a branch of algebra (and so computational
+algebra techniques that have already been developed are frequently
+valuable in category theory) but also 
+algebra is a branch of category theory (and so
+category theoretic techniques and application domains are likely
+to be relevant for computational algebra).  (The view of algebra as
+a branch of category theory is made precise in categorical universal
+algebra.)
+<p>
+Despite these close connections, there has not before now been
+a significant conference opportunity for category theorists and
+workers in the rest of computational algebra to interact.  We hope
+that this session and this conference will provide that long missing
+opportunity.
+
+<h3>Talks</h3>
+
+The talks for this session have been chosen to be representative of
+the major threads mentioned above.  Here are three examples (there
+are actually seven talks and their abstracts are below).
+<p>
+<i>Richard Buckland</i> will describe
+a concrete application of computational category theory in which 
+a system designed to perform computations in n-categories is used
+as the engine for a computer assisted software engineering (CASE)
+tool for concurrent systems.
+<p>
+<i>Robert Walters</i> and his colleagues have developed arguably
+the most significant new procedure in computational category theory.
+This procedure is a very good example of the interaction of computer
+algebra and computational category theory: it is based on the famous 
+Todd-Coxeter procedure which has been widely used in computer algebra,
+but it requires significant generalisation beyond the normal Todd-Coxeter,
+and it has in turn led to a new and simple proof of the correctness of
+the Todd-Coxeter procedure, even in its classical use for enumerating
+cosets.
+<p>
+<i>Ronnie Brown</i> has been working with colleagues including
+<i>Winfried Dreckmann</i> on developing an integrated system for
+computational category theory.  The preceding two talks have shown
+some of the progress being made in computational category theory, but
+without an integrated system each new algorithm usually uses new and
+incompatible data types and the systems remain
+special purpose and generally hard to use.  Of course systems for 
+computational category theory should take advantage of the developed
+systems for computational algebra, and Brown and Dreckmann have been
+investigating the use of the <i>Axiom</i> computational algebra system
+for supporting computational category theory.
+<p>
+
+
+<h3>Abstracts</h3>
+<ul>
+  <li> Ronald Brown
+(<a href="mailto:r.brown@bangor.ac.uk">r.brown@bangor.ac.uk</a>)<br>
+<h4>The Axiom computer algebra system applied to computational category theory</h4>
+(joint work with W. Dreckmann(Bangor and Stockholm))
+<br>
+<em>Abstract:</em>
+
+The Axiom language is based on what are called:
+(Axiom) categories, domains, packages, objects. 
+<br>
+An `Axiom category' consists essentially of a signature. The  
+representation of objects, implementation of operations, and expression as
+output form, 
+is carried out in the domain constructors. 
+The advantages of the Axiom language and system are discussed, and 
+illustrated in terms of the code for 
+directed graphs, free categories, and the category of finite sets.
+It is argued that this type of system allows for the development of code for
+the interaction of examples and abstract algebraic systems, and code which
+is relatively easily modified, and sufficiently general to cope with new
+examples. That is, the code approximates more than is usual to the standard
+ways of writing mathematics. 
+<p>
+  <li> Richard Buckland
+(<a href="mailto:richardb@mpce.mq.edu.au">richardb@mpce.mq.edu.au</a>)<br>
+<h4>CASE for concurrent systems based on the computer algebra of n-categories</h4>
+<br>
+<em>Abstract:</em>
+
+Richard Buckland will describe a concrete application of computational
+category theory in which a system designed to perform computations in
+n-categories is used as the engine for a computer assisted software
+engineering (CASE) tool for concurrent systems.
+<br>
+The skeletal structure of higher dimensional categories has been found to
+provide a useful model of concurrent computation.  However calculating with
+such higher dimensional algebraic objects is, as is well known to those who
+have done such calculations, surprisingly difficult.  This difficulty arises
+both from the combinatorial complexity of all but the most trivial or low
+dimensional examples, and from the problem of verifying the reasonableness
+of procedures or results since we have little native intuition when dealing
+with high dimensions.
+To assist in this difficult task of high dimensional calculation a
+computational system has been developed to perform calculations with Schemes
+(schemes are the skeletal structures underlying paths in omega categories).
+<br>
+This talk will briefly describe the algorithms for calculating with Schemes
+and will then show how, in a nice piece of circularity,  this computer-aided
+mathematics has as an application the engine of a CASE tool to specify
+computational systems.
+<p>
+  <li> Robbie Gates
+(<a href="mailto:robbie@maths.usyd.edu.au">robbie@maths.usyd.edu.au</a>)<br>
+<h4>Generic solutions to polynomial equations in distributive categories</h4>
+<br>
+<em>Abstract:</em>
+
+  Following a remark of Lawvere, Blass exhibited a particularly
+elementary bijection between the set of binary trees, and seven
+tuples of binary trees.  A "set of binary trees" may be abstracted
+to "an object $T$ of a distributive category with a given isomorphism
+$T^2 + 1 \cong T$".  Particularly elementary in fact means "constructible
+from the given isomorphism using distributive category operations".
+In this context, it is seen that there is no such bijection for pairs,
+triples, ..., six-tuples of binary trees.
+<br>
+The author has described, for a given polynomial P, the free distributive
+category containing an object $X$ and given isomorphism $P(X) \cong X$,
+and the isomorphism classes of this category.  Since distributive operations
+correspond to the operations used to build straightline circuits/programs
+from simpler circuits/programs, the results of the author may be interpreted
+as proving the existence/non-existence of isomorphims constructible by
+straight line circuits/programs.
+<br>
+The talk will briefly describe the connection between distributive categories
+and circuits, the bijection presented by Blass, the techniques used and results
+acheieved for the general case, and some speculation on future directions.
+<p>
+  <li> F. William Lawvere
+(<a href="mailto:wlawvere@destrier.acsu.buffalo.edu">wlawvere@destrier.acsu.buffalo.edu</a>)<br>
+<h4>Graphic toposes, n-categories and resulting problems of computer algebra</h4>
+<br>
+<em>Abstract:</em>
+
+In 1989 I proposed pre-sheaves of a special kind as algebraic, 
+displayable descriptions of hierarchical systems.  The multi-
+dimensional graphs underlying n-categories (i.e.ball-and-
+hemisphere complexes) form a central example, but finite monoids
+satisfying the identity  xyx = xy play the pivotal role.  New
+algebraic results involving these toposes include an intimate
+connection with Coxeter groups and a characterization of the
+commonly-occuring case in which the lattice of sub-toposes is a
+total order.  Computer graphics should be capable of displaying
+the geometric realizations of these objects as computer algebra
+should be capable of solving the relevant word problems for a
+known graphic monoid.  Whether more than a few such monoids are
+needed to govern the modeling of the access-algebra of HYPERTEXT
+or similar hierarchies remains to be seen.
+
+<p>
+  <li> Bob Rosebrugh
+(<a href="mailto:rrosebru@mailserv.mta.ca">rrosebru@mailserv.mta.ca</a>)<br>
+<h4>Database tools for category theory</h4>
+<br>
+<em>Abstract:</em>
+
+We have developed an interactive system in C to store and 
+manipulate finitely-presented categories and functors among them. 
+The tools allow, among other things, determination of equality of 
+composed arrows, sums, products and so on. Also implemented are 
+calculations of right and left kan extensions of finite-set valued 
+functors. These include computation of finitely presented limits and 
+colimits of finite sets. The talk will indicate some of the algorithms 
+used and demonstrate program output. 
+(This is joint work with M. Fleming and R. Gunther.)
+
+<p>
+  <li> Makoto Takeyama
+(<a href="mailto:makoto@qucis.queensu.ca">makoto@qucis.queensu.ca</a>)<br>
+<br>
+<h4>Universal structure and categorical reasoning in type theory</h4>
+<em>Abstract:</em>
+
+Computer implementations of type theory have been used for studies of
+various formalized objects in both computer science and mathematics.
+Category theory can provide a unifying and clarifying framework for
+such studies.  Universal structure is a classification scheme for
+categories with extra structure that is aimed at machine-checked,
+interactive development of categorical proofs in a type theory
+implementation.  The traditional classification, (essentially)
+algebraic structure on categories, tends to force unnatural thinking
+and awkward computation for this purpose.  To avoid the problems, we
+define universal structure in terms of universal properties,
+universality being the most important and most central concept of
+category theory.  We express universal properties by representability
+of appropriate functors / modules, so we develop some basic theory of
+representability.  Many instances of universal structure are of 
+great interest to computer scientists, such as cartesian closed
+structure, fibrations with extra structure, limits, colimits, and
+natural numbers objects.  We use our definition of universal structure
+to develop a ``category theory layer'' on top of the LEGO
+implementation of type theory, and discuss the difficulties encountered.
+<p> 
+  <li> Robert Walters
+(<a href="mailto:walters_b@maths.su.oz.au">walters_b@maths.su.oz.au</a>)<br>
+<h4>The Todd-Coxeter procedure and the computation of left Kan extensions</h4>
+<br>
+<em>Abstract:</em>
+Not currently available
+
+</ul>
+
+<P><img src="../line-risc.gif" align=middle alt="________________________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/program-plan.html"><img src="../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

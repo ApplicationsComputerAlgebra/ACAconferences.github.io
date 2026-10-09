@@ -1,0 +1,96 @@
+\documentstyle[12pt]{article}
+
+
+
+\newcommand{\offset}{\= \+}
+\newcommand{\inset}{\- \\}
+\let\fns=\footnotesize
+\def\xref#1{\marginpar[{\fns #1}]{{\fns #1}}\ref{#1}}
+\def\xlabel#1{\marginpar[{\fns #1}]{{\fns #1}}\label{#1}}
+\def\xcite#1{\marginpar[{\fns #1}]{{\fns #1}}\cite{#1}}
+\def\xindex#1{\marginpar[{\fns #1}]{{\fns #1}}\index{#1}}
+\def\xglossary#1{\marginpar[{\fns #1}]{{\fns #1}}\glossary{#1}}
+
+\parindent0em
+
+\newcommand{\ord}[1]{\mbox{$\vert #1 \vert$}}
+\def\Lrarr{\Leftrightarrow}
+\def\rarr{\longrightarrow}
+\def\Rarr{\Longrightarrow}
+\def\Larr{\Longleftarrow}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 2pt minus 1pt}
+\addtolength{\topsep}{-7pt}
+
+% DINA4 ausnutzen
+%\pagestyle{empty}
+\addtolength{\textwidth}{1.8cm}
+\addtolength{\textheight}{2.8cm}
+
+\begin{document}
+
+
+\title{Applying quantifier elimination to problems in \\ 
+       optimization and simulation}
+
+
+\author{Volker Weispfenning   \\
+Universit\"at Passau, D-94030 Passau,
+Germany  \\
+Tel: 0851-509-3120, \ Fax: 0851-509-1802 \\
+e-mail: weispfen@alice.fmi.uni-passau.de}
+
+\maketitle
+
+
+\date{}
+
+
+
+{\bf Abstract.} Linear optimization (LP) problems are treated as a 
+rule numerically by variants of the simplex algorithm. The only 
+symbolic elimination method for this problem known so far, 
+the Fourier-Motzkin (FM) method, requires 
+so much storage in practice that it is limited to problems with well
+below 10 variables. In fact we show that the FM method requires  
+doubly
+exponential space in the worst case. 
+
+
+We present a new symbolic elimination 
+method for optimization problems given by linear constraints and a  
+linear,
+quadratic and hyperbolic objective function. Moreover both may  
+contain
+parametric coefficients. The method is singly
+exponential in the worst case, provides exact reults, 
+and takes into account a sparsity of the input matrix.
+For problems with additive parameters only the method is
+worst-case optimal. 
+
+
+It can also be used as a quantifier elimination method for arbitrary 
+existential formulas, in which the quantified variables occur only
+linearly. Moreover it provides a finite set of expressions 
+representing potential solutions for
+such formulas in dependence of the parameters.
+
+The method has been implemented in REDUCE by M. Kappert and T.  
+Sturm.
+It has been able to treat many small to moderately sized  
+optimization
+problems in reasonable time, including benchmark LP-problems of up  
+to
+100 variables. By its inherent structure the method is well
+parallelizable.
+ 
+
+As a quantifier elimination method it has found commercial  
+engineering
+applications in the diagnosis and simulation of complex networks of
+mechanical or  electrical components. 
+
+ 
+
+\end{document}

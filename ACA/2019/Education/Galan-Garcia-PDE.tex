@@ -1,0 +1,65 @@
+% This file should be rename with the speaker's last name. (e.g : smith)
+
+% Write the author names in the order you wish them to appear
+% and underline the one who will give the talk.
+
+% Only the speaker's email address is required.
+
+\begin{abstract_online}{SFOPDES: A stepwise tutorial for teaching Partial Differential Equations using a {\sc Cas}}{%
+        \underline{Jos\'e Luis Gal\'an-Garc\'{\i}a}$^{1}$, Gabriel Aguilera-Venegas$^{1}$, Pedro Rodr\'{\i}guez-Cielos$^{1}$, Yolanda Padilla-Dom\'{\i}nguez$^{1}$, Mar\'{\i}a \'Angeles Gal\'an-Garc\'{\i}a$^{1}$, Ricardo Rodr\'{\i}guez-Cielos$^{2}$}{[jlgalan@uma.es]
+        }{%
+        $^1$ University of M\'alaga, M\'alaga, Spain \newline{}$^2$ Technical University of Madrid, Madrid, Spain
+}
+    
+Partial Differential Equations (PDE) are one of the most difficult topics that Engineering and Sciences students have to study in the different Math subjects in their degree.
+
+In this talk we introduce {\tt SFOPDES} (Stepwise First Order Partial Differential Equations Solver) aimed to be used as a tutorial for helping both the teacher and the students in the teaching and learning process of PDE.
+
+The type of problems that {\tt SFOPDES} solves can be grouped in the following three blocks:
+\begin{enumerate}
+\item {\bf Pfaff Differential Equations}, which consists on finding the general solution for:
+$$
+P(x,y,z)\:{\rm d}x + Q(x,y,z)\:{\rm d}y + R(x,y,z)\:{\rm d}z = 0
+$$
+\begin{enumerate}
+\item General method.
+\item Particular cases:
+\begin{enumerate}\item Separable equations.
+\item Exact Pfaff equations.
+\item One-separated variable equations.
+\end{enumerate}
+\end{enumerate}
+\item {\bf Quasi-linear Partial Differential Equations}, which consists on finding the general solution for:
+$\qquad\displaystyle
+P(x,y,x)\:p + Q(x,y,z)\:q = R(x,y,z)
+\qquad$
+where $\displaystyle \quad p=\frac{\partial\: z}{\partial\: x}\quad$ and $\displaystyle \quad q=\frac{\partial\: z}{\partial\: y}$.
+\begin{enumerate}
+\item General method.
+\item Particular solution which contents a given curve $\;\Gamma$. 
+\end{enumerate}
+\item Using {\bf Lagrange-Charpit Method} for finding a {\em complete integral} for a given general first order partial differential equation: $\quad F(x,y,z,p,q)=0$.
+\begin{enumerate}
+\item General method.
+\item Particular cases: 
+\begin{enumerate}
+\item $F(p,q)=0$
+\item $g_1(x,p) = g_2(y,q)$
+\item $z=px+qy+g(p,q)$
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+In [1], a talk given at ACA 2018 conference, we introduced the first version of this tutorial where the general methods for each type of the above PDE were considered. In this talk we extend that work introducing new programs which solve the particular cases of Pfaff equations and general first order PDE using Lagrange-Charpit method.
+
+We have used the {\sc Cas Derive} to develop this tutorial since Engineering students at the University of M\'alaga are still using this software in the computer lectures in different topics. The way of using this {\sc Cas} in teaching has been shown in previous ACA conferences and in published papers as [2] or [3]. 
+
+Nevertheless, since {\sc Derive} is discontinued, we are migrating this tutorial to a free and multi-platform environment as {\sc Python} programming language using {\sc SymPy} which is a {\sc Cas} extension for {\sc Python}. This way, the tutorial will be available for any user without the need of a proprietary software as {\sc Derive}. In this talk, we will also show the advances (with the advantages and disadvantages) in this migration. In addition, this migration to {\sc Python} will allow it uses in the {\sc SageMath} since this free {\sc Cas} can deals with the {\sc Python} library {\sc SymPy}.
+
+\textbf{Keywords} \newline{} PDE, Stepwise tutorial, {\sc Cas}, {\sc Derive}, {\sc SymPy}, {\sc Python}, {\sc SageMath}
+
+\textbf{References} \newline{}
+[1] \textsc{J.L. Gal\'an-Garc\'{\i}a, P. Rodr\'{\i}guez-Cielos, Y. Padilla-Dom\'{\i}nguez, M.\'A. Gal\'an-Garc\'{\i}a, G. Aguilera-Venegas, R. Rodr\'{\i}guez-Cielos}, Teaching Partial Differential Equations with {\sc Cas}. In \emph{24th Conference on Applications of Computer Algebra - ACA 2018}, Francisco Botana, Felipe Gago and Manuel Ladra (eds.), 64--65. Servizo de Publicaci\'ons e Intercambio Cient\'{\i}fico Campus Vida, Santiago de Compostela (Spain), 2018, ISBN 978-84-16954-87-2. \newline{}
+[2] \textsc{G. Aguilera-Venegas, J. L. Gal\'an-Garc\'{\i}a, M. \'A. Gal\'an-Garc\'{\i}a, P. Rodr\'{\i}guez-Cielos}, Teaching semantic tableaux method for propositional classical logic with a CAS. \emph{International Journal for Technology in Mathematics Education} \textbf{22}(2), 85--92  (2015). \newline{}
+[3] \textsc{G. Aguilera-Venegas, J. L. Gal\'an-Garc\'{\i}a, M.\'A. Gal\'an-Garc\'{\i}a, G. Lobillo-Mora, J.  Mart\'{\i}nez-del-Castillo, S. Merino-C\'ordoba, Y. Padilla-Dom\'{\i}nguez, P. Rodr\'{\i}guez-Cielos, R. Rodr\'{\i}guez-Cielos}, Parametrization of curves and line integrals with a CAS. \emph{International Journal for Technology in Mathematics Education} \textbf{24}(4), 179--190  (2017). \newline{}
+\end{abstract_online}
+    

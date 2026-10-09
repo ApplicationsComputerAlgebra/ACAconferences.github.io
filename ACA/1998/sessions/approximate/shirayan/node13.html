@@ -1,0 +1,82 @@
+
+<H2><A NAME="SECTION00053000000000000000"><tex2html_anchor_invisible_mark></A><A NAME="reconstruct"><tex2html_anchor_mark></A><BR>
+Obtaining exact output
+</H2>
+
+<P>
+This section is about using the stabilization methodology 
+to obtain an exact solution.  The obvious difficulty is that 
+<tex2html_verbatim_mark>#math225#<tex2html_image_mark>#tex2html_wrap_inline2225# produces approximation sequences which converge to 
+the exact output of <tex2html_image_mark>#tex2html_wrap_inline2227# but do not reach the exact output 
+of <tex2html_image_mark>#tex2html_wrap_inline2229# in a finite number of steps.  On the other hand, two
+types of finiteness occur.  The first is supportwise convergence
+(Theorem~<A HREF=<tex2html_cr_mark>#th:support-conv#583><tex2html_cr_mark></A>), whereby coefficients which will converge
+to zero do so in a finite number of steps<A NAME="tex2html19"
+ HREF="footnode.html#foot794"><SUP>16</SUP></A>
+.  The second type of finiteness concerns the execution path.  
+As <tex2html_verbatim_mark>#math226#<tex2html_image_mark>#tex2html_wrap_inline2235# is executed on successive elements <tex2html_verbatim_mark>#math227#<tex2html_image_mark>#tex2html_wrap_inline2237#of an approximation sequence <tex2html_verbatim_mark>#math228#<tex2html_image_mark>#tex2html_wrap_inline2239# for <I>I</I> 
+there comes an <I>N</I> where for <tex2html_image_mark>#tex2html_wrap_inline2245# the execution path
+through <tex2html_verbatim_mark>#math229#<tex2html_image_mark>#tex2html_wrap_inline2247# is the same as the execution path of <tex2html_image_mark>#tex2html_wrap_inline2249# 
+executed with input <I>I</I>, [#SS#<tex2html_cite_mark>#1##<tex2html_cite_mark>#].  This execution path is
+what we have called the <#591#><I>exact execution path</I><#591#> in section
+<A HREF=<tex2html_cr_mark>#faq#592><tex2html_cr_mark></A>.  As will be seen this leads to an effective 
+technique of obtaining exact output.
+
+<P>
+Supportwise convergence might be harnessed in order to obtain 
+an exact solution.  One would have to use the ``shape'' of 
+elements in the approximation sequence outputs of <tex2html_verbatim_mark>#math230#<tex2html_image_mark>#tex2html_wrap_inline2253# to obtain
+an exact solution.  At present, we do not have a useful example of
+this tactic nor a useful example along these lines for the more
+general ``<#593#>S<#593#> rewriting'', ``algorithms with <#594#>S<#594#> 
+discontinuity'' and ``<#595#>S<#595#> convergence'' mentioned in the 
+previous paragraph.
+
+<P>
+The fact that the execution path through <tex2html_verbatim_mark>#math231#<tex2html_image_mark>#tex2html_wrap_inline2255# stabilizes at 
+the exact execution path may be utilized by keeping track of or
+<#596#><I>logging</I><#596#> the execution path.  This can be found in 
+[#log#<tex2html_cite_mark>#1##<tex2html_cite_mark>#]. The <#598#><I>win</I><#598#> of the log method is that 
+predicates are not evaluated and one only has to perform 
+evaluation with exact coefficients for 
+computations leading to the <#599#><I>final</I><#599#> output.  One can 
+dispense with evaluation of <#600#><I>intermediate</I><#600#> data which does
+not enter into the final output.  When the intermediate 
+computation utilizes much memory and the the final result is 
+of moderate size, this approach is useful.  The computation of
+Gr&#246;bner bases is such an example, see [#log#<tex2html_cite_mark>#1##<tex2html_cite_mark>#].
+
+<P>
+Suppose that given a finite set <tex2html_verbatim_mark>#math232#<tex2html_image_mark>#tex2html_wrap_inline2257#, we want to 
+compute a purely lexicographic Gr&#246;bner basis of <tex2html_verbatim_mark>#math233#<tex2html_image_mark>#tex2html_wrap_inline2259#.
+In this case, verification whether a candidate <I>G</I>' is
+really the desired Gr&#246;bner basis is based on two matters:
+one is testing whether <I>G</I>' satisfies the property (definition) 
+of Gr&#246;bner bases, and the other is testing equality of 
+<tex2html_verbatim_mark>#math234#<tex2html_image_mark>#tex2html_wrap_inline2265#.  We ran experiments.  In one computation 
+of a Gr&#246;bner basis in the case where the coefficients are irrational,
+the approach computed the exact Gr&#246;bner 
+basis (in about 100 seconds) whereas a direct exact 
+computation method crashed after the intermediate expressions 
+became too large (with over 2<SUP>16</SUP> syntactic elements).
+
+<P>
+A second experiment involved polynomial division in <tex2html_verbatim_mark>#math235#<tex2html_image_mark>#tex2html_wrap_inline2271#.
+Given a polynomial <I>f</I> and a list <tex2html_verbatim_mark>#math236#<tex2html_image_mark>#tex2html_wrap_inline2275# of polynomials,
+we want to divide <I>f</I> modulo <I>F</I> with respect to a fixed term order,
+and compute the list of quotients
+<tex2html_verbatim_mark>#math237#<tex2html_image_mark>#tex2html_wrap_inline2281# and the remainder <I>r</I> where 
+<tex2html_verbatim_mark>#math238#<tex2html_image_mark>#tex2html_wrap_inline2285#. 
+As such an algorithm we refer the reader to 
+the division algorithm in <tex2html_verbatim_mark>#math239#<tex2html_image_mark>#tex2html_wrap_inline2287# as found in [#CLO#<tex2html_cite_mark>#1##<tex2html_cite_mark>#].
+Polynomial division occurs many times in computational algebra,
+such as the Gr&#246;bner basis computation and the ideal membership test.
+In this case, verifying whether candidates <I>Q</I>' and 
+<I>r</I>' are the correct answer is simply based on testing the equality
+<tex2html_verbatim_mark>#math240#<tex2html_image_mark>#tex2html_wrap_inline2293#. In most cases where 
+the coefficients are complicated such as irrational or transcendental numbers,
+it was observed that a direct exact computation method 
+took 2 to 3 magnitudes of computer resources and time as was required
+using the stabilization methodology.
+
+<P>

@@ -1,0 +1,1935 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="irtegov">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="irtegov.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<DIV ALIGN="CENTER">
+<B>Using Mathematica System in Mechanics Problems.</DIV>
+</B>
+<DIV ALIGN="CENTER"><B>
+ Irtegov V.D.,Titorenko T.N.</B></DIV>
+<P>
+<B><A NAME="tex2html1"
+ HREF="irtegov.ps.gz">Full paper in compressed Postscript *.ps.gz</A>
+</B>
+<P>
+<B>Mechanics as a science used computer-aided symbolic calculations since
+their appearance and indirectly helped to develop computer algebra in its
+modern form. It is possible to think that mutual interest of these
+disciplines is partially explained by the fact that Newton's dynamics
+for long period of its development offered a huge diversity of problems,
+methods and algorithms. The fields of authors interest presented in this
+paper are qualitative theory of ordinary differential equations, stability
+of motion and dynamics of solid body. Using the methods of qualitative
+analysis requires constructing and possible transformation of motion
+equations of complex mechanical systems in the Lagrange, Hamilton,
+Euler-Lagrange, Routh and other forms.  It is labour-intensive
+but well algorithmizable job.
+</B>
+<P>
+<B>In many problems of gyroscopia, space dynamics and robotics
+the representation of motion equations in symbolic form allows to avoid
+unreasonably great
+numerical experiments, stimulates effective usage and development of
+qualitative methods.  In these areas computer algebra systems usually offer
+the significant help both on modelling stage (construction of kinetic energy
+and force function of mechanical system, construction and transformation
+of motion equations) and during qualitative analysis of obtained equations.
+This help is significant even for objects of moderate dimension.
+</B>
+<P>
+<B>Authors of the report together with the colleagues have developed and use
+software package based on computer algebra system Mathematica.  This package
+implements modelling of motion of solid bodies systems with holonomic links
+in Lagrange's formalism; construction of kinetic energy and force functions
+for certain force fields, construction of differential equations in the Lagrange,
+Hamilton and Routh forms;  qualitative analysis of the constructed equations;
+construction and analysis of stationary solutions stability by second
+Lyapunov's method (including the first approximation methods that use the
+Routh-Hurwitz method and its generalizations);
+finding of first integrals and investigation of system spectrum, bifurcation sets of
+stationary manifolds, etc. with the help of these integrals. The algorithms of
+mechanical systems modelling and qualitative analysis of their motion
+equations are published in [1,2]
+</B>
+<P>
+<B>Let us discuss several applications of the above mentioned software
+package.
+</B>
+<P>
+<B>1. Modelling of solid body (satellite) with a point of mass </B><I>m</I><SUB>2</SUB><B>attached to main body with visco-elastic spring, moving in Newton's central
+force field (Fig.1).
+</B>
+<DIV ALIGN="CENTER"><B>
+<BR>
+<IMG
+ WIDTH="238" HEIGHT="262" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="\begin{picture}(400,130)
+\put(60,160){\special{em:graph damper.pcx} }
+\end{picture}">
+<BR></B></DIV>
+<P>
+<B>Motion of holonomical mechanical system with </B><IMG
+ WIDTH="18" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="${\it n}$"><B> degrees of
+freedom in potential force field is described by Lagrange's function
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+L=T+U.
+\end{displaymath} -->
+
+
+<I>L</I>=<I>T</I>+<I>U</I>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<!-- MATH: $T=T(q,\dot q)$ -->
+<IMG
+ WIDTH="103" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$T=T(q,\dot q)$"><B> is kinetic energy of the system; </B><I>U</I>(<I>q</I>)<B> is force
+function of potential force; </B>
+<!-- MATH: $q_{1},\ldots,q_{n}$ -->
+<IMG
+ WIDTH="84" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$q_{1},\ldots,q_{n}$"><B> are generalized coordinates
+that describe a position of mechanical system in configuration space;
+</B>
+<!-- MATH: ${\dot q_{1},\ldots,\dot q_{n}}$ -->
+<IMG
+ WIDTH="84" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="${\dot q_{1},\ldots,\dot q_{n}}$"><B> are derivatives of the coordinates by
+</B><IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="${\it t}$"><B>.
+</B>
+<P>
+<B>To calculate Lagrange's function of the mechanical system in Fig.1,
+we must supply the description of the system geometry to program, as it
+shown below. We use three coordinate systems for this description:
+inertial </B><IMG
+ WIDTH="28" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\Sigma^0$"><B>, orbital </B><IMG
+ WIDTH="28" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\Sigma^1$"><B> and </B><IMG
+ WIDTH="28" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\Sigma^2$"><B> connected to the point
+ </B><I>m</I><SUB>2</SUB><B>.
+</B>
+<P>
+<B><B>Program input</B>.
+</B>
+<P>
+<B>The description of motion of the coordinate system </B><IMG
+ WIDTH="28" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\Sigma^1$"><B> relative to </B><IMG
+ WIDTH="28" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\Sigma^0$"><B>:
+</B>
+<P>
+<B>mass = 0,
+</B>
+<P><I>r</I><SUB><I>O</I><SUB>1</SUB></SUB><SUP>0</SUP><B> = </B>
+<!-- MATH: $\{R \cos \lambda, R \sin \lambda, 0\}$ -->
+<IMG
+ WIDTH="169" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\{R \cos \lambda, R \sin \lambda, 0\}$"><B>,
+</B>
+<P><I>r</I><SUB><I>C</I><SUB>1</SUB></SUB><SUP>1</SUP><B> = </B>
+<!-- MATH: $\{0, 0, 0\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\{0, 0, 0\}$"><B>,
+</B>
+<P><I>v</I><SUB><I>O</I><SUB>1</SUB></SUB><SUP>0</SUP><B> =
+     </B>
+<!-- MATH: $\{-R w_0 \sin \lambda, R w_0 \cos \lambda, 0\}$ -->
+<IMG
+ WIDTH="228" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\{-R w_0 \sin \lambda, R w_0 \cos \lambda, 0\}$"><B>,
+</B>
+<P>
+<!-- MATH: $J^{O_1} = \{\{ 0, 0, 0\}, \{0, 0, 0\}, \{0, 0, 0\}\}$ -->
+<IMG
+ WIDTH="301" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$ J^{O_1} = \{\{ 0, 0, 0\}, \{0, 0, 0\}, \{0, 0, 0\}\}$"><B>,
+</B>
+<P>
+<B>the numbers of rotation axes = </B>
+<!-- MATH: $\{3, 0, 0\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\{3, 0, 0\}$"><B>,
+</B>
+<P>
+<B>the rotation angles = </B>
+<!-- MATH: $\{\lambda, 0, 0\}$ -->
+<IMG
+ WIDTH="74" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\{\lambda, 0, 0\}$"><B>,
+</B>
+<P>
+<B>the list of coordinates = </B>
+<!-- MATH: $\{\lambda\}$ -->
+<IMG
+ WIDTH="37" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\{\lambda\}$"><B>.
+</B>
+<P>
+<B>The description of the satellite motion in the coordinate system </B><IMG
+ WIDTH="28" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\Sigma^1$"><B>:
+</B>
+<P>
+<B>mass = </B><I>m</I><SUB>1</SUB><B>,
+</B>
+<P><I>r</I><SUB><I>O</I><SUB>1</SUB></SUB><SUP>1</SUP><B> = </B>
+<!-- MATH: $\{0, 0, 0\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\{0, 0, 0\}$"><B>,
+</B>
+<P><I>r</I><SUB><I>C</I><SUB>1</SUB></SUB><SUP>1</SUP><B> = </B>
+<!-- MATH: $\{0, 0, 0\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\{0, 0, 0\}$"><B>,
+</B>
+<P><I>v</I><SUB><I>O</I><SUB>1</SUB></SUB><SUP>1</SUP><B> = </B>
+<!-- MATH: $\{0, 0, 0\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\{0, 0, 0\}$"><B>,
+</B>
+<P>
+<!-- MATH: $J^{O_1} = \{\{ A, 0, 0\}, \{0, B, 0\}, \{0, 0, C\}\}$ -->
+<IMG
+ WIDTH="317" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$ J^{O_1} = \{\{ A, 0, 0\}, \{0, B, 0\}, \{0, 0, C\}\}$"><B>,
+</B>
+<P>
+<B>the numbers of rotation axes = </B>
+<!-- MATH: $\{1, 2, 1\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\{1, 2, 1\}$"><B>,
+</B>
+<P>
+<B>the rotation angles = </B>
+<!-- MATH: $\{\psi, \theta, \varphi\}$ -->
+<IMG
+ WIDTH="79" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\{\psi, \theta, \varphi\}$"><B>,
+</B>
+<P>
+<B>the list of coordinates = </B>
+<!-- MATH: $\{\psi, \theta, \varphi\}$ -->
+<IMG
+ WIDTH="79" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\{\psi, \theta, \varphi\}$"><B>.
+</B>
+<P>
+<B>The description of the coordinate system </B><IMG
+ WIDTH="28" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\Sigma^2$"><B> motion relative to </B><IMG
+ WIDTH="28" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\Sigma^1$"><B>:
+</B>
+<P>
+<B>mass = 0,
+</B>
+<P><I>r</I><SUB><I>O</I><SUB>2</SUB></SUB><SUP>1</SUP><B> = </B>
+<!-- MATH: $\{0, 0, r\}$ -->
+<IMG
+ WIDTH="72" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\{0, 0, r\}$"><B>,
+</B>
+<P><I>r</I><SUB><I>C</I><SUB>2</SUB></SUB><SUP>2</SUP><B> = </B>
+<!-- MATH: $\{0, 0, 0\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\{0, 0, 0\}$"><B>,
+</B>
+<P><I>v</I><SUB><I>O</I><SUB>2</SUB></SUB><SUP>1</SUP><B> = </B>
+<!-- MATH: $\{0, 0, 0\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\{0, 0, 0\}$"><B>,
+</B>
+<P>
+<!-- MATH: $J^{O_2} = \{\{ 0, 0, 0\}, \{0, 0, 0\}, \{0, 0, 0\}\}$ -->
+<IMG
+ WIDTH="301" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ J^{O_2} = \{\{ 0, 0, 0\}, \{0, 0, 0\}, \{0, 0, 0\}\}$"><B>,
+</B>
+<P>
+<B>the numbers of rotation axes = </B>
+<!-- MATH: $\{0, 0, 0\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\{0, 0, 0\}$"><B>,
+</B>
+<P>
+<B>the rotation angles = </B>
+<!-- MATH: $\{0, 0, 0\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\{0, 0, 0\}$"><B>,
+</B>
+<P>
+<B>the list of coordinates = </B><IMG
+ WIDTH="26" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\{\}$"><B>.
+</B>
+<P>
+<B>The description of motion of the point </B><I>m</I><SUB>2</SUB><B> in the coordinate system </B><IMG
+ WIDTH="28" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\Sigma^2$"><B>:
+</B>
+<P>
+<B>mass = </B><I>m</I><SUB>2</SUB><B>,
+</B>
+<P><I>r</I><SUB><I>O</I><SUB>2</SUB></SUB><SUP>2</SUP><B> = </B>
+<!-- MATH: $\{0, 0, z\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$\{0, 0, z\}$"><B>,
+</B>
+<P><I>r</I><SUB><I>C</I><SUB>2</SUB></SUB><SUP>2</SUP><B> = </B>
+<!-- MATH: $\{0, 0, 0\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\{0, 0, 0\}$"><B>,
+</B>
+<P><I>v</I><SUB><I>O</I><SUB>2</SUB></SUB><SUP>2</SUP><B> = </B>
+<!-- MATH: $\{0, 0, \dot z\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$\{0, 0, \dot z\}$"><B>,
+</B>
+<P>
+<!-- MATH: $J^{O_2} = \{\{ 0, 0, 0\}, \{0, 0, 0\}, \{0, 0, 0\}\}$ -->
+<IMG
+ WIDTH="301" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ J^{O_2} = \{\{ 0, 0, 0\}, \{0, 0, 0\}, \{0, 0, 0\}\}$"><B>,
+</B>
+<P>
+<B>the numbers of rotation axes = </B>
+<!-- MATH: $\{0, 0, 0\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\{0, 0, 0\}$"><B>,
+</B>
+<P>
+<B>the rotation angles = </B>
+<!-- MATH: $\{0, 0, 0\}$ -->
+<IMG
+ WIDTH="73" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\{0, 0, 0\}$"><B>,
+</B>
+<P>
+<B>the list of coordinates = </B><IMG
+ WIDTH="36" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\{z\}$"><B>,
+</B>
+<P>
+<B>Rayleigh's function = </B>
+<!-- MATH: $\frac{1}{2} k_1 \dot z^2$ -->
+<IMG
+ WIDTH="53" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\frac{1}{2} k_1 \dot z^2$"><B>,
+</B>
+<P>
+<B>the potential energy of the spring = </B>
+<!-- MATH: $-\frac{1}{2} k_2 z^2$ -->
+<IMG
+ WIDTH="68" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$-\frac{1}{2} k_2 z^2$"><B>.
+</B>
+<P>
+<B>Here </B><I>r</I><SUB><I>O</I><SUB><I>i</I></SUB></SUB><SUP><I>j</I></SUP><B> is the radius-vector of attachment point </B><I>O</I><SUB><I>i</I></SUB><B> of
+</B><I>i</I><B>-th and </B><I>j</I><B>-th bodies in coordinate system </B><IMG
+ WIDTH="27" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\Sigma^j$"><B>;
+ </B><I>r</I><SUB><I>C</I><SUB><I>i</I></SUB></SUB><SUP><I>i</I></SUP><B> is the radius-vector of mass center of </B><I>i</I><B>-th body in coordinate
+system </B><IMG
+ WIDTH="26" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img29.gif"
+ ALT="$\Sigma^i$"><B>;
+ </B><I>v</I><SUB><I>O</I><SUB><I>i</I></SUB></SUB><SUP><I>j</I></SUP><B> is the relative speed of point </B><I>O</I><SUB><I>i</I></SUB><B> in projections on axes of
+</B><IMG
+ WIDTH="27" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\Sigma^j$"><B>;
+ </B><I>J</I><SUP><I>O</I><SUB><I>i</I></SUB></SUP><B> is the inertia tenzor of solid body;
+ </B><I>O</I><SUB>1</SUB><B> is the inertia center of the satellite;
+ </B>
+<!-- MATH: $w_0 = \dot \lambda$ -->
+<IMG
+ WIDTH="65" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$w_0 = \dot \lambda$"><B> is the angle velocity of mass center </B><I>O</I><SUB>1</SUB><B>;
+ </B><I>m</I><SUB>1</SUB><B> is the mass of the satellite;
+ </B><I>A</I>, <I>B</I>, <I>C</I><B> are the main central inertia moments of the satellite;
+ </B>
+<!-- MATH: $R = \vert O_0 \ O_1 \vert$ -->
+<IMG
+ WIDTH="110" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$R = \vert O_0 \ O_1 \vert$"><B>; </B>
+<!-- MATH: $r = \vert O_1 \ O_2 \vert$ -->
+<IMG
+ WIDTH="105" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$r = \vert O_1 \ O_2 \vert$"><B>;
+ </B><I>z</I><B> is the extension of the spring; </B><I>k</I><SUB>1</SUB>, <I>k</I><SUB>2</SUB><B> are the viscosity and
+ the elasticity coefficients of the spring.
+</B>
+<P>
+<B><B>Program output.</B>
+</B>
+<P>
+<B>Lagrange's function:
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(-(m_2 R w_0 (r + z) \cos \varphi \cos \psi) +
+m_2 R w_0 (r + z) \cos \theta \sin \varphi \sin \psi - w_0 (A + m_2 r^2  +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="627" HEIGHT="36"
+ SRC="img33.gif"
+ ALT="\begin{displaymath}(-(m_2 R w_0 (r + z) \cos \varphi \cos \psi) +
+m_2 R w_0 (r + z) \cos \theta \sin \varphi \sin \psi - w_0 (A + m_2 r^2 +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ 2 m_2 r z + m_2 z^2 ) \cos \psi \sin \theta) \dot \varphi +
+\frac{ A + m_2 r^2  + 2 m_2 r z + m_2 z^2 }{2} \dot \varphi^2 +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="537" HEIGHT="52"
+ SRC="img34.gif"
+ ALT="\begin{displaymath}+ 2 m_2 r z + m_2 z^2 ) \cos \psi \sin \theta) \dot \varphi +
+\frac{ A + m_2 r^2 + 2 m_2 r z + m_2 z^2 }{2} \dot \varphi^2 +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ (-(m_2 R w_0 (r + z) \cos \varphi \cos \psi \cos \theta) +
+m_2 R w_0 (r + z) \sin \varphi \sin \psi -
+   w_0 (A + m_2 r^2  +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="643" HEIGHT="36"
+ SRC="img35.gif"
+ ALT="\begin{displaymath}+ (-(m_2 R w_0 (r + z) \cos \varphi \cos \psi \cos \theta) +
+m_2 R w_0 (r + z) \sin \varphi \sin \psi -
+w_0 (A + m_2 r^2 +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ 2 m_2 r z + m_2 z^2) \cos \psi \cos \theta \sin \theta +
+C w_0 \cos^2 \varphi \cos \psi \cos \theta \sin \theta -
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="528" HEIGHT="36"
+ SRC="img36.gif"
+ ALT="\begin{displaymath}+ 2 m_2 r z + m_2 z^2) \cos \psi \cos \theta \sin \theta +
+C w_0 \cos^2 \varphi \cos \psi \cos \theta \sin \theta -
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+- C w_0 \cos \varphi \sin \varphi \sin \psi \sin \theta +
+w_0 (B + m_2 r^2  + 2 m_2 r z + m_2 z^2 ) \sin \varphi
+    (\cos \psi \cos \theta \sin \varphi +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="670" HEIGHT="36"
+ SRC="img37.gif"
+ ALT="\begin{displaymath}- C w_0 \cos \varphi \sin \varphi \sin \psi \sin \theta +
+w_...
+... m_2 z^2 ) \sin \varphi
+(\cos \psi \cos \theta \sin \varphi +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ \cos \varphi \sin \psi) \sin \theta) \dot \psi +
+(A + m_2 r^2  + 2 m_2 r z + m_2 z^2 ) \cos \theta \dot \varphi \dot \psi +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="519" HEIGHT="36"
+ SRC="img38.gif"
+ ALT="\begin{displaymath}+ \cos \varphi \sin \psi) \sin \theta) \dot \psi +
+(A + m_2 r^2 + 2 m_2 r z + m_2 z^2 ) \cos \theta \dot \varphi \dot \psi +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ \frac{ A \cos^2 \theta + C \cos^2 \varphi  \sin^2 \theta + B \sin^2 \varphi \sin^2 \theta +  m2 (r + z)^2  (\cos^2 \theta + \sin^2 \varphi \sin^2 \theta)}{2} \dot \psi^2 +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="698" HEIGHT="52"
+ SRC="img39.gif"
+ ALT="\begin{displaymath}+ \frac{ A \cos^2 \theta + C \cos^2 \varphi \sin^2 \theta + B...
+...cos^2 \theta + \sin^2 \varphi \sin^2 \theta)}{2} \dot \psi^2 +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ (-(C w_0 \cos \varphi \cos \psi \cos \theta \sin \varphi) +
+C w_0 \sin^2 \varphi \sin \psi +
+  w_0 (B + m_2 r^2  + 2 m_2 r z +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="616" HEIGHT="36"
+ SRC="img40.gif"
+ ALT="\begin{displaymath}+ (-(C w_0 \cos \varphi \cos \psi \cos \theta \sin \varphi) +...
+...w_0 \sin^2 \varphi \sin \psi +
+w_0 (B + m_2 r^2 + 2 m_2 r z +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ m_2 z^2 ) \cos \varphi (\cos \psi \cos \theta \sin \varphi + \cos \varphi \sin \psi) +
+m_2 R w_0 (r + z) \cos \varphi \sin \psi \sin \theta) \dot \theta +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="643" HEIGHT="36"
+ SRC="img41.gif"
+ ALT="\begin{displaymath}+ m_2 z^2 ) \cos \varphi (\cos \psi \cos \theta \sin \varphi ...
+... w_0 (r + z) \cos \varphi \sin \psi \sin \theta) \dot \theta +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++  (B - C + m_2 r^2  + 2 m_2 r z + m_2 z^2 ) \cos \varphi
+\sin \varphi \sin \theta \dot \psi \dot \theta +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="462" HEIGHT="36"
+ SRC="img42.gif"
+ ALT="\begin{displaymath}+ (B - C + m_2 r^2 + 2 m_2 r z + m_2 z^2 ) \cos \varphi
+\sin \varphi \sin \theta \dot \psi \dot \theta +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ \frac{(B + m_2 r^2  + 2 m_2 r z + m_2 z^2 ) \cos^2 \varphi + C \sin^2 \varphi}{2} \dot \theta^2 -
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="435" HEIGHT="52"
+ SRC="img43.gif"
+ ALT="\begin{displaymath}+ \frac{(B + m_2 r^2 + 2 m_2 r z + m_2 z^2 ) \cos^2 \varphi + C \sin^2 \varphi}{2} \dot \theta^2 -
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+- m_2 R w_0 (\cos \psi \sin \varphi + \cos \varphi \cos \theta \sin \psi) \dot z + \frac{m2}{2} \dot z^2 +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="426" HEIGHT="49"
+ SRC="img44.gif"
+ ALT="\begin{displaymath}- m_2 R w_0 (\cos \psi \sin \varphi + \cos \varphi \cos \theta \sin \psi) \dot z + \frac{m2}{2} \dot z^2 +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{A \nu + B \nu + C \nu + 2 m_1 \nu R^2 + 2 m_2 \nu R^2 + m_1 R^5  w_0^2 + m_2 R^5  w_0^2  - k_2 R^3  z^2 }{ 2 R^3} -
+\frac{3}{2} A w_0^2  \cos^2 \theta -
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="715" HEIGHT="52"
+ SRC="img45.gif"
+ ALT="\begin{displaymath}\frac{A \nu + B \nu + C \nu + 2 m_1 \nu R^2 + 2 m_2 \nu R^2 +...
+...- k_2 R^3 z^2 }{ 2 R^3} -
+\frac{3}{2} A w_0^2 \cos^2 \theta -
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+- \frac{ m_2 w_0^2  (r + z)^2  ( \cos^2 \varphi  \cos^2 \theta + \sin^2 \varphi )}{2} +
+(B - C) w_0^2  \cos \varphi \cos \psi \cos \theta \sin \varphi \sin \psi +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="654" HEIGHT="52"
+ SRC="img46.gif"
+ ALT="\begin{displaymath}- \frac{ m_2 w_0^2 (r + z)^2 ( \cos^2 \varphi \cos^2 \theta +...
+...^2 \cos \varphi \cos \psi \cos \theta \sin \varphi \sin \psi +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ \frac{B w_0^2 (cos^2 \psi \cos^2 \theta  \sin^2 \varphi + cos^2 \varphi \sin^2 \psi)}{2} +
+\frac{C w_0^2  (\cos^2 \varphi \cos^2 \psi  \cos^2 \theta + \sin^2 \varphi  \sin^2 \psi)}{2} +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="709" HEIGHT="52"
+ SRC="img47.gif"
+ ALT="\begin{displaymath}+ \frac{B w_0^2 (cos^2 \psi \cos^2 \theta \sin^2 \varphi + co...
+... \cos^2 \psi \cos^2 \theta + \sin^2 \varphi \sin^2 \psi)}{2} +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++  \frac{m_2 (-\nu + R^3  w_0^2 ) (r + z) \cos \varphi \sin \theta}{R^2} -
+\frac{3}{2} C w_0^2  \cos^2 \varphi \sin^2 \theta + \frac{A w_0^2  \cos^2 \psi  \sin^2 \theta}{2}-
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="638" HEIGHT="52"
+ SRC="img48.gif"
+ ALT="\begin{displaymath}+ \frac{m_2 (-\nu + R^3 w_0^2 ) (r + z) \cos \varphi \sin \th...
+...i \sin^2 \theta + \frac{A w_0^2 \cos^2 \psi \sin^2 \theta}{2}-
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+- \frac{3}{2} B w_0^2  \sin^2 \varphi \sin^2 \theta +
+m_2 w_0^2  (r + z)^2 \cos \varphi (\cos \psi \cos \theta \sin \varphi \sin \psi +
+  \cos \varphi \sin^2 \theta) +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="638" HEIGHT="49"
+ SRC="img49.gif"
+ ALT="\begin{displaymath}- \frac{3}{2} B w_0^2 \sin^2 \varphi \sin^2 \theta +
+m_2 w_0...
+...\theta \sin \varphi \sin \psi +
+\cos \varphi \sin^2 \theta) +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ \frac{ m_2 w_0^2 (r + z)^2 (\cos^2 \psi  \cos^2 \theta \sin^2 \varphi + \cos^2 \varphi \sin^2 \psi + \cos^2 \psi \sin^2 \theta )}{2}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="552" HEIGHT="52"
+ SRC="img50.gif"
+ ALT="\begin{displaymath}+ \frac{ m_2 w_0^2 (r + z)^2 (\cos^2 \psi \cos^2 \theta \sin^...
+... \cos^2 \varphi \sin^2 \psi + \cos^2 \psi \sin^2 \theta )}{2}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B>Rayleigh's function: </B>
+<!-- MATH: $\frac{1}{2} k_1 \dot z^2$ -->
+<IMG
+ WIDTH="53" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\frac{1}{2} k_1 \dot z^2$">
+<P>
+<B>The list of generalized coordinates: </B>
+<!-- MATH: $\{\psi, \theta, \varphi, z\}$ -->
+<IMG
+ WIDTH="98" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.gif"
+ ALT="$\{\psi, \theta, \varphi, z\}$">
+<P>
+<B>Elapsed time: 0 h. 0 min. 43:1 sec.
+</B>
+<P>
+<B>2. Modelling of RLC-circuits.
+</B>
+<P>
+<B>Authors tried to apply the methods of modelling and analysis of
+mechanical systems to electrical ones. The results of computer-aided
+modelling and analysis of linear circuits are presented in [3]. Here
+ nonlinear circuits are discussed.
+</B>
+<P>
+<B>According to [5,6], the state of nonlinear RLC-circuit can be described
+by the equations system:
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+L_{k}(i_{k}) \frac{di_{k}}{dt} = \frac{\partial P}{\partial i_{k}}, \ \ \
+(k=1,\ldots,r)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="281" HEIGHT="53"
+ SRC="img52.gif"
+ ALT="\begin{displaymath}L_{k}(i_{k}) \frac{di_{k}}{dt} = \frac{\partial P}{\partial i_{k}}, \ \ \
+(k=1,\ldots,r)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+C_{l}(v_{l}) \frac{dv_{l}}{dt} = -\frac{\partial P}{\partial v_{l}}, \ \ \
+(l=r+1,\ldots,s)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="319" HEIGHT="53"
+ SRC="img53.gif"
+ ALT="\begin{displaymath}C_{l}(v_{l}) \frac{dv_{l}}{dt} = -\frac{\partial P}{\partial v_{l}}, \ \ \
+(l=r+1,\ldots,s)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B>where </B>
+<!-- MATH: $L_{k}(i_{k})$ -->
+<I>L</I><SUB><I>k</I></SUB>(<I>i</I><SUB><I>k</I></SUB>)<B> is the inductance; </B>
+<!-- MATH: $C_{l}(v_{l})$ -->
+<I>C</I><SUB><I>l</I></SUB>(<I>v</I><SUB><I>l</I></SUB>)<B> is the
+capacitance; </B>
+<!-- MATH: $i=(i_1,\ldots,i_r)$ -->
+<IMG
+ WIDTH="126" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$i=(i_1,\ldots,i_r)$"><B> denotes the vector of currents;
+</B>
+<!-- MATH: $v=(v_{r+1},\ldots,v_{r+s})$ -->
+<IMG
+ WIDTH="171" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="$v=(v_{r+1},\ldots,v_{r+s})$"><B> denotes the vector of voltages;
+<I>P(i,v)</I> is the function called the mixed potential that is defined like
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+P(i,v) = \int \limits_{\Gamma} \sum_{\mu>r+s} v_{\mu} di_{\mu} +
+\sum_{l=r+1}^{r+s} i_{l} v_{l} \vert_{\Gamma}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="307" HEIGHT="67"
+ SRC="img56.gif"
+ ALT="\begin{displaymath}P(i,v) = \int \limits_{\Gamma} \sum_{\mu>r+s} v_{\mu} di_{\mu} +
+\sum_{l=r+1}^{r+s} i_{l} v_{l} \vert_{\Gamma}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><IMG
+ WIDTH="18" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.gif"
+ ALT="$\Gamma$"><B> is a curve in the space of currents and voltages of
+circuit where Kirchhoff's laws are correct.
+</B>
+<P>
+<B>The function </B><I>P</I>(<I>i</I>,<I>v</I>)<B> can be used not just for the construction of
+circuit equations, but also for qualitative analysis of them.
+In latter case it could be treated as an analogue for Lyapunov's function.
+</B>
+<P>
+<B>In [5] it is discussed the construction of the mixed potential for the
+ class of <I>complete</I> circuits. The <I>complete</I> means
+that a circuit is described by the <I>complete</I> set of variables. The
+complete set of variables is chosen independently without leading to a
+violation of Kirchhoff's laws and determines current or voltage
+in any branch of circuit.
+</B>
+<P>
+<B>The set of currents in inductors and voltages across capacitors
+is complete. If a circuit is not <I>complete</I> then it is transformed to the
+<I>complete</I> one by adding inductors in series and capacitors in
+parallel. The original circuit is considered as a limiting case of the new
+one.
+</B>
+<P>
+<B>Let us describe the procedure of constructing the mixed potential
+for complete circuits. It consists of the following steps.
+</B>
+<P>
+<B>Choose in the graph a maximal tree </B><IMG
+ WIDTH="17" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\tau$"><B> with
+         the set of links </B><IMG
+ WIDTH="18" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.gif"
+ ALT="$\alpha$"><B>.
+</B>
+<P>
+<B>Choose in </B><IMG
+ WIDTH="17" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\tau$"><B> a subtree </B>
+<!-- MATH: $\grave \tau$ -->
+<IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\grave \tau$"><B> with
+         the set of links </B>
+<!-- MATH: $\grave \alpha$ -->
+<IMG
+ WIDTH="18" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img61.gif"
+ ALT="$\grave \alpha$"><B>. </B>
+<!-- MATH: $\grave \alpha$ -->
+<IMG
+ WIDTH="18" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img61.gif"
+ ALT="$\grave \alpha$"><B> is all branches
+         which connect two nodes of </B>
+<!-- MATH: $\grave \tau$ -->
+<IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\grave \tau$"><B> and form
+         a loop with branches of </B>
+<!-- MATH: $\grave \tau$ -->
+<IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\grave \tau$"><B> only.
+</B>
+<P>
+<B>According to [5], the currents </B>
+<!-- MATH: $i_1,\ldots,i_r$ -->
+<IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$i_1,\ldots,i_r$"><B> in
+</B>
+<!-- MATH: $\alpha - \grave \alpha$ -->
+<IMG
+ WIDTH="55" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.gif"
+ ALT="$\alpha - \grave \alpha$"><B> and the voltages </B>
+<!-- MATH: $v_{r+1},\ldots,v_{r+s}$ -->
+<IMG
+ WIDTH="119" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$v_{r+1},\ldots,v_{r+s}$"><B>in </B>
+<!-- MATH: $\grave \tau$ -->
+<IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\grave \tau$"><B> form the <I>complete</I> set of variables. This is correct also
+for </B><I>r</I>=0,<I>s</I>&gt;0<B>; </B><I>r</I>&gt;0,<I>s</I>=0<B>; </B><I>rs</I>&gt;0<B>.
+</B>
+<P>
+<B>Calculate the mixed potential by the formula:
+</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+P(i^*, v^*) = F(i^*) - G(v^*) + (i^*, \gamma v^*), \eqno(1)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="446" HEIGHT="36"
+ SRC="img65.gif"
+ ALT="\begin{displaymath}P(i^*, v^*) = F(i^*) - G(v^*) + (i^*, \gamma v^*), \eqno(1)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+F(i^*) = \sum_{\mu > r+s, \Omega_i} \int \limits_{\Gamma} v_{\mu} di_{\mu}, \
+G(v^*) = \sum_{\mu > r+s, \Omega_v} \int \limits_{\Gamma} i_{\mu} dv_{\mu}, \
+  (i^*, \gamma v^*) =
+  \sum_{\rho=1}^r i_{\rho} \sum_{\Lambda_{\rho} \cap \grave \tau} \pm v_{\sigma},
+\eqno(2)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="653" HEIGHT="88"
+ SRC="img66.gif"
+ ALT="\begin{displaymath}F(i^*) = \sum_{\mu > r+s, \Omega_i} \int \limits_{\Gamma} v_{...
+...sum_{\Lambda_{\rho} \cap \grave \tau} \pm v_{\sigma},
+\eqno(2)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B> where </B>
+<!-- MATH: $i^* = (i_1,\ldots,i_r)$ -->
+<IMG
+ WIDTH="134" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="$i^* = (i_1,\ldots,i_r)$"><B>; </B>
+<!-- MATH: $v^* = (v_{r+1},\ldots,v_{r+s})$ -->
+<IMG
+ WIDTH="179" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$v^* = (v_{r+1},\ldots,v_{r+s})$"><B>;
+</B>
+<!-- MATH: $\gamma = (\gamma_{\rho \sigma})$ -->
+<IMG
+ WIDTH="85" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$\gamma = (\gamma_{\rho \sigma})$"><B> is matrix </B>
+<!-- MATH: $r \times s$ -->
+<IMG
+ WIDTH="49" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.gif"
+ ALT="$r \times s$"><B>;
+</B>
+<!-- MATH: $\gamma_{\rho \sigma}$ -->
+<IMG
+ WIDTH="33" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.gif"
+ ALT="$\gamma_{\rho \sigma}$"><B> = +1,-1,0;
+</B>
+<P><IMG
+ WIDTH="26" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.gif"
+ ALT="$\Omega_i$"><B> is the set of branches where the currents
+can be determined from </B>
+<!-- MATH: $i_1,\ldots,i_r$ -->
+<IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$i_1,\ldots,i_r$"><B> by Kirchhoff's node law;
+</B><IMG
+ WIDTH="28" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="$\Omega_v$"><B> is the set of branches where the voltages can be determined from
+</B>
+<!-- MATH: $v_{r+1},\ldots,v_{r+s}$ -->
+<IMG
+ WIDTH="119" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$v_{r+1},\ldots,v_{r+s}$"><B> by Kirchhoff's loop law;
+</B>
+<!-- MATH: $\Lambda_{\rho} \ (\rho \in \alpha - \grave \alpha)$ -->
+<IMG
+ WIDTH="133" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.gif"
+ ALT="$\Lambda_{\rho} \ (\rho \in \alpha - \grave \alpha)$"><B> is a loop;
+</B><IMG
+ WIDTH="21" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.gif"
+ ALT="$i_{\rho}$"><B> is a loop current; </B>
+<!-- MATH: $v_{\sigma}$ -->
+<IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.gif"
+ ALT="$v_{\sigma}$"><B> is the voltage of branches of
+</B>
+<!-- MATH: $\grave \tau$ -->
+<IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\grave \tau$"><B> in </B>
+<!-- MATH: $\Lambda_{\rho}$ -->
+<IMG
+ WIDTH="27" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.gif"
+ ALT="$\Lambda_{\rho}$"><B>.
+</B>
+<P>
+<B>To illustrate the procedure of constructing the mixed potential
+we will consider the circuit in Fig.2 and its graph in Fig.3.
+</B>
+<DIV ALIGN="CENTER"><B>
+<BR>
+<IMG
+ WIDTH="259" HEIGHT="263" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="\begin{picture}(400,140)
+\put(60,160){\special{em:graph circuit.pcx} }
+\end{picture}">
+<BR></B></DIV>
+<DIV ALIGN="CENTER"><B>
+<BR>
+<IMG
+ WIDTH="232" HEIGHT="252" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.gif"
+ ALT="\begin{picture}(400,140)
+\put(60,160){\special{em:graph graph.pcx} }
+\end{picture}">
+<BR></B></DIV>
+<DIV ALIGN="CENTER"><B>
+<FONT SIZE="-1">The graph of the circuit of Figure 2</B></DIV>
+<B></FONT></B>
+<P>
+<B><FONT SIZE="-1">Here the nonlinear elements are resistors </FONT></B>
+<!-- MATH: $f_1(v_5), \ f_2(v_6),
+\ f_3(v_7), \ f_4(v_8)$ -->
+<IMG
+ WIDTH="252" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.gif"
+ ALT="$f_1(v_5), \ f_2(v_6),
+\ f_3(v_7), \ f_4(v_8)$"><B><FONT SIZE="-1">.
+</FONT></B>
+<P>
+<B><FONT SIZE="-1">The maximal tree </FONT></B><IMG
+ WIDTH="17" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\tau$"><B><FONT SIZE="-1"> consists of branches </FONT></B>
+<!-- MATH: $\{5,6,7,8,9,10,11,12,17\}$ -->
+<IMG
+ WIDTH="222" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.gif"
+ ALT="$\{5,6,7,8,9,10,11,12,17\}$"><B><FONT SIZE="-1">,
+</FONT></B><IMG
+ WIDTH="18" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.gif"
+ ALT="$\alpha$"><B><FONT SIZE="-1"> = </FONT></B>
+<!-- MATH: $\{1,2,3,4,13,$ -->
+<IMG
+ WIDTH="115" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.gif"
+ ALT="$\{1,2,3,4,13,$">
+<!-- MATH: $14,15,16\}$ -->
+<IMG
+ WIDTH="92" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.gif"
+ ALT="$14,15,16\}$"><B><FONT SIZE="-1">, </FONT></B>
+<!-- MATH: $\ \ \grave \tau$ -->
+<IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\grave \tau$"><B><FONT SIZE="-1"> = </FONT></B>
+<!-- MATH: $\{5,6,7,8\}$ -->
+<IMG
+ WIDTH="91" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.gif"
+ ALT="$\{5,6,7,8\}$"><B><FONT SIZE="-1">,
+</FONT></B>
+<!-- MATH: $\grave \alpha$ -->
+<IMG
+ WIDTH="18" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img61.gif"
+ ALT="$\grave \alpha$"><B><FONT SIZE="-1"> =</FONT></B>
+<!-- MATH: $\{13,14,15,16\}$ -->
+<IMG
+ WIDTH="130" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.gif"
+ ALT="$\{13,14,15,16\}$"><B><FONT SIZE="-1">, </FONT></B>
+<!-- MATH: $\alpha - \grave \alpha$ -->
+<IMG
+ WIDTH="55" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.gif"
+ ALT="$\alpha - \grave \alpha$"><B><FONT SIZE="-1"> = </FONT></B>
+<!-- MATH: $\{1,2,3,4\}$ -->
+<IMG
+ WIDTH="91" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.gif"
+ ALT="$\{1,2,3,4\}$"><B><FONT SIZE="-1">.
+So the currents </FONT></B>
+<!-- MATH: $i_1,i_2,i_3,i_4$ -->
+<I>i</I><SUB>1</SUB>,<I>i</I><SUB>2</SUB>,<I>i</I><SUB>3</SUB>,<I>i</I><SUB>4</SUB><B><FONT SIZE="-1"> in the inductors </FONT></B>
+<!-- MATH: $L_1,L_2,L_3,L_4$ -->
+<I>L</I><SUB>1</SUB>,<I>L</I><SUB>2</SUB>,<I>L</I><SUB>3</SUB>,<I>L</I><SUB>4</SUB><B><FONT SIZE="-1">and the voltages </FONT></B>
+<!-- MATH: $v_5,v_6,v_7,v_8$ -->
+<I>v</I><SUB>5</SUB>,<I>v</I><SUB>6</SUB>,<I>v</I><SUB>7</SUB>,<I>v</I><SUB>8</SUB><B><FONT SIZE="-1"> across the capacitors </FONT></B>
+<!-- MATH: $C_1,C_2,C_3,C_4$ -->
+<I>C</I><SUB>1</SUB>,<I>C</I><SUB>2</SUB>,<I>C</I><SUB>3</SUB>,<I>C</I><SUB>4</SUB><B><FONT SIZE="-1">are the complete set of variables.
+</FONT></B>
+<P>
+<B><FONT SIZE="-1">Now we can construct the mixed potential by the formula (1).
+</FONT></B>
+<P>
+<IMG
+ WIDTH="26" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.gif"
+ ALT="$\Omega_i$"><B><FONT SIZE="-1"> = </FONT></B>
+<!-- MATH: $\{1,2,3,4,9,10,11,12,17\}$ -->
+<IMG
+ WIDTH="222" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$\{1,2,3,4,9,10,11,12,17\}$"><B><FONT SIZE="-1">. According to (2),
+</FONT></B>
+<!-- MATH: $F(i_1,i_2,i_3,i_4)$ -->
+<I>F</I>(<I>i</I><SUB>1</SUB>,<I>i</I><SUB>2</SUB>,<I>i</I><SUB>3</SUB>,<I>i</I><SUB>4</SUB>)<B><FONT SIZE="-1"> is calculated only for the resistive branches
+ </FONT></B>
+<!-- MATH: $\{9,10,11,12,17\}$ -->
+<IMG
+ WIDTH="149" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$\{9,10,11,12,17\}$"><B><FONT SIZE="-1">.
+</FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+F(i_1,i_2,i_3,i_4) = E_1 i_1 - \frac{1}{2}R_1 i_{1}^2 -
+\frac{1}{2}R_2 i_{2}^2 - \frac{1}{2} R_3 i_{3}^2 -
+      \frac{1}{2} R_4 i_{4}^2.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="484" HEIGHT="49"
+ SRC="img89.gif"
+ ALT="\begin{displaymath}F(i_1,i_2,i_3,i_4) = E_1 i_1 - \frac{1}{2}R_1 i_{1}^2 -
+\fra...
+... i_{2}^2 - \frac{1}{2} R_3 i_{3}^2 -
+\frac{1}{2} R_4 i_{4}^2.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><IMG
+ WIDTH="28" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="$\Omega_v$"><B><FONT SIZE="-1"> = </FONT></B>
+<!-- MATH: $\{5,6,7,8,13,14,15,16\}$ -->
+<IMG
+ WIDTH="204" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.gif"
+ ALT="$\{5,6,7,8,13,14,15,16\}$"><B><FONT SIZE="-1">. We choose the branches </FONT></B>
+<!-- MATH: $\{13,14,15,16\}$ -->
+<IMG
+ WIDTH="130" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.gif"
+ ALT="$\{13,14,15,16\}$"><B><FONT SIZE="-1"> with the resistors.
+</FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+G(v_5,v_6,v_7,v_8) = - \int \limits _0^{v_5} f_1(v) dv -
+\int \limits _0^{v_6} f_2(v) dv -
+		     \int \limits _0^{v_7} f_3(v) dv -
+		     \int \limits _0^{v_8} f_4(v) dv.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="577" HEIGHT="70"
+ SRC="img91.gif"
+ ALT="\begin{displaymath}G(v_5,v_6,v_7,v_8) = - \int \limits _0^{v_5} f_1(v) dv -
+\in...
+...\limits _0^{v_7} f_3(v) dv -
+\int \limits _0^{v_8} f_4(v) dv.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B><FONT SIZE="-1">To calculate </FONT></B>
+<!-- MATH: $(i^*, \gamma v^*)$ -->
+<IMG
+ WIDTH="74" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="$(i^*, \gamma v^*)$"><B><FONT SIZE="-1"> we construct the loops
+</FONT></B>
+<!-- MATH: $\Lambda_1, \Lambda_2, \Lambda_3, \Lambda_4$ -->
+<IMG
+ WIDTH="118" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$\Lambda_1, \Lambda_2, \Lambda_3, \Lambda_4$"><B><FONT SIZE="-1"> and consider their
+intersections with </FONT></B>
+<!-- MATH: $\grave \tau$ -->
+<IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\grave \tau$"><B><FONT SIZE="-1">.
+</FONT></B>
+<P>
+<IMG
+ WIDTH="27" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="$\Lambda_1$"><B><FONT SIZE="-1"> = </FONT></B>
+<!-- MATH: $\{1,5,8,17,9\}$ -->
+<IMG
+ WIDTH="119" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.gif"
+ ALT="$\{1,5,8,17,9\}$"><B><FONT SIZE="-1">, </FONT></B><IMG
+ WIDTH="27" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="$\Lambda_2$"><B><FONT SIZE="-1"> = </FONT></B>
+<!-- MATH: $\{2,6,5,10\}$ -->
+<IMG
+ WIDTH="101" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.gif"
+ ALT="$\{2,6,5,10\}$"><B><FONT SIZE="-1">,
+</FONT></B><IMG
+ WIDTH="27" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.gif"
+ ALT="$\Lambda_3$"><B><FONT SIZE="-1"> = </FONT></B>
+<!-- MATH: $\{3,7,6,11\}$ -->
+<IMG
+ WIDTH="101" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.gif"
+ ALT="$\{3,7,6,11\}$"><B><FONT SIZE="-1">, </FONT></B><IMG
+ WIDTH="27" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.gif"
+ ALT="$\Lambda_4$"><B><FONT SIZE="-1"> = </FONT></B>
+<!-- MATH: $\{4,8,7,12\}$ -->
+<IMG
+ WIDTH="101" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.gif"
+ ALT="$\{4,8,7,12\}$"><B><FONT SIZE="-1">.
+</FONT></B>
+<!-- MATH: $\Lambda_1 \cap \grave \tau$ -->
+<IMG
+ WIDTH="60" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.gif"
+ ALT="$\Lambda_1 \cap \grave \tau$"><B><FONT SIZE="-1"> = </FONT></B><IMG
+ WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.gif"
+ ALT="$\{5,8\}$"><B><FONT SIZE="-1">,
+</FONT></B>
+<!-- MATH: $\Lambda_2 \cap \grave \tau$ -->
+<IMG
+ WIDTH="60" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.gif"
+ ALT="$\Lambda_2 \cap \grave \tau$"><B><FONT SIZE="-1"> = </FONT></B><IMG
+ WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.gif"
+ ALT="$\{5,6\}$"><B><FONT SIZE="-1">,
+</FONT></B>
+<!-- MATH: $\Lambda_3 \cap \grave \tau$ -->
+<IMG
+ WIDTH="60" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.gif"
+ ALT="$\Lambda_3 \cap \grave \tau$"><B><FONT SIZE="-1"> = </FONT></B><IMG
+ WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.gif"
+ ALT="$\{6,7\}$"><B><FONT SIZE="-1">,
+</FONT></B>
+<!-- MATH: $\Lambda_4 \cap \grave \tau$ -->
+<IMG
+ WIDTH="60" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.gif"
+ ALT="$\Lambda_4 \cap \grave \tau$"><B><FONT SIZE="-1"> = </FONT></B><IMG
+ WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.gif"
+ ALT="$\{7,8\}$"><B><FONT SIZE="-1">.
+</FONT></B>
+<P>
+<B><FONT SIZE="-1">According to (2), </FONT></B>
+<!-- MATH: $(i^*, \gamma v^*)$ -->
+<IMG
+ WIDTH="74" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="$(i^*, \gamma v^*)$"><B><FONT SIZE="-1"> =
+</FONT></B>
+<!-- MATH: $i_1 (v_5 - v_8) + i_2(v_6 - v_5) + i_3( -v_6 - v_7) +
+i_4 (v_7 + v_8)$ -->
+<I>i</I><SUB>1</SUB> (<I>v</I><SUB>5</SUB> - <I>v</I><SUB>8</SUB>) + <I>i</I><SUB>2</SUB>(<I>v</I><SUB>6</SUB> - <I>v</I><SUB>5</SUB>) + <I>i</I><SUB>3</SUB>( -<I>v</I><SUB>6</SUB> - <I>v</I><SUB>7</SUB>) +
+ <I>i</I><SUB>4</SUB> (<I>v</I><SUB>7</SUB> + <I>v</I><SUB>8</SUB>)<B><FONT SIZE="-1"> and the mixed potential
+</FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+P(i^*,v^*) = E_1 i_1 - \frac{1}{2}R_1 i_{1}^2 -
+\frac{1}{2}R_2 i_{2}^2 - \frac{1}{2} R_3 i_{3}^2 -
+      \frac{1}{2} R_4 i_{4}^2 +
+      \int \limits _0^{v_5} f_1(v) dv + \int \limits _0^{v_6} f_2(v) dv +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="611" HEIGHT="70"
+ SRC="img110.gif"
+ ALT="\begin{displaymath}P(i^*,v^*) = E_1 i_1 - \frac{1}{2}R_1 i_{1}^2 -
+\frac{1}{2}R...
+...\limits _0^{v_5} f_1(v) dv + \int \limits _0^{v_6} f_2(v) dv +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ \int \limits _0^{v_7} f_3(v) dv + \int \limits _0^{v_8} f_4(v) dv +
+i_1 (-v_5 + v_8) + i_2(v_5 - v_6) + i_3( v_6 + v_7) + i_4 (-v_7 - v_8).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="613" HEIGHT="70"
+ SRC="img111.gif"
+ ALT="\begin{displaymath}+ \int \limits _0^{v_7} f_3(v) dv + \int \limits _0^{v_8} f_4...
+... + v_8) + i_2(v_5 - v_6) + i_3( v_6 + v_7) + i_4 (-v_7 - v_8).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B><FONT SIZE="-1">Ability to apply the analytical methods of mechanical systems to
+electrical ones allows to formulate a problem of modelling of mechanical
+systems with circuits. This problem can be applied, for example, to analysis
+of transient states of mechanical systems after losing stability near the
+boundaries of stationary motions family. The number of these problems could
+be increased. It is important that parameters of circuits can be measured
+easier than parameters of mechanical ones.
+</FONT></B>
+<P>
+<B><FONT SIZE="-1">3. Finally, we present the results of investigation of one generic
+mechanical system with first integrals. Let us discuss the system of absolutely
+solid bodies, connected by spherical and cylindrical hinges to single carrying
+body, that has a fixed point.  The positions of carried bodies we will define as
+generalized coordinates </FONT></B>
+<!-- MATH: $q_{1},q_{2},...,q_{n}$ -->
+<I>q</I><SUB>1</SUB>,<I>q</I><SUB>2</SUB>,...,<I>q</I><SUB><I>n</I></SUB><B><FONT SIZE="-1">.
+Let us suppose that forces acting on the system are potential and could be
+determined by the force function </FONT></B>
+<!-- MATH: $U(q_{1},q_{2},...,q_{n})$ -->
+<I>U</I>(<I>q</I><SUB>1</SUB>,<I>q</I><SUB>2</SUB>,...,<I>q</I><SUB><I>n</I></SUB>)<B><FONT SIZE="-1">.
+ The full mechanical energy of such system looks like
+ </FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+2H=\sum_{\alpha=1}^{3} \sum_{\beta=1}^{3} J_{\alpha \beta}(q)
+\omega_{\alpha} \omega_{\beta} +
+  2 \sum_{k=1}^{n} \sum_{\alpha=1}^{3} e_{k \alpha}(q)
+  \omega_{ \alpha} \dot q_{k} +
+  \sum_{j=1}^{n} \sum_{i=1}^{n} c_{ij}(q) \dot q_{i} \dot q_{j}
+   - 2U(q_{1},...q_{n}).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="654" HEIGHT="65"
+ SRC="img112.gif"
+ ALT="\begin{displaymath}2H=\sum_{\alpha=1}^{3} \sum_{\beta=1}^{3} J_{\alpha \beta}(q)...
+...1}^{n} c_{ij}(q) \dot q_{i} \dot q_{j}
+- 2U(q_{1},...q_{n}).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1"> Here </FONT></B>
+<!-- MATH: $\omega_{\alpha} \ ( \alpha =1,2,3 )$ -->
+<IMG
+ WIDTH="135" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.gif"
+ ALT="$\omega_{\alpha} \ ( \alpha =1,2,3 )$"><B><FONT SIZE="-1"> are the projections of angle velocity
+of carrying body to coordinate axes connected to this body;
+</FONT></B>
+<!-- MATH: $q_{i}, \dot q_{i} \ (i=1,\ldots,n)$ -->
+<IMG
+ WIDTH="163" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.gif"
+ ALT="$q_{i}, \dot q_{i} \ (i=1,\ldots,n)$"><B><FONT SIZE="-1"> are the coordinates and the velocities of
+carried bodies relative to carrying one and to each other. There is another
+possible interpretation of given characteristic function [4].
+</FONT></B>
+<P>
+<B><FONT SIZE="-1">The differential equations of described system motion have the following
+form:
+ </FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\sum_{j=1}^{n} c_{ij} \ddot q_{j}+ \sum_{\alpha=1}^{3} e_{i \alpha}
+\dot \omega_{ \alpha}-\sum_{k=1}^{n} \sum_{ \alpha=1}^{3}
+ (\frac{ \partial e_{k \alpha}} { \partial q_{i}} -
+  \frac{ \partial e_{i \alpha}}{ \partial q_{k}} )
+ \dot q_{k} \omega_{ \alpha}+ \sum_{j=1}^{n} \sum_{k=1}^{n}
+ ( \frac{ \partial c_{ij}}{ \partial q_{k}} - \frac{1}{2}
+ \frac{ \partial c_{kj}}{ \partial q_{k}} ) \dot q_{k} \dot q_{j} -
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="612" HEIGHT="65"
+ SRC="img115.gif"
+ ALT="\begin{displaymath}\sum_{j=1}^{n} c_{ij} \ddot q_{j}+ \sum_{\alpha=1}^{3} e_{i \...
+...c{ \partial c_{kj}}{ \partial q_{k}} ) \dot q_{k} \dot q_{j} -
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\hskip 2cm - \frac{1}{2} \sum_{ \alpha=1}^{3} \sum_{ \beta=1}^{3}
+\frac{ \partial J_{ \alpha \beta}}{ \partial q_{i}} \omega_{ \alpha}
+  \omega_{\beta} - \frac{ \partial U}{ \partial q_{i}} = 0 \hskip 1.5cm
+  (i=1,\ldots,n),
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="458" HEIGHT="65"
+ SRC="img116.gif"
+ ALT="\begin{displaymath}\hskip 2cm - \frac{1}{2} \sum_{ \alpha=1}^{3} \sum_{ \beta=1}...
+...\partial U}{ \partial q_{i}} = 0 \hskip 1.5cm
+(i=1,\ldots,n),
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\sum_{\beta=1}^{3} J_{1 \beta} \dot \omega_{\beta} +
+\sum_{k=1}^{n} e_{k1} \ddot q_{k}+ \sum_{k=1}^{n} (e_{k3} \omega_{2} -
+ e_{k2} \omega_{3} + \sum_{ \beta=1}^{3} \frac{ \partial J_{1 \beta}}
+ {\partial q_{k}} \omega_{\beta} ) \dot q_{k} +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="503" HEIGHT="65"
+ SRC="img117.gif"
+ ALT="\begin{displaymath}\sum_{\beta=1}^{3} J_{1 \beta} \dot \omega_{\beta} +
+\sum_{k...
+... J_{1 \beta}}
+{\partial q_{k}} \omega_{\beta} ) \dot q_{k} +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ \sum_{\beta=1}^{3} (J_{3 \beta} \omega_{2} -
+J_{2 \beta} \omega_{3}) \omega_{\beta}+
+ \sum_{j=1}^{n} \sum_{k=1}^{n} \frac{\partial e_{k1}}{\partial q_{j}}
+ \dot q_{j} \dot q_{k} = 0,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="394" HEIGHT="65"
+ SRC="img118.gif"
+ ALT="\begin{displaymath}+ \sum_{\beta=1}^{3} (J_{3 \beta} \omega_{2} -
+J_{2 \beta} \...
+...{\partial e_{k1}}{\partial q_{j}}
+\dot q_{j} \dot q_{k} = 0,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\dot \gamma_{1}= \gamma_{2} \omega_{3}- \gamma_{3} \omega_{2}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="148" HEIGHT="35"
+ SRC="img119.gif"
+ ALT="\begin{displaymath}\dot \gamma_{1}= \gamma_{2} \omega_{3}- \gamma_{3} \omega_{2}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1"> Another four equations (not shown here) can be obtained from last two
+by circular substitution of indices 1,2,3.  For this differential equations
+system it is possible to obtain three first integrals in addition to the integral
+of the full mechanical energy </FONT></B><I>H</I>=<I>h</I>=<I>const</I><B><FONT SIZE="-1">.  They are:
+</FONT></B>
+<P>
+<B><FONT SIZE="-1">the integral of kinetic moment projection to <I>vertical</I> axis:
+ </FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V_{1}=
+\sum_{\beta=1}^{3}[ \sum_{\alpha_=1}^{3} J_{\beta \alpha} \omega_{\alpha}+
+ \sum_{k=1}^{n} e_{k \beta} \dot q_{k}] \gamma_{\beta}=m;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="326" HEIGHT="65"
+ SRC="img120.gif"
+ ALT="\begin{displaymath}V_{1}=
+\sum_{\beta=1}^{3}[ \sum_{\alpha_=1}^{3} J_{\beta \al...
+...a}+
+\sum_{k=1}^{n} e_{k \beta} \dot q_{k}] \gamma_{\beta}=m;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1"> the integral of square of modulus of kinetic moment:
+ </FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V_{2}=
+\sum_{\beta=1}^{3}[ \sum_{\alpha=1}^{3}J_{\beta \alpha} \omega_{\alpha}+
+  \sum_{k=1}^{n} e_{k \beta} \dot q_{k} ]^{2} = {k}^{2};
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="317" HEIGHT="65"
+ SRC="img121.gif"
+ ALT="\begin{displaymath}V_{2}=
+\sum_{\beta=1}^{3}[ \sum_{\alpha=1}^{3}J_{\beta \alph...
+...pha}+
+\sum_{k=1}^{n} e_{k \beta} \dot q_{k} ]^{2} = {k}^{2};
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1"> and the cosine integral:
+ </FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V_{3}= \sum_{k=1}^{3}{ \gamma_{k}}^{2}=1.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="141" HEIGHT="63"
+ SRC="img122.gif"
+ ALT="\begin{displaymath}V_{3}= \sum_{k=1}^{3}{ \gamma_{k}}^{2}=1.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B><FONT SIZE="-1">For the entire class of problems that are described by the above differential
+equations we can make qualitative analysis of phase space by selecting a set
+of invariant manifolds that provide stationary values for different first
+integrals from algebra of first integrals with basis formed by the integrals
+</FONT></B>
+<!-- MATH: $H,V_{1},V_{2},V_{3}.$ -->
+<I>H</I>,<I>V</I><SUB>1</SUB>,<I>V</I><SUB>2</SUB>,<I>V</I><SUB>3</SUB>.<B><FONT SIZE="-1"> Also we can study stability and bifurcations of
+selected invariant manifolds of stationary motions using Lyapunov and
+Poincar&#233; methods.  For example, let us discuss bundle of the first integrals
+ </FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+K=\frac{1}{2} V_{2}- \lambda_{1} V_{1}+\frac{1}{2} \lambda_{1}^{2} V_{3}, \
+\lambda_1 = const.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="327" HEIGHT="49"
+ SRC="img123.gif"
+ ALT="\begin{displaymath}K=\frac{1}{2} V_{2}- \lambda_{1} V_{1}+\frac{1}{2} \lambda_{1}^{2} V_{3}, \
+\lambda_1 = const.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1"> The stationary conditions of function </FONT></B><I>K</I><B><FONT SIZE="-1"> can be written in the form:
+ </FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{\partial K}{\partial \omega_{i}}= \sum_{j=1}^{3} \varphi_{j} J_{ij}=0,
+\hskip 3cm
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="168" HEIGHT="65"
+ SRC="img124.gif"
+ ALT="\begin{displaymath}\frac{\partial K}{\partial \omega_{i}}= \sum_{j=1}^{3} \varphi_{j} J_{ij}=0,
+\hskip 3cm
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{ \partial K}{\partial \gamma_{i}}=- \lambda_{1} \varphi_{i}= 0
+\hskip 2cm ( i=1,2,3),
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="340" HEIGHT="54"
+ SRC="img125.gif"
+ ALT="\begin{displaymath}\frac{ \partial K}{\partial \gamma_{i}}=- \lambda_{1} \varphi_{i}= 0
+\hskip 2cm ( i=1,2,3),
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{\partial K}{\partial \dot q_{m}}= \sum_{i=1}^{3} \varphi_{i} e_{mi}=0,
+\hskip 4cm
+\eqno(A)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="471" HEIGHT="62"
+ SRC="img126.gif"
+ ALT="\begin{displaymath}\frac{\partial K}{\partial \dot q_{m}}= \sum_{i=1}^{3} \varphi_{i} e_{mi}=0,
+\hskip 4cm
+\eqno(A)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{\partial K}{\partial q_{m}}= \sum_{i=1}^{3} \varphi_{i}
+( \sum_{\alpha=1}^{3} \frac{\partial J_{i \alpha}}{\partial q_{m}}
+ \omega_{\alpha}+ \sum_{k=1}^{n} \frac{\partial e_{ki}}{\partial q_{m}}
+ \dot q_{k})=0 \hskip 1cm (m=1,\ldots,n).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="534" HEIGHT="63"
+ SRC="img127.gif"
+ ALT="\begin{displaymath}\frac{\partial K}{\partial q_{m}}= \sum_{i=1}^{3} \varphi_{i}...
+...i}}{\partial q_{m}}
+\dot q_{k})=0 \hskip 1cm (m=1,\ldots,n).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1"> Where
+ </FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\varphi_{i}= \sum_{\alpha=1}^{3}J_{i \alpha} \omega_{\alpha} +
+\sum_{k=1}^{n} e_{ki} \dot q_{k}- \lambda_{1} \gamma_{i} \ \
+   ( i=1,\ldots,3).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="402" HEIGHT="63"
+ SRC="img128.gif"
+ ALT="\begin{displaymath}\varphi_{i}= \sum_{\alpha=1}^{3}J_{i \alpha} \omega_{\alpha} ...
+...{ki} \dot q_{k}- \lambda_{1} \gamma_{i} \ \
+( i=1,\ldots,3).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<B><FONT SIZE="-1">According to the theorem of [3] it is possible to state that the elements of
+manifolds family
+ </FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\varphi_{1}=0, \ \ \varphi_{2}=0, \  \ \varphi_{3}=0
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="211" HEIGHT="35"
+ SRC="img129.gif"
+ ALT="\begin{displaymath}\varphi_{1}=0, \ \ \varphi_{2}=0, \ \ \varphi_{3}=0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1"> with parameter </FONT></B>
+<!-- MATH: $\lambda_{1}$ -->
+<IMG
+ WIDTH="25" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img130.gif"
+ ALT="$ \lambda_{1} $"><B><FONT SIZE="-1"> that provide extremal value to the
+first integrals from bundle </FONT></B><I>K</I><B><FONT SIZE="-1"> with any fixed </FONT></B>
+<!-- MATH: $\lambda_{1}$ -->
+<IMG
+ WIDTH="25" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img130.gif"
+ ALT="$ \lambda_{1} $"><B><FONT SIZE="-1">form the family of invariant manifolds for the original differential equations
+system, because the rank of system (A) matrix is equal to 3.  This is the
+consequence of submatrix elements properties:
+ </FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left( \begin{array}{ccc}
+J_{11}(q) & J_{12}(q) & J_{13}(q) \\
+  J_{21}(q) & J_{22}(q) & J_{23}(q) \\
+  J_{31}(q) & J_{32}(q) & J_{33}(q)
+  \end{array} \right),
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="232" HEIGHT="81"
+ SRC="img131.gif"
+ ALT="\begin{displaymath}\left( \begin{array}{ccc}
+J_{11}(q) & J_{12}(q) & J_{13}(q) ...
+... \\
+J_{31}(q) & J_{32}(q) & J_{33}(q)
+\end{array} \right),
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1">that are interpreted as the inertia moments of mechanical system.
+</FONT></B>
+<P>
+<B><FONT SIZE="-1">Using this approach we can obtain stability conditions for the elements of
+found family of invariant manifolds of stationary motions (IMSM) by
+second Lyapunov's method.  Non-writing the equations of disturbed motion
+in the neighbourhood of our IMSM, let us consider the first integral </FONT></B><I>K</I><B><FONT SIZE="-1">as Lyapunov's function.  Let us write it in the terms of deviation
+from the manifold in question, i.e (in our case) in variables
+</FONT></B>
+<!-- MATH: $\varphi_{i}$ -->
+<IMG
+ WIDTH="24" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.gif"
+ ALT="$ \varphi_{i} $"><B><FONT SIZE="-1">.
+ The direct calculation gives:
+ </FONT></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+K= \frac{1}{2}({ \varphi_{1}}^{2}+{\varphi_{2}}^{2}+{\varphi_{3}}^{2}).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="212" HEIGHT="49"
+ SRC="img133.gif"
+ ALT="\begin{displaymath}K= \frac{1}{2}({ \varphi_{1}}^{2}+{\varphi_{2}}^{2}+{\varphi_{3}}^{2}).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><FONT SIZE="-1"> Because </FONT></B><I>K</I><B><FONT SIZE="-1"> is the sign-definite function of variables
+ </FONT></B>
+<!-- MATH: $\varphi_{1}, \varphi_{2}, \varphi_{3}$ -->
+<IMG
+ WIDTH="85" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img134.gif"
+ ALT="$ \varphi_{1}, \varphi_{2}, \varphi_{3} $"><B><FONT SIZE="-1">, using well known Zubov's theorem
+on stability of sets we conclude, that all elements of discussed IMSM
+family are stable with all values of </FONT></B>
+<!-- MATH: $\lambda_{1} \neq 0$ -->
+<IMG
+ WIDTH="61" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img135.gif"
+ ALT="$ \lambda_{1} \neq 0 $"><B><FONT SIZE="-1">.
+</FONT></B>
+<P>
+<DIV ALIGN="CENTER"><B><FONT SIZE="-1">
+<B>References</FONT></B></DIV>
+<B><FONT SIZE="-1"></B></FONT></B>
+<P>
+<B><FONT SIZE="-1"><B>
+ 1. Banshchikov A.V., Bourlakova L.A., Ivanova G.N., Simonov S.A.
+ MECHANIK package of symbolic computations. The problems and the
+ structure //Packages of applied programs. Results and applications.
+ Novosibirsk. Nauka, 1986, p.96-105. (in Russian)
+</B></FONT></B>
+<P>
+<B><FONT SIZE="-1"><B>
+ 2. Irtegov V.D. Invariant manifolds of stationary motions and their
+ stability. Novosibirsk. Nauka, 1985. (in Russian)
+</B></FONT></B>
+<P>
+<B><FONT SIZE="-1"><B>
+ 3. Irtegov V.D., Titorenko T.N. On modelling and research of some problems
+ with the use of computer algebra //Programming (Programirovanie), 1, 1997,
+ p.68-74. (in Russian)
+</B></FONT></B>
+<P>
+<B><FONT SIZE="-1"><B>
+ 4. Litvin-Sedoi M.Z. Systems mechanics of connected solid bodies
+ //Results of science and engineering. General mechanics. Moscow.: VINITI,
+ vol.5, 1992, p.3-52. (in Russian)
+</B></FONT></B>
+<P>
+<B><FONT SIZE="-1"><B>
+ 5. Brayton R.K., Moser J.K. A theory of nonlinear networks - 1 //Quaterly
+ of Applied Mathematics, 1964, vol.22, 1, p.1-33.
+</B></FONT></B>
+<P>
+<B><FONT SIZE="-1"><B>
+ 6. Brayton R.K., Moser J.K. A theory of nonlinear networks - 2 //Quaterly
+ of Applied Mathematics, 1964, vol.22, 2, p.81-104.
+</B></FONT></B>
+<P>
+<B><FONT SIZE="-1"><B>
+ 7. Gaylord Richard J., Kamin Samuel N., Wellin Paul R.
+ Introduction to Programming with Mathematica. Springer-Verlag, 1996.
+</B></FONT></B>
+<P>
+<B><FONT SIZE="-1"><B>
+ 8. Wolfram S. Mathematica: A System for Doing Mathematics by Computer.
+ Addison - Wesley Publ. Co., 1988.
+</B></FONT></B>
+<P>
+<B></B>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

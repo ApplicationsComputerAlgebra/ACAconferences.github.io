@@ -1,0 +1,13 @@
+Title: Fast computation of polynomial Janet bases
+
+Author: Gerdt, Vladimir P. (in cooperation with Yu. A. Blinkov and
+        D. A. Yanovich)
+
+Affiliation: JINR Dubna, Russia
+
+Abstract: In this talk we present basic algorithmic ideas and their
+implementation in Reduce, C and C++ for computation of Janet bases for
+polynomial ideals.  We also give the timings of our codes in comparison with
+the latest version (2-0-0) of computer algebra system Singular having one of
+the most efficient implementations of the Buchberger algorithm for computation
+of Groebner bases.

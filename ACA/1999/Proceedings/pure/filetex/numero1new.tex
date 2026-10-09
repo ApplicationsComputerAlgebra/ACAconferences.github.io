@@ -1,0 +1,139 @@
+\documentstyle[12pt,a4]{article}
+\newtheorem{lema}{\bf Lemma}[section]
+\newtheorem{corolario}[lema]{\bf Corolary }
+\newtheorem{teorema}[lema]{\bf Theorem}
+\newtheorem{ejemplo}[lema]{\bf Example}
+\newtheorem{nota}[lema]{\bf Remark}
+\def\demostracion{\noindent{\bf Proof: }}
+%\def\gg{{\frak g}}
+\def\gg{{\got g}}
+\def\CC{{\Bbb C}}
+\def\KK{{\Bbb K}}
+\def\NN{{\Bbb N}}
+\def\RR{{\Bbb R}}
+\def\ZZ{{\Bbb Z}}
+\title{The use of $Mathematica$ for the
+classification of some nilpotent Lie algebras}
+\author {L.M. Camacho\footnotemark[1]
+\and J.R. G\'{o}mez\thanks{Dpto. Matem\'{a}tica Aplicada I. Univ.
+Sevilla. Avda. Reina Mercedes S.N. 41012 Sevilla (Spain).
+E-mail: jrgomez@cica.es, lcamacho@euler.fie.us.es}
+\and R.M. Navarro\thanks{Dpto. de Matem\'{a}ticas.
+Univ. de Extremadura. Avda. de la Universidad S.N.
+10071 C\'{a}ceres (Spain). E-mail: rnavarro@unex.es}}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+The classification of nilpotent Lie algebras is
+nowadays an open problem \cite{biblia}. In the last years have
+been studied the nilpotent Lie algebras leading to
+their classification up to dimension $7$, as a
+particular type of the above, the classification
+of the filiform Lie algebras is giving up to
+dimension $11$ and the classification of the
+2-abelian filiform Lie algebras for the case of
+generic dimension. Cabezas and G\'{o}mez generalize
+the notion of filiform algebra to $p$-filiform
+algebra \cite{articulo kluwer}, \cite{Comm(n-4)},
+\cite{extracta} (whose Goze's invariant is
+$(dim(\gg)-p,1,1,\dots,1)$), also give the
+classification for the integer values of $p$
+between $dim(\gg)-4$ and $dim(\gg)-2$, for
+$p=dim(\gg)-5$ we have classified the
+$(n-5)$-filiform Lie algebras with maximal derived
+algebra, where $n=dim(\gg)$, \cite{jljr}.
+\vglue2.5mm
+The determination of Lie algebras is a difficult
+work, therefore we have developed some new methods
+which allows the classification of nilpotent Lie
+algebras.
+%Many papers are based on direct
+%computations (by hand) and the complexity of
+%those computations leads frequently to errors.
+\vglue2.5mm
+In this paper, we show a program by using the
+$Mathematica\ 3.0$ package which allows the
+classification of the sets of laws of
+$(n-6)$-filiform Lie algebras of dimension $8$.
+\end{abstract}
+\begin{section}{Description of the program}
+Classifications problems up to isomorphisms can
+be reduced to determinate the structure constants
+of non-isomorphic algebras. As the structure
+constants depend on the basis, it is convenient
+to find a basis for which one has a maximum
+number of structure constants equal zero. We
+consider adapted basis.
+
+Let be a family of $(n-6)$-filiform Lie algebras
+of dimension $8$. For the classification of this
+family, it is necessary to find classic
+invariants. This is not always possible. Then, it
+is necessary to make the generic change of basis.
+This program allows to generate the new vectors
+and to compute new structure constants. Later we
+have to do a discussion over the output of program
+to can classify.
+\vglue2mm
+The way to find non-isomorphic algebras of
+dimension $8$ can be summarized in the following
+steps
+%\vglue1mm
+
+Step 1: We introduce the family, the conditions of
+bilinear and anti-symmetry and the condition of
+$(n-6)$-filiform Lie Algebras.
+\vglue 3mm
+Step 2: We generate particular new adapted basis,
+where the structure constants can be zero.
+\vglue3mm
+Step 3: We compute the conditions to
+maintain some null bracket products. We select
+only most simple null bracket products.
+\vglue3mm
+Step 4: We obtain new structure constants of the
+family in the new adapted basis. In this
+way, we compute some bracket products.
+\vglue3mm
+Step 5: We check that the remain of null bracket
+products. In the new adapted basis these products
+have to be null.
+\vglue3mm
+Finally, we discuss if the nullities of new structure
+constants are invariants or zero. This discussion allows to
+classify, since it separates in non-isomorphic
+algebras.
+
+\end{section}
+
+\begin{thebibliography}{1}
+%\bibitem{tesis Jesus}J.M. Cabezas, {\it Una generalizaci\'{o}n de las
+%\'{a}lgebras de Lie filiformes,} Phd thesis, Universidad de Sevilla, 1996.
+
+\bibitem{jljr} J.M. Cabezas, L.M. Camacho, J.R. G\'{o}mez, R.M. Navarro,
+{\it A class of nilpotent Lie algebras,} Submitted
+Communications in Algebra.
+
+\bibitem{extracta}  J.M. Cabezas, J.R. G\'{o}mez,
+{\it  Las \'{a}lgebras de Lie $(n-3)$-filiformes como
+extensiones por derivaciones,} Extracta Mathematicae,
+13:3, 383-391, 1999.
+
+
+\bibitem{Comm(n-4)}  J.M. Cabezas, J.R. G\'{o}mez, {\it  (n-4)-filiform
+Lie algebras,} Communications in Algebra,
+27:10, 1999.
+
+\bibitem{articulo kluwer}
+J.M. Cabezas, J.R. G\'{o}mez, A. Jim\'{e}nez-Merch\'{a}n, {\it Family of p-filiform
+Lie algebras,} In Algebra and Operator Theory, 1997. Ed. Y. Khakimdjanov,
+M. Goze, Sh. Ayupov, 93-102, Kluwer Academic Publishers, 1998.
+
+
+\bibitem{biblia} M. Goze, Y. Khakimdjanov, {\it Nilpotent Lie
+Algebras}, Kluwer Academic Publishers, 1996.
+
+\end{thebibliography}
+\end{document}
+

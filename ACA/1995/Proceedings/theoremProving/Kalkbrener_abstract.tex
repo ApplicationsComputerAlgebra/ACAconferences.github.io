@@ -1,0 +1,39 @@
+\documentstyle [11pt]{article}
+\title{Radical Decomposition and Geometry Theorem Proving}
+\author{Michael Kalkbrener\\Department of Mathematics\\
+Swiss Federal Institute of 
+Technology\\
+CH-8092 Zurich, Switzerland}
+\date{} 
+\begin{document}
+\pagestyle{empty}
+\maketitle
+
+\vskip 1cm
+\centerline{\bf Abstract}
+
+\medskip
+Often geometric statements are true only in a generic sense, i.e.
+after certain degenerate situations have been ruled out. The problem of
+finding nondegeneracy conditions is related to the following algorithmic
+problem: for a radical $J$ in a Noetherian commutative ring $R$ with identity
+and a polynomial $f$ in $R$ compute radicals $J_1,J_2$ such that 
+\[ J=J_1\cap J_2,\ \ \ \ \ \ f\in J_1,\ \ \ \ \ \  J_2:f=J_2. \]
+We show that
+if this ``splitting'' problem can be solved in $R$ then it can be solved in
+$R[x_1,\ldots,x_n]$. From the constructive proof
+we obtain an algorithm for splitting radicals in multivariate polynomial
+rings over fields.
+The basic operation in this algorithm is the 
+computation of greatest common divisors of univariate polynomials over 
+extension fields. 
+No factorization or Gr\"obner bases computation is
+needed.
+We apply this algorithm to geometry theorem proving and show
+that our algorithm can not only be used for deciding correctness
+of geometric
+statements but
+also for constructing 
+simplest nondegeneracy conditions with respect
+to lexicographical degree orderings.
+\end{document}

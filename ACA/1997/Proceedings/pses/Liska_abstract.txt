@@ -1,0 +1,36 @@
+Vertically Averaged Stratified Fluid Flow Models -
+Analysis and Numerical Solution Supported by Computer Algebra Tools
+-------------------------------------------------------------------
+by Richard Liska+ and Burton Wendroff*
+
++ Faculty of Nuclear Sciences and Physical Engineering
+Czech Technical University
+Brehova 7
+115 19 Prague 1
+Czech Republic
+liska@siduri.fjfi.cvut.cz
+http://www-troja.fjfi.cvut.cz/~liska
+
+*Group T-7, Los Alamos National Laboratory
+Los Alamos
+NM 87544
+USA
+
+Vertical averaging, used often in ocean and atmosphere modelling, reduces the
+dimension of the Euler equations, describing non-viscous, incompressible fluid
+flow, and results in vertically averaged models which do not have vertical
+coordinate and thus can be solved much faster than full-dimensional models.
+There are two well known one-layer vertically averaged models, namely shallow
+water and Green-Naghdi models.  Here we deal with two-layer extensions of these
+models.  As the complexity of these models is high (especially the Green-Naghdi
+one), the use of computer algebra tools during the analysis and numerical code
+development has been essential.  Well-posedness of the models has been checked
+by the Fourier method where in one case a special quantifier elimination
+algorithm has been employed to obtain final conditions of ill-posedness.  For
+shallow water models, the composition of Lax-Wendroff and Lax-Friedrichs
+difference schemes with good shock resolving capabilities has been used.  The
+ill-posed Green-Naghdi models have been treated by an implicit backward Euler
+difference scheme.  Code generation of an algorithm solving this non-linear
+scheme by full Newton method resulted in a numerical source code of the size
+about 1/2 MB.  Without computer algebra tools, the treatment of these models
+would not be possible.

@@ -1,0 +1,11 @@
+Justo Cabezas Corchero:
+
+Appearance of New Curricular Contents in Mathematics Through the Use of New
+Technologies
+
+The introduction of new technologies to make easy learning Mathematics can
+generate deep curricular changes. A particular case is the possibility to 
+introduce contents that are not traditionally incorporated into the different 
+curricula. This work describes a didactic experience with 17 years old 
+students, in which DERIVE is used to develop a topic with the features 
+indicated before.

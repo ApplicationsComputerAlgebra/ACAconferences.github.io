@@ -1,0 +1,286 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA 96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Non-Standard Applications</H1>
+
+<h3>Organizer</h3>
+<p>
+Eugenio Roanes-Lozano
+(<a href="mailto:eroanes@eucmos.sim.ucm.es">eroanes@eucmos.sim.ucm.es</a>)
+<ADDRESS>
+Dept. Algebra, Desp. 3517<br>
+Edificio "La Almudena"<br>
+Paseo Juan XXIII s/n<br>
+28040 - Madrid (Spain)<br>
+Fax: Spain + 1 + 3946248<br>
+</ADDRESS>
+<p>
+
+<h3>Description</h3>
+Computer Algebra has traditionally been used in fields like Algebraic
+Geometry, Astronomy, High Energy Physics, Automatic Theorem Proving in
+Geometry,...
+Nevertheless there are some other fields such as Industrial Applications,
+Chemistry, Artificial Intelligence (for instance the AISMC conference is entirely devoted to this topic),... where CA is been used now as a
+very useful tool. The  session tries to give an overview of some of these
+non-standard applications. Emphasis is given in the originality.
+There will be a final colloquium about the topic.
+
+<p>
+
+<h3>Talks</h3>
+
+<ul>
+  <li> A Problem Solving Environment for Numerical Partial
+         Differential Equations <br>
+      <A HREF="http:../participants.html#Akers">R.L. Akers</A>,
+      <A HREF="http:../participants.html#Baffes">P. Baffes</A>,
+      <A HREF="http:../participants.html#Kant">E. Kant</A>,
+      <A HREF="http:../participants.html#Randall">C. Randall</A>,
+      <A HREF="http:../participants.html#Steinberg">S. Steinberg</A>,
+      <A HREF="http:../participants.html#Young">R.L Young</A><br>
+      <em>Abstract:</em>
+SciNapse is a problem solving environment for numerically solving
+partial differential equations that is currently under commercial
+development. The main interface to the system is the "problem
+specification language".  This language allows an initial-boundary
+value problem for a system of partial differential equations to be
+specified in terms of invariant differential operators or in a
+particular coordinate system. The region in which the differential
+equations hold is specified in terms of a union of rectangles in some
+coordinate system. This allow rather general regions apropriate for
+discretization using logically-rectangular grids.  The methods for
+discretizing the differential equations and the boundary conditions
+can be specified by giving keywords for common methods or by giving
+detailed mathematical replacement rules, or some combination of
+both. In the case of finite-difference discretizations, simple ways
+exist for specifying grid staggering and the placement of the boundaries
+in the staggered grid.
+
+      <p>
+The SciNapse system includes a template language for specifying
+algorithms.  One typical use for templates is to specify the over-all
+time evolution in terms of a general method for taking individual time
+steps.  Then the particular method for taking a time step can be
+chosen from a library of templates, e.g. Runge-Kutta-Fehlberg or
+Dormand-Prince integrators, or a new template may be written.  If the
+method is implicit, then a solver may also be chosen from a library of
+solvers, e.g. preconditioned conjugate gradient or quasi-minimal
+residual, or a new solver template can be written.  SciNapse has
+heuristics for choosing solvers, and many other features of the
+solution algorithm.  The SciNapse system is implemented in Mathematica
+and the templates are executable Mathematica code, so they can easily
+be tested for correctness in Mathematica.
+
+      <p>
+SciNapse is a knowledge-based program synthesis system implemented
+with objects, transformation rules, and a reasoning system.  A great
+deal of knowledge engineering has gone into providing the system with
+extensive information about how to solve initial boundary value problems
+in an intelligent manner.  The system starts with an abstract notion
+of what is needed to write a program recorded in its objects and
+starts filling in the details based on rules associated with the
+objects. Information may be given to SciNapse in files written by the
+user, from a simple terminal interface, or in a graphical user
+interface. When SciNapse realizes that it doesn't have a piece of
+information that it needs to specify a problem, it will ask the user
+for that information, typically by giving a menu of alternatives.
+Users can have the system use its own knowledge whenever possible or
+can request that they be asked to confirm system choices.  If some
+information has already been given to SciNapse, then the reasoning
+system uses this to eliminate alternatives. Using constaints (hard and
+fast rules about legal options and combinations), heuristic rules of
+thumb for making decisions, and defaults, SciNapse can take much of
+the burden of writing a program off the user.
+
+<p>
+  <li>Computer Algebra and Artificial Intelligence<br>
+      <A HREF="http:../participants.html#Calmet">Jacques Calmet</A><br>
+      <em>Abstract:</em>
+      The relationship between CA and AI is stressed in the first part of the talk.
+It is emphasized that this relationship leads to cross fertilization of the
+two domains.
+The second part of the talk is devoted to two specific applications. The
+first one shows how to better prove theorems using computer algebra systems.
+Examples using Maple and Magma will be presented. The second application is
+for a problem in vision and more specifically in traffic scene
+reconstruction. It is shown how Mathematica can be used to improve an
+approach based upon multi-agents.
+If time permits, a possible non-standard application outside AI will be
+suggested: the use of Computer Algebra in Econometrics.
+
+<p>
+  <li> Thermodyanmics with Maple<br>
+      <A HREF="http:../participants.html#Taylor">Ross Taylor</A><br>
+      <em>Abstract:</em>
+      Computer algebra systems (of which Maple is but one example)
+have enormous potential, not just in thermodynamics, but in all
+areas of science and engineering.
+However,  to be useful in thermodynamics a computer algebra
+system needs:
+      <ol>
+	
+<li> The ability to work with total differentials of undefined
+   functions, for example dS where S=S(U,V).
+<li> To be able to work with the subscripted (indexed) partial
+   derivatives of thermodynamic functions found in many
+   thermodynamic formulae.
+<li> The ability to differentiate undefined or arbitrary sums (a
+   summation where the upper limit is a symbol rather than a
+   number).
+      </ol>
+As far as the author is aware, none of the commercially
+available computer algebra is able to do any of the above right
+out of the box. In this paper we describe extensions to Maple
+so that it can be used to rapidly develop the expressions needed
+to compute thermodynamic properties of mixtures of any number of
+components.
+This paper also presents examples of thermodynamic computations
+carried out using Maple with an emphasis on graphical
+visualization of both symbolic and numerical results.
+One of the advantages of using a computer algebra system is the
+greatly increased accuracy of derivations of thermodynamic
+properties and numerical computations. That is, students are
+much more likely to get it right. On the debit side is a
+possible decrease in the students ability to carry out such
+derivations and computations by hand.  Other advantages and
+disadvantages of using a computer algebra package in
+undergraduate education will also be discussed.
+<p>
+
+  <li> A Topology-Independent Model for Railway Interlocking
+      Systems<br>
+      <A HREF="http:../participants.html#Roanes">Eugenio Roanes-Lozano</A>,
+      <A HREF="http:../participants.html#Laita">Luis M. Laita</A><br>
+      <em>Abstract:</em>
+ Two decision models for interlocking systems are presented. The first for the
+case that the turnouts have spring switches and the second for the case that
+the turnouts should not be trailed through a switch set against. In both of
+them, the algorithm is independent from the topology of the station and is
+based on the calculation of accessibility in an oriented graph.
+Surprisingly brief implementations in Maple V of both models have been
+developed. The package analyzes any change in the position of the switches
+and the clearances given by the semaphores and supervises if it is safe to
+authorize the change. In the second model, which turnouts could be trailed
+through switches set against is also studied. To finish with, an example is
+given.
+     
+<p>
+  <li> CA and Electricity Distribution<br>
+      <A HREF="http:../participants.html#Montes">Antonio Montes </A><br>
+      <em>Abstract:</em>
+The Load Flow Problem is very important in Electrical 
+Engineering. It provides systems of multivariate polynomial 
+equations. Instead of ordinary numerical solutions it would be very 
+convenient to obtain algebraic solutions. Combining different 
+Computer Algebra techniques, namely Groebner basis, dialytic 
+elimination, resultants and comprehensive Groebner basis, we provide 
+a method to solve algebraically simple networks, allowing us also to 
+study the numerical stability of the problem and of the algorithm. 
+
+      <p>
+  <li> Regular Expressions Simplification.<br>
+      <A HREF="../participants.html#Trejo">Alejandro A.R. Trejo</A>,
+      <A HREF="../participants.html#Anaya">Guillermo Fernandez Anaya</A><br>
+       <em>Abstract:</em> 
+Although Kleene's regular expressions are known since middle 50's and that
+play a central role in many areas of computer science, such as in the design
+of sequential circuits and, very specially, in the compiler theory,
+at the present time an authomatic method for their simplification is
+not available. Such a method becomes desirable whenever 
+you face involved language descriptions which require long and tedius
+sequences of manipulations.
+
+      <p>
+This talk is devoted to present a technique to simplify regular expressions.
+ Several ideas of Computer Algebra and symbolic computing 
+are applied to the regular expression symbolic domain.
+An implementation of the described technique has been developed.
+
+      <p>
+The talk is divided in the following sections:<br>
+
+In section 1, the problem is stated. We present a wide view of the 
+question proposed for solution. <br>
+In section 2, the technique for simplifying 
+is outlined. In section 3, the method of representation and manipulation of
+expressions is explained. Finally, in section 4, the implemented regular
+expression simplifier system is presented, together with examples of
+      its usage.
+      <p>
+  <li> Computer Algebra application to the distribution 
+      of sample correlation coefficient.<br>
+      <A HREF="../participants.html#Nakagawa">Shigekazu Nakagawa</A>,
+      <A HREF="../participants.html#Niki">Naoto Niki</A>,
+      <A HREF="../participants.html#Hashiguchi">Hiroki Hashiguchi</A><br>
+      <em>Abstract:</em> 
+Let $r$ be the correlation coefficient based on a
+sample of size $n$ from a population $F$.
+The value of $r$ remains unchanged however 
+observations may be exchanged or permuted.
+The statistic $r$ is one of symmetric statistics.
+
+      <p>
+Our goal is divided into two parts:
+      <ol>
+	<li> obtaining the asymptotic cumulants of $r$,
+	<li> as a consequence of 1., deriving the asymptotic expansions 
+	    for probability integrals and percentiles of $r$, 
+	    where $F$ has population cumulants of requisite order.
+      </ol>
+<p>
+In accomplishing 1, the computational difficulty arises there.
+If we want the more precise approximation, the order
+of requisite approximate cumulants of $r$ increases.
+Raising the order may cost a large amount of algebraic 
+computation often beyond human power.
+Here computer algebra induces an increasing interest.
+<p>
+	    
+The authors have taken a new look at symmetric statistics
+and developed the symbolic and algebraic 
+algorithm for changing of bases of symmetric polynomials.
+Both the asymptotic cumulants and the approximate distributions are given.
+</ul>
+
+<P><img src="../line-risc.gif" align=middle alt="________________________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/program-plan.html"><img src="../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title></title>
+</head>
+
+<body>
+<h1></h1>
+
+
+
+<hr>
+<address></address>
+<!-- hhmts start -->
+Last modified: Sun Jun 30 14:09:45 MDT 1996
+<!-- hhmts end -->
+</body> </html>

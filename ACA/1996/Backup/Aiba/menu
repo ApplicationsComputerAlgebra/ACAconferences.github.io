@@ -1,0 +1,21 @@
+# Created by rsalamon@edelweiss on Tue Jul  2 11:08:24 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Benhamou.html
+Path=0/conference/IMACS96/skeletons/Aiba/Benhamou.html
+
+Name=Caprotti.html
+Path=0/conference/IMACS96/skeletons/Aiba/Caprotti.html
+
+Name=Hong.html
+Path=0/conference/IMACS96/skeletons/Aiba/Hong.html
+
+Name=Monfroy.html
+Path=0/conference/IMACS96/skeletons/Aiba/Monfroy.html
+
+Name=Sato.html
+Path=0/conference/IMACS96/skeletons/Aiba/Sato.html
+
+Name=Harris.html
+Path=0/conference/IMACS96/skeletons/Aiba/Harris.html
+

@@ -1,0 +1,218 @@
+<html>
+<head>
+ <title>ACA2008: Symbolic Computation and Quantum Field Theory</title>
+ <style type="text/css">
+  body, table, tr, td {font-size: 12; font-family: sans-serif}
+      h1 {font-size: 24}
+  h2 {font-size: 16}
+ </style>
+</head>
+<body>
+
+ <table>
+  <tr><td><img src="feynman.png" width=175></td><td> </td><td>
+ <h1>Symbolic&nbsp;Computation and Quantum&nbsp;Field&nbsp;Theory</h1>
+
+ <h2 class=text>
+Special Session at<br>
+14th International Conference on Applications of 
+Computer Algebra (<a href="http://www.risc.uni-linz.ac.at/about/conferences/aca2008/">ACA&nbsp;2008</a>)<br>
+July 27-30, 2008, RISC Institute, Castle of Hagenberg, Linz, Austria</h2>
+  </td></tr>
+ </table>
+
+ <hr>
+ 
+ <h2>Session Organizers</h2>
+ <ul>
+  <li><a href="mailto:cschneid@risc.uni-linz.ac.at">Carsten Schneider,</a> RISC</li>
+  <li><a href="mailto:mkauers@risc.uni-linz.ac.at">Manuel Kauers,</a> RISC</li>
+ </ul>
+
+ <h2>Abstract</h2>
+ <p>
+Feynman parameter integrals play an important role in perturbative
+quantum theory. Depending on the mass-scale parameters of the problem
+and the number of external invariants, these multiple integrals can be
+written in Mellin space, e.g., in terms of generalized hypergeometric
+multi-sums. Then the resulting sum expressions in terms of&nbsp;<i>e</i> 
+(the divergent integrals are regularized by analytical continuation of the
+space-time to the dimension 4&nbsp;&ndash;&nbsp;2<i>e</i> for a small 
+parameter&nbsp;<i>e</i>) and of the
+Mellin parameter <i>N</i> are considered in its Laurent series expansion
+w.r.t.&nbsp;<i>e</i>. For instance, in single scale problems up to loop 
+order&nbsp;3
+the coefficients of the corresponding Laurent expansion can be
+simplified to closed form in terms of nested harmonic sums. Within the
+physics community, highly specialized efficient algorithms and
+software, like Vermaseren's package SUMMER implemented in FORM, have
+been developed for carrying out these computations for the sum
+expressions.
+ </p>
+ <p>
+Mostly independent of these developments, algorithms for symbolic
+summation and integration have ever since been subject to research in
+computer algebra. Today, a fairly far developed algebraic summation
+and integration theory is available which gives rise to algorithms
+applicable to to a wide class of problems. Implementations of these
+algorithms are also available and these have been able to discover
+and/or prove many deep identities in special functions and
+combinatorics in the past. It turns out that the more general
+algorithms arising from this research can also be successfully applied
+in particle physics.
+ </p>
+ <p>
+In the session, we want to bring together people from both sides, to
+present the different techniques, and to discuss possible combinations
+that may help in handling challenging problems from quantum field
+theory.
+ </p>
+
+ <h2>Location</h2>
+
+ <p>
+ Room&nbsp;B
+ </p>
+ <p>
+ Wednesday, July 30, 14.00--18.30.
+ </p> 
+
+ <h2>Program</h2>
+
+ <table cellpadding=10>
+  <tr>
+   <td valign=top>14.00--14.30</td><td>&nbsp;</td>
+   <td>
+Johannes Bl&uuml;mlein, 
+       <a href="http://www-zeuthen.desy.de/main/html/home/">DESY Zeuthen</a>:
+  Relations between Nested Multiple Harmonic Sums <a href="Bluemlein.pdf">
+     slides</a>
+
+     <p><i>Abstract:</i>
+Algebaric and structural relations between nested harmonic sums are discussed. While the former ones solely derive from the index sets, the
+latter can be deduced from their Mellin-integral representations. The complex analysis of the harmonic sums w.r.t. the outer summation
+parameter is derived.
+     </p>
+   </td>
+  </tr>
+  <tr>
+   <td valign=top>14.30--15.00</td><td>&nbsp;</td>
+   <td><i>Coffee break</i></td>
+  </tr>
+  <tr>
+   <td valign=top>15.00--15.30</td><td>&nbsp;</td>
+   <td>
+Stefan Weinzierl, 
+      <a href="http://wwwthep.physik.uni-mainz.de/site/">THEP Mainz</a>:
+     Perturbative calculations with shuffle algebras and polylogs <a
+     href="Weinzierl.pdf">
+     slides</a>
+
+     <p><i>Abstract:</i>
+Perturbative calculations in quantum field theory involve the computation
+of Feynman loop integrals.
+In this talk I discuss how computer algebra can be used to facilitate the
+calculation of loop integrals.
+An example are algorithms based on shuffle or quasi-shuffle algebras.
+     </p>
+   </td>
+  </tr>
+  <tr>
+   <td valign=top>15.30--16.00</td><td>&nbsp;</td>
+   <td>
+Sebastian Klein, 
+       <a href="http://www-zeuthen.desy.de/main/html/home/">DESY Zeuthen</a>:
+      <i>Mathematical structure of heavy flavor operator matrix elements
+        at O(a<sub>s</sub><sup>2</sup>) and beyond</i> <a href="Klein.pdf">
+     slides</a>
+
+     <p><i>Abstract:</i> A precise knowledge of the heavy flavor contributions to the
+structure functions is needed to perform precision tests
+of QCD based on deep-inelastic scattering data.
+We report on recent calculations of the heavy flavor
+Wilson coefficients to O(a<sub>s</sub><sup>2</sup>) and on first results relevant at
+O(a<sub>s</sub><sup>3</sup>) in the region Q<sup>2</sup>/m<sup>2</sup>&nbsp;=&gt;&nbsp;10. 
+We make use of the technique
+of heavy operator matrix elements and particularily emphasize techniqual
+aspects of our calculation, which we perform in Mellin-space.
+This includes the representation of the Feynmann-paremeter integrals
+in terms of generalized hypergeometric functions and the subsequent
+summation of infinite sums into harmonic sums. 
+     </p>
+   </td>
+  </tr>
+  </tr>
+   <td valign=top>16.00--16.30</td><td>&nbsp;</td>
+   <td>Jos Vermaseren, 
+     <a href="http://www.nikhef.nl/pub/theory/general.html">NIKHEF Amsterdam</a>:
+     FORM and Field Theory <a href="Vermaseren.pdf">
+     slides</a>
+
+     <p><i>Abstract:</i>
+The symbolic manipulation package FORM has been developed in parallel with
+the developing needs of Quantum Field Theory (QFT). I will show a few of
+the problems for which FORM was essential for their solution. Then I will
+show what is worked at currently in QFT and hence, what are some of the
+needs and developments in the future.
+     </p> 
+   </td>
+  </tr>
+  <tr>
+   <td valign=top>16.30--17.00</td><td>&nbsp;</td>
+   <td><i>Coffee break</i></td>
+  </tr>
+   <td valign=top>17.00--17.30</td><td>&nbsp;</td>
+   <td>
+Peter Paule, <a href="http://www.risc.uni-linz.ac.at/">RISC Linz</a>:
+Special Functions &amp; Computer Algebra: New Methods and Paradigms
+
+     <p><i>Abstract:</i> The &quot;Handbook of Mathematical Functions&quot;
+(Abramowitz/Stegun, 1964) is one of the mostly
+cited scientific reference works. A prominent
+part of the citations come from the side of
+physicists who need to manipulate special functions
+in their daily work. The relevance of recent computer
+algebra methods for assisting in this task is reflected
+by the fact that the forthcomming <a href="http://dlmf.nist.gov/">&quot;Digital Library
+of Mathematical Functions&quot;</a>,
+the successor project to the &quot;Handbook&quot;, includes
+a respective chapter. The talk gives a brief survey
+on the evolution of methods.
+     </p>
+   </td>
+  </tr>
+  <tr>
+   <td valign=top>17.30--18.00</td><td>&nbsp;</td>
+   <td>
+Flavia Stan, <a href="http://www.risc.uni-linz.ac.at/">RISC Linz</a>:
+On Recurrences for Ising Integrals
+
+     <p><i>Abstract:</i>
+We use WZ-summation methods to compute recurrences for the Ising-class integrals <i>C<sub>n,k</sub></i>. 
+In this context, we describe an algorithmic approach to obtain homogeneous and inhomogeneous recurrences 
+for a general class of multiple contour integrals of Barnes' type. 
+     </p>   </td>
+  </tr>
+  <tr>
+   <td valign=top>18.00--18.30</td><td>&nbsp;</td>
+   <td>
+Carsten Schneider, 
+      <a href="http://www.risc.uni-linz.ac.at/">RISC</a>:
+Difference field algorithms for Quantum Field Theory <a href="Schneider.pdf">
+     slides</a>
+
+     <p><i>Abstract:</i> 
+Symbolic summation in the context of difference fields has been
+applied effectively in various areas of mathematics (like, e.g., in combinatorics or
+special functions). In order to attack the extremely big input arising from the evaluation
+of Feynman diagrams, refined difference field algorithms have been developed. In this talk
+we report on these new algorithms implemented in the summation package Sigma and
+illustrate their successful application with concrete examples from QFT.
+     </p>   </td>
+  </tr>
+ </table>
+
+ <hr>
+
+</body>
+</html>

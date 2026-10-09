@@ -1,0 +1,13 @@
+Introduction to Geometric and Algebraic Algorithms for Nonlinear PDE
+
+Gregory Reid
+Centre for Experimental and Constructive Mathematics
+Simon Fraser University
+Vancouver,  Canada
+email:  reid@cecm.sfu.ca
+
+In this talk I give an introduction to geometric, formal and algebraic
+algorithms for nonlinear PDE.  There will be some discussion of the tremendous
+recent progress in this area.  Applications to constrained differential
+systems, and symmetries of PDE will also be discussed.  There will be graphics
+and computer demonstrations.

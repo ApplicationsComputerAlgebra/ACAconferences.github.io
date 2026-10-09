@@ -1,0 +1,71 @@
+INTERNATIONAL ASSOCIATION for MATHEMATICS and COMPUTERS in SIMULATION
+
+President:
+        Robert Vichnevetsky
+        Department of Computer Science
+        Rutgers University
+        Piscataway, NJ 08855 USA
+Secretary General:
+        R. Beauwens, Belgium
+
+IMACS publishes the following journals:
+        Mathematics and Computers in Simulation (Elsevier)
+        Applied Numerical Mathematics           (Elsevier)
+        Journal of Computational Acoustics      (World Scientific)
+
+IMACS sponsors over ten international meetings a year.
+
+IMACS has over 30 Technical Committees: for example,
+        IMACS Technical Committee on SYMBOLIC Computing.
+
+For more information, email: imacs@cs.rutgers.edu
+
+In more detail:
+
+IMACS is an international association of professionals and scientists concerned
+with computers, computation and applied mathematics, in particular, as they
+apply to the simulation of systems.  This includes numerical analysis,
+mathematical modelling, approximation theory, computer hardware and software,
+programming languages and compilers.  IMACS also concerns itself with the
+general philosophy of scientific computation and applied mathematics, and with
+their impact on society and on disciplinary and interdisciplinary research.
+
+IMACS is one of the five international scientific associations (with IFAC,
+IFORS, IFIP and IMEKO) represented in FIACC, the five international
+organizations in the area of computers, automation, instrumentation and the
+relevant branches of applied mathematics.  Of the five, IMACS (which changed
+its name from AICA in 1976) is the oldest, having been founded in 1956.
+
+IMACS organizes local and international scientific symposia and conferences,
+and sponsors publications in its fields of interest.
+
+Individual members of IMACS receive the ``News of IMACS'' and announcements of
+IMACS events.  They benefit from reduced conference registration fees, and may
+subscribe to the IMACS journals at prices well below the institution/library
+prices.
+
+Publications:  IMACS publishes 3 journals:
+
+Mathematics and Computers in Simulation (published by Elsevier Science
+Publishers, under the North-Holland imprint) is the main IMACS journal,
+containing articles of general interest in modelling and simulation, a book
+review section and the ``News of IMACS''.
+
+Applied Numerical Mathematics (Published by Elsevier Science Publishers, under
+the North-Holland imprint) publishes highly refereed articles at the forefront
+of numerical computing.
+
+The new Journal of Computational Acoustics (World Scientific) is devoted to
+questions of computational wave propagation, large-scale computing and theory
+in computational acoustics.
+
+
+IMACS Secretariats:
+
+American Pacific region:         European region:
+  IMACS Secretariat                IMACS Secreteriat
+  Department of Computer Science   Faculte des Sciences Appliquees
+  Rutgers University               Universite Libre de Bruxelles
+  Piscataway, NJ 08855             50 Avenue F.D. Roosevelt
+  United States                    B-1050 Bruxelles
+                                   Belgium

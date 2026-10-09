@@ -1,0 +1,43 @@
+Engineering Applications of Computer Algebra: Mathematica Approach
+
+Dr. Cetin Cetinkaya
+Wolfram Research, Inc.
+(217) 398-0747
+Fax   : 217-398-0747
+E-mail: cetin@wri.com
+
+In every stage of engineering design and analysis process,  a large
+amount of mathematical operations is performed.  Governing equations of
+a physical phenomenon are manipulated to transform them into solvable
+forms by employing approximations and simplifications techniques. In
+generating a modern design for today's competitive markets, the
+accuracy and precision of operations performed in this stage are
+extremely important. To ensure that the resulting equations -model-
+accurately represent the physical system under consideration, modeling
+and analysis process requires a strong understanding of mathematical
+operations from various branches of mathematics and access to various
+analytical tools.  Also, since these computations are highly tedious
+and repetitive to perform by hand, a user- friendly system which can
+efficiently perform mathematical operations is needed.
+
+The ideal system should let the user to concentrate on the mental
+aspects of the engineering process while the computer performs the
+routine mathematical operations accurately not only on numbers, but
+also on symbolic quantities (expressions).  Such a system should
+provide the user with a large collection of reliable and stable tools
+(functions). The user should not spend too much time in remembering
+standard formulas or searching the pages of handbooks and reference
+books.  Facilities for clear representation of the output, such as
+graphics and sound are also quite desirable. These needs along with the
+advent of the computer industry (both software and hardware technology)
+brings a new breed of computer systems into the engineering
+marketplace.
+
+In this paper, the technical computations environment Mathematica and
+its interface the Mathematica front-end are presented with various
+examples.  The symbolic capability of Mathematica and its relevance to
+engineering analysis and education are emphasized.  The systematic
+documentation with Mathematica notebooks and the communications
+protocol Mathlink to other engineering software are also discussed. In
+the light of these capabilities of Mathematica, its use in engineering
+and engineering education is examined.

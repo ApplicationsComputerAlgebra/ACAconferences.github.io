@@ -1,0 +1,87 @@
+
+<H2><A NAME="SECTION00034000000000000000"><tex2html_anchor_invisible_mark></A><A NAME="smith"><tex2html_anchor_mark></A><BR>
+Smith normal form
+</H2>
+Computing the Smith normal form or Jordan canonical form of a given 
+matrix is also unstable, especially when the matrix has multiple
+eigenvalues, see [#kato#<tex2html_cite_mark>#1##<tex2html_cite_mark>#].
+In that case the stabilization techniques were useful.
+For example, for the <tex2html_image_mark>#tex2html_wrap_inline1389# matrix
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math67#
+
+<tex2html_image_mark>#displaymath1070#
+</DIV><BR CLEAR="ALL">
+<P></P>
+we want to compute the Smith normal form of the polynomial matrix 
+<I>A</I>(<I>x</I>)=<I>xE</I>-<I>A</I>, where <I>E</I> is the identity matrix.
+A classical algorithm, [#DF#<tex2html_cite_mark>#1##<tex2html_cite_mark>#],  -- which might be described as the marriage of row and column reduction with the Euclidean algorithm -- is used to compute the Smith normal form.<A NAME="tex2html13"
+ HREF="footnode.html#foot787"><SUP>10</SUP></A>
+Let us call it <#354#><I>smith</I><#354#>.
+The instability of <#355#><I>smith</I><#355#> derives from that of the Euclidean
+algorithm which has zero discontinuity. 
+
+<P>
+Now we have
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math68#
+
+<tex2html_image_mark>#displaymath1071#
+</DIV><BR CLEAR="ALL">
+<P></P>
+
+<P>
+Consider a floating-point approximation <tex2html_image_mark>#tex2html_wrap_inline1397# of <I>A</I> 
+to precision 5:
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math69#
+
+<tex2html_image_mark>#displaymath1072#
+</DIV><BR CLEAR="ALL">
+<P></P>
+
+<P>
+Merely applying <I>smith</I> to <tex2html_verbatim_mark>#math70#<tex2html_image_mark>#tex2html_wrap_inline1403# 
+does not yield the correct form: 
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math71#
+
+<tex2html_image_mark>#displaymath1073#
+</DIV><BR CLEAR="ALL">
+<P></P>
+where <I>p</I>(<I>x</I>) = 
+<tex2html_verbatim_mark>#math72#1.0000<#380#><I>x</I><#380#><SUP>4</SUP>- 3.9598<#382#><I>x</I><#382#><SUP>3</SUP>+ 5.9237<#384#><I>x</I><#384#><SUP>2</SUP>- 3.9677<I>x</I>+1.0040.
+Making the precision higher until <tex2html_image_mark>#tex2html_wrap_inline1411#does not succeed. What about <tex2html_verbatim_mark>#math73#<tex2html_image_mark>#tex2html_wrap_inline1413#? 
+As a convergent sequence <tex2html_verbatim_mark>#math74#<tex2html_image_mark>#tex2html_wrap_inline1415# 
+of interval polynomial matrices for <I>A</I>(<I>x</I>), we consider 
+``<tex2html_verbatim_mark>#math75#<tex2html_image_mark>#tex2html_wrap_inline1419#'', each coefficient of whose entry 
+is an interval based on the floating-point approximation of the 
+corresponding coefficient of <I>A</I>(<I>x</I>) to precision <tex2html_image_mark>#tex2html_wrap_inline1423# 
+and its error bound. Then, 
+
+<P>
+<tex2html_verbatim_mark>#math76#<tex2html_image_mark>#tex2html_wrap_inline1425#<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math77#
+
+<tex2html_image_mark>#displaymath1074#
+</DIV><BR CLEAR="ALL">
+<P></P>
+
+<P>
+The precision of 2 is too small. But 
+
+<P>
+<tex2html_verbatim_mark>#math78#<tex2html_image_mark>#tex2html_wrap_inline1427#<#788#><FONT SIZE="-1"></FONT><BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math79#
+
+<tex2html_image_mark>#displaymath1075#
+</DIV><BR CLEAR="ALL">
+<P></P><FONT SIZE="-1"></FONT><#788#>
+
+<P>
+And for <tex2html_verbatim_mark>#math80#<tex2html_image_mark>#tex2html_wrap_inline1429# we observed supportwise convergence of 
+<tex2html_verbatim_mark>#math81#<tex2html_image_mark>#tex2html_wrap_inline1431# to <tex2html_verbatim_mark>#math82#<I>smith</I>(<I>A</I>(<I>x</I>)).
+
+<P>

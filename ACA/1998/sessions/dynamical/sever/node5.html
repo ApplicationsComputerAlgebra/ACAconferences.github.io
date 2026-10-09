@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Neural Networks</TITLE>
+<META NAME="description" CONTENT="Neural Networks">
+<META NAME="keywords" CONTENT="sever">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sever.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html69"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html67"
+ HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html61"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html70"
+ HREF="node6.html">Stark's Neural Network Algorithm</A>
+<B> Up:</B> <A NAME="tex2html68"
+ HREF="node4.html">Neural Network Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html62"
+ HREF="node4.html">Neural Network Algorithms</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00041000000000000000">
+Neural Networks</A>
+</H2>
+
+<P>
+The base element of a neural network model, a <I>Formal Neuron</I>
+[<A
+ HREF="node13.html#Rumelhart">6</A>], computes
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+y(\bf x, w\mit) = g(\bf x\cdot w\mit)
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="131" HEIGHT="31"
+ SRC="img25.gif"
+ ALT="\begin{displaymath}y(\bf x, w\mit) = g(\bf x\cdot w\mit)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+the inner product of its <I>input vector</I> 
+<!-- MATH: ${\bf x}=(x_0, x_1,
+\dots, x_n)^\top$ -->
+<IMG
+ WIDTH="158" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="${\bf x}=(x_0, x_1,
+\dots, x_n)^\top$">
+and its <I>synaptic weight vector</I> 
+<!-- MATH: ${\bf
+w}=(w_0, w_1, \dots, w_n)^\top$ -->
+<IMG
+ WIDTH="170" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="${\bf
+w}=(w_0, w_1, \dots, w_n)^\top$">
+which then goes through <I>activation function</I> <I>g</I> to yield neuron's <I>output</I> <I>y</I>. The
+input <I>x</I><SUB>0</SUB>=1, and the corresponding synaptic weight <I>w</I><SUB>0</SUB> is
+called the <I>threshold</I> of the neuron.  As activation function
+<I>g</I>, either Heaviside (step) function or a sigmoid function is
+commonly used.
+
+<P>
+A <I>Neural Network Model</I> [<A
+ HREF="node13.html#Humpert">7</A>] is an interconnection
+of neurons. IFSs describe <I>recurrent</I> models. To be more
+precise, they describe <I>binary recurrent asymmetric</I> neural
+networks.
+
+<P>
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

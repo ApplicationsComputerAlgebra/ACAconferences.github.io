@@ -1,0 +1,4444 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="bourlakova">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="bourlakova.css">
+</HEAD>
+<BODY bgcolor=white>
+<DIV ALIGN="CENTER">
+<B>Experience of development and usage of packages of symbolic computations</DIV>
+</B>
+<DIV ALIGN="CENTER"><B>
+<B>intended for investigation of mechanical systems.</B></DIV></B>
+<DIV ALIGN="CENTER"><B><B>
+Banshchikov Andrej V., Bourlakova Larissa A.,  Ivanova Galina N.,</B></B></DIV>
+<DIV ALIGN="CENTER"><B><B>
+Irtegov Valentin D., Novichov Mikhal A., Titorenko Tatyana N.</B></B></DIV>
+<DIV ALIGN="CENTER"><B><B>
+Institute of Systems Dynamics and Control Theory SB RAS</B></B></DIV>
+<DIV ALIGN="CENTER"><B><B>
+134, Lermontov str., Irkutsk, 664033, Russia</B></B></DIV>
+<DIV ALIGN="CENTER"><B><B>
+E-mail: irteg@icc.ru</B></B></DIV>
+
+<P>
+<B><B><A NAME="tex2html1"
+ HREF="bourlakova.ps.gz">Full paper in compressed Postscript *.ps.gz</A>
+</B></B>
+<P>
+<B><B>In the report long-term experience of the authors on development of algorithms
+and automation of a research of complicated mechanical and controlled systems
+is considered. We have created specialized systems of computer algebra
+and software packages "Dynamics", "Mechanic", "Normalization" possibility
+and the algorithms of which are described in [1-5 and other].
+The base of the algorithms, which are realized in these packages,
+was formed by classical methods of analytical mechanics and stability theory.
+</B></B>
+<P>
+<B><B>The indicated software allows after geometric description of a system of rigid
+and deformable bodies to make their finite-dimensional models as the Lagrange
+equations of the second kind (in generalized coordinate) and Euler - Lagrange
+(in quasi-coordinates) ones and also will obtain the linear equations in a
+neighbourhood of steady-state motion.
+The application packages differ from another software by that
+they contain large units, permitting to carry out in a symbolic form
+qualitative researches of the differential equations : to build the first
+integrals, linear and quadratic in generalized velocities (quasi-velocities) ;
+for linear (ignorable) and quadratic integrals to determine invariant manifolds
+of steady motions and to investigate their stability ; to fulfill
+normalization in Poincar&#233; sense in a neighbourhood of singular points
+of the equations.
+</B></B>
+<P>
+<B><B>While solving of these problems the computer algebra system (CAS) fulfills :
+operations of matrix - vectorial algebra, partial differentiation,
+expansion of functions in to Taylor series,
+selection of main diagonal minors, calculation of determinant,
+evaluation of conditions of a property of having fixed sign of the quadratic
+forms, replacement and substitution, removal of brackets, collecting terms,
+trigonometric transformations, symbolic-numerical interface and other.
+The algorithms of analytical transformations are simplified considering the
+specificity of the expressions of data domain.
+</B></B>
+<P>
+<B><B>The developed software  allows to automatize, and consequently,
+essentially to speed up processes of modelling and dynamic analysis
+of complicated systems, to avoid errors at all stages of researches.
+</B></B>
+<P>
+<B><B>At the moment we develop the software "Analysis" for IBM PC/AT on basis
+of system "Mathematica" [6,7]. In the report we consider some problems
+and difficulties, connected to application of modern systems of computer
+algebra for solving mentioned above and other problems of common mechanics
+and  stability theory.
+</B></B>
+<P>
+<B><B>For the package "Analysis" new algorithms for a research in symbolic-numerical
+form of stability and stabilization of mechanical systems under an
+operation of gyroscopic, dissipative, conservative and nonconservative
+positionary forces are developed [8].
+Experience, accumulated at creation and maintenance of systems for the analysis
+of mechanical systems, was transferred by authors to electrical and
+electromechanical systems.
+The following operations are fulfilled for these systems :
+</B></B>
+<P>
+<B><B>
+- the graph of a circuit is analyzed ;
+- Routh or Hamilton function is created ;
+- the equations of motion are written in the Lagrange, Hamilton or Routh form ;
+- the first integrals are created ;
+- linear in velocities integrals are reduced to ignorable ones.
+</B></B>
+<DIV ALIGN="CENTER"><B><B>
+<B>Structure of the dynamic analysis of systems</B></B></DIV>
+<B><B>
+<BR>
+<IMG
+ WIDTH="1198" HEIGHT="825" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="\begin{picture}(540,380)
+\put(-10,380){\special{em:graph strucen3.pcx}}
+\end{picture}">
+<BR></B></B></B>
+<P>
+<B><B><B>Figure 1.
+</B></B></B>
+<P>
+<B><B><B>Our experience with symbolic computation packages allows us to conclude
+that CAS are perspective tool for researches in the field of theoretical
+mechanics.  Here we will not concentrate on specific software implementations.
+Instead we will give a brief description of the functionality of mentioned
+software packages ( Fig. 1 ).
+</B></B></B>
+<DIV ALIGN="CENTER"><B></B><B> 1. Description of the models.<B></DIV>
+<B><B>
+<P>
+<B><B><B><B>1.1. Model of the mechanical system.</B>
+The mechanical system is a system of bodies </B></B></B>
+<!-- MATH: $\ S_{j}\ \ (j = 1,\ldots,N)\ ,$ -->
+<IMG
+ WIDTH="178" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\ S_{j}\ \ (j = 1,\ldots,N)\ ,$"><B><B><B>connected by one-two-three-degree joints, i.e. for every </B></B></B><IMG
+ WIDTH="37" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\ S_{i}\ $"><B><B><B>there exists the point </B></B></B>
+<!-- MATH: $\ O_i\ \ (\ O_{i}\in S_{j}\$ -->
+<IMG
+ WIDTH="131" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\ O_i\ \ (\ O_{i}\in S_{j}\ $"><B><B><B> ¨
+</B></B></B>
+<!-- MATH: $\ O_{i}\in S_{i}\ \ (\ i,\ j \in \{1,\ldots ,N\},\ \ i \neq j\ )\$ -->
+<IMG
+ WIDTH="333" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\ O_{i}\in S_{i}\ \ (\ i,\ j \in \{1,\ldots ,N\},\ \ i \neq j\ )\ $"><B><B><B>, or joints allowing
+translational displacements </B></B></B><IMG
+ WIDTH="37" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\ S_{i}\ $"><B><B><B> relative to </B></B></B><IMG
+ WIDTH="38" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\ S_{j}\ $"><B><B><B> ( Fig. 2 ).
+</B></B></B>
+<P>
+<B><B><B>
+<BR>
+<IMG
+ WIDTH="1164" HEIGHT="641" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="\begin{picture}(400,300)
+\put(-30,300){\special{em:graph mech3.pcx}}
+\end{picture}">
+<BR></B></B></B>
+<P>
+<B><B><B>Figure 2.
+</B></B></B>
+<P>
+<B><B><B>
+The body </B></B></B><IMG
+ WIDTH="39" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\ S_{1}\ $"><B><B><B> is a carrier, </B></B></B>
+<!-- MATH: $\ S_{i}\ \ (i=2,\ldots,N)\$ -->
+<IMG
+ WIDTH="169" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\ S_{i}\ \ (i=2,\ldots,N)\ $"><B><B><B> is carried.
+Let us introduce the systems of coordinates :
+a system  </B></B></B>
+<!-- MATH: $\ O_{i}\Sigma^{i}\$ -->
+<IMG
+ WIDTH="59" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\ O_{i}\Sigma^{i}\ $"><B><B><B> is connected with </B></B></B><IMG
+ WIDTH="37" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\ S_{i}\ $"><B><B><B> (with hardening body
+which will be received if all deformations would be equal to zero);
+a system </B></B></B>
+<!-- MATH: $\ O_{i}\tilde{\Sigma }^{j}\$ -->
+<IMG
+ WIDTH="61" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\ O_{i}\tilde{\Sigma }^{j}\ $"><B><B><B> is connected with </B></B></B><IMG
+ WIDTH="37" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\ S_{i}\ $"><B><B><B> in a
+small vicinity of point </B></B></B><IMG
+ WIDTH="39" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\ O_{i}\ $"><B><B><B> and such that if </B></B></B><IMG
+ WIDTH="38" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\ S_{j}\ $"><B><B><B> is an absolute
+rigid body then </B></B></B>
+<!-- MATH: $\ \Sigma^{j}\$ -->
+<IMG
+ WIDTH="40" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\ \Sigma^{j}\ $"><B><B><B> and </B></B></B>
+<!-- MATH: $\ \tilde{\Sigma }^{j}\$ -->
+<IMG
+ WIDTH="40" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\ \tilde{\Sigma }^{j}\ $"><B><B><B> are parallel.
+The vocation of </B></B></B><IMG
+ WIDTH="39" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\ S_{1}\ $"><B><B><B> in the inertial space </B></B></B>
+<!-- MATH: $\ \Sigma^{in}\$ -->
+<IMG
+ WIDTH="47" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\ \Sigma^{in}\ $"><B><B><B>(or in some system of coordinates </B></B></B>
+<!-- MATH: $\ \Sigma^{0}\$ -->
+<IMG
+ WIDTH="41" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\ \Sigma^{0}\ $"><B><B><B> with given motion)
+assigns by coordinates of point </B></B></B><IMG
+ WIDTH="42" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\ O_{1}\ $"><B><B><B> and by matrix of rotation
+</B></B></B>
+<!-- MATH: $\ \alpha^{\ 01}\$ -->
+<IMG
+ WIDTH="53" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\ \alpha^{\ 01}\ $"><B><B><B> of axes </B></B></B>
+<!-- MATH: $\ \Sigma^{1}\$ -->
+<IMG
+ WIDTH="41" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\ \Sigma^{1}\ $"><B><B><B>.
+The location of body </B></B></B><IMG
+ WIDTH="37" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\ S_{i}\ $"><B><B><B> assigns by the matrix of rotation
+</B></B></B>
+<!-- MATH: $\ \alpha^{\ ji}\ (\ \tilde{\alpha}^{\ ji}\ )\$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\ \alpha^{\ ji}\ (\ \tilde{\alpha}^{\ ji}\ )\ $"><B><B><B> with reference to
+</B></B></B>
+<!-- MATH: $\ \Sigma^{j}\ (\ \tilde{\Sigma}^{j}\ )\$ -->
+<IMG
+ WIDTH="96" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\ \Sigma^{j}\ (\ \tilde{\Sigma}^{j}\ )\ $"><B><B><B> or by coordinates of pole
+</B></B></B><IMG
+ WIDTH="39" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\ O_{i}\ $"><B><B><B>. It is assumed that for non-rigid body </B></B></B><IMG
+ WIDTH="37" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\ S_{i}\ $"><B><B><B> in every point
+</B></B></B>
+<!-- MATH: $\ M^{\prime}\$ -->
+<IMG
+ WIDTH="45" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\ M^{\prime}\ $"><B><B><B> of body
+</B></B></B>
+<!-- MATH: $\ (\ \mbox {\boldmath$\rho$ }(x_{1},x_{2},x_{3}) = \overline{OM^{\prime}}\ )\$ -->
+<IMG
+ WIDTH="223" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$\ (\ \mbox {\boldmath$\rho$ }(x_{1},x_{2},x_{3}) = \overline{OM^{\prime}}\ )\ $"><B><B><B>the deviation reflected due to deformation is represented by a vector
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\bf u} = \sum_{\alpha=1}^{n^{i}}\
+q_{\alpha}(t)\ {\bf U}^{\alpha }(\ x_{1},\ x_{2},\ x_{3}\ ) \eqno (1.1.1)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="421" HEIGHT="65"
+ SRC="img24.gif"
+ ALT="\begin{displaymath}{\bf u} = \sum_{\alpha=1}^{n^{i}}\
+q_{\alpha}(t)\ {\bf U}^{\alpha }(\ x_{1},\ x_{2},\ x_{3}\ ) \eqno (1.1.1)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>where </B></B></B>
+<!-- MATH: $\ q_{\alpha }(t)\$ -->
+<IMG
+ WIDTH="60" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\ q_{\alpha }(t)\ $"><B><B><B> are generalized coordinates of deformations ;
+</B></B></B>
+<!-- MATH: $\ {\bf U}^{\alpha }(x_{1},\ x_{2},\ x_{3})\$ -->
+<IMG
+ WIDTH="149" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\ {\bf U}^{\alpha }(x_{1},\ x_{2},\ x_{3})\ $"><B><B><B> are eigenforms of oscillations
+or their functions. One defines the choice of </B></B></B>
+<!-- MATH: $\ q_{\alpha }(t)\$ -->
+<IMG
+ WIDTH="60" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\ q_{\alpha }(t)\ $"><B><B><B>and number </B></B></B><IMG
+ WIDTH="36" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\ n^{i}\ $"><B><B><B>.
+</B></B></B>
+<P>
+<B><B><B><B>1.1.1. The kinetic energy of a system.</B>
+The kinetic energy of a system is calculated as a sum of kinetic energies
+</B></B></B><IMG
+ WIDTH="36" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\ T_{i}\ $"><B><B><B> for every body </B></B></B><IMG
+ WIDTH="37" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\ S_{i}\ $"><B><B><B>, connected with </B></B></B><IMG
+ WIDTH="38" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\ S_{j}\ $"><B><B><B>:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+T_{i}= {1\over 2}\ M_{i}\ {\bf v}^{2}_{o_i} +
+{1\over 2}\ \mbox{\boldmath $\omega$}_{i}\cdot \Theta^{o_i}\cdot \mbox{\boldmath $\omega$}_{i} +
+M_{i}\ [\ {\bf v}_{o_i} \times \mbox{\boldmath $\omega$}_{i}\ ]\cdot {\bf r}^{i}_{c_i}+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="460" HEIGHT="49"
+ SRC="img29.gif"
+ ALT="\begin{displaymath}T_{i}= {1\over 2}\ M_{i}\ {\bf v}^{2}_{o_i} +
+{1\over 2}\ \mb...
+...times \mbox{\boldmath $\omega$}_{i}\ ]\cdot {\bf r}^{i}_{c_i}+
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ k_{i}\ M_{i}\ {\bf v}_{o_i}\cdot
+\sum_{\alpha=1}^{n^{i}} {\bf U}^{\alpha i}_{c_i}\ \dot q^{(i)}_{\alpha }+
+k_{i}\ \mbox{\boldmath $\omega$}_{i}\cdot
+\sum_{\alpha=1}^{n^{i}} {\bf B}^{i}_{\alpha }\ \dot q^{(i)}_{\alpha }+
+{1\over 2}\ k_{i}\ \sum_{\alpha,\beta=1}^{n^{i}} A^{i}_{\alpha \beta }\
+\dot q^{(i)}_{\alpha }\ \dot q^{(i)}_{\beta }
+\eqno (1.1.2)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="578" HEIGHT="91"
+ SRC="img30.gif"
+ ALT="\begin{displaymath}+ k_{i}\ M_{i}\ {\bf v}_{o_i}\cdot
+\sum_{\alpha=1}^{n^{i}} {\...
+... }\
+\dot q^{(i)}_{\alpha }\ \dot q^{(i)}_{\beta }
+\eqno (1.1.2)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>Here </B></B></B><IMG
+ WIDTH="43" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$\ M_{i}\ $"><B><B><B> is the mass of the body ;
+</B></B></B>
+<!-- MATH: $\ k_{i}= 0\ ,$ -->
+<IMG
+ WIDTH="76" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\ k_{i}= 0\ ,$"><B><B><B> if body is rigid ; </B></B></B>
+<!-- MATH: $\ k_{i}= 1\ ,$ -->
+<IMG
+ WIDTH="76" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\ k_{i}= 1\ ,$"><B><B><B> if body is non-rigid;
+</B></B></B>
+<!-- MATH: $\ {\bf v}_{o_i}\$ -->
+<IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\ {\bf v}_{o_i}\ $"><B><B><B> is absolute velocity of point </B></B></B><IMG
+ WIDTH="39" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\ O_{i}\ $"><B><B><B>:
+</B></B></B>
+<P>
+<B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\bf v}_{o_i} =
+{\bf v}_{o_j} + [\ \mbox{\boldmath $\omega$}_{j} \times {\bf r}^{j}_{o_i}\ ] +
+k_{j}\ \sum_{\alpha=1}^{n^{i}} {\bf U}^{\alpha i}_{o_i}\ \dot q^{(j)}_{\alpha }+
+{\bf v}^{j}_{o_i}\ ;
+\eqno (1.1.3)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="517" HEIGHT="65"
+ SRC="img35.gif"
+ ALT="\begin{displaymath}{\bf v}_{o_i} =
+{\bf v}_{o_j} + [\ \mbox{\boldmath $\omega$}_...
+..._i}\ \dot q^{(j)}_{\alpha }+
+{\bf v}^{j}_{o_i}\ ;
+\eqno (1.1.3)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<!-- MATH: $\mbox{\boldmath$\omega$ }_{i}\$ -->
+<IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$\mbox{\boldmath$\omega$ }_{i}\ $"><B><B><B> is absolute angular velocity of body :
+</B></B></B>
+<P>
+<B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\mbox{\boldmath $\omega$}_{i} = \mbox{\boldmath $\omega$}_{j} +
+\mbox{\boldmath $\omega$}^{j}_{i} +
+\tilde{k}\ \mbox{\boldmath $\omega$}^{i}_{j\ def} \eqno (1.1.4)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="392" HEIGHT="40"
+ SRC="img37.gif"
+ ALT="\begin{displaymath}\mbox{\boldmath $\omega$}_{i} = \mbox{\boldmath $\omega$}_{j}...
+...tilde{k}\ \mbox{\boldmath $\omega$}^{i}_{j\ def} \eqno (1.1.4)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<!-- MATH: $\mbox{\boldmath$\omega$ }^{i}_{j\ def}\$ -->
+<IMG
+ WIDTH="70" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.gif"
+ ALT="$\mbox{\boldmath$\omega$ }^{i}_{j\ def}\ $"><B><B><B> is angular velocity of
+rotation </B></B></B>
+<!-- MATH: $\ \tilde{\Sigma }^{j}\$ -->
+<IMG
+ WIDTH="40" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\ \tilde{\Sigma }^{j}\ $"><B><B><B> relative to </B></B></B>
+<!-- MATH: $\ \Sigma^{j}\$ -->
+<IMG
+ WIDTH="40" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\ \Sigma^{j}\ $"><B><B><B>;
+</B></B></B>
+<P>
+<B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\mbox{\boldmath $\omega$}^{i}_{j\ def}={1\over 2} \sum_{\alpha=1}^{n^{i}}
+(\ rot\ {\bf U}^{\alpha j})_{o_i}\ \dot q^{(j)}_{\alpha }\ ;
+\eqno (1.1.5)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="422" HEIGHT="65"
+ SRC="img39.gif"
+ ALT="\begin{displaymath}\mbox{\boldmath $\omega$}^{i}_{j\ def}={1\over 2} \sum_{\alph...
+...f U}^{\alpha j})_{o_i}\ \dot q^{(j)}_{\alpha }\ ;
+\eqno (1.1.5)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<!-- MATH: $\mbox{\boldmath$\omega$ }^{j}_{i}\$ -->
+<IMG
+ WIDTH="41" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\mbox{\boldmath$\omega$ }^{j}_{i}\ $"><B><B><B> is angular velocity of motion
+</B></B></B>
+<!-- MATH: $\ \Sigma^{i}$ -->
+<IMG
+ WIDTH="32" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img41.gif"
+ ALT="$\ \Sigma^{i}$"><B><B><B> relative to </B></B></B>
+<!-- MATH: $\ \Sigma^{j} \ \
+(\tilde{k} = 0 )\$ -->
+<IMG
+ WIDTH="115" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.gif"
+ ALT="$\ \Sigma^{j} \ \
+(\tilde{k} = 0 )\ $"><B><B><B> or </B></B></B>
+<!-- MATH: $\ \tilde{\Sigma }^{j}\ \ (\tilde{k} = 1)\$ -->
+<IMG
+ WIDTH="115" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$\ \tilde{\Sigma }^{j}\ \ (\tilde{k} = 1)\ $"><B><B><B>;
+</B></B></B>
+<P>
+<B><B>
+<!-- MATH: ${\bf v}^{j}_{o_i}\$ -->
+<IMG
+ WIDTH="37" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.gif"
+ ALT="${\bf v}^{j}_{o_i}\ $"><B><B><B> is the relative velocity of point </B></B></B><IMG
+ WIDTH="39" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\ O_{i}\ $"><B><B><B>,
+if </B></B></B><IMG
+ WIDTH="37" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\ S_{i}\ $"><B><B><B> moves translationally (or freely) relative to  </B></B></B><IMG
+ WIDTH="38" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\ S_{j}\ $"><B><B><B>;
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\bf r}^{j}_{o_i}=\mbox {\boldmath $\rho$}^{\ j}_{o_i} +
+k_{j}\ \sum_{\alpha=1}^{n^{i}}
+{\bf U}^{\alpha i}_{o_i}\ q^{(j)}_{\alpha }\ ;
+\eqno (1.1.6)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="405" HEIGHT="65"
+ SRC="img45.gif"
+ ALT="\begin{displaymath}{\bf r}^{j}_{o_i}=\mbox {\boldmath $\rho$}^{\ j}_{o_i} +
+k_{j...
+...}}
+{\bf U}^{\alpha i}_{o_i}\ q^{(j)}_{\alpha }\ ;
+\eqno (1.1.6)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<!-- MATH: ${\bf r}^{i}_{c_i}\$ -->
+<IMG
+ WIDTH="34" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.gif"
+ ALT="${\bf r}^{i}_{c_i}\ $"><B><B><B> is the radius-vector of centre of mass of the body :
+</B></B></B>
+<P>
+<B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\bf r}^{i}_{c_i}=\mbox {\boldmath $\rho$}^{\ j}_{c_i} +
+k_{i}\ (\ \sum_{\alpha=1}^{n^{i}}
+q_{\alpha}^{(i)}\ \int_{M_{i}}{\bf U}^{\alpha i}dm\ )/M_{i}\ ;
+\eqno (1.1.7)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="464" HEIGHT="65"
+ SRC="img47.gif"
+ ALT="\begin{displaymath}{\bf r}^{i}_{c_i}=\mbox {\boldmath $\rho$}^{\ j}_{c_i} +
+k_{i...
+...i)}\ \int_{M_{i}}{\bf U}^{\alpha i}dm\ )/M_{i}\ ;
+\eqno (1.1.7)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<!-- MATH: $\Theta^{o_i}\$ -->
+<IMG
+ WIDTH="40" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.gif"
+ ALT="$\Theta^{o_i}\ $"><B><B><B> is the inertia tensor of the body relative to </B></B></B><IMG
+ WIDTH="39" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\ O_{i}\ $"><B><B><B>:
+</B></B></B>
+<P>
+<B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\Theta^{o_i}= \Theta^{o_{i}}_{*} + 2k_{i}\ \sum_{\alpha=1}^{n^{i}}
+\Lambda ^{o_i}_{\alpha }\ q^{(i)}_{\alpha } + k_{i}\
+\sum_{\alpha,\beta=1}^{n^{i}}
+Q^{o_i}_{\alpha \beta }\ q^{(i)}_{\alpha }\ q^{(i)}_{\beta }\ ;
+\eqno (1.1.8)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="533" HEIGHT="68"
+ SRC="img49.gif"
+ ALT="\begin{displaymath}\Theta^{o_i}= \Theta^{o_{i}}_{*} + 2k_{i}\ \sum_{\alpha=1}^{n...
+...a \beta }\ q^{(i)}_{\alpha }\ q^{(i)}_{\beta }\ ;
+\eqno (1.1.8)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<!-- MATH: $\Theta^{o_{i}}_{*}\$ -->
+<IMG
+ WIDTH="40" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.gif"
+ ALT="$\Theta^{o_{i}}_{*}\ $"><B><B><B> is the inertia tensor of rigid (solidified) body,
+</B></B></B>
+<P>
+<B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\Lambda ^{o_{i}}_{\alpha} = \left( \begin{array}{ccc}
+\int\limits_{M_{i}} (y {\bf U}_{2}^{\alpha}+ z {\bf U}_{3}^{\alpha} ) dm &
+-{1\over 2} \int\limits_{M_{i}} (x {\bf U}_{2}^{\alpha}+
+y {\bf U}_{1}^{\alpha} ) dm &
+-{1\over 2} \int\limits_{M_{i}} (x {\bf U}_{3}^{\alpha}+
+z {\bf U}_{1}^{\alpha} ) dm \\
+-{1\over 2} \int\limits_{M_{i}} (x {\bf U}_{2}^{\alpha}+
+y {\bf U}_{1}^{\alpha} ) dm &
+\int\limits_{M_{i}} (z {\bf U}_{3}^{\alpha}+x {\bf U}_{1}^{\alpha} ) dm &
+-{1\over 2} \int\limits_{M_{i}} (y {\bf U}_{3}^{\alpha}+
+z {\bf U}_{2}^{\alpha} ) dm \\
+-{1\over 2} \int\limits_{M_{i}} (x {\bf U}_{3}^{\alpha}+
+z {\bf U}_{1}^{\alpha} ) dm &
+-{1\over 2} \int\limits_{M_{i}} (y {\bf U}_{3}^{\alpha}+
+z {\bf U}_{2}^{\alpha} ) dm &
+\int\limits_{M_{i}} (y {\bf U}_{2}^{\alpha}+x {\bf U}_{1}^{\alpha} ) dm
+\end{array} \right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="697" HEIGHT="121"
+ SRC="img51.gif"
+ ALT="\begin{displaymath}\Lambda ^{o_{i}}_{\alpha} = \left( \begin{array}{ccc}
+\int\li...
+...}_{2}^{\alpha}+x {\bf U}_{1}^{\alpha} ) dm
+\end{array} \right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\eqno (1.1.9)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="54" HEIGHT="37"
+ SRC="img52.gif"
+ ALT="\begin{displaymath}\eqno (1.1.9) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+Q^{o_i}_{\alpha \beta } = \left( \begin{array}{lll}
+\int\limits_{M_{i}} ( {\bf U}_{2}^{\alpha} {\bf U}_{2}^{\beta}+
+{\bf U}_{3}^{\alpha} {\bf U}_{3}^{\beta} ) dm &
+-{1\over 2} \int\limits_{M_{i}} ( {\bf U}_{2}^{\beta} {\bf U}_{1}^{\alpha}+
+{\bf U}_{2}^{\alpha} {\bf U}_{1}^{\beta} ) dm &
+-{1\over 2} \int\limits_{M_{i}} ( {\bf U}_{1}^{\alpha} {\bf U}_{3}^{\beta}+
+{\bf U}_{3}^{\alpha} {\bf U}_{1}^{\beta} ) dm \\
+-{1\over 2} \int\limits_{M_{i}} ( {\bf U}_{2}^{\beta} {\bf U}_{1}^{\alpha}+
+ {\bf U}_{2}^{\alpha} {\bf U}_{1}^{\beta} ) dm &
+\int\limits_{M_{i}} ( {\bf U}_{3}^{\alpha} {\bf U}_{3}^{\beta}+
+{\bf U}_{1}^{\alpha} {\bf U}_{1}^{\beta} ) dm &
+-{1\over 2} \int\limits_{M_{i}} ( {\bf U}_{2}^{\alpha} {\bf U}_{3}^{\beta}+
+{\bf U}_{3}^{\alpha} {\bf U}_{2}^{\beta} ) dm \\
+-{1\over 2} \int\limits_{M_{i}} ( {\bf U}_{1}^{\alpha} {\bf U}_{3}^{\beta}+
+{\bf U}_{3}^{\alpha} {\bf U}_{1}^{\beta} ) dm &
+-{1\over 2} \int\limits_{M_{i}} ( {\bf U}_{2}^{\alpha} {\bf U}_{3}^{\beta}+
+{\bf U}_{3}^{\alpha} {\bf U}_{2}^{\beta} ) dm &
+\int\limits_{M_{i}} ( {\bf U}_{2}^{\alpha} {\bf U}_{2}^{\beta}+
+{\bf U}_{1}^{\alpha} {\bf U}_{1}^{\beta} ) dm
+\end{array} \right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="801" HEIGHT="124"
+ SRC="img53.gif"
+ ALT="\begin{displaymath}Q^{o_i}_{\alpha \beta } = \left( \begin{array}{lll}
+\int\limi...
+...f U}_{1}^{\alpha} {\bf U}_{1}^{\beta} ) dm
+\end{array} \right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\eqno (1.1.10)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="64" HEIGHT="37"
+ SRC="img54.gif"
+ ALT="\begin{displaymath}\eqno (1.1.10) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\bf B}^{i}_{\alpha } = \int\limits_{M_{i}}\
+[\ \mbox{\boldmath $\rho$} \times {\bf U}^{\alpha i}\ ]\ dm +
+\sum  q^{i}_{\beta } \int\limits_{M_{i}}\ [\ {\bf U}^{\beta } \times
+{\bf U}^{\alpha }\ ]\ dm\ ;
+\eqno (1.1.11)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="546" HEIGHT="61"
+ SRC="img55.gif"
+ ALT="\begin{displaymath}{\bf B}^{i}_{\alpha } = \int\limits_{M_{i}}\
+[\ \mbox{\boldma...
+...f U}^{\beta } \times
+{\bf U}^{\alpha }\ ]\ dm\ ;
+\eqno (1.1.11)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A^{i}_{\alpha \beta } = \int\limits_{M_{i}}\ (\ {\bf U}^{\alpha i}
+\cdot {\bf U}^{\beta i}\ )\ dm\ ;
+\eqno (1.1.12)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="407" HEIGHT="61"
+ SRC="img56.gif"
+ ALT="\begin{displaymath}A^{i}_{\alpha \beta } = \int\limits_{M_{i}}\ (\ {\bf U}^{\alpha i}
+\cdot {\bf U}^{\beta i}\ )\ dm\ ;
+\eqno (1.1.12)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B><B>1.1.2. The force function of a system.</B> 
+Let the system is under Newton's gravity ( approximate ) to the motionless
+centre </B></B></B>
+<!-- MATH: $\ O^{\prime}\$ -->
+<IMG
+ WIDTH="39" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.gif"
+ ALT="$\ O^{\prime}\ $"><B><B><B>. The force function of a system equals a sum of
+force functions </B></B></B>
+<!-- MATH: $\ {\cal U}_{i}\$ -->
+<IMG
+ WIDTH="37" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\ {\cal U}_{i}\ $"><B><B><B> of each body </B></B></B>
+<!-- MATH: $\ S_{i}\ \ (i=1,\ldots,N)\$ -->
+<IMG
+ WIDTH="169" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$\ S_{i}\ \ (i=1,\ldots,N)\ $"><B><B><B>:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\cal U}_{i}= {\nu M_{i}\over r_{o_1}}- {\nu M_{i}\over r^{3}_{o_1}}\
+[\ ({\bf r}^{0}_{o_1}\cdot {\bf r}^{1}_{o_i}) +
+({\bf r}^{0}_{o_1}\cdot {\bf r}^{i}_{c_i})\ ] - {\nu M_{i}\over r^{3}_{o_1}}\ 
+[\ {({\bf r}^{1}_{0_i})^{2}\over 2} + ({\bf r}^{1}_{o_i}\cdot {\bf r}^{i}_{c_i})\ ]\ + 
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="579" HEIGHT="59"
+ SRC="img60.gif"
+ ALT="\begin{displaymath}{\cal U}_{i}= {\nu M_{i}\over r_{o_1}}- {\nu M_{i}\over r^{3}...
+...{2}\over 2} + ({\bf r}^{1}_{o_i}\cdot {\bf r}^{i}_{c_i})\ ]\ + \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++\ {3\nu M_{i}\over r^{5}_{o_1}}\
+[\ {({\bf r}^{0}_{o_1}\cdot{\bf r}^{1}_{o_i})^{2}\over 2} +
+({\bf r}^{0}_{o_1}\cdot {\bf r}^{1}_{o_i})\cdot
+({\bf r}^{0}_{o_1}\cdot {\bf r}^{i}_{c_i})\ ]\ +
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="397" HEIGHT="59"
+ SRC="img61.gif"
+ ALT="\begin{displaymath}+\ {3\nu M_{i}\over r^{5}_{o_1}}\
+[\ {({\bf r}^{0}_{o_1}\cdo...
+...}_{o_i})\cdot
+({\bf r}^{0}_{o_1}\cdot {\bf r}^{i}_{c_i})\ ]\ +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ {\nu \over 2r^{3}_{o_1}}
+(\ \Theta^{o_i}_{11} + \Theta^{o_i}_{22}+ \Theta^{o_i}_{33}\ ) -
+{3\nu \over 2r^{3}_{o_1}}(\beta^{i})^{T}\Theta^{o_i}\beta^{i}\ .
+\eqno (1.1.13)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="512" HEIGHT="56"
+ SRC="img62.gif"
+ ALT="\begin{displaymath}+ {\nu \over 2r^{3}_{o_1}}
+(\ \Theta^{o_i}_{11} + \Theta^{o_i...
+...3}_{o_1}}(\beta^{i})^{T}\Theta^{o_i}\beta^{i}\ .
+\eqno (1.1.13)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>Here </B></B></B><IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.gif"
+ ALT="$\ \nu \ $"><B><B><B> is the constant of gravitation ;
+</B></B></B>
+<!-- MATH: $\ r_{o_1}\$ -->
+<IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$\ r_{o_1}\ $"><B><B><B> is the distance </B></B></B><IMG
+ WIDTH="42" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\ O_{1}\ $"><B><B><B> from centre </B></B></B>
+<!-- MATH: $\ O^{\prime}\$ -->
+<IMG
+ WIDTH="39" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.gif"
+ ALT="$\ O^{\prime}\ $"><B><B><B>;
+</B></B></B>
+<!-- MATH: $\ \beta^{i} = \alpha^{1i}\beta^{1}\ ,\ \ \beta^{1}= \alpha^{01}\gamma\ ,
+\ \ \beta^{i}\$ -->
+<IMG
+ WIDTH="267" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.gif"
+ ALT="$\ \beta^{i} = \alpha^{1i}\beta^{1}\ ,\ \ \beta^{1}= \alpha^{01}\gamma\ ,
+\ \ \beta^{i}\ $"><B><B><B> is matrix </B></B></B>
+<!-- MATH: $\ 3\times1\$ -->
+<IMG
+ WIDTH="63" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.gif"
+ ALT="$\ 3\times1\ $"><B><B><B> of cosines of angles between
+</B></B></B>
+<!-- MATH: $\ {\bf r}^{0}_{o_1}\$ -->
+<IMG
+ WIDTH="43" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="$\ {\bf r}^{0}_{o_1}\ $"><B><B><B> and axes </B></B></B>
+<!-- MATH: $\ \Sigma^{i}\$ -->
+<IMG
+ WIDTH="32" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img41.gif"
+ ALT="$\ \Sigma^{i}$"><B><B><B>;
+</B></B></B><IMG
+ WIDTH="30" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$\ \gamma\ $"><B><B><B> is matrix </B></B></B><IMG
+ WIDTH="63" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.gif"
+ ALT="$\ 3\times1\ $"><B><B><B> of cosines of angles between
+</B></B></B>
+<!-- MATH: $\ {\bf r}^{0}_{o_1}\$ -->
+<IMG
+ WIDTH="43" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="$\ {\bf r}^{0}_{o_1}\ $"><B><B><B> and axes </B></B></B>
+<!-- MATH: $\ \Sigma^{0}\ ;\ \ \Theta^{o_i}_{jj}\$ -->
+<IMG
+ WIDTH="98" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$\ \Sigma^{0}\ ;\ \ \Theta^{o_i}_{jj}\ $"><B><B><B> 
+are elements of inertia tensor </B></B></B>
+<!-- MATH: $\ \Theta^{o_i}\ (1.8)\ ;\ \ \Sigma^{i}\$ -->
+<IMG
+ WIDTH="142" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.gif"
+ ALT="$\ \Theta^{o_i}\ (1.8)\ ;\ \ \Sigma^{i}\ $"><B><B><B> 
+are the principal axes of deformation.
+</B></B></B>
+<P>
+<B><B><B>The force function of a body </B></B></B><IMG
+ WIDTH="37" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\ S_{i}\ $"><B><B><B> in field of constant gravity
+is calculated under the formula :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\cal U}_{i} =  M_{i}\left({\bf g}\cdot {\bf r}^{o}_{c_i}\right)+ const \ .
+\eqno (1.1.14)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="401" HEIGHT="42"
+ SRC="img71.gif"
+ ALT="\begin{displaymath}{\cal U}_{i} = M_{i}\left({\bf g}\cdot {\bf r}^{o}_{c_i}\right)+ const \ .
+\eqno (1.1.14)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>Here </B></B></B>
+<!-- MATH: $\ {\bf {g}}\$ -->
+<IMG
+ WIDTH="30" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.gif"
+ ALT="$\ {\bf {g}}\ $"><B><B><B> is vector of acceleration of constant force of
+gravity ;
+</B></B></B>
+<!-- MATH: $\ \ {\bf r}^{0}_{c_i}={\bf r}^{0}_{o_1}+{\bf r}^{1}_{o_i}+{\bf r}^{i}_{c_i}\ .$ -->
+<IMG
+ WIDTH="194" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="$
+\ \ {\bf r}^{0}_{c_i}={\bf r}^{0}_{o_1}+{\bf r}^{1}_{o_i}+{\bf r}^{i}_{c_i}\ .
+$"><B><B>
+<P>
+<B><B><B>If body </B></B></B><IMG
+ WIDTH="37" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\ S_{i}\ $"><B><B><B> is non-rigid, then the force function of deformation
+is assumed as the quadratic form of the generalized coordinates of deformation :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\cal U}^{def}_{i} = -{1 \over 2}\sum^{n^{i}}_{\alpha ,\ \beta =1}\
+c^{(i)}_{\alpha \beta }\ q^{(i)}_{\alpha }\ q^{(i)}_{\beta }
+\eqno (1.1.15)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="412" HEIGHT="68"
+ SRC="img74.gif"
+ ALT="\begin{displaymath}{\cal U}^{def}_{i} = -{1 \over 2}\sum^{n^{i}}_{\alpha ,\ \bet...
+...pha \beta }\ q^{(i)}_{\alpha }\ q^{(i)}_{\beta }
+\eqno (1.1.15)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B><B>1.2. Description of an electric circuit.</B>
+Electromechanical  analogies  [10]  allow  to  use the same
+apparatus - methods of analytical mechanics - for describing
+and investigation  of  both  mechanical  systems  and electric
+circuits.
+</B></B></B>
+<P>
+<B><B><B>Consider   a   linear  electric  circuit,  in  which
+resistors (R), inductors (L), capacitors (C),
+power   sources  of   current  (I)  and  voltage (E) are
+interconnected arbitrarily.  For the purpose of describing the
+circuit   let   us  choose  a  set  of  independent  variables
+characterizing its state at any time moment.
+Such variables  may  be  represented  by  either  currents  in
+the loops or voltages  in  the nodes or else
+currents and nodal voltages.  Selection of a set  of variables
+defines the structure of the equations.
+</B></B></B>
+<P>
+<B><B><B>Consider an algorithm of constructing the Lagrangian  for
+the electric  circuit. A set  of  currents will be used as
+the state variables.  The computations are conducted in
+the two  stages.  On  the  1st  stage,  the  set of state variables
+of the electrical circuit is  determined  by  the  method  of
+loop currents; on the 2d - the Lagrangian is computed.
+</B></B></B>
+<P>
+<B><B><B>The general idea of the method of loop currents  consists
+in  decomposing the electrical circuit into  independent  geometric
+loops  and  assigning  the current in each of the loops.
+     This problem may be solved via finding  a   set   of
+fundamental cycles in a graph.
+</B></B></B>
+<P>
+<B><B><B>Let us use the graph of the electrical circuit ( Fig. 3 ) for 
+finding  the fundamental cycles.
+</B></B></B>
+<DIV ALIGN="CENTER"><B><B><B>
+<BR>
+<IMG
+ WIDTH="76" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img75.gif"
+ ALT="\begin{picture}(400,150)
+\put(40,180){\special{em:graph chain2-1.pcx} }
+\par\hskip 12cm Figure 3.
+\end{picture}">
+<BR></B></B></B></DIV><B><B><B>Let us  first  arbitrarily  number  graph's vertices and then
+assign the order of  its  path-tracing:  we  intend  to  trace
+graph's  vertices  in  the  direction of growth of their
+numbers (or vice versa).  The computer implementation  of  the
+graph  has the form a list of pairs of vertices corresponding to
+its edges.
+</B></B></B>
+<P>
+<B><B><B>Let </B></B></B>
+<!-- MATH: $\ {\it C_e}\$ -->
+<IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.gif"
+ ALT="$\ {\it C_e}\ $"><B><B><B> be a list  of  constructed  fundamental
+cycles, <I>S</I> contains a list of contiguous vertices
+for each of the graph's vertex, <I>D</I> a list "free" graph's edges:
+ </B></B></B>
+<!-- MATH: $\ \{n_i,\ n_j\} \in D\$ -->
+<IMG
+ WIDTH="131" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.gif"
+ ALT="$\ \{n_i,\ n_j\} \in D\ $"><B><B><B>,
+but </B></B></B>
+<!-- MATH: $\ \{n_i,\ n_j\} \not \in C_e\$ -->
+<IMG
+ WIDTH="136" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.gif"
+ ALT="$\ \{n_i,\ n_j\} \not \in C_e\ $"><B><B><B> ( </B></B></B>
+<!-- MATH: $\ n_i,\ n_j\ -$ -->
+<IMG
+ WIDTH="86" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.gif"
+ ALT="$\ n_i,\ n_j\ -$"><B><B><B>numbers of the graph's vertices,  </B></B></B>
+<!-- MATH: $\ \{n_i,\ n_j\}\ -$ -->
+<IMG
+ WIDTH="106" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.gif"
+ ALT="$\ \{n_i,\ n_j\}\ -$"><B><B><B> a
+graph's edge ).  The list elements <I>D,  S</I> are  ordered  in
+accordance  with the technique of path-tracing the graph.  Let
+</B></B></B><IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.gif"
+ ALT="$\ D \neq$"><B><B><B> &#216;.  Let us describe  the  constructing  of  a  new
+fundamental cycle.
+</B></B></B>
+<P>
+<B><B><B>Choose the 1st element </B></B></B>
+<!-- MATH: $\ \{n_0, n_1 \}\$ -->
+<IMG
+ WIDTH="87" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.gif"
+ ALT="$\ \{n_0, n_1 \}\ $"><B><B><B> from <I>D </I> and remove
+it from the list.  Using <I>S </I> find  the  vertex </B></B></B><IMG
+ WIDTH="38" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.gif"
+ ALT="$\ n_2\ $"><B><B><B> contiguous 
+with </B></B></B><IMG
+ WIDTH="32" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.gif"
+ ALT="$\ n_1$"><B><B><B>.
+The vertex </B></B></B><IMG
+ WIDTH="38" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.gif"
+ ALT="$\ n_2\ $"><B><B><B> is called used and is removed from <I>S</I>.  In
+accordance with  the  same  rule find the vertices </B></B></B>
+<!-- MATH: $\ n_3,\ n_4$ -->
+<IMG
+ WIDTH="67" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.gif"
+ ALT="$\ n_3,\ n_4$"><B><B><B>,
+etc.  Each new chosen vertex shall not coincide  with
+those already chosen. The path traced is stored in the form of
+a list of pairs </B></B></B>
+<!-- MATH: $\ \{n_i, n_j\}\$ -->
+<IMG
+ WIDTH="84" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.gif"
+ ALT="$\ \{n_i, n_j\}\ $"><B><B><B>.
+</B></B></B>
+<P>
+<B><B><B>If  on  the  </B></B></B><IMG
+ WIDTH="32" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="${\it k}-$"><B><B><B> th step it appears that
+there is not any unused vertex contiguous with </B></B></B><IMG
+ WIDTH="33" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$\ n_k$"><B><B><B>,  we
+return  to  the  vertex  </B></B></B>
+<!-- MATH: $\ n_{k-1}\$ -->
+<IMG
+ WIDTH="57" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.gif"
+ ALT="$\ n_{k-1}\ $"><B><B><B> and continue the process.
+When </B></B></B>
+<!-- MATH: $\ n_k=n_0\$ -->
+<IMG
+ WIDTH="85" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.gif"
+ ALT="$\ n_k=n_0\ $"><B><B><B> the construction of the cycle is over.  The
+latter  is  always possible since the graph corresponds to the
+closed electrical circuit. The constructed cycle is stored in
+the list </B></B></B>
+<!-- MATH: $\ {\it C_e}$ -->
+<IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.gif"
+ ALT="$\ {\it C_e}\ $"><B><B><B>.
+All the elements included in the new cycle are removed
+from <I>D</I> . If </B></B></B><IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.gif"
+ ALT="$\ D \neq$"><B><B><B> &#216;then we select a
+new  element from it  and  the  process  of  constructing
+the  cycle  is repeated.
+</B></B></B>
+<P>
+<B><B><B>It  may happen that the number of loops constructed by
+such algorithm is less than that required by the method  of
+loop currents. In this case the list </B></B></B><IMG
+ WIDTH="34" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img91.gif"
+ ALT="$\ C_e$"><B><B><B> is complemented
+up to the necessary number under the condition that the new  constructed
+loop does not coincide with any of existing loops.
+</B></B></B>
+<P>
+<B><B><B>When denoting by </B></B></B>
+<!-- MATH: $\ \dot q_{i}\$ -->
+<IMG
+ WIDTH="33" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="$\ \dot q_{i}\ $"><B><B><B> the  current  in  the
+</B></B></B><I>i</I>-<B><B><B> th loop and considering it  positive  in  the  edge
+</B></B></B>
+<!-- MATH: $\ \{n_k,\ n_m\}\$ -->
+<IMG
+ WIDTH="99" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$\ \{n_k,\ n_m\}\ $"><B><B><B>, when </B></B></B>
+<!-- MATH: $\ n_k < n_m\$ -->
+<IMG
+ WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="$\ n_k < n_m\ $"><B><B><B> and otherwise negative,
+we shall find the magnitude of the current in each  branch  as
+the sum or the difference of the corresponding loop currents.
+</B></B></B>
+<P>
+<B><B><B>According  to  [10]  the  kinetic  energy </B></B></B><IMG
+ WIDTH="27" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img95.gif"
+ ALT="$\ T$"><B><B><B>,  the force
+function </B></B></B>
+<!-- MATH: $\ { \cal U}$ -->
+<IMG
+ WIDTH="27" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img96.gif"
+ ALT="$\ { \cal U}$"><B><B><B>,  the Rayleigh function
+</B></B></B>
+<!-- MATH: $\ {\tilde R}$ -->
+<IMG
+ WIDTH="27" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img97.gif"
+ ALT="$\ {\tilde R}$"><B><B><B> for the linear electrical circuit has the form :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+T = \frac{1}{2} \sum^{k}_{i,j=1} L_{ij} \dot q_{i} \dot q_{j}\ , \ \ \
+{ \cal U} =- \frac{1}{2} \sum^{k}_{i,j=1} { q_{i} q_{j} \over C_{ij}}\ \ , \ \ \
+ {\tilde R} = \frac{1}{2} \sum^{k}_{i,j=1} R_{ij} \dot q_{i} \dot q_{j}\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="532" HEIGHT="65"
+ SRC="img98.gif"
+ ALT="\begin{displaymath}T = \frac{1}{2} \sum^{k}_{i,j=1} L_{ij} \dot q_{i} \dot q_{j}...
+...= \frac{1}{2} \sum^{k}_{i,j=1} R_{ij} \dot q_{i} \dot q_{j}\ ,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>where </B></B></B>
+<!-- MATH: $\ L_{ij}\ -$ -->
+<IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.gif"
+ ALT="$\ L_{ij}\ -$"><B><B><B> inductance, </B></B></B>
+<!-- MATH: $\ C_{ij}\ -$ -->
+<IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.gif"
+ ALT="$\ C_{ij}\ -$"><B><B><B> capacitance,
+</B></B></B>
+<!-- MATH: $\ R_{ij}\ -$ -->
+<IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.gif"
+ ALT="$\ R_{ij}\ -$"><B><B><B> resistance, </B></B></B><IMG
+ WIDTH="49" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.gif"
+ ALT="$\ q_i\ -$"><B><B><B> charge.
+</B></B></B>
+<P>
+<B><B><B>For constructing the function characterizing the state of
+the nonlinear electric circuit we use the algorithm [11,12].
+</B></B></B>
+<DIV ALIGN="CENTER"><B></B><B> 2. Equations of motion.<B></DIV>
+<B><B>
+<P>
+<B><B><B>After an evaluation of kinetic energy and force functions we discover
+characteristic function of the system and create the equations of motion.
+</B></B></B>
+<P>
+<B><B><B><B>2.1. Lagrange's equations.</B> 
+Let characteristic function be a Lagrangian </B></B></B>
+<!-- MATH: $\ L=T + \ {\cal U} \$ -->
+<IMG
+ WIDTH="118" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.gif"
+ ALT="$\ L=T + \ {\cal U} \ $"><B><B><B>, which is
+shown in the form:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+L =T_{2}+T_{1}+T_{0}+{\cal U}=
+{1\over 2} \sum^{k}_{i=1}\sum^{k}_{j=1}\ A_{ij}(q,t)\ \dot q_{i}\ \dot q_{j} +
+\sum^{k}_{i=1}\ A_{i}(q,t)\ \dot q_{i}
++ A_{0}(q,t)\ ,
+\eqno (2.1.1)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="579" HEIGHT="89"
+ SRC="img104.gif"
+ ALT="\begin{displaymath}L =T_{2}+T_{1}+T_{0}+{\cal U}=
+{1\over 2} \sum^{k}_{i=1}\sum^...
+...k}_{i=1}\ A_{i}(q,t)\ \dot q_{i}
++ A_{0}(q,t)\ ,
+\eqno (2.1.1)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>where </B></B></B><IMG
+ WIDTH="30" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img105.gif"
+ ALT="$\ k\ $"><B><B><B> is number of degrees of freedom of a system ;
+</B></B></B>
+<!-- MATH: $\ A_ {0}(q, t) = T_ {0} (q, t) + \ {\cal U} (q) \ ;\ \ T_ {0} (q, t) \$ -->
+<IMG
+ WIDTH="325" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.gif"
+ ALT="$\ A_ {0}(q, t) = T_ {0} (q, t) + \ {\cal U} (q) \ ;\ \ T_ {0} (q, t) \ $"><B><B><B>is part of a kinetic energy, not depending on velocities ;
+</B></B></B>
+<!-- MATH: $\ A_ {ij} = A_ {ji} \$ -->
+<IMG
+ WIDTH="99" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.gif"
+ ALT="$\ A_ {ij} = A_ {ji} \ $"><B><B><B>.
+Then the equations of motion are created as the Lagrange equations of
+the second kind :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\sum^{k}_{r=1}\ A_{ri}\ \ddot q_{r} +
+{1\over 2} \sum^{k}_{r=1}\sum^{k}_{j=1}\ \left({\partial A_{ri}\over \partial q_{j}}
++ {\partial A_{ij}\over \partial q_{r}} -
+{\partial A_{rj}\over \partial q_{i}} \right)\ \dot q_{r}\ \dot q_{j}
++ \sum^{k}_{j=1}\ \left( {\partial A_{i}\over \partial q_{j}} -
+{\partial A_{j}\over \partial q_{i}}\right)\ \dot q_{j}+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="627" HEIGHT="65"
+ SRC="img108.gif"
+ ALT="\begin{displaymath}\sum^{k}_{r=1}\ A_{ri}\ \ddot q_{r} +
+{1\over 2} \sum^{k}_{r=...
+...j}} -
+{\partial A_{j}\over \partial q_{i}}\right)\ \dot q_{j}+
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ \sum^{k}_{r=1}\ {\partial A_{ri}\over \partial t}\ \dot q_{r} +
+{\partial A_{i}\over \partial t} - {\partial A_{0}\over \partial q_{i}} =
+Q_{i}\ ,\ \ \ \ (\ i=1,\ldots,k\ )\ , \eqno (2.1.2)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="549" HEIGHT="63"
+ SRC="img109.gif"
+ ALT="\begin{displaymath}+ \sum^{k}_{r=1}\ {\partial A_{ri}\over \partial t}\ \dot q_{...
+...l q_{i}} =
+Q_{i}\ ,\ \ \ \ (\ i=1,\ldots,k\ )\ , \eqno (2.1.2)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><IMG
+ WIDTH="33" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img110.gif"
+ ALT="$Q_ {i} \ $"><B><B><B> are generalized nonpotential forces.
+</B></B></B>
+<P>
+<B><B><B><B>2.2. Euler-Lagrange's equations.</B> 
+Let the configuration of a system be set by independent parameters
+</B></B></B>
+<!-- MATH: $\ q_ {1}\ ,\ldots,\ q_ {k} \$ -->
+<IMG
+ WIDTH="109" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.gif"
+ ALT="$\ q_ {1}\ ,\ldots,\ q_ {k} \ $"><B><B><B>and quasi-velocities - linear forms on generalized velocities
+</B></B></B>
+<!-- MATH: $\ \dot q_ {i} \$ -->
+<IMG
+ WIDTH="33" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="$\ \dot q_{i}\ $"><B><B><B> (in common case inhomogeneous):
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\Omega_{s} = \sum^{k + 1}_{i=1} \ \tilde {a}_{si} (q) \ \dot q_{i} \ ,
+\ \ \ \ (\ s=1,\ldots, k + 1\ ) \ ,
+\eqno (2.2.1)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="499" HEIGHT="63"
+ SRC="img112.gif"
+ ALT="\begin{displaymath}\Omega_{s} = \sum^{k + 1}_{i=1} \ \tilde {a}_{si} (q) \ \dot q_{i} \ ,
+\ \ \ \ (\ s=1,\ldots, k + 1\ ) \ ,
+\eqno (2.2.1) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>here </B></B></B>
+<!-- MATH: $\ \Omega_{k + 1} = \dot q_ {k + 1} = 1\ \ \ \
+(\ \tilde {a}_{k + 1, i} (q) = \delta_ {k + 1, i} \
+{\rm\ is\ Kronecker's\ symbol\ ;} \ \ q_{k + 1} = t\ ) \$ -->
+<IMG
+ WIDTH="633" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.gif"
+ ALT="$\ \Omega_{k + 1} = \dot q_ {k + 1} = 1\ \ \ \
+(\ \tilde {a}_{k + 1, i} (q) = \delta_ {k + 1, i} \
+{\rm\ is\ Kronecker's\ symbol\ ;} \ \ q_{k + 1} = t\ ) \ $"><B><B><B>.
+</B></B></B>
+<P>
+<B><B><B>Jt is supposed, that
+</B></B></B>
+<!-- MATH: $\ \tilde {a} =\ \parallel \tilde {a}_{si} (q) \parallel\$ -->
+<IMG
+ WIDTH="134" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.gif"
+ ALT="$\ \tilde {a} =\ \parallel \tilde {a}_{si} (q) \parallel\ $"><B><B><B> is nondegenerate.
+The linear forms of differentials of generalized coordinates
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+d\pi _{s}= \sum^{k+1}_{i=1}\ \tilde{a}_{si}(q)\ dq_{i}\ ,\ \ \ \
+(\ s = 1,\ldots,k+1\ )\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="381" HEIGHT="63"
+ SRC="img115.gif"
+ ALT="\begin{displaymath}d\pi _{s}= \sum^{k+1}_{i=1}\ \tilde{a}_{si}(q)\ dq_{i}\ ,\ \ \ \
+(\ s = 1,\ldots,k+1\ )\ ,\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>
+determine differentials of quasi-coordinates.
+</B></B></B>
+<P>
+<B><B><B>
+The kinetic energy of system </B></B></B><IMG
+ WIDTH="27" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img95.gif"
+ ALT="$\ T$"><B><B><B> in quasi-velocities in common case
+looks like :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+T={1\over 2} \sum^{k}_{s=1}\sum^{k}_{i=1}\ A^{*}_{si}(q)\ \Omega_{s}\ \Omega_{i}+
+\sum^{k}_{s=1}\ A^{*}_{s}(q)\ \Omega _{s} + A^{*}_{0}(q)\ =\ T_2+T_1+T_0\ .
+\eqno (2.2.2)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="579" HEIGHT="86"
+ SRC="img116.gif"
+ ALT="\begin{displaymath}T={1\over 2} \sum^{k}_{s=1}\sum^{k}_{i=1}\ A^{*}_{si}(q)\ \Om...
+...q)\ \Omega _{s} + A^{*}_{0}(q)\ =\ T_2+T_1+T_0\ .
+\eqno (2.2.2)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>We shall write out an explicit aspect of the Euler-Lagrange's equations
+for the case, when the kinetic energy does not contain time </B></B></B><IMG
+ WIDTH="26" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img117.gif"
+ ALT="$\ t\ $"><B><B><B>:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\sum^{k}_{i=1}\ A^{*}_{si}\ \dot \Omega_{i}
++ \sum^{k+1}_{m=1}\sum^{k}_{i=1}\sum^{k}_{r=1}\ \gamma^{r}_{ms}\ A^{*}_{ri}\ \Omega_{i}\ \Omega_{m}
++ \sum^{k+1}_{m=1}\sum^{k}_{r=1}\ \gamma^{r}_{ms}\ A^{*}_{r}\ \Omega_{m} +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="529" HEIGHT="63"
+ SRC="img118.gif"
+ ALT="\begin{displaymath}\sum^{k}_{i=1}\ A^{*}_{si}\ \dot \Omega_{i}
++ \sum^{k+1}_{m=1...
+..._{m=1}\sum^{k}_{r=1}\ \gamma^{r}_{ms}\ A^{*}_{r}\ \Omega_{m} +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ \sum^{k}_{m=1}\sum^{k}_{r=1}\ ( {\partial A^{*}_{sm}\over \partial \pi _{r}} -
+{1\over 2} {\partial A^{*}_{rm}\over \partial \pi_{s}})\ \Omega_{r}\ \Omega_{m}
++ \sum^{k}_{r=1}\ ( {\partial A^{*}_{s}\over \partial \pi_{r}} -
+{\partial A^{*}_{r}\over \partial \pi_{s}})\ \Omega_{r}
+- {\partial A^{*}_{0}\over \partial \pi_{s}}
+- {\partial {\cal U}\over \partial \pi_{s}} = Q^{*}_{s}\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="620" HEIGHT="63"
+ SRC="img119.gif"
+ ALT="\begin{displaymath}+ \sum^{k}_{m=1}\sum^{k}_{r=1}\ ( {\partial A^{*}_{sm}\over \...
+...s}}
+- {\partial {\cal U}\over \partial \pi_{s}} = Q^{*}_{s}\ ,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\dot q_{s}= \sum^{k+1}_{r=1}\ b_{sr}\ \Omega_{r}\ ,\ \ \ \
+(\ s=1,\ldots, k\ )\ ,\eqno (2.2.3)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="443" HEIGHT="63"
+ SRC="img120.gif"
+ ALT="\begin{displaymath}\dot q_{s}= \sum^{k+1}_{r=1}\ b_{sr}\ \Omega_{r}\ ,\ \ \ \
+(\ s=1,\ldots, k\ )\ ,\eqno (2.2.3)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>
+where </B></B></B>
+<!-- MATH: $\ Q^{*}_{s} = \sum^{k}_{r=1} \ b_{rs}\ Q_ {r} \$ -->
+<IMG
+ WIDTH="173" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$\ Q^{*}_{s} = \sum^{k}_{r=1} \ b_{rs}\ Q_ {r} \ $"><B><B><B>is a generalized nonpotential force, referred to a quasi-coordinate
+</B></B></B>
+<!-- MATH: $\ \pi_{s}\$ -->
+<IMG
+ WIDTH="37" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.gif"
+ ALT="$\ \pi_{s}\ $"><B><B><B>;
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\gamma^{s}_{nm}= \sum^{k}_{r=1} \sum^{k}_{i=1}\
+(\ {\partial \tilde{a}_{si}\over \partial q_{r}}
+- {\partial \tilde{a}_{sr}\over \partial q_{i}}\ )\ b_{rn}\ b_{im}\ ,\ \ \
+(\ m,s=1,\ldots,k\ ;\ \ n= 1,\ldots,k+1\ )
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="613" HEIGHT="63"
+ SRC="img123.gif"
+ ALT="\begin{displaymath}\gamma^{s}_{nm}= \sum^{k}_{r=1} \sum^{k}_{i=1}\
+(\ {\partial ...
+...rn}\ b_{im}\ ,\ \ \
+(\ m,s=1,\ldots,k\ ;\ \ n= 1,\ldots,k+1\ ) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>
+are three-index Bolzman-Gamel's symbols, </B></B></B><IMG
+ WIDTH="40" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.gif"
+ ALT="$(\ b_{ij} $"><B><B><B> are the elements
+of matrix </B></B></B>
+<!-- MATH: $\ b=\tilde {a}^{-1} \ ).$ -->
+<IMG
+ WIDTH="96" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img125.gif"
+ ALT="$\ b=\tilde {a}^{-1} \ ).$"><B><B><B>Reducing the Euler-Lagrange's equations is automated also at presence
+of nonholonomic connections and surplus generalized coordinates.
+</B></B></B>
+<P>
+<B><B><B><B>2.3. Hamilton's equations.</B> 
+Let characteristic function be Hamilton's function
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\ H (t, q, p) = \sum_{i=1}^{k} \ p_ {i} \ \dot q_ {i} \ -\ L\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="234" HEIGHT="63"
+ SRC="img126.gif"
+ ALT="\begin{displaymath}\ H (t, q, p) = \sum_{i=1}^{k} \ p_ {i} \ \dot q_ {i} \ -\ L\ , \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>where
+</B></B></B>
+<!-- MATH: $\ \dot q_ {i} \$ -->
+<IMG
+ WIDTH="33" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="$\ \dot q_{i}\ $"><B><B><B> is the function of coordinates and impulses </B></B></B>
+<!-- MATH: $\ p_ {j}
+=\ \partial L (q, \dot q) / \partial \dot q_ {i} \$ -->
+<IMG
+ WIDTH="171" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img127.gif"
+ ALT="$\ p_ {j}
+=\ \partial L (q, \dot q) / \partial \dot q_ {i} \ $"><B><B><B>.
+Then differential equations of motion look like :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\dot q_{i}} = {\partial H(q,p) \over \partial p_{i}}\ \ ,\ \ \ \
+{\dot p_{i}} = - {\partial H(q,p) \over \partial q_{i}}
++ Q_{i}\ , \ \ \ \ \ (i=1,\ldots,k)
+\eqno(2.3.1)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="568" HEIGHT="55"
+ SRC="img128.gif"
+ ALT="\begin{displaymath}{\dot q_{i}} = {\partial H(q,p) \over \partial p_{i}}\ \ ,\ \...
+...artial q_{i}}
++ Q_{i}\ , \ \ \ \ \ (i=1,\ldots,k)
+\eqno(2.3.1)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>
+where </B></B></B>
+<!-- MATH: $\ Q_ {i} \$ -->
+<IMG
+ WIDTH="33" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img110.gif"
+ ALT="$Q_ {i} \ $"><B><B><B> are generalized nonpotential forces.
+</B></B></B>
+<P>
+<B><B><B>In electric circuits it is often the case that
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\det \Vert {\partial^2 L(q, \dot q) \over \partial \dot q_{i} \partial \dot q_{j} } \Vert = 0\ ,
+\hskip 2cm (\ i=1,\ldots,k\ ; \ \  j=1,\ldots,k\ )\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="538" HEIGHT="57"
+ SRC="img129.gif"
+ ALT="\begin{displaymath}\det \Vert {\partial^2 L(q, \dot q) \over \partial \dot q_{i}...
+...rt = 0\ ,
+\hskip 2cm (\ i=1,\ldots,k\ ; \ \ j=1,\ldots,k\ )\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>Therefore it is not always possible to execute standard transformation of
+generalized velocities to Hamilton variable. Partial transformation is in
+this case carried out. The singularities of a conclusion of the Hamilton's
+equations for such situations are considered in [13].
+</B></B></B>
+<DIV ALIGN="CENTER"><B></B><B> 3. Qualitative investigations. Principal formulas and algorithms.<B></DIV>
+<B><B>
+<P>
+<B><B><B><B>3.1. Investigations in the first approximation.</B>
+The differential equations obtained  after  their  expanding  in
+series in   the   neighbourhood   of  the given  or  found
+steady-state solution may be represented in the form
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A \ddot x\ + \ B\dot x \ + \ C x = Q(x,\dot x)\ , \eqno(3.1.1)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="415" HEIGHT="37"
+ SRC="img130.gif"
+ ALT="\begin{displaymath}A \ddot x\ + \ B\dot x \ + \ C x = Q(x,\dot x)\ , \eqno(3.1.1)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>where </B></B></B>
+<!-- MATH: $\ x\ ,\ \dot x\ ,\ \ddot x\ -$ -->
+<IMG
+ WIDTH="111" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img131.gif"
+ ALT="$\ x\ ,\ \dot x\ ,\ \ddot x\ -$"><B><B><B> column  matrix
+of generalized coordinates, velocities, accelerations,
+respectively, </B></B></B>
+<!-- MATH: $\ Q(x,\dot  x)\ -$ -->
+<IMG
+ WIDTH="96" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.gif"
+ ALT="$\ Q(x,\dot x)\ -$"><B><B><B> summands  nonlinear  with
+respect to </B></B></B>
+<!-- MATH: $\ x, \ \dot x\$ -->
+<IMG
+ WIDTH="56" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img133.gif"
+ ALT="$\ x, \ \dot x\ $"><B><B><B>, </B></B></B>
+<!-- MATH: $\ Q(0,0)=0\$ -->
+<IMG
+ WIDTH="114" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img134.gif"
+ ALT="$\ Q(0,0)=0\ $"><B><B><B>. When </B></B></B>
+<!-- MATH: $\ Q(x,\dot x)=0\$ -->
+<IMG
+ WIDTH="116" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img135.gif"
+ ALT="$\ Q(x,\dot x)=0\ $"><B><B><B>,
+we have the equations of the first approximation.
+</B></B></B>
+<P>
+<B><B><B>Now construct the characteristic equation (CE):
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+det(A \Lambda^{2} + B \Lambda + C )=
+h_{0}\Lambda^{2k} + h_{1}\Lambda^{2k-1} + \ldots + h_{2k}= 0\ .
+\eqno (3.1.2)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="556" HEIGHT="37"
+ SRC="img136.gif"
+ ALT="\begin{displaymath}det(A \Lambda^{2} + B \Lambda + C )=
+h_{0}\Lambda^{2k} + h_{1}\Lambda^{2k-1} + \ldots + h_{2k}= 0\ .
+\eqno (3.1.2)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>
+Using classical Lyapunov's theorems,  with the help of CE  (2)
+it is  possible  to  conduct the investigation of stability in
+the first   approximation.   For   this   purpose   we    have
+algorithmically implemented  both  the Routh-Hurwitz criterion
+of absence  of  roots  with  positive  real  parts   and   the
+criterion, in  accordance  with  which  all  the  roots of the
+polynomial (2) are negative real.  By the complete eq.  (1) we
+investigate the  problem  of effect of the structure of forces
+on the stability of the trivial solution of the system (1) [6].
+If, using  the  potentialities  of  the  system  of analytical
+computations,  one performs the substitution </B></B></B>
+<!-- MATH: $\ \Lambda =  \mu+\xi\$ -->
+<IMG
+ WIDTH="104" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img137.gif"
+ ALT="$\ \Lambda = \mu+\xi\ $"><B><B><B>,
+where </B></B></B><IMG
+ WIDTH="28" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img138.gif"
+ ALT="$\ \xi\ $"><B><B><B> is an assigned shift from the given
+imaginary axis, then it is possible to solve the problems of
+estimation of a given degree of stability.
+</B></B></B>
+<P>
+<B><B><B><B>3.2. Construction of first integrals for differential equations of motion.</B> 
+Algorithm to construct first integrals for the systems described is based on
+invariant relations (differential consequences) of equations of motion [5].
+For equations (2.2.3) we have invariant correlation :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{d\over dt}\left(\ T_{2}- T_{0}- {\cal U} -
+\sum^{k}_{r=1}  \tilde{a}_{r,k+1}{\partial T\over \partial \Omega_{r}}\ \right) =
+- {\partial \over \partial t} \left(\ T + {\cal U}\ \right) -
+\sum^{k}_{r=1}\ Q^{*}_{r}\ \left(\ \tilde{a}_{r,k+1} - \Omega_{r}\ \right) \ -
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="668" HEIGHT="63"
+ SRC="img139.gif"
+ ALT="\begin{displaymath}{d\over dt}\left(\ T_{2}- T_{0}- {\cal U} -
+\sum^{k}_{r=1} \t...
+...Q^{*}_{r}\ \left(\ \tilde{a}_{r,k+1} - \Omega_{r}\ \right) \ -
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+-\ \sum^{k}_{r,m,s=1}\ {\partial T\over \partial \Omega_{r}}\tilde{a}_{rm}
+\left(\ {\partial b_{m,k+1} \over \partial t} +
+\Omega_{r} {\partial b_{mr} \over \partial t}\ \right) \ .  \eqno(3.2.1)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="499" HEIGHT="65"
+ SRC="img140.gif"
+ ALT="\begin{displaymath}-\ \sum^{k}_{r,m,s=1}\ {\partial T\over \partial \Omega_{r}}\...
+...} {\partial b_{mr} \over \partial t}\ \right) \ . \eqno(3.2.1)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>
+In certain conditions from (1) we can obtain quadratic first integral with
+respect to quasi-velocities. For example,
+</B></B></B>
+<P>
+<B><B><B><I>Statement 1.</I> If lagrangian (2.1.1) and kinematic correlations (2.2.1)
+do not depend explicitly on time and nonpotential forces
+</B></B></B>
+<!-- MATH: $\ Q^{*}_{r}\$ -->
+<IMG
+ WIDTH="42" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.gif"
+ ALT="$\ Q^{*}_{r}\ $"><B><B><B> are absent, there exists generalized Jacobi integral:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+T_{2}(\Omega ,q) - T_{0}(q) - {\cal U}(q) - \sum^{k}_{r=1} \tilde{a}_{r,k+1}\
+\left(\ {\partial T_{2}\over \partial \Omega_{r}}\ +
+{\partial T_{1} \over \partial \Omega_{r}}\ \right)\ = const\ . \eqno(3.2.2)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="560" HEIGHT="86"
+ SRC="img142.gif"
+ ALT="\begin{displaymath}T_{2}(\Omega ,q) - T_{0}(q) - {\cal U}(q) - \sum^{k}_{r=1} \t...
+...} \over \partial \Omega_{r}}\ \right)\ = const\ . \eqno(3.2.2)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>If kinematic correlations are also homogeneous
+</B></B></B>
+<!-- MATH: $\ (\ \tilde{a}_{s,k+1} = 0\ ,\ \ s=1,\ldots,k\ )\$ -->
+<IMG
+ WIDTH="258" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img143.gif"
+ ALT="$\ (\ \tilde{a}_{s,k+1} = 0\ ,\ \ s=1,\ldots,k\ )\ $"><B><B><B>, Jacobi integral
+takes the form of :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+T_{2}(\Omega,q) - T_{0}(q) - {\cal U}(q)  = const\ . \eqno (3.2.3)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="430" HEIGHT="37"
+ SRC="img144.gif"
+ ALT="\begin{displaymath}T_{2}(\Omega,q) - T_{0}(q) - {\cal U}(q) = const\ . \eqno (3.2.3)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>Assuming that quasi-velocities are equal to generalized velocities, from (1) -
+(3) we get appropriate statements for systems in Lagrange variables.
+</B></B></B>
+<P>
+<B><B><B><I>Statement 2.</I> If for
+</B></B></B>
+<!-- MATH: $\ q_{i}\ \ (\ i=1,\ldots, l\ ; \ \ l < k\ )\$ -->
+<IMG
+ WIDTH="238" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img145.gif"
+ ALT="$\ q_{i}\ \ (\ i=1,\ldots, l\ ; \ \ l < k\ )\ $"><B><B>
+<!-- MATH: $\ \partial {\cal U}/ \partial q_{i}= 0\$ -->
+<IMG
+ WIDTH="116" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img146.gif"
+ ALT="$\ \partial {\cal U}/ \partial q_{i}= 0\ $"><B><B><B> and
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\sum^{k}_{r=1} \left(\ {\partial \tilde{a}_{r,k+1} \over \partial q_{i}}
++ \sum^{k}_{s=1} {\partial \tilde{a}_{rs} \over \partial q_{i}}\
+\left(\ b_{sm} \Omega_{m} +
+b_{s,k+1}\ \right)\ \right) {\partial T\over \partial \Omega_{r}}\ +
+{\partial T\over \partial q_{i}}= 0\ , \eqno (3.2.4)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="555" HEIGHT="86"
+ SRC="img147.gif"
+ ALT="\begin{displaymath}\sum^{k}_{r=1} \left(\ {\partial \tilde{a}_{r,k+1} \over \par...
+...a_{r}}\ +
+{\partial T\over \partial q_{i}}= 0\ , \eqno (3.2.4)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>then system (2.2.3) has ignorable integral
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\sum^{k}_{s=1}\ {\partial T\over \partial \Omega_{s}}\ \tilde{a}_{si}\ =const\ .\ \ \
+\eqno (3.2.5)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="394" HEIGHT="63"
+ SRC="img148.gif"
+ ALT="\begin{displaymath}\sum^{k}_{s=1}\ {\partial T\over \partial \Omega_{s}}\ \tilde{a}_{si}\ =const\ .\ \ \
+\eqno (3.2.5)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B><I>Statement 3.</I> If in stationary mechanical system following correlation
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\sum^{k}_{r=1}\ \left(\ \left(\ {\partial T\over \partial q_{r}}+
+{\partial {\cal U}\over \partial q_{r}}\ \right)\ b_{r,k+1} +
+\sum^{k}_{s=1}\ \Omega_{s}\ \gamma^{r}_{k+1,s}\
+{\partial T\over \partial \Omega_{r}}\ \right) \ = 0\ , \eqno (3.2.6)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="559" HEIGHT="63"
+ SRC="img149.gif"
+ ALT="\begin{displaymath}\sum^{k}_{r=1}\ \left(\ \left(\ {\partial T\over \partial q_{...
+...al T\over \partial \Omega_{r}}\ \right) \ = 0\ , \eqno (3.2.6)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>holds, then equations system allows the integral
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\sum^{k}_{s=1}\ {\partial T\over \partial \Omega_{s}}\ \tilde{a}_{s,k+1}\ =
+const\ . \eqno (3.2.7)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="397" HEIGHT="63"
+ SRC="img150.gif"
+ ALT="\begin{displaymath}\sum^{k}_{s=1}\ {\partial T\over \partial \Omega_{s}}\ \tilde{a}_{s,k+1}\ =
+const\ . \eqno (3.2.7)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B><I>Statement 4</I>. If body system is described by Lagrange equations in
+generalized coordinates
+</B></B></B><IMG
+ WIDTH="28" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img151.gif"
+ ALT="$\ q\ $"><B><B><B> and velocities </B></B></B><IMG
+ WIDTH="28" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img152.gif"
+ ALT="$\ \dot q\ $"><B><B><B>, and lagrangian does not contain coordinates
+</B></B></B>
+<!-- MATH: $\ q_{i}\ \ \ (\ i= 1,\ldots,l\ )\$ -->
+<IMG
+ WIDTH="173" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img153.gif"
+ ALT="$\ q_{i}\ \ \ (\ i= 1,\ldots,l\ )\ $"><B><B><B>, there exist ignorable integrals
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\partial L\over \partial \dot q_{i}}\ =\ const\ .  \eqno(3.2.8)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="351" HEIGHT="54"
+ SRC="img154.gif"
+ ALT="\begin{displaymath}{\partial L\over \partial \dot q_{i}}\ =\ const\ . \eqno(3.2.8)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>Let for carrying body of the system generalized coordinates
+</B></B></B>
+<!-- MATH: $\ q_{1}\ ,\ q_{2}\ ,\ q_{3}\$ -->
+<IMG
+ WIDTH="112" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img155.gif"
+ ALT="$\ q_{1}\ ,\ q_{2}\ ,\ q_{3}\ $"><B><B><B> describe rotational motion,
+</B></B></B>
+<!-- MATH: $\ q_{4}\ ,\ q_{5}\ ,\ q_{6}\$ -->
+<IMG
+ WIDTH="112" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img156.gif"
+ ALT="$\ q_{4}\ ,\ q_{5}\ ,\ q_{6}\ $"><B><B><B> - motion of point </B></B></B><IMG
+ WIDTH="42" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\ O_{1}\ $"><B><B><B>, and
+coordinates </B></B></B>
+<!-- MATH: $\ q_{j}\ \  (j=7,\ldots, k)\$ -->
+<IMG
+ WIDTH="163" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img157.gif"
+ ALT="$\ q_{j}\ \ (j=7,\ldots, k)\ $"><B><B><B> describe relative motions of
+carried bodies.  We choose quasi-velocities for carrying body equal to
+projections of absolute angular velocity </B></B></B>
+<!-- MATH: $\ {\mbox{\boldmath$\omega$ }}_{1}\$ -->
+<IMG
+ WIDTH="48" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img158.gif"
+ ALT="$\ {\mbox{\boldmath$\omega$ }}_{1}\ $"><B><B><B>and linear velocity  </B></B></B>
+<!-- MATH: $\ {\bf v}\$ -->
+<IMG
+ WIDTH="31" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img159.gif"
+ ALT="$\ {\bf v}\ $"><B><B><B> of the point </B></B></B><IMG
+ WIDTH="42" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\ O_{1}\ $"><B><B><B> to axes associated
+with body.  Let quasi-velocities of carried bodies be equal to projections of
+relative velocities or to generalized velocities.  In these conditions for
+Euler-Lagrange equations following correlations take place :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{d\over dt}\left(\left( {\partial T\over \partial{\bf v}}\right)^{T}
+{\partial T\over \partial {\bf v}}\right)=
+ 2 \left( {\partial T\over \partial {\bf v}} \right)^{T}{\bf F}\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="285" HEIGHT="69"
+ SRC="img160.gif"
+ ALT="\begin{displaymath}{d\over dt}\left(\left( {\partial T\over \partial{\bf v}}\rig...
+...left( {\partial T\over \partial {\bf v}} \right)^{T}{\bf F}\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{d\over dt}\left(\left( {\partial T\over \partial {\bf\Omega} } \right)^{T}
+{\partial T\over \partial {\bf\Omega } } \right) +
+ \left(\breve{ v}{\partial T\over \partial {\bf v}}\right)^{T}
+ {\partial T\over \partial {\bf\Omega }}  =
+ 2 {\bf M}^{T} {\partial T\over \partial {\bf\Omega }}\  ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="401" HEIGHT="69"
+ SRC="img161.gif"
+ ALT="\begin{displaymath}{d\over dt}\left(\left( {\partial T\over \partial {\bf\Omega}...
+...}} =
+2 {\bf M}^{T} {\partial T\over \partial {\bf\Omega }}\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{d\over dt}\left(\left({\partial T\over \partial {\bf\Omega} }\right)^{T}
+{\partial T\over \partial {\bf v}} \right)=
+\left({\partial T\over \partial {\bf\Omega } }\right)^{T}{\bf F}
++ \left({\partial T\over \partial {\bf v}}\right)^{T}{\bf M}\ ,\ \eqno(3.2.9)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="516" HEIGHT="69"
+ SRC="img162.gif"
+ ALT="\begin{displaymath}{d\over dt}\left(\left({\partial T\over \partial {\bf\Omega} ...
+...al T\over \partial {\bf v}}\right)^{T}{\bf M}\ ,\ \eqno(3.2.9)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>where </B></B></B>
+<!-- MATH: $\ {\bf M} = col\ (P_{1},\ P_{2},\ P_{3})\ ,\ \
+{\bf F}= col\ (P_{4},\ P_{5},\ P_{6})\$ -->
+<IMG
+ WIDTH="410" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img163.gif"
+ ALT="$\ {\bf M} = col\ (P_{1},\ P_{2},\ P_{3})\ ,\ \
+{\bf F}= col\ (P_{4},\ P_{5},\ P_{6})\ $"><B><B><B>,
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\breve{ v}=\left( \begin{array}{ccc}
+0 & -v_{3} & v_{2} \\
+v_{3} & 0  & -v_{1} \\
+-v_{2} & v_{1} & 0
+\end{array} \right)\ , \ \
+{\partial T\over \partial {\bf v}} =
+col\ ( {\partial T\over \partial v_{1}},\ {\partial T\over \partial v_{2}},\
+{\partial T\over \partial v_{3}})\ ,\ \
+{\partial T\over \partial {\bf\Omega }} =
+col\ ( {\partial T\over \partial \Omega_{1}},\
+ {\partial T\over \partial \Omega_{2}},\
+ {\partial T\over \partial \Omega_{3}})\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="731" HEIGHT="85"
+ SRC="img164.gif"
+ ALT="\begin{displaymath}\breve{ v}=\left( \begin{array}{ccc}
+0 & -v_{3} & v_{2} \\
+v...
+...rtial \Omega_{2}},\
+{\partial T\over \partial \Omega_{3}})\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>Let us choose two constant directions </B></B></B><IMG
+ WIDTH="29" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img165.gif"
+ ALT="$\ \zeta \ $"><B><B><B> and </B></B></B>
+<!-- MATH: $\ {\tilde \zeta}\ ,$ -->
+<IMG
+ WIDTH="34" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img166.gif"
+ ALT="$\ {\tilde \zeta}\ , $"><B><B><B>with matrices of direction cosine in coordinates of carrying body
+</B></B></B>
+<!-- MATH: $\ \Gamma \$ -->
+<IMG
+ WIDTH="31" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img167.gif"
+ ALT="$\ \Gamma \ $"><B><B><B> and </B></B></B>
+<!-- MATH: $\ \tilde {\Gamma}\$ -->
+<IMG
+ WIDTH="31" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img168.gif"
+ ALT="$\ \tilde {\Gamma}\ $"><B><B><B> of size </B></B></B>
+<!-- MATH: $\ 3\times 1\ .$ -->
+<IMG
+ WIDTH="68" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img169.gif"
+ ALT="$ \ 3\times 1\ .$"><B><B><B>If we complement Euler-Lagrange equations system with Poisson equations
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\dot \Gamma = - \breve{\Omega}\Gamma \ \ \ {\rm and} \ \ \
+\dot{\tilde {\Gamma}} = - \breve{\Omega}\tilde {\Gamma} \ ,
+\ \ \ {\rm where }\ \ \
+\breve{\Omega}=\left( \begin{array}{ccc}
+0 & -\Omega_{3} & \Omega_{2} \\
+\Omega_{3} & 0  & -\Omega_{1} \\
+-\Omega_{2} & \Omega_{1} & 0
+\end{array}\right)\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="578" HEIGHT="85"
+ SRC="img170.gif"
+ ALT="\begin{displaymath}\dot \Gamma = - \breve{\Omega}\Gamma \ \ \ {\rm and} \ \ \
+\d...
+...ega_{1} \\
+-\Omega_{2} & \Omega_{1} & 0
+\end{array}\right)\ , \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>we easyly can get following correlation :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{d\over dt}\left(\ \Gamma^{T} {\partial T\over \partial {\bf\Omega }}
++ \tilde{\Gamma}^{T} {\partial T\over \partial {\bf v}}\ \right)
++ \Gamma^{T}\ \breve{v}\ {\partial T\over \partial{\bf v}}\ =\
+\Gamma^{T}{\bf M}  + \tilde{\Gamma}^{T}{\bf F}\ . \eqno(3.2.10)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="546" HEIGHT="59"
+ SRC="img171.gif"
+ ALT="\begin{displaymath}{d\over dt}\left(\ \Gamma^{T} {\partial T\over \partial {\bf\...
+...\Gamma^{T}{\bf M} + \tilde{\Gamma}^{T}{\bf F}\ . \eqno(3.2.10)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>From correlations (9), (10) in appropriate conditions we can get first integrals
+of differential equations of motion.
+</B></B></B>
+<P>
+<B><B><B><I>Statement 5.</I> If
+</B></B></B>
+<!-- MATH: $\ ( \partial T/\partial {\bf v} )^{T}\ {\bf F} = 0\$ -->
+<IMG
+ WIDTH="160" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img172.gif"
+ ALT="$\ ( \partial T/\partial {\bf v} )^{T}\ {\bf F} = 0\ $"><B><B><B>, then
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left( {\partial T\over \partial{\bf v}}\right)^{T}
+{\partial T\over \partial {\bf v}}= const.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="171" HEIGHT="62"
+ SRC="img173.gif"
+ ALT="\begin{displaymath}\left( {\partial T\over \partial{\bf v}}\right)^{T}
+{\partial T\over \partial {\bf v}}= const.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>Let point </B></B></B><IMG
+ WIDTH="42" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\ O_{1}\ $"><B><B><B> be fixed.
+</B></B></B>
+<P>
+<B><B><B><I>Statement 6</I>. If
+</B></B></B>
+<!-- MATH: $\ {\bf M}^{T}\ (\partial T/ \partial {\bf\Omega})\ = 0\$ -->
+<IMG
+ WIDTH="178" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img174.gif"
+ ALT="$\ {\bf M}^{T}\ (\partial T/ \partial {\bf\Omega})\ = 0\ $"><B><B><B>, then
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left( {\partial T\over \partial {\bf\Omega }}\right)^{T}
+{\partial T\over \partial {\bf\Omega }}  =const\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="182" HEIGHT="62"
+ SRC="img175.gif"
+ ALT="\begin{displaymath}\left( {\partial T\over \partial {\bf\Omega }}\right)^{T}
+{\partial T\over \partial {\bf\Omega }} =const\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>In these conditions also takes place generalized integral of areas:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(\ {\bf e\ \cdot }\ {\partial T\over \partial \bf\Omega }\ )\ =\ const\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="184" HEIGHT="50"
+ SRC="img176.gif"
+ ALT="\begin{displaymath}(\ {\bf e\ \cdot }\ {\partial T\over \partial \bf\Omega }\ )\ =\ const\ ,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>where </B></B></B>
+<!-- MATH: $\ {\bf e}\$ -->
+<IMG
+ WIDTH="29" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img177.gif"
+ ALT="$\ {\bf e}\ $"><B><B><B> is unit vector (movable),
+directed parallel to the vector of kinetic momentum of the body system.
+ </B></B></B>
+<P>
+<B><B><B><I>Statement 7</I>. If
+</B></B></B>
+<!-- MATH: $\ {\bf M} = c^{T}\ \breve{\Omega}\ ,$ -->
+<IMG
+ WIDTH="112" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img178.gif"
+ ALT="$\ {\bf M} = c^{T}\ \breve{\Omega}\ ,$"><B><B><B>where </B></B></B><IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img179.gif"
+ ALT="$\ c\ -$"><B><B><B> is a constant matrix </B></B></B>
+<!-- MATH: $\ 3\times 1\$ -->
+<IMG
+ WIDTH="63" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.gif"
+ ALT="$\ 3\times1\ $"><B><B><B>,  then
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(\ c + {\partial T\over \partial {\bf\Omega }}\ )^{T}
+(\ c + {\partial T\over \partial {\bf\Omega }}\ ) = const\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="277" HEIGHT="50"
+ SRC="img180.gif"
+ ALT="\begin{displaymath}(\ c + {\partial T\over \partial {\bf\Omega }}\ )^{T}
+(\ c + {\partial T\over \partial {\bf\Omega }}\ ) = const\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B><I>Statement 8</I>. If  </B></B></B>
+<!-- MATH: $\ \Gamma^{T}\ {\bf M} = 0\$ -->
+<IMG
+ WIDTH="106" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img181.gif"
+ ALT="$\ \Gamma^{T}\ {\bf M} = 0\ $"><B><B><B> ,
+then </B></B></B>
+<!-- MATH: $\ \Gamma^{T}\ \left(\partial T/ \partial {\bf\Omega }\right) = const\ .$ -->
+<IMG
+ WIDTH="207" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img182.gif"
+ ALT="$\ \Gamma^{T}\ \left(\partial T/ \partial {\bf\Omega }\right) = const\ .$"><B><B>
+<P>
+<B><B><B><I>Statement 9.</I> If </B></B></B>
+<!-- MATH: $\ {\bf M} = c^{T}\ \breve{\Omega}\$ -->
+<IMG
+ WIDTH="106" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img183.gif"
+ ALT="$\ {\bf M} = c^{T}\ \breve{\Omega}\ $"><B><B><B>, then
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\Gamma^{T}\ \left(\
+{\partial T\over \partial {\bf\Omega }} + c\ \right) = const\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="219" HEIGHT="59"
+ SRC="img184.gif"
+ ALT="\begin{displaymath}\Gamma^{T}\ \left(\
+{\partial T\over \partial {\bf\Omega }} + c\ \right) = const\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>Using above differential consequences and statements it's possible to
+automatically construct quadratic and linear first integrals with respect to
+quasi-velocities, if conditions of their existence are met.
+Verification of these conditions and explicit form of integrals is possible only
+with the help of CAS.  The CAS should be able to do complex trigonometrical
+transformations.
+</B></B></B>
+<P>
+<B><B><B>For equations of the form (3.1.1) algorithms of obtaining differential
+consequences and invariant correlations are described in [6, 8].
+For linear systems (3.1.1) obtaining quadratic first integrals can be
+reduced to systems of linear algebraic equations.
+</B></B></B>
+<P>
+<B><B><B><B>3.3. Investigation of stability by Lyapunov's second method.</B>
+Invariant relations,  first  integrals  obtained  from  it and
+other invariants may be used for finding steady motions
+or invariant  manifolds  of  steady  motions  as  well as for
+constructing Lyapunov functions in investigation of  stability
+of the   latter   [14].   To   this   end,   an  algorithm  of
+Routh-Lyapunov's theorem  is  used.  In  accordance  with  the
+latter theorem we come to the problem of conditional extremum.
+</B></B></B>
+<P>
+<B><B><B>Let for the system of ordinary differential equations
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\dot x= X(x)\ ,\ \ \ \  x \in  R^{k}\ . \eqno(3.3.1)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="386" HEIGHT="37"
+ SRC="img185.gif"
+ ALT="\begin{displaymath}\dot x= X(x)\ ,\ \ \ \ x \in R^{k}\ . \eqno(3.3.1)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>some number of first integrals
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V_{0}(x) = c_{0}\ ,\ \ V_{1}(x) = c_{1}\ , \ \ldots\ ,\ \ V_{m}(x) = c_{m}\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="389" HEIGHT="37"
+ SRC="img186.gif"
+ ALT="\begin{displaymath}V_{0}(x) = c_{0}\ ,\ \ V_{1}(x) = c_{1}\ , \ \ldots\ ,\ \ V_{m}(x) = c_{m}\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>be known. Having chosen these integrals as the basis,
+we define the linear space of system's integrals over </B></B></B><IMG
+ WIDTH="34" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img187.gif"
+ ALT="$\ R\ $"><B><B><B> :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+K_{J} = \sum^{n}_{j=1}\lambda _{i_{j}} V_{i_{j}}(x)\ ,\ \ \
+J = \{i_{0},\ldots ,i_{n}\} \in  (0,1,\ldots ,m)\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="460" HEIGHT="62"
+ SRC="img188.gif"
+ ALT="\begin{displaymath}K_{J} = \sum^{n}_{j=1}\lambda _{i_{j}} V_{i_{j}}(x)\ ,\ \ \
+J = \{i_{0},\ldots ,i_{n}\} \in (0,1,\ldots ,m)\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>Let us find steady motions (invariant  manifolds  of
+steady motions - IMSM) as solutions of the system of equations
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\partial K\over \partial x_{i}} = f_{i}(x_{1},\ldots
+x_{k}, \lambda _{i_{1}},...,\lambda _{i_{n}}) = 0\ ,\ \ \ \
+(i=1,\ldots \ ,\ k)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="456" HEIGHT="53"
+ SRC="img189.gif"
+ ALT="\begin{displaymath}{\partial K\over \partial x_{i}} = f_{i}(x_{1},\ldots
+x_{k}, ...
+...i_{1}},...,\lambda _{i_{n}}) = 0\ ,\ \ \ \
+(i=1,\ldots \ ,\ k)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V_{i_{1}}(x) = c_{i_{1}}\ ,\  \ldots \ ,\   V_{i_{n}}(x) = c_{i_{n}}
+\eqno (3.3.2))
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="422" HEIGHT="37"
+ SRC="img190.gif"
+ ALT="\begin{displaymath}V_{i_{1}}(x) = c_{i_{1}}\ ,\ \ldots \ ,\ V_{i_{n}}(x) = c_{i_{n}}
+\eqno (3.3.2))
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>In the regular case,  for a system of  interconnected  bodies
+the steady  motions  are  found  as  solutions of equations of
+stationarity of the bundle </B></B></B><IMG
+ WIDTH="45" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img191.gif"
+ ALT="$\ K_{J}\ $"><B><B><B> of first  integrals  of
+motion differential equations.
+Sufficient conditions of stability for  these  motions  may  be
+found as the conditions of sign-definiteness of the second variation
+</B></B></B>
+<!-- MATH: $\ \delta^{2}K_{J}\$ -->
+<IMG
+ WIDTH="63" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img192.gif"
+ ALT="$\ \delta^{2}K_{J}\ $"><B><B><B> for constant values of the rest of the first
+integrals. This  problem  has  a good algorithm of solving in
+the case when side by side with the energy integrals there  are
+linear first   integrals   with   respect   to  velocities  or
+quasi-velocities (e.g. ignorable ones) [2, 4].
+In the case, when  there  are (i) first  integrals  of  another
+structure or (ii)  singularity  of  the   system   (2)   (this is
+characteristic of electromechanical systems),  difficulties of
+the investigation increase.  When there are no first integrals in  the
+system, for the purpose of constructing the Lyapunov functions
+in the process of investigation  of  stability  by  Lyapunov's
+method it  is  possible  to  use  differential  corollaries of
+equations of disturbed motion [6].
+</B></B></B>
+<P>
+<B><B><B><B>3.4. Reduction to the normal form.</B>
+The preliminary  reduction  of  the  system to one of the
+normal forms is  an  efficient  aid  in  solving  problems  of
+qualitative investigation  of ordinary differential equations.
+Poincare's  form  [15, 16]  is  one  such  normal  forms  for
+differential equations of the general form (3.3.1).
+</B></B></B>
+<P>
+<B><B><B>Normalization of systems of analytical ordinary differential
+equations
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\dot x\ =\ A x\ +\ f(x)\ \ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="168" HEIGHT="37"
+ SRC="img193.gif"
+ ALT="\begin{displaymath}\dot x\ =\ A x\ +\ f(x)\ \ , \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>where </B></B></B><IMG
+ WIDTH="49" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img194.gif"
+ ALT="$\ A\ -$"><B><B><B> constant </B></B></B>
+<!-- MATH: $\ n \times n \ -$ -->
+<IMG
+ WIDTH="82" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img195.gif"
+ ALT="$\ n \times n \ -$"><B><B><B> matrix,
+</B></B></B>
+<!-- MATH: $\ \  f(x)\ -$ -->
+<IMG
+ WIDTH="79" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img196.gif"
+ ALT="$\ \ f(x)\ -$"><B><B><B> nonlinear terms of the 2d and higher degrees
+of smallness,  undergoes decomposition into the 2 parts : (i)  the 
+reduction of the matrix </B></B></B><IMG
+ WIDTH="34" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img197.gif"
+ ALT="$\ A\ $"><B><B><B> to the Jordan canonical form
+and (ii) nonlinear nonsingular substitution of variables, which
+removes most  of  nonlinear  terms in the right-hand side of
+the equation.  The   linear   normalization   determines   the
+eigenvalues </B></B></B>
+<!-- MATH: $\ \Lambda_1,\ldots,\Lambda_n\$ -->
+<IMG
+ WIDTH="107" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img198.gif"
+ ALT="$\ \Lambda_1,\ldots,\Lambda_n\ $"><B><B><B> of the matrix
+</B></B></B><IMG
+ WIDTH="45" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img199.gif"
+ ALT="$\ A\ ,\ $"><B><B><B> and,  as soon as eigenvectors and  adjunct  vectors
+(if any)  are found,  allows to obtain the Jordan canonical matrix
+and determines  the  corresponding  linear  transformation  of
+variables (as well as its converse).
+</B></B></B>
+<P>
+<B><B><B>As a result,  the system of  ordinary  differential  equations
+takes the form
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\dot y\ =\ \bar {A} y\ +\ \varphi(y)\ . \eqno {(3.4.1)}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="370" HEIGHT="37"
+ SRC="img200.gif"
+ ALT="\begin{displaymath}\dot y\ =\ \bar {A} y\ +\ \varphi(y)\ . \eqno {(3.4.1)} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>Furthermore, in  Hamilton-type systems the linear transformation
+is assumed canonical.
+</B></B></B>
+<P>
+<B><B><B>In practical investigations the precision of computing of the
+eigenvalues was chosen </B></B></B>
+<!-- MATH: $\ \epsilon \ = \ 10^{-11}\ .$ -->
+<IMG
+ WIDTH="117" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img201.gif"
+ ALT="$\ \epsilon \ = \ 10^{-11}\ .$"><B><B><B>Zero  and  multiple  roots  were determined with the same precision.
+Eigenvectors and adjunct vectors were found with the precision
+of </B></B></B>
+<!-- MATH: $\ 10^{-8}\ .$ -->
+<IMG
+ WIDTH="63" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img202.gif"
+ ALT="$\ 10^{-8}\ .$"><B><B>
+<P>
+<B><B><B>Linear normalization has been conducted only in the numerical form.
+</B></B></B>
+<P>
+<B><B><B>Nonlinear normalization has been conducted by Poincare's method [15,16],
+which retains only the resonance terms of the form
+</B></B></B>
+<!-- MATH: $\ ({\bf s},\ {\bf\Lambda})\ -\ \Lambda_i\ =\ 0\ ,\$ -->
+<IMG
+ WIDTH="191" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img203.gif"
+ ALT="$\ ({\bf s},\ {\bf\Lambda})\ -\ \Lambda_i\ =\ 0\ ,\ $"><B><B><B> where
+</B></B></B>
+<!-- MATH: $\ {\bf s}\ -\$ -->
+<IMG
+ WIDTH="50" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img204.gif"
+ ALT="$\ {\bf s}\ -\ $"><B><B><B> integer numeric vector of nonnegative indices
+of powers of the variables.
+Nonlinear transformation is realized in the form of the formal series:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y\ =\ z\ +\ \psi(z)\ . \eqno {(3.4.2)}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="363" HEIGHT="37"
+ SRC="img205.gif"
+ ALT="\begin{displaymath}y\ =\ z\ +\ \psi(z)\ . \eqno {(3.4.2)} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>The normalized system of ordinary differential equations for the
+variables </B></B></B><IMG
+ WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.gif"
+ ALT="$\ z $"><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\dot z\ =\ \bar A z\ +\ g(z)\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="155" HEIGHT="37"
+ SRC="img207.gif"
+ ALT="\begin{displaymath}\dot z\ =\ \bar A z\ +\ g(z)\ , \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>contains in </B></B></B><IMG
+ WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img208.gif"
+ ALT="$\ g(z)\ $"><B><B><B> only resonance terms
+</B></B></B>
+<!-- MATH: $\ \sum_ {\vert s \vert \geq 2}^{\infty} {b_s\ z^s}\ .$ -->
+<IMG
+ WIDTH="118" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.gif"
+ ALT="$\ \sum_ {\vert s \vert \geq 2}^{\infty} {b_s\ z^s}\ .$"><B><B><B>The coefficients </B></B></B><IMG
+ WIDTH="35" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img210.gif"
+ ALT="$\ b_s\ $"><B><B><B> are sought simultaneously with  the
+coefficients of  the series (3.4.2) by recurrent formulas [16]
+obtained from the identity with respect to </B></B></B><IMG
+ WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.gif"
+ ALT="$\ z $"><B><B><B>:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+g_{is}(z)\ +\ [(s,\Lambda)- \Lambda_i]\ \psi_{is}(z)\ = \ \varphi(z+\psi(z))
+\ +\ \sigma_i \psi_{(i+1) s}\ -
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="507" HEIGHT="39"
+ SRC="img211.gif"
+ ALT="\begin{displaymath}g_{is}(z)\ +\ [(s,\Lambda)- \Lambda_i]\ \psi_{is}(z)\ = \ \varphi(z+\psi(z))
+\ +\ \sigma_i \psi_{(i+1) s}\ - \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+-\ \sum_{k=1}^{n} {\sigma_{k+1}\ {{\partial \psi_i(z)}\over {\partial z_k}}}
+\ -\  \sum_{k=1}^{n}\ {\sum_{\vert R \vert + \vert Q \vert =\vert s \vert +1}
+{{\partial \psi_{iR}(z)}\over {\partial z_k}} g_{kQ} }\ \ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="439" HEIGHT="64"
+ SRC="img212.gif"
+ ALT="\begin{displaymath}-\ \sum_{k=1}^{n} {\sigma_{k+1}\ {{\partial \psi_i(z)}\over {...
+...+1}
+{{\partial \psi_{iR}(z)}\over {\partial z_k}} g_{kQ} }\ \ ,\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>where </B></B></B>
+<!-- MATH: $\ \sigma_i\ -\$ -->
+<IMG
+ WIDTH="58" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img213.gif"
+ ALT="$\ \sigma_i\ -\ $"><B><B><B> nondiagonal elements of Jordan cells.
+</B></B></B>
+<P>
+<B><B><B>Nonlinear normalization is executed in both numerical and symbolic forms.
+</B></B></B>
+<DIV ALIGN="CENTER"><B><B><B>
+<B>4. Examples.</B></B></B></DIV>
+<B>
+<P>
+<B><B><B>With the help of packages in a symbolic form the authors investigated rather
+large number of concrete mechanical systems. In particular:
+</B></B></B>
+<P>
+<B><B><B>
+- nonlinear equations of motion of a series of robotic systems are obtained
+(for example, robot - manipulator of 6 links, walking platform on four
+legs with two degrees of freedom each) ;
+</B></B></B>
+<P>
+<B><B><B>
+- problems of dynamics and stability of steady motions in space
+systems were considered (for example, satellite with a gravitational
+system of the stabilization on circular orbit are considered at various
+control laws by a gravitational stabilizer, gyroscopic frame in Newtonean
+central field of forces );
+</B></B></B>
+<P>
+<B><B><B>
+- linear equations of motion for a mechanical system with 32 degrees of
+freedom consisting of 20 absolutely of rigid bodies are constructed.
+</B></B></B>
+<P>
+<B><B><B>Application of the software system "Normalization" has  allowed
+us:
+</B></B></B>
+<P>
+<B><B><B>
+- to   investigate   stability   of   a  nonlinear  autonomous
+mechanical system with two pairs of purely imaginary multiple roots
+(with two groups of solutions);
+</B></B></B>
+<P>
+<B><B><B>
+- to  solve  the  problem  of  stabilization of one mechanical
+Hamilton-type system  with  the  resonance  of  1:3  and  with
+nonlinear control.
+</B></B></B>
+<P>
+<B><B><B>Let us illustrate our reasoning with a few applied examples
+of usage of the above software.
+</B></B></B>
+<P>
+<B><B><B><B>Example 4.1.</B> 
+Let us consider gyroscopic frame, placed in Newtonean central
+field of forces.
+The mechanical system consists of a carrying frame
+(a body with a fixed point) and two identical connected two-degree gyroscopes,
+symmetrically installed in a frame (Fig. 4).
+Masses and the moments of inertia of housing of gyroscopes are neglected.
+<BR>
+<IMG
+ WIDTH="790" HEIGHT="785" ALIGN="BOTTOM" BORDER="0"
+ SRC="img214.gif"
+ ALT="\begin{picture}(400,300)
+\put(20,300){\special{em:graph gyrorama.pcx}}
+\end{picture}">
+<BR></B></B></B>
+<P>
+<B><B><B>Figure 4.
+</B></B></B>
+<P>
+<B><B><B>Before exposition of input information about the system we note that
+the matrix of rotation </B></B></B>
+<!-- MATH: $\ \alpha^ {ij} \$ -->
+<IMG
+ WIDTH="44" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img215.gif"
+ ALT="$\ \alpha^ {ij} \ $"><B><B><B> and relative angular velocities
+of bodies </B></B></B>
+<!-- MATH: $\ \mbox {\boldmath$\omega$ }^{j}_{i}\$ -->
+<IMG
+ WIDTH="41" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\mbox{\boldmath$\omega$ }^{j}_{i}\ $"><B><B><B> are not required
+to be introduce. They are calculated automatically on specific "sequence of
+rotations". Hereby we specify :
+</B></B></B>
+<P>
+<B><B><B>
+a) Number of axis of rotation (one of numbers 0, 1, 2, 3),
+i.e. 1 - the rotation is carried out around the axis </B></B></B>
+<!-- MATH: $\ Ox_ {i}\ ;\$ -->
+<IMG
+ WIDTH="63" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img216.gif"
+ ALT="$\ Ox_ {i}\ ;\ $"><B><B><B>2 - around the axis </B></B></B>
+<!-- MATH: $\ Oy_ {i} \ ;\$ -->
+<IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img217.gif"
+ ALT="$\ Oy_ {i} \ ;\ $"><B><B><B> 3 - around the axis </B></B></B>
+<!-- MATH: $\ Oz_{i}\ ;\$ -->
+<IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img218.gif"
+ ALT="$\ Oz_{i}\ ;\ $"><B><B><B>0 - there is no rotation;
+</B></B></B>
+<P>
+<B><B><B>
+b) angle of rotation.
+</B></B></B>
+<P>
+<B><B><B><U>Input data :</U>
+</B></B></B>
+<P>
+<B><B><B>
+Number of bodies in the system : </B></B></B><IMG
+ WIDTH="73" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img219.gif"
+ ALT="$\ N = 5\ $"><B><B><B>.
+</B></B></B>
+<P>
+<B><B><B>
+Body 1 is a frame. </B></B></B><IMG
+ WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img220.gif"
+ ALT="$\ M_1\ $"><B><B><B> is mass ;
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\bf r^{0}_{o_1}} = \left( \begin{array}{c} 0 \\0 \\R \end{array} \right)\ ;
+\ \ \ \ {\bf r^{1}_{c_1}} = \left(
+\begin{array}{c} x_c \\y_c \\z_c \end{array} \right)\ ;
+\ \ \ \ {\bf v^{0}_{o_1}} = \left(
+\begin{array}{c} 0 \\0 \\0 \end{array} \right)\ ;
+\ \ \ \ \mbox{\boldmath $\omega$}_{1} = \left( \begin{array}{c}
+\Omega_1 \\\Omega_2 \\\Omega_3 \end{array} \right)\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="577" HEIGHT="85"
+ SRC="img221.gif"
+ ALT="\begin{displaymath}{\bf r^{0}_{o_1}} = \left( \begin{array}{c} 0 \\ 0 \\ R \end{...
+...ay}{c}
+\Omega_1 \\ \Omega_2 \\ \Omega_3 \end{array} \right)\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\rm the\ inertia\ tensor\ :}\hskip 1.5cm
+\Theta^{o_1}_{*} = \left( \begin{array}{ccc}
+A_{1} & 0 & 0 \\0 & B_{1} & 0 \\0 & 0 & C_{1} \end{array} \right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="433" HEIGHT="85"
+ SRC="img222.gif"
+ ALT="\begin{displaymath}{\rm the\ inertia\ tensor\ :}\hskip 1.5cm
+\Theta^{o_1}_{*} = ...
+... & 0 & 0 \\ 0 & B_{1} & 0 \\ 0 & 0 & C_{1} \end{array} \right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>"sequence of rotations" :
+</B></B></B>
+<!-- MATH: $\ \ 3\ ,\ \psi\ ;\ 1\ ,\ \theta\ ;\ 3\ ,\ \varphi\$ -->
+<IMG
+ WIDTH="199" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img223.gif"
+ ALT="$\ \ 3\ ,\ \psi\ ;\ 1\ ,\ \theta\ ;\ 3\ ,\ \varphi\ $"><B><B><B>.
+</B></B></B>
+<P>
+<B><B><B>
+Body 2 is the housing of the first gyroscope, it is connected to the
+frame. </B></B></B>
+<!-- MATH: $\ M_2 = 0\$ -->
+<IMG
+ WIDTH="82" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img224.gif"
+ ALT="$\ M_2 = 0\ $"><B><B><B>;
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\bf r^{1}_{o_2}} = \left( \begin{array}{c} 0 \\0 \\l \end{array} \right)\ ;
+\ \ \ \ {\bf r^{2}_{c_2}} = {\bf v^{1}_{o_2}} =
+\left( \begin{array}{c} 0 \\0 \\0 \end{array} \right)\ ;
+\ \ \
+\Theta^{o_2}_{*} = \left( \begin{array}{ccc}
+0 & 0 & 0 \\0 & 0 & 0 \\0 & 0 & 0 \end{array} \right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="510" HEIGHT="85"
+ SRC="img225.gif"
+ ALT="\begin{displaymath}{\bf r^{1}_{o_2}} = \left( \begin{array}{c} 0 \\ 0 \\ l \end{...
+...}{ccc}
+0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{array} \right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>"sequence of rotations" :
+</B></B></B>
+<!-- MATH: $\ \ 1\ ,\ \delta\$ -->
+<IMG
+ WIDTH="66" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img226.gif"
+ ALT="$\ \ 1\ ,\ \delta\ $"><B><B><B>.
+</B></B></B>
+<P>
+<B><B><B>
+Body 3 is the rotor of the first gyroscope, it is connected to the second body.
+</B></B></B><IMG
+ WIDTH="36" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img227.gif"
+ ALT="$\ m\ $"><B><B><B> is mass of a rotor;
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\bf r^{2}_{o_3}} = {\bf r^{3}_{c_3}} = {\bf v^{2}_{o_3}} =
+\left( \begin{array}{c} 0 \\0 \\0 \end{array} \right)\ ;
+\hskip 1cm
+\Theta^{o_3}_{*} = \left( \begin{array}{ccc}
+A_3 & 0 & 0 \\0 & A_3 & 0 \\0 & 0 & C_3 \end{array} \right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="475" HEIGHT="85"
+ SRC="img228.gif"
+ ALT="\begin{displaymath}{\bf r^{2}_{o_3}} = {\bf r^{3}_{c_3}} = {\bf v^{2}_{o_3}} =
+\...
+...
+A_3 & 0 & 0 \\ 0 & A_3 & 0 \\ 0 & 0 & C_3 \end{array} \right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>"sequence of rotations" :
+</B></B></B>
+<!-- MATH: $\ \ 3\ ,\ \beta_1\$ -->
+<IMG
+ WIDTH="76" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img229.gif"
+ ALT="$\ \ 3\ ,\ \beta_1\ $"><B><B><B>.
+</B></B></B>
+<P>
+<B><B><B>
+Body 4 is the housing of the second gyroscope, it is connected to a
+frame. </B></B></B>
+<!-- MATH: $\ M_4 = 0\$ -->
+<IMG
+ WIDTH="82" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img230.gif"
+ ALT="$\ M_4 = 0\ $"><B><B><B>;
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\bf r^{1}_{o_4}} = \left( \begin{array}{c} 0 \\0 \\-l \end{array} \right)\ ;
+\ \ \ \ {\bf r^{4}_{c_4}} = {\bf v^{1}_{o_4}} =
+\left( \begin{array}{c} 0 \\0 \\0 \end{array} \right)\ ;
+\hskip 1cm
+\Theta^{o_4}_{*} = \left( \begin{array}{ccc}
+0 & 0 & 0 \\0 & 0 & 0 \\0 & 0 & 0 \end{array} \right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="550" HEIGHT="85"
+ SRC="img231.gif"
+ ALT="\begin{displaymath}{\bf r^{1}_{o_4}} = \left( \begin{array}{c} 0 \\ 0 \\ -l \end...
+...}{ccc}
+0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{array} \right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>"sequence of rotations" :
+</B></B></B>
+<!-- MATH: $\ \ 1\ ,\ -\delta\$ -->
+<IMG
+ WIDTH="82" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img232.gif"
+ ALT="$\ \ 1\ ,\ -\delta\ $"><B><B><B>.
+</B></B></B>
+<P>
+<B><B><B>
+Body 5 is the rotor of the second gyroscope, it is connected to the fourth body.
+</B></B></B><IMG
+ WIDTH="36" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img227.gif"
+ ALT="$\ m\ $"><B><B><B> is mass of a rotor;
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\bf r^{4}_{o_5}} = {\bf r^{5}_{c_5}} = {\bf v^{4}_{o_5}} =
+\left( \begin{array}{c} 0 \\0 \\0 \end{array} \right)\ ;
+\hskip 1cm
+\Theta^{o_5}_{*} = \left( \begin{array}{ccc}
+A_3 & 0 & 0 \\0 & A_3 & 0 \\0 & 0 & C_3 \end{array} \right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="475" HEIGHT="85"
+ SRC="img233.gif"
+ ALT="\begin{displaymath}{\bf r^{4}_{o_5}} = {\bf r^{5}_{c_5}} = {\bf v^{4}_{o_5}} =
+\...
+...
+A_3 & 0 & 0 \\ 0 & A_3 & 0 \\ 0 & 0 & C_3 \end{array} \right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>"sequence of rotations" :
+</B></B></B>
+<!-- MATH: $\ \ 3\ ,\ \beta_2\$ -->
+<IMG
+ WIDTH="76" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img234.gif"
+ ALT="$\ \ 3\ ,\ \beta_2\ $"><B><B><B>.
+</B></B></B>
+<P>
+<B><B><B>
+<U>Program output :</U>
+</B></B></B>
+<P>
+<B><B><B>
+Matrices of rotation :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\alpha^{01} = \left( \begin{array}{ccc}
+(\cos\varphi\cos\psi-\sin\varphi\sin\psi\cos\theta) &
+(\cos\varphi\sin\psi+\sin\varphi\cos\psi\cos\theta) &
+\sin\theta\sin\varphi \\
+(-\sin\varphi\cos\psi-\cos\varphi\cos\theta\sin\psi) &
+(\cos\varphi\cos\theta\cos\psi-\sin\varphi\sin\psi) &
+sin\theta\cos\varphi \\
+\sin\theta\sin\psi & -\cos\psi\sin\theta & \cos\theta \end{array} \right)\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="753" HEIGHT="85"
+ SRC="img235.gif"
+ ALT="\begin{displaymath}\alpha^{01} = \left( \begin{array}{ccc}
+(\cos\varphi\cos\psi-...
+...\psi & -\cos\psi\sin\theta & \cos\theta \end{array} \right)\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\alpha^{12} = \left( \begin{array}{ccc}
+1 & 0 & 0 \\0 & \cos\delta & \sin\delta \\0 & -\sin\delta & \cos\delta
+\end{array} \right)\ ;
+\ \ \ \
+\alpha^{23} = \left( \begin{array}{ccc}
+\cos\beta_1 & \sin\beta_1 & 0 \\-\sin\beta_1 & \cos\beta_1 & 0 \\
+0 & 0 & 1 \end{array} \right)\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="550" HEIGHT="85"
+ SRC="img236.gif"
+ ALT="\begin{displaymath}\alpha^{12} = \left( \begin{array}{ccc}
+1 & 0 & 0 \\ 0 & \cos...
+...\beta_1 & \cos\beta_1 & 0 \\
+0 & 0 & 1 \end{array} \right)\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\alpha^{14} = \left( \begin{array}{ccc}
+1 & 0 & 0 \\0 & \cos\delta & -\sin\delta \\0 & \sin\delta & \cos\delta
+\end{array} \right)\ ;
+\ \ \ \
+\alpha^{45} = \left( \begin{array}{ccc}
+\cos\beta_2 & \sin\beta_2 & 0 \\-\sin\beta_2 & \cos\beta_2 & 0 \\
+0 & 0 & 1 \end{array} \right)\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="550" HEIGHT="85"
+ SRC="img237.gif"
+ ALT="\begin{displaymath}\alpha^{14} = \left( \begin{array}{ccc}
+1 & 0 & 0 \\ 0 & \cos...
+...\beta_2 & \cos\beta_2 & 0 \\
+0 & 0 & 1 \end{array} \right)\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>
+Relative angular velocities :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\mbox{\boldmath $\omega$}^{1}_{2} = \left( \begin{array}{c}
+\dot \delta \\0 \\0 \end{array} \right)\ ;
+\ \ \ \
+\ \ \ \ \mbox{\boldmath $\omega$}^{2}_{3} = \left( \begin{array}{c}
+0 \\0 \\\dot \beta_1 \end{array} \right)\ ;
+\ \ \ \ \mbox{\boldmath $\omega$}^{1}_{4} = \left( \begin{array}{c}
+-\dot \delta \\0 \\0 \end{array} \right)\ ;
+\ \ \ \
+\mbox{\boldmath $\omega$}^{4}_{5} = \left( \begin{array}{c}
+0 \\0 \\\dot \beta_2 \end{array} \right)\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="581" HEIGHT="85"
+ SRC="img238.gif"
+ ALT="\begin{displaymath}\mbox{\boldmath $\omega$}^{1}_{2} = \left( \begin{array}{c}
+\...
+...\begin{array}{c}
+0 \\ 0 \\ \dot \beta_2 \end{array} \right)\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>
+The kinetic energy of the system :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+T = {1\over 2}[ A \Omega^{2}_{1}+ B \Omega^{2}_{2}+ C \Omega^{2}_{3} +
+2A_{3}\dot{\delta }^{2}+C_{3}(\dot{\beta }^{2}_{1} + \dot{\beta }^{2}_{2}) ]
++ C_{3}[\Omega _{2}\sin \delta (\dot{\beta }_{2} - \dot{\beta }_{1}) +
+\Omega_{3}\cos \delta (\dot{\beta }_{1} + \dot{\beta }_{2})]
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="704" HEIGHT="49"
+ SRC="img239.gif"
+ ALT="\begin{displaymath}T = {1\over 2}[ A \Omega^{2}_{1}+ B \Omega^{2}_{2}+ C \Omega^...
+...+
+\Omega_{3}\cos \delta (\dot{\beta }_{1} + \dot{\beta }_{2})] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>
+£¤¥ </B></B></B>
+<!-- MATH: $\ \ A = A_{1}+ 2ml^{2}+ 2A_{3}\ ;\ \
+\ \ C = C_{1}+ 2A_{3}\sin^{2}\delta  + 2C_{3}\cos^{2}\delta\ ;$ -->
+<IMG
+ WIDTH="530" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img240.gif"
+ ALT="$\ \ A = A_{1}+ 2ml^{2}+ 2A_{3}\ ;\ \
+\ \ C = C_{1}+ 2A_{3}\sin^{2}\delta + 2C_{3}\cos^{2}\delta\ ; $"><B><B>
+<P>
+<B></B>
+<!-- MATH: $\hskip 1.2cm
+B = B_{1}+ 2ml^{2}+ 2A_{3}\cos ^{2}\delta  + 2C_{3}\sin ^{2}\delta$ -->
+<IMG
+ WIDTH="402" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img241.gif"
+ ALT="$\hskip 1.2cm
+B = B_{1}+ 2ml^{2}+ 2A_{3}\cos ^{2}\delta + 2C_{3}\sin ^{2}\delta $"><B><B>
+<P>
+<B><B>
+<!-- MATH: $\Omega_ {1},\ \Omega_ {2},\ \Omega_{3} \$ -->
+<IMG
+ WIDTH="109" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img242.gif"
+ ALT="$ \Omega_ {1},\ \Omega_ {2},\ \Omega_{3} \ $"><B><B><B> are the projections of
+absolute angular velocity of the frame on the axes
+</B></B></B>
+<!-- MATH: $\ x_ {1},\ y_ {1},\ z_ {1} \$ -->
+<IMG
+ WIDTH="103" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img243.gif"
+ ALT="$\ x_ {1},\ y_ {1},\ z_ {1} \ $"><B><B><B>. They are selected as quasi-velocities.
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\Omega_1 = \dot \psi\sin\theta\sin\varphi+\dot \theta\cos\varphi\ ;
+\ \ \ \Omega_2 = \dot \psi\sin\theta\cos\varphi-\dot \theta\sin\varphi\ ;
+\ \ \ \Omega_3 = \dot \psi\cos\theta + \dot \varphi\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="623" HEIGHT="36"
+ SRC="img244.gif"
+ ALT="\begin{displaymath}\Omega_1 = \dot \psi\sin\theta\sin\varphi+\dot \theta\cos\var...
+...rphi\ ;
+\ \ \ \Omega_3 = \dot \psi\cos\theta + \dot \varphi\ , \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>The remaining quasi-velocities coincide with generalized velocities
+</B></B></B>
+<!-- MATH: $\ \dot{\delta }\ ,\ \dot{\beta }_{1}\ ,\ \dot{\beta }_{2}\$ -->
+<IMG
+ WIDTH="110" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img245.gif"
+ ALT="$\ \dot{\delta }\ ,\ \dot{\beta }_{1}\ ,\ \dot{\beta }_{2}\ $"><B><B><B>.
+</B></B></B>
+<P>
+<B><B><B>
+Approximate force function </B></B></B>
+<!-- MATH: $\ {\cal U} \$ -->
+<IMG
+ WIDTH="27" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img96.gif"
+ ALT="$\ { \cal U}$"><B><B><B> (1.1.13) in Newtonean field
+of gravitation to the fixed center </B></B></B><IMG
+ WIDTH="28" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.gif"
+ ALT="$\ O$"><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\cal U} = {3\nu \over R^{3}} \ [\ {1 \over 6} (A_{1}+B_{1}+C_{1})
+- {1 \over 2} (A_{1}\gamma ^{2}_{1} + B_{1}\gamma ^{2}_{2} +
+C_{1}\gamma ^{2}_{3}) + {1 \over 3} (2A_{3} + C_{3}- ml^{2}) -
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="581" HEIGHT="49"
+ SRC="img247.gif"
+ ALT="\begin{displaymath}{\cal U} = {3\nu \over R^{3}} \ [\ {1 \over 6} (A_{1}+B_{1}+C...
+...C_{1}\gamma ^{2}_{3}) + {1 \over 3} (2A_{3} + C_{3}- ml^{2}) - \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+- A_{3}(\gamma^{2}_{1} + \gamma^{2}_{2}
+\cos^{2}\delta  + \gamma^{2}_{3}\sin^{2}\delta ) - C_{3}(\gamma^{2}_{2}
+\sin ^{2}\delta  + \gamma ^{2}_{3}\cos ^{2}\delta ) + ml^{2}
+\gamma ^{2}_{3}\ ] -
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="574" HEIGHT="37"
+ SRC="img248.gif"
+ ALT="\begin{displaymath}- A_{3}(\gamma^{2}_{1} + \gamma^{2}_{2}
+\cos^{2}\delta + \gam...
+...\gamma ^{2}_{3}\cos ^{2}\delta ) + ml^{2}
+\gamma ^{2}_{3}\ ] - \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+- M_{1}{\nu\over R^{2}} (x_{c}\gamma _{1} + y_{c}\gamma _{2}+ z_{c}\gamma _{3})
++ (M_{1}+ 2m) {\nu \over R} + const\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="451" HEIGHT="46"
+ SRC="img249.gif"
+ ALT="\begin{displaymath}- M_{1}{\nu\over R^{2}} (x_{c}\gamma _{1} + y_{c}\gamma _{2}+ z_{c}\gamma _{3})
++ (M_{1}+ 2m) {\nu \over R} + const\ . \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>Here </B></B></B>
+<!-- MATH: $\ \gamma_{1} = \sin \varphi \sin \theta \ ,
+\ \ \gamma_{2} = \sin\theta \cos \varphi\ ,
+\ \ \gamma_{3} = \cos \theta \$ -->
+<IMG
+ WIDTH="410" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img250.gif"
+ ALT="$\ \gamma_{1} = \sin \varphi \sin \theta \ ,
+\ \ \gamma_{2} = \sin\theta \cos \varphi\ ,
+\ \ \gamma_{3} = \cos \theta \ $"><B><B><B> are direction cosines of axis
+</B></B></B><IMG
+ WIDTH="44" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img251.gif"
+ ALT="$\ Oz\ $"><B><B><B> with axes </B></B></B>
+<!-- MATH: $\ x_{1},\ y_{1},\ z_{1}\$ -->
+<IMG
+ WIDTH="103" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img243.gif"
+ ALT="$\ x_ {1},\ y_ {1},\ z_ {1} \ $"><B><B><B>;
+</B></B></B>
+<P>
+<B><B><B>
+The force function of elastic forces of the spring device :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\cal U}(\delta )\ =\ -2\ \chi\  \sin^{2} {\delta \over 2}\ \ ,
+\hskip 1.2cm {\rm where } \hskip 0.8cm \chi\ = \ const\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="455" HEIGHT="50"
+ SRC="img252.gif"
+ ALT="\begin{displaymath}{\cal U}(\delta )\ =\ -2\ \chi\ \sin^{2} {\delta \over 2}\ \ ,
+\hskip 1.2cm {\rm where } \hskip 0.8cm \chi\ = \ const\ . \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>Further four first integral of motion equations (integral of an energy
+and three ignorable on coordinates </B></B></B>
+<!-- MATH: $\ \psi\ ,\ \beta_1\ ,\ \beta_2\$ -->
+<IMG
+ WIDTH="114" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img253.gif"
+ ALT="$\ \psi\ ,\ \beta_1\ ,\ \beta_2\ $"><B><B><B>) are found, 
+equations of steady motions
+and sufficient conditions of stability of steady motions are obtained
+by computer [17].
+All the expressions obtained by computer have the symbolic form.
+</B></B></B>
+<P>
+<B><B><B><B>Example 4.2.</B> 
+The modelling of the electrical circuit consisting of two parts 
+connected inductively (Fig. 5).
+</B></B></B>
+<DIV ALIGN="CENTER"><B><B><B>
+<BR>
+<IMG
+ WIDTH="800" HEIGHT="291" ALIGN="BOTTOM" BORDER="0"
+ SRC="img254.gif"
+ ALT="\begin{picture}(400,100)
+\put(40,140){\special{em:graph chain2-2.pcx} }
+\end{picture}">
+<BR></B></B></B>
+<P>
+<B><B><B>Figure 5.
+</B></B></B></DIV><B><B><B>1, 2, 3, 4  are the numbers of the circuit's nodes. The values in the
+interior parentheses are the branches </B></B></B><IMG
+ WIDTH="50" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.gif"
+ ALT="$\{i,j\}$"><B><B><B> and the elements of these
+ones.
+</B></B></B>
+<P>
+<B><B><B><U>Input data.</U>
+</B></B></B>
+<P>
+<B><B><B>The number of parts of the electrical circuit connected inductively: 2
+</B></B></B>
+<P>
+<B><B><B>The first part of the electrical circuit:
+</B></B></B>
+<P>
+<B><B>
+<!-- MATH: $\hskip 0.2cm \{\{\{1, 2\},\ \{L_1, C_1, R_1, e_1\}\},\ \{\{1, 2\},\ \{C_5\}\},$ -->
+<IMG
+ WIDTH="383" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img256.gif"
+ ALT="$\hskip 0.2cm \{\{\{1, 2\},\ \{L_1, C_1, R_1, e_1\}\},\ \{\{1, 2\},\ \{C_5\}\},$"><B></B>
+<!-- MATH: $\{\{1,\ 2\},\ \{C_2, L_2, R_2, M\}\}\}$ -->
+<IMG
+ WIDTH="238" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img257.gif"
+ ALT="$\{\{1,\ 2\},\ \{C_2, L_2, R_2, M\}\}\}$"><B><B>
+<P>
+<B><B><B>The second part of the electrical circuit:
+</B></B></B>
+<P>
+<B><B>
+<!-- MATH: $\hskip 0.2cm \{\{\{3, 4\},\ \{R_3, L_3, C_3, M\}\},$ -->
+<IMG
+ WIDTH="247" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img258.gif"
+ ALT="$\hskip 0.2cm \{\{\{3, 4\},\ \{R_3, L_3, C_3, M\}\},$"><B></B>
+<!-- MATH: $\{\{3, 4\},\ \{e_2\}\},\ \{\{3, 4\},\ \{C_4, L_4, R_4\}\}\}$ -->
+<IMG
+ WIDTH="338" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img259.gif"
+ ALT="$\{\{3, 4\},\ \{e_2\}\},\ \{\{3, 4\},\ \{C_4, L_4, R_4\}\}\}$"><B><B>
+<P>
+<B><B><B>The order of path-tracing the graph:
+</B></B></B>
+<P>
+<B><B><B>"+" - to trace the graph's vertices in the direction of 
+growth of their numbers ("-" - inverse order).
+</B></B></B>
+<P>
+<B><B><B><U>Program output.</U>
+</B></B></B>
+<P>
+<B><B><B>The Lagrange's function:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{1}{2} L_1 (\dot q_1 - \dot q_2)^2 +
+\frac{1}{2} L_2 \dot q_2^2 + M \dot q_2 (\dot q_3 - \dot q_4) +
+ \frac{1}{2} L_3 (\dot q_3 - \dot q_4)^2  + \frac{1}{2} L_4 \dot q_4^2 -
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="552" HEIGHT="49"
+ SRC="img260.gif"
+ ALT="\begin{displaymath}\frac{1}{2} L_1 (\dot q_1 - \dot q_2)^2 +
+\frac{1}{2} L_2 \d...
+...{2} L_3 (\dot q_3 - \dot q_4)^2 + \frac{1}{2} L_4 \dot q_4^2 -
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+-\frac{q_1^2}{2 C_5} + e_1 (q_1 - q_2) - \frac{(q_1 - q_2)^2}{2 C_1} -
+\frac{q_2^2}{2 C_2} - e_2 q_3 - \frac{(q_3 - q_4)^2}{2 C_3} -
+ \frac{q_4^2}{2 C_4}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="556" HEIGHT="55"
+ SRC="img261.gif"
+ ALT="\begin{displaymath}-\frac{q_1^2}{2 C_5} + e_1 (q_1 - q_2) - \frac{(q_1 - q_2)^2}...
+...- e_2 q_3 - \frac{(q_3 - q_4)^2}{2 C_3} -
+\frac{q_4^2}{2 C_4}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>The Rayleigh's function:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{1}{2} R_1 (\dot q_1 - \dot q_2)^2 + \frac{1}{2} R_2 \dot q_2^2 +
+\frac{1}{2} R_3 (\dot q_3 - \dot q_4)^2 + \frac{1}{2} R_4 \dot q_4^2
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="410" HEIGHT="49"
+ SRC="img262.gif"
+ ALT="\begin{displaymath}\frac{1}{2} R_1 (\dot q_1 - \dot q_2)^2 + \frac{1}{2} R_2 \do...
+...1}{2} R_3 (\dot q_3 - \dot q_4)^2 + \frac{1}{2} R_4 \dot q_4^2
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>The differential equations of the electrical circuit in Lagrange's form
+ of 2-d kind:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+L_1 \ddot q_1 - L_1 \ddot q_2 + R_1 \dot q_1 - R_1 \dot q_2 +
+(\frac{1}{C_1} + \frac{1}{C_5}) q_1 - \frac{q_2}{C_1} - e_1 = 0
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="484" HEIGHT="52"
+ SRC="img263.gif"
+ ALT="\begin{displaymath}L_1 \ddot q_1 - L_1 \ddot q_2 + R_1 \dot q_1 - R_1 \dot q_2 +
+(\frac{1}{C_1} + \frac{1}{C_5}) q_1 - \frac{q_2}{C_1} - e_1 = 0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+-L_1 \ddot q_1 + (L_1 + L_2) \ddot q_2 + M \ddot q_3 - M \ddot q_4 -
+R_1 \dot q_1 + (R_1 + R_2) \dot q_2 -
+  \frac{q_1}{C_1} +
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="550" HEIGHT="49"
+ SRC="img264.gif"
+ ALT="\begin{displaymath}-L_1 \ddot q_1 + (L_1 + L_2) \ddot q_2 + M \ddot q_3 - M \ddot q_4 -
+R_1 \dot q_1 + (R_1 + R_2) \dot q_2 -
+\frac{q_1}{C_1} +
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
++ (\frac{1}{C_1} + \frac{1}{C_2}) q_2 + e_1 = 0
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="198" HEIGHT="52"
+ SRC="img265.gif"
+ ALT="\begin{displaymath}+ (\frac{1}{C_1} + \frac{1}{C_2}) q_2 + e_1 = 0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+L_3 \ddot q_3 - L_3 \ddot q_4 + M \ddot q_2 +  R_3 \dot q_3 -
+R_3 \dot q_4 + \frac{q_3}{C_3} - \frac{q_4}{C_3} + e_2  = 0
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="464" HEIGHT="49"
+ SRC="img266.gif"
+ ALT="\begin{displaymath}L_3 \ddot q_3 - L_3 \ddot q_4 + M \ddot q_2 + R_3 \dot q_3 -
+R_3 \dot q_4 + \frac{q_3}{C_3} - \frac{q_4}{C_3} + e_2 = 0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+- L_3 \ddot q_3 + (L_3 + L_4) \ddot q_4 - M \ddot q_2 -
+R_3 \dot q_3 + (R_3 + R_4) \dot q_4 -
+  \frac{q_3}{C_3} + (\frac{1}{C_3} + \frac{1}{C_4}) q_4 = 0
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="576" HEIGHT="52"
+ SRC="img267.gif"
+ ALT="\begin{displaymath}- L_3 \ddot q_3 + (L_3 + L_4) \ddot q_4 - M \ddot q_2 -
+R_3 ...
+...4 -
+\frac{q_3}{C_3} + (\frac{1}{C_3} + \frac{1}{C_4}) q_4 = 0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B><B>Example 4.3.</B> In the process of  investigation  of  the  phase
+space of  a  mechanical or electric system there often appears
+the need to solve algebraic equations (or those  reducible  to
+them). In  the contemporary universal computer algebra systems
+there exists a tool for solving such problems, which allows to
+simplify such systems. Gr&#246;bner's bases or their analogies may be
+considered as such tools.
+</B></B></B>
+<P>
+<B><B><B>In applied problems, direct usage of Gr&#246;bner's bases does
+not always entail in satisfactory result. For example, for the
+systems containing  parameters  the   investigation   requires
+greater efforts  and  does not guarantee a success even when a
+computer is used.  In such situations  the  following  technique  of
+analysis of algebraic systems with parameters may be useful.
+</B></B></B>
+<P>
+<B><B><B>Let a family of  solutions  be  known  for  an  algebraic
+system. The  existence  of such a family in concrete cases may
+be grounded by the mechanical or  physical  character  of  the
+problem. We  take  an  interest  in such solutions of the
+system which (i) contain some elements of this family  or (ii) adjunct
+to the family.  Such problems arise in different directions of
+bifurcation theory.  Now,  let there be  given a system  of
+algebraic equations with parameters
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f_{i}\ (\ x_{1},\ldots,x_{n},\ \lambda_{1},\ldots,\lambda_{k}\ )\ =\ 0 \ \ \ \
+\ \ \ (i=1,\ldots,n) \eqno(4.3.1)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="536" HEIGHT="37"
+ SRC="img268.gif"
+ ALT="\begin{displaymath}f_{i}\ (\ x_{1},\ldots,x_{n},\ \lambda_{1},\ldots,\lambda_{k}\ )\ =\ 0 \ \ \ \
+\ \ \ (i=1,\ldots,n) \eqno(4.3.1)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>for which there is a known family of solutions </B></B></B>
+<!-- MATH: $\ x_{1}^0,\ldots,x_{n-1}^0\$ -->
+<IMG
+ WIDTH="120" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img269.gif"
+ ALT="$\ x_{1}^0,\ldots,x_{n-1}^0\ $"><B><B><B>with parameters </B></B></B><IMG
+ WIDTH="39" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img270.gif"
+ ALT="$\ x_{n}\ $"><B><B><B> for some relationships between
+</B></B></B>
+<!-- MATH: $\ \lambda_{1},\ldots,\lambda_{k}$ -->
+<IMG
+ WIDTH="95" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img271.gif"
+ ALT="$\ \lambda_{1},\ldots,\lambda_{k}$"><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f_{i}\ (\ x_{1}^0,\ldots,x_{n-1}^0,\ x_{n},
+\ \lambda_{1},\ldots,\lambda_{k}\ )\ =\ 0 \ \ \ \
+\ \ (i=1,\ldots,n)\ . \eqno(4.3.2)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="565" HEIGHT="39"
+ SRC="img272.gif"
+ ALT="\begin{displaymath}f_{i}\ (\ x_{1}^0,\ldots,x_{n-1}^0,\ x_{n},
+\ \lambda_{1},\ld...
+...lambda_{k}\ )\ =\ 0 \ \ \ \
+\ \ (i=1,\ldots,n)\ . \eqno(4.3.2)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>Assume that the rank of the Jacoby matrix for the system
+(2) with respect to
+</B></B></B>
+<!-- MATH: $\ \lambda_{1},\ldots,\lambda_{k}\$ -->
+<IMG
+ WIDTH="95" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img271.gif"
+ ALT="$\ \lambda_{1},\ldots,\lambda_{k}$"><B><B><B> is  </B></B></B><IMG
+ WIDTH="62" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img273.gif"
+ ALT="$\ l< k\ $"><B><B><B> and
+consider the system of equations
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f_{i}\ (\ x_{1}^0,\ldots,x_{n-1}^0,\ x_{n},\ \lambda_{1},\ldots,\lambda_{k}\ )\ =\ 0 \ \ \ \
+\ \ \ (i=1,\ldots,n)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="491" HEIGHT="39"
+ SRC="img274.gif"
+ ALT="\begin{displaymath}f_{i}\ (\ x_{1}^0,\ldots,x_{n-1}^0,\ x_{n},\ \lambda_{1},\ldots,\lambda_{k}\ )\ =\ 0 \ \ \ \
+\ \ \ (i=1,\ldots,n)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\Delta = \tilde \varphi\
+(\ x_{1}^0,\ldots,x_{n-1}^0,\ x_{n},\lambda_{1},\ldots,\lambda_{k}\ )\ =\ 0\ ,
+\ \ \ \eqno(4.3.3)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="516" HEIGHT="39"
+ SRC="img275.gif"
+ ALT="\begin{displaymath}\Delta = \tilde \varphi\
+(\ x_{1}^0,\ldots,x_{n-1}^0,\ x_{n},\lambda_{1},\ldots,\lambda_{k}\ )\ =\ 0\ ,
+\ \ \ \eqno(4.3.3)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>
+where </B></B></B>
+<!-- MATH: $\ \Delta\ -$ -->
+<IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img276.gif"
+ ALT="$\ \Delta\ -$"><B><B><B> Jacobian with respect to </B></B></B>
+<!-- MATH: $\ x_{1},\ldots,x_{n}\$ -->
+<IMG
+ WIDTH="102" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img277.gif"
+ ALT="$\ x_{1},\ldots,x_{n}\ $"><B><B><B>for the system (1), which has been computed for the solutions of our family.
+It is assumed that it is not identically zero.
+</B></B></B>
+<P>
+<B><B><B>Analysis of the system  (3)  allows us to  find,  generally
+speaking, those relationships between
+</B></B></B>
+<!-- MATH: $\ \lambda_{1},\ldots,\lambda_{k}\$ -->
+<IMG
+ WIDTH="95" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img271.gif"
+ ALT="$\ \lambda_{1},\ldots,\lambda_{k}$"><B><B><B>,  for which the  Jacoby
+matrix's rank </B></B></B>
+<!-- MATH: $\parallel \partial f_{i}/\partial x_{j} \parallel$ -->
+<IMG
+ WIDTH="103" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img278.gif"
+ ALT="$ \parallel \partial f_{i}/\partial x_{j} \parallel $"><B><B><B>on the chosen family </B></B></B>
+<!-- MATH: $\ x_{1}^0,\ldots,x_{n-1}^0,\ x_{n}\$ -->
+<IMG
+ WIDTH="156" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img279.gif"
+ ALT="$\ x_{1}^0,\ldots,x_{n-1}^0,\ x_{n}\ $"><B><B><B>becomes smaller.
+</B></B></B>
+<P>
+<B><B><B>These  bifurcation  values  of  the  parameters  may   be
+substituted into  the initial system (1),  what allows
+to simplify it and find new solutions or their families.
+</B></B></B>
+<P>
+<B><B><B>The proposed procedure may successfully be employed,  for
+example, in  analysis  of   equations   of   stationarity   of
+mechanical systems' first integrals.
+</B></B></B>
+<P>
+<B><B><B>Consider a  concrete  example  of  application  of  above
+approach in  analysis  of  bifurcations in the neighbourhood of
+the family of permanent rotations  of  S.V.Kovalevskaya's  top
+about the vertical axis </B></B></B><IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img280.gif"
+ ALT="$\ x\ $"><B><B><B> [14].
+</B></B></B>
+<P>
+<B><B><B>To this end,  let us compose a complete linear bundle  of
+the problem's first integrals:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+K = H - \lambda_{1}V_{1}-\lambda_{2}{V_{2} \over 2} - \lambda_{3}{V_{3} \over 3},
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="262" HEIGHT="50"
+ SRC="img281.gif"
+ ALT="\begin{displaymath}K = H - \lambda_{1}V_{1}-\lambda_{2}{V_{2} \over 2} - \lambda_{3}{V_{3} \over 3},
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>where </B></B></B>
+<!-- MATH: $\ \lambda_{1},\ \lambda_{2},\ \lambda_{3}\ -$ -->
+<IMG
+ WIDTH="123" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img282.gif"
+ ALT="$\ \lambda_{1},\ \lambda_{2},\ \lambda_{3}\ -$"><B><B><B> constants,
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+H = 2p^2 + 2q^2 + r^2 +2x_{0}\gamma_{1}=2h\ , \ \ \ \ \
+V_{1} = 2p\gamma_{1} + 2q\gamma_{2} + r\gamma_{3}=m\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="578" HEIGHT="36"
+ SRC="img283.gif"
+ ALT="\begin{displaymath}H = 2p^2 + 2q^2 + r^2 +2x_{0}\gamma_{1}=2h\ , \ \ \ \ \
+V_{1} = 2p\gamma_{1} + 2q\gamma_{2} + r\gamma_{3}=m\ ,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V_{3} = \gamma_{1}^2 + \gamma_{2}^2 + \gamma_{3}^2 = 1\ , \ \ \
+V_{2}=(p^2 - q^2 - x_{0}\gamma_{1})^2 + (2pq - x_{0}\gamma_{2})^2=k^2\ .
+  \eqno(4.3.4)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="578" HEIGHT="65"
+ SRC="img284.gif"
+ ALT="\begin{displaymath}V_{3} = \gamma_{1}^2 + \gamma_{2}^2 + \gamma_{3}^2 = 1\ , \ \...
+...\gamma_{1})^2 + (2pq - x_{0}\gamma_{2})^2=k^2\ .
+\eqno(4.3.4)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>Now  write  the  steady-state  conditions  </B></B></B><IMG
+ WIDTH="37" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img285.gif"
+ ALT="$\ K\ $"><B><B><B> with
+respect to the  phase variables:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\partial K \over \partial p} = 2[(\lambda_{2}x_{0}p-\lambda_{1})\gamma_{1}+
+p + \lambda_{2}x_{0}q\gamma_{2} - \lambda_{2}p(p^2 + q^2)]=0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="500" HEIGHT="54"
+ SRC="img286.gif"
+ ALT="\begin{displaymath}{\partial K \over \partial p} = 2[(\lambda_{2}x_{0}p-\lambda_...
+... + \lambda_{2}x_{0}q\gamma_{2} - \lambda_{2}p(p^2 + q^2)]=0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\partial K \over \partial q} = 2[(\lambda_{2}x_{0}p-\lambda_{1})\gamma_{2}+
+q - \lambda_{2}x_{0}q\gamma_{1} - \lambda_{2}q(p^2 + q^2)]=0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="500" HEIGHT="54"
+ SRC="img287.gif"
+ ALT="\begin{displaymath}{\partial K \over \partial q} = 2[(\lambda_{2}x_{0}p-\lambda_...
+... - \lambda_{2}x_{0}q\gamma_{1} - \lambda_{2}q(p^2 + q^2)]=0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\partial K \over \partial \gamma_{1}} = -(\lambda_{3}+x_{0}^2\lambda_{2})\gamma_{1}+
+x_{0} -2\lambda_{1}p + \lambda_{2}x_{0}(p^2 - q^2)]=0\ ; \eqno(4.3.5)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="558" HEIGHT="54"
+ SRC="img288.gif"
+ ALT="\begin{displaymath}{\partial K \over \partial \gamma_{1}} = -(\lambda_{3}+x_{0}^...
+...2\lambda_{1}p + \lambda_{2}x_{0}(p^2 - q^2)]=0\ ; \eqno(4.3.5)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\partial K \over \partial \gamma_{2}} =
+-(\lambda_{3}+x_{0}^2\lambda_{2})\gamma_{2}-2q(\lambda_{1}-\lambda_{2}x_{0}p)=0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="384" HEIGHT="54"
+ SRC="img289.gif"
+ ALT="\begin{displaymath}{\partial K \over \partial \gamma_{2}} =
+-(\lambda_{3}+x_{0}^2\lambda_{2})\gamma_{2}-2q(\lambda_{1}-\lambda_{2}x_{0}p)=0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\partial K \over \partial r} = r - \lambda_{1}\gamma_{3}=0\ ; \ \ \ \ \
+{\partial K \over \partial \gamma_{3}} = -\lambda_{1}r - \lambda_{3}\gamma_{3}=0\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="424" HEIGHT="54"
+ SRC="img290.gif"
+ ALT="\begin{displaymath}{\partial K \over \partial r} = r - \lambda_{1}\gamma_{3}=0\ ...
+...rtial \gamma_{3}} = -\lambda_{1}r - \lambda_{3}\gamma_{3}=0\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>It  can be easily determined that the system of algebraic
+eqs. (4), (5) has the elements of the family of  the  body's
+permanent  rotations  about  its  vertical axis </B></B></B><IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img280.gif"
+ ALT="$\ x\ $"><B><B><B> in the
+capacity of its solutions:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\gamma_{1}=1\ ;\ \ \ p^0=\lambda_{1}^0=m\ ;
+\ \ \ q=r=\gamma_{2}=\gamma_{3}=0\ ; \ \ \
+  \lambda_{3}^0=x_{0}-2m^2\ . \eqno(4.3.6)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="573" HEIGHT="65"
+ SRC="img291.gif"
+ ALT="\begin{displaymath}\gamma_{1}=1\ ;\ \ \ p^0=\lambda_{1}^0=m\ ;
+\ \ \ q=r=\gamma...
+...gamma_{3}=0\ ; \ \ \
+\lambda_{3}^0=x_{0}-2m^2\ . \eqno(4.3.6)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>Having  substituted the solutions (6) into eqs.  (5),
+we obtain the condition for the parameters
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+p - \lambda_{1} + \lambda_{2}p(x_{0} - p^2)=0\ ; \ \ \
+x_{0} - 2\lambda_{1}p - \lambda_{3} - \lambda_{2}x_{0}(x_{0} - p^2)=0\ .
+  \eqno(4.3.7)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="570" HEIGHT="37"
+ SRC="img292.gif"
+ ALT="\begin{displaymath}p - \lambda_{1} + \lambda_{2}p(x_{0} - p^2)=0\ ; \ \ \
+x_{0}...
+...\lambda_{3} - \lambda_{2}x_{0}(x_{0} - p^2)=0\ .
+\eqno(4.3.7)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>The Jacobian for the system (5) with respect to
+</B></B></B>
+<!-- MATH: $\ p,\ q,\ r,\ \gamma_{1},\ \gamma_{2},\ \gamma_{3}\$ -->
+<IMG
+ WIDTH="177" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img293.gif"
+ ALT="$\ p,\ q,\ r,\ \gamma_{1},\ \gamma_{2},\ \gamma_{3}\ $"><B><B><B> for the
+solution (6) writes:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\Delta_{0}= -4(\lambda_{3}+\lambda_{1}^2 )\ \{\ [\ 2\lambda_{1}^2+\lambda_{3}+
+x_{0}^2\lambda_{2}-4\lambda_{1}\lambda_{2}x_{0}p-2\lambda_{2}\lambda_{3}p^2\ ]^2\ -
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="553" HEIGHT="37"
+ SRC="img294.gif"
+ ALT="\begin{displaymath}\Delta_{0}= -4(\lambda_{3}+\lambda_{1}^2 )\ \{\ [\ 2\lambda_{...
+...lambda_{1}\lambda_{2}x_{0}p-2\lambda_{2}\lambda_{3}p^2\ ]^2\ -
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+-(\lambda_{3}+x_{0}^2 \lambda_{2})^2 \lambda_{2}^2 (p^2-x_{0})^2\ \} \ .
+\eqno(4.3.8)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="413" HEIGHT="37"
+ SRC="img295.gif"
+ ALT="\begin{displaymath}-(\lambda_{3}+x_{0}^2 \lambda_{2})^2 \lambda_{2}^2 (p^2-x_{0})^2\ \} \ .
+\eqno(4.3.8)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>Hence, for obtaining bifurcation values of the parameters
+</B></B></B>
+<!-- MATH: $\ \lambda_{1},\ \lambda_{2},\ \lambda_{3}\$ -->
+<IMG
+ WIDTH="107" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img296.gif"
+ ALT="$\ \lambda_{1},\ \lambda_{2},\ \lambda_{3}\ $"><B><B><B> it is  necessary
+to  find solutions of the algebraic equations (7),  which are
+complemented with the condition </B></B></B>
+<!-- MATH: $\ \Delta_{0} = 0\$ -->
+<IMG
+ WIDTH="79" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img297.gif"
+ ALT="$\ \Delta_{0} = 0\ $"><B><B><B>.
+Furthermore, as obvious from (8), we managed to factorize the
+expression of the determinant.
+</B></B></B>
+<P>
+<B><B><B>Complete analysis of the  system  (7),  (8)  is  rather
+cumbersome. So,  we restrict our investigation, while reducing
+it to only the first obvious subcase.  Consider the  following
+system of algebraic equations with unknown variables
+</B></B></B>
+<!-- MATH: $\ \lambda_{1},\ \lambda_{2},\ \lambda_{3},\ p\$ -->
+<IMG
+ WIDTH="132" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img298.gif"
+ ALT="$\ \lambda_{1},\ \lambda_{2},\ \lambda_{3},\ p\ $"><B><B><B> :
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+p-\lambda_{1}+\lambda_{2}p(x_{0}-p^2)=0\ ; \ \ \
+x_{0}-2\lambda_{1}p-\lambda_{3}-\lambda_{2}x_{0}(x_{0}-p^2)=0\ ; \ \ \
+ \lambda_{3}+\lambda_{1}^2=0\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="608" HEIGHT="37"
+ SRC="img299.gif"
+ ALT="\begin{displaymath}p-\lambda_{1}+\lambda_{2}p(x_{0}-p^2)=0\ ; \ \ \
+x_{0}-2\lam...
+...{2}x_{0}(x_{0}-p^2)=0\ ; \ \ \
+\lambda_{3}+\lambda_{1}^2=0\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>The standard  procedure  puts  the  following  collection   of
+equations in  correspondence  to the system in the capacity of
+its Gr&#246;bner  basis  for  the  corresponding  ordering   of
+unknown variables (computations have been conducted with the CAS
+on IBM PC/486):
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(\lambda_{2}x_{0}+1)p + p^3\lambda_{2}+\lambda_{1}\ =\ 0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="260" HEIGHT="37"
+ SRC="img300.gif"
+ ALT="\begin{displaymath}(\lambda_{2}x_{0}+1)p + p^3\lambda_{2}+\lambda_{1}\ =\ 0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(8p^2-\lambda_{2}x_{0}^2)\lambda_{1}^2 -
+(3\lambda_{2}x_{0}+2)p^2\lambda_{2}x_{0}^2 - 2\lambda_{1}^4 +
+   3\lambda_{2}^2x_{0}^4 + 3\lambda_{2}x_{0}^3 - 6x_{0}^2=0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="577" HEIGHT="37"
+ SRC="img301.gif"
+ ALT="\begin{displaymath}(8p^2-\lambda_{2}x_{0}^2)\lambda_{1}^2 -
+(3\lambda_{2}x_{0}+...
+...+
+3\lambda_{2}^2x_{0}^4 + 3\lambda_{2}x_{0}^3 - 6x_{0}^2=0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(16p^4-20p^2x_{0}-5\lambda_{2}x_{0}^3+8x_{0}^2)\lambda_{1}^2+
+4(3\lambda_{2}x_{0}-4)p^2x_{0}^2+(\lambda_{2}x_{0}+5)\lambda_{1}^4x_{0}\ -
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="576" HEIGHT="37"
+ SRC="img302.gif"
+ ALT="\begin{displaymath}(16p^4-20p^2x_{0}-5\lambda_{2}x_{0}^3+8x_{0}^2)\lambda_{1}^2+...
+...2}x_{0}-4)p^2x_{0}^2+(\lambda_{2}x_{0}+5)\lambda_{1}^4x_{0}\ -
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+-\ \lambda_{1}^6-8\lambda_{2}x_{0}^4+8x_{0}^3=0\ ;  \eqno(4.3.9)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="395" HEIGHT="37"
+ SRC="img303.gif"
+ ALT="\begin{displaymath}-\ \lambda_{1}^6-8\lambda_{2}x_{0}^4+8x_{0}^3=0\ ; \eqno(4.3.9)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(\lambda_{2}x_{0}-4)p^2-\lambda_{2}x_{0}^2+x_{0})\lambda_{1}^2+
+2p^2\lambda_{2}x_{0}^2+\lambda_{1}^4-2\lambda_{2}x_{0}^3+2x_{0}^2\ =0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="548" HEIGHT="37"
+ SRC="img304.gif"
+ ALT="\begin{displaymath}(\lambda_{2}x_{0}-4)p^2-\lambda_{2}x_{0}^2+x_{0})\lambda_{1}^...
+...a_{2}x_{0}^2+\lambda_{1}^4-2\lambda_{2}x_{0}^3+2x_{0}^2\ =0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(\lambda_{2}x_{0}+2)p^2-2p^4\lambda_{2}-\lambda_{1}^{2}+\lambda_{2}x_{0}^{2}-
+x_{0}\ =\ 0\ ;
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="383" HEIGHT="37"
+ SRC="img305.gif"
+ ALT="\begin{displaymath}(\lambda_{2}x_{0}+2)p^2-2p^4\lambda_{2}-\lambda_{1}^{2}+\lambda_{2}x_{0}^{2}-
+x_{0}\ =\ 0\ ;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(4p^4+x_{0}^{2})\lambda_{1}^{2}-(\lambda_{1}^{4}+4x_{0}^{2})p^{2}\ =\ 0\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="293" HEIGHT="37"
+ SRC="img306.gif"
+ ALT="\begin{displaymath}(4p^4+x_{0}^{2})\lambda_{1}^{2}-(\lambda_{1}^{4}+4x_{0}^{2})p^{2}\ =\ 0\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>Analysis of  these  equations  allows  one  to  find  the
+bifurcation values  of  parameters,  which  correspond  to the
+branches from  the  family  of  permanent  rotations  (6)   of
+invariant manifolds of the problem's steady-state motions.
+</B></B></B>
+<P>
+<B><B><B>With the aid of the CAS it is possible to  find  all  the
+solutions of  the  above  nonlinear algebraic system.  Without
+suggesting the result in complete form,  let  us  outline  the
+plan of  further  actions.  From  the last equation of (9) we
+have the following solutions for </B></B></B>
+<!-- MATH: $\ \lambda_{1}^2 (p)\$ -->
+<IMG
+ WIDTH="63" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img307.gif"
+ ALT="$\ \lambda_{1}^2 (p)\ $"><B><B><B>:
+ </B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\lambda_{1}^2=4p^2\ ; \ \ \ \lambda_{1}^2 = x_{0}^2/p^2\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="209" HEIGHT="37"
+ SRC="img308.gif"
+ ALT="\begin{displaymath}\lambda_{1}^2=4p^2\ ; \ \ \ \lambda_{1}^2 = x_{0}^2/p^2\ .
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>The penultimate equation of (9) for  </B></B></B>
+<!-- MATH: $\ \lambda_{1}^2=\ x_{0}^2/p^2\$ -->
+<IMG
+ WIDTH="117" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img309.gif"
+ ALT="$\ \lambda_{1}^2=\ x_{0}^2/p^2\ $"><B><B><B>gives the following value </B></B></B>
+<!-- MATH: $\ \lambda_{2}(p)\$ -->
+<IMG
+ WIDTH="63" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img310.gif"
+ ALT="$\ \lambda_{2}(p)\ $"><B><B><B>:
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\lambda_{2}=1/p^2\ \ \ {\rm for}\ \ \
+x_{0}p^{2}\ -\ 2p^{4}\ +\ x_{0}^{2}\ \neq\ 0\
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="349" HEIGHT="37"
+ SRC="img311.gif"
+ ALT="\begin{displaymath}\lambda_{2}=1/p^2\ \ \ {\rm for}\ \ \
+x_{0}p^{2}\ -\ 2p^{4}\ +\ x_{0}^{2}\ \neq\ 0\ \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B>
+<P>
+<B><B><B>Having removed </B></B></B><IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img312.gif"
+ ALT="$ \ p\ $"><B><B><B>, we obtain
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x_{0}^{2}\lambda_{2}-\lambda_{1}^{2}\ =\ 0\ ; \ \ \
+\lambda_{3}=-\lambda_{1}^{2} \ \ ,  \eqno (4.3.10)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="422" HEIGHT="37"
+ SRC="img313.gif"
+ ALT="\begin{displaymath}x_{0}^{2}\lambda_{2}-\lambda_{1}^{2}\ =\ 0\ ; \ \ \
+\lambda_{3}=-\lambda_{1}^{2} \ \ , \eqno (4.3.10) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>which is one-parameter family of  bifurcation  values  of  the
+parameters </B></B></B>
+<!-- MATH: $\  \lambda_{1}, \ \lambda_{2},\ \lambda_{3}\ .$ -->
+<IMG
+ WIDTH="113" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img314.gif"
+ ALT="$\ \lambda_{1}, \ \lambda_{2},\ \lambda_{3}\ .$"><B><B><B>Substitution of these relation in the rest of equations of (9)
+converts them into identities.
+Eqs. (5) for </B></B></B>
+<!-- MATH: $\ \lambda_{1}\ ,\ \lambda_{2}\ ,\ \lambda_{3}\ ,$ -->
+<IMG
+ WIDTH="126" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img315.gif"
+ ALT="$\ \lambda_{1}\ ,\ \lambda_{2}\ ,\ \lambda_{3}\ ,$"><B><B><B>which satisfy the relations (10), define the family of IMSMs
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+q=0\ ;\ \ \ \ p=x_{0}/\lambda_{1}\ ;\ \ \ \ r=\lambda_{1} \gamma_{3}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="283" HEIGHT="37"
+ SRC="img316.gif"
+ ALT="\begin{displaymath}q=0\ ;\ \ \ \ p=x_{0}/\lambda_{1}\ ;\ \ \ \ r=\lambda_{1} \gamma_{3}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>with the vector field
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\dot{r}\ =\ -x_{0}\ \gamma_{2}\ ; \ \ \
+\dot{\gamma}_{1}\ =\ r\ \gamma_{2}\ ; \ \ \
+  \dot{\gamma}_{2}\ =\ r\ (\ (x_{0}/\lambda_{1})-\gamma_{1}\ )\ ,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="484" HEIGHT="37"
+ SRC="img317.gif"
+ ALT="\begin{displaymath}\dot{r}\ =\ -x_{0}\ \gamma_{2}\ ; \ \ \
+\dot{\gamma}_{1}\ =\...
+...dot{\gamma}_{2}\ =\ r\ (\ (x_{0}/\lambda_{1})-\gamma_{1}\ )\ ,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>on it, which branches from the permanent rotations (6) for
+</B></B></B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+p\neq 0 \ ; \ \ \ p^2\neq \ x_{0}\ ; \ \ \ p^2\neq \ - x_{0}/2\ .
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="301" HEIGHT="37"
+ SRC="img318.gif"
+ ALT="\begin{displaymath}p\neq 0 \ ; \ \ \ p^2\neq \ x_{0}\ ; \ \ \ p^2\neq \ - x_{0}/2\ . \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><B><B><B>This result serves  as  the  complement  to  the  analysis  of
+bifurcations  in  the neighbourhood of the family (6) given in [7].
+</B></B></B>
+<DIV ALIGN="CENTER"><B><B><B>
+<B>REFERENCES</B></B></B></DIV>
+<B>
+<P>
+<B><B><B><B>
+1. Bourlakova L.A., Irtegov V.D., Pochtarenko M.V. Use of the symbolic
+calculations on the computer in some problems of a mechanics.
+// Proceeding International Conference on Systems and Techniques of Analytical
+Computing and Their Application in Theoretical Physics. Dubna, JINR, </B></B></B></B>
+<!-- MATH: $\
+D-11-80-13,\ 1980,\ 137-142.$ -->
+<IMG
+ WIDTH="318" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img319.gif"
+ ALT="$\
+D-11-80-13,\ 1980,\ 137-142.$"><B><B><B><B> (in Russian)
+</B></B></B></B>
+<P>
+<B><B><B><B>
+2. Banshchikov A.V., Bourlakova L.A., Irtegov V.D. Qualitative investigations
+of Systems with the Aid of Computer Algebra. // IV Intern. Conf. Computer
+Algebra in Physical Research.
+World Scientific Publishing Co. Pte. Ltd, Singapore, </B></B></B></B>
+<!-- MATH: $\ 1991,\ 394-398.$ -->
+<IMG
+ WIDTH="155" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img320.gif"
+ ALT="$\ 1991,\ 394-398.$"><B><B>
+<P>
+<B><B><B><B>
+3. Banshchikov A.V., Bourlakova L.A., Irtegov V.D. The use of computer symbolic
+calculations in problems of motion stability. // Computer Algebra and Its
+Applications to Mechanics. Nova Science Publishers, Inc., USA,
+</B></B></B></B>
+<!-- MATH: $\ 1992, \ 153-158.$ -->
+<IMG
+ WIDTH="155" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img321.gif"
+ ALT="$\ 1992, \ 153-158.$"><B><B>
+<P>
+<B><B><B><B>
+4. Banshchikov A.V., Bourlakova L.A., Ivanova G.N., Irtegov V.D.,
+Usova Y.O. Package of symbolic computations for investigation of dynamics of
+system bodies. // Application packages. Software of mathematical modeling.
+Algorithms and algorithmic languages. Moscow: Nauka, </B></B></B></B>
+<!-- MATH: $\ 1992,\ 63-71\ .$ -->
+<IMG
+ WIDTH="142" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img322.gif"
+ ALT="$\ 1992,\ 63-71\ .$"><B><B><B><B>(in Russian)
+</B></B></B></B>
+<P>
+<B><B><B><B>
+5. Banshchikov A.V., Bourlakova L.A., Irtegov V.D., Novikov M.A. Algorithms of
+qualitative investigations of complex systems. // Cybernetics and system
+analysis. (Kibernetika i sistemnii analiz.)
+</B></B></B></B>
+<!-- MATH: $\ 1992,\ N^ {0} \ 1,\ 129-139.$ -->
+<IMG
+ WIDTH="212" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img323.gif"
+ ALT="$\ 1992,\ N^ {0} \ 1,\ 129-139.$"><B><B><B><B> (in Russian).
+</B></B></B></B>
+<P>
+<B><B><B><B>
+6. Banshchikov A.V., Bourlakova L.A. Information and Research System
+"Stability". //Informations RAS. The theory and control systems. (Izvestia RAN.
+Teoria i sistemi upravlenia.)
+</B></B></B></B>
+<!-- MATH: $\ 1996.\ N^ {0} \ 2.\ 13 - 20.$ -->
+<IMG
+ WIDTH="186" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img324.gif"
+ ALT="$\ 1996.\ N^ {0} \ 2.\ 13 - 20.$"><B><B><B><B> (in Russian).
+</B></B></B></B>
+<P>
+<B><B><B><B>
+7. Irtegov V.D., Titorenko T.N . On the modelling and the research 
+of some problems with the use of computer algebra. // Programming. (Programirovanie.) </B></B></B></B>
+<!-- MATH: $\
+1997.\ N^ {0} \ 1.\ 68-74.$ -->
+<IMG
+ WIDTH="186" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img325.gif"
+ ALT="$\
+1997.\ N^ {0} \ 1.\ 68-74.$"><B><B><B><B> (in Russian).
+</B></B></B></B>
+<P>
+<B><B><B><B>
+8. Banshchikov A.V., Bourlakova L.A. On algorithms of symbolic computation
+at the research of the stability. // Programming. (Programirovanie.)
+</B></B></B></B>
+<!-- MATH: $\ 1997.\ N^ {0} \ 3,\ 72-80.$ -->
+<IMG
+ WIDTH="189" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img326.gif"
+ ALT="$\ 1997.\ N^ {0} \ 3,\ 72-80.$"><B><B><B><B> (in Russian).
+</B></B></B></B>
+<P>
+<B><B><B><B>
+9. Lurie A.I. Analytical Mechanics.- Moscow: Phizmathgiz, 1961.
+</B></B></B></B>
+<P>
+<B><B><B><B>
+10. Hantmaher F.P. The lectures on analytical mechanics. 
+ Moscow: Nauka, 1966. (in Russian)
+</B></B></B></B>
+<P>
+<B><B><B><B>
+11. Brayton R.K., Moser J.K. A theory of nonlinear networks - 1 //Quaterly
+ of Applied Mathematics, 1964, vol.22, 1, p.1-33.
+</B></B></B></B>
+<P>
+<B><B><B><B>
+12. Brayton R.K., Moser J.K. A theory of nonlinear networks - 2 //Quaterly
+ of Applied Mathematics, 1964, vol.22, 2, p.81-104.
+</B></B></B></B>
+<P>
+<B><B><B><B>
+13. Titorenko T.N. The Hamilton's equations in the case of the degenerated
+ dynamic systems. //Thesises of the reports of the 4-th International
+conference of women-mathematicians. Volgograd, 1996, p.122-123. (in Russian)
+</B></B></B></B>
+<P>
+<B><B><B><B>
+14. Irtegov V.D. Invariant manifolds of stationary motions and
+their stability. Novosibirsk. Nauka. 1985. ( in Russian )
+</B></B></B></B>
+<P>
+<B><B><B><B>
+15. Poincare H. The new methods of celestial mechanics.
+Moscow: Nauka, vol.1, 1971. (in Russian) 
+( Les m&#233;thodes nouvelles de la M&#233;canique c&#233;leste, t. 1. Paris, 
+Gauthier-Villars, 1892.)
+</B></B></B></B>
+<P>
+<B><B><B><B>
+16. Bruno A.D. The analytical form of differential equations. 
+//Proceeding Moscow mathematical society, 1971, vol.25, p.119-262.
+(in Russian)
+</B></B></B></B>
+<P>
+<B><B><B><B>
+17. Banshchikov A.V. Research of a stability of gyroframe by tools
+of computer algebra. // Mathematical modelling.
+(Matematicheskoe modelirovanie.) </B></B></B></B>
+<!-- MATH: $\ 1996.\ N^{0}\ 4,\ 67-78.$ -->
+<IMG
+ WIDTH="189" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img327.gif"
+ ALT="$\ 1996.\ N^{0}\ 4,\ 67-78. $"><B><B><B><B> (in Russian).
+</B></B></B></B>
+<P>
+<B><B>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

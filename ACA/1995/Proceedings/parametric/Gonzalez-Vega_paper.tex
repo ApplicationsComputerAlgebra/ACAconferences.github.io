@@ -1,0 +1,767 @@
+\documentstyle{article}
+\marginparwidth 0pt 
+\oddsidemargin -1cm
+\evensidemargin -1cm
+\marginparsep 0pt
+\topmargin -1cm
+\textwidth 18cm
+\textheight 24cm
+\sloppy
+
+\font\eirm=cmr8
+
+\def \ce{\centering}
+\def \N{{\rm I\kern -2.1pt N\hskip 1pt}}
+\def \R{{\rm I\kern -2.2pt R\hskip 1pt}}
+
+\def \Z{{\mathchoice {\hbox{$\textstyle {\rm Z\!\!Z}$}}
+{\hbox{$\textstyle {\rm Z\!\!Z}$}} {\hbox{$\scriptstyle {\rm
+Z\!\!Z}$}} {\hbox{$\scriptscriptstyle {\rm Z\!\!Z}$}}}}
+
+\def \Q{{\mathchoice {\setbox0=\hbox{$\displaystyle\rm Q$}\hbox
+{\raise 0.15\ht0\hbox to0pt{\kern0.4\wd0\vrule
+height0.8\ht0\hss}\box0}} {\setbox0=\hbox{$\textstyle\rm
+Q$}\hbox{\raise 0.15\ht0\hbox to0pt{\kern0.4\wd0\vrule
+height0.8\ht0\hss}\box0}} {\setbox0=\hbox{$\scriptstyle\rm
+Q$}\hbox{\raise 0.15\ht0\hbox to0pt{\kern0.4\wd0\vrule
+height0.7\ht0\hss}\box0}} {\setbox0=\hbox{$\scriptscriptstyle\rm
+Q$}\hbox{\raise 0.15\ht0\hbox to0pt{\kern0.4\wd0\vrule
+height0.7\ht0\hss}\box0}}}}
+
+\def\C{{\mathchoice {\setbox0=\hbox{$\displaystyle\rm C$}\hbox{\hbox
+to0pt{\kern0.4\wd0\vrule height0.9\ht0\hss}\box0}}
+{\setbox0=\hbox{$\textstyle\rm C$}\hbox{\hbox
+to0pt{\kern0.4\wd0\vrule height0.9\ht0\hss}\box0}}
+{\setbox0=\hbox{$\scriptstyle\rm C$}\hbox{\hbox
+to0pt{\kern0.4\wd0\vrule height0.9\ht0\hss}\box0}}
+{\setbox0=\hbox{$\scriptscriptstyle\rm C$}\hbox{\hbox
+to0pt{\kern0.4\wd0\vrule height0.9\ht0\hss}\box0}}}}
+
+\hyphenation{pa-ra-me-tri-za-tion}
+
+\def \eop {\hbox{}\nobreak\hfill
+   \vrule width 1.4mm height 1.4mm depth 0mm
+          \par \goodbreak \smallskip}
+
+\newtheorem{teorema}{Theorem}[section]
+\newtheorem{definicion}[teorema]{Definition}
+\newtheorem{proposicion}[teorema]{Proposition}
+\newtheorem{corolario}[teorema]{Corollary}
+\newtheorem{lema}[teorema]{Lemma}
+\newtheorem{remark}[teorema]{Remark}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{ejemplo}[teorema]{Example}
+\newcommand{\demostracion}{\paragraph*{\bf Proof:}}
+
+
+\title{New Elimination Tools based on Symmetric Functions for the  
+Implicitization of  Parametric Curves and Surfaces.}
+
+\author{L. Gonz\'alez-Vega\thanks{Partially supported by CICyT PB
+92/0498/C02/01 (Geometr\'{\i}a Real y  Algoritmos), Caja Cantabria,
+TIC--1026--CE and Esprit/Bra  6846 (PoSSo).}\\ 
+Dpto. Matem\'aticas, Estad\'{\i}stica y Computaci\'on\\ Universidad de 
+Cantabria, Santander 39071, Spain}
+
+\date{ }
+
+\begin{document}
+\maketitle
+
+\begin{abstract} {\eirm This paper is devoted to present a new algorithm 
+computing the implicit  equation of a parametric plane curve and several
+classes of parametric surfaces in the three dimensional euclidean
+space. This algorithm does not require of the computation of any
+symbolic determinant or Grobner Basis, being these tools replaced by
+the computation of some symmetric functions, in particular the Newton
+Sums on the solution set of a well precised zero dimensional ideal.}
+\end{abstract}
+
+\section{Introduction}
+
+One of the main problems in the manipulation of parametric curves and
+surfaces in computer aided design is the finding of efficient
+algorithms for computing the implicit equation of curves and surfaces
+parametrized by rational functions (see for example [M93] or the
+chapters 5 and 7 in [H89]). This is due, for example, to the fact
+that, if for tracing the considered curve and surface the parametric
+representation is the most convenient, to decide in a efficient way
+the position of a point with respect to the curve or surface considered,
+the implicit equation is desired.
+
+The implicitization problem for hypersurfaces parametrized in a
+rational way can be stated in the following terms: let  ${\cal V}$ be
+a hypersurface in 
+$\C^{n}$ parametrized by ($i\in \{1,\ldots,n\}$):
+\[x_i={{f_i(t_1,\ldots,t_{n-1})}\over{g_i(t_1,\ldots,t_{n-1})}}\]
+where
+$f_i$ and $g_i$ belong to $\Z[t_1,\ldots,t_{n-1}]$ with
+$\gcd(f_i,g_i)=1$. The implicitization problem for ${\cal V}$ is the
+finding of a non zero element
+${\cal R}_{\cal V}(x_1,\ldots,x_n)$ in $\Z[x_1,\ldots,x_n]$ with the
+smallest possible total degree and such that:
+\[{\cal R}_{\cal V}\bigg(
+        {{f_1(\underline{t})}\over{g_1(\underline{t})}},\ldots,
+        {{f_n(\underline{t})}\over{g_n(\underline{t})}}\bigg)=0\] 
+More general formulations of the implicitization problem for
+arbitrary parametric varieties can be found in [AGR94], [CLO93]
+(chapter 3) or [GC92].
+
+This paper is devoted to show a new family of algorithms computing 
+the implicit equation of plane curves and space surfaces 
+parametrized in  a rational way. The main advantange of these
+algorithms is that they  do not require the computation of any
+symbolic determinant or Grobner Bases. These tools coming from
+Elimination Theory are replaced by the computation of some symmetric
+functions (Newton Sums) by developping in negative powers of the
+parameters some well precised rational functions.
+
+The algorithms to be presented in sections 3 and 4 solve completely
+the cases of plane curves parametrized in a rational way and space
+surfaces described by a parametrization with the following structure:
+\[\matrix{x=&\!\!\! f(t_1,t_2)\hfill&\; f\in\Q[t_1,t_2]\hfill\cr\cr
+          y=&\!\!\!
+\displaystyle{{t_1^{n_1}+Q_1(t_1,t_2)}\over{D_1(t_1,t_2)}}&
+          \;\deg(Q_1),\deg(D_1)<n_1\hfill\cr\cr\cr
+          z=&\!\!\!
+\displaystyle{{t_2^{n_2}+Q_2(t_1,t_2)}\over{D_2(t_1,t_2)}}&
+          \;\deg(Q_2),\deg(D_2)<n_2\hfill}\] The results of section 4
+extend automatically to the cases of parametric hypersurfaces whose
+parametrization has a structure as the previous one but for sake of
+simplicity the attention has been focused only over the case of space
+surfaces.
+
+Section 2 is devoted to present several algorithms for computing some
+symmetric functions (in particular Newton Sums) on the solutions of a
+polynomial system of equations with a finite number of solutions.
+These results are the basis of the implicitization algorithms
+presented in sections 3 and 4.
+
+\section{Computation of symmetric functions} 
+
+The goal of this section is the presentation of several formulae
+computing  some symmetric functions (in particular Newton Sums) on
+the solutions of a polynomial system of equations with a finite
+number of solutions. First the case of one variable is considered.
+Let $f$ and $g$ be two polynomials in 
+$\Q[T]$ such that:
+\[f=\prod_{i=1}^s (T-\Delta_i)^{e_i}\qquad\quad \Delta_i\in\C\] Next
+theorem shows a way of computing the symmetric function in the 
+$\Delta_i$'s (the trace):
+\[{\cal T}_f(g)=\sum_{i=1}^s e_ig(\Delta_i)\in\Q\] Its proof is
+straightforward.
+
+\begin{teorema} \hskip 0pt\\ The rational number ${\cal T}_f(g)$ is
+the coefficient of $T^{-1}$ in the expansion in negative powers of
+$T$ of the rational function:
+\[{{g(T)\cdot f'(T)}\over{f(T)}}\]
+\end{teorema}
+
+\medskip
+
+The most usual types of symmetric functions (Elementary and Newton
+Sums) will play a prominent role in the implicitization algorithms to
+be presented in the next two sections. These symmetric functions are
+presented in the next definitions. 
+
+\begin{definicion}
+\hskip 0pt\\ {\rm Let $x_1,\ldots,x_n$ be a collection of $n$
+variables. The Elementary Symmetric Functions of order $n$,
+\[\sigma_1,\ldots,\sigma_n\] are defined by the following equality:
+\[\prod_{i=1}^n(T-x_i)=T^n+\sigma_1T^{n-1}+\ldots+
+\sigma_{n-1}T+\sigma_n\]}
+\end{definicion}
+
+\begin{definicion}
+\hskip 0pt\\ {\rm Let $x_1,\ldots,x_n$ be a collection of $n$
+variables. The Newton Sums of order $n$, 
+\[{\bf S}_0,{\bf S}_1,{\bf S}_2,\ldots,{\bf S}_j,\ldots\] are:
+\[{\bf S}_j(x_1,\ldots,x_n)=\sum_{k=1}^n x_k^j\]}
+\end{definicion}
+
+Next proposition presents Newton Identities allowing the conversion (in
+the two directions) between the Elementary Symmetric Functions and
+the Newton Sums. A proof of this proposition can be found in [S93].
+
+\begin{proposicion}{\rm (Newton Identities)}\hskip 0pt\\ Let
+$x_1,\ldots,x_n$ be a collection of $n$ variables. For every $j$ in
+$\{1,\ldots,n\}$ the following identity holds:
+\[
+j\sigma_j(\underline{x})+{\bf S}_j(\underline{x})+
+{\bf S}_{j-1}(\underline{x})\sigma_1(\underline{x})+
+\ldots+{\bf
+S}_{1}(\underline{x})\sigma_{j-1}(\underline{x})=0\]
+\end{proposicion}
+
+\medskip
+
+Next the formulae presented in theorem 2.1 is generalized to the case
+of a polynomial system of equations with a finite number of complex
+solutions and a particular structure. Let
+$F_1,\ldots,F_n$ be polynomials in  $\Q[x_1,\ldots,x_n]$ such that 
+the polynomial system of equations:
+\[\matrix{F_1(x_1,\ldots,x_n)&\!\!\!=0\cr
+          F_2(x_1,\ldots,x_n)&\!\!\!=0\cr
+          \vdots&\!\!\!\vdots\cr
+          F_n(x_1,\ldots,x_n)&\!\!\!=0\cr}\]  has a finite number of
+solutions in $\C^n$, $\Delta_1$, $\ldots$, $\Delta_s$,  and let $e_i$
+be the multiplicity of every $\Delta_i$. If
+$g\in\Q[x_1,\ldots,x_n]$ then next theorem presents a way of
+computing the symmetric function (in the
+$\Delta_i$'s):
+\[{\cal T}_{F_1,\ldots,F_n}(g)=\sum_{i=1}^s e_ig(\Delta_i)\in\Q\]
+
+\begin{teorema}\hskip 0pt\\ Let $F_1,\ldots,F_n$ be polynomials in 
+$\Q[x_1,\ldots,x_n]$ such that
+\[\matrix{F_1(x_1,\ldots,x_n)=x_1^{m_1}+Q_1(x_1,\ldots,x_n)\cr
+          F_2(x_1,\ldots,x_n)=x_2^{m_2}+Q_2(x_1,\ldots,x_n)\cr
+\hfill\vdots\qquad\qquad\qquad\qquad\qquad\vdots\hfill\cr
+          F_n(x_1,\ldots,x_n)=x_n^{m_n}+Q_n(x_1,\ldots,x_n)\cr}\] 
+with every $Q_i$ a polynomial with total degree smaller than $m_i$.
+If  $g(x_1,\ldots,x_n)$ is a polynomial in $\Q[x_1,\ldots,x_n]$ then
+${\cal T}_{F_1,\ldots,F_n}(g)$ is equal to the coefficient of 
+$x_1^{-1}\cdot\ldots\cdot x_n^{-1}$ in the expansion in negative
+powers of the $x_i$'s of the rational function:
+\[{{g\cdot{\bf Jac}(F_1,\ldots,F_n)}\over{x_1^{m_1}\cdot\ldots\cdot
+x_n^{m_n}}}\cdot
+\sum_{k=0}^{\deg(g)} (-1)^k\sum_{\alpha_1+\ldots+
+\alpha_n=k}
+\prod_{i=1}^n\bigg({{Q_i}\over{x_i^{m_i}}}
+\bigg)^{\alpha_i}\]   where ${\bf Jac}$ is the jacobian determinant
+of the polynomials
+$F_1,\ldots,F_n$.
+\end{teorema}
+
+\medskip
+
+The proof of this theorem is a consequence of the formulae of the
+multidimensional logarithmic residue (see [T92] or [CDS94]).
+
+\section{Implicitization on plane curves parametrized in a rational
+way} 
+
+This section is devoted to present a new algorithm computing the
+implicit equation of a curve ${\cal C}$ in $\C^2$ parametrized by:
+\[x={{f_1(t)}\over{f_2(t)}}\qquad\qquad y={{g_1(t)}\over{g_2(t)}}\]
+where
+$f_1$, $f_2$, $g_1$ and $g_2$ are polynomials in $\Z[t]$ such that
+$\gcd(f_1,f_2)=1$ and $\gcd(g_1,g_2)=1$. 
+
+\subsection{The polynomial case}
+
+First it is regarded the case where the parametrization of ${\cal C}$
+is polynomial: $f_2(t)=1$ and $g_2(t)=1$. The keypoint of the
+algorithm is the simple fact assuring that if
+${\cal R}_{\cal C}(x,y)$ is the implicit equation of  ${\cal C}$
+then  ${\cal R}_{\cal C}(x,y)$ is the squarefree part of the
+resultant of the polynomials
+$f_1(t)-x$ and $g_1(t)-y$ with respect to the variable $t$ (see [H89]
+for example). In order words, ${\cal R}_{\cal C}(x,y)$ is the
+squarefree part of the polynomial in 
+$\Q[x,y]$:
+\[{\cal H}_{\cal C}(x,y)=\prod_{\{\tilde{t}:g_1(\tilde{t})-y=0\}}
+(x-f_1(\tilde{t}))\] where the roots of $g_1(t)-y=0$ are considered
+in an algebraic closure of $\Q(y)$ (see [DST87] for this description
+of the resultant).
+
+If $n$ is the degree of $g_1$ then ${\cal H}_{\cal C}(x,y)$ has the
+following structure:
+\[{\cal H}_{\cal C}(x,y)=x^n+r_1(y)x^{n-1}+\ldots+r_n(y)\] where
+$r_k(y)$ is exactly the $k$-th elementary symmetric function of orden
+$n$ in the values obtained when evaluating $f_1$ on the $n$ roots
+(taking into account multiplicities) of
+$g_1(t)-y=0$. If
+$\tilde{t}_1,\ldots,\tilde{t}_n$ are those roots then:
+\[r_k(y)=\sigma_k(f_1(\tilde{t}_1),\ldots,f_1(\tilde{t}_n))\]  By
+using Newton Identities (proposition 2.1), polynomials $r_k(y)$ are
+easy to determine once the Newton Sums on
+\[f_1(\tilde{t}_1),\ldots,f_1(\tilde{t}_n)\]  are determined. These
+polynomials \[{\bf S}_j(f_1(\tilde{t}_1),\ldots,f_1(\tilde{t}_n))\]
+are obtained by using theorem 2.1, through the expansion in negative
+powers of $t$ of the rational functions:
+\[{{(f_1(t))^jg_1'(t)}\over{g_1(t)-y}}\qquad\quad 
+j\in\{1,\ldots,n\}\]
+
+This remark ends the proof of the  next theorem which solves the
+implicitization problem for plane curves parametrized in a polynomial
+way.
+
+\begin{teorema}\hskip 0pt\\ Let ${\cal C}$ be a plane curve defined
+by a polynomial parametrization:
+\[x=f(t)\qquad\qquad y=g(t)\] and $n=\deg(g)$. Then the implicit
+equation of
+${\cal C}$ is the squarefree part of the polynomial:
+\[{\cal H}_{\cal C}(x,y)=x^n+r_1(y)x^{n-1}+\ldots+r_n(y)\] where 
+$(k\in\{1,\ldots,n\})$:
+\[kr_k(y)=
+-{\bf S}_k(y)-{\bf S}_{k-1}(y)r_1(y)-\ldots-{\bf
+S}_1(y)r_{k-1}(y)\] and every ${\bf S}_j(y)$ is the coefficient
+of $t^{-1}$ in the expansion in negative powers of $t$ of the
+rational function:
+\[{{(f(t))^jg'(t)}\over{g(t)-y}}\]
+\end{teorema}
+
+The using of symmetric functions in Computer Algebra to determine and deal
+with the  resultant of two polynomials is not new (see for example [L84], 
+[DT87], [V87], [GLV88] or [V88]).
+
+\begin{ejemplo} 
+\hskip 0pt\\ {\rm The method presented in theorem 3.1 is used to
+determine the implicit equation of the curve
+${\cal C}$ defined by the parametrization:
+\[x=f(t)=t^4-t+1\qquad y=g(t)=t^3+t+1\] In this case the polynomial
+${\cal H}_{\cal C}(x,y)$ has the structure:
+\[x^3+r_1(y)x^2+r_2(y)x+r_3(y)\]  The computation of the polynomials
+$r_1(y)$,
+$r_2(y)$ and $r_3(y)$ requires the knowledge of the Newton Sums (of
+order $3$)
+${\bf S}_1(y)$, ${\bf S}_2(y)$ and ${\bf S}_3(y)$ on the values taken
+by
+$f(t)$ over the roots of:
+\[t^3+t+1-y=0\]  This is obtained by developping in negative powers
+of $t$ the rational function $g'(t)/(g(t)-y)$:
+\[
+\matrix{
+{{3t^2+1}\over{t^3+t+1-y}}={{3}\over{t}}-{{2}\over{t^{3}}}-
+{{-3+3y}\over{t^{4}}} +{{2}\over{t^{5}}}+{{5-5y}\over{t^{6}}}
+\hfill\cr
+\;\;\;+{{1-6y+3y^{2}}\over{t^{7}}}-{{-7+7y}\over{t^{8}}}-
+{{-6+16y-8y^{2}}\over{t^{9}}}
+\hfill\cr
+\;\;\;+{{6-9y^{2}+3y^{3}}\over{t^{10}}}+{{13-30y+15y^{2}}\over
+{t^{11}}}- {{-22y+33y^{2}-11y^{3}}\over{t^{12}}}\hfill\cr
+\;\;\;-{{-19+36y-6y^{2}-12y^{3}+3y^{4}}\over{t^{13}}}-{{-13+65y-
+78y^{2}+26y^{3}}\over {t^{14}}}\hfill\cr 
+\;\;\;+\dotfill\cr}\]  and multiplying such expansion by $f(t)$,
+$(f(t))^2$ and $(f(t))^3$:
+\[\matrix{{\bf S}_1(y)&\!\!\!=5\hfill\cr
+          {\bf S}_2(y)&\!\!\!=-11+26y-8y^{2}\hfill\cr
+          {\bf S}_3(y)&\!\!\!=-76+93y+6y^{2}-21y^{3}+3y^{4}\hfill}\]
+Newton Identities allow to conclude that:
+\[\matrix{{\bf r}_1(y)&\!\!\!=-5\hfill\cr
+          {\bf r}_2(y)&\!\!\!=18-13y+4y^{2}\hfill\cr
+          {\bf r}_3(y)&\!\!\!=-23+34y-22y^{2}+7y^{3}-y^{4}\hfill}\]
+and that the implicit equation of
+${\cal C}$ is:
+\[{\cal R}_{\cal
+C}(x,y)=x^{3}-5x^{2}+(18-13y+4y^{2})x
+-23+34y-22y^{2}+7 y^{3}-y^{4}\]}
+\end{ejemplo}
+
+\subsection{The rational case}
+
+Next it is considered the case of a plane curve ${\cal C}$
+parametrized in a rational way by:
+\[x={{f_1(t)}\over{f_2(t)}}\qquad\qquad y={{g_1(t)}\over{g_2(t)}}\] 
+where $f_1$, $f_2$, $g_1$ and $g_2$ are polynomials in $\Z[t]$ such
+that
+$\gcd(f_1,f_2)=1$ and $\gcd(g_1,g_2)=1$. 
+
+The philosophy of the method is the same than in the previous case
+but the manipulation of denominators implies some modifications.
+First we consider the  polynomials in $\Z[x,y][t]$:
+\[F=f_2(t)x-f_1(t) \qquad G=g_2(t)y-g_1(t)\]  together with the
+polynomial in $\Z(y)[x]$ defined by:
+\[{\cal H}_{\cal C}(x,y)=\prod_{\{\tilde{t}:G(y,\tilde{t})=0\}}
+(f_2(\tilde{t})x-f_1(\tilde{t}))\]  The squarefree part of the
+numerator of ${\cal H}_{\cal C}(x,y)$ is the implicit equation ${\cal
+R}_{\cal C}(x,y)$ of ${\cal C}$ which is exactly the resultant of $F$
+and $G$ with respect to $t$. 
+
+Since the polynomials $f_2(t)$ and $G(y,t)$ have no common factors (if
+such factor exists then it will be a common factor of $g_1(t)$ and $g_2(t)$)
+then there exist polynomials $u(y,t)$ and $v(y,t)$ in $\Z(y)[t]$ such
+that
+\[u(y,t)f_2(t)+v(y,t)G(y,t)=1\] This equality allows to write:
+\[{\cal H}_{\cal C}(x,y)=
+\prod_{\{\tilde{t}:G(y,\tilde{t})=0\}}
+f_2(\tilde{t})(x-u(y,\tilde{t})f_1(\tilde{t}))=
+\prod_{\{\tilde{t}:G(y,\tilde{t})=0\}}f_2(\tilde{t})
+\prod_{\{\tilde{t}:G(y,\tilde{t})=0\}}
+(x-u(y,\tilde{t})f_1(\tilde{t}))
+\] being the first factor an element of $\Z(y)$ (the resultant of
+$f_2(t)$ and
+$G(t,y)$ with respect to $t$ divided by a well precised power of the
+leading coefficient of $G$ with respect to $t$) and the second one a
+polynomial in
+$\Z(y)[x]$ such that the squarefree part of its numerator is ${\cal
+R}_{\cal C}(x,y)$. Denoting by $\widetilde{\cal H}_{\cal C}(x,y)$
+this second factor, if
+$n$ is the degree of $G(y,t)$ with respect to $t$ then:
+\[\widetilde{\cal H}_{\cal C}(x,y)= x^n+\ldots+r_{n-1}(y)x+r_n(y)\] 
+with $r_j(y)\in\Z(y)$.
+
+Using the same arguments than in the polynomial case, the $r_k(y)$'s
+can be determined through the computation of the Newton Sums:
+\[{\bf S}_j( (u(y,\tilde{t}_1)f_1(\tilde{t}_1),\ldots,
+u(y,\tilde{t}_n)f_1(\tilde{t}_n)))\] where $j\in\{1,\ldots,n\}$ and
+$\tilde{t}_1,\ldots,\tilde{t}_n$ the roots of
+$G(y,t)=0$. As usual such Newton Sum is determined through the
+expansion of:
+\[{{(u(y,t)f_1(t))^j(g_1'(t)-yg_2'(t))}\over{g_1(t)-yg_2(t)}}\] in
+negative powers of $t$. Thus, it has been obtained the proof of the
+next theorem solving the implicitization problem for plane curves
+parametrized in a rational way.
+
+\begin{teorema} \hskip 0pt\\ Let ${\cal C}$ be a plane curve defined
+by a rational parametrization:
+\[x={{f_1(t)}\over{f_2(t)}}\qquad\qquad y={{g_1(t)}\over{g_2(t)}}\]
+with $\gcd(f_1,f_2)=1$, $\gcd(g_1,g_2)=1$ and 
+$n=\max\{\deg(g_1),\deg(g_2)\}$. Then the implicit equation of
+${\cal C}$ is the squarefree part of the numerator of:
+\[\widetilde{\cal H}_{\cal C}(x,y)=x^n+r_1(y)x^{n-1}+\ldots+r_n(y)\]
+where 
+$(k\in\{1,\ldots,n\})$:
+\[kr_k(y)=
+-{\bf S}_k(y)-{\bf S}_{k-1}(y)r_1(y)-\ldots-{\bf
+S}_1(y)r_{k-1}(y)\] and every ${\bf S}_j(y)$ is the coefficient
+of $t^{-1}$ in the expansion in negative powers of $t$ of the
+rational function:
+\[{{(u(y,t)f_1(t))^j(g_1'(t)-yg_2'(t))}\over{g_1(t)-yg_2(t)}}\] and
+$u(y,t)$ is an element in $\Z(y)[t]$ verifying:
+\[u(y,t)f_2(t)+v(y,t)(g_1(t)-yg_2(t))=1\]
+\end{teorema}
+
+\medskip
+
+The computation of $u(y,t)$ (the inverse
+of $f_2(t)$ modulo $G(y,t)$) can be performed by using the extended
+euclidean algorithm or the formulae:
+\[u(y,t)={{L(y,t)}\over{{\rm Res}_t(f_2(t),G(y,t))}}\] where $L(y,t)$
+is a polynomial of degree $n-1$ in $t$ defined by means of a
+determinant of size $n+\deg(f_2)$ involving the powers of $t$ up to
+degree $n-1$ and the coefficients of $f_2(t)$ and $G(y,t)$ as
+polynomials in 
+$t$. A more detailed description can be found in [GV89] or [L82]. 
+
+\hyphenation{pa-ra-me-tri-zed}
+
+\section{Implicitization of space surfaces parametrized in a rational
+way} 
+
+
+
+This section is devoted to present a new algorithm computing the
+implicit equation of a surface ${\cal S}$ in $\C^3$ parametrized by:
+\[x={{f_1(t_1,t_2)}\over{f_2(t_1,t_2)}}\quad
+y={{g_1(t_1,t_2)}\over{g_2(t_1,t_2)}}
+\quad z={{h_1(t_1,t_2)}\over{h_2(t_1,t_2)}}\] where $f_1$, $f_2$,
+$g_1$,
+$f_1$, $f_2$, $g_1$, $g_2$, $h_1$ and $h_2$ are polynomials in
+$\Z[t_1,t_2]$ such that $\gcd(f_1,f_2)=1$, $\gcd(g_1,g_2)=1$ and
+$\gcd(h_1,h_2)=1$ verifying some additional assumptions. 
+
+\subsection{Reduction to the case of plane curves}
+
+If the parametrization of the parametric surface ${\cal S}$ verifies:
+\[\max\{\deg_{t_2}(h_1(t_1,t_2)),\deg_{t_2}(h_2(t_1,t_2))\}=1\] then
+it is posible to describe $t_2$ in a rational way in terms of $z$ and
+$t_1$. Replacing this expression of $t_2$ in $x$ and $y$, it is
+obtained that  the problem of computing the implicit equation of
+${\cal S}$ has been reduced  to determine such equation for the plane
+curve:
+\[x={{F_1(t_1,z)}\over{F_2(t_1,z)}}\qquad\qquad
+  y={{G_1(t_1,z)}\over{G_2(t_1,z)}}\]
+
+\begin{ejemplo}
+\hskip 0pt\\ {\rm  In this example it is showed one of the 
+advantages of using symmetric functions to compute implicit 
+equations of parametric hypersurfaces: the avoiding of extraneous
+factors. A hyperboloid in $\C^3$ can be parametrized by:
+\[x={{t^2-2st-1}\over{t^2+1}}\quad\;\;
+y={{2t+st^2+s}\over{t^2+1}}\quad\;\; z=s\] Its implicit equation is
+determined by considering the parametric plane curve:
+\[x={{t^2-2zt-1}\over{t^2+1}}\qquad y={{2t+zt^2+z}\over{t^2+1}}\] The
+using of the algorithm presented in the previous section (theorem 
+3.3) provides as result the equation:
+\[y^2+x^2-1-z^2\] By using the Sylvester Resultant the equation
+obtained contains an extraneous factor:
+\[4(1+z^2)(y^2+x^2-1-z^2)\] that needs to be removed by using a
+factorization algorithm. }
+\end{ejemplo}
+
+Next table shows the comparison of the algorithm here presented with
+respect other methods solving the same problem over the following
+examples (extracted from [K91] and [AGR94]):
+\[\matrix{ (1)&x={{t^2-2st-1}\over{t^2+1}}\hfill&
+  y={{2t+st^2+s}\over{t^2+1}}\hfill&
+  z=s\hfill\cr (2)&x={{u+2t^{4}-1}\over{u-t-2}}\hfill&
+  y={{t^{2}u+1}\over{t}}\hfill&
+  z={{1}\over{tu}}\hfill\cr (3)&x={{t^2-u^2}\over{u}}\hfill&
+  y={{t^2-u^2}\over{t}}\hfill&
+  z={{1}\over{t-u}}\hfill\cr  
+(4)&x={{ut+2t^{5}-t}\over{ut-v-2t}}\hfill&
+  y={{t^{3}u+t}\over{v}}\hfill&
+  z={{1}\over{tu}}\hfill\cr}\] The computation was performed by using
+the release 3 of {\tt Maple V} on a Sparc--15 Workstation (timings are
+in seconds):
+
+\smallskip
+\centerline{
+\begin{tabular}{|c|c|c|c|c|c|}\hline Ex. & {\tt Sym} & {\tt Res} &
+{\tt Kal} & {\tt Rab} & {\tt Quo}\\
+\hline (1) & 1.2 & 3.5 & 4.2 & 1.8 & 7.0\\
+\hline (2) & 0.6 & 0.7 & 21  & $\star$  & 29 \\
+\hline (3) & 0.1 & 0.1 & 3.7 & 0.8 & 2.6\\
+\hline (4) & 0.7 & 1.1 &  $\bullet$ & $\star$  & 170\\
+\hline
+\end{tabular}}
+\smallskip
+
+{\tt Sym} corresponds to the algorithm  presented in this section,
+{\tt Res} to the algorithm computing the Sylvester Resultant plus the
+timing of the factorization, {\tt Kal} to the algorithm presented in
+[K91], {\tt Rab} to the algorithm using the Rabinowitsch's trick
+(Grobner Bases plus adding a new extra variable to avoid problems
+with denominators) and {\tt Quo} to the algorithm presented in
+[AGR94]. The symbol $\bullet$ indicates that the corresponding
+algorithm does not work in such example and $\star$ indicates that
+the computation did not end in 5 minutes. The timings corresponding
+to {\tt Kal}, {\tt Rab} and {\tt Quo} were taken from [AGR94] and
+thus the previous table must be taken only as indicative since the
+computations were performed in very different computers. To remark
+finally that in (1) and (3) appear extraneous factors when computing
+the Sylvester Resultant.
+
+\subsection{The polynomial case}
+
+In this section the problem of computing the implicit equation of a
+surface parametrized in a polynomial way is solved by using the same
+strategy followed in subsection 3.1. Let ${\cal S}$ be a surface in
+$\C^3$ parametrized by:
+\[x=f(t_1,t_2)\quad\;\;
+  y=g(t_1,t_2)\quad\;\;
+  z=h(t_1,t_2)\] where $f$, $g$ and $h$ are polynomials in
+$\Z[t_1,t_2]$. The key point is again to compute:
+\[{\cal H}_{\cal S}(x,y,z)=\prod_{(\tilde{t}_1,\tilde{t}_2)\in{\cal
+V}} (x-f(\tilde{t}_1,\tilde{t}_2))\] where ${\cal V}$ is the set of
+zeros of the polynomials $g(t_1,t_2)-y=0$ and  
+$h(t_1,t_2)-z=0$ in an algebraic closure of $\C(y,z)$. In order to
+make the things properly, first it is necessary to assure that the
+set ${\cal V}$ is finite: this is obtained by assuming that
+$g(t_1,t_2)$ and $g(t_1,t_2)$ have the following structure:
+\[\matrix{g_1(t_1,t_2)=t_1^{n_1}+Q_1(t_1,t_2)\cr
+          h_1(t_1,t_2)=t_2^{n_2}+Q_2(t_1,t_2)\cr}\]  (with
+$\deg(Q_1)<n_1$ and
+$\deg(Q_2)<n_2$). This hypothesis comes motivated by theorem 2.5
+which allows to determine symmetric functions over the solution set
+of polynomial systems of equations with this structure. In this case,
+next theorem is clear after 2.5 and the proofs of the theorems 3.1
+and 3.3.
+
+
+\begin{teorema}\hskip 0pt\\ Let ${\cal S}$ be a surface defined by a
+polynomial parametrization:
+\[x=f(t_1,t_2)\qquad y=g(t_1,t_2)\qquad z=h(t_1,t_2)\]  such that the
+polynomials $g$ and $h$ have the following structure:
+\[\matrix{g_1(t_1,t_2)=t_1^{n_1}+Q_1(t_1,t_2)\cr
+          h_1(t_1,t_2)=t_2^{n_2}+Q_2(t_1,t_2)\cr}\]  (with
+$\deg(Q_1)<n_1$ and
+$\deg(Q_2)<n_2$), $n=\deg(f)$ and $m=n_1n_2$. Then the implicit
+equation of
+${\cal S}$ is the squarefree part of the numerator of:
+\[{\cal H}_{\cal S}(x,y,z)=x^m+r_1x^{m-1}+\ldots+r_{m-1}x+r_m\] 
+where $(k\in\{1,\ldots,n\})$:
+\[kr_k(y,z)=-{\bf S}_k-{\bf S}_{k-1}r_1-\ldots -{\bf S}_1r_{k-1}\] 
+and every ${\bf S}_j(y,z)$ is the coefficient of $t_1^{-1}t_2^{-1}$
+in the Laurent polynomial:
+\[{{(f(t_1,t_2))^j{\bf
+Jac}(t_1,t_2)}\over{t_1^{n_1}t_2^{n_2}}}\cdot\sum_{k=0}^{jn}(-1)^k
+\cdot\sum_{\alpha_1+\alpha_2=k}
+\Big({{Q_1(t_1,t_2)-y}\over{t_1^{n_1}}}\Big)^{\alpha_1}
+\Big({{Q_2(t_1,t_2)-z}\over{t_2^{n_2}}}\Big)^{\alpha_2}\] where ${\bf
+Jac}(t_1,t_2)$ is tha Jacobian Determinant of $g(t_1,t_2)$ and 
+$h(t_1,t_2)$.\end{teorema}
+
+\begin{ejemplo}
+\hskip 0pt\\ {\rm The method presented in theorem 4.2 is used to determine the
+implicit equation of the surface parametrized by:
+\[x=t_1^2+t_2^2\quad y=t_1^3+t_2^2\quad
+z=t_2^3+t_1^2\] 
+In this particular case the equation ${\cal H}_{\cal S}$ has the following
+structure:
+\[{\cal H}_{\cal S}(x,y,z)=x^9+\sum_{i=1}^9 r_i(y,z)x^{9-i}\]
+The computation of the $r_i(y,z)$'s is performed by computing the Newton Sums
+of order $9$, ${\bf S}_j(y,z)$ ($j\in\{1,\ldots,9\}$). For that, first it is
+computed the Jacobian Determinant of $g$ and $h$: 
+\[{\rm Jac}(t_1,t_2)=t_1t_2(9t_1t_2-4)\]
+and the Laurent polynomials ($j\in\{1,\ldots,9\}$):
+\[{{(9t_1t_2-4)(t_1^2+t_2^2)^j}\over{t_1^2t_2^2}}\cdot
+\sum_{k=0}^{2j} (-1)^k\sum_{i=0}^k 
+\bigg({{t_2^2-y}\over{t_1^3}}\bigg)^i
+\bigg({{t_1^2-z}\over{t_2^3}}\bigg)^{k-i}\] whose coefficient in
+$t_1^{-1}t_2^{-1}$ is ${\bf S}_j(y,z)$. 
+In this way the following results are obtained:
+\[\matrix{{\bf S}_1(y)=&\!\!\!\!\!0\hfill\cr
+          {\bf S}_2(y)=&\!\!\!\!\!10\hfill\cr
+          {\bf S}_3(y)=&\!\!\!\!\!9x^2-42z-42y+9y^2\hfill\cr
+          {\bf S}_4(y)=&\!\!\!\!\!36x^2-24y+192yz-24z+30+36y^2\hfill\cr
+          {\bf S}_5(y)=&\!\!\!\!\!210x^2+10-180yx^2-240z-240y
+                                 +120yz+210y^2-180y^2z\hfill\cr
+          {\bf S}_6(y)=&\!\!\!\!\!-612y^2z+9x^4+630y^2+100+9y^4
+                                  -612yx^2+2160yz-480x^3-480y^3\hfill\cr
+                       &\!\!\!\!\!-228z+180y^2x^2+630x^2-228y\hfill\cr
+          {\bf S}_7(y)=&\!\!\!\!\!1428y^3z+70+2037y^2+1428yx^3
+                                  -6300yx^2+2037x^2-6300y^2z\hfill\cr
+                       &\!\!\!\!\!+2184yz+756y^2x^2-812y^3-1190y
+                                  -812x^3+315x^4-1190z+315y^4\hfill\cr
+          {\bf S}_8(y)=&\!\!\!\!\!350-1008y^3x^2-1504y+5488y^2
+                                  +1172x^4+5488x^2-1504z-7872y^3\hfill\cr
+                       &\!\!\!\!\!-1008y^4z-1008y^2x^3+1172y^4
+                                  +7712yx^3+7712y^3z+20160y^2x^2\hfill\cr
+                       &\!\!\!\!\!-7872x^3-1008yx^4-13872y^2z
+                                  -13872yx^2+15680yz\hfill\cr
+          {\bf S}_9(y)=&\!\!\!\!\!-5598z-5598y+14499y^4-15036x^3
+                                  +14499x^4+360-15036y^3+14967y^2\hfill\cr
+                       &\!\!\!\!\!+14967x^2+21024yz+9y^6
+                                  -1800y^5+52164yx^3-77616y^2z\hfill\cr
+                       &\!\!\!\!\!-25884y^2x^3+52164y^3z-1800x^5
+                                  -5274yx^4-25884y^3x^2+49680y^2x^2\hfill\cr
+                       &\!\!\!\!\!+756x^4y^2+756x^2y^4-5274y^4z+9x^6
+                                  -77616yx^2\hfill}
+\] 
+Newton Identities allow to conclude that the implicit equation of ${\cal S}$ is:
+\[\matrix{
+-2y^4-2z^4-96x^2yz^2-24x^2yz-21x^3y^2z^2
++44xy^3z+18xy^2z^3+60x^3y^2z+60x^3yz^2\hfill\cr
+\quad+76x^3yz+18xy^4z+24xy^2z-54x^2y^2z^2
+-60x^2y^3z-96x^2y^2z-60x^2yz^3+78xy^2z^2\hfill\cr
+\quad+18xy^3z^2+18xyz^4+3x^3z^4+38x^3y^2
+-22x^4y-24x^4yz-22x^4z+36x^4y^2z\hfill\cr
+\quad-9x^5y^2+36x^4yz^2+6x^5y+14x^6y-9x^5z^2
+-48x^5yz-3x^6y^2-3x^6z^2+14x^6z-12x^2y^2\hfill\cr
+\quad+44xyz^3-12x^2z^2+38x^3y^3-18x^2z^4
+-18x^2y^4-28x^2z^3+8x^3y+8x^3z+38x^3z^2\hfill\cr
+\quad+38x^3z^3+3x^3y^4+24xyz^2+5xz^4+8xy^3
++8xz^3+x^9-5x^7+5x^5-2x^4-y^6+2y^5\hfill\cr
+\quad-2y^4z-16y^2z^3-8y^3z-z^6+2z^5-2yz^4
++5xy^4-8yz^3-16y^3z^2-12y^2z^2-3z^4y^2\hfill\cr
+\quad-27x^4y^2-27x^4z^2-28x^2y^3+6x^5z-3z^2y^4\hfill\cr}\]}
+\end{ejemplo}
+
+Theorem 4.2 can be extended directly to the case of surfaces with a
+rational parametrization with the following structure:
+\[\matrix{x=&\!\!\!\! f(t_1,t_2)\hfill\cr\cr
+          y=&\!\!\!\!
+\displaystyle{{t_1^{n_1}+Q_1(t_1,t_2)}\over{D_1(t_1,t_2)}}\hfill
+\cr\cr
+z=&\!\!\!\!
+\displaystyle{{t_2^{n_2}+Q_2(t_1,t_2)}\over{D_2(t_1,t_2)}}\hfill}\]
+where $Q_1$, $D_1$, $Q_2$ and $D_2$ are polynomials in $\Q[t_1,t_2]$
+such that the total degrees of
+$Q_1$ and $D_1$ (resp. $Q_2$ and $D_2$) are smaller than $n_1$ (resp.
+$n_2$).
+
+\section{Conclusions}
+
+A new family of algorithms computing the implicit equation of
+parametric plane curves and space surfaces has been presented. These
+algorithms do not precise of the computation of symbolic determinants
+or Grobner Basis and they are mainly based on the computation of
+Newton Sums on the solution set of a polynomial ideal by means of
+either an expansion of a rational function in negative powers of the
+parameter in the case of plane curves or in the determination of a
+well precised coefficient of a Laurent polynomial in the case of
+surfaces.  
+
+A first implementation of these algorithms has been accomplished in
+the Computer Algebra System {\it Maple} and the first results
+obtained are quite good. Next steps concerning their study will
+regard the following questions:
+\begin{itemize}
+\item to generalize the algorithm in section 4.2 to a more general
+class of parametric surfaces: a first step in this direction could be
+the using of the results in [CDS94] to get formulae with the same
+type than in theorem 2.5 for polynomial systems of equations without
+solutions at infinity and a second possibility could be the using of
+infinitesimals (as in [MC92]).
+\item the most comsuming time in the algorithms in sections 3 and 4 
+is clearly the computation of the Laurent polynomials providing the
+desired Newton Sums: optimizations of this step are required in order
+to apply these algorithms to the implicitization of parametric
+hypersurfaces in
+$\C^n$ with $n\geq 4$.
+\item to study the behaviour of these algorithms for parametric
+surfaces with base points, but first experiences show that such
+points only provide some well precised extraneous factor.
+\end{itemize}
+
+\begin{thebibliography}{99}
+
+\bibitem[AGR94]{} C. Alonso, J. Guti\'errez and T. Recio: {\em An
+implicitization algorithm with fewer variables}. To appear in
+Computer Aided Geometric Design (1994). 
+
+
+\hyphenation{re-si-du-es}
+
+\bibitem[CDS94]{}  E. Cattani, A. Dickenstein and B. Sturmfels: {\em
+Computing multidimensional residues}. To appear in the proceedings of
+the conference MEGA-94, Birkh\"auser (1995).
+
+\bibitem[CLO93]{} D. Cox, J. Little and D. O'Shea: {\em Ideals,
+Varieties and Algorithms}. Undergraduate Texts in Mathematics,
+Springer-Verlag (1993).
+
+\hyphenation{Tour-nier}
+
+\bibitem[DST87]{} J. H. Davenport, Y. Siret and E. Tournier: {\em
+Calcul Formel:  Syst\'emes et algorithmes de manipulation algebriques}.
+Masson  Par\'{\i}s  (1987).
+
+\bibitem[DT87]{} R. Dvornicich and C. Traverso: {\em Newton symmetric 
+functions and the arithmetic of algebraically closed fields}. Proc.
+AAECC--5, Lecture Notes in Computer Science 356, 216--224 (1989).
+
+\bibitem[GC92]{} X.-S. Gao and S.-C. Chou: {\em Implicitization of
+rational parametric equations}. Journal of Symbolic Computation, 14,
+459--470 (1992).
+
+\bibitem[GV89]{} L. Gonz\'alez-Vega: {\em La sucesi\'on de Sturm-Habicht y sus
+aplicaciones al Algebra Computacional}. Doctoral Thesis, University of Cantabria
+(1989).
+
+\bibitem[GLV88]{} M. Giusti, D. Lazard and A. Valibouze: {\em 
+Algebraic transformations of polynomial equations, symmetric polynomials
+and elimination}. Proc. ISSAC--88, Lecture Notes in
+Computer Science 358, 309--314 (1989).
+
+\bibitem[H89]{} C. M. Hoffmann. {\em Geometric and Solid Modeling: An
+Introduction}. Morgan Kaufmann Publishers, Inc. (1989).
+
+\bibitem[K91]{} M. Kalkbrener: {\em Implicitization of rational
+parametric curves and surfaces}. Proc. AAECC--8, Lecture Notes in
+Computer Science 508, 249--259 (1990).
+
+\bibitem[L84]{} A. Lascoux: {\em La r\'esultant de deux polyn\^omes}.
+Seminaire d'Algebre M. P. Malliavin, 1984--1985.
+
+\bibitem[L82]{} R. Loos: {\it Generalized polynomial remainder 
+sequences}. Computer Algebra, ed. B. Buchberger, G.E. Collins and R.
+Loos, 115--138. Computing Suplementum 4, Springer Verlag, NY (1982).
+
+\bibitem[M93]{} A. M. Mandache: {\em Applications of Polynomial
+Systems Solving in  Geometric  Modelling and Robotics: An Annotated
+Bibliography}. Technical Report RISC-Linz (1993).
+
+\bibitem[MC92]{} D. Manocha and J. Canny: {\em Multipolynomial
+resultants and linear algebra}. Proceedings ISSAC-92, 158--167, ACM
+Press (1992).
+
+\bibitem[S93]{} B. Sturmfels: {\em Algorithms in Invariant Theory}.
+Text and Monographs in Symbolic Computation, 1, Springer-Verlag
+(1993).
+
+\bibitem[T92]{} A. K. Tsikh: {\em Multidimensional Residues and Their
+Applications}. Translations of Mathematical Monographs, 103, American
+Mathematical Society (1992). 
+
+\bibitem[V87]{} A. Valibouze: {\em Fonctions symetriques et changements 
+de bases}. Proc. EUROCAL--87, Lecture Notes in
+Computer Science 378, 323--332 (1989).
+
+\bibitem[V88]{} A. Valibouze: {\em Manipulations de fonctions
+symetriques}. Doctoral Thesis, University of Paris 6 (1988). 
+
+\end{thebibliography}
+\end{document}

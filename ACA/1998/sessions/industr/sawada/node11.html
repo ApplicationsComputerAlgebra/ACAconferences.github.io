@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Linear-armed robot design problem</TITLE>
+<META NAME="description" CONTENT="Linear-armed robot design problem">
+<META NAME="keywords" CONTENT="sawada">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sawada.css">
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html142"
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html140"
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html134"
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html143"
+ HREF="node12.html">Gearbox layout problem</A>
+<B> Up:</B> <A NAME="tex2html141"
+ HREF="node10.html">Example</A>
+<B> Previous:</B> <A NAME="tex2html135"
+ HREF="node10.html">Example</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00031000000000000000">&#160;</A>
+<A NAME="subsec:robot">&#160;</A>
+<BR>
+Linear-armed robot design problem
+</H2>
+Figure&nbsp;<A HREF="node11.html#fig:robot">7</A> shows the construction of a linear-armed robot consisting of a battery, a DC motor and a ball thread. In Figure&nbsp;<A HREF="node11.html#fig:robot">7</A>, <B><I>f</I><SUB><I>o</I></SUB></B> and <B><I>v</I><SUB><I>o</I></SUB></B> are the output force and velocity of the robot hand respectively.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig:robot">&#160;</A><A NAME="559">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 7:</STRONG>
+Construction of a linear-armed robot</CAPTION>
+<TR><TD><IMG
+ WIDTH="387" HEIGHT="214"
+ SRC="img57.gif"
+ ALT="\begin{figure}
+\begin{center}
+\ \epsfbox{sawada-7.eps}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+Sets of constraints holding these components are given as below.
+<UL>
+<LI>Battery
+
+<P>
+
+<!-- MATH: $0 \leq I \leq I_{0},\; 0 \leq V \leq V_{0}.$ -->
+<IMG
+ WIDTH="181" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$0 \leq I \leq I_{0},\; 0 \leq V \leq V_{0}.$">
+<P>
+<B><I>I</I></B>: output current
+<BR>
+<B><I>I</I><SUB>0</SUB></B>: upper limit of output current
+<BR>
+<B><I>V</I></B>: output voltage
+<BR>
+<B><I>V</I><SUB>0</SUB></B>: upper limit of output voltage
+<LI>DC motor
+
+<P>
+
+<!-- MATH: $\tau_{m}=kI_{m},\; V_{m}=RI_{m}+k\omega_{m},\; R \geq 0,\; k \geq 0,\; \tau_{m}\omega_{m} \geq 0.$ -->
+<IMG
+ WIDTH="415" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$\tau_{m}=kI_{m},\; V_{m}=RI_{m}+k\omega_{m},\; R \geq 0,\; k \geq 0,\; \tau_{m}\omega_{m} \geq 0.$">
+<P>
+<IMG
+ WIDTH="25" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\tau_{m}$">:
+output torque
+<BR>
+
+<!-- MATH: $\omega_{m}$ -->
+<IMG
+ WIDTH="28" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.gif"
+ ALT="$\omega_{m}$">:
+output angular velocity
+<BR>
+<B><I>I</I><SUB><I>m</I></SUB></B>: input current
+<BR>
+<B><I>V</I><SUB><I>m</I></SUB></B>: input voltage
+<BR>
+<B><I>k</I></B>: torque constant
+<BR>
+<B><I>R</I></B>: resistance
+<LI>Ball thread
+
+<P>
+
+<!-- MATH: $f=2\pi\tau/l,\; v=l\omega/2/\pi.$ -->
+<IMG
+ WIDTH="177" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$f=2\pi\tau/l,\; v=l\omega/2/\pi.$">
+<P>
+<B><I>f</I></B>: output force
+<BR>
+<B><I>v</I></B>: output velocity
+<BR>
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.gif"
+ ALT="$\omega$">:
+input angular velocity
+<BR>
+<B><I>l</I></B>: lead
+</UL>
+<P>
+Battery's output voltage and current are the same as DC motor's input voltage and current, and DC motor's output torque and angular velocity are the same as ball thread's input torque and angular velocity. Furthermore, ball thread's output force and velocity are identical with the output force and velocity of the robot hand. Therefore, whole the constraints holding the linear-armed robot are given as Eq.&nbsp;(<A HREF="node11.html#eq:robot">8</A>).
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\begin{array}{l}
+0 \leq I \leq I_{0},\; 0 \leq V \leq V_{0},\\
+I_{m}=I,\; V_{m}=V,\\
+\tau_{m}=kI_{m},\; V_{m}=RI_{m}+k\omega_{m},\; R \geq 0,\; k \geq 0,\; \tau_{m}\omega_{m} \geq 0,\\
+\tau=\tau_{m},\; \omega=\omega_{m},\\
+f=2\pi\tau/l,\; v=l\omega/2/\pi,\\
+f_{o}=f,\; v_{o}=v.
+\end{array}
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:robot">&#160;</A><IMG
+ WIDTH="408" HEIGHT="128"
+ SRC="img64.gif"
+ ALT="\begin{displaymath}
+\begin{array}{l}
+0 \leq I \leq I_{0},\; 0 \leq V \leq V_{0},...
+...pi\tau/l,\; v=l\omega/2/\pi,\\
+f_{o}=f,\; v_{o}=v.
+\end{array}\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+Let Eq.&nbsp;(<A HREF="node11.html#eq:robot-spec">9</A>) be the given requirement to the linear-armed robot. 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+f_{o} > 90 \mbox{[N]}.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:robot-spec">&#160;</A><IMG
+ WIDTH="79" HEIGHT="31"
+ SRC="img65.gif"
+ ALT="\begin{displaymath}
+f_{o} > 90 \mbox{[N]}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(9)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+In this problem, the designer has to determine variable values satisfying Eq.&nbsp;(<A HREF="node11.html#eq:robot">8</A>) and (<A HREF="node11.html#eq:robot-spec">9</A>). In actual design, the designer does not design a battery, a DC motor or a ball thread. Instead, commercial components are used. Firstly, they are roughly selected based on the size or the weight. After that, their performance are checked in detail and the acceptable components are used. In this example, for simplicity, it is assumed that the following components are used. 
+<DL>
+<DT><STRONG>Battery:</STRONG>
+<DD>
+<!-- MATH: $I_{0}=1\mbox{[A]},\; V_{0}=9\mbox{[V]}.$ -->
+<IMG
+ WIDTH="158" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.gif"
+ ALT="$I_{0}=1\mbox{[A]},\; V_{0}=9\mbox{[V]}.$"><DT><STRONG>DC motor:</STRONG>
+<DD>
+<!-- MATH: $k=0.02\mbox{[Nm/A]},\; R=2\mbox{[$\Omega$ ]}.$ -->
+<IMG
+ WIDTH="209" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="$k=0.02\mbox{[Nm/A]},\; R=2\mbox{[$\Omega$ ]}.$"><DT><STRONG>Ball thread:</STRONG>
+<DD>
+<!-- MATH: $l/2/\pi=1.6\times 10^{-4}\mbox{[m]}.$ -->
+<IMG
+ WIDTH="171" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$l/2/\pi=1.6\times 10^{-4}\mbox{[m]}.$"></DL>
+<P>
+Suppose that the designer likes to determine the output velocity of the robot hand and gives a constraint ``
+<!-- MATH: $v_{o} > 0.07\mbox{[m/s]}$ -->
+<IMG
+ WIDTH="110" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$v_{o} > 0.07\mbox{[m/s]}$">'' to the algebraic under constraint solver. Then, all the inequalities are transformed into a form of equation by introducing slack variables, the reduction tree is constructed, and inconsistency is found among the following constraints.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f_{o} > 90,\; v_{o} > 0.07,\; V \leq V_{0},\; V_{0} = 9\;, R = 2, k = 0.02, l/2/\pi=1.6 \times 10^{-4}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="529" HEIGHT="31"
+ SRC="img70.gif"
+ ALT="\begin{displaymath}f_{o} > 90,\; v_{o} > 0.07,\; V \leq V_{0},\; V_{0} = 9\;, R = 2, k = 0.02, l/2/\pi=1.6 \times 10^{-4}.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+The designer may relax the constraint about the output velocity <B><I>v</I><SUB><I>o</I></SUB></B> and replace the constraint ``
+<!-- MATH: $v_{o}>0.07\mbox{[m/s]}$ -->
+<IMG
+ WIDTH="110" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$v_{o} > 0.07\mbox{[m/s]}$">'' by a new one ``
+<!-- MATH: $v_{o}>0.06\mbox{[m/s]}$ -->
+<IMG
+ WIDTH="110" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.gif"
+ ALT="$v_{o}>0.06\mbox{[m/s]}$">''. Then, any inconsistency is found at the symbolic part of the algebraic under constraint solver, and the following numerical solution is computed by the numeric part.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\begin{array}{l}
+f_{o}=f=90.05\mbox{[N]},\; v_{o}=v=6.005\times 10^{-2}\mbox{[m/s]},\\
+\tau = \tau_{m} = 1.441\time 10^{-2}\mbox{[Nm]},\; \omega = \omega_{m} = 3.753\times 10^{2}\mbox{[rad/s]},\\
+V_{m} = V = 8.947\mbox{[V]},\; I_{m} = I = 0.7204\mbox{[A]}.
+\end{array}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="389" HEIGHT="68"
+ SRC="img72.gif"
+ ALT="\begin{displaymath}\begin{array}{l}
+f_{o}=f=90.05\mbox{[N]},\; v_{o}=v=6.005\tim...
+... = 8.947\mbox{[V]},\; I_{m} = I = 0.7204\mbox{[A]}.
+\end{array}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html142"
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html140"
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html134"
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html143"
+ HREF="node12.html">Gearbox layout problem</A>
+<B> Up:</B> <A NAME="tex2html141"
+ HREF="node10.html">Example</A>
+<B> Previous:</B> <A NAME="tex2html135"
+ HREF="node10.html">Example</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

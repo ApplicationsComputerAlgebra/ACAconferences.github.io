@@ -1,0 +1,16 @@
+Techniques for Translating Between the Equivalent Representations of Polynomial
+Functions with the TI-Nspire CAS Technology
+
+Eugenia Kelepesi-Akritas, Aristotelis Raptis, Athanasia Raptis and
+Alkiviadis G. Akritas
+
+In the scientific community it is widely accepted that for a deeper
+understanding of the concept of function students need to be able to translate
+between the three most commonly used representations of polynomial functions,
+that is, between the algebraic expression (A), tabular form (T) and graphical
+representation (G).
+
+In this talk we demonstrate the modeling capabilities of the computer algebra
+system TI-Nspire CAS and show how to perform the translations A <-> T, T <-> G,
+G <-> A, completing thus the Triple Representation Model (TRM) by Schwarz,
+Dreyfus & Bruckheimer.

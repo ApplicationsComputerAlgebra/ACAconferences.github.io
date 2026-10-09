@@ -1,0 +1,30 @@
+\begin{center}
+\LARGE
+High order WKB approximation and singular perturbation
+                             theory
+\end{center}
+
+\begin{center}
+\Large
+Michael Trott
+
+\end{center}
+
+\noindent
+Date:  July 18th (Thursday)\\
+Time:  09:20-09:45\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+In the first part high order WKB quantization formulas for one-dimensional systems are derived
+by alternating repeated automatic partial integration with respect to x and V'(x). At the end
+nonintegrable singularities are rewritten as multipe energy derivatives to allow numerical
+treatment of the integrals. The second part discusses the second order dependence of the
+eigenvalues of a finite quantum well in an electric field. Because the system has a continous energy
+spectrum, classical perturbation theory yields untractable integrals. Starting from the exact
+solution a singular perturbation theory is performed to yield relatively simple closed form
+expressions for all eigenvalues. 
+

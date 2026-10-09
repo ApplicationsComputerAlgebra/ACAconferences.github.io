@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="gutierrez">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="gutierrez.css">
+</HEAD>
+<BODY bgcolor=white>
+<DIV ALIGN="CENTER">
+<B>A Practical Implementation of an  algorithm for Decomposing</DIV>
+</B>
+<P><P>
+<BR>
+<DIV ALIGN="CENTER"><B>
+<B>Sine-Cosine Equations with Parametric
+Coefficients</B></DIV></B>
+<DIV ALIGN="CENTER"><B><B>
+Jaime Gutierrez</B></B></DIV>
+
+<P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER"><B><B>
+Dpto. Matem&#225;ticas, Estad&#237;stica y
+Computaci&#243;n</B></B></DIV>
+
+<P>
+<DIV ALIGN="CENTER"><B><B>
+Universidad de Cantabria, Santander 39071, Spain</B></B></DIV>
+
+<P><P>
+<BR>
+
+<P>
+<B><B><B>Abstract.</B>
+</B></B>
+<P><P>
+<BR>
+
+<P>
+<B><B>To solve symbolically the inverse kinematic problem  usually requires
+to compute the roots of the so-called sine-cosine polynomials. A functional
+decomposition
+of a sine-cosine polynomial equation </B></B><I>f</I>(<I>s</I>,<I>c</I>)=0<B><B> reduces this task to the
+solution of two
+equations of degree less or equal than half the degree of </B></B><I>f</I>(<I>s</I>,<I>c</I>)<B><B>. Methods
+for simplifying the
+symbolic solution of kinematics problems through functional decomposition
+were initiated by G. Hommel and
+P. Kovacs, well documented with applications in the recent book of the
+latter author.
+They addressed the
+problem of  simplifying the  characteristic equation </B></B><I>f</I>(<I>s</I>,<I>c</I>)=0<B><B> for a
+revolute joint variable </B></B><IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\theta$"><B><B>( </B></B><I>s</I><B><B> and </B></B><I>c</I><B><B> stand for </B></B>
+<!-- MATH: $sin(\theta)$ -->
+<IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$sin(\theta)$"><B><B> and </B></B>
+<!-- MATH: $cos(\theta)$ -->
+<IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$cos(\theta)$"><B><B>), whose
+solution provides the possible value(s) of the joint angle </B></B><IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\theta$"><B><B> in a
+robot manipulator
+for each given position of the end effector.
+</B></B>
+<P></P>
+<B><B>
+The sine-cosine polynomial decomposition problem can be sated as follows:
+</B></B>
+<P>
+<B><B>given  a sine-cosine characteristic equation </B></B><I>f</I>(<I>s</I>,<I>c</I>)<B><B> for a
+revolute joint variable </B></B><IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\theta$"><B><B>,
+we want to know if there exist a univariate polynomial </B></B><I>g</I>(<I>x</I>)<B><B> and a
+sine-cosine polynomial
+</B></B><I>h</I>(<I>s</I>,<I>c</I>)<B><B> with </B></B>
+<!-- MATH: $deg(NF(h(s,c)) < deg(NF(h(s,c))$ -->
+<I>deg</I>(<I>NF</I>(<I>h</I>(<I>s</I>,<I>c</I>)) &lt; <I>deg</I>(<I>NF</I>(<I>h</I>(<I>s</I>,<I>c</I>))<B><B> such that:
+</B></B>
+<P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: $NF(f(s,c))=g(NF(h(s,c))$ -->
+<I>NF</I>(<I>f</I>(<I>s</I>,<I>c</I>))=<I>g</I>(<I>NF</I>(<I>h</I>(<I>s</I>,<I>c</I>))<B><B> modulo the trigonometric identity
+</B></B><I>s</I><SUP>2</SUP>+<I>c</I><SUP>2</SUP>=1</DIV>
+
+<P></P>
+<B><B>and in the affirmative case to compute </B></B><I>g</I>(<I>x</I>)<B><B> and </B></B><I>h</I>(<I>s</I>,<I>c</I>)<B><B>.
+Remark that </B></B><I>NF</I><B><B> stands
+for the normal form of a sine-cosine polynomial, i.e. the result of
+reducing it by replacing
+</B></B><I>s</I><SUP>2</SUP><B><B> by </B></B>1-<I>c</I><SUP>2</SUP><B><B>.
+</B></B>
+<P></P>
+<B><B>It is remarkable that the simplification accomplished by
+functional decomposition
+agrees with  the criteria for simplifiability as formulated by Smith and
+Lipkin,
+of purely geometric nature, regarding a </B></B>6<I>R</I><B><B> manipulator with the three
+last axis
+intersecting. On the other hand, it seems that the are not other symbolic
+algebraic simplification
+approaches (such as factorization) that can be tested in different
+instances occuring in robotics.
+</B></B>
+<P></P>
+<B><B>Regarding algorithms for the decomposition problem, we can
+mention the  results
+of G. Hommel and
+P. Kovacs,  requiring an exponential number of field operations in the
+input degree;
+even if the in last paper reduces the complexity by magnitudes and the
+authors state that
+satifyies all needs in kinematics, it is kept exponential. We  must also
+mention  work of von zur
+Gathen and Weiss, about Bivariate Homgeneous  Decomposition (BHD): a
+homogenous bivariate
+decomposition of a univariate polynomial </B></B><I>f</I>(<I>t</I>)<B><B> is of the form
+</B></B>
+<!-- MATH: $f(t)=g(h(t), k(t))$ -->
+<I>f</I>(<I>t</I>)=<I>g</I>(<I>h</I>(<I>t</I>), <I>k</I>(<I>t</I>))<B><B> with
+polynomials </B></B>
+<!-- MATH: $g(x,y), h(t), k(t)$ -->
+<I>g</I>(<I>x</I>,<I>y</I>), <I>h</I>(<I>t</I>), <I>k</I>(<I>t</I>)<B><B>, where
+</B></B><I>g</I>(<I>x</I>,<I>y</I>)<B><B> is a bivariate and homogenous. The authors present an algorithm of
+exponential time complexity in the input degree. Such decompositions are
+also of interest
+in kinematics, in fact, the kinematic equations can be converted through
+the tangent half
+angle substitution to univariate </B></B><I>t</I>-<B><B>polynomials </B></B><I>f</I>(<I>t</I>)<B><B>.
+</B></B>
+<P>
+<B><B>It is very easy to see that if a sine-cosine  polynomial </B></B><I>f</I>(<I>s</I>,<I>c</I>)<B><B> is
+decomposable, then the </B></B><I>f</I>(<I>t</I>)<B><B> associated univariate polynomial has a bivariate
+homogeneous decomposition, but not conversely.
+ Nevertheless  there is a serious limitation for
+ efficient robotic applications to </B></B><I>t</I><B><B>-polynomials of degree bigger than six,
+because the BHD  algorithm requires factorization procedures  over
+algebraic extensions
+of the  field </B></B><I>K</I>(<I>t</I>)<B><B>. </B></B>
+<P>
+<B><B>In this talk, we present the implementation of the the method by
+Gutierrez</B></B><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\&$"><B><B>Recio(1997) for   decomposing sine-cosine equations with
+numerical or parametric
+coefficients. The algorithm  is in polynomial time. Factoring is not
+required in  the
+algorithm, but rather it just need finding one root in the field
+</B></B><I>K</I><B><B> of a certain polynomial </B></B><I>p</I>(<I>Z</I>)<B><B> in </B></B><I>K</I>[<I>Z</I>]<B><B>. The implementation on  MAPLE
+V, allowing
+decomposition over the rationals, algebraic extension of the rationals or
+parametric coefficient
+fields. The perfomance of the algorithm allows decomposing, almost
+instantaneously,
+sine-cosine polynomials of degree </B></B>16<B><B> with a Power Macintosh 9600/350.
+</B></B>
+<P><P>
+<BR>
+<B><HR></B>
+<P><P>
+<BR>
+<P>
+<B>Gathen, J.</B><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\&$"><B>Weiss, J.:<I>Homogeneous bivariate decompositions</I>.
+Preprint, Dep. of Computer Science, University of Toronto, 1993.
+</B>
+<P>
+<P></P>
+<P>
+<B>Gutierrez, J.</B><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\&$"><B>Recio, T.:<I>Advances on the Simplification of
+Sine-Cosine Equations</I>. 
+To appear, J of Symbolic Computation, 40 pages, 1997.
+Preprint, Dep. of Computer Science, University of Toronto, 1993.
+</B>
+<P>
+<P></P>
+<B>Kov&#225;cs, P.</B><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\&$"><B>Hommel, G.:<I>Simplification of Symbolic Inverse
+Kinematic Transformations through   Functional Decomposition</I>. Adv. in
+Robotics.
+Ferrara, Sept.  1992.
+</B>
+<P>
+<P></P>
+<B>Kov&#225;cs, P.<I>Rechnergestutzte symbolische Roboterkinematik.</I>
+ Vieweg Verlag, Wiesbaden (1993).
+</B>
+<P>
+<P></P>
+<B> Smith, D.</B><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\&$"><B>Lipkin, H.: <I>A summary of the Theory and
+ Application of the conics method in robot Kinemataic.</I>
+ 2nd. Intl. Conf. on Adv. in Robot Kinmetics. Linz (1990)- Springer- Verlag,
+ pp. 81-88 (1991).
+</B>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

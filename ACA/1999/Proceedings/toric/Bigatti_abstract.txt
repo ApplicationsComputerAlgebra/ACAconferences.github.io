@@ -1,0 +1,8 @@
+New algorithms for Computing Toric Ideals
+by Anna Bigatti
+
+The computer algebra system CoCoA offers three algorithms to compute toric
+ideals and also some other functions to apply them to Integer Programming.  We
+present the algorithms and their respective merits in the applications to
+Integer Programming.  We also describe an algorithm to compute a test set and
+the functions in the CoCoA package "intprog.pkg".

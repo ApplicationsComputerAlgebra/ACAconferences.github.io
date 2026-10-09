@@ -1,0 +1,12 @@
+# Created by rsalamon@yucca on Thu Jul  4 10:00:37 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Maccone.html
+Path=0/conference/IMACS96/skeletons/Maccone/Maccone.html
+
+Name=Mertig.html
+Path=0/conference/IMACS96/skeletons/Maccone/Mertig.html
+
+Name=Trott.html
+Path=0/conference/IMACS96/skeletons/Maccone/Trott.html
+

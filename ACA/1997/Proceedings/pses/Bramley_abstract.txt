@@ -1,0 +1,24 @@
+Title:  The PSEware Project: Infrastructure for Building Problem-Solving
+        Environments
+
+Author: Randy Bramley
+        Department of Computer Science
+        Indiana University
+
+Abstract:
+
+A problem-solving environment (PSE) is an integrated software system for
+solving a broad class of problems in an application domain.  Several PSEs have
+been developed: examples are as diverse as Matlab for numerical linear algebra,
+PetSc for scientific computing, and Quicken for personal finance.  The PSEware
+project focuses on symbolic specifications, methods of reuse of object
+structures for user interfaces and parallel execution, and collaboration
+technologies for problem solving.  A key goal is not just the development of
+individual PSEs, but the creation of tools which allow users to rapidly and
+easily create their own PSEs.  However, we regard the development of PSEs as
+both a reality check for the usability of the developed tools and as "point
+solutions" for the general techniques.
+
+Six institutions and over twenty researchers are part of the PSEware project.
+This talk presents a brief overview of the research projects, some preliminary
+conclusions, and future developments.

@@ -1,0 +1,21 @@
+# Created by rsalamon@yucca on Thu Jul  4 10:39:46 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Augot.html
+Path=0/conference/IMACS96/skeletons/Sakata/Augot.html
+
+Name=Beth.html
+Path=0/conference/IMACS96/skeletons/Sakata/Beth.html
+
+Name=Leprevost.html
+Path=0/conference/IMACS96/skeletons/Sakata/Leprevost.html
+
+Name=Nueckel.html
+Path=0/conference/IMACS96/skeletons/Sakata/Nueckel.html
+
+Name=Sakata.html
+Path=0/conference/IMACS96/skeletons/Sakata/Sakata.html
+
+Name=Stein.html
+Path=0/conference/IMACS96/skeletons/Sakata/Stein.html
+

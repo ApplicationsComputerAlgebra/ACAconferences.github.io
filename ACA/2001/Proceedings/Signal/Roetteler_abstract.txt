@@ -1,0 +1,30 @@
+Algebraic Properties of Approximate Quantum Fourier Transforms
+
+Martin Roetteler
+Institut fuer Algorithmen und Kognitive Systeme (IAKS)
+Universitaet Karlsruhe
+Germany
+http://iaks-www.ira.uka.de/home/roetteler/
+email:     roettele@ira.uka.de
+
+Abstract:
+---------
+
+It is well known that fast algorithms for the computation of Discrete Fourier
+Transforms can be explained and cast in representation-theoretical terms.  The
+pillar of this approach is to take advantage of their property to decompose a
+representation into a direct sum of irreducible representations. The special
+case of regular representations of cyclic groups leads to the most familiar
+case, in the following denoted by DFT.
+
+The field of definition of DFT is a cyclotomic field L containing a primitive
+N-th root of unity where N denotes the length of the DFT.  Approximate Quantum
+Fourier Transforms (AQFT) are a class of unitary transformations which are
+defined over subfields of L and which are shown to yield good approximations to
+the DFT with respect to the spectral norm.
+
+AQFTs have been introduced by D. Coppersmith for use in quantum computing.
+They provide a significant speedup compared to the computation of a DFT on a
+quantum computer.  As a new result we show that AQFTs are basefield transforms:
+they decompose the regular representation of the cyclic group into irreducibles
+over subfields of L, i.e., over non-splitting fields.

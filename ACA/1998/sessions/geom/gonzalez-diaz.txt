@@ -1,0 +1,14 @@
+"An approach to computing the action of Steenrod squares
+ on the cohomology of polyhedral simplicial sets"
+
+Rocio Gonzalez-Diaz, Pedro Real Jurado
+Univ. de Sevilla, Spain.
+e-mail: real@cica.es
+
+
+ Abstract: A combinatorial formulation for Steenrod squares is given
+in [Gonzalez-Diaz R. and Real P. : ``A combinatorial method for
+computing Steenrod squares''. To appear in Journal of Pure and Applied
+Algebra (June, 1999) ] .  This computer algebra tool is used here in
+order to derive several results concerning the action of the Steenrod
+algebra on the cohomology of polyhedral simplicial sets.

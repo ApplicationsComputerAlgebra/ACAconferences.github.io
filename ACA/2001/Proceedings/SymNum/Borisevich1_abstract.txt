@@ -1,0 +1,31 @@
+  Title:        Solving SNPE as a New Basic Symbolic-Numerical
+                Operation for Modeling PDEs
+  Authors:      Valentine D. Borisevich, Valeriy G. Potemkin
+  Affiliation:  Moscow State Engineering Physics Institute
+                (Technical Univ.) 
+  Abstract:
+As is known in the case of solving Partial Differential Equations (PDEs) the
+initial system is reduced to the nonlinear system of finite difference
+equations that are the System of Nonlinear Algebraic Equations (SNAE).  Solving
+of the latter is in turn reduced to System of Linear Algebraic Equations (SLAE)
+of a large size, which is considered conventionally as a basic operation for
+modelling PDEs.  As the result of our recent research we offer to apply a
+direct technique of solving SNAE using instead of SLAE a System of Nonlinear
+Polynomial Equations (SNPE) as the model.  In fact, it means the replacement of
+the linear basic operation to the nonlinear one.  To solve SNPE by means of our
+new basic operation we offer (i) to analyze them as an object of the theory of
+ideals; (ii) to reduce the SNPE to a Groebner basis; (iii) to transform SNPE in
+the Groebner basis to the System of Spectral Problems (SSP) for rectangular
+matrix pencils.  So the new basic operation includes two different types of
+computations: the first is a symbolic one (reducing SNPE to a Groebner basis)
+and the second is a numeric one (solving of SSP).  We come to conclusion that
+to get rise a performance of computations it is possible to use two
+coprocessors for symbolic, and numeric computations, respectively.
+Additionally, it is necessary to note that the algorithm of solving SNPE
+offered in contrast to the conventional algorithms of solving SLAE possesses an
+important feature of a natural parallelism.  At the moment the algorithm is
+accomplished as a solver in the MATLAB environment.  Its application to
+solution of various real-life problems demonstrated that the basic operation of
+solving SNPE offered allows to refine the nonlinear components of the PDEs
+solutions that cannot be found by the traditional basic operation of solving
+SLAE.

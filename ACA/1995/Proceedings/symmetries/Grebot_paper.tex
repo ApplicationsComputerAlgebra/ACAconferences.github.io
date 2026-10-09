@@ -1,0 +1,949 @@
+%%%%%%%%%%%%%%%%%%%%% LATEX FILE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentstyle[12pt]{article}
+\textwidth 16cm
+\textheight 24cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\topmargin -2cm
+\headheight 0cm
+\footheight 1cm
+
+%theoremas
+%\newtheorem{th}{Theorem}
+%\newtheorem{prop}{Proposition}
+\newtheorem{re}{Result}
+
+% Make real R
+%\font\Edth=msym10
+%\def\Real{\hbox{\mid R}}
+
+% Author
+\Large
+\begin{document}
+\begin{center}
+{\LARGE {\bf The characterization of third order}}\\ ~\\
+{\LARGE {\bf ordinary differential equations}}\\ ~\\
+{\LARGE {\bf admitting fiber-preserving point}}\\~\\ 
+{\LARGE {\bf symmetries}} \\~\\
+{\footnotesize Guy Grebot}\footnote{Supported by CNPq, Brazil.} \\
+{\scriptsize Departamento de Matem\'{a}tica} \\
+{\scriptsize Universidade de Bras\'{i}lia} \\
+{\scriptsize Brasil.} \\
+{\footnotesize Email:guy@mat.unb.br}
+\end{center}
+
+\begin{abstract}
+Third order ordinary differential equations are characterized 
+with respect to the dimension of the symmetry group of fiber preserving 
+point transformations they admit.  For the symmetry groups of dimension 
+greater or equal to 4, we obtain parametric families of equations 
+admitting those groups. The equivalence classes of linear equations are 
+also explicitly given. The results presented are 
+based on the solution of the local equivalence problem for third order 
+ordinary differential equations under fiber preserving point transformations.
+\end{abstract}
+
+\section{Introduction}
+
+The local equivalence problem for third order ordinary differential 
+equations (ODE's), consists in determining the conditions for 
+a coordinate transformation, taking one third order ODE into 
+another one, to exist. 
+In \cite{T_Grebot94}, \'{E}lie Cartan's method of equivalence was  
+used to solve this problem under the group $G$ of point transformations of 
+the form $X=X(x)$, $Y=Y(x,y)$, where $y$ satisfies 
+\begin{displaymath}
+y'''=F(x,y,y',y''),
+\end{displaymath}
+the \lq $'$\rq denoting total differentiation with respect to $x$.
+
+The method of equivalence directly gives the different equivalence classes 
+which are characterized by a set of functions, invariant under a subgroup 
+of a given prolongation of $G$. 
+ 
+For self-equivalence, the group formed by the solutions 
+of the problem is the symmetry group of the equation under study. Its 
+dimension is related to the 
+number of invariants determining the class of the considered equation 
+(see \cite{P_Kamran89}).
+
+The aim of this work is to give a characterization of third order 
+ODE's admitting a symmetry group of fiber preserving point transformations.
+This characterization is based on the possible values assumed by the 
+invariants returned by the application of the equivalence method. 
+The complexity of these expressions forbids us to give, as for second order 
+ODE's \cite{P_HsuKam89}, 
+the complete list of possible symmetry groups of third order ODE's. 
+But when the invariants are assumed to be constant such a 
+description is accessible, and we obtain a characterization of the 
+third order ODE's admitting symmetry groups of dimension four to seven, as
+well as a characterization of those groups.
+
+The reason for not obtaining a characterization of the equations admitting 
+lower dimensional symmetry groups is due to the high number of invariants. 
+In fact, by the method of equivalence, a maximal functionally 
+independent set must be selected among those invariants and their derivatives. 
+This is always possible for 
+particular cases with the help of the symbolic program {\tt clasode3} 
+\cite{P_Grebot95}. But in the general case it is not possible: many 
+possibilities appear as one must select at most three functionally 
+independent invariants among, say, nine.
+
+In the next section we briefly resume the solution of the 
+equivalence problem for third order ODE's under fiber preserving point 
+transformations. The linear equations are presented in 
+Section \ref{s_lin}. In the other sections we give the characterization 
+of the equations admitting symmetry groups of dimension 6 and 4.
+
+In what follows, we have used the nomenclature of \cite{T_Grebot94}; the 
+basic invariants, obtained by the application of the 
+equivalence method, are named $I_{i}$ where $i \leq 10$. 
+
+
+%%%%%%%%%%%%
+\section{The solution of the equivalence problem}
+
+We briefly present the solution, obtained in \cite{T_Grebot94}, to the problem 
+of finding necessary and sufficient conditions for the existence of 
+a transformation 
+\begin{equation}
+\label{point_trans}
+\begin{array}{ccc}
+X&=&\phi(x) \\
+Y&=&\psi(x,y) 
+\end{array} 
+\end{equation}
+taking one third order ODE 
+\begin{equation}
+\label{eq_F}
+y'''=F(x,y,y',y''),
+\end{equation}
+into another one 
+\begin{equation}
+\label{eq_G}
+Y'''=G(X,Y,Y',Y'').
+\end{equation}
+Such a problem is called an equivalence problem, and the method to solve it 
+is E. Cartan's method of equivalence (see \cite{B_Gardn89}). 
+We start with a coframe $\{ \omega \}$ 
+\begin{eqnarray*}
+\underline{\omega^{0}}&=& dx \\
+\underline{\omega^{1}}&=& dy-p\,dx \\
+\underline{\omega^{2}}&=& dp-q\,dx \\
+\underline{\omega^{3}}&=& dq-F\,dx 
+\end{eqnarray*}
+defined on the second order jet bundle $J^{2}(R,R)$, with coordinates 
+$(x,y,p,q)$, and a similar coframe $\underline{\Omega}$ determining the 
+solutions of (\ref{eq_G}). 
+The problem to be solved is to find the transformations 
+$\Phi: J^{2}(R,R) \rightarrow J^{2}(R,R)$, which are given by the 
+second prolongation of (\ref{point_trans}) such that 
+\begin{equation}
+\Phi^{\ast} \underline{\Omega}^{i}=\Gamma\,\underline{\omega}^{i},
+\end{equation}
+where $\Gamma$ are defined on $J^{2}(R,R)$ with values in the group 
+$G$ of matrices of the form 
+\begin{equation}
+\label{Gamma}
+\Gamma=\left(
+\begin{array}{cccc}
+A & 0 & 0 & 0 \\
+0 & B & 0 & 0 \\
+0 & C & B/A & 0 \\
+0 & D & E & B/A^{2} 
+\end{array} \right).
+\end{equation}
+The functions $A$, $B$, $C$, $D$ and $E$ are given by 
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray*} 
+A&=&\phi_{,x} \\
+B&=&\psi_{,y} \\
+C&=&(\psi_{,xy}+p\,\psi_{,yy})/\phi_{,x} \\
+D&=& \phi_{,x}^{-3}\,(q\,\phi_{,x}\,\psi_{,yy} 
++p\,(2\,\psi_{,xyy}\,\phi_{,x}-\psi_{,yy}\,\phi_{,xx}) \nonumber \\
+& + & p^{2}\,\psi_{,yyy}\,\phi_{,x} 
++ \psi_{,xxy}\,\phi_{,x} - \phi_{,xx}\,\psi_{,xy}) \\
+E&=& \phi_{,x}^{-3}\,(2\,\psi_{,xy}\,\phi_{,x}-\psi_{,y}\,\phi_{,xx}
++ 2\,p\,\psi_{,yy}\,\phi_{,x} ).
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+The idea of the method is to reformulate the problem such that it 
+becomes 
+\begin{equation}
+\tilde{\Phi}^{\ast} \Sigma^{i}=\sigma^{i}.
+\end{equation}
+
+The problem is completely solved in this form (see \cite{P_Kamran89}). 
+The solution is given in terms of a set ${\cal F}$ of functions defined 
+on $J^{2}(R,R)$. Among the elements of ${\cal F}$, a maximal set of 
+functionally  independent functions must be selected. The dependence 
+of the elements of ${\cal F}$ with respect to these independent functions 
+ will characterize the equivalence class of a given equation. 
+
+For self-equivalence, the solutions of the problem 
+form the group of symmetries of the equation. The dimension $r$ of this group 
+is related to the number $p$ of functionally independent invariants in 
+${\cal F}$ 
+and the dimension $n$ of the space on which the coframe $\{\sigma \}$ is 
+defined. We have
+\begin{equation}
+r=n-p
+\end{equation}
+(see \cite{B_Gardn89} \cite{P_Kamran89} \cite{B_Sternberg64}).
+
+For the solution of the equivalence problem of third order ODE's, 
+the algorithm of the method splits depending on whether 
+{\bf A}: $F_{,qq}=0$ or {\bf B}: $F_{,qq} \neq 0$. 
+
+In the first case, $F_{,qq}=0$, we are led to consider two more cases 
+{\bf A-a}: $TD_{0}=0$ and {\bf A-b}: $TD_{0} \neq 0$, where 
+\begin{eqnarray}
+\label{TD0}
+TD_{0}&=&(18\,F_{,p}\,F_{,q} + 4\,F_{,q}^{3} 
+- 18\,F_{,q}\,\frac{d}{dx}F_{,q} + 54\,F_{,y} 
+- 27\,\frac{d}{dx}F_{,p} \nonumber \\
+&+& 9\,\frac{d^{2}}{dx^{2}}F_{,q})/(54\,A^{3}).
+\end{eqnarray}
+If $TD_{0}=0$ then we obtain two more cases. These cases lead to the class 
+of the trivial equation and to equivalence classes of equations admitting 
+symmetry groups of dimension 3, 1 or 0. If $TD_{0} \neq 0$, then we 
+must consider the cases
+\begin{description}
+\item[A-ba)] $TA_{1}$, $TA_{2}$, $TA_{3}$ not null,
+\item[A-bb)] $TA_{1}=0$ and $TA_{2}$, $TA_{3}$ not null,
+\item[A-bc)] $TA_{2}=0$ and $TA_{1}$, $TA_{3}$ not null,
+\item[A-bd)] $TA_{3}=0$ and $TA_{1}$, $TA_{2}$ not null, 
+\item[A-be)] $TA_{1}=TA_{2}=0$ and $TA_{3}$ not null,
+\item[A-bf)] $TA_{1}=TA_{3}=0$ and $TA_{2}$ not null, 
+\item[A-bg)] $TA_{2}=TA_{3}=0$ and $TA_{1}$ not null, 
+\item[A-bh)] $TA_{1}$, $TA_{2}$, $TA_{3}$ all null,
+\end{description}
+where 
+\begin{eqnarray}
+\label{A_bTA1}
+TA_{1}&=&( - 6\,A_{,p}\,F_{,q} + A_{,q}\,(9\,F_{,p} + F_{,q}^{2} 
+- 3\,\frac{d}{dx}F_{,q}) + 18\,A_{,y})/(18\,B\,A) 
+\nonumber \\
+&+& ( - 18\,B\,A_{,p}\,A^{2}\,E + 9\,A_{,q}\,A^{4}\,E^{2})/(18\,B^{3}\,A) \\
+\label{A_bTA2}
+TA_{2}&=&(B\,A_{,p} - A_{,q}\,A^{2}\,E)/B^{2} \\
+\label{A_bTA3}
+TA_{3}&=&A_{,q}\,A/B,
+\end{eqnarray}
+and 
+\begin{eqnarray}
+\label{1A_bA3}
+A^{3}&=&(18\,F_{,p}\,F_{,q} + 4\,F_{,q}^{3} - 18\,F_{,q}\,\frac{d}{dx}F_{,q}
++ 54\,F_{,y} - 27\,\frac{d}{dx}F_{,p} + 9\,\frac{d^{2}}{dx^{2}}F_{,q})/54. 
+\nonumber \\ && 
+\end{eqnarray}
+All these cases, apart from {\bf A-be} and {\bf A-bf}, furnish a set of 
+invariants 
+that are used to determine classes of equivalence. The case {\bf A-bh} leads
+ to the classes of the non trivial linear equations, and to other classes 
+of equations admitting a 2-dimensional symmetry group. Apart from this case, 
+the case {\bf A-ba} is the only one leading to possible 
+classes of equations admitting a 4-dimensional group of symmetries. For that 
+case, the possible 4-dimensional symmetry groups would appear by letting 
+the invariants constant. In doing so, we observe that these constant do not 
+satisfy the Jacobi identities, and define no Lie algebra.
+
+In case {\bf A}, only the linear equations admit a maximal symmetry group 
+of fiber preserving point transformations, of dimension 4,5 or 7.
+
+In case {\bf B}: $F_{,qq} \neq 0$, we have to consider the following cases
+\begin{description}
+\item[B-a)] $TB_{3}=TB_{0}=TD_{0}=0$, 
+\item[B-b)] $TB_{3}=TB_{0}=0$, $TD_{0}$ non null,
+\item[B-c)] $TB_{3}=0$, $TB_{0}$ non null, $TB_{2}=-1$,
+\item[B-d)] $TB_{3}=0$, $TB_{0}$ non null, $TB_{2} \neq -1$,
+\item[B-e)] $TB_{3}$ non null,
+\end{description}
+where 
+\begin{eqnarray}
+\label{B_TB0}
+TB_{0}&=&(F_{,qq}\,F_{,q} + 3\,\frac{d}{dx}\,F_{,qq})/(3\,A\,F_{,qq}) \\
+%
+\label{B_TB2}
+TB_{2}&=&( - 9\,A\,E\,F_{,qqq} + 3\,F_{,pqq}\,F_{,qq})/F_{,qq}^{3} \\
+%
+\label{B_TB3}
+TB_{3}&=&(3\,A\,F_{,qqq})/F_{,qq}^{2} \\
+%
+TD_{0}&=&(18\,F_{,p}\,F_{,q} 
++ 4\,F_{,q}^{3} - 18\,F_{,q}\,\frac{d}{dx}\,F_{,q} 
++ 54\,F_{,y} + 9\,\frac{d^{2}}{dx^{2}}\,F_{,q} \nonumber \\
+&-& 27\,\frac{d}{dx}\,F_{,p})/(54\,A^{3}),
+%
+\end{eqnarray}
+%
+$A$ and $E$ being group parameters. Each of these cases will furnish 
+a set of invariants which must be used to characterize the equivalence 
+class of a given equation. Only case {\bf B-e} will allow equivalence classes 
+of equations admitting a 4-dimensional symmetry group. The case 
+{\bf B-a} leads to the equivalence class of the equations admitting a 
+6-dimensional symmetry group. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{The Linear equations}
+\label{s_lin}
+In this section we give the charactrerization of the linear equations 
+which admit fiber preserving symmetry groups of dimensions 4, 5 and 7.
+ 
+Replacing $F$ in the expressions of the preceding section, by the expression 
+of a canonical linear equation (see \cite{B_Gregus87})
+\begin{equation}
+\label{can_lin}
+F=-2\,M(x)\,y' -(N(x)+M'(x))y
+\end{equation}
+we obtain the conditions determining the equivalence classes 
+of the linear equations. There are two  possibilities for the 
+so-called (see \cite{P_Chern40}) pseudo invariant $TD_{0}$ which assumes 
+the form
+\begin{equation}
+TD_{0}=-\frac{N}{A^{3}}.
+\end{equation}
+
+>From this expression we directly see that the linear equations that 
+can be equivalent to the trivial equation must satisfy $N=0$.  
+This is exactly the condition found in the example 1 
+of \cite{P_Boch1993}. 
+
+The equivalence classes of the linear equations are then determined by the  
+value of the so called Laguerre invariant $N$. 
+
+The conditions characterizing the class of the trivial equation are given by
+$TD_{0}=0$ and we obtain that a third order ordinary differential equation 
+\begin{equation}
+y'''=F(x,y,y',y'')
+\end{equation}
+can be transformed into the trivial equation 
+\begin{equation}
+y'''=0,
+\end{equation}
+by a transformation $X=\phi(x)$, $Y=\psi(x,y)$, if, and only if,
+\begin{equation}
+\label{1AAaaa}
+\left\{
+\begin{array}{rll}
+F&=&p^{3}\,(1/3\,C_{0,y}-(C_{0}/3)^{2})+p^{2}\,(C_{0,x}-C_{0}/3\,C_{1}) \\
+&+& p\,C_{2} + p\,q\,C_{0}+ q\,C_{1} + C_{3}\\
+0&=&\frac{\partial}{\partial\,y}C_{3}-C_{3}\,C_{0}/3+TX/54 \\
+TX&=&9\,\partial_{x}(C_{1,x}-C_{1}^{2}-3\,C_{2})
++C_{1}\,(18\,C_{2}+4\,C_{1}^{2}),
+\end{array} \right.
+\end{equation}
+where $C_{i}=C_{i}(x,y)$.
+
+The equations belonging to this class admit the maximal 7-dimensional group 
+of symmetries. 
+
+If $TD_{0} \neq 0$, then we obtain two other classes of linear equations which 
+are characterized by the invariant
+\begin{equation}
+I_{1}=(A^{2}\,( - 3\,F_{6,xx} + F_{6,x}^{2} + 3\,F_{1}) + 6\,A\,A_{,xx} 
+- 9\,A_{,x}^{2})/(6\,A^{4}),
+\end{equation}
+with $F_{i}=F_{i}(x,y)$ for $i=0,1,6$ and the expression for $A$ is given in 
+(\ref{1A_bA3}).
+The Maurer-Cartan equations for the symmetry group are given by 
+\begin{equation}
+\left\{ \begin{array}{lll}
+d \omega^{0}&=&0 \\
+d \omega^{1}&=&
+\beta^{4}  \wedge  \omega^{1} 
++ \omega^{0}  \wedge  \omega^{2} \\
+d \omega^{2}&=&
+\beta^{4}  \wedge  \omega^{2} 
++ \omega^{0}  \wedge  \omega^{1}\,I_{1} + \omega^{0}  \wedge  \omega^{3} \\
+d \omega^{3}&=&
+\beta^{4}  \wedge  \omega^{3} 
++ \omega^{0}  \wedge  \omega^{1} + \omega^{0}  \wedge  \omega^{2}\,I_{1} \\
+d \beta^{4}&=&0.
+\end{array} \right.
+\end{equation}
+As $I_{1}$ depends only on $x$, there can be at most only one functionally 
+independent invariant, meaning that we can either have a 5-dimensional or a 
+4-dimensional symmetry group.
+
+\begin{re}
+There is a transformation $X=\phi(x)$, $Y=\psi(x,y)$, taking 
+a third order ordinary differential equation 
+\begin{equation}
+y'''=F(x,y,y',y'')
+\end{equation}
+into the linear equation 
+\begin{equation}
+Y'''+2\;M\;Y'+N\;Y=0,
+\end{equation}
+where $M$ and $N$ are constant, if, and only if, 
+\begin{eqnarray}
+F&=&q\,(p\,F_{6,y} + F_{6,x}) + p^{3}\,(3\,F_{6,yy} - F_{6,y}^{2})/9 
+\nonumber \\
+&+& p^{2}\,(3\,F_{6,xy} - F_{6,x}\,F_{6,y})/3 + p\,F_{1} + F_{0},
+\end{eqnarray}
+where $F_{i}=F_{i}(x,y)$, and 
+\begin{eqnarray}
+F_{6,xxy}&=& (3\,F_{1,y} + 2\,F_{6,xy}\,F_{4})/3 \\
+0&=&27\,F_{0,yy} - 9\,F_{0,y}\,F_{6,y} - 9\,F_{1,xy} + 3\,F_{1,y}\,F_{6,x} 
+\nonumber \\
+&-& 6\,F_{6,xx}\,F_{6,xy} + 2\,F_{6,xy}\,F_{6,x}^{2} + 9\,F_{6,xy}\,F_{1} 
+- 9\,F_{6,yy}\,F_{0} \\
+M/N^{2/3}&=&(A^{2}\,( - 3\,F_{6,xx} + F_{6,x}^{2} + 3\,F_{1}) 
++ 6\,A\,A_{,xx} - 9\,A_{,x}^{2})/(6\,A^{4}).
+\end{eqnarray}
+\end{re}
+We see that the linear equations with constant coefficients are 
+pa\-ra\-me\-tri\-zed by the constant $M/N^{2/3}$, which is the 
+value of the invariant $I_{1}$ of case {\bf A-bha}. These equations admit 
+a 5-dimensional symmetry group of fiber preserving point transformations. 
+
+The characterization of the linear equations with non constant coefficients 
+is given by the following result
+\begin{re}
+There is a transformation $X=\phi(x)$, $Y=\psi(x,y)$, taking 
+a third order ordinary differential equation 
+\begin{equation}
+y'''=F(x,y,y',y'')
+\end{equation}
+into the linear equation 
+\begin{equation}
+Y'''+2\;M\;Y'+(M'+N)\;Y=0,
+\end{equation}
+where $M$ and $N$ are functions of the independent variable $X$ only, 
+if, and only if, 
+\begin{eqnarray}
+F&=&q\,(p\,F_{6,y} + F_{6,x}) + p^{3}\,(3\,F_{6,yy} - F_{6,y}^{2})/9 
+\nonumber \\
+&+& p^{2}\,(3\,F_{6,xy} - F_{6,x}\,F_{6,y})/3 + p\,F_{1} + F_{0},
+\end{eqnarray}
+where $F_{i}=F_{i}(x,y)$, and 
+\begin{eqnarray}
+F_{6,xxy}&=& (3\,F_{1,y} + 2\,F_{6,xy}\,F_{4})/3 \\
+0&=&27\,F_{0,yy} - 9\,F_{0,y}\,F_{6,y} - 9\,F_{1,xy} + 3\,F_{1,y}\,F_{6,x} 
+\nonumber \\
+&-& 6\,F_{6,xx}\,F_{6,xy} + 2\,F_{6,xy}\,F_{6,x}^{2} + 9\,F_{6,xy}\,F_{1} 
+- 9\,F_{6,yy}\,F_{0},
+\end{eqnarray}
+and the equation
+\begin{equation}
+\begin{array}{lll}
+& &-1/6\,N^{-8/3}\,(6\,M\,N^{2}+2\,N\,N_{,XX}-N_{,X}^{2}) \\
+&=&(A^{2}\,( - 3\,F_{6,xx} + F_{6,x}^{2} + 3\,F_{1}) 
++ 6\,A\,A_{,xx} - 9\,A_{,x}^{2})/(6\,A^{4}).
+\end{array}
+\end{equation}
+is satisfied.
+\end{re}
+
+Linear equations with non-constant coefficients will admit a 4-dimensional 
+group of fiber-preserving point symmetries.
+
+
+As a final remark, the equations given in the last two {\it results} 
+furnish the sufficiency of the conditions for the existence of an 
+equivalence, and can, in the case of the 
+previous {\it results}, be used to determine the coordinate function $X$ 
+of the transformation.
+
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{6-dimensional symmetry groups}
+%SUBCASE B-a:
+%%%%%%%%%%%%% Symmetry Analysis %%%%%%%%%%%%%%%%%
+The only equations admitting a 6-dimensional symmetry group 
+are of the form 
+\begin{eqnarray*}
+F&=&(12\,q^{2} + 36\,q\,F_{21,x} + 64\,p^{4}\,F_{01} 
++ 384\,p^{3}\,F_{21}\,F_{01} \nonumber \\
+&+& 4\,p^{2}\,(216\,F_{21}^{2}\,F_{01} - F_{22}) 
++ 12\,p\,( - F_{21,xx} + 72\,F_{21}^{3}\,F_{01} - F_{21}\,F_{22}) 
+\nonumber \\
+&+& 9\,( - 2\,F_{21,xx}\,F_{21} + 3\,F_{21,x}^{2} + 36\,F_{21}^{4}\,F_{01} 
+- F_{21}^{2}\,F_{22}))/(8\,p + 12\,F_{21}),
+\end{eqnarray*}
+where $F_{21}=F_{21}(x)$, $F_{22}=F_{22}(x)$ and $F_{01}=F_{01}(x,y)$, 
+and the further condition
+\begin{eqnarray*}
+F_{01,x}=3/2\,F_{01,y}\,F_{21},
+\end{eqnarray*}
+%
+has to be satisfied. All these equations are equivalent to 
+\begin{equation}
+\label{dim6_can}
+y'''=\frac{3}{2}\frac{q^{2}}{p}.
+\end{equation}
+The symmetry group of fiber preserving point transformations for such 
+equations is determined by the Maurer-Cartan equations 
+%structure equations
+%
+\begin{equation}
+\left\{
+\begin{array}{lll}
+d \omega^{0}&=&\alpha^{2} \wedge \omega^{0} \\
+d \omega^{1}&=&\omega^{0} \wedge \omega^{2} + \omega^{1} \wedge \omega^{2} 
++ \alpha^{2} \wedge \omega^{1} \\
+d \omega^{2}&=&\omega^{0} \wedge \omega^{3} - \omega^{1} \wedge \omega^{3} 
++ \mu^{2} \wedge \omega^{1} \\
+d \omega^{3}&=& - \omega^{2} \wedge \omega^{3} + \mu^{2} \wedge \omega^{2} 
+- \alpha^{2} \wedge \omega^{3} \\
+d \alpha^{2}&=&2\,\omega^{0} \wedge \omega^{3} - \mu^{2} \wedge \omega^{0} \\
+d \mu^{2}&=&2\,\omega^{2} \wedge \omega^{3} + \mu^{2} \wedge \alpha^{2} 
+- 2\,\mu^{2} \wedge \omega^{2}.
+\end{array} \right.
+\end{equation}
+%end structure equations
+The transformations $X=\phi(x)$ and $Y=\psi(x,y)$, relating (\ref{dim6_can}) 
+to another equation of the class are determined by
+\begin{eqnarray*}
+\psi_{,x}&=&\frac{3}{2}\,\psi_{,y}\,F_{21} \\
+\psi_{,yyy}&=&\frac{3}{2}\frac{(\psi_{,yy})^{2}}{\psi_{,y}}-8\,F_{01}\,
+\psi_{,y} \\
+\phi'''&=&\frac{3}{2}\frac{\phi''^{2}}{\phi'}-\frac{\phi'}{2}F_{22}.
+\end{eqnarray*}
+
+%%%%%%%%%%%%% end of Symmetry Analysis %%%%%%%%%%%%%%%%%
+%
+
+%%%%%%%%%%%%%%% 4-dimensional %%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{4-dimensional symmetry groups}
+The determination of the equations admitting a four dimensional 
+symmetry group of fiber preserving point transformations is not as direct as  
+it was for higher dimensions. In some cases, the result is direct, but  
+in general, we have to assume all the invariants to be constant and look at  
+the conditions imposed by this constraint. In doing so it is possible to 
+show that the only equations admitting such groups are characterized as below.
+%
+
+As mentioned above, the only possible case for which a 4-dimensional symmetry 
+group is possible is the case {\bf B-e}.
+%
+Let us assume that all the invariants given in equations 
+(\ref{BeI1})-(\ref{BeI10}) in appendix \ref{ap_Be}, are constant, 
+so that we can determine 
+which equations have a 4-dimensional symmetry group of fiber preserving 
+point transformations. $I_{4}$, $I_{3}$ lead to
+\begin{eqnarray}
+\frac{d}{dx}\,F_{,qqq}
+&=&( - 3\,F_{,pqq} - 4\,F_{,qqq}\,F_{,q} - F_{,qq}^{2}\,I_{3}\,I_{6} 
++ F_{,qq}^{2}\,I_{6} - F_{,qq}^{2})/3 \\
+%
+F_{,qqqq}&=&F_{,qqq}^{2}\,(I_{3} + 2)/F_{,qq}.
+\end{eqnarray}
+$I_{6}$ and $I_{5}$ give
+\begin{eqnarray}
+\frac{d}{dx}\,F_{,qq}
+&=&F_{,qq}\,( - F_{,qqq}\,F_{,q} + F_{,qq}^{2}\,I_{6})/(3\,F_{,qqq}) \\
+%
+\frac{d}{dx}\,F_{,q}&=&( - 9\,F_{,pqq}^{2} 
++ 6\,F_{,qqq}\,(F_{,pq}\,F_{,qq} + 3\,F_{,qqy} - F_{,pqq}\,F_{,q}) \nonumber \\
+&+& F_{,qqq}^{2}\,(9\,F_{,p} + F_{,q}^{2}) - 6\,F_{,pqq}\,F_{,qq}^{2} 
++ 2\,F_{,qq}^{4}\,I_{5})/(3\,F_{,qqq}^{2}),
+\end{eqnarray}
+and from 
+\mbox{$\partial_{q}\,\frac{d}{dx}\,F_{,q}-\frac{d}{dx}\,F_{,qq}
+-F_{,pq}-F_{,q}\,F_{,qq}=0$} we get
+\begin{eqnarray}
+F_{,yqqq}&=&( - 6\,F_{,pqq}\,F_{,qq}^{2}\,I_{3} 
++ 6\,F_{,pq}\,F_{,qqq}\,F_{,qq}\,I_{3} + 18\,F_{,qqq}\,F_{,qqy}\,I_{3} 
++ 36\,F_{,qqq}\,F_{,qqy} \nonumber \\
+&+& 4\,F_{,qq}^{4}\,I_{3}\,I_{5} + F_{,qq}^{4}\,I_{6})/(18\,F_{,qq}).
+\end{eqnarray}
+We can compute $\frac{d^{2}}{dx^{2}}\,F_{,q}$ and substitute it into the 
+$I_{i}$. $I_{2}$ and $I_{7}$ respectively give
+\begin{eqnarray}
+F_{,pqqq}&=&(F_{,pqq}\,F_{,qqq}\,(I_{3} + 2))/F_{,qq} \\
+%
+F_{,ppqq}&=&(9\,F_{,pqq}^{2}\,I_{3} + 18\,F_{,pqq}^{2} 
++ 6\,F_{,pqq}\,F_{,qq}^{2} - 6\,F_{,pq}\,F_{,qqq}\,F_{,qq} 
+- F_{,qq}^{4}\,I_{7} 
+\nonumber \\&-& F_{,qq}^{4}\,I_{5})/(9\,F_{,qq}).
+\end{eqnarray}
+>From $I_{9}$ we obtain
+\begin{eqnarray}
+F_{,ppq}&=& - ((2\,I_{3}\,I_{6}^{2} + 8\,I_{3}\,I_{6}\,I_{7} + 4\,I_{3}\,I_{8} 
+- I_{6}^{2} - 4\,I_{6}\,I_{5} \nonumber \\
+&-& 8\,I_{6}\,I_{7} + 2\,I_{6} + 4\,I_{5} - 2\,I_{8})\,F_{,qq}^{4} \nonumber \\
+&-& 18\,F_{,pqq}^{2} - 12\,F_{,pqq}\,F_{,qq}^{2} 
++ 12\,F_{,pq}\,F_{,qqq}\,F_{,qq})/(18\,F_{,qqq}).
+\end{eqnarray}
+$I_{8}$ furnishes
+\begin{eqnarray}
+F_{,ypqq}&=&( - 18\,F_{,pqq}^{2}\,F_{,qq}^{2}\,(2\,I_{3} - 3) 
++ 6\,F_{,pqq}\,(6\,(3\,(I_{3} + 2)\,F_{,qqy}+ F_{,qq}^{2}\,F_{,q})\,F_{,qqq} 
+\nonumber \\&-& (4\,I_{3}\,I_{7} - I_{6} - 2\,I_{5} - 2\,I_{7} 
+- 2)\,F_{,qq}^{4} + 6\,F_{,pq}\,F_{,qqq}\,F_{,qq}\,I_{3}) \nonumber \\
+&+& F_{,qq}^{6}\,(4\,I_{3}\,I_{6}^{2}
++ 16\,I_{3}\,I_{6}\,I_{7} + 8\,I_{3}\,I_{8} - I_{6}^{2} - 12\,I_{6}\,I_{5} 
+\nonumber \\&-& 16\,I_{6}\,I_{7}+ 4\,I_{6} - 4\,I_{7} - 2\,I_{8}) \nonumber \\
+&-& 4\,F_{,qq}^{2}\,((I_{5} + I_{7})\,F_{,qq}^{2}\,F_{,q}
++ 9\,F_{,qqy})\,F_{,qqq} \nonumber \\
+&+& 6\,F_{,qq}\,F_{,qqq}\,( - 2\,(3\,F_{,qqq}\,F_{,q} 
++ F_{,qq}^{2})\,F_{,pq} \nonumber \\
+&-& 9\,F_{,pp}\,F_{,qqq} + 6\,F_{,qqq}\,F_{,yq}))/(108\,F_{,qq}\,F_{,qqq}).
+\end{eqnarray}
+The compatibility conditions between these expressions lead to 
+\begin{eqnarray}
+0&=&(I_{3}-1)\,(I_{5}+I_{7}) \\
+0&=&(I_{3}-2)\,I_{9} \\
+0&=&(I_{3}-1)\,(I_{6}+4\,I_{3}\,I_{5}),
+\end{eqnarray}
+and to 
+\begin{eqnarray}
+I_{1}&=& - (2\,I_{3}\,I_{7} - I_{6} - 2\,I_{5} - 2\,I_{7})/2 \\
+I_{2}&=&0 \\
+I_{4}&=&I_{3}\,I_{6} + 2\,I_{6} + 1 \\
+I_{9}&=&(2\,I_{3}\,I_{6}^{2} + 8\,I_{3}\,I_{6}\,I_{7} + 4\,I_{3}\,I_{8} 
+- I_{6}^{2} - 4\,I_{6}\,I_{5} \nonumber \\
+&-& 8\,I_{6}\,I_{7} + 2\,I_{6} + 2\,I_{5} - 2\,I_{7} - 2\,I_{8})/2 \\
+I_{10}&=& - (I_{3} - 1)\,I_{7}.
+\end{eqnarray}
+
+\noindent
+For $I_{3}=1$, we obtain 
+\begin{equation} \left\{
+\begin{array}{lll}
+I_{1}&=&(I_{6} + 2\,I_{5})/2 \\
+I_{2}&=&0 \\
+I_{4}&=&3\,I_{6} + 1 \\
+I_{7}&=&1/2\,I_{6}^{2}+I_{8}-I_{6}\,(I_{5}-1)-I_{5}\,(I_{6}-1) \\
+I_{9}&=&0 \\
+I_{10}&=&0,
+\end{array} \right.
+\end{equation}
+and $I_{5}$, $I_{6}$, $I_{8}$ are free constants.
+
+\noindent
+If $I_{3}=2$, then
+\begin{equation} \left\{
+\begin{array}{lll}
+I_{1}&=& - 2\,I_{5} \\
+I_{2}&=&0 \\
+I_{4}&=& - 32\,I_{5} + 1 \\
+I_{6}&=&-8\,I_{5} \\
+I_{7}&=&-I_{5} \\
+I_{9}&=&3\,(48\,I_{5}^{2} - 2\,I_{5} + I_{8}) \\
+I_{10}&=&I_{5}, 
+\end{array} \right.
+\end{equation}
+and $I_{5}$ and $I_{8}$ are free.
+
+\noindent
+For the other cases, i.e $I_{3} \neq 2$ and $I_{3} \neq 1$, we are left with 
+\begin{equation} \left\{
+\begin{array}{lll}
+I_{7}&=&-I_{5} \\
+I_{6}&=&-4\,I_{3}\,I_{5} \\
+0&=&(2\,I_{3}-1)\,(8\,I_{3}\,I_{5}^{2}\,(I_{3}+1)-2\,I_{5}+I_{8}).
+\end{array} \right.
+\end{equation}
+For $I_{3}=1/2$, $I_{5}$ and $I_{8}$ are free, and 
+\begin{equation} \left\{
+\begin{array}{lll}
+I_{1}&=&( - I_{5})/2 \\
+I_{2}&=&0 \\
+I_{4}&=& - (5\,I_{5} - 1) \\
+I_{6}&=& - 2\,I_{5} \\
+I_{7}&=& - I_{5} \\
+I_{9}&=&0 \\
+I_{10}&=&( - I_{5})/2.
+\end{array} \right.
+\end{equation}
+For $I_{3} \neq 1/2$, 
+$I_{3}$ and $I_{5}$ are free and 
+\begin{equation} \left\{
+\begin{array}{lll}
+I_{1}&=& - I_{3}\,I_{5} \\
+I_{2}&=&0 \\
+I_{4}&=& - (4\,I_{3}^{2}\,I_{5} + 8\,I_{3}\,I_{5} - 1) \\
+I_{6}&=& - 4\,I_{3}\,I_{5} \\
+I_{7}&=& - I_{5} \\
+I_{8}&=&2\,I_{5}-8\,I_{3}\,I_{5}^{2}\,(I_{3}+1) \\
+I_{9}&=&0 \\
+I_{10}&=&(I_{3} - 1)\,I_{5}.
+\end{array} \right.
+\end{equation}
+Replacing these values into the Maurer-Cartan equations 
+\begin{equation} \left\{ \begin{array}{lll}
+d \omega^{0}&=& \omega^{0} \wedge \omega^{1}\,I_{1} 
++ \omega^{0} \wedge \omega^{2}\,I_{2} 
++ \omega^{0} \wedge \omega^{3}\,I_{3} \\
+d \omega^{1}&=&\omega^{0} \wedge \omega^{1}\,I_{4} 
++ \omega^{0} \wedge \omega^{2} 
++ \omega^{1} \wedge \omega^{2}\,I_{2} 
++ \omega^{1} \wedge \omega^{3}\,(I_{3} - 1) \\
+d \omega^{2}&=&\omega^{0} \wedge \omega^{1}\,I_{5} 
++ \omega^{0} \wedge \omega^{2}\,I_{6} 
++ \omega^{0} \wedge \omega^{3} + \omega^{1} \wedge \omega^{2}\,I_{7} \\
+&-& \omega^{1} \wedge \omega^{3}\,(I_{2} + 1) 
+- \omega^{2} \wedge \omega^{3} \\
+d \omega^{3}&=&\omega^{0} \wedge \omega^{1}\,I_{8} 
++ \omega^{0} \wedge \omega^{2}\,I_{5} 
++ \omega^{0} \wedge \omega^{3}\,(2\,I_{6} - I_{4}) \\
+&+& \omega^{1} \wedge \omega^{2}\,I_{9} 
++ \omega^{1} \wedge \omega^{3}\,I_{10}
+\end{array} \right.
+\end{equation}
+we obtain the characterization of the groups admitted by the different 
+classes of equations, if the $I_{i}$ satisfy the Jacobi identities
+\begin{eqnarray}
+\label{jacobi}
+\left\{
+\begin{array}{rcl}
+0&=& I_{3}\,I_{9} + I_{1}\,I_{2} + I_{2}\,I_{7} \\
+0&=&  - I_{3}\,I_{1} - I_{3}\,I_{10} + I_{1} + I_{2}^{2}  + I_{2} \\
+0&=& I_{2} \\
+0&=& I_{3}\,I_{5} + I_{1} - I_{2}\,I_{4} + I_{2}\,I_{6} - I_{5} - I_{7} \\
+0&=&  - 2\,I_{3}\,I_{4} + 2\,I_{3}\,I_{6} + 2\,I_{2} + I_{4} - 2\,I_{6} + 1 \\
+0&=& I_{2} \\
+0&=& I_{1}\,I_{6} - 3\,I_{2}\,I_{5} + I_{4}\,I_{7} - I_{5} + I_{8} - I_{9} \\
+0&=&  - 2\,I_{3}\,I_{5} + I_{1} - I_{2}\,I_{6} - I_{6} + I_{7} - I_{10} \\
+0&=&  - I_{3}\,I_{6} + I_{4} - 2\,I_{6} - 1 \\
+0&=&  - I_{3}\,I_{7} - I_{2}^{2}  - I_{2} + I_{7} - I_{10} \\
+0&=& I_{1}\,I_{5} - 2\,I_{2}\,I_{8} + 2\,I_{4}\,I_{9} 
+- I_{5}\,I_{7} + I_{5}\,I_{10} - I_{6}\,I_{9} \\
+0&=&  - 2\,I_{3}\,I_{8} - I_{1}\,I_{4} + 2\,I_{1}\,I_{6} + I_{2}\,I_{5} 
++ I_{4}\,I_{10} + I_{5} + I_{8} + I_{9} \\
+0&=&  - I_{3}\,I_{5} - I_{2}\,I_{4} + 2\,I_{2}\,I_{6} + I_{5} + I_{10} \\
+0&=&  - I_{3}\,I_{9} + I_{2}\,I_{10} + 2\,I_{9}.
+\end{array} \right.
+\end{eqnarray}
+
+Replacing, for each of the cases above, the values obtained for the $I_{i}$, 
+in (\ref{jacobi}), we obtain the results shown in table \ref{tab_1}. In the 
+last column of this table, we have put the normal form of the commutators as 
+furnished by the computer algebra program presented in \cite{P_Schobel92}. 
+\begin{table}[h]
+\label{tab_1}
+\caption{4-dimensional Lie algebras for the case {\bf B-e}}
+\begin{tabular}{|l|l|}
+\hline \hline 
+& \\
+structure constants & normal form for the commutators \\
+& and classification \\
+\hline
+& \\
+& For $I_{5}=0$: \\
+$I_{3}=1$, & $[X,Y]=W$, $[X,Z]=Y$, \\
+$I_{1}=I_{7}=I_{5}$, &  $[W,X]=[W,Y]=[W,Z]=0$ \\
+$I_{4}=1$, & $[Y,Z]=X$,  case 19 \\
+$I_{2}=I_{6}=I_{8}=I_{9}=I_{10}=0$. & For $I_{5} \neq 0$: \\
+& $[W,X]=Y$, $[W,Y]=X$, \\ 
+&$[W,Z]=[X,Z]=[Y,Z]=0$ \\
+& $[X,Y]=W$,  case 22 \\                   
+\hline                 
+& \\
+%%%%%%%%%%%%%%%
+$I_{3}=2$, & $[X,Y]=W$, $[X,Z]=4X$, \\
+$I_{5}=\frac{1}{40}=\frac{-1}{2}I_{1}=\frac{1-I_{4}}{32}
+=\frac{-I_{6}}{8}=-I_{7}=I_{10}$ & $[W,X]=[W,Y]=0$, \\
+$I_{2}=0$, &  $[W,Z]=2W$, $[Y,Z]=-2Y$, \\
+$I_{8}=\frac{1}{50}$, & case 16 with lambda=3 \\
+$I_{9}=144\,I_{5}^{2} - 6\,I_{5} + 3\,I_{8}$. &  \\
+& \\
+\hline        
+& \\           
+%%%%%%%%%%%%%%%%%%%%%
+$I_{3}=\frac{1}{2}$, & $[X,Y]=W$, $[X,Z]=4X$, \\
+$I_{5}=\frac{ - 1}{2}=-2\,I_{1}=-2\,I_{10}
+=\frac{1-I_{4}}{5}=\frac{-I_{6}}{2}=-I_{7}$ & $[W,X]=[W,Y]=0$, \\
+$I_{2}=I_{9}=0$, & $[W,Z]=2W$ \\
+$I_{8}=\frac{ - 5}{2}$. & $[Y,Z]=-2Y$, \\
+& case 16 with lambda=3 \\
+& \\
+\hline                 
+& \\ 
+%%%%%%%%%%%%%%%%%%%%%
+$I_{1}= - I_{3}\,I_{5}$,& \\ 
+$I_{2}=0$, & \\ 
+$I_{4}=-4\,I_{3}^{2}\,I_{5}-8\,I_{3}\,I_{5}+1$,& \\
+$I_{6}=-4\,I_{3}\,I_{5}$, & \\
+$I_{7}= - I_{5}$, & \\
+$I_{8}=-8\,I_{3}^{2}\,I_{5}^{2}-8\,I_{3}\,I_{5}^{2}+2\,I_{5}$, & \\
+$I_{9}=0$, & \\
+$I_{10}=I_{3}\,I_{5} - I_{5}$, & No real Lie algebra. \\
+$I_{3} \in \,\,\mid\!\!\!\!{\tt C}$ & \\
+$I_{5}=\frac{I_{3} - 1}{2\,I_{3}^{2}\,(2\,I_{3} + 1)}$. & \\
+& \\
+\hline 
+\end{tabular}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+With the admissible values for $I_{i}$, we can go back to equations 
+(\ref{BeI1})-(\ref{BeI10}) and get the conditions for the equations to 
+admit a 4-dimensional symmetry group.
+
+%%%%%%%%%%% end of Symmetry Analysis %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%% end of 4-dimensional %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusion}
+The solution of the local equivalence problem for third order ODE's 
+gives a complete characterization of the equations admitting symmetry 
+groups of fiber preserving point transformations of dimension $\geq 4$. 
+
+The different possible 4-dimensional groups are given as parametric 
+families. For those groups, the use of a computer algebra program 
+presented in \cite{P_Schobel92} allows us to classify their Lie 
+algebras. In principal, it should be possible 
+to obtain the symmetry generators from the information obtained. This 
+avoids the solution of a system of equations. But in practice the author 
+was not able to obtain these generators on a concrete example, as has been 
+done in \cite{P_KarlMacC82}.
+
+It is interesting to note that, unlike the case of second order ODE's, 
+it is not possible to characterize the equations admitting symmetry groups 
+of dimension less than 4, in the general case. Nonetheless, with the help 
+of the computer algebra program {\tt clasode3}, several equations admitting 
+such groups, such as some of the Painlev\'{e} equations of the third order, 
+were clasified. 
+
+%Bibliography
+\begin{thebibliography}{99}
+
+\bibitem{P_Boch1993} Bocharov A. V., Sokolov V. V., Svinolupov S. I. (1993) 
+                     {\it On Some Equivalence Problems for Differential  
+                     Equations}, preprint.
+\bibitem{P_Chern40} Chern S.S. (1940) 
+                   {\it The geometry of a differential equation 
+                    $Y'''=F(X,Y,Y',Y'')$}, 
+                   Tensor, N.S., Vol. 28, 173-176.
+\bibitem{B_Gardn89} Gardner, R. (1989) 
+                    {\it The Method of Equivalence and its Applications}, 
+                    Siam, Philadelphia, Pensylvania.
+\bibitem{T_Grebot94} Grebot G. (1994) 
+                     {\it On Killing tensors in vacuum Space-times and 
+                     The classification of third order  
+                      ordinary differential equations},
+                     PhD Thesis, Queen Mary College, London.
+\bibitem{P_Grebot95} Grebot G. (1995) 
+                    {\it The classification of third order ordinary 
+                    differential equations},
+                    Proceedings of the CATHODE workshop, Nijmegen, 
+                    9-12 January 1995, p. 23.
+\bibitem{B_Gregus87} Gregus, M. (1987) 
+                     {\it Third Order Linear Differential Equations}, 
+                     Mathematics and its Applications, 
+                     D. Reidel Publishing Company, Dordrecht, Holland.
+\bibitem{P_HsuKam89} Hsu L., Kamran N. (1989) 
+                     {\it Classification of Second-Order Differential 
+                     Equations admitting Lie Groups of Fiber-preserving 
+                     point Symmetries}, 
+                     Proc. Lond. Math. Soc. (3), {\bf 58}, No 2, 387-416.
+\bibitem{P_Kamran89} Kamran, N. (1989) 
+                     {\it Contributions to the Study of the Equivalence 
+                     problem of Elie Cartan and its Applications 
+                     to partial and Ordinary Differential Equations}, 
+                     Memoires Cl. Sci. Acad. Roy. Belg., {\bf 45}, Fac.7.
+\bibitem{P_KamShd86} Kamran N., Shadwick W.F. (1986) 
+                     {\it The solution of the Cartan Equivalence Problem for 
+                      $\frac{d^{2}\,y}{dx^{2}}=F(x,y,\frac{d\,y}{dx})$ 
+                      under the Pseudo-group $\overline{x}=\phi(x)$, 
+                      $\overline{y}=\psi(x,y)$}, 
+                      Lecture Notes in Physics {\bf 246}, 320-336.
+\bibitem{P_KarlMacC82} Karlhede A. and MacCallum M.A.H. (1982) 
+                       {\it On Determining the Isometry Group of a Riemannian 
+                       Space}, 
+                       Gen. Rel. Grav., Vol 14, No 7, 673.
+\bibitem{P_Schobel92} F. Sch\"{o}bel (1992)
+                   {\it The Symbolic Classification of Real Four Dimensional
+                    Lie Algebras},
+                    Universit\"{a}t Leipzig Preprint.
+\bibitem{B_Sternberg64} Sternberg, S. (1964) 
+                     {\it Lectures on differential geometry}, 
+                    Prentice Hall, Englewood Cliffs, NJ.
+\end{thebibliography}
+
+\begin{appendix}
+\section{Invariants for the case B-e}
+\label{ap_Be}
+The invariants obtained for the case {\bf B-e} are given below.
+\begin{eqnarray}
+\label{BeI1}
+I_{1}&=&-(18\,F_{,pqqq}\,F_{,pqq}\,F_{,qqq}\,F_{,qq} + 6\,F_{,pqqq}
+\,F_{,qqq}^{2}\,F_{,qq}\,F_{,q} \nonumber \\
+&-& 9\,F_{,pqq}^{2}\,F_{,qqqq}\,F_{,qq} - 18\,F_{,pqq}^{2}\,F_{,qqq}^{2} 
+- 12\,F_{,pqq}\,F_{,qqq}^{3}\,F_{,q} \nonumber \\
+&-& 9\,F_{,p}\,F_{,qqqq}\,F_{,qqq}^{2}\,F_{,qq} 
++18\,F_{,p}\,F_{,qqq}^{4} - F_{,qqqq}\,F_{,qqq}^{2}\,F_{,qq}\,F_{,q}^{2} 
+\nonumber \\&
++& 3\,F_{,qqqq}\,F_{,qqq}^{2}\,F_{,qq}\,\frac{d}{dx}\,F_{,q}
+- 18\,F_{,yqqq}\,F_{,qqq}^{2}\,F_{,qq} + 2\,F_{,qqq}^{4}\,F_{,q}^{2} 
+\nonumber \\&-& 6\,F_{,qqq}^{4}\,\frac{d}{dx}\,F_{,q} 
++ 36\,F_{,qqq}^{3}\,F_{,yqq})/(2\,F_{,qqq}^{2}\,F_{,qq}^{4}) \\
+%
+\label{BeI2}
+I_{2}&=&3\,( F_{,pqqq}\,F_{,qqq} - F_{,pqq}\,F_{,qqqq})
+/(F_{,qqq}^{2}\,F_{,qq}) \\
+%
+\label{BeI3}
+I_{3}&=&( F_{,qqqq}\,F_{,qq} - 2\,F_{,qqq}^{2})/F_{,qqq}^{2} \\
+%
+\label{BeI4}
+I_{4}&=&( - 3\,F_{,pqq}\,F_{,qq} - F_{,qqq}\,F_{,qq}\,F_{,q} 
++ 9\,F_{,qqq}\,\frac{d}{dx}\,F_{,qq} \nonumber \\
+&-& 3\,F_{,qq}\,\frac{d}{dx}\,F_{,qqq})/F_{,qq}^{3} \\
+%
+\label{BeI5}
+I_{5}&=&( - 9\,F_{,pqq}^{2} - 12\,F_{,pqq}\,F_{,qqq}\,F_{,q} 
+- 18\,F_{,pqq}\,\frac{d}{dx}\,F_{,qqq} \nonumber \\
+&-& 9\,F_{,p}\,F_{,qqq}^{2} - F_{,qqq}^{2}\,F_{,q}^{2} 
++ 3\,F_{,qqq}^{2}\,\frac{d}{dx}\,F_{,q} \nonumber \\
+&-& 18\,F_{,qqq}\,F_{,yqq} 
++ 18\,F_{,qqq}\,\partial_{p}\,\frac{d}{dx}\,F_{,qq})/(2\,F_{,qq}^{4}) \\
+%
+\label{BeI6}
+I_{6}&=&F_{,qqq}\,(F_{,qq}\,F_{,q} + 3\,\frac{d}{dx}\,F_{,qq})/F_{,qq}^{3} \\
+%
+\label{BeI7}
+I_{7}&=&-(18\,F_{,ppqq}\,F_{,qqq}^{2}\,F_{,qq} 
+- 36\,F_{,pqqq}\,F_{,pqq}\,F_{,qqq}\,F_{,qq} \nonumber \\
+&+& 18\,F_{,pqq}^{2}\,F_{,qqqq}\,F_{,qq} 
++ 9\,F_{,pqq}^{2}\,F_{,qqq}^{2} + 6\,F_{,pqq}\,F_{,qqq}^{3}\,F_{,q} 
+\nonumber \\&-& 6\,F_{,pqq}\,F_{,qqq}^{2}\,F_{,qq}^{2} 
++ 6\,F_{,pq}\,F_{,qqq}^{3}\,F_{,qq} - 9\,F_{,p}\,F_{,qqq}^{4} \nonumber \\
+&-& F_{,qqq}^{4}\,F_{,q}^{2} 
++3\,F_{,qqq}^{4}\,\frac{d}{dx}\,F_{,q} - 18\,F_{,qqq}^{3}\,F_{,yqq})
+/(2\,F_{,qqq}^{2}\,F_{,qq}^{4}) \\
+%
+\label{BeI8}
+I_{8}&=&F_{,qqq}^{3}\,(18\,F_{,p}\,F_{,q} + 4\,F_{,q}^{3} 
+- 18\,F_{,q}\,\frac{d}{dx}\,F_{,q} 
+\nonumber \\&+& 54\,F_{,y} + 9\,\frac{d^{2}}{dx^{2}}\,F_{,q} 
+- 27\,\frac{d}{dx}\,F_{,p})/(2\,F_{,qq}^{6}) \\
+%
+\label{BeI9}
+I_{9}&=&3\,( - 18\,F_{,ppqq}\,F_{,pqq}\,F_{,qqq}^{2} 
+- 6\,F_{,ppqq}\,F_{,qqq}^{3}\,F_{,q} + 9\,F_{,pp}\,F_{,qqq}^{4} 
+\nonumber \\&+& 27\,F_{,pqqq}\,F_{,pqq}^{2}\,F_{,qqq} 
++ 6\,F_{,pqqq}\,F_{,pqq}\,F_{,qqq}^{2}\,F_{,q} 
+\nonumber \\&+& 9\,F_{,pqqq}\,F_{,p}\,F_{,qqq}^{3} 
++F_{,pqqq}\,F_{,qqq}^{3}\,F_{,q}^{2} 
+- 3\,F_{,pqqq}\,F_{,qqq}^{3}\,\frac{d}{dx}\,F_{,q} 
+\nonumber \\&+& 18\,F_{,ypqq}\,F_{,qqq}^{3} 
+- 9\,F_{,pqq}^{3}\,F_{,qqqq} + 6\,F_{,pqq}^{2}\,F_{,qqq}^{2}\,F_{,qq} 
+\nonumber \\&-&12\,F_{,pqq}\,F_{,pq}\,F_{,qqq}^{3} 
+- 9\,F_{,pqq}\,F_{,p}\,F_{,qqqq}\,F_{,qqq}^{2} \nonumber \\
+&-& F_{,pqq}\,F_{,qqqq}\,F_{,qqq}^{2}\,F_{,q}^{2} 
++ 3\,F_{,pqq}\,F_{,qqqq}\,F_{,qqq}^{2}\,\frac{d}{dx}\,F_{,q} \nonumber \\
+&-& 18\,F_{,pqq}\,F_{,yqqq}\,F_{,qqq}^{2} 
++ F_{,pqq}\,F_{,qqq}^{3}\,F_{,qq}\,F_{,q} \nonumber \\
+&+& 3\,F_{,pqq}\,F_{,qqq}^{3}\,\frac{d}{dx}\,F_{,qq} 
++ 2\,F_{,pq}\,F_{,qqq}^{4}\,F_{,q} 
+- 3\,F_{,qqq}^{4}\,\partial_{p}\,\frac{d}{dx}\,F_{,q}) \nonumber \\
+&/&(2\,F_{,qqq}^{2}\,F_{,qq}^{5}) \\
+%
+\label{BeI10}
+I_{10}&=&( - 9\,F_{,pqq}^{2} - 6\,F_{,pqq}\,F_{,qqq}\,F_{,q}
+- 6\,F_{,pqq}\,F_{,qq}^{2} \nonumber \\
+&+& 6\,F_{,pq}\,F_{,qqq}\,F_{,qq} + 9\,F_{,p}\,F_{,qqq}^{2} 
++ F_{,qqq}^{2}\,F_{,q}^{2} \nonumber \\
+&-& 3\,F_{,qqq}^{2}\,\frac{d}{dx}\,F_{,q} + 18\,F_{,qqq}\,F_{,yqq} 
+- F_{,qqq}\,F_{,qq}^{2}\,F_{,q} \nonumber \\
+&-&3\,F_{,qqq}\,F_{,qq}\,\frac{d}{dx}\,F_{,qq})/(2\,F_{,qq}^{4})+I_{1}.
+\end{eqnarray}
+\end{appendix}
+\end{document}

@@ -1,0 +1,13 @@
+A New Look at One of the Bisection Methods Derived from Vincent's Theorem
+
+Alkiviadis Akritas
+University of Thessaly, Greece
+
+In 1976, G.E. Collins and A.G. Akritas developed a bisection method for the
+isolation of the real roots of polynomials.  Even though this method is based
+on Vincent's theorem of 1836, credit to Vincent has been denied; to wit, from
+1976 up until 1986 it was called ``modified Uspensky's method", whereas from
+1986 to the present day it is being called either ``Collins-Akritas method" or
+``Descartes' method".  In this paper we track the development of this bisection
+method, show its relation to Vincent's theorem and justify the name
+``Vincent-Collins-Akritas" given to it recently in France.

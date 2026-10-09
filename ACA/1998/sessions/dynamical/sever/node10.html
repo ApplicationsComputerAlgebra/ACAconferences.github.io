@@ -1,0 +1,302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Iterated Function Systems as Automata Networks</TITLE>
+<META NAME="description" CONTENT="Iterated Function Systems as Automata Networks">
+<META NAME="keywords" CONTENT="sever">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sever.css">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html117"
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html115"
+ HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html111"
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html118"
+ HREF="node11.html">Evolving Algebras</A>
+<B> Up:</B> <A NAME="tex2html116"
+ HREF="node8.html">Automata Network Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html112"
+ HREF="node9.html">Automata Networks</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00052000000000000000">
+Iterated Function Systems as Automata Networks</A>
+</H2>
+
+<P>
+When we want to realize the dynamics of a <I>digitized</I> IFS
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+F =((X,d), f_1, f_2, ..., f_k)
+\end{displaymath} -->
+
+
+<I>F</I> =((<I>X</I>,<I>d</I>), <I>f</I><SUB>1</SUB>, <I>f</I><SUB>2</SUB>, ..., <I>f</I><SUB><I>k</I></SUB>)
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+with the help of an automata network
+<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\sigma$">,
+we have the following picture.
+
+<P>
+As <I>C</I> we take a regular
+lattice of some dimensionality <I>m</I>. In a practically interesting
+case, <I>m</I> = 2 and 
+<!-- MATH: $C = \{(i,j) \,|\, i = 1, \dots, p, \, j = 1,
+\dots, q\}$ -->
+<IMG
+ WIDTH="276" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.gif"
+ ALT="$C = \{(i,j) \,\vert\, i = 1, \dots, p, \, j = 1,
+\dots, q\}$">.
+The alphabet of states 
+<!-- MATH: $A = \{0, 1\}$ -->
+<IMG
+ WIDTH="81" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.gif"
+ ALT="$A = \{0, 1\}$">.
+The cell
+neighborhoods are defined by the inverses of the IFS's functions:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\forall c \in C: \;\; N(c) = \bigcup_{i=1}^k f_i^{-1}(c).
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="205" HEIGHT="60"
+ SRC="img76.gif"
+ ALT="\begin{displaymath}\forall c \in C: \;\; N(c) = \bigcup_{i=1}^k f_i^{-1}(c).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(15)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+The LDRs <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$\delta_c$">
+are the same for all cells <I>c</I>:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\forall c \in C: \;\; \delta_c(S_{N(c)}) =
+\left\{ \begin{array}{ll}
+                1 & \mbox{if~} \exists c^\prime \in N(c)\;\;
+                    S(c^\prime) = 1 \\
+                0 & \mbox{\rm otherwise}
+              \end{array}
+      \right.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="373" HEIGHT="48"
+ SRC="img77.gif"
+ ALT="\begin{displaymath}\forall c \in C: \;\; \delta_c(S_{N(c)}) =
+\left\{ \begin{ar...
+...\prime) = 1 \\
+0 & \mbox{\rm otherwise}
+\end{array} \right.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(16)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+To build a bridge to our neural network algorithm (Sec. <A HREF="node7.html#sec:ONNA">4.3</A>),
+we take as <I>C</I> our unit square <I>S</I><SUP><I>u</I></SUP> of pixels and
+obtain the neighborhoods <I>N</I>(<I>c</I>) by analogy with computing the
+synaptic weights.
+
+<P>
+The whole process of going from an <I>initial</I> IFS
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+F =((X,d), f_1, f_2, ..., f_k) \qquad \& \qquad F=\bigcup_{i=1}^k f_i
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="333" HEIGHT="60"
+ SRC="img78.gif"
+ ALT="\begin{displaymath}F =((X,d), f_1, f_2, ..., f_k) \qquad \& \qquad F=\bigcup_{i=1}^k f_i\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+to the corresponding automata network <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\sigma$">
+looks like the following.
+
+<P>
+Fist of all we go to the dynamical system
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(({\cal H}(X),h),F),
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="107" HEIGHT="31"
+ SRC="img79.gif"
+ ALT="\begin{displaymath}(({\cal H}(X),h),F),\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+then, after digitization and scaling, to the dynamical system
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(({\cal H}(S^u),h),F),
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="113" HEIGHT="31"
+ SRC="img80.gif"
+ ALT="\begin{displaymath}(({\cal H}(S^u),h),F),\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <I>S</I><SUP><I>u</I></SUP> is the unit square.
+
+<P>
+Then we use our Automata Network Algorithm to get a special
+intermediate form of the IFS <I>F</I> which we call <I>"geometrical
+form"</I>:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+F_g=\{<s_0^i,s_t^i,s_r^i>\}_{i \in \{1,2, \dots, k\}}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="221" HEIGHT="33"
+ SRC="img81.gif"
+ ALT="\begin{displaymath}F_g=\{<s_0^i,s_t^i,s_r^i>\}_{i \in \{1,2, \dots, k\}}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where 
+<!-- MATH: $s_0^i,s_t^i,s_r^i$ -->
+<I>s</I><SUB>0</SUB><SUP><I>i</I></SUP>,<I>s</I><SUB><I>t</I></SUB><SUP><I>i</I></SUP>,<I>s</I><SUB><I>r</I></SUB><SUP><I>i</I></SUP> are the images of the corner points
+
+<!-- MATH: $s_0,s_t,s_r$ -->
+<I>s</I><SUB>0</SUB>,<I>s</I><SUB><I>t</I></SUB>,<I>s</I><SUB><I>r</I></SUB> under <IMG
+ WIDTH="52" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.gif"
+ ALT="$f_i \in F$">
+(Sec. <A HREF="node7.html#sec:ONNA">4.3</A>).
+
+<P>
+We continue to apply the Automata Network Algorithm and eventually
+construct the automata network
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(S^u,\{0,1\},N,A_0,\Delta) \qquad \&
+\qquad N=\bigcup_{s \in S^u}\bigcup_{f \in F}f^{-1}(s).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="382" HEIGHT="51"
+ SRC="img83.gif"
+ ALT="\begin{displaymath}(S^u,\{0,1\},N,A_0,\Delta) \qquad \&
+\qquad N=\bigcup_{s \in S^u}\bigcup_{f \in F}f^{-1}(s).\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We start the dynamical process, beginning from a compact set 
+<!-- MATH: $A_0 \subseteq
+S^u$ -->
+<IMG
+ WIDTH="67" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.gif"
+ ALT="$A_0 \subseteq
+S^u$">,
+and after a big enough number <I>M</I> of iterations get an approximation
+<I>A</I><SUB><I>M</I></SUB> of the IFS's attractor <I>A</I><SUB><I>F</I></SUB>:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\Delta^*: A_0 \longrightarrow A_M \approx A_F.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="167" HEIGHT="29"
+ SRC="img85.gif"
+ ALT="\begin{displaymath}\Delta^*: A_0 \longrightarrow A_M \approx A_F.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html117"
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html115"
+ HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html111"
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html118"
+ HREF="node11.html">Evolving Algebras</A>
+<B> Up:</B> <A NAME="tex2html116"
+ HREF="node8.html">Automata Network Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html112"
+ HREF="node9.html">Automata Networks</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

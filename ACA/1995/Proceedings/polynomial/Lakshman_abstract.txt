@@ -1,0 +1,38 @@
+ "On Sparsifying Transformations for Multivariate Polynomials"
+  Lakshman Y. N.
+  ylakshma@king.mcs.drexel.edu
+
+
+Prof. Lakshman Y. N.
+Department of Mathematics and Computer Science
+Drexel University
+Philadelphia, PA 19104  USA
+ylakshma@king.mcs.drexel.edu
+
+
+(This is joint work with Dima Grigoriev of the Pennsylvania State University.)
+
+In this talk, we consider the problem of computing
+$t$-sparse shifts and sparsifying linear transformations
+for  multivariate polynomials over a field of characteristic 0.
+
+Given a polynomial $f \in {\cal Q}[x_1, x_2, \ldots, x_n]$ of degree $d$
+(where ${\cal Q}$ is a field of characteristic 0), consider the
+representation of $f(x)$ as a ${\cal F}$-linear combination
+of the power products of $u_i$ where $u_i = x_i - b_i$
+for some $b_i \in {\cal F}, $ an extension of ${\cal Q},$
+for $i=1,\ldots,n,$ i.e., \[ f = \sum_i  f_i u^{\alpha_i} \]
+where $\alpha_i$ denotes the multi-index
+$(\alpha_{i1},\alpha_{i2},\ldots,\alpha_{in}),$ and
+$u^{\alpha_i}$ indicates the power product
+$u_1^{\alpha_{i1}} u_2^{\alpha_{i2}}\ldots u_n^{\alpha_{in}}.$
+Let $t$ be a positive integer $\le { d+n-1 \choose n-1 }.$
+We say that ${\vec{b}} = (b_1, b_2, \ldots, b_n)$ is a $t$-sparse
+shift for $f$ if {\em at most\/}
+$t$ of the $f_i$ in the above representation are non-zero.
+
+We construct an efficient algorithm based on Groebner bases
+for solving this problem when there
+are finitely many $t$-sparse shifts.
+We also present several interesting results concerning
+the uniqueness of these tranformations.

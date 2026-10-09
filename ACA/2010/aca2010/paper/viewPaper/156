@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Watt</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="http://aca2010.info/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="http://aca2010.info/styles/paperView.css" type="text/css" />
+
+			<link rel="stylesheet" href="http://aca2010.info/plugins/themes/classicNavy/classicNavy.css" type="text/css" />
+	
+	<script type="text/javascript" src="http://aca2010.info/js/general.js"></script>
+	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript" src="http://aca2010.info/js/sizer.js" ></script>
+
+	<!-- Add stylesheets for the font sizer -->
+	<link rel="alternate stylesheet" title="Small" href="http://aca2010.info/styles/fontSmall.css" type="text/css" />
+	<link rel="stylesheet" title="Medium" href="http://aca2010.info/styles/fontMedium.css" type="text/css" />
+	<link rel="alternate stylesheet" title="Large" href="http://aca2010.info/styles/fontLarge.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="body">
+
+<div id="main">
+
+<h2>University of Vlora - Conference Center,&nbsp;ACA&#039;10, Applications of Computer Algebra</h2>
+
+<div id="navbar">
+	<ul class="menu">
+		<li><a href="http://aca2010.info/index.php/index/index" target="_parent">Home</a></li>
+		<li><a href="../../about" target="_parent">About</a></li>
+					<li><a href="../../login" target="_parent">Log In</a></li>
+			<li><a href="../../user/account" target="_parent">Account</a></li>
+				<li><a href="../../search" target="_parent">Search</a></li>
+								<li><a target="_parent" href="../../../index/schedConfs/archive">Archive</a></li>							<li><a href="../../announcement" target="_parent">Announcements</a></li>
+						
+							<li><a href="http://univlora.edu.al" target="_parent">University of Vlora</a></li>
+					<li><a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/trackPolicies" target="_parent">Special Sessions</a></li>
+					<li><a href="https://sites.google.com/a/univlora.edu.al/aca-schedule/home/schedule" target="_parent">Schedule</a></li>
+			</ul>
+</div>
+
+<div id="breadcrumb">
+	<a href="../../index" target="_parent">Home</a> &gt;
+	<a href="../../../aca2010.4" target="_parent">ACA 2010, Applications of Computer Algebra, June 24-27,  Vlora, Albania</a> &gt;
+	<a href="../../index" target="_parent">ACA&#039;10, Applications of Computer Algebra</a> &gt;
+	<a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/presentations" target="_parent">Computer Algebra in Knowledge Based Application</a> &gt;
+	<a href="../view/156/0" class="current" target="_parent">Watt</a>
+</div>
+
+<div id="content">
+	<div id="topBar">
+		<div id="paperFontSize">
+			Font Size:&nbsp;
+			<a href="156#" onclick="setFontSize('Small');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_small.gif" width="16" height="14" border="0" alt="Small" /></a>&nbsp;
+			<a href="156#" onclick="setFontSize('Medium');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_medium.gif" width="16" height="14" border="0" alt="Medium" /></a>&nbsp;
+			<a href="156#" onclick="setFontSize('Large');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_large.gif" width="16" height="14" border="0" alt="Large" /></a>
+		</div>
+	</div>
+
+	<h3>Writing on Clouds</h3>
+	<div><em>Stephen M Watt</em></div>
+	<br />
+
+	<blockquote>
+							Last modified:&nbsp;2010-06-09<br/>
+	</blockquote>
+
+		<h4>Abstract</h4>
+	<br />
+	<div>We are interested in achieving the best possible recognition rates for<br /> hand-written mathematics.   This problem has challenges that go beyond<br /> the usual natural language handwriting recognition:  multiple alphabets<br /> are used, the number of single-stroke and few-stroke symbols numbers<br /> in the hundreds, writers form symbols from some of the alphabets in<br /> idiosyncratic non-standard manners, layout is two dimensional, and<br /> there is no fixed dictionary of words to aid in disambiguation.<br /> <br /> While writer-independent handwriting recognition systems are now achieving<br /> good recognition rates, writer-dependent systems will always do better.<br /> We expect this difference in performance to be even larger for handwriting<br /> math systems.  In the past, it would not be too inconvenient for<br /> a writer to train a system on his or her computer.  Today, however,<br /> each user will typically have multiple devices used in different settings,<br /> or even simultaneously.<br /> <br /> We present a method to share training data among devices and,<br /> as a side benefit, to collect user corrections over time to<br /> improve personal writing recognition.  This is done with the aid<br /> of a handwriting profile server to which various handwriting applications<br /> connect, reference and update.   The user's handwriting profile consists of<br /> a cloud of sample points, each representing one character in a functional basis.<br /> This provides compact storage on the server, rapid recognition on the client,<br /> and support for handwriting neatening.</div>
+	<br />
+	
+						
+
+</div>
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+<!--
+	// Open "Define Terms" context when double-clicking any text
+	function openSearchTermWindow(url) {
+		var term;
+		if (window.getSelection) {
+			term = window.getSelection();
+		} else if (document.getSelection) {
+			term = document.getSelection();
+		} else if(document.selection && document.selection.createRange && document.selection.type.toLowerCase() == 'text') {
+			var range = document.selection.createRange();
+			term = range.text;
+		}
+		if (url.indexOf('?') > -1) openRTWindowWithToolbar(url + '&defineTerm=' + term);
+		else openRTWindowWithToolbar(url + '?defineTerm=' + term);
+	}
+
+	if(document.captureEvents) {
+		document.captureEvents(Event.DBLCLICK);
+	}
+	document.ondblclick = new Function("openSearchTermWindow('http://aca2010.info/index.php/aca2010/aca2010/rt/context/156/0/96')");
+// -->
+
+</script>
+
+</body>
+</html>

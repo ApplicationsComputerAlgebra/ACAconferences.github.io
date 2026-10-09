@@ -1,0 +1,683 @@
+Received: from smtp.etsmtl.ca ([142.137.250.5]) by EBONY.ad.etsmtl.ca with Microsoft SMTPSVC(6.0.3790.3959);
+	 Tue, 19 May 2009 09:32:16 -0400
+Received: from antispam.etsmtl.ca ([208.72.177.108]) by smtp.etsmtl.ca over TLS secured channel with Microsoft SMTPSVC(6.0.3790.3959);
+	 Tue, 19 May 2009 09:32:16 -0400
+X-ASG-Debug-ID: 1242739934-58f401b00000-fOYKZA
+X-Barracuda-URL: http://antispam.etsmtl.ca:8000/cgi-bin/mark.cgi
+Received: from xena.bway.net (localhost [127.0.0.1])
+	by antispam.etsmtl.ca (Spam & Virus Firewall) with ESMTP id 38F9954DAD7
+	for <gilles.picard@etsmtl.ca>; Tue, 19 May 2009 09:32:14 -0400 (EDT)
+Received: from xena.bway.net (xena.bway.net [216.220.96.26]) by antispam.etsmtl.ca with ESMTP id D3O1vnBxTEPehHzv (version=TLSv1 cipher=AES256-SHA bits=256 verify=NO) for <gilles.picard@etsmtl.ca>; Tue, 19 May 2009 09:32:14 -0400 (EDT)
+X-Barracuda-Envelope-From: lewis@bway.net
+Received: (qmail 62941 invoked by uid 0); 19 May 2009 13:32:13 -0000
+Received: from unknown (HELO new-host-2.home) (lewis@bway.net@71.183.92.105)
+  by smtp.bway.net with SMTP; 19 May 2009 13:32:13 -0000
+Message-Id: <8FEAA5AB-ED75-4442-830E-2DE6059CF407@bway.net>
+From: Robert Lewis <lewis@bway.net>
+To: gilles.picard@etsmtl.ca
+Content-Type: multipart/mixed; boundary=Apple-Mail-1-292185162
+Mime-Version: 1.0 (Apple Message framework v919.2)
+X-ASG-Orig-Subj: elimination session at ACA
+Subject: elimination session at ACA
+Date: Tue, 19 May 2009 09:31:13 -0400
+Cc: Robert Lewis <rlewis@fordham.edu>
+X-Mailer: Apple Mail (2.919.2)
+X-Barracuda-Connect: xena.bway.net[216.220.96.26]
+X-Barracuda-Start-Time: 1242739935
+X-Barracuda-Encrypted: AES256-SHA
+X-Barracuda-Bayes: INNOCENT GLOBAL 0.5000 1.0000 0.0000
+X-Barracuda-Virus-Scanned: by antispam.etsmtl.ca at etsmtl.ca
+X-Barracuda-Spam-Score: 0.00
+X-Barracuda-Spam-Status: No, SCORE=0.00 using global scores of TAG_LEVEL=2.2 QUARANTINE_LEVEL=3.2 KILL_LEVEL=5.2 tests=
+X-Barracuda-Spam-Report: Code version 3.2, rules version 3.2.1.26184
+	Rule breakdown below
+	 pts rule name              description
+	---- ---------------------- --------------------------------------------------
+Return-Path: lewis@bway.net
+X-OriginalArrivalTime: 19 May 2009 13:32:16.0627 (UTC) FILETIME=[39F3DC30:01C9D886]
+
+
+--Apple-Mail-1-292185162
+Content-Type: text/plain;
+	charset=US-ASCII;
+	format=flowed;
+	delsp=yes
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+   I have pasted below the information for the speakers we have now. I =20=
+
+expect more later.  Can you post this to the webs site?  It is plain =20
+text. I have also attached a plain text version of the file.
+
+  Thanks,
+
+Robert H. Lewis
+
+_____________________________________________________________
+
+
+Gregory Bard
+
+Department of Mathematics
+Fordham University , Bronx, NY
+
+The variable-sharing graph of a polynomial system of equations
+has one vertex for each variable, and an edge between two
+variables if and only if those variables appear together in at
+least one equation. If this graph is disconnected, then the
+system is actually two separate systems that can be solved
+individually. This can provide a huge speed-up, but is unlikely
+to occur either randomly or in applications. However, it may be
+the case that deleting a small number of vertices c disconnects
+the variable-sharing graph in a balanced fashion, so that the
+ratio of the sizes of the larger and smaller components is
+roughly less than two.
+
+If this is the case, then we demonstrate two techniques, one for
+small fields and one for large fields, to split the system. For
+small finite fields GF(q), we simply iterate through all
+possible q^c guesses of the c variables, and solve the separated
+systems. If the field is infinite or finite but large (i.e. has more
+than roughly five members), we separate the system with resultants.
+We present two methods for detecting this condition and identifying
+the c variables.
+
+First, when c is small, or when { V } is small, one can
+run a large series of depth-first searches. Alternatively, when c or
+{V } is large, we show how to use off-the-shelf balanced
+edge cut determining software to generate a "reasonable" vertex cut.
+Also, we state a condition for a system of equations to be immune to
+this approach.
+
+We present experiments which show that this condition can occur in
+practice, with very sparse polynomial systems. We also present
+four applications. The first is to implant/detect a trapdoor in
+the stream cipher QUAD; the second is to show a security property
+of the authentication system HB/HB+; the third has to do with "the
+Apollonius Problem" from Euclidean Geometry; the fourth is the
+"cube game" from multiparty game theory.
+
+=
+__________________________________________________________________________=
+_______
+
+Numerical determination of the local dimension of a solution of a =20
+polynomial system
+
+Dan Bates
+
+Colorado State University, Fort Collins CO
+
+  A new symbolic-numerical local dimension test.
+  One of the sticky problems in numerical algebraic geometry over
+  the years has been determining the local dimension of a solution p =20
+of a
+  polynomial system F.  The local dimension is just the maximum =20
+dimension of
+  the irreducible components on which p sits.  This new is a hybrid
+  symbolic-numerical method that detects the dimension of _all_ =20
+components
+  containing p by computing ranks of various matrices (formed from =20
+taking
+  higher and higher partial derivatives of the system, more or less).  =20=
+
+This
+  is joint work with J. Hauenstein, C. Peterson, and A. Sommese.
+
+=
+__________________________________________________________________________=
+_____
+
+Computing Cylindrical Algebraic Decomposition via Triangular =20
+Decomposition
+
+Changbo Chen
+
+University of Western Ontario, London, Canada
+
+Cylindrical algebraic decomposition is one of the most
+important tools for computing with semi-algebraic sets,
+while triangular decomposition is among the most important
+approaches for manipulating constructible sets. In this paper,
+for an arbitrary finite set F of polynomials with N variables
+with real coffecients, we apply comprehensive triangular decomposition
+in order to obtain an  F-invariant cylindrical decomposition of
+the n-dimensional complex space, from which we extract an F-invariant
+cylindrical algebraic decomposition of the n-dimensional real space.
+
+This new approach for constructing cylindrical algebraic decompositions
+has been implemented in the RegularChains library in Maple. We shall
+demonstrate its usage together with the other tools of this library
+for solving polynomial systems arising in real life problems.
+
+=
+__________________________________________________________________________=
+______
+
+Maximal-Rank Minors of the Macaulay Matrix
+
+Manfred Minimair
+Seton Hall University, South Orange, NJ
+
+Deepak Kapur
+University of New Mexico
+Albuquerque, NM
+
+We study under which conditions the maximal-rank minors
+of a (possibly singular) Macaulay matrix vanish.
+The Macaulay matrix is a matrix whose entries are the coefficients of =20=
+
+a system
+of multivariate polynomial equations. The determinant of the Macaulay =20=
+
+matrix
+vanishes if the polynomial system has a common root. Macaulay matrices =20=
+
+have
+applications in many areas of computing, such as computer aided =20
+geometric
+design, robotics, computational chemistry, etc. It is shown that the =20
+vanishing
+of the maximal-rank minors of the Macaulay matrix of a parametric =20
+system of
+polynomials under specialization is a necessary
+condition for the specialized polynomials to have an additional common =20=
+
+root even
+when the parametric system has common roots without any specialization =20=
+
+of
+parameters.  This result has applications where conditions for =20
+additional common
+roots of polynomial systems with generic roots are
+needed, such as in implicitization of surfaces with base points and in =20=
+
+various
+other areas of computational geometry. We will discuss such =20
+applications.
+
+=
+__________________________________________________________________________=
+_________
+
+Application of Symbolic - Numeric Algebra in Geodesy
+
+B. Palancz, P. Zaletnyik, J. Awange, R. H. Lewis*
+
+
+Department of Photogrammetry and Geoinformatics
+Budapest University of Technology and Economy, H - 1521, Hungary
+
+Department of Geodesy and Surveying,
+Budapest University of Technology and Economy, H - 1521, Hungary
+
+Western Australian Centre for Geodesy
+Curtin University of Technology, Australia
+
+Department of Mathematics
+Fordham University , Bronx, NY
+
+Most often geodetic problems are represented as system of =20
+multivariable polynomials. The bottleneck in
+solving such systems is finding out proper initial values for local =20
+iterative numerical methods. If the
+problem is relatively modest in size, computer algebraic methods like =20=
+
+Groebner basis or Dixon resultant
+can give symbolic solution. To extend this result for overdetermined =20
+system one may use Gauss-Jacobi
+combinatoric solution employing the symbolic result many times. =20
+However, when the number of the
+combinatoric subsystems is very high, it is reasonable to employ =20
+global, robust numerical method like linear
+homotopy. In order to avoid the computation of all possible paths, =20
+consequently to simplify homotopy solution,
+the initial value of the start system can be evaluated from the =20
+symbolic solution of a subsystem.
+To illustrate this strategy a real world geodetic problem is =20
+presented. The 3 point problem of the 3D affine
+transformation is solved with Dixon resultant computed with EDF =20
+method. Then employing this result as initial
+value of the start system of linear homotopy as numerical method, the =20=
+
+solution is computed for N =3D 1138 points
+as well.
+
+=
+__________________________________________________________________________=
+________
+
+Computation modulo regular chains
+
+Wei Pan
+
+The University of Western Ontario. London, Canada
+
+  The computation of triangular decompositions of polynomial systems =20
+is based on two fundamental operations:
+  polynomial GCDs modulo regular chains  and regularity test modulo =20
+saturated ideals.
+
+  We propose new algorithms for these core operations relying on =20
+modular methods and fast polynomial arithmetic.
+  Our strategies take also advantage of the context in which these =20
+operations are performed.
+
+  We report on extensive experimentation, comparing our code to pre-=20
+existing Maple implementations, as well
+  as more optimized Magma functions. In most cases, our new code =20
+outperforms the other packages by several
+  orders of magnitude.=09
+
+=
+__________________________________________________________________________=
+______
+
+An Attempt to Apply Dixon Resultant to Differential Elimination=03
+
+Lu Yang, Zhenbing Zeng*, Weinian Zhang
+
+Shanghai Key Laboratory of Trustworthy Computing
+East China Normal University, Shanghai 200062, P. R. China
+
+Chengdu Institute of Computer Applications
+Chinese Academy of Sciences, Chengdu 610041, P. R. China
+
+Yangtze Mathematics Center and Department of Mathematics
+Sichuan University, Chengdu 610064, P. R. China
+
+The idea of using resultant for solving differential equations can be =20=
+
+traced to 1930's.
+The first work on "differential resultant" was done by O. Ore [19]. =20
+Later, the
+divisibility and elimination theory of algebraic differential =20
+equations was developed by
+C. H. Riquier [20], M. Janet [8], J. F. Ritt [21, 22], E. R. Kolchin =20
+[12] et al. The notion
+of resultant of two nonlinear differential polynomials was introduced =20=
+
+by Ritt [21] in 1932
+under some hypothesis on the differential polynomials by using of =20
+pseudo-division. In
+1997 G. Carra-Ferro [1] introduced a notion of differential resultant =20=
+
+of two ordinary
+differential polynomials as quotient of two determinants and proved =20
+that a necessary
+condition for the existence of a common solution of two algebraic =20
+differential equations
+is that the differential resultant is equal to zero based on =20
+Macaulay's resultant (see
+[7, 17, 18]). Methods for using characteristic set theory to solve =20
+first order autonomous
+ODE and partial difference polynomial systems was propsed by X. S. Gao =20=
+
+et al in [6]. Other
+generalizations of differential resultant can be found in [3], [11].
+In this paper, we present our joint work on computing differential =20
+resultant via
+Dixon's resultant [10] for first and higher ODEs. Comparing with the =20
+classical resultant
+of Sylvester, the advantage of Dixon's resultant is that it can do one-=20=
+
+step elimination of a
+block of unknowns from a system of polynomial equations like =20
+Macauley's. Meanwhile,
+there are works showing that Dixon's resultant is much faster than =20
+Macauley's for
+certain specific problems (cf. [13, 14, 15, 16]). So the motivation =20
+for using Dixon's
+resultant to solve differential resultants comes very natural. Our =20
+results in this paper
+show that this attempt is also worth to develop for many non-trivial =20
+problems listed in
+E. Kamke's book [9].
+
+[1] G. Carra-Ferro, A resultant theory for the systems of two ordinary =20=
+
+algebraic differential
+equations, Appl. Algebra Engin. Comm. Comput. 8(1997), 539-560.
+[3] G. Carra-Ferro, Generalized differential resultant systems of =20
+algebraic ODEs and differential
+elimination theory, Trends in Mathematics: Differential Equations with =20=
+
+Symbolic
+Computation, Birkhauser Verlag Basel, 2006, 327-334.
+[5] Mao-Ching Foo and Eng-Wee Chionh, Corner edge cutting and Dixon-=20
+resultant quotients,
+J. Symbolic Computation 37(2004), no. 1, 101-119.
+[6] X.S. Gao and M.B. Zhang, Decomposition of differential polynomials =20=
+
+with constant coefficients,
+Proc. ISSAC (2004), 175-182.
+[7] I.M. Gelfand, M.M. Kapranov and A.V. Zelevinsky, Discriminants =20
+Resultants and Multidimensional
+Determinants, Birkhauser, Berlin, 1994.
+[8] M. Janet, Sur les sist'emes d''equations aux d'eriv'ees =20
+partielles, J. Math. 3(1920), 65-151.
+[9] E. Kamke, Differentialgleichungen, osungsmethoden und  osungen, =20
+Akad. Verlag. Geest
+& Portig K.-G., Leipzig, 1956.
+[10] D. Kapur, T. Saxena and Lu Yang, Algebraic and geometric =20
+reasoning using Dixon resultants,
+Proc. ISSAC (1994), 99-107.
+[11] A. Kasman and E. Previato, Commutative partial differential =20
+operators, Physica D 152-
+153 (2001), 66-77.
+[12] E. R. Kolchin, Differential Algebra and Algebraic Groups, =20
+Academic Press, London-New
+York, 1973.
+[13] R.H. Lewis and P.F. Stiller, Solving the recognition problem for =20=
+
+six lines using the Dixon
+resultant, Mathematics and Computers in Simulation 49 8(1999), 49(3):=20
+205-220.
+[14] R.H. Lewis and S. Bridgett, Conic tangency equations and =20
+Apollonius problems in
+biochemistry and pharmacology, Mathematics and Computers in Simulation =20=
+
+8(2003),
+61(2):101-114.
+[15] R.H. Lewis and E.A. Coutsias, Algorithmic search for flexibility =20=
+
+using resultants of polynomial
+systems, Lecture Notes in Computer Science 4869, Springer 8(2007), =20
+68-79.
+[16] R.H. Lewis, Comparing acceleration techniques for the Dixon and =20
+Macaulay resultants
+(abstract only), ACM Communications in Computer Algebra 8(2008), =20
+42(1-2): 79-81.
+[17] F.S. Macaulay, Some formulae in elimination, Proc. London Math. =20
+Soc. 35(1902), 3-27.
+[18] F.S. Macaulay, Note on the resultant of a number of polynomials =20
+of the same degree, Proc.
+London Math. Soc. 21 (1921), 14-21.
+[19] O. Ore, Formale theorie der linearen differentialgleichungen, I, =20=
+
+J. Reine Angew. Math.
+167 (1932), 221-234.
+[20] C. H. Riquier, Les Systemes d' Equations aux Derivees Partielles, =20=
+
+Gauthier-Villars, Paris,
+1910.
+[21] J. F. Ritt, Differential Equations from the Algebraic Standpoint, =20=
+
+Coll. Publ. 14, Amer.
+Math. Soc., New York, 1932.
+[22] J. F. Ritt, Differential Algebra, Coll. Publ. 33, Amer. Math. =20
+Soc., New York, 1950.
+
+=
+__________________________________________________________________________=
+_____
+
+
+
+--Apple-Mail-1-292185162
+Content-Disposition: attachment;
+	filename=elimsess
+Content-Type: application/octet-stream;
+	x-mac-creator=21526368;
+	x-unix-mode=0644;
+	x-mac-type=54455854;
+	name="elimsess"
+Content-Transfer-Encoding: quoted-printable
+
+=0AGregory=20Bard=0A=0ADepartment=20of=20Mathematics=0AFordham=20=
+University=20,=20Bronx,=20NY=20=0A=0AThe=20variable-sharing=20graph=20of=20=
+a=20polynomial=20system=20of=20equations=0Ahas=20one=20vertex=20for=20=
+each=20variable,=20and=20an=20edge=20between=20two=20=0Avariables=20if=20=
+and=20only=20if=20those=20variables=20appear=20together=20in=20at=20=0A=
+least=20one=20equation.=20If=20this=20graph=20is=20disconnected,=20then=20=
+the=20=0Asystem=20is=20actually=20two=20separate=20systems=20that=20can=20=
+be=20solved=20=0Aindividually.=20This=20can=20provide=20a=20huge=20=
+speed-up,=20but=20is=20unlikely=20=0Ato=20occur=20either=20randomly=20or=20=
+in=20applications.=20However,=20it=20may=20be=20=0Athe=20case=20that=20=
+deleting=20a=20small=20number=20of=20vertices=20c=20disconnects=20=0Athe=20=
+variable-sharing=20graph=20in=20a=20balanced=20fashion,=20so=20that=20=
+the=20=0Aratio=20of=20the=20sizes=20of=20the=20larger=20and=20smaller=20=
+components=20is=20=0Aroughly=20less=20than=20two.=20=0A=0AIf=20this=20is=20=
+the=20case,=20then=20we=20demonstrate=20two=20techniques,=20one=20for=20=0A=
+small=20fields=20and=20one=20for=20large=20fields,=20to=20split=20the=20=
+system.=20For=20=0Asmall=20finite=20fields=20GF(q),=20we=20simply=20=
+iterate=20through=20all=20=0Apossible=20q^c=20guesses=20of=20the=20c=20=
+variables,=20and=20solve=20the=20separated=0Asystems.=20If=20the=20field=20=
+is=20infinite=20or=20finite=20but=20large=20(i.e.=20has=20more=20=0Athan=20=
+roughly=20five=20members),=20we=20separate=20the=20system=20with=20=
+resultants.=20=0AWe=20present=20two=20methods=20for=20detecting=20this=20=
+condition=20and=20identifying=20=0Athe=20c=20variables.=20=0A=0AFirst,=20=
+when=20c=20is=20small,=20or=20when=20{=20V=20}=20is=20small,=20one=20can=20=
+=0Arun=20a=20large=20series=20of=20depth-first=20searches.=20=
+Alternatively,=20when=20c=20or=20=0A{V=20}=20is=20large,=20we=20show=20=
+how=20to=20use=20off-the-shelf=20balanced=20=0Aedge=20cut=20determining=20=
+software=20to=20generate=20a=20"reasonable"=20vertex=20cut.=20=0AAlso,=20=
+we=20state=20a=20condition=20for=20a=20system=20of=20equations=20to=20be=20=
+immune=20to=20=0Athis=20approach.=20=0A=0AWe=20present=20experiments=20=
+which=20show=20that=20this=20condition=20can=20occur=20in=0Apractice,=20=
+with=20very=20sparse=20polynomial=20systems.=20We=20also=20present=0A=
+four=20applications.=20The=20first=20is=20to=20implant/detect=20a=20=
+trapdoor=20in=0Athe=20stream=20cipher=20QUAD;=20the=20second=20is=20to=20=
+show=20a=20security=20property=0Aof=20the=20authentication=20system=20=
+HB/HB+;=20the=20third=20has=20to=20do=20with=20"the=0AApollonius=20=
+Problem"=20from=20Euclidean=20Geometry;=20the=20fourth=20is=20the=0A=
+"cube=20game"=20from=20multiparty=20game=20theory.=0A=20=0A=
+__________________________________________________________________________=
+_______=0A=0ANumerical=20determination=20of=20the=20local=20dimension=20=
+of=20a=20solution=20of=20a=20polynomial=20system=0A=0ADan=20Bates=0A=0A=
+Colorado=20State=20University,=20Fort=20Collins=20CO=0A=0A=20A=20new=20=
+symbolic-numerical=20local=20dimension=20test.=0A=20One=20of=20the=20=
+sticky=20problems=20in=20numerical=20algebraic=20geometry=20over=0A=20=
+the=20years=20has=20been=20determining=20the=20local=20dimension=20of=20=
+a=20solution=20p=20of=20a=0A=20polynomial=20system=20F.=20=20The=20local=20=
+dimension=20is=20just=20the=20maximum=20dimension=20of=0A=20the=20=
+irreducible=20components=20on=20which=20p=20sits.=20=20This=20new=20is=20=
+a=20hybrid=0A=20symbolic-numerical=20method=20that=20detects=20the=20=
+dimension=20of=20_all_=20components=0A=20containing=20p=20by=20computing=20=
+ranks=20of=20various=20matrices=20(formed=20from=20taking=0A=20higher=20=
+and=20higher=20partial=20derivatives=20of=20the=20system,=20more=20or=20=
+less).=20=20This=0A=20is=20joint=20work=20with=20J.=20Hauenstein,=20C.=20=
+Peterson,=20and=20A.=20Sommese.=20=0A=0A=
+__________________________________________________________________________=
+_____=0A=0AComputing=20Cylindrical=20Algebraic=20Decomposition=20via=20=
+Triangular=20Decomposition=0A=0AChangbo=20Chen=20=0A=0AUniversity=20of=20=
+Western=20Ontario,=20London,=20Canada=0A=0ACylindrical=20algebraic=20=
+decomposition=20is=20one=20of=20the=20most=0Aimportant=20tools=20for=20=
+computing=20with=20semi-algebraic=20sets,=0Awhile=20triangular=20=
+decomposition=20is=20among=20the=20most=20important=0Aapproaches=20for=20=
+manipulating=20constructible=20sets.=20In=20this=20paper,=0Afor=20an=20=
+arbitrary=20finite=20set=20F=20of=20polynomials=20with=20N=20variables=0A=
+with=20real=20coffecients,=20we=20apply=20comprehensive=20triangular=20=
+decomposition=0Ain=20order=20to=20obtain=20an=20=20F-invariant=20=
+cylindrical=20decomposition=20of=0Athe=20n-dimensional=20complex=20=
+space,=20from=20which=20we=20extract=20an=20F-invariant=0Acylindrical=20=
+algebraic=20decomposition=20of=20the=20n-dimensional=20real=20space.=0A=0A=
+This=20new=20approach=20for=20constructing=20cylindrical=20algebraic=20=
+decompositions=0Ahas=20been=20implemented=20in=20the=20RegularChains=20=
+library=20in=20Maple.=20We=20shall=0Ademonstrate=20its=20usage=20=
+together=20with=20the=20other=20tools=20of=20this=20library=0Afor=20=
+solving=20polynomial=20systems=20arising=20in=20real=20life=20problems.=0A=
+=0A=
+__________________________________________________________________________=
+______=0A=0AMaximal-Rank=20Minors=20of=20the=20Macaulay=20Matrix=0A=0A=
+Manfred=20Minimair=0ASeton=20Hall=20University,=20South=20Orange,=20NJ=20=
+=0A=0ADeepak=20Kapur=0AUniversity=20of=20New=20Mexico=0AAlbuquerque,=20=
+NM=0A=0AWe=20study=20under=20which=20conditions=20the=20maximal-rank=20=
+minors=0Aof=20a=20(possibly=20singular)=20Macaulay=20matrix=20vanish.=0A=
+The=20Macaulay=20matrix=20is=20a=20matrix=20whose=20entries=20are=20the=20=
+coefficients=20of=20a=20system=0Aof=20multivariate=20polynomial=20=
+equations.=20The=20determinant=20of=20the=20Macaulay=20matrix=0Avanishes=20=
+if=20the=20polynomial=20system=20has=20a=20common=20root.=20Macaulay=20=
+matrices=20have=0Aapplications=20in=20many=20areas=20of=20computing,=20=
+such=20as=20computer=20aided=20geometric=0Adesign,=20robotics,=20=
+computational=20chemistry,=20etc.=20It=20is=20shown=20that=20the=20=
+vanishing=0Aof=20the=20maximal-rank=20minors=20of=20the=20Macaulay=20=
+matrix=20of=20a=20parametric=20system=20of=0Apolynomials=20under=20=
+specialization=20is=20a=20necessary=0Acondition=20for=20the=20=
+specialized=20polynomials=20to=20have=20an=20additional=20common=20root=20=
+even=0Awhen=20the=20parametric=20system=20has=20common=20roots=20without=20=
+any=20specialization=20of=0Aparameters.=20=20This=20result=20has=20=
+applications=20where=20conditions=20for=20additional=20common=0Aroots=20=
+of=20polynomial=20systems=20with=20generic=20roots=20are=0Aneeded,=20=
+such=20as=20in=20implicitization=20of=20surfaces=20with=20base=20points=20=
+and=20in=20various=0Aother=20areas=20of=20computational=20geometry.=20We=20=
+will=20discuss=20such=20applications.=0A=0A=
+__________________________________________________________________________=
+_________=0A=0AApplication=20of=20Symbolic=20-=20Numeric=20Algebra=20in=20=
+Geodesy=0A=0AB.=20Palancz,=20P.=20Zaletnyik,=20J.=20Awange,=20R.=20H.=20=
+Lewis*=20=0A=0A=0ADepartment=20of=20Photogrammetry=20and=20=
+Geoinformatics=0ABudapest=20University=20of=20Technology=20and=20=
+Economy,=20H=20-=201521,=20Hungary=0A=0ADepartment=20of=20Geodesy=20and=20=
+Surveying,=0ABudapest=20University=20of=20Technology=20and=20Economy,=20=
+H=20-=201521,=20Hungary=0A=0AWestern=20Australian=20Centre=20for=20=
+Geodesy=0ACurtin=20University=20of=20Technology,=20Australia=0A=0A=
+Department=20of=20Mathematics=0AFordham=20University=20,=20Bronx,=20NY=20=
+=0A=0AMost=20often=20geodetic=20problems=20are=20represented=20as=20=
+system=20of=20multivariable=20polynomials.=20The=20bottleneck=20in=20=0A=
+solving=20such=20systems=20is=20finding=20out=20proper=20initial=20=
+values=20for=20local=20iterative=20numerical=20methods.=20If=20the=20=0A=
+problem=20is=20relatively=20modest=20in=20size,=20computer=20algebraic=20=
+methods=20like=20Groebner=20basis=20or=20Dixon=20resultant=20=0Acan=20=
+give=20symbolic=20solution.=20To=20extend=20this=20result=20for=20=
+overdetermined=20system=20one=20may=20use=20Gauss-Jacobi=20=0A=
+combinatoric=20solution=20employing=20the=20symbolic=20result=20many=20=
+times.=20However,=20when=20the=20number=20of=20the=0Acombinatoric=20=
+subsystems=20is=20very=20high,=20it=20is=20reasonable=20to=20employ=20=
+global,=20robust=20numerical=20method=20like=20linear=20=0Ahomotopy.=20=
+In=20order=20to=20avoid=20the=20computation=20of=20all=20possible=20=
+paths,=20consequently=20to=20simplify=20homotopy=20solution,=20=0Athe=20=
+initial=20value=20of=20the=20start=20system=20can=20be=20evaluated=20=
+from=20the=20symbolic=20solution=20of=20a=20subsystem.=0ATo=20illustrate=20=
+this=20strategy=20a=20real=20world=20geodetic=20problem=20is=20=
+presented.=20The=203=20point=20problem=20of=20the=203D=20affine=20=0A=
+transformation=20is=20solved=20with=20Dixon=20resultant=20computed=20=
+with=20EDF=20method.=20Then=20employing=20this=20result=20as=20initial=20=
+=0Avalue=20of=20the=20start=20system=20of=20linear=20homotopy=20as=20=
+numerical=20method,=20the=20solution=20is=20computed=20for=20N=20=3D=20=
+1138=20points=20=0Aas=20well.=0A=0A=
+__________________________________________________________________________=
+________=0A=0AComputation=20modulo=20regular=20chains=0A=20=0AWei=20Pan=20=
+=20=0A=0AThe=20University=20of=20Western=20Ontario.=20London,=20Canada=0A=
+=20=0A=20The=20computation=20of=20triangular=20decompositions=20of=20=
+polynomial=0A=20systems=20is=20based=20on=20two=20fundamental=20=
+operations:=20polynomial=20GCDs=20modulo=20regular=20chains=20=0A=20=0A=20=
+and=20regularity=20test=20modulo=20saturated=20ideals.=0A=20=0A=20We=20=
+propose=20new=20algorithms=20for=20these=20core=20operations=20relying=20=
+on=20modular=20methods=20and=20fast=20polynomial=20arithmetic.=0A=20Our=20=
+strategies=20take=20also=20advantage=20of=20the=20context=20in=20which=20=
+these=20operations=20are=20performed.=0A=20=0A=20We=20report=20on=20=
+extensive=20experimentation,=20comparing=20our=20code=20to=20=
+pre-existing=20Maple=20implementations,=20as=20well=20=0A=20=0A=20as=20=
+more=20optimized=20Magma=20functions.=20In=20most=20cases,=20our=20new=20=
+code=20outperforms=20the=20other=20packages=20by=20several=20=0A=20=0A=20=
+orders=20of=20magnitude.=09=0A=0A=0A=
+__________________________________________________________________________=
+______=0A=0AAn=20Attempt=20to=20Apply=20Dixon=20Resultant=20to=20=
+Differential=20Elimination=03=0A=0ALu=20Yang,=20Zhenbing=20Zeng*,=20=
+Weinian=20Zhang=20=0A=0AShanghai=20Key=20Laboratory=20of=20Trustworthy=20=
+Computing=0AEast=20China=20Normal=20University,=20Shanghai=20200062,=20=
+P.=20R.=20China=0A=0AChengdu=20Institute=20of=20Computer=20Applications=0A=
+Chinese=20Academy=20of=20Sciences,=20Chengdu=20610041,=20P.=20R.=20China=0A=
+=0AYangtze=20Mathematics=20Center=20and=20Department=20of=20Mathematics=0A=
+Sichuan=20University,=20Chengdu=20610064,=20P.=20R.=20China=0A=0AThe=20=
+idea=20of=20using=20resultant=20for=20solving=20differential=20equations=20=
+can=20be=20traced=20to=201930's.=0AThe=20first=20work=20on=20=
+"differential=20resultant"=20was=20done=20by=20O.=20Ore=20[19].=20Later,=20=
+the=0Adivisibility=20and=20elimination=20theory=20of=20algebraic=20=
+differential=20equations=20was=20developed=20by=0AC.=20H.=20Riquier=20=
+[20],=20M.=20Janet=20[8],=20J.=20F.=20Ritt=20[21,=2022],=20E.=20R.=20=
+Kolchin=20[12]=20et=20al.=20The=20notion=0Aof=20resultant=20of=20two=20=
+nonlinear=20differential=20polynomials=20was=20introduced=20by=20Ritt=20=
+[21]=20in=201932=0Aunder=20some=20hypothesis=20on=20the=20differential=20=
+polynomials=20by=20using=20of=20pseudo-division.=20In=0A1997=20G.=20=
+Carra-Ferro=20[1]=20introduced=20a=20notion=20of=20differential=20=
+resultant=20of=20two=20ordinary=0Adifferential=20polynomials=20as=20=
+quotient=20of=20two=20determinants=20and=20proved=20that=20a=20necessary=0A=
+condition=20for=20the=20existence=20of=20a=20common=20solution=20of=20=
+two=20algebraic=20differential=20equations=0Ais=20that=20the=20=
+differential=20resultant=20is=20equal=20to=20zero=20based=20on=20=
+Macaulay's=20resultant=20(see=0A[7,=2017,=2018]).=20Methods=20for=20=
+using=20characteristic=20set=20theory=20to=20solve=20first=20order=20=
+autonomous=0AODE=20and=20partial=20difference=20polynomial=20systems=20=
+was=20propsed=20by=20X.=20S.=20Gao=20et=20al=20in=20[6].=20Other=20=0A=
+generalizations=20of=20differential=20resultant=20can=20be=20found=20in=20=
+[3],=20[11].=0AIn=20this=20paper,=20we=20present=20our=20joint=20work=20=
+on=20computing=20differential=20resultant=20via=0ADixon's=20resultant=20=
+[10]=20for=20first=20and=20higher=20ODEs.=20Comparing=20with=20the=20=
+classical=20resultant=0Aof=20Sylvester,=20the=20advantage=20of=20Dixon's=20=
+resultant=20is=20that=20it=20can=20do=20one-step=20elimination=20of=20a=0A=
+block=20of=20unknowns=20from=20a=20system=20of=20polynomial=20equations=20=
+like=20Macauley's.=20Meanwhile,=0Athere=20are=20works=20showing=20that=20=
+Dixon's=20resultant=20is=20much=20faster=20than=20Macauley's=20for=0A=
+certain=20specific=20problems=20(cf.=20[13,=2014,=2015,=2016]).=20So=20=
+the=20motivation=20for=20using=20Dixon's=0Aresultant=20to=20solve=20=
+differential=20resultants=20comes=20very=20natural.=20Our=20results=20in=20=
+this=20paper=0Ashow=20that=20this=20attempt=20is=20also=20worth=20to=20=
+develop=20for=20many=20non-trivial=20problems=20listed=20in=0AE.=20=
+Kamke's=20book=20[9].=0A=0A[1]=20G.=20Carra-Ferro,=20A=20resultant=20=
+theory=20for=20the=20systems=20of=20two=20ordinary=20algebraic=20=
+differential=0Aequations,=20Appl.=20Algebra=20Engin.=20Comm.=20Comput.=20=
+8(1997),=20539-560.=0A[3]=20G.=20Carra-Ferro,=20Generalized=20=
+differential=20resultant=20systems=20of=20algebraic=20ODEs=20and=20=
+differential=0Aelimination=20theory,=20Trends=20in=20Mathematics:=20=
+Differential=20Equations=20with=20Symbolic=0AComputation,=20Birkhauser=20=
+Verlag=20Basel,=202006,=20327-334.=0A[5]=20Mao-Ching=20Foo=20and=20=
+Eng-Wee=20Chionh,=20Corner=20edge=20cutting=20and=20Dixon-resultant=20=
+quotients,=0AJ.=20Symbolic=20Computation=2037(2004),=20no.=201,=20=
+101-119.=0A[6]=20X.S.=20Gao=20and=20M.B.=20Zhang,=20Decomposition=20of=20=
+differential=20polynomials=20with=20constant=20coefficients,=0AProc.=20=
+ISSAC=20(2004),=20175-182.=0A[7]=20I.M.=20Gelfand,=20M.M.=20Kapranov=20=
+and=20A.V.=20Zelevinsky,=20Discriminants=20Resultants=20and=20=
+Multidimensional=0ADeterminants,=20Birkhauser,=20Berlin,=201994.=0A[8]=20=
+M.=20Janet,=20Sur=20les=20sist'emes=20d''equations=20aux=20d'eriv'ees=20=
+partielles,=20J.=20Math.=203(1920),=2065-151.=0A[9]=20E.=20Kamke,=20=
+Differentialgleichungen,=20osungsmethoden=20und=20=20osungen,=20Akad.=20=
+Verlag.=20Geest=0A&=20Portig=20K.-G.,=20Leipzig,=201956.=0A[10]=20D.=20=
+Kapur,=20T.=20Saxena=20and=20Lu=20Yang,=20Algebraic=20and=20geometric=20=
+reasoning=20using=20Dixon=20resultants,=0AProc.=20ISSAC=20(1994),=20=
+99-107.=0A[11]=20A.=20Kasman=20and=20E.=20Previato,=20Commutative=20=
+partial=20differential=20operators,=20Physica=20D=20152-=0A153=20(2001),=20=
+66-77.=0A[12]=20E.=20R.=20Kolchin,=20Differential=20Algebra=20and=20=
+Algebraic=20Groups,=20Academic=20Press,=20London-New=0AYork,=201973.=0A=
+[13]=20R.H.=20Lewis=20and=20P.F.=20Stiller,=20Solving=20the=20=
+recognition=20problem=20for=20six=20lines=20using=20the=20Dixon=0A=
+resultant,=20Mathematics=20and=20Computers=20in=20Simulation=2049=20=
+8(1999),=2049(3):205-220.=0A[14]=20R.H.=20Lewis=20and=20S.=20Bridgett,=20=
+Conic=20tangency=20equations=20and=20Apollonius=20problems=20in=0A=
+biochemistry=20and=20pharmacology,=20Mathematics=20and=20Computers=20in=20=
+Simulation=208(2003),=0A61(2):101-114.=0A[15]=20R.H.=20Lewis=20and=20=
+E.A.=20Coutsias,=20Algorithmic=20search=20for=20flexibility=20using=20=
+resultants=20of=20polynomial=0Asystems,=20Lecture=20Notes=20in=20=
+Computer=20Science=204869,=20Springer=208(2007),=2068-79.=0A[16]=20R.H.=20=
+Lewis,=20Comparing=20acceleration=20techniques=20for=20the=20Dixon=20and=20=
+Macaulay=20resultants=0A(abstract=20only),=20ACM=20Communications=20in=20=
+Computer=20Algebra=208(2008),=2042(1-2):=2079-81.=0A[17]=20F.S.=20=
+Macaulay,=20Some=20formulae=20in=20elimination,=20Proc.=20London=20Math.=20=
+Soc.=2035(1902),=203-27.=0A[18]=20F.S.=20Macaulay,=20Note=20on=20the=20=
+resultant=20of=20a=20number=20of=20polynomials=20of=20the=20same=20=
+degree,=20Proc.=0ALondon=20Math.=20Soc.=2021=20(1921),=2014-21.=0A[19]=20=
+O.=20Ore,=20Formale=20theorie=20der=20linearen=20=
+differentialgleichungen,=20I,=20J.=20Reine=20Angew.=20Math.=0A167=20=
+(1932),=20221-234.=0A[20]=20C.=20H.=20Riquier,=20Les=20Systemes=20d'=20=
+Equations=20aux=20Derivees=20Partielles,=20Gauthier-Villars,=20Paris,=0A=
+1910.=0A[21]=20J.=20F.=20Ritt,=20Differential=20Equations=20from=20the=20=
+Algebraic=20Standpoint,=20Coll.=20Publ.=2014,=20Amer.=0AMath.=20Soc.,=20=
+New=20York,=201932.=0A[22]=20J.=20F.=20Ritt,=20Differential=20Algebra,=20=
+Coll.=20Publ.=2033,=20Amer.=20Math.=20Soc.,=20New=20York,=201950.=0A=0A=
+__________________________________________________________________________=
+_____=0A=0A=
+
+--Apple-Mail-1-292185162
+Content-Type: text/plain;
+	charset=US-ASCII;
+	format=flowed
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+
+--Apple-Mail-1-292185162--

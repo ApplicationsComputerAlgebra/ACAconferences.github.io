@@ -1,0 +1,33 @@
+% This file should be rename with the speaker's last name. (e.g : smith)
+
+% Write the author names in the order you wish them to appear
+% and underline the one who will give the talk.
+
+% Only the speaker's email address is required.
+
+\begin{abstract_online}{Multivalued functions and cubic equations}{%
+        \underline{V. M. Quance}$^{1}$, \underline{M. R. Vancea}$^{1}$, D. J. Jeffrey$^{1}$}{[\{vquance,mvancea\}@uwo.ca]
+        }{%
+        $^1$ Mathematics Department, The University of Western Ontario, London, Ontario, Canada}
+
+This talk combines a discussion of multivalued functions in computer algebra with the solution of cubic equations. 
+The first solutions to cubic equations were discovered 500 years ago [1], but the discussion of the solutions takes on new dimensions in the age of computer algebra systems. The early solutions of the cubic famously brought the first sight of imaginary numbers to mathematics; they caused ``mental agonies" for poor old Cardano. In the modern world, Maple assumes every quantity is complex by default, and this can result in surprises for its users. We shall explain why some sources say the solution of $x^3+3px-2q=0$ is [2]
+
+\[ \left(q+\sqrt{p^3+q^2}\right)^{1/3} + \left(q-\sqrt{p^3+q^2}\right)^{1/3}\ , \]
+
+but Maple says it is
+
+\[\left(q+\sqrt{p^3+q^2}\right)^{1/3} - \frac{p}{\left(q+\sqrt{p^3+q^2}\right)^{1/3}}\ .\]
+
+We shall also explain why Maple has 2 cube-root functions: $z^{1/3}$ and \texttt{surd(z,3)}. We give further consideration to different ways to get solutions of cubics.
+
+\textbf{Keywords} \newline{} Multivalued function, Cube root, Inverse function, Cubic equation.
+
+\textbf{References} \newline{}
+% Model for references to books.
+[1] \textsc{Girolamo Cardano}, \emph{Ars Magna 1545}. Translated by T.R. Witmer as `The great art or
+Rules of Algebra', {MIT Press}, 1968. \newline{}
+%  Model for references to articles
+[2] \textsc{M. Abramowitz and I. A. Stegun}, \emph{Handbook of Mathematical Functions}. Dover, New York, 1965. \newline{}
+%  Model for references to proceedings.
+\end{abstract_online}

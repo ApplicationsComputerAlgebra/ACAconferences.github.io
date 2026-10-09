@@ -1,0 +1,1717 @@
+%Subject: Paper for Special Issue on
+%         Validated numerical methods and computer algebra
+
+
+\documentstyle{jsc}
+
+\title[Normal Form Method and Solutions of Nonlinear ODEs]
+{Normal Form Method and Seminumerical Solutions of Nonlinear ODEs
+                 \thanks{Supported by CNPq Brazil, project \#300894/93-7.}}
+
+\author[V.F.Edneral]{Victor F. Edneral%\thanks{On leave of absence from
+\\
+%Grupo de Computa\c c\~ao Alg\'ebrica e Algoritmos \\
+%        Instituto de Matematica - UFRGS \\
+%        91501-970 Porto Alegre, RS, Brazil\\
+%        e-mail: edneral@mat.ufrgs.br}
+         Institute for Nuclear Physics\\
+         of Moscow University,\\
+         Leninskie Gory,\\
+         Moscow, 119899, Russia\\
+         e-mail: edneral@thp.npi.msu.su}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Introduction}
+
+\noindent
+    A normal form method is based on a transformation of ODEs
+system to a simpler set called the normal form. The importance of
+this method for an investigation of ODEs near a stationary point
+has been recognized for a long time. For the history of this subject
+see, for instance, (Arnold, Anosov, 1988) or (Guckenheimer, Holmes, 
+1986). Definitions of a normal form and a normalizing transformation
+can be formulated in different approaches  for general and for
+special cases. So there are very developed approaches for Hamiltonian 
+systems, see, for example, (Deprit, 1969), (Hori, 1966), (Bruno, 1972), 
+(Bruno, 1990, chapters 1,2). There are also many algorithms (and their 
+realizations) for creating of normal forms and corresponding 
+transformations. For the Hamiltonian case see an improved algorithm of 
+Deprit and Hori in (Mersman, 1970) and its symbolic algebra realization
+under REDUCE system in (Shevchenko, Sokolsky, 1993), a matter of a 
+numerical creation of normal forms of Hamiltonians is described in 
+(Godziewski, Maciejewski, 1990). Questions of integrability and 
+convergence of the normalizing transformation in Hamiltonian case are
+discussed in (Bruno, 1972, 1990), (Ito, 1989, 1992). Concerning 
+algorithms for the creation of a normal form in a general case we 
+mention here (in an addition to Bruno's books) papers (Walcher 91,93, 
+Vallier, 1993). A connection between symmetry properties and convergence 
+of a normalizing transformation have been investigated in (Bruno, 
+Walcher, to be printed).
+
+   In this paper we will use the algorithm based on the approach 
+which was developed by A.D.Bruno (Bruno, 1971, 1972, 1989) for 
+Poincare--Dulac's normal form. The 
+important advantage of this approach is a possibility to 
+investigate a wide class of equations in the united, easy 
+algorithmized frame. In particular it provides a constructive way 
+for a creation of approximations of families of 
+periodic and conditionally periodic solutions in a form of 
+power/Fourier series for real families or in a form of power
+series in time dependent exponents for complex families. For this 
+paper it is especially important that a problem of analyticity of 
+used transformations is investigated and we are guaranteed 
+that a domain of a convergency of corresponding (infinite 
+as a rule) series is a nonzero one. The latest circumstance allows 
+us to calculate 
+periodic solutions and corresponding frequencies near stationary 
+points with acceptable precision by finite formulaes and to be sure 
+that with guaranty we can increase this precision by a calculation 
+of highest terms. Except solutions themselves we can get origin 
+conditions, which initiate periodic solutions in the form
+of series in parameters or/and (for Hamiltonian systems) in the 
+terms of the mechanical energy. I.e. we can produce some elements 
+of a phase analyses of the systems.
+
+   Another advantage of the using approach is an algorithmic 
+simplicity of a creation of the normal form and the corresponding
+transformation. We have for this procedure a direct recurrent 
+formulae. Its usage does not demand keeping of some large 
+intermediate results as it is in other algorithms. The approach is 
+free from a necessity to solve intermediate systems of 
+linear equations and from restrictions on low resonance cases.
+
+   Below we describe a creation of the normal form and its 
+application to a creation of periodic solutions of well known
+equations. We assist our consideration with concrete examples 
+produced by the NORT program  (Edneral, Khrustalev, 1985, 1992)
+or by NORT and REDUCE system. The intention of the author is a
+demonstration of the method on so transparent as it is possible
+examples. Specularity of this paper is also in an attempt to
+use a common approach to Hamiltonian and non Hamiltonian systems.
+
+
+\section{Applications of normal forms}
+
+Let us consider a system of ordinary autonomic nonlinear
+differential equations:
+
+\begin{equation}
+\label{eq-planar}
+\frac{d \overline{X}}{dt} = \overline{\Phi}(\overline{X},
+\overline{a})
+\end{equation}
+
+\noindent
+here $\overline{\Phi} = \{\Phi_1, \ldots, \Phi_n\}$ - a vector of right 
+sides of the system which are functions in $\overline{X} = \{X_1, 
+\ldots, X_n\}$ --- variables of the system and in $\overline{a} = 
+\{a_1, \ldots, a_m\}$ --- its parameters. It means that $\overline{X}$  
+are unknown functions in $\overline{a}$ and time --- $t$.
+
+Such a type of equations originates from many scientific and engineering
+problems where oscillations, vibrations or wave processes take place.
+The standard way of an investigation of such systems is:
+
+\begin{enumerate}
+
+\item
+a bifurcation analysis, i.e. an investigation of a picture of a behavior
+of system 
+solutions in dependence on parameters. It is especially important
+if sharp change of this behavior occurs at some their values;
+
+\item
+a phase picture, i.e. an investigation of a behavior of system 
+solutions in dependence on initial conditions;
+
+\item
+a calculation of system solutions. 
+
+\end{enumerate}
+
+If we have analytic solutions of a system, we have a clear picture of
+behavior of the system, but we can have such solutions very rarely.
+As a rule we have numerical solutions, but a numerical investigation 
+of the above items 1 and 2  is sometimes a complicate problem. It is not 
+simple also to create numerical solutions in unstable cases. As a 
+sequence we may be interested in a some "intermediate" approach which 
+would be between analytic and numerical methods.
+
+The normal form method widely used for a bifurcation analysis. About 
+methods of such an investigation see, for example, (Hassard, Kazarinoff, 
+Wan, 1981) and (Guckenheimer, Holmes, 1986).
+At these books you can see that a numerical bifurcation analyses is 
+based really on the normal form method. The main idea here is in
+replacing of system (\ref{eq-planar}) by some "model" system with
+polynomial right sides of a finite order and in recasting then low 
+orders of them to the canonical (normal) form. From the lowest 
+coefficients of the normal form we can make conclusions 
+about a qualitative behavior of the origin system. It is enough to
+know only lowest orders of the normal form for such an analysis. 
+Sometimes this job is produced by hands, sometimes by computer algebra 
+systems, see, for example, (Rand, Armbruster, 1987).
+
+   Here we try to demonstrate, that calculation of high orders of
+the normal form can be useful also for targets 2 and 3 mentioned above.
+We restrict our consideration here mainly by a creation of approximations 
+to periodic solutions but we have a positive material of using
+this approach in a case of conditionally periodic solution.
+
+\section{The normal form method}
+
+   At the investigation of equations of type (\ref{eq-planar}) there
+three preliminary steps are usually produced. The first step is a shift 
+of variables of the system $\overline{X}$ in such a way that we 
+have in new variables: $\overline{\Phi}(0,\overline{a}) = 0$. 
+The constant zero vector will be a solution of the 
+system. A corresponding point (zero here) is called an "immovable", 
+"stationary" or "equilibrium" point. A system can have more then one 
+such a point. Each of them is to be investigated separately.
+The second step is a reduction of the system to the "model" 
+form which approximates vector $\overline{\Phi}(\overline{X},
+\overline{a})$ by a set of polynomials of a finite order. If 
+$\overline{\Phi}$ is an analytical function of $\overline{X}$
+in some domain of the stationary point it can be realised with any
+desirable precision. Often this step is made simultaneously with a
+reduction of the system to the central manifold. After that
+right sides of the system will be polynomials without 
+constant (absolute) terms. By a linear complex change of its variables it is 
+possible to reduce a linear parts of the system to the canonical
+form. After this (the third) step we have: 
+
+\begin{equation}
+\label{eq-prep}
+\frac{d\overline{Y}_i}{dt}\ =\ \hat{A} \overline{Y}+
+      \overline{F}(\overline{Y},
+\overline{a})
+\end{equation}
+
+\noindent
+where $\hat{A}$ matrix has a canonical (Jordan's) form and 
+$\overline{Y}$ -- new variables of the system after the above 
+transformations.
+
+   In this paper we suppose also that matrix $\hat{A}$ has a 
+diagonal form. Really the described method is formulated without 
+such a restriction. It has rather a technical character and can be 
+eliminated with a development of the NORT program. We suppose also
+that the dependence of the right side in parameters has a polynomial
+character also. It has a more principal character. 
+
+Finally we will have the system which is considered in this
+paper (below for a simplification of a notation we will hint the 
+dependence on parameters):
+
+\begin{equation}
+\label{eq-general}
+\frac{dY_i}{dt}\ =\ \lambda_iY_i+F_i(Y_1,Y_2,\ldots,Y_n),
+\quad \ i=1,\ldots ,n
+\end{equation}
+
+\noindent
+here  $\{\lambda_i\}$ is a non-zero vector of eigenvalues of the linear 
+parts of the right sides.  $\{F_i\}$ is a vector of polynomials of 
+finite degrees without constant and linear terms. In other words we 
+impose further restrictions:
+
+\begin{description} 
+\item[$\bullet$]
+    we  take into account autonomic \footnote{Actually
+periodic dependence on time can be eliminated by changing time
+dependent functions for the proper solutions of additional ODEs. For 
+instance $\cos(\omega t)$ can be simulated by a couple of additional 
+autonomic equations with proper origin conditions.}
+systems with a polynomial nonlinearity 
+
+\item[$\bullet$]
+    systems are  investigated near a stationary point,  i.e.  the 
+vector $\{(0,\ldots,0)\}$ is a solution of the system;
+
+\item[$\bullet$]
+    we  suppose that a linear part of the right hand side can be 
+    diagonalized  and this  operation  has  been  done (actually  
+    the  algorithm  can  be  
+generalized for a case of a triangular matrix (Bruno, 1988).
+But anyway the eigenvalues must be know). We also suppose that 
+its eigenvalues $\lambda_i$ have numerical values\footnote{This is 
+not a very dramatic requirement, see, e.q., a treatment of van der 
+Pol's equation below.}.
+
+\end{description} 
+
+    Let us now rewrite the equation (\ref{eq-general}) in the form:
+    
+\begin{equation}
+\label{eq-bform}
+\frac{dY_i}{dt}\ =\ \lambda_i Y_i+Y_i \sum_{\overline{Q}_i}
+F_{i,\overline{Q}_i}\overline{Y}^{\overline{Q}_i},
+\end{equation}
+
+\noindent
+where $\overline{Y}^{\overline{Q}_i}$ is defined as a product:
+
+$$
+\prod_{j=1}^{n} {Y_j}^{Q_{ij}}, \quad
+Q_{ij}\ =\ \left\{ \begin{array}{ll}
+                    0,1,2,\ldots & \mbox{if $i\not =j,$} \\
+                    -1,0,1,\ldots & \mbox{if $i=j.$}
+                   \end{array}
+           \right.
+$$
+
+$Q_{ij}$ here are components of a vector $\overline{Q}_i=\{Q_{ij}\}$.
+$Q_{ij}$ are non-negative integers  with the exception of 
+$\{Q_{ii}\} \geq -1$,  because factor $Y_i$ has been carried out from 
+sum in (\ref{eq-bform}). Summation in (\ref{eq-bform}) is over all 
+possible $\overline{Q}_i$-vectors.
+
+    In such terms a normalizing transformation may be written as:
+
+\begin{equation}
+\label{n-trans}
+Y_i\ =\ Z_i + Z_i \ \sum_{\overline{Q}_i}
+H_{i,\overline{Q}_i} \overline{Z}^{\overline{Q}_i}.
+\end{equation}
+
+    Coefficients $H$ in transformation (\ref{n-trans}) can be chosen so
+that equation (\ref{eq-bform}) will have the form:
+
+\begin{equation}
+\label{eq-nform}
+\frac{dZ_i}{dt} =  \lambda_i Z_i + Z_i \sum_{(\overline{Q}_i,
+\overline{\lambda})=0} G_{i,\overline{Q}_i} \overline{Z}^{\overline{Q}_i}.
+\end{equation}
+\vspace{0.07in}
+
+    The great  difference between (\ref{eq-nform}) and (\ref{eq-bform}) 
+is a restriction on the domain of summation, which is defined by the 
+equation:
+
+\begin{equation}
+\label{sc-prod}
+(\overline{Q}_i,\overline{\lambda})\ \stackrel{\rm def}{=} \sum_{j=1}^{n} 
+Q_{ij}\lambda_j\ =\ 0.
+\end{equation}
+
+   The form (\ref{eq-nform}) is called the normal form for 
+(\ref{eq-bform}). The $H$ and $G$ coefficients in (\ref{n-trans})  
+and (\ref{eq-nform}) may be found  from the recurrent formulae 
+(Bruno, 1971, 1989):
+
+\begin{equation}
+\label{rec-norm-trans}
+\begin{array}{ll}
+&G_{i,\overline{Q}_i}  +  (\overline{Q}_i,\overline{\lambda})
+H_{\mathstrut \mathstrut \mathstrut i,\overline{Q}_i}= \\
+&-  \sum_{\mathstrut \mathstrut \mathstrut j=1}
+        ^{\mathstrut \mathstrut \mathstrut n}
+\sum_{\overline{P}+\overline{R}=\overline{Q}_i}
+ (P_j+ \delta _{ij})H_{i,\overline{P}}G_{j,\overline{R}} \\
+&+\Phi_{i,\overline{Q}_i}^{\mathstrut \mathstrut \mathstrut \ }.
+\end{array}
+\end{equation}
+
+\noindent
+Here the second summation in the right-hand side is over all vectors 
+$\overline{P}$ and $\overline{R}$ for which  
+$\overline{P}+\overline{R}=\overline{Q}_i$; $P_j$ in parentheses is the
+$j$- component of vector $\overline{P}$; $\Phi_{i,\overline{Q}_i}$ is a
+coefficient at the factor $Z_i \overline{Z}^{\overline{Q}_i}$ in the 
+polynomial $F_i$ from (\ref{eq-bform}), arguments of which have been
+transformed by 
+(\ref{n-trans}) \footnote{Take into account that the scalar production 
+$(\overline{Q}_i,\overline{\lambda})$ will appeare in denominators of 
+$H$ coefficients with any possible values of $\overline{Q}$. If one of
+eigenvalue has a symbolic value this scalar production 
+will provides a series of (complex in general) poles in this 
+symbolic value.}.
+
+The uncertainty in (\ref{rec-norm-trans}) is fixed below by conventions:
+
+\begin{equation}
+\label{fix-trans}
+\begin{array}{l}
+\mbox{$H_{\mathstrut i,\overline{Q}_i}=0 
+   \qquad$ if $\quad(\overline{Q}_i,\overline{\lambda})=0,$} \\
+\mbox{$G_{i,\overline{Q}_i}^{\mathstrut \ }=0 
+   \qquad$ if $\quad(\overline{Q}_i,\overline{\lambda})\not =0$}
+\end{array}
+\end{equation}
+
+
+Sometimes the normalizing transformation fixed by (\ref{fix-trans})
+is called a "basic transformation".
+
+
+\subsection{the main algorithm}
+
+The algorithm of the calculation of $G$ and $H$ is based on
+(\ref{rec-norm-trans}),(\ref{fix-trans}). Let us
+choose the representation of sets of coefficients $G_{i,\overline{Q}_i}$
+and $H_{i,\overline{Q}_i}$ so that they would be collected in such 
+groups where a group of order $n$ contains only elements with such 
+vector-indexes $\overline{Q_i} = \{q_{i,j}\}$ that the sum of their 
+components is equal to the order, i.e. $\sum_{j}q_{i,j}=n$ for
+each $i$. You can calculate the group of the next order for
+$G$ and $H$ by using groups of $G$ and $H$ with smaller order only, 
+i.e. (\ref{rec-norm-trans}) is a recurrent formulae.
+
+\vspace{0.07in}
+
+The algorithm:
+
+Let $n$ is a dimension of the system, for its normalization till
+order m we are to do:
+
+\begin{enumerate}
+\renewcommand{\theenumi}{(\roman{enumi})}
+
+\item
+for $i=1,2,\ldots,n$ do:\\
+Calculate all square in $Y_i$ elements in right sides of  
+$F_i(\overline{Y})$, i.e. calculate the group of the first 
+order of the set $\Phi_{i,\overline{Q}_i}$ and sort it into two 
+sets in dependence on a value of 
+scalar product (\ref{sc-prod}). The first set where this product 
+is zero will be the first order group of $G_i$ and the second set
+after a division on the value 
+of the corresponding scalar product will be the first order group of $H_i$ 
+
+\item
+for $k=2,3,\ldots,m$ do:
+   \begin{enumerate}
+
+   \item
+   for $i=1,2,\ldots,n$ do:\\
+   calculate the group of order $k$ of the set
+   $\Phi_i$ for which substitute the $Y_i$ evaluated by (\ref{n-trans}) 
+   till order $k-1$ in the $F_i(\overline{Y}(\overline{Z}))$
+   and choose coefficients at monomials 
+   $Z_i \overline{Z}^{\overline{Q}_i}$ as $\Phi_{i,\overline{Q}_i}$;
+   
+   \item
+   for $i=1,2,\ldots,n$ do:\\
+   Calculate the groups of $G_i$ and $H_i$ of order $k$  by a division 
+   the set $\Phi_i$ into two sets as in item (a). After that you will
+   have the full group of order $k$ for $G_i$ and preliminary values
+   of such a group for $H_i$, because those values of the vector 
+   $\overline{Q}_i$ 
+   which takes place at non-zero elements into the summation in
+   (\ref{rec-norm-trans}) can not zero the scalar product,
+   as a sum of a vector which zeroes this product ($\overline{R}$)
+   and a vector which does not do it ($\overline{P}$).
+
+   \item
+   for $i=1,2,\ldots,n$ do:\\
+   for $j=1,2,\ldots,n$ do:\\
+   supplement the group of order $k$ of $H_i$ with properly sorted
+   multiplications of {\em all} elements of such groups of $H_i$
+   and $G_j$ so that their summary order (i.e. $\sum_{s=1}^n (P_s+R_s)$) 
+   would be equal to $k$. These multiplications would be multiplied also 
+   by a factor
+   $(P_j+\delta_{i,j})$, which can be equal to zero and therefore
+   should be calculated before the other factors. Before the supplement
+   all elements are to be divided on the corresponding scalar products. 
+
+   \end{enumerate}
+\end{enumerate}
+
+It is not so heavy to estimate a cost of this algorithm but here
+such estimation has no a deep sense because of relative high
+complexity of a calculation of right sides of the nonlinear system.
+Under such circumstances it is very important to calculate these
+parts very economic, using as possible the fact that we need at 
+the each step of (ii) a single homogeneous 
+"slice" of $\overline{F}$ of order $k$ only and its terms of lower orders 
+will be not changing during the following operations. The problems 
+with the optimization of the right sides evaluation is one of the main reason 
+of an absence of closed interface for the NORT package. 
+
+\subsection{periodic solutions, a convergence of series and adequacy
+         of the normal form to the origin system}
+
+  The sums in (\ref{n-trans})  and (\ref{eq-nform}) may 
+include  an infinite  number  of terms for physically interesting 
+cases even though the sum in (\ref{eq-bform}) has a finite number 
+of ones. The question about properties of a convergence and a 
+smoothness of transformation arises. For adequacy of the normal form 
+to the origin system in a some domain of a stationary point we need 
+to have analytical normalizing transformation. The problem of 
+analyticity of (\ref{n-trans}) have been investigated in (Bruno, 1971, 
+1989). The result is shortly that the transformation (\ref{n-trans})
+is divergent in a general case, but there can be found some subsets of 
+the formal invariant sets of the normalized system (\ref{eq-nform})
+where the normalizing transformation is convergent and which are 
+therefore adequate to some invariant subsets of the original system. 
+Bruno calls them analytical sets. 
+
+We will see below the subspace of a coordinates space of normalized 
+system which includes only variables $Z_i$ for which $Re(\lambda_i) 
+= 0$. Actually, if this is a null-space we have no deep problems 
+with the convergence,
+because in this case there is a result about topological equivalence 
+of the original system to the system which is normalized
+till a {\em finite} order \footnote{We will not discuss here this 
+circle of questions and send a reader for the references to Bruno's 
+books.}. The variables for which corresponding eigenvalues are not
+pure imaginary increase to infinity (for $Re(\lambda_i)>0$) or
+vanish (for $Re(\lambda_i)<0$) with time. Therefore we have for
+periodic solutions only the above mentioned subspace. Let us extract
+in this subspace the set ${\em A}$:
+
+\begin{equation}
+\label{cond-A}
+\begin{array}{lll}
+{\em A} = \{\overline{Z} : 
+            &\psi_i = \lambda_i Z_i a, \ \ &if \ Re(\lambda_i) = 0;\\
+            &Z_i = 0,                      &if \ Re(\lambda_i) \neq 0;
+\quad i=1,\ldots,n \}
+\end{array}
+\end{equation}
+
+\noindent
+where $\psi_i$ is an element of a right side of the normalized system
+and $a$ is a free parameter, the same for all values of $i$.
+
+%\newtheorem{theorem}{Theorem}
+%\begin{theorem}
+{\bf Theorem 3.1}
+   The set ${\em A}$ contains periodic and conditionally periodic 
+solutions of the normalized system including stationary points.
+%\end{theorem}
+
+   Further let us collect all pure imaginary eigenvalues in groups with
+the property: each group includes all $\lambda$'s which are co-measured
+in pairs \footnote{I.e. a ratio of any non-zero elements within the
+group is a rational number.}. Following Bruno we will speak about 
+coordinate subspace which contains only the coordinates (variables) 
+with numbers corresponding one of these groups as about the "rational"
+subspace. Let us designate the intersection of the set ${\em A}$ with 
+a union of all such rational subspaces by $\stackrel{\sim}{\em A}$.
+
+%\newtheorem{theorem1}{Theorem}
+%\begin{theorem1}
+{\bf Theorem 3.2}
+   The set $\stackrel{\sim}{A}$ are filled with periodic solutions 
+of the normalized system including stationary points and there exists
+an analytical invertible transformation which transfers the 
+original system to the system which is normalized on the set
+$\stackrel{\sim}{A}$.
+%\end{theorem1}
+
+The important sequence from the above theorems is that if we find
+the set $\stackrel{\sim}{\em A}$ we find the periodical solutions of
+the normalized system, which contracts to the stationary point. 
+Along these solutions the normalizing transformation will be analytical. 
+Thus the normalized system will adequate to the origin one along these 
+solutions.
+
+It is easy to see that a fulfillment of (\ref{cond-A}) is enough for 
+integration of the system, because of $a$ will be a constant. It provides
+also the way for building integrals of motion.
+
+A set exists also which contains conditionally periodic solutions
+such that the normalizing transformation is analytic along them.
+The definition of such a set see in (Bruno, 1989).
+
+\subsection{the general scheme of the ODEs investigation}
+
+General scheme of an investigation of a nonlinear ODEs system 
+by the normal form method near each stationary point is:
+
+\begin{enumerate} 
+
+\item
+    recasting the system to a (model) polynomial form;
+
+\item
+    the linear normalization of the system, i.e. the reduction of 
+a linear part of the right sides of the system to Jordan's or to a 
+diagonal form and an investigation of the corresponding eigenvalues;
+
+\item
+    the non-linear normalization of the system,---the creation of
+the normal form and the corresponding normalizing transformation;
+(sometimes it is called recasting the system in a "resonance form").
+
+\item
+    a bifurcation analysis of the system in parameters by the 
+investigation of lowest non-disappeared orders of the normal form;
+
+
+\item
+    building the periodic and conditionally periodic solutions
+which contract to the stationary point;
+
+\item
+    decreasing an order of the normalized system if it necessary and
+a repetition of the present investigation from item 2 near each 
+stationary point of the system decreased.
+
+\end{enumerate} 
+
+\section{Second order systems}
+
+All questions about convergence and integrability of normal forms for 
+all second order systems of type \ref{eq-general} near a stationary 
+point have been investigated by (Bruno, 1971,1989) for the case when 
+the stationary point is an elementary especial point, i.e. both 
+eigenvalues of the system are not equal zero simultaneously.
+The result of this investigation shortly is: the normal forms for
+equations defined as the above are integrable. For each case there are 
+written integrals of the normalized system. The result regarding the
+convergence is the following. 
+Let $\lambda_2 \neq 0$ and $\lambda \stackrel{\rm def}{=}
+ \lambda_1/\lambda_2$. If $Im(\lambda) \neq 0$ or if 
+$\lambda > 0$ then the transformation is convergent and we can
+produce an approximate solution of the origin system from known
+integrals of the normal form by transformation (\ref{n-trans}) with 
+any desirable precision. In other words cases of "focus" and "knot" 
+can be treated without any additional demands. At a negative irrational
+$\lambda$ the convergence will take place if for all non-zero vectors 
+$\overline{Q}$ with integer elements there exist positive $\varepsilon,\nu$ 
+such that $|(\overline{Q},\overline{\lambda})| > \varepsilon 
+(|q_1|+|q_2|)^{-\nu}$. This condition can be checked before
+creation of the normal form. The latest case is a one partial case
+of a saddle point. 
+But at real non-positive rational $\lambda = -m/n \leq 0$ we will have
+convergence under some additional 
+requirements on the normal form. It is interesting case. It includes
+the cases of a center and a limit circle. Let us look at a couple
+of examples.
+
+\subsection{duffing's equation}
+
+   This is an equation of the second order, which origins from a
+problem of a mathematical pendulum:
+
+\begin{equation}
+\label{eq-pendulum}
+\frac{d^{2}\phi}{dt^2}+\omega_0^2\sin(\phi) \ = \ 0
+\end{equation}
+
+
+\noindent 
+where $\phi$ is an angle of deviation of the pendulum and 
+which can be approximated by the form (units below have been chosen so 
+that $\omega_0 = 1$):
+
+\begin{equation}
+\label{eq-pend}
+\frac{d^{2}\phi}{dt^2} \ = \ - \phi + {1 \over 6}\phi^3
+\end{equation}
+
+By considering $\phi = \sqrt{6} X$ we get Duffing's equation:
+
+\begin{equation}
+\label{eq-duffing}
+\frac{d^{2}X}{dt^2} \ = \ - X + X^3
+\end{equation}
+
+This is a Hamiltonian equation with the full energy $H$:
+
+\begin{equation}
+\label{H-duffing}
+H = {1 \over 2}(\frac{dX}{dt})^2 + {1 \over 2} X^2 - {1 \over 4} X^4
+\end{equation}
+
+
+By linear complex changing for variables:
+
+\begin{equation}
+\label{line-norm}
+\begin{array}{ccc}
+X & = & Y_1 + Y_2 \\
+\frac{\mathstrut dX}{dt}& = & i \ (Y_1 - Y_2)
+\end{array}
+\end{equation}
+
+\noindent
+we can rewrite it in the diagonalized form:
+
+\begin{equation}
+\label{planar-duff}
+\begin{array}{lcrl}
+\frac{\mathstrut dY_1}{\mathstrut dt}& = &  i &\!\! Y_1 - {i \over 2}
+                                                       \ (Y_1 +Y_2)^3\\
+\frac{\mathstrut dY_2}{\mathstrut dt}& = & -i &\!\! Y_2 + {i \over 2}
+                                                       \ (Y_1 +Y_2)^3
+\end{array}
+\end{equation}
+
+
+\noindent
+Note that a couple of equations the above mentioned have complex conjugated 
+coefficients at terms with exchange $Y_1 \leftrightarrow Y_2$ It will 
+take place always if the origin system has real coefficients. 
+
+   The vector of eigenvalues of 
+a linear part of the system is $\overline{\lambda} = \{i,-i\}$.
+
+In accordance with the definition of the normal form: 
+$$
+\frac{dZ_i}{dt} \ = \ \lambda_iZ_i + Z_i
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                           \sum_{\begin{array}{c}
+                                 p_i \geq -1 \\
+                           p_1,\ldots,p_{i-1},p_{i+1},\ldots,p_n \geq 0 \\
+                           (\overline{\lambda},\overline{p}) = 0 
+                                              \end{array}}
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                               g_{i,p_1,\ldots,p_n}
+                               \prod_{k = 1}^{n} Z_k^{p_k},            
+\quad i=1,\ldots ,n
+$$
+
+\noindent
+we will have for the case $n = 2$ 
+at sums in the right sides of equations only terms, where 
+$(\overline{\lambda},\overline{p}) = i\ (p_1 - p_2) = 0$.
+I.e. sums at the right sides of the normal form of Duffing's 
+equation will include only terms where $p_1 = p_2$: 
+
+\begin{equation}
+\label{n-duffing}
+\begin{array}{lcrl}
+\frac{\mathstrut dZ_1}{\mathstrut dt}& = &  i &\!\! Z_1 
++ Z_1\ (g_{1,1,1} Z_1 Z_2 + g_{1,2,2} Z_{1}^2 Z_{2}^2 + \ldots)\\
+\frac{\mathstrut dZ_2}{\mathstrut dt}& = & -i &\!\! Z_2
++ Z_2\ (g_{2,1,1} Z_1 Z_2 + g_{2,2,2} Z_{1}^2 Z_{2}^2 + \ldots)
+\end{array}
+\end{equation}
+
+The condition (\ref{cond-A}) for the second order equation with 
+eigenvalues $\lambda_1 = -\lambda_2$ has the form:
+
+
+$$
+\sum_{k=1,\ldots} g_{1,k,k} \ (Z_1 Z_2)^k = 
+- \sum_{k=1,\ldots} g_{2,k,k} \ (Z_1 Z_2)^k
+$$
+
+As for any real (originally) equation of the second order the equalities:
+
+\begin{equation}
+\label{conj-2}
+\begin{array}{c}
+g_{1,i,i} = g_{2,i,i}^{*}\\
+h_{1,i,j} = h_{2,j,i}^{*}
+\end{array}
+\end{equation}
+
+takes place \footnote{The asterisk here notes a complex conjugation},
+this condition for real equations of the second order has the form:
+
+\begin{equation}
+\label{cond-2}
+\sum_{k=1,\ldots} Re(g_{1,k,k}) \ (Z_1 Z_2)^k = 0
+\end{equation}
+
+After a calculation of the normal form for Duffing's equation,
+it can be seen that (\ref{cond-2}) is fulfilled identically
+because all $g_{1,i,i} \mbox{ and } g_{2,i,i}$ are pure imaginary here. 
+It means that in the case of Duffing's equation we have the
+case which is usually  called the "center", when 
+periodic solutions exist for any initial conditions.
+
+Really, 
+by multipling the first from equations (\ref{n-duffing}) by $Z_2$
+and the second one by $Z_1$ we will have after their addition 
+$\frac{d(Z_1 Z_2)}{dt} = 0$ and so (\ref{n-duffing}) has a trivial
+form:
+
+$$
+\begin{array}{lccl}
+\frac{\mathstrut dZ_1}{\mathstrut dt}& = &  &i \ \omega(Z_1 Z_2) \ Z_1 \\
+\frac{\mathstrut dZ_2}{\mathstrut dt}& = & -&i \ \omega(Z_1 Z_2) \ Z_2  
+\end{array}
+$$
+
+\noindent
+because $\omega(Z_1 Z_2) \stackrel{\rm def}{=} 1 + g_{1,1,1}/i + 
+g_{1,2,2}/i + \ldots$ 
+is a real constant. Therefore the family of solutions of Duffing's 
+equation in the normal form is:
+
+$$ 
+Z_1(t) = c_1 e^{+ i \omega(c_1 c_2) t}, \quad
+Z_2(t) = c_2 e^{- i \omega(c_1 c_2) t}  
+$$
+
+\noindent
+where $c_1, c_2$ are voluntary constants.
+
+Now we can create the approximation to origin equation 
+(\ref{eq-duffing}) by substitution the above found $Z_i$ into $Y_i$ 
+with (\ref{n-trans})
+and after that into $X$. If we choose complex conjugate values for 
+$c_1, c_2$ we will have an approximation of the real solution in the 
+form of truncated Fourier series.
+
+   The calculation by the NORT package till $15^{\mbox th}$ order in $C = 
+\sqrt{c_1 c_2}$ took 53 seconds on 33MHz 4Mbyte RAM  PC/AT-486DS 
+computer in the symbolic mode of REDUCE 3.4.2. Due to equalities
+(\ref{conj-2}) we do not need to calculate series for both of 
+equations (\ref{planar-duff}). So we have 16 terms for  
+each sums in normal form (\ref{n-duffing}) and 255 terms for
+the each normalizing transformation from $Z_i$ to $Y_i$. The final
+expression for a frequency has 16 terms and the expression for $X(t)$ 
+has 141 terms. 
+
+We got these series as series in the $C$ variable. It is not convenient
+and for the final representation we calculated the $H$ as a series in 
+$C$ by substituting found $X \mbox{ and } {dX \over dt}$ in
+(\ref{H-duffing}). By inverting this series and substituting $C$ as 
+a series of $H$ into expressions for the $\omega$ and $X$ we will
+have the end result as series in $H$. For an economy of the place
+we show here this result till the $5^{\mbox th}$ order only 
+\footnote{If somebody
+is interested in the full series in the REDUCE readable or FORTRAN
+form, he can reach them via the name service by anonymous ftp from
+euler.mat.ufrgs.br (143.54.2.220) in the directory pub/norm}:
+
+
+\begin{equation}
+\label{res-duffing}
+\begin{array}{ll}
+
+\omega =& 1
+ -{\mathstrut 3 \over \mathstrut  4} H
+ -{\mathstrut 69 \over \mathstrut  64} H^2
+ -{\mathstrut 633 \over \mathstrut  256} H^3
+ -{\mathstrut 110421 \over \mathstrut  16384} H^4
+ -{\mathstrut 1318329 \over \mathstrut  65536} H^5 + \ldots\\
+
+&\\
+ 
+X =& \sqrt{2 H} \times \\
+ &[ \ \ \cos(\omega t) (
+   1
+ +{\mathstrut 9 \over \mathstrut  16} H
+ +{\mathstrut 271 \over \mathstrut  256} H^2
+ +{\mathstrut 10779 \over \mathstrut  4096} H^3
+ +{\mathstrut 243613 \over \mathstrut  32768} H^4
+ +{\mathstrut 2963587 \over \mathstrut  131072} H^5)\\
+ &-\cos(3 \omega t) H (
+  {\mathstrut 1 \over \mathstrut  16}
+ +{\mathstrut 3 \over \mathstrut  16} H
+ +{\mathstrut 1209 \over \mathstrut  2048} H^2
+ +{\mathstrut 127233 \over \mathstrut  65536} H^3
+ +{\mathstrut 6907221 \over \mathstrut  1048576} H^4)\\
+ &+\cos(5 \omega t) H^2 (
+  {\mathstrut 1 \over \mathstrut  256}
+ +{\mathstrut 11 \over \mathstrut  512} H
+ +{\mathstrut 3107 \over \mathstrut  32768} H^2
+ +{\mathstrut 25567 \over \mathstrut  65536} H^3)\\
+ &-\cos(7 \omega t) H^3 (
+  {\mathstrut 1 \over \mathstrut  4096}
+ +{\mathstrut 1 \over \mathstrut  512} H
+ +{\mathstrut 5805 \over \mathstrut  524288} H^2)\\
+ &+\cos(9 \omega t) H^4 (
+  {\mathstrut 1 \over \mathstrut  65536}
+ +{\mathstrut 21 \over \mathstrut  131072} H)\\
+ &-\cos(11 \omega t) H^5 (
+  {\mathstrut 1 \over \mathstrut  1048576}) + \ldots \ ]
+
+\end{array}
+\end{equation}
+
+
+The result of this calculation was verified  by two ways. The first 
+one was a direct substitution of series (\ref{res-duffing}) in 
+the original equation (\ref{eq-duffing}). After that we had only terms  
+with negligible orders of $H$. The second way was a comparison of the
+numerical solutions of Duffing's equation evaluated by Runge--Kutta 
+method (by NAG's d02baf procedure with a 'tolerance' $= 10^{-12}$) and  
+the values tabulated of the series the above mentioned at different 
+values of $H$.
+In view of (\ref{H-duffing}) we have $H=H(X=\phi/\sqrt{6},\frac{dX}{dt}
+=\frac{d\phi}{dt}/\sqrt{6})$. On the other hand $H$ has its maximum 
+physically reasonable value when at a zero velocity a maximum
+deviation of a pendulum takes place, i.e. when $\phi = \pi/2$ and 
+$\frac{d\phi}{dt}=0$. In this case we can choose $H \leq H_{max} 
+\simeq 0.163$. Let us now introduce a function of a maximum relative 
+error during one period $f_{err}(H)$:
+
+\begin{equation}
+\label{f-err}
+f_{err} =  \sup_{t \in [0,2\pi/\omega]} \sqrt{
+\frac{(X_{ser}-X_{num})^2 + (dX_{ser}/dt-dX_{num}/dt)^2}
+{X_{ser}^2+(dX_{ser}/dt)^2}}
+\end{equation}
+
+This function indicates a maximum relative deviation in phase space
+between series (\ref{res-duffing}) $X_{ser}$ and its symbolically 
+evaluated derivation on the one hand and numerical solutions of
+(\ref{eq-duffing}) $X_{num}, dX_{num}/dt$ on the another hand 
+as a function of 
+full energy $H$. We have:
+
+$$
+\begin{array}{ll}
+f_{err}(H=0.1) &\simeq 1.8 \times 10^{-8}\\
+f_{err}(H=0.125) &\simeq 7.4 \times 10^{-7}\\
+f_{err}(H_{max}=0.163) &\simeq 7.4 \times 10^{-5}
+\end{array}
+$$
+
+You can see that riched precision can be used for practical goals in
+a physical diapason of energy. A use of a ready finite formulae can
+be sometimes more preferable at a real time calculations than a 
+numerical solution of differential equations. Of course form
+(\ref{res-duffing}) must be improved for a real usage by standard
+methods of prepearing of series for numerical tabulation.
+
+
+\subsection{van der pol's equation}
+
+   This equation origins from a problem of vibrations in electronic
+circuits:
+
+\begin{equation}
+\label{eq-vdp}
+\frac{d^{2}X}{dt^2} \ = \ - X + (\varepsilon^2 - X^2) \ \frac{dX}{dt}
+\end{equation}
+
+By linear complex changing variables (\ref{line-norm})
+it can be rewritten in the diagonalized form:
+
+$$
+\begin{array}{lcrl}
+\frac{\mathstrut dY_1}{\mathstrut dt}& = &  i &\!\! Y_1 + 
+   {1 \over 2} \ (Y_1-Y_2) \ [\varepsilon^2 - (Y_1 +Y_2)^2]\\
+\frac{\mathstrut dY_2}{\mathstrut dt}& = & -i &\!\! Y_2 + 
+   {1 \over 2} \ (Y_2-Y_1) \ [\varepsilon^2 - (Y_1 +Y_2)^2]\\
+\frac{\mathstrut d\varepsilon}{\mathstrut dt}& = &0
+\end{array}
+$$
+
+\noindent
+As for Duffings` case these equations have complex conjugated 
+coefficients at terms with exchange $Y_1 \leftrightarrow Y_2$.
+
+We consider here the  parameter $\varepsilon$ as a new variable.
+Such trick allows us to free eigenvalues from a parameter 
+dependence. It is necessary to be careful under this operation. We
+can produce the trick only if the expansion of the expression $1/
+(\overline{Q}_i,\overline{\lambda}(\varepsilon))$ is correct
+at the point $\varepsilon = 0$ for all $\overline{Q}_i$ 
+used in the summation in (\ref{n-trans}). (See the footnote on 
+the correspondent page).
+
+And as for Duffing's equation sums at the right sides of the 
+normal form  will include only terms where $p_1 = p_2$. The third 
+"additional" equation will be not changed.
+So a difference between (\ref{n-duffing}) and the system presented
+below is only in polynomial 
+dependence of the right sides on $\varepsilon$:
+
+\begin{equation}
+\label{n-vdp}
+\begin{array}{lcrl}
+\frac{\mathstrut dZ_1}{\mathstrut dt}& = &  i &\!\! Z_1 
++ Z_1\ \sum_{k=0,1,\ldots}\ (g_{1,1,1,2k} (Z_1 Z_2) \varepsilon^{2k} + 
+        g_{1,2,2,2k}\ (Z_1 Z_2)^2 \varepsilon^{2k}
+         + \ldots)\\
+\frac{\mathstrut dZ_2}{\mathstrut dt}& = & -i &\!\! Z_2
++ Z_2\ \sum_{k=0,1,\ldots}\ (g_{2,1,1,2k} (Z_1 Z_2) \varepsilon^{2k} + 
+        g_{2,2,2,2k}(\varepsilon) (Z_1 Z_2)^2 \varepsilon^{2k} + \ldots)\\
+\frac{\mathstrut d\varepsilon}{\mathstrut dt}& = &0&
+\end{array}
+\end{equation}
+
+The convergent condition (\ref{cond-2}) will have now the form:
+
+\begin{equation}
+\label{cond-vdp}
+Re[\sum_{j,k=0,1,\ldots} g_{1,j,j,2k} \ \varepsilon^{2k} \ 
+(Z_1 Z_2)^j] = 0,\qquad 
+g_{1,0,0,0} \stackrel{\rm def}{=} 0
+\end{equation}
+
+Contrary to Duffing's equation the above is not satisfied automatically,
+but it may be rewrite in the form:
+
+$$
+a U + b V + c U^2 +d U V + e V^2 + \ldots = 0
+$$
+
+\noindent 
+with $U = Z_1 Z_2, V = \varepsilon^2$ and $a \neq 0$.
+This is an experimental fact and it allows us 
+to get the unique (because of the implicit function theorem)
+solution of (\ref{cond-vdp}) in the form:
+
+$$
+Z_1 Z_2 = \sum_{k=1,2,\ldots} q_k \varepsilon^{2k}
+$$
+
+It is easy to see that if the above is satisfied then $Z_1 Z_2$ is a
+constant in time. So we can continue the evaluations as for Duffing's
+case, but now constancys $c_1, c_2$ are not free (this is a case of 
+a"limit circle"):  
+
+
+$$ 
+\begin{array}{c}
+Z_1(t) = c_1 e^{+ i \omega(c_1 c_2) t}, \quad
+Z_2(t) = c_2 e^{- i \omega(c_1 c_2) t} \\
+c_1 c_2 = \sum_{k=1,2,\ldots} q_k \varepsilon^{2k}
+\end{array}
+$$
+
+
+After we create the approximation to the origin equation 
+(\ref{eq-vdp}) by substitution of the found above $Z_i$ into $Y_i$ with 
+the help of (\ref{n-trans})
+and next in $X$. If we choose complex conjugate values for 
+$c_1, c_2$ we also for Duffing's equation will have an approximation 
+of the real solution in the form of truncated Fourier series.
+
+But  form (\ref{eq-vdp})
+is not well for a graphic representation because  \footnote{Really, 
+you can see from the above that $Z_1 Z_2 \sim \varepsilon^2$ and 
+$X \sim Y_i \sim Z_i$.}
+a vibration 
+amplitude $X$ is proportional to the value of $\varepsilon$ and
+in a picture we will have different scales for different
+values of the parameter. We eliminate this problem by introducing
+for the end result a new variable $\chi = X/\varepsilon$. The equation
+for this variable will have the form:
+
+\begin{equation}
+\label{eq-newvdp}
+\frac{d^{2}\chi}{dt^2} \ = \ - \chi + 
+\varepsilon^2 \ (1 - \chi^2) \ \frac{d\chi}{dt}
+\end{equation}
+
+We did not choose this form for the investigation because in form
+(\ref{eq-vdp}) we choose variables $X \sim \varepsilon$ as having
+the same weight near zero. Actually we could use form (\ref{eq-newvdp})
+but the result would have smaller precision at the same order of the
+corresponding normal form. For (\ref{eq-newvdp}) we will have (we
+display it here only till the $16^{th}$ order):
+
+
+\begin{equation}
+\label{res-newvdp}
+\begin{array}{ll}
+
+\omega =& 1
+-{\mathstrut 1 \over \mathstrut  16} \varepsilon^4
++{\mathstrut 17 \over \mathstrut  3072} \varepsilon^8
++{\mathstrut 35 \over \mathstrut  884736} \varepsilon^{12}
+-{\mathstrut 678899 \over \mathstrut  5096079360} 
+\varepsilon^{16} + \ldots\\
+
+&\\
+
+% u=x/ep, u''-\varepsilon^2(1-u^2)u'+u=0$
+
+\chi = &\ \ \cos(\omega t) (2
++{\mathstrut 1 \over \mathstrut  64} \varepsilon^4
+-{\mathstrut 23 \over \mathstrut  49152} \varepsilon^8
+-{\mathstrut 51619 \over \mathstrut  169869312} \varepsilon^{12}
++{\mathstrut 948555443 \over \mathstrut  19568944742400} 
+\varepsilon^{16})\\
+&+\cos(3\omega t) \varepsilon^4 (
+-{\mathstrut 3 \over \mathstrut  32}
++{\mathstrut 101 \over \mathstrut  12288} \varepsilon^4
++{\mathstrut 24061 \over \mathstrut  28311552} \varepsilon^8
+-{\mathstrut 279818087 \over \mathstrut  815372697600} 
+\varepsilon^{12})\\
+&+\cos(5\omega t) \varepsilon^4 (
+-{\mathstrut 5 \over \mathstrut  96}
++{\mathstrut 1865 \over \mathstrut  110592} \varepsilon^4
+-{\mathstrut 328835 \over \mathstrut  254803968} \varepsilon^8
+-{\mathstrut 111998015 \over \mathstrut  293534171136} 
+\varepsilon^{12})\\
+&+\cos(7\omega t) \varepsilon^8 ({\mathstrut 1379 \over \mathstrut  110592}
+-{\mathstrut 10923199 \over \mathstrut  3185049600} \varepsilon^4
++{\mathstrut 21049213549 \over \mathstrut  183458856960000} \varepsilon^8)\\
+&+\cos(9\omega t) \varepsilon^8 ({\mathstrut 61 \over \mathstrut  20480}
+-{\mathstrut 1769369 \over \mathstrut  589824000} \varepsilon^4
++{\mathstrut 161113663733 \over \mathstrut  237817036800000} \varepsilon^8)\\
+&+\cos(11\omega t) \varepsilon^{12} (
+-{\mathstrut 409871 \over \mathstrut  331776000}
++{\mathstrut 1359229760383 \over \mathstrut  1872809164800000} \varepsilon^4)\\
+&+\cos(13\omega t) \varepsilon^{12} (
+-{\mathstrut 715247 \over \mathstrut  3715891200}
++{\mathstrut 2076538440769 \over \mathstrut  5243865661440000} \varepsilon^4)\\
+&+\cos(15\omega t) \varepsilon^{16} 
+({\mathstrut 526426361 \over \mathstrut  4661213921280})\\
+&+\cos(17\omega t) \varepsilon^{16} 
+({\mathstrut 392636471 \over \mathstrut  29964946636800})\\
+&+\sin(3\omega t) \varepsilon^2 (
+-{\mathstrut 1 \over \mathstrut  4}
++{\mathstrut 15 \over \mathstrut  512} \varepsilon^4
+-{\mathstrut 779 \over \mathstrut  1179648} \varepsilon^8
+-{\mathstrut 4538017 \over \mathstrut  6794772480} 
+\varepsilon^{12})\\
+&+\sin(5\omega t) \varepsilon^6 ({\mathstrut 85 \over \mathstrut  2304}
+-{\mathstrut 8095 \over \mathstrut  1327104} \varepsilon^4
+-{\mathstrut 1252495 \over \mathstrut  6115295232} \varepsilon^8)\\
+&+\sin(7\omega t) \varepsilon^6 ({\mathstrut 7 \over \mathstrut  576}
+-{\mathstrut 99967 \over \mathstrut  13271040} \varepsilon^4
++{\mathstrut 415949513 \over \mathstrut  382205952000} \varepsilon^8)\\
+&+\sin(9\omega t) \varepsilon^{10} (
+-{\mathstrut 9791 \over \mathstrut  2457600}
++{\mathstrut 117258703 \over \mathstrut  70778880000} \varepsilon^4)\\
+&+\sin(11\omega t) \varepsilon^{10} (
+-{\mathstrut 5533 \over \mathstrut  7372800}
++{\mathstrut 1657839733 \over \mathstrut  1486356480000} \varepsilon^4)\\
+&+\sin(13\omega t) \varepsilon^{14} 
+({\mathstrut 21731177 \over \mathstrut  57802752000})\\
+&+\sin(15\omega t) \varepsilon^{14} 
+({\mathstrut 138697 \over \mathstrut  2774532096}) + \ldots
+
+\end{array}
+\end{equation}
+
+   The calculation by the NORT package till $28^{\mbox th}$ order in 
+$\varepsilon$ took 21 minutes on the same computer as for Duffing's case. 
+We had 113 terms for  
+each sums in the normal form (\ref{n-vdp}) and 1232 terms for
+the each normalizing transformation from $Z_i$ to $Y_i$. The 
+expression for a frequency has 9 terms and the expression for $X(t)$ 
+has 114 terms. Note, that the power series for a frequency of van der 
+Pol's equation has been calculated till $164^{th}$ order in $\varepsilon$ in
+(Andersen, Geer, 1983).
+
+The comparison of this result with a numerical one in the terms 
+(\ref{f-err}) gives:
+
+$$
+\begin{array}{ll}
+f_{err}(\varepsilon^2=0.5) &\simeq 8.9 \times 10^{-9}\\
+f_{err}(\varepsilon^2=0.75) &\simeq 4.1 \times 10^{-6}\\
+f_{err}(\varepsilon^2=1.0) &\simeq 2.9 \times 10^{-4}
+\end{array}
+$$
+
+\noindent
+Results of the tabulation of a full (in 28 order) variant of 
+(\ref{res-newvdp}) for the above values of $\varepsilon$ are presented in 
+Fig.\ref{fig-newvdp}.
+
+\begin{figure}
+\label{fig-newvdp}
+\vspace{1cm}
+\fbox{$\frac{d^{2}\chi}{dt^2} \ = \ - \chi + 
+       \varepsilon^2 \ (1 - \chi^2) \ \frac{d\chi}{dt}$}
+
+\include{vdp28fig}
+
+\vspace{1cm}
+\caption{Solutions of van der Pol's equation for different values 
+         of $\varepsilon^2$.}
+\end{figure}
+
+Besides a solution of equation we can create also the expressions
+for the origin conditions which provide the periodic solution of
+(\ref{eq-newvdp}) as a function (series) in $\varepsilon$. Really,
+we have periodic solution when the expression $Z_1 Z_2$ is a constant
+in time. Let us inverse series (\ref{n-trans}), (\ref{line-norm}) and 
+change $Z_i$ in this production for their expressions via $\chi,d\chi/dt$
+and $\varepsilon$. The result must be constant along the trajectory 
+of the limit cycle too. Therefore we have equation of that trajectory
+(there is no a clear dependence on time below, but $\chi$ and $d\chi/dt$
+depend on time by implicit way):
+
+$$
+{d \over dt} [Z_1(\chi,d\chi/dt,\varepsilon) Z_2(\chi,d\chi/dt,\varepsilon)] 
+= 0
+$$
+\noindent
+ Differenting symbolically the above using the van der Pol's equation  
+for an evaluation of the second derivation $d^2\chi/dt^2$ we will
+have the corresponding equation in the form of the series:
+
+$$
+\sum_{i,j,k=0,1,\ldots} p_{i,j,k} \ \varepsilon^{2k} \chi^i
+{d\chi \over dt}^j = 0, \ \ p_{0,0,0} \stackrel{\rm def}{=} 0
+$$
+
+ Suppose we are interested in the dependence of the origin condition
+for the derivation in (\ref{eq-newvdp}) ${d\chi \over dt}|_{t=t_0}$ on 
+$\varepsilon$ if $\chi|_{t=t_0} = 0$. In such a case we substitute zero 
+for $\chi$ in the sum above and solve the equation resulted. The result for 
+van der Pol's equation is:
+
+\begin{equation}
+\label{orcond-dChi}
+\begin{array}{ll}
+
+\chi = &0\\
+{\mathstrut d\chi \over \mathstrut dt} = &2
++{\mathstrut 17 \over \mathstrut 96} \varepsilon^4
+-{\mathstrut 1577 \over \mathstrut 552960} \varepsilon^8
+-{\mathstrut 102956839 \over \mathstrut 55738368000} \varepsilon^{12}
++{\mathstrut 48722480822161 \over \mathstrut 157315969843200000}
+\varepsilon^{16} + \ldots
+
+\end{array}
+\end{equation}
+
+For the couple $\chi|_{t=t_0}, {d\chi \over dt}|_{t=t_0}=0$ we have:
+
+\begin{equation}
+\label{orcond-Chi}
+\begin{array}{ll}
+
+\chi = &2
++{\mathstrut 1 \over \mathstrut 96} \varepsilon^4
+-{\mathstrut 1033 \over \mathstrut 552960} \varepsilon^8
++{\mathstrut 1019689 \over \mathstrut 55738368000} \varepsilon^{12}
++{\mathstrut 9835512276689 \over \mathstrut 157315969843200000} 
+\varepsilon^{16} + \ldots\\
+{\mathstrut d\chi \over \mathstrut dt} = &0
+\end{array}
+\end{equation}
+
+\section{Henon--Heiles' equations as an example of the forth order 
+         system}
+
+   Henon--Heiles' system originally appeared in the theory of 
+motion of particle in an axial symmetric gravitation field, for 
+example in the problem of motion of stars in the Galactic field
+(Henon, Heiles, 1964).
+It is a system of two second order differential equations:
+
+
+\begin{equation}
+\label{eq-heiles}
+\begin{array}{lcl}
+\frac{d^{2}X}{\mathstrut dt^2}& = & - X - 2 X Y \\
+\frac{\mathstrut d^{2}Y}{dt^2}& = & - Y - X^{2} + Y^{2}
+\end{array}
+\end{equation}
+
+ 
+   System (\ref{eq-heiles}) can be rewritten in form 
+(\ref{eq-general}) by the linear complex substitution:
+
+$$
+\begin{array}{ccc}
+X & = & Y_1 + Y_2 \\
+Y & = & Y_3 + Y_4 \\
+\frac{\mathstrut dX}{\mathstrut dt} & = & i \ (Y_1 - Y_2) \\
+\frac{\mathstrut dY}{\mathstrut dt} & = & i \ (Y_3 - Y_4)
+\end{array}
+$$
+
+\noindent
+after which we will have instead of (\ref{eq-heiles}):
+
+\begin{equation}
+\label{heiles-planar}
+\begin{array}{lcrl}
+\frac{\mathstrut dY_1}{\mathstrut dt}& = &  i &\!\!\!\! Y_1 + i \ (Y_1 + Y_2)\ 
+                                                                 (Y_3 + Y_4)\\
+\frac{\mathstrut dY_2}{\mathstrut dt}& = & -i &\!\!\!\! Y_2 - i \ (Y_1 + Y_2)\ 
+                                                                 (Y_3 + Y_4)\\
+\frac{\mathstrut dY_3}{\mathstrut dt}& = &  i &\!\!\!\! Y_3 + {i \over 2}\ [  
+                                                                 (Y_1 + Y_2)^2 
+                                                           - (Y_3 + Y_4)^2 ]\\
+\frac{\mathstrut dY_4}{\mathstrut dt}& = & -i &\!\!\!\! Y_4 - {i \over 2}\ [  
+                                                                 (Y_1 + Y_2)^2 
+                                                           - (Y_3 + Y_4)^2 ]
+\end{array}
+\end{equation}
+
+   The non-linear normalization for (\ref{eq-heiles}) is produced by the 
+transformation:
+
+
+\begin{equation}
+\label{normal-tran}
+Y_i = Z_i + Z_i
+                       \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                       \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                       \sum_{\begin{array}{c}
+                                    p_i \geq -1 \\
+                           p_1,\ldots,p_{i-1},p_{i+1},\ldots,p_4 \geq 0 
+                                          \end{array}}
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                                    h_{i,p_1,p_2,p_3,p_4}
+                           \ Z_1^{p_1}Z_2^{p_2}Z_3^{p_3}Z_4^{p_4},
+\quad i=1,\ldots ,4
+\end{equation}
+
+    The vector of eigenvalues of the linear part will consist of two
+ couples of
+complex conjugated imaginary units: $ \overline{\lambda} = 
+\{i,-i,i,-i\}$. I.e.
+the normal form for (\ref{heiles-planar}) will be:
+
+
+\begin{equation}
+\label{heiles-normal}
+\frac{dZ_i}{dt} = \lambda_iZ_i + Z_i
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                                    \sum_{\begin{array}{c}
+                                    p_i \geq -1 \\
+                           p_1,\ldots,p_{i-1},p_{i+1},\ldots,p_4 \geq 0 \\
+                                       p_1 + p_3 = p_2 + p_4
+                                          \end{array}}
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                                    g_{i,p_1,p_2,p_3,p_4}
+                           \ Z_1^{p_1}Z_2^{p_2}Z_3^{p_3}Z_4^{p_4},
+\quad i=1,\ldots ,4
+\end{equation}
+
+ \subsection{periodic solutions of Henon--Heiles' system}
+
+   The domain in phase space, where the normalizing transformation  will
+be analytic for a system which has two couples of complex conjugated 
+imaginary units as eigenvalues, is defined by equations 
+(\ref{cond-A}):
+
+\begin{equation}
+\label{heiles-condition}
+\lambda_iZ_i a = \lambda_iZ_i + Z_i
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                                   \sum_{\begin{array}{c}
+                                    p_i \geq -1 \\
+                           p_1,\ldots,p_{i-1},p_{i+1},\ldots,p_4 \geq 0 \\
+                                       p_1 + p_3 = p_2 + p_4
+                                          \end{array}}
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                                   \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+                                    g_{i,p_1,p_2,p_3,p_4}
+                           \ Z_1^{p_1}Z_2^{p_2}Z_3^{p_3}Z_4^{p_4},
+\quad i=1,\ldots ,4
+\end{equation}
+
+\noindent
+where $a$ is an expression, which does not depend on $i$ index. It
+can be proved that $a$ does not depend on time if (\ref{heiles-condition})
+are satisfied.
+
+   The set in phase space of (\ref{heiles-normal}) for which 
+(\ref{heiles-condition}) is fulfilled will produce by the inverse
+transformation to 
+(\ref{normal-tran}) the invariant periodic set of (\ref{heiles-planar}) 
+that contracts to the stationary point (a zero point here) (Bruno, 1993).
+
+   Equations (\ref{heiles-condition}) are simplified using Groebner
+bases technique (Buchberger, 1985), (Boege, Gebauer, Kredel, 1986) 
+with the REDUCE (Hearn, 1987) computer algebra system. 
+We obtained 8 proper solutions of (\ref{heiles-condition})
+and they produce 6 families of different periodic solutions of 
+(\ref{eq-heiles}) with 4 different values of a frequency.
+
+As 4 equations (\ref{heiles-condition}) are not independent we have as 
+a solution a hyperplane rather than a point:
+
+$$
+\begin{array}{lll}
+\mbox{solution 1: } &  Z_1 Z_4 = \ \ Z_2 Z_3, & Z_3^2 = 3 Z_1^2; \\
+\mbox{solution 2: } &  Z_1 Z_4 = \ \ Z_2 Z_3, & Z_1^2 = 3 Z_3^2; \\
+\mbox{solution 3: } &  Z_1 Z_4 = - Z_2 Z_3, & Z_1^2 = \ \ \! Z_3^2;\\
+\mbox{solution 4: } &  Z_3 = Z_4 = 0;& \\
+\mbox{solution 5: } &  Z_1 = Z_2 = 0;& \\
+\mbox{solution 6: } &  Z_2 = Z_4 = 0;& \\
+\mbox{solution 7: } &  Z_1 = Z_3 = 0;& 
+\end{array}
+$$
+
+   Corresponding frequences for the solutions of (\ref{eq-heiles}) are:
+$$
+\begin{array}{l}
+
+% case 3: z3:=z4:=0, case 6: z1*z4:=z2*z3, z3^2:=3*z1^2; sol 4,1:
+\omega_{1,4} = 
+1 -{\mathstrut 5 \over \mathstrut 6} H + 
+{17 \over 48} H^2 + {127517 \over 38880} H^3 + 
+{\mathstrut 51952319 \over \mathstrut 3732480} H^4 +
+{1675438657 \over 111974400} H^5 \\
+
+% case 5: z1:=z2:=0, case 7: z1*z4:=z2*z3, z1^2:=3*z3^2; sol 5,2:
+\omega_{2,5} = 
+1 - {\mathstrut 5 \over \mathstrut 6} H - 
+{95 \over 48} H^2 - {54935 \over 7776} H^3 - 
+{\mathstrut 22030445 \over \mathstrut 746496} H^4 - 
+{200207485 \over 1492992} H^5 \\
+
+% case 1: z1*z4:=-z2*z3, z1^2:=z3^2; sol 3:
+\omega_{3} = 
+1 + {\mathstrut 1 \over \mathstrut 3} H - 
+{2 \over 3} H^2 + {5389 \over 2430} H^3 - 
+{\mathstrut 52393 \over \mathstrut 5832} H4 + 
+{29471957 \over 729000} H^5 \\
+
+% case 2: z2:=z4:=0 and case 4: z1:=z3:=0; sol 6,7: 
+\omega_{6} = \omega_{7} = 1 
+
+\end{array}
+$$
+
+\noindent
+where $H$ is the full energy:
+
+$$
+H = {1 \over 2}[(\frac{dX}{dt})^2 + (\frac{dY}{dt})^2
+                + X^2 + Y^2] + X^2 Y - {1 \over 3} Y^3
+$$
+  
+
+   For each frequence the above mentioned the corresponding solution 
+in analytical
+form (as a Fourier series in $t$ and $H$) was obtained. This is the
+solution which corresponds to $\omega_1$:
+
+$$
+\begin{array}{rl}
+X = \hfill &\\
+\frac{\sqrt{3}}{\mathstrut 2799360}\cos(8 \omega t)\varepsilon^8&  + \\
+\frac{\mathstrut 71\sqrt{2}}{\mathstrut 18662400}\cos(7 \omega t)\varepsilon^7& 
++ \\
+\frac{\mathstrut \sqrt{3}}{\mathstrut 259200}\cos(6 \omega t)\varepsilon^6
+&{}\!\!\!\!\!(130\varepsilon^2 + 9)  + \\
+\frac{\mathstrut 17\sqrt{2}}{\mathstrut 1555200}\cos(5 \omega t)\varepsilon^5
+&{}\!\!\!\!\!(341\varepsilon^2 + 30)  +\\ 
+\frac{\mathstrut \sqrt{3}}{\mathstrut 583200}\cos(4 \omega t)\varepsilon^4
+&{}\!\!\!\!\!(3451\varepsilon^4 + 3204\varepsilon^2 + 540) + \\
+\frac{\mathstrut \sqrt{2}}{\mathstrut 3110400 }\cos(3 \omega t)\varepsilon^3
+&{}\!\!\!\!\!(1238051\varepsilon^4 + 398160\varepsilon^2 + 64800) + \\
+\frac{\mathstrut \sqrt{3}}{1399680}\cos(2 \omega t)\varepsilon^2
+&{}\!\!\!\!\!(68930\varepsilon^6 
+            + 2152809\varepsilon^4 \\
+&           + 933120\varepsilon^2  + 233280)  + \\
+\frac{\sqrt{2}}{18662400}\cos( \omega t)\varepsilon
+&{}\!\!\!\!\!(- 51700693\varepsilon^6
+            - 5862600\varepsilon^4 \\
+&           + 4795200\varepsilon^2 + 9331200)  + \\
+\frac{\sqrt{3}}{1555200}\varepsilon^2
+&{}\!\!\!\!\!(8445851\varepsilon^6 + 1072800\varepsilon^4 \\ 
+&           + 21600\varepsilon^2 - 777600)\\
+&\\
+Y =\hfill&- \\
+\frac{1}{\mathstrut 2799360}\cos(8 \omega t)\varepsilon^8&  + \\
+\frac{\mathstrut 71\sqrt{6}}{\mathstrut 18662400}\cos(7 \omega t)\varepsilon^7& 
+- \\
+\frac{\mathstrut 1}{\mathstrut 259200}\cos(6 \omega t)\varepsilon^6
+&{}\!\!\!\!\!(130\varepsilon^2 + 9)  + \\ 
+\frac{\mathstrut 17\sqrt{6}}{\mathstrut 1555200}\cos(5 \omega t)\varepsilon^5
+&{}\!\!\!\!\!(341\varepsilon^2 + 30) - \\
+\frac{\mathstrut 1}{\mathstrut 583200}\cos(4 \omega t)\varepsilon^4
+&{}\!\!\!\!\!(3451\varepsilon^4 + 3204\varepsilon^2 + 540)  + \\
+\frac{\mathstrut \sqrt{6}}{\mathstrut 3110400}\cos(3 \omega t)\varepsilon^3
+&{}\!\!\!\!\!(1238051\varepsilon^4 + 398160\varepsilon^2 + 64800) - \\
+\frac{\mathstrut 1}{1399680}\cos(2 \omega t)\varepsilon^2
+&{}\!\!\!\!\!(68930\varepsilon^6 + 2152809\varepsilon^4 \\ 
+&       + 933120\varepsilon^2 + 233280)  - \\
+\frac{\sqrt{6}}{18662400}\cos( \omega t)\varepsilon
+&{}\!\!\!\!\!(51700693\varepsilon^6 
+        + 5862600\varepsilon^4 \\
+&       - 4795200\varepsilon^2 - 9331200) - \\
+\frac{1}{1555200}\varepsilon^2
+&{}\!\!\!\!\!(8445851\varepsilon^6 + 1072800\varepsilon^4 \\ 
+&       + 21600\varepsilon^2 - 777600)
+\end{array}
+$$
+
+
+Results  of the calculation were verified  by two ways. The first one 
+was a direct substitution of the series in the original equations 
+(\ref{eq-heiles}). All results of this procedure contained only terms 
+with negligible orders. The second way was a comparison of the numerical 
+solutions of equations (\ref{eq-heiles}) calculated by the Runge--Kutta
+method with the  tabulated  values of  the approximate solutions at values
+of energy $H = {1 \over 24}$ and $H = {1 \over 12}$. 
+We evaluated the values of $f_{err}$ which are  maximum values of 
+relative deviations of the numerical solutions from the 
+approximate solutions in a phase space during one period. The results 
+are:
+
+$$
+\begin{array}{lll}
+      &H = \frac{1}{\mathstrut 24}: \qquad & H = \frac{1}{\mathstrut 12}: \\
+\mbox{for solutions with }\omega_1 :
+      \quad & f_{err} = 1.3\times 10^{-5}& f_{err} = 7.6\times 10^{-4}\\
+\mbox{for solutions with }\omega_2 :
+      \quad & f_{err} = 4.7\times 10^{-5}& f_{err} = 4.4\times 10^{-3}\\
+\mbox{for solutions with }\omega_3 :
+      \quad & f_{err} = 1.1\times 10^{-5}& f_{err} = 5.0\times 10^{-4}\\
+\mbox{for solutions with }\omega_4 :
+      \quad & f_{err} = 1.3\times 10^{-5}& f_{err} = 7.6\times 10^{-4}\\
+\mbox{for solutions with }\omega_5 :
+      \quad & f_{err} = 2.9\times 10^{-5}& f_{err} = 1.8\times 10^{-3}
+
+\end{array}
+$$
+
+\noindent
+We did not check numerically the complex solutions with $\omega_6,
+\omega_7$.
+
+  In Fig.\ref{fig-henon} intersections of periodic solutions of 
+Henon--Heiles' system with plane $X = 0,  
+\frac{dX}{dt}=\frac{dX}{dt}(X=0,Y,Y',H)$ for the full energy 
+${1 \over 12}$ are displayed. Solution 5 lies in that plane and
+other solutions cross this plane in a couple points each except
+solution 4 which looks like a digit "8" and crosses the plane $X=0$ 
+in a single point.
+
+\begin{figure}
+\label{fig-henon}
+\vspace{1cm}
+\fbox{$\frac{d^{2}X}{\mathstrut dt^2} =  - X - 2 X Y, \ \ 
+\frac{\mathstrut d^{2}Y}{dt^2} =  - Y - X^{2} + Y^{2}$}
+
+\include{he10fig}
+
+
+\vspace{1cm}
+\caption{Intersections of periodic solutions of Henon--Heiles' system
+with plane $X = 0,  \frac{dX}{dt} = \frac{dX}{dt}(X=0,Y,Y',H)$ at the
+full energy ${1 \over 12}$.}
+\end{figure}
+
+
+   It is necessary to remark that for the value $H = {1 \over 6}$ we will
+have a chaotic regime of a behavior of the system (Henon, Heiles, 1964).
+So ${1 \over 24} \mbox{ and } {1 \over 12}$ are not physically small 
+values.
+
+The creation of the normal form and the normalizing transformation took
+about 30 secs and brought 110 terms to the form and 1250 terms to the
+transformation.
+
+
+
+\section{The program }
+
+   The earlier attempts of the author to realize the creation of
+high enough orders of the normal form on algebraic level of
+REDUCE-2 system were not very successful as a sequence of
+small capacity of computers which the author used. And for 
+realization of the described frame  
+the NORT program (Edneral, Khrustalev, 1985, 1992), was created. The 
+program NORT is written in Standard LISP and contains about  
+1500 LISP operators.  It  is a package of procedures to treat 
+truncated multivariate power series of arbitrary dimensions. In 
+addition to the procedures for arithmetic operations there are 
+special functions for the creation of normal forms and functions 
+for substitutions, for calculation of roots (when it is possible), 
+for differentiating, for printing and for inverting of multivariate 
+power series.
+    Coefficients of the truncated power series may be treated  
+in three different (precision rational, floating point or an 
+approximate rational (Rodionov, in progress) ) arithmetics 
+according to the user's choice.
+Separately user may choose a representation of numbers (in a 
+floating point or in a rational form) for output. This output has 
+a REDUCE  acceptable form,  but  REDUCE's  internal procedures are 
+not called by the program. The program uses a recurrent polynomial 
+representation separately in each order of the stored series. There is
+a just compact use of memory. Unfortunately at this
+moment the system has no friendly user interface and has a research
+character. More that for nonlinear systems of ODE there is a so
+wide variety that we have no clear ideas about proper realization of
+the interface as it was possible for second orders systems 
+(pay your attention to the nice package ALKAHEST III 
+(Fitch, Norman, Moore, 1986)).
+
+   The time of a garbage collection for above examples of second
+order equations was smaller that 3\% of evaluation time. This
+can characterize the NORT system as a system with a good enough 
+internal LISP organization. 
+
+   Regarding a speed of calculations under different arithmetics.
+   The evaluation ov van der Pol's equation till 28 order
+took under the rational arithmetic 21 minutes, under approximate
+rational arithmetic it took 13 minutes 
+with relative precision
+about $10^{-7}$ and under float point arithmetic the evaluation 
+took 161 secs.
+
+\section{Conclusion}
+  Here we can conclude that the creation of the high order normal 
+forms allows to produce finite formulaes for a quantitative 
+approximation of periodic solutions of nonlinear ODEs.
+
+
+\paragraph{Acknowledgments:}
+I am very grateful to A.D.Bruno for important advices  and useful 
+discussions,  to O.A.Khrustalev for a concentration of 
+my attention on the normal form method at the most beginning, to 
+J.H.Davenport and J.P.Fitch for support at the stage of further
+investigations. I would like also to express my acknowledgments
+to H.Melenk who kindly introduced for my needs the "zeropoint" 
+facility into the Groebner/REDUCE package and to S.Walcher who 
+provided me with his newest papers.
+
+
+\begin{thebibliography}{99}
+
+\bibitem{AndersenGeer1983}
+Andersen, G.M., Geer, J.F. (1983). Power series expansions for
+the frequency and period of the limit cycle of the van der Pol
+equation. {\em SIAM J. Appl. Math.\/} {\bf 42}, 678--693.
+
+\bibitem{ArnoldAnosov1988}
+Arnold, V.I., Anosov, D.V. (Eds.) (1988). Dynamical Systems, I. 
+{\em Encyclopaedia of Mathematical Sciences\/}. Springer--Verlag,
+N.Y.
+
+\bibitem{BoegeGebauerKredel1986}
+Boege, W., Gebauer, R., Kredel, H. (1986). Some
+Examples for Solving Systems of Algebraic Equations by Calculating
+Groebner Bases. {\em  J. Symbolic Computation\/} {\bf 1}, 83--98.
+
+\bibitem{Bruno1971}
+Bruno(Brjuno), A.D. (1971)
+{\em Analytical form of differential equations. I.\/} Trans. Mosc. 
+Mat. Soc.,  {\bf 25}, 131--288.
+
+\bibitem{Bruno1972}
+Bruno(Brjuno), A.D. (1972)
+{\em Analytical form of differential equations. II.\/} Trans. Mosc. 
+Mat. Soc. {\bf 26}, 199--239.
+
+
+\bibitem{Bruno1989}
+Bruno, A.D. (1989)
+{\em Local Method in Nonlinear Differential Equations. 
+Part  I - The Local Method of Nonlinear Analyses of  Differential 
+Equations,  Part  II - The Sets of Analyticity of  a  Normalizing 
+Transformation\/}. Springer Series in Soviet Mathematics.  ISBN 
+3-540-18926-2,  pp. 370.
+
+\bibitem{Bruno1990}
+Bruno, A.D. (1990)
+{\em The restricted three-body problem: Plane periodic orbits\/}. 
+Moscow, Nauka. ISBN 5-02-000683-1, 295. (in Russian).
+
+\bibitem{Bruno1993} 
+Bruno, A.D. (1993) Bifurcation of the Periodic
+Solutions in the Case of a Multiple Pair of Imaginary Eigenvalues.
+{\em Selecta Mathematica {\em formerly} Sovietica\/} {\bf 12}, 
+\# 1, 1--12.
+
+\bibitem{BrunoWalcher} 
+Bruno, A.D., Walcher, S. (to be printed) Symmetries and convergence of
+normalizing transformations.
+{\em J. Math. Anal. Appl.\/}
+
+\bibitem{Buchberger1985}
+Buchberger, B. (1985).
+Groebner Bases:  An Algorithmic Method in Polynomial Ideal Theory.
+{\em Progress, directions and open problems in multidimensional
+systems theory\/}. Dordrecht: Reidel, edited by N.K.Bose, 184--232.
+
+\bibitem{Deprit1969}
+Deprit, A. (1969) Canonical transformation depending on a small
+parameter. {\em Celestial Mechanics} {\bf 1}, \# 1, 12--30.
+
+\bibitem{GodziewskiMaciejewski1990}
+Godziewski, K., Maciejewski,A.J. (1990)
+{\em Celest. Mech. Dyn. Astron.\/} {\bf 49}, 1.
+
+\bibitem{Ito1989}
+Ito, H. (1989) Convergence of Birkhoff normal forms for integrable systems.
+{\em Comment. Math. Helv.\/} {\bf 64}, 412--461.
+
+\bibitem{Ito1992}
+Ito, H. (1992) Integrability of Hamiltonian systems and Birkhoff normal 
+forms in the simple resonance case.
+{\em Mth. Ann.\/} {\bf 292}, 411--444.
+
+\bibitem{EdneralKhrustalev1985} 
+Edneral, V.F., Khrustalev, O.A. (1985).
+The Normalizing Transformation for Nonlinear Systems of ODE.  The 
+Realization  of  the  Algorithm. {\em Proceedings of International 
+Conference on Computer Algebra and its Application in  Theoretical  
+Physics (USSR, Dubna, September 1985)\/}. Dubna: JINR publ.,  
+219--224. In Russian.
+
+\bibitem{EdneralKhrustalev1992}
+Edneral, V.F., Khrustalev, O.A. (1992). Program  for  Recasting  ODE 
+Systems in the Normal Form. {\em Sov. J. Programmirovanie\/}, \# 5, 
+73--80. In Russian.
+
+\bibitem{Edneral1993}
+Edneral, V.F. (1993). Computer Generation of Normalizing Transformation  
+for  Systems  of  Nonlinear   ODE. 
+{\em  Proceedings  of the 1993 International Symposium on Symbolic  
+and Algebraic Computation (Kiev,  Ukraine, July 1993)\/}. New York: ACM 
+Press, edited by M.Bronstein, 14--19.
+ 
+\bibitem{FitchNormanMoore1986}
+Fitch, J.P., Norman, A.C., Moore, P.M.A. (1986). ALKAHEST III: Automatic 
+analysis of periodic weakly nonlinear ODEs. {\em  Proceedings of
+SYMSAC 86.\/} Waterloo, 34---38.
+
+\bibitem{GuckenheimerHolmes1986}
+Guckenheimer, J., Holmes, P. (1986) {\em Nonlinear Oscillations, 
+Dynamical Systems and Bifurcations of Vector Fields}.  Springer
+--Verlag, N.Y.
+
+\bibitem{HassardKazarinoffWan1981}
+Hassard, B.D., Kazarinoff, N.D., Wan, Y.-H. (1981)
+{\em Theory and Applications of Hopf Bifurcation.\/} Cambridge Univ. 
+Press. 280.
+
+\bibitem{Hearn1987}
+Hearn, A.C. (1987). REDUCE. User's manual. {\em  Rand Publication\/} 
+CP78.
+
+\bibitem{HenonHeiles1964}
+Henon, M., Heiles,C. (1964). The Applicability 
+of  the Third Integral Of Motion: Some  Numerical  Experiments. 
+{\em Astronomical J.\/} {\bf 69}, 73--79.
+
+\bibitem{Hori1966}
+Hori, G.I. (1966).Theory of general perturbations with unspecified
+canonical variables. {\em J. Japan Astron. Soc.\/} {\bf 18}, \# 4, 
+287--296.
+
+\bibitem{Mersman1970}
+Mersman, W.A. (1970)  A new algorithm for Lie transformation. 
+{\em Celestial Mechanics} {\bf 3}, \# 1, 81--89.
+
+\bibitem{RandArmbruster1987}
+Rand, R., Armbruster D. (1987) {\em Perturbation methods, Bifurcation 
+Theory and Computer Algebra\/}. Springer--Verlag, N.Y.
+
+\bibitem{Rodionov}
+Rodionov, A.Ya. (in progress). A Program for Rational Arithmetic 
+RATAR. (In Russian).
+
+\bibitem{ShevchenkoSokolsky1993}
+Shevchenko, I.I., Sokolsky, A.G. (1993) Algorithms for normalization of
+Hamiltonian systems by means of computer algebra. {\em Comp. Phys. Comm.}
+{\bf 77}, 11---18.
+
+\bibitem{Vallier1993}
+Vallier, L. (1993) An Algorithm for the Computation of Normal Forms and 
+Invariant Manifolds.
+{\em  Proceedings  of the 1993 International Symposium on Symbolic  
+and Algebraic Computation (Kiev,  Ukraine, July 1993)\/}. New York: ACM 
+Press, edited by M.Bronstein, 225---233.
+
+\bibitem{Walcher1991}
+Walcher, S. (1991) On differential equations in normal form. 
+{\em Math. Ann.\/} {\bf 291}, 293---314.
+
+\bibitem{Walcher1993}
+Walcher, S. (1993) On Transformations into Normal Form. {\em J. Math. 
+Analysis and Appl.\/} {\bf 180}, 617---632.
+
+\end{thebibliography}
+
+\end{document}

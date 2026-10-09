@@ -1,0 +1,45 @@
+\begin{center}
+\LARGE
+A Parallel Algebraic Approach Towards Discrete
+                          Optimisation
+
+\end{center}
+
+\begin{center}
+\Large
+Yike Guo
+
+\end{center}
+
+\noindent
+Date:  July 19th (Friday)\\
+Time:  11:35-12:00\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+An extremely important subject of operational research consists of integer programming (IP)
+problems, also called discrete optimization problems, in which some or all of the variables are
+required to assume integer values. The acceptable integer values are sometimes further restricted
+to a finite set or to nonnegative integers. Many combinatorial and graph problems can be expressed
+in this form. Discrete-variable problems are usually more complex and difficult to solve than
+continuous optimisation problems since conventional numerical methods do not work anymore.
+Conventional methods for solving integer programming are based on search where some heuristics
+such as the Branch and Bound mechanism can be applied to reduce the huge search space. Recently,
+the tools of commutative algebra and algebraic geometry have brought new insights to integer
+programming via the theory of Gr\"obner bases developed by Bruno Buchberger in the 1960s. The
+key idea is to encode IP problems into a special ideal associated with the constraint matrix $C$ and
+the cost (object) function $F$. An important property of the ideal is that its Gr\"obner bases
+correspond directly to the test sets of the IP problem. Thus, by employing an algebraic package
+such as Macaulay and Maple, the test sets of IP can be directly computed. Using a proper test set
+(such as the minimal test set which corresponts directly to the reduced Gr\"obner base of the ideal),
+the optimal value of the cost function can be computed by constructing a monotone path from the
+initial non-optimal solution of the problem to the optimal solution. Thus, integer programming
+can be solved in a similar fashion to the simplex method for linear programming without
+intensively using heuristical search. This approach is particular interesting from the point of
+parallelsation due to the inherent paralelism of the Buchberger algorithm. In this talk, I will
+present in detail this algeraic method of solving integer programming. In particular, I will discuss
+the parallelsation of the method and its practical impacts. 
+

@@ -1,0 +1,359 @@
+<HTML>
+<HEAD>
+<TITLE>Nonstandard Applications of Computer Algebra</TITLE>
+</HEAD>
+<BODY>
+at <A HREF="http://www.scl.csd.uwo.ca/~ilias/aca2002.html">ACA'2002</A>
+to be held June 25-28, 2002 in Volos, Greece
+<P>
+The ACA (APPLICATIONS OF COMPUTER ALGEBRA) conference has taken place for
+several years now:<BR>
+   1995 in Albuquerque, New Mexico, USA;    1996 in Linz, Austria;<BR>
+   1997 in Maui, Hawaii, USA;               1998 in Prague, Czech Republic;<BR>
+   1999 in El Escorial, Spain;              2000 in St. Petersburg, Russia;<BR>
+   2001 in Albuquerque, New Mexico, USA;<BR>
+and this year will be in Volos, Greece (June 25--28, 2002).
+<P>
+From 1996 onwards, we have chaired a session (with a slightly changing title)
+devoted to ``Nonstandard Applications of Computer Algebra''.  The session
+traditionally collects contributions that, while using Computer Algebra
+techniques and/or Computer Algebra Systems, could not be easily allocated in 
+the `standard' sessions.  Examples of topics treated in papers presented in
+previous editions of this conference are: Verification of Expert Systems,
+Development of Expert Systems, Railway Traffic Control, Artificial
+Intelligence, Thermodynamics, Molecular Dynamics, Statistics, Electrical
+Networks, Logic, Robotics, Sociology, ...
+<P>
+We're organizing again in 2002 the session:
+<P ALIGN=CENTER>
+        NONSTANDARD APPLICATIONS OF COMPUTER ALGEBRA
+<P>
+Submissions of works in this area are welcome.  In case you are interested in
+submitting a paper, please send an email message to both of us, including a
+tentative title and a 1 to 2 page long abstract with a general description of
+your work.
+<P>
+Although the general proceedings are published `only' in electronic form, 
+articles corresponding to the presentations in this session in 1996--1997 and
+1998--1999 have been published in ``Mathematics and Computers in Simulation'' 
+(Transactions of IMACS) journal (volumes 45/1--2 and 51/5, respectively).
+We'll try to have the articles accepted in this session compiled in another
+special volume too.
+<P>
+Sincerely,
+<P>
+Dr. Eugenio Roanes-Lozano, Universidad Complutense de Madrid<BR>
+(<A HREF="mailto:eroanes@mat.ucm.es">eroanes@mat.ucm.es</A>)
+<P>
+Dr. Michael Wester, Cotopaxi and University of New Mexico<BR>
+(<A HREF="mailto:wester@math.unm.edu">wester@math.unm.edu</A>)
+<P>
+<EM>Talks</EM>:
+<P>
+<OL>
+<LI><A HREF="#Valcarce">Dealing with Envelopes in a Symbolic-Dynamic Geometry
+    Environment</A><BR>
+    (Jos&eacute; L. Valcarce &amp; Francisco Botana*)</LI>
+<LI><A HREF="#Roanes-Lozano">Obtaining Proofs Automatically from Sketches:
+    Linking The Geometer's Sketchpad v.3 & 4 with Maple 7 and DERIVE 5</A><BR>
+    (Eugenio Roanes-Lozano, Eugenio Roanes-Macias, Matilde Villar-Mena)</LI>
+<LI><A HREF="#Khanin">Dimensional Analysis, Scaling and Simplification</A><BR>
+    (Raya Khanin)</LI>
+<LI><A HREF="#Lamban">Algebraic Specification and Symbolic Computation</A><BR>
+    (Laureano Lamb&aacute;n*, Vico Pascual &amp; Julio Rubio)</LI>
+<LI><A HREF="#Pletsch">Investigating Young Group Double Cosets with Computer
+    Algebra: Latest Advances</A><BR>
+    (Bill Pletsch)</LI>
+<LI><A HREF="#Zarzycki">Searching for the Continued Fraction Representation in
+    DERIVE</A><BR>
+    (Piotr Zarzycki &amp; Adam Marlewski*)</LI>
+</OL>
+<P>
+<UL>
+<LI>
+<A NAME="Valcarce"><STRONG>Dealing with Envelopes in a Symbolic-Dynamic
+Geometry Environment</STRONG></A>
+<P>
+Jos&eacute; L. Valcarce<BR>
+Dept. of Applied Mathematics, University of Vigo, Pontevedra, Spain<BR>
+and<BR>
+Francisco Botana<BR>
+Dept. of Applied Mathematics, University of Vigo, Pontevedra, Spain<BR>
+fbotana@uvigo.es
+<P>
+Current dynamic geometry environments such as CABRI, The Geometer's Sketchpad
+or Cinderella allow users to get the envelopes of some families of plane lines
+by tracing one of the lines while it is moved, or, in a more automated way, by
+asking for the locus of the line, which depends on a point, while this point
+moves along a predefined path.  Thus, the obtained envelope is merely a graphic
+object on the screen: no analytic knowledge is delivered, and, even being
+dynamic if generated as a locus in Cabri or Cinderella, the envelope is a
+special object in the environment, since no point can be constructed on it.
+Furthermore, the interactive approaches taken by these systems disallow the
+generation of envelopes of lines which depend on points not bound to an
+element, but constraining them.
+<P>
+The talk will describe an improvement of Lugares, a symbolic-dynamic geometry
+environment written in Visual Prolog, which allows to obtain the equations and
+plots of the envelopes of families of plane lines.  In this system, the
+envelopes are full-dynamic objects in the sense that they respond to dragging
+and accept the construction of points on them.  The prototype pursues the
+cooperation between dynamic geometry environments and computer algebra systems.
+Once a line depending on a point is created in the geometric environment, a
+computer algebra system (Mathematica and/or CoCoA) is launched, the inputs
+being the polynomials describing the family and the path of the point.  After
+some symbolic processing, the symbolic engine returns the equation of the
+envelope to the dynamic component, where it is graphed.
+<P>
+As an illustration, it will be shown how this approach allows the discovery of
+new envelopes.  Guzm&aacute;n has recently generalized the Simson-Steiner's
+theorems stating that given a triangle ABC, a point X on its plane, three
+projection directions not equal nor parallel to the sides of the triangle, and
+their projections M, N, P on the sides, the locus of X such that the oriented
+area of the triangle MNP is a constant, is a conic.  Constructing a point X on
+this conic when there is no area, the program easily finds the equation and the
+plot of the envelope of lines MNP (Guzm&aacute;n's lines).
+</LI>
+<P>
+<LI>
+<A NAME="Roanes-Lozano"><STRONG>Obtaining Proofs Automatically from Sketches:
+Linking The Geometer's Sketchpad v.3 & 4 with Maple 7 and DERIVE 5</STRONG></A>
+<P>
+Eugenio Roanes-Lozano(1), Eugenio Roanes-Macias(1), Matilde Villar-Mena(2)
+<P>
+(1) Dept. Algebra, Universidad Complutense de Madrid (Spain)
+(2) School of Computer Science, Universidad Politecnica de Madrid (Spain)
+<P>
+Dynamic Geometry Systems (DGSs) are devoted to "rule and compass" Geometry.
+The elementary operations are: select an object, draw a line through two
+points, draw a circle with centre a certain point through another point...
+Moreover, the user can: construct a segment given its endpoints, construct the
+parallel line to a given line through a given point, construct the intersection
+point(s) of two objects...
+<P>
+The "constructive steps" of a geometric construction can be stored in all
+main DGSs and are the equivalent to a procedure in a usual language.  They are
+denoted "scripts" in The Geometer's Sketchpad v.3, "macros" in Cabri-Geometry
+II, "construction texts" in Cinderella...  Clearly, the input are geometric
+objects instead of numeric or algebraic data.
+<P>
+Computer Algebra Systems (CASs) as well as Dynamic Geometry Systems are very
+powerful tools, but have evolved independently.  Although Euclidean Geometry
+packages exist in some CASs, CASs have incorporated neither mouse drawing
+capabilities nor dynamic capabilities.  Meanwhile, the well-known DGSs do not
+provide algebraic facilities.
+<P>
+A connection between both kinds of systems could allow users to obtain
+equations (depending on free-coordinates) directly from sketches.  This could
+save time on many occasions and could make automatic theorem proving and
+automatic discovery far more attractive.
+<P>
+Observe that the processes implemented in DGSs are constructive.  The
+"constructive steps" give a sound description of the sketch that describes the
+problem or theorem or guess...  Our key idea is to translate the description in
+the "constructive steps" into CAS-acceptable syntax and to write a package in
+the CAS that allows the CAS to understand these steps.  For instance the
+following part of a The Geometer's Sketchpad 4 JavaSketch HTM file:
+<P>
+{1} Point(339,143);<BR>
+{2} Point(339,162);<BR>
+{3} Circle(1,2)[color(0,128,0)];
+<P>
+would be translated to Maple code as:
+<P>
+A:=point(A_x,A_y);<BR>
+B:=point(B_x,B_y);<BR>
+a:=circumCP(A,B);
+<P>
+(points {1} and {2} are free and are the so called "parents" of object {3}). 
+Procedure circumCP is adequately defined in Maple.
+<P>
+We have studied this connection for some time now.  The state-of-the-art can
+be found below:
+<P>
+<OL>
+<LI>The problem is firstly underlined in [1].</LI>
+<LI>It is analysed in [2].</LI>
+<LI>It is treated in a different way (by implementing a new DGS) by other
+authors [3,4].</LI>
+<LI>A first implementation made from our point of view was presented at
+ACA'2001.  A "parametric Geometry" package that can deal with The Geometer's
+Sketchpad's-style commands was developed for Maple 6 (the extended abstract
+can be found in [5]).  A detailed document (in Spanish) can be downloaded
+from [6].  A first attempt to produce an external translator was made.</LI>
+<LI>A detailed and comprehensive analysis on how the cooperation between the
+different DGSs and CASs could be treated can be found in [7].</LI>
+<LI>An article about a "parametric Geometry" package for Derive 5 and the
+peculiarities of the The Geometer's Sketchpad to Derive connection has been
+accepted to be presented at the next international Derive conference
+(Visit-Me'2002) [8].</LI>
+</OL>
+<P>
+An overview of the results of the whole project will be presented at
+ACA'2002. Now "parametric Geometry" packages for Maple 7 and Derive 5 are
+available.  Moreover, an external windows-style translator that can take as
+input either:
+<P>
+- .TXT versions of The Geometer's Sketchpad v.3 scripts<BR>
+- .HTM JavaSketch files of The Geometer's Sketchpad v.4 sketches
+<P>
+and produce either
+<P>
+- Maple 7 code<BR>
+- Derive 5 code
+<P>
+has been developed.
+<P>
+The presentation will be illustrated with examples of well known theorems.
+<P>
+Acknowledgments:
+<P>
+This work is partially supported by project TIC2000-1368-C03-03 (Ministry of
+Science and Technology, Spain).
+<P>
+References
+<OL>
+<LI>T. Recio: ``Calculo Simbolico y Geometrico.''  <CITE>Ed. Sintesis</CITE>,
+    1998.
+<LI>E. Roanes-L., E. Roanes-M.: ``How Dinamic Geometry could Complement
+    Computer Algebra Systems (Linking Investigations in Geometry to Automated
+    Theorem Proving).''  In: <CITE>Procs. of the Fourth Int. DERIVE/TI-89/TI-92
+    Conference</CITE>, Liverpool, July 2000.  Published in CD-ROM by
+    BK-Teachware, 2000.</LI>
+<LI>J.L. Valcarce, F. Botana: ``Lugares.''  <CITE>Manual de Referencia</CITE>.
+    Universidad de Vigo, 2001.</LI>
+<LI>http://rosalia.uvigo.es/sdge/</LI>
+<LI>http://math.unm.edu/ACA/2001/Proceedings/NonStd/Roanes-Lozano1_abstract.txt
+<LI>E. Roanes-L.: ``Estableciendo un puente entre la Geometria Dinamica y el
+    Algebra Computacional.''  Preprint num. 14, Dept. Algebra, Universidad de
+    Sevilla, 2001.<BR>
+    http://www.us.es/da/prepubli/nsprep14.pdf</LI>
+<LI>E. Roanes-L.: ``Boosting the Geometrical Possibilities of Dynamic Geometry
+    Systems and Computer Algebra Systems through Cooperation.'' In: M.
+    Borovcnick, H. Kautschitsch (editors): <CITE>Technology in Mathematics
+    Teaching.  Procs. of ICTMT-5. Schrifrenreihe Didaktik der Mathematik</CITE>
+    v.25, oebv&hpt, 2002.</LI>
+<LI>E. Roanes-L., E. Roanes-M., M. Villar: ``Linking The Geometer's Sketchpad 3
+    with DERIVE 5''.  Accepted to be presented at Visit-Me'2002
+    Conference.</LI>
+</OL>
+</LI>
+<P>
+<LI>
+<A NAME="Khanin"><STRONG>Dimensional Analysis, Scaling and
+Simplification</STRONG></A>
+<P>
+Raya Khanin<BR>
+Department of Applied Mathematics and Theoretical Physics<BR>
+University of Cambridge<BR>
+Cambridge, UK<BR>
+R.Khanin@damtp.cam.ac.uk
+<P>
+My talk deals with doing automatic dimensional analysis, scaling and ordering
+of terms in equations using Computer Algebra.  Dimensional analysis is a
+preliminary analysis of the model or equation ([1]).  Alone it can never give a
+complete solution of a problem.  It can, however, be used as a quick check for
+the dimensional sanity of formulas.  It may also yield some significant insight
+into the problem and show the effect of particular parameters.  The application
+of the main theorem of dimensional analysis, the Pi-theorem, usually reduces
+the number of essentially independent variables to their minimum possible
+number revealing some dependencies between them.
+<P>
+All modern Computer Algebra Systems have more or less comprehensive packages
+dealing with units and unit conversion (for example, Derive ([2]), Maple7 and
+Mathematica).  At present, however, only Macsyma has a package which implements
+functions for automatic dimensional analysis in addition to the unit
+conversion.
+<P>
+I have developed a Mathematica package DimensionalAnalysis.  The basic features
+of the package (introduction of a concept of dimension, dimensional formulae
+for principal physical quantities, named dimensionless parameters) have been
+discussed elsewhere ([3]) and will be briefly mentioned.  The package has now
+been extended to include tools for checking dimensional homogenuity of
+differential/algebraic expressions, doing nondimensionalisation of equations,
+and yielding scaling laws for modelling.  I will also talk about possible
+automation of term ordering in the model equations.  The package can be used in
+different areas of science, engineering and even practical life situations,
+like cooking.  Several examples will be considered.
+<P>
+References:
+<P>
+<OL>
+<LI>Bridgeman, P., <CITE>Dimensional Analysis</CITE>, Yale University Press,
+New Haven, Conn., 1931.</LI>
+<LI>Bohm, J., ``Dimensional analysis with Derive'', <CITE>Mathematics and
+Computers in Simulation</CITE>, <STRONG>45</STRONG>, 1-2, 197-205.</LI>
+<LI>R. Khanin, ``Dimensional Analysis in Computer Algebra'', <CITE>Proceedings
+of the International Symposium on Symbolic and Algebraic Computation,
+July 22-25, 2001, London, Canada</CITE>.</LI>
+</OL>
+</LI>
+<P>
+<LI>
+<A NAME="Lamban"><STRONG>Algebraic Specification and Symbolic
+Computation</STRONG></A>
+<P>
+Laureano Lamb&aacute;n, Vico Pascual and Julio Rubio<BR>
+Universidad de La Rioja<BR>
+Luis de Ulloa s/n Edificio Vives<BR>
+26004 Logro&ntilde;o (La Rioja), Spain<BR>
+{lalamban,mvico,jurubio}@dmc.unirioja.es
+<P>
+<A HREF="nonstandard/Lamban.pdf">[Extended Abstract]</A>
+</LI>
+<P>
+<LI>
+<A NAME="Pletsch"><STRONG>Investigating Young Group Double Cosets with Computer
+Algebra: Latest Advances</STRONG></A>
+<P>
+Bill Pletsch<BR>
+Albuquerque Technical Vocational Institute<BR>
+Albuquerque, New Mexico, USA
+<P>
+Let us consider a deuteron colliding with another deuteron ignoring charge and
+spin.  In the case where after the collision two deuterons are returned there
+are only two possible reactions.  Either nothing happened or a particle was
+exchanged.  Generalizing this simple problem from scattering theory results in
+an excursion into Polya's theory of counting and the theory of double cosets.
+<P>
+Until the advent of computer algebra, the theory of double cosets has been
+restricted to a few elegant but computationally impossible theorems.
+Impossible in the sense that in principle the calculation can be done but it
+will take ten thousand years.
+<P>
+Today, using Computer Algebra much can be calculated quickly.  Using Macsyma
+and Maple in the special case of Young group generated double cosets, we will
+see just how valuable Computer Algebra can be.  Some surprising and stimulating
+patterns emerge after a just few computer algebra experiments.
+<P>
+We will expand upon and extend the results presented last year.
+</LI>
+<P>
+<LI>
+<A NAME="Zarzycki"><STRONG>Searching for the Continued Fraction Representation
+in DERIVE</STRONG></A>
+<P>
+Piotr Zarzycki<BR>
+Institute of Mathematics, University of Gda&ntilde;sk, Gda&ntilde;sk,
+Poland<BR>
+and<BR>
+Adam Marlewski<BR>
+Institute of Mathematics, Pozna&ntilde; University of Technology,
+Pozna&ntilde;, Poland<BR>
+AMARLEW@math.put.poznan.pl
+<P>
+First, we recall basic definitions and theorems on continued fractions. Next,
+we present some instructive examples, DERIVE built-in and utility functions.
+At last, we construct new DERIVE functions and we apply them to investigate the
+expansions of numbers and functions.  In particular, we obtain the periodical
+continued fraction of the expression SQRT(k^2-1) and we apply it to answer the
+question of number of solutions in certain Diophantine equations.
+</LI>
+</UL>
+<P>
+Go to:
+<A HREF="http://www.scl.csd.uwo.ca/~ilias/aca2002.html">ACA'2002</A> main page,
+<A HREF="http://math.unm.edu/aca.html">Conferences on Applications of Computer
+   Algebra</A> main page.
+</BODY>
+</HTML>

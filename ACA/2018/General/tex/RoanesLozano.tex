@@ -1,0 +1,173 @@
+% Abstrat of your communication to the
+% ACA2018 Conference (Santiago de Compostela, 2018).
+% You must use LaTeX format.
+
+
+%====================================================
+% IMPORTANT: DO NOT MODIFY THE FOLLOWING LINES
+%====================================================
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsthm,amsmath,amsfonts,latexsym}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{times}
+
+\setlength{\oddsidemargin}{1.46cm}
+\setlength{\textwidth}{13cm}
+\setlength{\topmargin}{0.0cm}
+\setlength{\textheight}{20.5cm}
+
+\makeatletter
+\newcommand{\TITLE}[2][]{
+  \begin{center} \Large \bfseries #2%
+  \def\@temp{#1}\ifx\@temp\@empty\relax\else\footnote{#1}\fi\end{center}}
+
+\newcommand{\AUTHOR}[2][]{\textbf{#2}%
+  \def\@temp{#1}\ifx\@temp\@empty\relax\else\textsuperscript{#1}\fi}
+
+\newcommand{\ADDRESS}[2]{\noindent
+  \textsuperscript{#1}\parbox[t]{0.9\textwidth}{#2} \vspace{6pt}}
+
+\makeatother
+
+\newcommand{\KEYWORDS}[1]{\paragraph{Keywords:} #1}
+\newcommand{\MSCLASSIFICATION}[1]{\paragraph{Mathematics Subject Classification 2010:} #1}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{0}
+\pagestyle{empty}
+
+\newcommand{\HEADING}{
+{\noindent \small Applications of Computer Algebra -- ACA2018 \\
+Santiago de Compostela, June 18--22, 2018} \vspace{10pt}}
+
+%===============================================
+% DO NOT MODIFY THE ABOVE LINES
+%===============================================
+
+\begin{document} 
+
+\HEADING
+
+
+\TITLE{Automatic generation of diagrammatic subway maps for any date
+       with Maple}
+
+% If you need to thank someone next to the title, please use the next line (and delete the previous one)
+
+% \TITLE[thanks]{Title of talk}
+
+% Write the author names. Identify each one of them with a number
+% in order to give their own affiliations later on.
+\begin{center}
+ \AUTHOR[1]{Alberto Almech},
+ \AUTHOR[2]{Eugenio Roanes-Lozano}
+% IF two or more authors have the same affiliation, associate to them the same number.
+% For instance, if there are three authors and the first a the second ones have the same affiliation,
+% write as follows:
+ % \AUTHOR[1]{Third Author}
+\end{center}
+
+
+% Write now the abstract of your communication.
+
+The second author was one of the authors of 
+a computer package written in Maple that could automatically 
+generate railway maps of a network for any date. This package was
+presented at ACA'2008 and its design and implementation is described in [1]. 
+Each section of the network was coloured accordingly to its characteristics
+(single / double track, electrified / non electrified,
+opened / closed / greenway,...). 
+The position of the nodes (stations, junctions,...) was obtained from 
+a list of geographical coordinates.
+
+The work presented here deals with a similar although not identical 
+case: subway networks are treated as graphs with the help of a computer
+algebra system in order to obtain the diagrammatic map for any date. 
+
+Most metro network plans follow
+more or less closely the ideas introduced by Harry Beck in his  
+diagrammatic design of London subway map (the distances between stations
+and geographic orientation of the lines don't have to be respected, as
+the clarity and the number of stations between two stations is
+the key information to be visualized). 
+
+Therefore allocating nodes is far simpler, and we have decided to 
+manually allocate the stations on a predefined grid.
+
+The situation is also simpler because all lines
+are double track and electrified. For instance in Madrid subway 
+there are minor differences between lines, such as the kind of catenary 
+(classic or rigid), the gauge (narrow / broad),... that will not be 
+considered here. Each node and edge of the graph has dates 
+associated: inauguration date / closure date --the latter if applies.
+
+The package takes advantage of the simplifications w.r.t. [1]
+mentioned above
+and the features of \textit{Maple's} \textit{Networks} package.
+This way the approach, although general, can be implemented in 
+relatively few lines of code. 
+
+We know of no other similar works.
+
+The work is illustrated with the case of Madrid subway network,
+one of the biggest ones in the world.
+
+% Write the keywords separated by commas
+
+\KEYWORDS {Graph theory, Network models, Diagrammatic maps, Subways}
+
+% Write the MSC2010 codes corresponding to your communication
+
+\MSCLASSIFICATION{68R10, 90B10, 90C35}
+                  % Graph theory (including graph drawing)
+                  %	Network models, deterministic
+                  % Programming involving graphs or networks
+%
+% Next include the references you need.
+% If your abstract includes no references at all, please delete all the lines
+% from \begin{thebibliography} to \end{thebibliography}.
+
+% Please, do not use more than 9 references.
+
+\begin{thebibliography}{9}
+
+ %  Model for references to articles
+  \bibitem{label1} \textsc{E. Roanes-Lozano, A. Mart\'{\i}nez-Zarzuelo, 
+                           A. Garc\'{\i}a-\'Alvarez, 
+                           M. J. Wester, E. Roanes-Mac\'{\i}as}
+                    Automatically Obtaining Railway Maps from a Set of Historical 
+                    Events
+                    \emph{ RACSAM (Revista de la Real Academia de Ciencias Exactas,      
+                     F\'{\i}sicas y Naturales, Serie A, Matem\'aticas)}
+                    \textbf{105}(1), 149--165 (2011).
+                    DOI 10.1007/s13398-011-0010-1
+\end{thebibliography}
+
+\vspace{1cm}
+
+% Full Affiliation of all authors
+\ADDRESS{1}{
+%Department1  \\
+            Facultad de CC. Matem\'aticas, Universidad Complutense de Madrid\\ 
+            Plaza de Ciencias s/n, 28040-Madrid, Spain \\
+\texttt{albermech@gmail.com}
+
+
+\vspace{.5cm}
+
+\ADDRESS{2}{
+            Instituto de Matem\'atica Interdisciplinar \& \\
+            Depto. de \'Algebra, Geometr\'{\i}a y Topolog\'{\i}a\\
+            Facultad de Educaci\'on, Universidad Complutense de Madrid\\ 
+            c/ Rector Royo Villanova s/n, 28040-Madrid, Spain \\
+\texttt{eroanes@mat.ucm.es}
+}
+}
+
+
+\end{document}

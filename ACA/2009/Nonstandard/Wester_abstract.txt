@@ -1,0 +1,11 @@
+Computing Integrals over Polynomially Defined Planar Regions and Curves
+
+Michael Wester, Yuzita Yaacob, Stanly Steinberg 
+
+Abstract: We use the cylindrical algebraic decomposition algorithm
+implemented in Mathematica to produce algorithms to analytically
+compute integrals over polynomially defined regions in the plane.
+We also produce an algorithm to compute integrals over the boundary
+of such regions and then implement the two dimensional version of
+the Green's theorem. The resulting software can solve many of the
+two dimensional integration problems in calculus textbook.

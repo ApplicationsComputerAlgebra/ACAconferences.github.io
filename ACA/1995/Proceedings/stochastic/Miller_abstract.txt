@@ -1,0 +1,18 @@
+Algebra for the Electronic Marketplace 
+ 
+Ross Miller 
+GE Corporate R&D 
+Box 8 
+Schenectady, NY 12301-0008 
+Internet: millerrm@crd.ge.com 
+Phone: 518 387-5213 
+Fax: 800 308-2676 
+ 
+This talk will explore formal structures that characterize automated  
+mechanisms for exchange using market-generated prices. The goal of  
+such formalization is the development of "smart" market mechanisms  
+that employ algebraic means to optimize and coordinate the allocation  
+of goods to market participants "on the fly." Research results for  
+both centralized and distributed market systems are discussed.  
+Differences from neoclassical views of markets as static  
+surplus-maximizing mechanisms are highlighted.

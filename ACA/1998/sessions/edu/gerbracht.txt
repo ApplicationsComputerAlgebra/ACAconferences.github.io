@@ -1,0 +1,27 @@
+"Graphing elementary real functions: What can and cannot be done with a CAS"
+
+E.H.A. Gerbracht (*) and W. Struckmann
+Institut fuer Netzwerktheorie und Schaltungstechnik
+Technische Universitaet Braunschweig
+Langer Kamp 19c
+D-38106 Braunschweig
+Germany
+E-mail:e.gerbracht@tu-bs.de
+
+
+To draw a graph of an elementary real function, one uses analytical  
+methods to determine zeroes, local maxima or minima, points of 
+inflections, symmetries, intervals where the function is not defined, 
+asymptotic behavior, intervals on which the function is increasing or 
+decreasing and intervals on which the function is concave upward or  
+downward. Then, these data are used to plot the function. This method 
+is called ``graphing a function'' and is a common subject of lectures 
+on calculus or in high-school mathematics education.
+In this talk we will give an overview on the theoretical and practical 
+aspects of the graphing of elementary functions by symbolic means: on 
+one hand a number of tasks that arise are undecidable for the whole  
+set of elementary real functions. On the other hand we are able to name 
+rather large subsets of functions which can be handled completely by an 
+algorithm. This algorithm has led to a prototype implementation in 
+MAPLE which is able to graph symbolically most functions occurring in 
+an undergraduate course on calculus.

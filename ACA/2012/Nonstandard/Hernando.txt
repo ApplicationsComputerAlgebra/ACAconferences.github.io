@@ -1,0 +1,28 @@
+TITLE: An algebraic approach for detecting potential dangerous situations in
+expert systems through Groebner bases.
+
+AUTHOR: Antonio Hernando, Roberto Maestre-Martínez, Eugenio Roanes-Lozano
+
+EXTENDED ABSTRACT:
+The aim of this work is to present theoretically a new algebraic method
+for detecting potentially dangerous states in an expert system whose
+knowledge is represented by propositional Boolean logic. Given a dangerous
+state which does not happen at present, our method is able to detect if a
+dangerous situation would happen if an input variable of the Expert System
+changed. Our work is based on a previous result obtained for detecting
+possible inputs which involve dangerous situation. In this way the work
+presented here can be considered as an extension of this previous result.
+
+The method presented here is based on calculating just one reduced
+Groebner basis of a polynomial ideal representing the system's
+knowledge. In this way, although the Expert System is designed to
+notify only dangerous situations, we have developed an algebraic model
+for including in the expert system the ability to recommend watching
+carefully some Boolean variables such that if one of them changed,
+the system would fall in a dangerous situation. In this way, the same
+expert system not only warns about dangerous situations but also about
+potentially dangerous situations. It may be noted that our method does
+not require to change the Expert System for including this facility.
+As far as our knowledge goes, our work is completely new in the field
+of Expert Systems. An example of implementation in the computer algebra
+system CoCoA is included.

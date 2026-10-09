@@ -1,0 +1,26 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>ACA-2011 How to sign in to EasyChair</title>
+<script>if (top != self) top.location.href=location.href;</script><link type="text/css" rel="StyleSheet" href="../css/cool.css?version=490" /><link type="image/jpeg" rel="icon" href="../images/chairEC.jpg" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div id='content' class='nomenu'><h2 id="title">How to sign in to EasyChair</h2><h3>Using Your EasyChair account</h3><p>To sign in to EasyChair, you must have an EasyChair account.
+       If you used EasyChair after the 9th of January 2007, then you have
+       such an account. If you do not have one,  <a href="signup.cgi?conf=aca2011">click this link to create one.</a></p><p>If you have an EasyChair account but forgot your user name or
+       password,  <a href="forgot.cgi?conf=aca2011">click this link to retrieve them.</a></p><h3>Sign-in problems</h3><p>If clicking on EasyChair links repeatedly brings you to the sign-in
+         page please read the following.</p><ol><li>To use EasyChair you must enable cookies on your browser.
+             Please check that you have cookies enabled.</li> <li>EasyChair will automatically terminate your session after two hours
+           of inactivity, so it is normal that you are asked to sign in again if
+           you did not work with it for more than two hours.  Another possible
+           reason for this problem is the use of two different browsers or two
+           different computers to access your EasyChair account. For security
+           reasons, EasyChair does not allow for a simultaneous access of
+           the same account from more than one browser or computer.</li></ol><p>If you have any other problems which prevent you from signing in,
+         please get in touch with the organizers of the relevant
+         conference.</p></div>
+</body>
+</html>

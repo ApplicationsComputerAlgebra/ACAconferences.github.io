@@ -1,0 +1,88 @@
+\documentclass[11pt, draft]{article}
+\topmargin=0mm
+\oddsidemargin=0mm
+\textwidth170mm
+\textheight230mm
+\begin{document}
+%\pagestyle{empty}
+\language=0
+%\hyphenation{}
+
+\begin{center}
+{\bf
+IMPLEMENTATION OF THE DIFFERENTIAL INVOLUTIVE ALGORITHMS IN THE CAS MAPLE VR5}\\
+\vspace {0.3cm}
+{Vladimir A.Mityunin}\\
+{\it \small Department of Mathematics and Mechanics, Moscow State University, 119899 Moscow,
+Russia
+\\ e-mail: vmit@park.ru}
+\end{center}
+\vspace {1.0cm}
+Involutive bases are Groebner bases, though, generally redundant,
+and involutive methods provide an alternative approach to
+computation of Groebner bases. Using involutive basis, one can
+easily obtain, for example, dimensional polynomial of the system.
+Involutive bases may be used in the Lie symmetries analysis of the
+differential systems. In the paper \cite{Ge} generalization of the
+involutive basis definition for differential system was given.
+Then, in the recent work of Prof. V. Gerdt \cite{DiffCompletion}
+an algorithm for construction of the minimal differential
+involutive Groebner basis for system of the linear differential
+equations was introduced. The main goal of my work was to
+implement this algorithm in the CAS Maple. Some of the
+optimizations, described in the \cite{DiffCompletion,
+Optimization, Mathematica}, were implemented too. The next step
+was to perform comparison with the {\it diffalg} package. My
+implementation was used in computing of the primitive element in
+the differential module for some systems of linear differential
+equations and computing of the differential dimensional
+polynomials. Unfortunately, Maple is not very effective system,
+and we can't use it for computing of the really interesting
+examples. But we can analyze and use results in the
+implementation on the more low-level language, such as C++. It
+seems, that correct implementation of the involutive algorithms
+may be much more faster, then any implementation of the classic
+Buchberger algorithm.
+
+\begin{thebibliography}{99}
+\bibitem{Ge}
+\emph{Vladimir P. Gerdt} "Groebner bases and involutive methods
+for algebraic and differential equations" // Mathematics and
+Computers in Modelling, 25, No. 8/9, 1997, 75-90
+
+\bibitem{GeBl2}
+\emph{Vladimir P. Gerdt, Yuri A.Blinkov} "Minimal involutive
+bases" // Mathematics and Computers in Simulation 45, 1998,
+543-560
+
+\bibitem{DiffCompletion}
+\emph{Vladimir P. Gerdt} "Completion of Linear Differential
+System to Involution" // Computer Algebra in Scientific Computing,
+V.G.Ganzha, E.W.Mayr and E.V. Vorozhtsov (Eds.), Springer-Verlag,
+Berlin, 1999, pp.115-137.
+
+\bibitem{Optimization}
+\emph{Vladimir P. Gerdt} "Involutive division technique: some
+generalization and optimizations" // Zapiski Nauchnykh Seminarov
+POMI (St.Petersburg) 258 (1999) 185-206. To appear in J.Math.Sci.
+258 (2000).
+
+\bibitem{Mathematica}
+\emph{Vladimir P. Gerdt, Matthias Berth and G\"{u}nter Czichowski}
+"Involutive Divisions in Mathematica: Implementation and Some
+Applications" // Proceedings of the 6th Rhein Workshop on
+Computer Algebra (Sankt-Augustin, Germany, March 31 - April 3,
+1998), J.Calmet (Ed.), Institute for Algorithms and Scientific
+Computing. GMD-SCAI, Sankt-Augustin, 1998, 74-91 .
+
+\bibitem{Kolchin}
+\emph{E.R.Kolchin} "Differential algebra and algebraic groups",
+New York, Academic Press, 1973
+
+\bibitem{Dif}
+\emph{Kondratieva M.V., Levin A.B., Mikhalev A.V., Pankratiev
+E.V.} Differential and Difference Dimension Polynomial.  Kluwer
+Acad. Publ.,1999.
+
+\end{thebibliography}
+\end{document}

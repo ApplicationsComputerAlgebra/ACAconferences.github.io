@@ -1,0 +1,19 @@
+"An Alternate Method for Computing SAGBI-Groebner Bases over a PID"
+(preliminary report) 
+
+William W. Adams, 
+University of Maryland, 
+Serkan Hosten, 
+George Mason University, 
+Philippe Loustaunau, Systems 
+Planning and Analysis, Inc., and 
+J. Lyn Miller*, Western Kentucky University.
+
+Abstract:
+
+We present developments arising from the search for an alternate 
+technique for constructing SAGBI-Groebner bases (analogs of Groebner 
+bases for ideals of subalgebras of a polynomial ring) in a polynomial 
+ring over a principal ideal domain.  This technique avoids such heavy 
+use of additional Groebner basis computations as were given in an
+earlier paper (1996) by Miller.

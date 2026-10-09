@@ -1,0 +1,67 @@
+----------------------------------------------------------------------------
+                    Grand Challenges in Computer Algebra
+----------------------------------------------------------------------------
+
+        Fast multiprecision evaluation of series of rational numbers
+
+     How to compute Euler's constant to 1,000,000 decimals (Fast
+     multiprecision evaluation of series of rational numbers)
+
+     Calculating Euler's constant gamma has not attracted the same public
+     intrigue as calculating pi, but it has still inspired the dedication of
+     a few. While we presently know millions of decimal places of pi, till
+     the early 1997 only several thousand places of gamma are known. The
+     evaluation of gamma is considerably more difficult [1]. For pi, one has
+     the Borweins' quartically convergent AGM algorithm [2]: each successive
+     iteration approximately quadruples the number of correct digits. By
+     contrast, for gamma, not even a quadratically convergent algorithm is
+     known [3].
+
+     Knuth [1] obtained 1271 places of Euler's constant in 1962, using
+     Euler-Maclaurin summation. Sweeney [4] obtained 3683 places the
+     following year, using an expansion of the exponential integral Ei(x),
+     which was subsequently extended by others [5] to 20700 places by 1977.
+     Brent and McMillan [6] computed 30100 places in 1980 using certain
+     identities involving modified Bessel functions. They also calculated
+     the first 29200 partial quotients in the regular continued fraction
+     expansion for gamma and deduced that if gamma is a rational number,
+     then its integer denominator must exceed 10**15000. This is compelling
+     evidence that Euler's constant is not rational. A proof of
+     irrationality (let alone transcendence) is still beyond our reach.
+
+     We will present a new technique for fast multiprecision evaluation of
+     series of rational numbers [7] which allows to improve the asymptotic
+     and practical efficiency of many algorithms. Applications include fast
+     algorithms for elementary functions, pi, hypergeometric functions at
+     rational points, Euler's, Catalan's and Ap'ery's constant. We will give
+     an example computation of Euler's constant to 1,000,000 decimals using
+     the new technique. Extensive measurements suggest that the using the
+     new technique results in exteremely efficient code which is superior to
+     available Computer Algebra Systems implementations.
+
+     [1] D. E. Knuth, Euler's constant to 1271 places, Math. Comp. 16 (1962)
+     275-281
+
+     [2] J. M. Borwein and P. B. Borwein, Pi and the AGM: A study in
+     analytic number theory and computational complexity, Wiley 1987.
+
+     [3] D. H. Bailey, Numerical results on the transcendence of constants
+     involving , e and Euler's constant, Math. Comp. 50 (1988) 275-281.
+
+     [4] D. W. Sweeney, On the computation of Euler's constant, Math. Comp.
+     17 (1963) 170-178.
+
+     [5] R. P. Brent, Computation of the regular continued fraction for
+     Euler's constant, Math. Comp. 31 (1977) 771-777.
+
+     [6] R. P. Brent and E. M. McMillan, Some new algorithms for
+     high-precision computation of Euler's constant, Math. Comp. 34 (1980)
+     305-312.
+
+     [7] Bruno Haible, Thomas Papanikolaou, Fast multiprecision evaluation
+     of series of rational numbers, Technical Report No. TI-7/97, 1997
+
+     Bruno Haible                 Thomas Papanikolaou
+     ILOG, France                 TH Darmstadt / Univ. des Saarlandes,
+     haible@ilog.fr               Germany
+                                  papanik@cs.uni-sb.de

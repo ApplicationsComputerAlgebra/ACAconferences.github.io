@@ -1,0 +1,20 @@
+Computer Algebra Systems and Representations
+
+Tadashi Takahashi
+Graduate School of Human Development and Environment
+Kobe University, Kobe, Japan
+
+Many proposals have already been made with regard to the effective use of
+computer algebra systems in mathematics education.  If we hope to develop and
+improve what has already been achieved, we will need to take advantage of the
+research results from cognitive science.  Computer algebra systems are powerful
+tools that allow learners to _run_ mathematical formulae.  Powerful tools can
+become effective tools by finding effective ways to use them.  In order to
+fully utilize computer algebra systems in mathematics education, teaching
+methods that are based on cognitive science will be needed, and these are
+clearly different from those used in _pen and paper_ teaching.  This paper
+considers the use of computer algebra systems as _tools_ and analyzes how such
+tools can affect the thinking of learners.
+
+We report the practices in university mathematics by using computer algebra
+system.

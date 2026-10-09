@@ -1,0 +1,29 @@
+Moving Frames and Calculation of Lie symmetry of PDE
+
+Ian Lisle
+School of Mathematics and Statistics
+University of Canberra, Australia
+email:  lisle@ise.canberra.edu.au
+
+Algorithmic calculation of Lie symmetries of PDE relies on differential
+elimination/completion methods, which bring the defining system to a canonical
+form where an existence-uniqueness theorem can be applied, and the dimension
+and structure of the symmetry algebra found.  These methods can perform poorly
+when applied to classification of symmetries of classes of PDE, where algebraic
+expressions can grow to the point where the calculation may fail, or lead to
+results so complex as to defy interpretation.  To overcome these limitations,
+we make use of the notion of the equivalence group of the class of PDE, that is
+a group of transformations mapping equations in the class to other equations in
+the class.  A moving frame which is invariant under the action of the
+equivalence group is sought, and we show how to execute a change of frame in
+the symmetry defining system.
+
+It is shown how to perform differential elimination/completion with respect to
+the noncommuting basis of differential operators provided by the frame.
+Existence and uniqueness of formal solutions of the canonical form is
+demonstrated.  These results are used to find the dimension and structure of
+the Lie symmetry algebra, in a transparent form.  Application to symmetries of
+a class of PDE leads to traversing a binary tree of subcases, each with its own
+symmetry algebra.  Computational examples are given, including complete
+symmetry classifications of nonlinear diffusion-convection equations, and
+linear hyperbolic equations.

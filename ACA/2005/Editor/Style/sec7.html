@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+    "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+  <head>
+    <meta $Jssac: sec7.html,v 1.4 2007/01/15 05:38:57 saito Exp $>
+    <meta http-equiv="Content-Type" CONTENT="text/html;CHARSET=euc-jp">
+    <meta http-equiv="Content-Style-Type" CONTENT="text/css">
+    <link rel="stylesheet" href="/jssac.css" type="text/css">
+    <meta name="Author" content="Tomokatsu SAITO">
+    <title>Jssac style rules 1</title>
+  </head>
+  <body class="contri">
+  <hr>
+  <h2 style="text-align:center">
+    必要な関数
+  </h2>
+  <hr>
+  『数式処理』では，個々の原稿に関する情報をプレアラブルで宣言する必要が
+  あります．必要な関数は，\title, \author, \art です．
+  <p>
+  <ol>
+    <li><b>原稿のタイトル</b><br>
+      すべての原稿にはタイトルが必要です．このタイトルを宣言するコマンドが
+      \title です．利用法は，
+      <p>
+      <table align=center class="src"><td><code>
+        \titile{原稿のタイトル}<br>
+        %\titile{原稿の英文タイトル}
+      </code></td></table>
+     です．<br>
+     編集委員会では，必要がある場合は英文のタイトルを要求することがあります．
+     また，可能な限り英文のタイトルをコメントの形で入れることを希望します．
+
+   <li><b>著者名</b><br>
+     原稿には，著者名，所属，メールアドレスを記述する必要があります．
+     そのための \author コマンドの中に書く事が出来る命令としては，
+     \mail, \afill, \and があります．使い方は，
+     <p>
+     <table align=center class="src"><td><code>
+       author{著者名\mail{著者のメールアドレス}\affil{所属}<br>
+       \and 著者名1<br>
+       \and 著者名2<br>
+       \and ...<br>
+       %\author{著者名(英語表現)\mail{email}\affil{所属(英語表示)}<br>
+       %\and 著者名(英語表現)<br>
+       %\and ...}<p>
+     </code></td></table>
+     です．
+      <p>
+     <ul>
+       <li><b>著者名</b><br>
+         日本語原稿では，"著者名"に適宜空白を入れて下さい．
+         姓と名の間に空白を入れるのを一応の基準とします．
+         ただし，編集委員会の判断で空白は適宜処理いたします．
+         <p>
+
+         著者名の英語表示は，"名 {\sc 姓}" を原則としますが，
+         特に事情がある場合，姓を {\sc 姓} とする以外は著者の
+         判断に委ねます．
+
+       <li><b>所属</b><br>
+         "所属"は，特に必要のない限り，学部名，研究科名，
+         研究所名(会社の研究所を含む)， 会社名，学校名等までとし，
+         学科，専攻名，部課名等は書かないで下さい．
+         所属が特にない方は，なんとか大学名誉教授，1 級建築士等の資格
+         地位あるいは職業もしくは， 元の所属 (元なんとか大学と記載)等で
+         適当と思われるものを書いてください．<p>
+
+         所属の英語表示は，日本語表示より簡単に 大学名，
+         研究所名(会社の研究所を含まない)，会社名，学校名等
+         までとして下さい．
+
+       <li><b>メールアドレス</b><br>
+         電子メールのアドレスをお持ちの方は，\mail{メールアドレス}
+         とお書き下さい．
+
+       <li><b>共著者の列記</b><br>
+         複数の著者による原稿の場合は，ここの著者の記述を \and で
+         つないでください．
+      </ul>
+    <li><b>分類</b><br>
+     原稿の分類区分を書くコマンドです．『数式処理』では，
+     論文，ノート，記録，解説，記事，公報等の分類を立てておりますが，
+     不明の場合は，こちらで記入しますので空白のままでも結構です．
+     記述スタイルは，\art{論文} です．
+  </ol>
+  <p>
+  <hr width="60%">
+  <table align=center rules="none">
+    <tr><td align=center>
+      <a href="sec6.html">FVerbの利用法</a>&nbsp;
+    </td><td align=center>
+      <a href="sec8.html">アブストラクト</a>&nbsp;
+    </td><td align=center>
+      <a href="index.html">作成要項</a>&nbsp;
+    </td><td align=center>
+      <a href="/TopPage.html">JssacHome</a>
+    </td></tr>
+  </table>
+  <hr>
+  <address><a href="mailto:webmaster@jssac.org">webmaster@jssac.org</a>
+  </address>
+  <pre>
+  Last modified: $Jssac: sec7.html,v 1.4 2007/01/15 05:38:57 saito Exp $
+  </pre>
+  </body>
+</html>

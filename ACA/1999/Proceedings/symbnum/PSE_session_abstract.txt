@@ -1,0 +1,20 @@
+Title: Problem Solving Environments for Differential Equations
+
+Organizers: Robert van Engelen, engelen@nu.cs.fsu.edu
+            Stanly Steinberg, stanly@math.unm.edu
+
+Abstract:
+
+This session will focus on problem solving environments (PSEs) that are
+designed to help users solve and understand the solutions of differential
+equations:
+- research in architecture, design, and methodology of PSEs
+- innovative solution methods
+- database and expert system technology for PSEs
+- application-specific PSEs
+- PSEs for high-performance and distributive computing (CORBA, MPI, OpenMP)
+- code synthesis, data-structure selection, and library composition methods
+        for solving differential equations
+- simulation environments for differential-equation-based models
+- visualization
+- Web technology (Java, HTML, XML, mobile agents)

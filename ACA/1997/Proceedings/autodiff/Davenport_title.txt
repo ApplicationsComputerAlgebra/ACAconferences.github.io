@@ -1,0 +1,5 @@
+TITLE : Topics in Automatic Differentiation and Symbolic Numeric Computation
+AUTHOR : James Davenport
+AFFILIATION : 
+School of Mathematical Sciences, University of Bath, Claverton Down,
+BA2 7AY BATH AVON, GB.

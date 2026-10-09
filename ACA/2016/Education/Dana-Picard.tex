@@ -1,0 +1,81 @@
+%    Latex Template for ACA 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS BELOW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{url}
+%\usepackage{caption}
+\usepackage{amsmath}
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS ABOVE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\vspace{-0.8cm}
+\begin{flushleft}
+\Large \textbf{\noindent
+%%% PLEASE INSERT THE TITLE OF YOUR TALK HERE %%%%%%%
+A framework for an ICT-based study of parametric integrals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5cm}
+\normalsize
+ %%%%%%             NAMES OF AUTHORS         %%%%%%
+ %%%%%% NAME OF SPEAKER SHOULD BE UNDERLINED %%%%%%%%%
+\normalsize{
+ %%%%%% FOR EXAMPLE %%%%%
+ Th. Dana-Picard$^1$, D. Zeitoun$^2$
+ %%%%%%%%%%%%%%%%%%%%%%%%
+} \\
+\vspace{5mm}
+\textit{\footnotesize
+ %%%%%% AFFILIATION OF AUTHORS %%%%%%
+$^1$ Jerusalem College of Technology, ndp@jct.ac.il\\
+$^2$ Orot College for Education, ed.technologie@gmail.com
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+\end{flushleft}
+
+Parametric definite integrals or, in other words, sequences of definite integrals, are important in various fields of mathematics and applied science.  They are part of a standard curriculum for undergraduates, both in mathematics and science curricula.
+
+In engineering science, such a parametric integral is often plotted as a family of curves depending on the parameter. A more efficient approach is to derive a mathematical formula for these integrals.
+
+In most cases, an induction formula is found, using standard methods of integration, then methods for studying sequences are applied to derive a closed form for the integral, i.e. a form giving the integral as a function of the parameter. The easiest situation is encountered when, after the first integration step, the integrated term is equal to 0. Such a feature makes the usage of a telescopic method very efficient, whence formulas involving factorials and double factorials.
+
+Sometimes, the integrand is too complicated for a regular student to be successful in computing the integral, even for small values of the parameter. In that case, a Computer Algebra System (CAS) may be used to perform the computation for a certain range of values of the parameter. A sequence of real values is created and  used to conjecture a general formula. Now, instead of discovering a closed formula from scratch, the conjecture has to be proven. It is generally easier to check a conjecture than to derive a formula from scratch.
+Finding a good conjecture relies often on the usage of other Information and Communication Technologies (ICTs), such as online databases, in particular the Online Encyclopedia  of Integer Sequences \cite{oeis}. It provides formulas, references to literature, but also source code for the usage of a CAS. See also \cite{dickau}. Searching these databases is valuable also for cases where the student can compute the integral, as it enables finding new connections with other mathematical fields.
+
+Several Computer Algebra Systems, such as Maple,  contain tutorials in order to help the user to perform specific tasks, for topics belonging to undergraduate syllabi (methods of integration, methods for the solution of differential equations, etc.).
+
+For a given exercise, a built-in tutorial may propose different hints. Each one leads to a different pathway towards a solution, and the obtained expressions may look different: a combinatorial expression, an infinite series, etc. Various identities have been proven by that way: integral identities, combinatorial identities, integral presentations of combinatorial objects, etc. For example, integral presentations of Catalan numbers are derived in \cite{catalan} and of Stirling numbers in \cite{stirling}.
+
+Numerous examples deal with a positive integer parameter, but it happens that the parameter is not limited to integers, but may be a non integer real number. Problems may appear with the possibilities of the CAS, depending on the mathematical theorems which have been implemented. For example, many CAS have hard time with the integral $I_r=\int_0^{\pi /2} \frac{1}{1+\tan ^r x} \; dx$, when the parameter $r$ is not an integer. Even if $r$ is an integer, but not so small, the CAS may renounce to compute. Conversely, some CAS compute the integral with the general parameter and show that  $I_r=\frac{\pi}{4}$ for every positive real $r$, using a theorem which appears rarely in textbooks (see \cite{symmetries}) .
+
+In this talk, we show examples where a joint work with paper-and-pencil, CAS and online databases enable to derive important identities. As a byproduct, the usage of different ICTs enhances the existence of bridges between different domains of knowledge, in  particular between continuous and discrete objects.  We will show also an example where three different expressions obtained for the same parametric trigonometric integral (with non integer parameter) yield information for a problem in soil stability.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{00}
+\addcontentsline{toc}{chapter}{References}
+\setlength{\itemsep}{-1mm}
+\footnotesize
+\bibitem [1] {symmetries} Th. Dana-Picard (2005). \emph{Parametric integrals and symmetries of functions}, Mathematics and Computer Education, 5-12.
+\bibitem [2] {catalan} Th. Dana-Picard (2010): \textit{Integral presentations of Catalan numbers}, International Journal of Mathematical Education in Science and Technology 41 (1), 63-69.
+\bibitem [3]{dickau} R. Dickau (2010), \emph{Stirling numbers of the second kind}, The Math Forum, Drexel University, http://mathforum.org/advanced/robertd/stirling2.html
+\bibitem [4] {stirling} Th. Dana-Picard and D. Zeitoun (2012): \emph{Sequences of definite integrals, infinite series and Stirling numbers}, International Journal of Mathematical Education in Science and Technology 43 (2), 219-230.
+\bibitem [5] {oeis} N. J. A. Sloane (edt.): \emph{The On-Line Encyclopedia of Integer Sequences}, published electronically at https://oeis.org
+
+\end{thebibliography}
+\normalsize
+\end{document}

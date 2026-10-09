@@ -1,0 +1,35 @@
+Using Symbolic Summation and Polynomial Algebra for Imperative Program 
+Verification in the Theorema System
+
+Laura Ildiko Kovacs and Tudor Jebelean
+
+Research Institute for Symbolic Computation, 
+Johannes Kepler University, Linz, Austria,
+Institute e--Austria, Timisoara, Romania
+{kovacs,jebelean}@risc.uni-linz.ac.at
+
+
+We apply techniques from symbolic summation and polynomial algebra to
+imperative program verification, more precisely to the generation of valid
+polynomial relations among program (loop) variables.  Specifically, we use
+recurrence solving by the Gosper algorithm, handling geometric series and
+C-finite recurrences, and the method of generating functions.  In this way we
+generate a system of  closed forms for the loop variables, i.e. solutions that
+are functions of the loop counter (recurrence index).  From this system, by
+performing variable (i.e. loop counter) elimination, we obtain a set of valid
+polynomial relations among the loop variables.  Applying the Groebner Bases
+algorithm on the generated polynomial relations, w.r.t. the loop variables, our
+algorithm yields the essential set of polynomials for the while loops, that
+will be used in the imperative program verification.
+
+Our imperative verification environment is integrated in the overall framework
+of the  Theorema system (www.theorema.org).  The Theorema system offers
+facilities for working with higher-order predicate logic formulae (including
+various general and domain-oriented provers), and it is implemented on top of
+the computer algebra system Mathematica, thus it has access to a wealth of
+powerful computing and solving algorithms.
+
+To conclude, our work shows the usefulness of  several algebraic and
+combinatorial techniques for the automated generation of polynomial invariants,
+and, in more general terms, the advantages of combining techniques from
+computational logic with techniques from computer algebra.

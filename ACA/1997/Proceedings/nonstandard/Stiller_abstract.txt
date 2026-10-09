@@ -1,0 +1,105 @@
+                                      ABSTRACT
+             Applications of Computer Algebra to Image Understanding,
+                      Object Recognition, and Computer Vision
+
+                                       by
+                                 Dr. Peter F. Stiller
+
+                                      for
+                 3rd IMACS Conference on Applications of Computer Algebra
+
+     Keywords: symbolic computation, computer algebra, image understanding,
+               computer vision, geometric configurations, geometric invariants,
+               object/image equations
+
+
+     The general problem of single-view recognition is central to many image
+understanding and computer vision tasks; so central, that it has been
+characterized as the ``holy grail'' of computer vision (see [2]).  Initial work
+in the 70's and 80's made use of the mathematics of geometric invariant theory
+as a tool for testing geometric consistency in certain restricted situations.
+Unfortunately, negative results of Burns, Weiss, and Riesman (see [1])
+confirmed that there are no general-case view invariants.  In other words,
+there are no values computable from an image of an object (thought of as a 3-D
+configuration of geometric features such as points, lines, conics, etc.) that
+are constant for that object across all possible images.  This fact means that
+classical geometric invariant theory cannot be used directly for single-view
+recognition, and that the problem of single-view recognition is considerably
+more complex.  Never-the-less, it is intuitively clear that a single 2-D view
+carries useful geometric information about the original 3-D object.   The
+question of how to extract that information is the central theme of our work.
+We have been able to show that much of this information can be characterized by
+a correspondence in the mathematical sense of algebraic geometry.
+
+    In this paper, we continue to exploit the use of advanced mathematical
+techniques from algebraic geometry, notably the theory of correspondences and a
+novel "equivariant" invariant theory, to the general problem of recognizing
+three dimensional geometric configurations (such as arrangements of lines,
+points, and conics) from a single two dimensional view.  Of necessity, the
+approach is view independent.  This forces us to characterize a configuration
+by its 3D or 2D geometric invariants.  The algebro-geometric techniques provide
+the machinery to understand the relationship that exists between the 3D
+geometry and its "residual" in a 2D image.  This relationship is shown to be a
+correspondence in the technical sense of algebraic geometry.  Exploiting this,
+one can attempt compute a set of fundamental equations, which generate the
+ideal of the correspondence, and which completely describe the mutual 3D/2D
+constraints.  We have chosen to call these equations "object/image equations".
+They can be exploited in a number of ways.  For example, from a given 2D
+configuration, we can determine a set of non-linear constraints on the
+geometric invariants of 3D configurations capable of producing the given 2D
+configuration, and thus arrive at a test for determining the object being
+viewed.  Conversely, given a 3D geometric configuration (features on an
+object), we can dervive a set of equations that constrain the images of that
+object.
+
+     Methods to compute a complete set of generating object/image equations
+rely heavily on modern methods in symbolic computation and the use of computer
+algebra systems.  The  computational techniques include advanced geometric
+techniques like resultants, sparse resultants, and Grobner bases, as well as
+the classical calculus of invariant theory.  The calculations have been carried
+out in a number of important cases, including point features, and the results
+have been used to develop and implement algorithms for use in a variety of
+image understanding applications.   Two notable successes include a system for
+recognition and identification of aircraft types in reconaisance photos and a
+preliminary system for target identification being worked on by the U. S.
+Navy.
+
+     In this paper, we focus on the computational issues and on the the
+complexity of the symbolic computations, particularly in case of recognizing
+configurations of lines, because it leads to a highly complex, highly
+non-generic, system of equations that must be reduced using symbolic
+computational tools.   Most of the subtleties of our approach are illustrated
+by this case - recognizing 3-D configurations of line features from a single
+2-D image.  A complete set of invariants for line configurations in 3-D was
+only recently made available through the work of Huang in '92.  Our subsequent
+efforts to compute explicitly the so-called object/image equations for the
+correspondence led instead to a residual system that must be attacked by
+sophisticated KSY resultant, sparse resultant or Grobner basis algorithms.
+Thus we have been forced to direct a portion of our research effort to the
+development of fast mixed numerical/symbolic methods to handle recognition
+testing in real time.   These algorithms of course have a wider applicability.
+
+
+Bibliography
+
+[1] Burns, J., Richard S. Weiss and Edward M. Riseman, ``The Invariance in
+Computer Vision, J.L. Mundy and Andrew Zisserman, eds., MIT Press, 1992.
+
+[2] Weiss, Issac, ``Geometric Invariants and Object Recognition,''
+International Journal of Computer Vision, 10.3, 207-231, 1993.
+
+
+Biographical Sketch
+
+Dr. Stiller is Professor of Mathematics and Computer Science at Texas A&M
+Univeristy.  He also currently serves as Assistant Director of the Institute
+for Scientific Computation and as Director of the Center for Geometric,
+Discrete, and Symbolic Computation.  He is the author of over three dozen
+papers and numerous technical reports in a wide variety of areas in mathematics
+and computer science.  His current work focuses on the use of techniques in
+algebraic geometry and computational geometry to study problems in image
+understanding, database indexing for content-based retrieval, and computer
+vision.   His work is currently funded by the National Science Foundation, the
+Air Force Office of Scientific Research, the Texas Higher Education
+Coordinating Board through its Advanced Technology and Advanced Research
+Programs, and by private industry.

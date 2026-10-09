@@ -1,0 +1,30 @@
+              Parallel Integral Multivariate Polynomial 
+               Greatest Common Divisor Computation
+
+              Mohamed Omar Rayes (mrayes@iupucs.iupui.edu)
+
+
+	All of the existing computer algebra systems are sequential.
+The underlying algorithms were written in sequential code regardless of
+the machine architecture. Many of these algorithms perform poorly even
+as processors become faster and storage become less expensive.
+
+	It was the realization of the limited computing power of
+uniprocessor computers that led the researchers to look for new ways to
+achieve better performance. With the production of parallel computers
+and with the dramatic performance of parallel numerical algorithms, it
+was natural to investigate the possibility of designing computer
+algebra systems that can exploit the collective computing power of
+such computers.
+
+	It is the goal of this research to design and implement parallel
+algorithms for several computer algebra problems.  In particular, we
+will discuss the design and implementation of parallel algorithms for
+the multivariate polynomial greatest common divisor (GCD) problem. We
+will study the current sequential algorithms and express them in forms
+suitable for parallel machine implementation.  Actual programming
+timings will be also given.
+
+	In addition, we present a brand new GCD algorithm that is
+suitable for parallel (MIMD) machine implementation. Actual programming
+timings on the Sequent Balance will be given as well.

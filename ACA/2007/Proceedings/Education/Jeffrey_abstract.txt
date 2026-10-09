@@ -1,0 +1,12 @@
+The Importance of Being Continuous
+
+David Jeffrey
+University of Western Ontario, London, Canada
+
+If a function F is the integral of a function f, then F should be continuous on
+any interval on which f is continuous.  There are cases, however, in which CAS
+return expressions for F which are discontinuous.  If students stumble across
+these cases, then they might get incorrect answers to calculations and be
+confused.  There are two possible ways to avoid this: explain the danger to the
+students, or change the integration algorithms to guarantee continuous
+answers.  Both possibilities are discussed.

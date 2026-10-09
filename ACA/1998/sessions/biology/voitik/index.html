@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>&#9;</TITLE>
+</HEAD>
+<BODY bgcolor=white>
+
+<B><FONT SIZE=6><P ALIGN="CENTER">Fractal time series analysis and predictions for tumor spreading</P>
+</FONT><I><FONT SIZE=5><P ALIGN="CENTER">M. V. Voitikova </P>
+</B><P ALIGN="CENTER">Institute of Molecular&amp;Atomic Physics, NASB, Minsk, Belarus,</P>
+<P ALIGN="CENTER">voitikova@imaph.bas-net.by</P>
+</I><P ALIGN="JUSTIFY"></P>
+
+<A  HREF="voitic2.ps.gz">Full paper in compressed Postscript *.ps.gz</A>
+
+
+<P ALIGN="JUSTIFY">The stochastic discrete space-time model of the immune response on tumor spreading has been developed. The immune+tumor evolution is considered in a two-dimensional square lattice and the immune+tumor interactions have been described at a cellular level.  The model presented takes into account the immune elimination capacity, <I>a</I>, the growth rate, the competition for resources, <FONT FACE="Symbol">&#113;</FONT>
+, the immune cell inactivation, <FONT FACE="Symbol">&#98;</FONT>
+, the spontaneous and stimulated immune cell influx, <I>j</I> and <I>c</I>, respectively and then transferred into the setting of cellular automata [1], using the rule-based programming style. The rules governing the behavior of the tumor+immune system are implemented as rewrite rules for all sites of a cellular automata. The random distribution of immune cells and a tumor cell seed are used to create the initial dynamical system configuration. The multistate (immune or tumor cells) random walkers  are simultaneously updated at one time step, according to the definite rules involving the state of 12 nearest neighbors at previous time step. Each immune cell has a state value determined by an orientation of a moving cell, and an indicator of a living time. Each tumor cell has a state value indicating the time till division. Note, that all growth rules are probabilistic, i.e. contains a random choice. After n-fold growth-rule applications the immune+tumor system yields a tumor cluster and a corresponding distribution of active and inactive immune cells. Three regimes of the immune response and tumor dynamics have been determined. These are i) normal wound healing, ii) uncontrolled (exponential) tumor growth, and iii) noise-like chaotic tumor-immune behavior. The third regime has been analyzed by the Hurst's approach.</P>
+</FONT><FONT FACE="Tms Rmn,Times New Roman" SIZE=2><P ALIGN="JUSTIFY">                              <IMG SRC="image15.gif" WIDTH=540 HEIGHT=333></P>
+</FONT><FONT SIZE=5><P ALIGN="JUSTIFY">The growth model presented shows that the immune response on tumor spreading in 2D-space exhibits oscillatory fluctuations (Fig.1 Number of tumor cells vs time), so the normal wound healing has a probabilistic character. The parameters chosen are: <I>a</I> =0.82, the time of division =4, the immune living time = 6, <FONT FACE="Symbol">&#98;</FONT>
+= 0.3, and the immune-cell accumulation rate is 0.08.</P>
+<P ALIGN="JUSTIFY"><IMG SRC="image16.gif" WIDTH=693 HEIGHT=329>It is shown (Fig. 2 Hurst's exponent vs number of observations) that the fractal time series of <I>N(t)</I> (the number of tumor cells) and <I>L(t)</I> (the number of leukocytes) follow the empirical law, <I>R/S</I>=A<FONT FACE="Symbol">&#116;</FONT>
+<SUP>H</SUP> , where <I>R(<FONT FACE="Symbol">&#116;</FONT>
+) </I>= max<IMG SRC="image17.gif" WIDTH=110 HEIGHT=56> -min<IMG SRC="image18.gif" WIDTH=110 HEIGHT=56> is the rescale range (1<IMG SRC="image19.gif" WIDTH=16 HEIGHT=20>n<IMG SRC="image19.gif" WIDTH=16 HEIGHT=20><FONT FACE="Symbol">&#116;</FONT>
+<I>) , </I><IMG SRC="image20.gif" WIDTH=23 HEIGHT=25> is the mean of the series, and <I>S(<FONT FACE="Symbol">&#116;</FONT>
+ )</I> =<IMG SRC="image21.gif" WIDTH=165 HEIGHT=61>is the standard deviation of the cell number at the interval of observation, 20 to 500. The Hurst's exponent, <I>H</I>, is 0.82 and <I>A</I> is 0.48. As is seen, the curves <I>N(t)</I> and <I>L(t)</I> have the selfaffine character with the fractal dimension, D<SUB>F</SUB>=2-H<FONT FACE="Symbol">&#187;</FONT>
+1.18. The determined value of <I>H</I>&gt;0.5 indicates the strictly persistent character of the tumor growth with low noise level. The tumor growth persistency allows use the nonlinear time series analysis [3] to predict the amplitude and time of the tumor colony value at the future time intervals on the basis of the already observed data. For this purpose various measures such as autocorrelations (or power spectrum), mean square error, and average mutual information are evaluated. We have been used the delay method [4,5] to reconstruct the phase space using delay coordinate vectors derived from a time series, <I>{N(t),t=1,...n}.</I> We can embed this time series in a <I>p</I>-dimensional space by taking <I>p</I>-coordinates <I>D(t)={N(t),N(t-h),...N(t-(p-1)h)}</I>, where h is the time delay. The behavior of an autocorrelation function for lag k defined as </P>
+<P ALIGN="CENTER"><IMG SRC="image22.gif" WIDTH=326 HEIGHT=113></P>
+<P ALIGN="JUSTIFY"> where <I>n</I> is the number of observation. As soon the autocorrelation function demonstrates the periodicity due to tumor cells division periodicity  and first time drops to <I>1/e</I> at k is equal 8 as we pick out lag <I>h</I> to be this values. The embedding dimension, <I>p</I>, determines the minimum number of dynamic variables needed to model the system, we choose to be 4 <I>(p&gt;2D<SUB>F</SUB>+1</I>). For the cell number prediction at time <I>T+1</I>, we take the embedded point at T and look though the points that are closest to <I>D(T)</I>. Single step prediction <I>P(T+1)</I> for <I>D(T+1)</I> is taken as the average of next to closest points. This strategy seems to be a sensitive test of the predicted values accuracy. The quality prediction measures given by normalized mean square error defined as </P>
+</FONT><FONT SIZE=6><P ALIGN="CENTER"><IMG SRC="image23.gif" WIDTH=373 HEIGHT=60></P>
+</FONT><FONT SIZE=5><P ALIGN="JUSTIFY">where <I>error<SUB>i</I></SUB>  is the difference between i-th observed and predicted values. For our task <FONT FACE="Symbol">&#86;</FONT>
+ has been found to be 0.047 that indicates on the quality of prediction.</P>
+<P ALIGN="JUSTIFY">&#9;</P>
+<P ALIGN="JUSTIFY">Conclusions.</P>
+<P ALIGN="JUSTIFY">&#9;</P>
+<P ALIGN="JUSTIFY">In our paper we propose cellular automata model which mimic all peculiarities of real immune-tumor system. Three regimes of the immune response and tumor dynamics have been determined which are well known in clinical experiments: normal wound healing, uncontrolled (exponential) tumor growth, and noise-like chaotic tumor-immune behavior. The third regime is dominantly deterministic and tumor growth predictions are made and tested. The state space method of recovering the dynamics of the biological system in terms of time series generated by immunity-tumor system has been proposed. The prediction quality is good and allows to construct the forecast of tumor growth.</P>
+<P ALIGN="JUSTIFY">&#9;</P>
+<OL>
+
+<P ALIGN="JUSTIFY"><LI>R.J. Gaylord and K. Nashidate. Modeling Nature. Spr.-Verl., 1996. </LI></P>
+<P ALIGN="JUSTIFY"><LI>J. Feder. Fractals. New York: Pl.Press, 1988</LI></P>
+<P ALIGN="JUSTIFY"><LI>D.T. Kaplan and L. Glass. Understanding Nonlinear Dynamics. Spr.-Verl., 1995</LI></P>
+<P ALIGN="JUSTIFY"><LI>D.Ruelle, J.P.Eckmann. Rev.Mod.Phys. 57, p. 617, 1985</LI></P>
+<P ALIGN="JUSTIFY"><LI>N.H.Packard, J.P.Crutchfield, J.D. Farmer, R.S. Shaw. Phys. Rev Lett. 45, pp.712, 1980</LI></P></OL>
+</FONT></BODY>
+</HTML>

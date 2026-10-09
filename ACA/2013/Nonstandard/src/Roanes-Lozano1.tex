@@ -1,0 +1,104 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                   %
+%     S.E. h�brido de clasificaci�n  y verificaci�n de originalidad de cl�sicos     %
+%     ERL, Jes�s Bonilla                                                            %
+%                                                                                   %
+%     25-IV-2013                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper]{article} %
+\usepackage{graphicx,amssymb} %
+
+\usepackage{url}
+
+\textwidth=15cm \hoffset=-1.2cm %
+\textheight=25cm \voffset=-2cm %
+
+\pagestyle{empty} %
+
+\date{} %
+
+\def\keywords#1{\begin{center}{\bf Keywords}\\{#1}\end{center}} %
+
+\def\titulo#1{\title{#1}} %
+\def\autores#1{\author{#1}} %
+
+% Please, do not change any of the above lines
+
+\begin{document}
+
+% Type down your paper title
+\titulo{A hybrid expert system for classic car\\
+        recognition and originality evaluation}
+% Authors
+\autores{Eugenio Roanes-Lozano \\ %  Affiliation
+       Instituto de Matem\'atica Interdisciplinar (IMI),\\
+       Departamento de \'Algebra, Facultad de Educaci\'on, \\
+       Universidad Complutense de Madrid, E-28040 Madrid (Spain) \\ \\
+       Jes\'us Bonilla\\
+       Motor Cl\'asico magazine (Editor in Chief)\\
+       c/ Ancora 40, E-28045 Madrid (Spain)\\ \\
+       \tt{eroanes@mat.ucm.es} % jbonilla@mpib.es} % Only one corresponding e-mail
+       }%
+
+
+\maketitle
+
+\thispagestyle{empty}
+
+
+
+% The abstract
+
+\begin{abstract}
+Apart from the condition of the car, one of the main problems when
+buying a classic car (or when estimating its value) is recognizing
+its originality.
+
+Many times, non-original parts and accessories have been
+installed, what is not normally very difficult to find out. But
+sometimes items from other versions of the same model can be
+found in a certain specimen, what is not that easy to recognize.
+
+We have developed in the past Rule Based Expert Systems (RBES) and
+AI tools for decision taking in different fields (medicine,
+transportation engineering,...), both using algebraic inference
+engines and logic programming.
+
+The key idea of this work is to develop a computer package that
+guides the user along a sequence of questions, in order to find
+out the model and/or version of the car and to detect non-original
+elements.
+
+One important fact is that the available information can be
+incomplete (for instance, all the available information about the
+vehicle can be a set of photographs). Moreover, the user of the
+system can be sometimes unable to answer all questions, even with
+all the required information.
+
+We have decided to use a hybrid approach, because:
+\begin{itemize}
+\item on one hand there are ``conclusive items'' that are easier to
+      handle using rules in the style of classic RBES,
+\item on the other hand, when the vehicle has a mixture of
+      characteristics from different models/versions, it is easier
+      to compare them with the predefined ones (stored in row
+      matrix, sequence, list format,...) in order to identify
+      the ``closest'' model/version.
+\end{itemize}
+
+A computer algebra system offers all the necessary tools for
+implementing such an approach. The article is illustrated with a
+small system (implemented in the computer algebra system
+\textit{Maple}, that takes advantage of its \textit{Logic}
+package), devoted to the Porsche 928.
+
+\end{abstract}
+
+\keywords{Expert Systems; Pattern Matching; Classic Cars;
+          Computer Algebra Systems} % Write down at least 3 Keywords
+
+% \section{Introduction}
+
+\end{document}

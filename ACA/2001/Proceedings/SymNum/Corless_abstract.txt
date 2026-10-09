@@ -1,0 +1,10 @@
+  Title:        Computing Riemann Surfaces for Factoring Bivariate
+                Approximate Polynomials
+  Authors:      Rob Corless
+  Affiliation:  University of Western Ontario, Canada
+  Abstract:
+A new technique for factoring bivariate approximate polynomials rests on the
+numerical construction of a substantial portion of the Riemann surface for the
+function defined by one factor.  We discuss the reliability and complexity of
+this technique.  Joint work with Mark Giesbrecht, Ilias Kotsireas, Mark van
+Hoeij and Stephen Watt.

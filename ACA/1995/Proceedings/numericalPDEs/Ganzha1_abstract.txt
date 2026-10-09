@@ -1,0 +1,30 @@
+               Symbolic-Numeric Stability Investigation of
+            Difference Schemes for the Euler and Navier-Stokes
+                              Equations
+
+                  V.G. Ganzha*) and E.V. Vorozhtsov
+
+             Institute of Theoretical and Applied Mechanics,
+          Russian Academy of Sciences, Novosibirsk 630090, Russia
+          -----------------------
+          *) At the moment, the University of Kassel, Kassel D 34127, Germany
+
+                                Abstract
+
+            We present a number of the symbolic-numeric algorithms for the
+       stability investigation of difference schemes approximating the 2D
+       and 3D Euler and Navier-Stokes equations of the compressible fluids.
+       All the algorithms implement in different ways the von Neumann
+       stability analysis procedure. It is shown that the consideration of
+       the curvilinear grid within the framework of the Fourier stability
+       analysis method increases by a factor of 23/9 the number of
+       nondimensional variables in the domain of the variation of which the
+       stability region is then determined in comparison with the case of an
+       uniform rectangular spatial grid for the difference discretization of
+       the 3D thin-layer Navier-Stokes equations. Since the needed computer
+       memory in the 3D case may reach O(10^107) machine words, the questions
+       of the compression of intermediate algebraic expressions are
+       discussed. A four-step stability analysis procedure for difference
+       schemes on curvilinear grids is proposed. The influence of turbulence
+       modeling on the sizes of the necessary stability region has been
+       investigated. Computational examples are presented.

@@ -1,0 +1,20 @@
+"IDA: an Interactive Document on Algebra"
+
+Arjeh M. Cohen 
+Dept. of Mathematics \& Computing Science 
+Eindhoven University of Technology 
+POBox 513 
+5600 MB Eindhoven 
+
+
+In this talk we will present interactive course ware, 
+both for teaching and learning mathematics in a novel way.
+The topic is first (and second) year undergraduate algebra. high 
+school mathematics, the student is supposed to know just a little The 
+presentation differs from that of an ordinary book on the subject in 
+that each page has a tableau on which the core information is 
+displayed, and little else. Further information, such as a proof of  
+the result, is available at the click of a button.
+We will discuss some of the experience we gained and the few guiding 
+principles that we kept during the manufacturing procedure.
+

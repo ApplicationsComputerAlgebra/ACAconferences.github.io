@@ -1,0 +1,24 @@
+"Using Theorema for Mathematical Education"
+
+Bruno Buchberger, Tudor Jebelean* 
+Research Institute for Symbolic Computation 
+A-4232 Hagenberg, Austria
+
+
+The Theorema project implements a sophisticated computing and
+reasoning system in natural language presentation and with natural
+deduction capabilities, which also has an easy-to-use interface
+accessible both locally and over the internet.  The main objectives of
+the formal training in our system are:
+- Language training: learn and train the use of mathematical language for 
+concise and exact expressing of models. 
+- Formal models: learn and train how to build mathematical models for 
+concrete real problems (defining concepts, defining properties, defining and 
+exploring problems). 
+- Conjecture and prove: learn and train the formulation of conjectures about 
+the properties of mathematical objects, prove and disprove conjectures.
+The system is based on the computer algebra system Mathematica 3.0 and
+is presented to the user in the form of an intelligent environment for
+defining algorithms using higher order predicate logic, for
+experimenting with them, for proving in various mathematical domains,
+and for developing mathematical texts in natural language.

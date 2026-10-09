@@ -1,0 +1,97 @@
+-------------------
+(Notes: The name Fruhwirth is German, and there are two dots (an umlaut) over 
+the "u"(&uuml;).  The name Regin is French, and there is an accent acute over 
+the "e" (&eacute;).The mathematical notations "n" and "O(n^2)" should be in 
+standard math.
+------------------
+
+Title:
+
+A Computer Algebra package for Constraint Satisfaction Problems
+
+Author:
+
+Carl Devore
+
+Affiliation:
+
+Department of Mathematical Sciences,
+University of Delaware,
+Newark, DE 19716, USA
+
+
+Abstract:
+
+We present a Maple package for solving a class of Constraint Satisfaction
+Problems (CSPs).  The Computer Algebra System allows for the easy specification
+of symbolic constraints of arbitrary complexity.  Conjunctions and disjunctions
+of constraints can be nested to arbitrary depths.  Constraints can be specified
+as procedures which may return additional constraints.  Such procedures are
+akin to the constraint handling rules discussed by Fruhwirth [2].  Constraints
+and entire problem specifications can be programmatically generated.  Solutions
+and partial solutions can be displayed graphically as they are being generated.
+The package can display its internal workings at any level of detail that the
+user wants.  Two consequences of these features are that (1) the package can be
+used to analyze a small-scale version of a problem and to develop an efficient
+solution technique before the real-scale version in encoded in another
+language, and (2) the package can be used to teach logic, programming, and
+computer algebra.  Several examples are shown of puzzle problems that are fun
+and understandable at an elementary level.
+
+The class of CSPs handled by the package is those problems that can be stated
+in terms of finding an equivalence relation (ER) on a finite set (of size n)
+where a partition of that set into systems of distinct representatives (SDRs)
+of the equivalence classes can be initially specified.  Thus, every variable
+has a constraint-of-difference in the sense of Regin [3].  We call this class
+ER/SDR.  Several examples are used to show that ER/SDR is much larger than one
+might at first suppose.  Specifically, the package is well-suited to solving
+logic puzzles that appear in popular magazines.  These are typically problems
+with a small number of variables, but they may have very complex constraints.
+
+Three of the techniques commonly used in the solution of CSPs are
+arc-consistency, constraint propagation, and search heuristics.  The ER format
+allows the solution state to be represented as a single symmetric n x n
+three-valued matrix plus a symbolic list of those constraints whose information
+has not yet been fully incorporated into that matrix.  The ER/SDR format allows
+the arc-consistency and a large portion of the constraint propagation to be
+handled by efficient small-scale logical manipulations of the matrix.  The
+search heuristic is akin to the traditional most-constrained-variable heuristic
+and is achieved through very efficient O(n^2) numerical computations on the
+whole matrix.
+
+The constraint handling part of the package uses a traditional backtracking
+search.  Variable assignments that lead to contradictions are pruned from the
+search space.  The disjuncts of disjunctive constraints which lead to
+contradictions are symbolically negated.  Unique solutions are proven unique by
+checking that all other possibilities lead to contradictions.  The package
+detects most problems that are severely under-constrained and stops with a
+partial solution rather than continuing with an uninteresting and potentially
+lengthy attempt to assign all variables.
+
+The module construct of Maple allows several CSPs to be solved simultaneously,
+each maintaining its own local variables.  This technique is very powerful when
+the several problems are in fact the same problem with their constraints
+specified in slightly different ways.  The interaction between the modules is
+handled by special constraints called channeling constraints by Cheng, Lee, and
+Wu [1].
+
+While the current implementation only allows CSPs in class ER/SDR, the model
+used for specifying the constraints and constraint handling rules can be
+retained as the package is extended for more general CSPs.  Another planned
+extension is the parallel processing of disjunctive constraints using Maple's
+"process" package.
+
+
+1. B.M.W. Cheng, J.H.M. Lee, and J.C.K. Wu, Speeding up constraint
+propagation by redundant modeling, Proceedings of the Second
+International Conference on Principles and Practice of Constraint
+Programming, Lecture Notes in Computer Science, vol. 1118,
+Springer, Cambridge, Massachusetts, USA, 1996, pp. 91-103.
+
+2. Thom Fruhwirth, Theory and practice of constraint handling rules,
+Special Issue on Constraint Logic Programming (P. Stuckey and K. Marriott,
+eds.), Journal of Logic Programming, vol. 37(1-3), October 1998, pp.
+95-138.
+
+3. Jean-Charles Regin, A filtering algorithm for constraints of difference
+in CSPs, Proceedings AAAI-94, Seattle, Washington, USA.

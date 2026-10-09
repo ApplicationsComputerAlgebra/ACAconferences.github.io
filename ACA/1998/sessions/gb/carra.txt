@@ -1,0 +1,17 @@
+    "Gr\"{o}bner Bases in Fractional Polynomial Rings and their Applications"
+
+    Giuseppa Carra'-Ferro.
+    Department  of Mathematics, University of Catania,  Italy
+    Viale Andrea Doria 6
+    Catania, 95125
+    Italy
+    E-mail:carra@dipmat.unict.it
+	
+A fractional polynomial is a generalization of a polynomial, in which
+nonnegative rational exponents are allowed \cite{WA1}. Many properties
+of polynomial rings are not true any more in this generalization,
+while some other property holds. In particular, given a finitely
+generated ideal I in a fractional polynomial ring with coefficients in
+a field, it is possible to extend the notion of Gr\"{o}bner basis. The
+aim of the paper is to show this extensions and its use for solving
+fractional polynomial systems.

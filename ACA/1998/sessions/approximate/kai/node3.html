@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Approximate-GCD by Hribernig and Stetter</TITLE>
+<META NAME="description" CONTENT="Approximate-GCD by Hribernig and Stetter">
+<META NAME="keywords" CONTENT="kai">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="kai.css">
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="kai.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html40"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html38"
+ HREF="kai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html32"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html41"
+ HREF="node4.html">Accuracy of HRFA</A>
+<B> Up:</B> <A NAME="tex2html39"
+ HREF="kai.html">Accuracy Analysis of Hybrid</A>
+<B> Previous:</B> <A NAME="tex2html33"
+ HREF="node2.html">Hybrid Rational Function Approximation</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00030000000000000000">
+Approximate-GCD by Hribernig and Stetter</A>
+</H1>
+
+<P>
+The approximate-GCD, which is called <I>near-GCD</I> in [<A
+ HREF="node7.html#HS96">8</A>], 
+of two polynomials 
+<!-- MATH: $f_1, f_2 \in C[x]$ -->
+<IMG
+ WIDTH="96" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$f_1, f_2 \in C[x]$">,
+where <I>C</I>[<I>x</I>] is a complex number coefficient polynomial, 
+is stated as the following concept.
+
+<P>
+<P>
+<DIV><A NAME="def:alpha-GCD"><B>Definition  3.1</B></A> (Hribernig and Stetter)  &nbsp; 
+At the accuracy level <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\alpha$">,
+two polynomials 
+<!-- MATH: $\tilde{f}_i\in C[x]$ -->
+<IMG
+ WIDTH="71" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$\tilde{f}_i\in C[x]$">,
+<I>i</I>=1,2, possess a near-GCD <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\tilde{g}$">
+if there exist polynomials 
+
+<!-- MATH: $f^{\ast}_i\in C[x]$ -->
+<IMG
+ WIDTH="75" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$f^{\ast}_i\in C[x]$">,
+<I>i</I>=1,2, which satisfy
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+GCD(f^{\ast}_1,f^{\ast}_2)=\tilde{g},\ and\ \Vert\tilde{f}_i-f^{\ast}_i\Vert\leq\alpha, i=1,2,
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eqn:near-GCD">&#160;</A><IMG
+ WIDTH="335" HEIGHT="31"
+ SRC="img34.gif"
+ ALT="\begin{displaymath}GCD(f^{\ast}_1,f^{\ast}_2)=\tilde{g},\ and\ \Vert\tilde{f}_i-f^{\ast}_i\Vert\leq\alpha, i=1,2,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+and deg
+<!-- MATH: $(\tilde{g})$ -->
+<IMG
+ WIDTH="27" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.gif"
+ ALT="$(\tilde{g})$">
+is the highest possible degree for (<A HREF="node3.html#eqn:near-GCD">5</A>).
+Equivalently, a near-GCD <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\tilde{g}$">
+of 
+<!-- MATH: $\tilde{f}_1$ -->
+<IMG
+ WIDTH="21" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$\tilde{f}_1$">
+and 
+<!-- MATH: $\tilde{f}_2$ -->
+<IMG
+ WIDTH="21" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$\tilde{f}_2$">satisfies
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\tilde{f}_i=\tilde{g}\cdot\tilde{q}_i+\tilde{r}_i\ with\ \Vert\tilde{r}_i\Vert\leq\alpha, i=1,2.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="272" HEIGHT="31"
+ SRC="img38.gif"
+ ALT="\begin{displaymath}\tilde{f}_i=\tilde{g}\cdot\tilde{q}_i+\tilde{r}_i\ with\ \Vert\tilde{r}_i\Vert\leq\alpha, i=1,2.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+A near-GCD at accuracy level <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\alpha$">
+will be denoted by
+
+<!-- MATH: $\alpha\mbox{-}GCD(\tilde{f}_1,\tilde{f}_2)$ -->
+<IMG
+ WIDTH="113" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.gif"
+ ALT="$\alpha\mbox{-}GCD(\tilde{f}_1,\tilde{f}_2)$">.</DIV><P></P>
+
+<P>
+Here, the norm of the polynomial means <I>L</I><SUB>1</SUB> norm. A near-GCD <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\tilde{g}$">
+is 
+computed via
+Euclidean Algorithm and a relaxed
+termination criterion which should be imposed at a given accuracy level <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\alpha$">.
+The
+algorithm to compute <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\alpha$">-GCD of <I>f</I><SUB>1</SUB> and <I>f</I><SUB>2</SUB> is summarized as follows:
+
+<P>
+<P>
+<DIV><B>Algorithm  3.1</B> (tex2html_wrap_inline$$-GCD)  &nbsp; 
+ <BR>
+<B>Input:</B> 
+<!-- MATH: $f_1, f_2, \alpha$ -->
+<IMG
+ WIDTH="62" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$f_1, f_2, \alpha$">
+<BR>
+<B>Output:</B> <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\alpha$">-GCD of <I>f</I><SUB>1</SUB> and <I>f</I><SUB>2</SUB>
+<BR>
+<B>Method:</B>
+<DL COMPACT>
+<DT>1.
+<DD>Compute
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f_{j-1}=f_j\cdot q_j+f_{j+1}
+\end{displaymath} -->
+
+<IMG
+ WIDTH="145" HEIGHT="31"
+ SRC="img41.gif"
+ ALT="\begin{displaymath}f_{j-1}=f_j\cdot q_j+f_{j+1}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+s_j^{(i)}=q_js_{j-1}^{(i)}+s_{j-2}^{(i)},\ j>i
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="192" HEIGHT="34"
+ SRC="img42.gif"
+ ALT="\begin{displaymath}s_j^{(i)}=q_js_{j-1}^{(i)}+s_{j-2}^{(i)},\ j>i\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+for 
+<!-- MATH: $j=2,3,\cdots$ -->
+<IMG
+ WIDTH="86" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$j=2,3,\cdots$">
+and <I>i</I>=1,2 with
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+s_{i-1}^{(i)}=0, s_{i}^{(i)}=1.
+\end{displaymath} -->
+
+
+<I>s</I><SUB><I>i</I>-1</SUB><SUP>(<I>i</I>)</SUP>=0, <I>s</I><SUB><I>i</I></SUB><SUP>(<I>i</I>)</SUP>=1.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><DT>2.
+<DD>if 
+<!-- MATH: $\Vert s_{j-1}^{(i)}f_{j+1}\Vert\leq\alpha$ -->
+<IMG
+ WIDTH="119" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.gif"
+ ALT="$\Vert s_{j-1}^{(i)}f_{j+1}\Vert\leq\alpha$">,
+then 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f_j=\alpha\mbox{-}GCD(f_1,f_2).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="148" HEIGHT="31"
+ SRC="img45.gif"
+ ALT="\begin{displaymath}f_j=\alpha\mbox{-}GCD(f_1,f_2).\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P></DL><A NAME="alg:a-gcd">&#160;</A></DIV><P></P>
+
+<P>
+The polynomials <I>f</I><SUB><I>j</I></SUB> generated by the algorithm,
+<I>f</I><SUB>1</SUB> and <I>f</I><SUB>2</SUB> are represented as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+f_i=s^{(i)}_jf_j+s^{(i)}_{j-1}f_{j+1},\ j>i\geq 1.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eqn:input_pol">&#160;</A><IMG
+ WIDTH="240" HEIGHT="34"
+ SRC="img46.gif"
+ ALT="\begin{displaymath}f_i=s^{(i)}_jf_j+s^{(i)}_{j-1}f_{j+1},\ j>i\geq 1.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+In our case, <I>f</I><SUB>1</SUB> and <I>f</I><SUB>2</SUB> should be read as <I>P</I>(<I>x</I>) and <I>Q</I>(<I>x</I>), respectively.
+Also <I>s</I><SUP>(1)</SUP><SUB><I>j</I></SUB>,<I>s</I><SUP>(2)</SUP><SUB><I>j</I></SUB>, and <I>f</I><SUB><I>j</I></SUB> should be read as <I>p</I>(<I>x</I>), <I>q</I>(<I>x</I>) and <I>g</I>(<I>x</I>), respectively. 
+Therefore (<A HREF="node3.html#eqn:input_pol">7</A>) is expressed as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\left\{\begin{array}{ccc}
+P(x) &=& p(x)g(x)+\delta P(x),\\
+Q(x) &=& q(x)g(x)+\delta Q(x),
+\end{array}\right.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eqn:input_pol_our">&#160;</A><IMG
+ WIDTH="228" HEIGHT="48"
+ SRC="img47.gif"
+ ALT="\begin{displaymath}\left\{\begin{array}{ccc}
+P(x) &=& p(x)g(x)+\delta P(x),\\
+Q(x) &=& q(x)g(x)+\delta Q(x),
+\end{array}\right.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where 
+<!-- MATH: $\delta P(x)=s^{(1)}_{j-1}f_{j+1}$ -->
+<IMG
+ WIDTH="135" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.gif"
+ ALT="$\delta P(x)=s^{(1)}_{j-1}f_{j+1}$">
+and 
+
+<!-- MATH: $\delta Q(x)=s^{(2)}_{j-1}f_{j+1}$ -->
+<IMG
+ WIDTH="135" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.gif"
+ ALT="$\delta Q(x)=s^{(2)}_{j-1}f_{j+1}$">.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html40"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html38"
+ HREF="kai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html32"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html41"
+ HREF="node4.html">Accuracy of HRFA</A>
+<B> Up:</B> <A NAME="tex2html39"
+ HREF="kai.html">Accuracy Analysis of Hybrid</A>
+<B> Previous:</B> <A NAME="tex2html33"
+ HREF="node2.html">Hybrid Rational Function Approximation</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

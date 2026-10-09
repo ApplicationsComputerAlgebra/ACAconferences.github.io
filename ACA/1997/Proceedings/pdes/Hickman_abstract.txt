@@ -1,0 +1,17 @@
+Symmetric Conservation Laws
+
+Mark Hickman
+Department of Mathematics and Statistics
+University of Canterbury
+Christchurch, New Zealand         
+
+email: M.Hickman@math.canterbury.ac.nz
+
+The computation of conservation laws that are "invariant" under a given
+symmetry is considered.  These conservation laws are characterized as
+eigenfunctions of the prolongation of the symmetry.  Under suitable
+assumptions, the eigenspace for each eigenvalue is finite dimensional and the
+computation reduces to solving a finite system of linear algebraic equations.
+These conservation laws are useful in constructing Wahlquist-Estabrook
+prolongations of the original system of equations (such that the given symmetry
+extends to the prolongation).

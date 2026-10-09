@@ -1,0 +1,32 @@
+Active learning through interactive texts based on Mathematica Notebooks
+
+Jerry Uhl                                   juhl@ncsa.uiuc.edu
+Professor of Mathematics                    1409 West Green Street
+University of Illinois                      Urbana,Illinois 61801
+Calculus&Mathematica Development Team
+(703) 765-9000
+
+This talk will discuss the following basic principles used to lay
+out interactive texts for active learning:
+
+o Give students work whose importance they recognize.
+
+o Give the students professional tools.
+
+o Communicate new ideas visually and experimentally; get an idea across
+before putting language on it.
+
+o When the language goes on, make it plain everyday American and minimize
+math jargon.
+
+o Give the students a chance to organize their thoughts by explaining
+themselves in writing.
+
+o Give the students the opportunity to learn the math, the programming and
+the writing in context.
+
+o Get the instructor out of the way and give the students the freedom to
+think for themselves.
+
+Examples from Calculus & Mathematica (Addison-Wesley, 1994) and new courses in
+Matrix Theory and Differential equations will be given.

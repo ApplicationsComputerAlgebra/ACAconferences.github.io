@@ -1,0 +1,103 @@
+
+<H1><A NAME="SECTION00040000000000000000"><tex2html_anchor_invisible_mark></A><A NAME="faq"><tex2html_anchor_mark></A><BR>
+Frequently asked questions
+</H1>
+
+<P>
+We list some of the questions which have been frequently asked 
+about the stabilization methodology.  We also address some of the 
+misunderstood which we have encountered.
+
+<P>
+<UL>
+<LI><#468#><B>Q.</B><#468#> The stabilization methodology guarantees that 
+the result will converge to the true result as the precision increases.
+Does this happen in a manner similar to Newton's method? <BR>
+<#469#><B>A.</B><#469#> Presumably the question is whether applying the stabilization methodology to an algorithm <tex2html_image_mark>#tex2html_wrap_inline1557# yields an algorithm <tex2html_image_mark>#tex2html_wrap_inline1559# where <tex2html_image_mark>#tex2html_wrap_inline1561# is
+similar to Newton's method.  In general this is not the case.  Newton's
+method is a <#470#><I>successive approximation</I><#470#> method.  One inputs an 
+approximate solution and, when all goes well, Newton's method outputs 
+a better approximate solution and the successive approximations 
+converge to an exact solution.
+Using Newton's method one obtains a convergent sequence of results
+by using the output from one pass as the input to the next pass.  In general <tex2html_image_mark>#tex2html_wrap_inline1563# is not a successive approximation method and it would not be possible to use the output from one iteration of <tex2html_image_mark>#tex2html_wrap_inline1565# as the input for the next 
+iteration.<A NAME="tex2html14"
+ HREF="footnode.html#foot790"><SUP>11</SUP></A> 
+By contrast an oversimplified description of <tex2html_image_mark>#tex2html_wrap_inline1567# goes as follows:
+<UL>
+<LI>When <tex2html_image_mark>#tex2html_wrap_inline1569# is executed with (exact) input and exact computation a
+particular ``execution path'' through the algorithm occurs, based upon the 
+specific program branching resulting from predicate evaluation.  Let us call this execution path the <#474#><I>exact execution path</I><#474#> resulting from the input.
+<LI><tex2html_image_mark>#tex2html_wrap_inline1571# together with some (exact) input does the following:
+<UL>
+<LI>The <#476#><I>exact execution path</I><#476#> resulting from the input is ascertained.
+<LI>The <#477#><I>exact execution path</I><#477#> is executed with increasingly accurate approximations to the exact input.
+<LI>Increasingly accurate ``arithmetic operations'' are used in the passes with the increasingly accurate approximations to the exact input.
+</UL></UL>Of course when we say ``increasingly accurate'' we mean ``increasingly accurate and convergent to the exact value.''
+<LI><#480#><B>Q.</B><#480#> Zero rewriting changes an interval <tex2html_verbatim_mark>#math102#<tex2html_image_mark>#tex2html_wrap_inline1573# to [0,0]if <tex2html_verbatim_mark>#math103#<tex2html_image_mark>#tex2html_wrap_inline1577#. Is <tex2html_image_mark>#tex2html_wrap_inline1579# given in advance, or 
+before running an algorithm? <BR>
+<#481#><B>A.</B><#481#> No.  At an ``internal'' point in an algorithm one might be adding
+<tex2html_verbatim_mark>#math104#<tex2html_image_mark>#tex2html_wrap_inline1581# and <tex2html_image_mark>#tex2html_wrap_inline1583#.  The result would be <tex2html_verbatim_mark>#math105#<tex2html_image_mark>#tex2html_wrap_inline1585#.  Suppose that the next step is to apply a predicate to <tex2html_verbatim_mark>#math106#<tex2html_image_mark>#tex2html_wrap_inline1587#. 
+Then zero rewriting is performed on <tex2html_verbatim_mark>#math107#<tex2html_image_mark>#tex2html_wrap_inline1589# before the predicate
+is applied.  Thus we are in the situation where <tex2html_verbatim_mark>#math108#<tex2html_image_mark>#tex2html_wrap_inline1591# = <tex2html_verbatim_mark>#math109#<tex2html_image_mark>#tex2html_wrap_inline1595# and we see that <tex2html_image_mark>#tex2html_wrap_inline1597#, the error bound of <tex2html_verbatim_mark>#math110#<tex2html_image_mark>#tex2html_wrap_inline1599#, differs in general from the error bound of other terms.
+
+<P>
+In case <tex2html_verbatim_mark>#math111#<tex2html_image_mark>#tex2html_wrap_inline1601# is an input and not the result of previous
+computation then <I>E</I> is an approximation to some exact input value
+and <tex2html_image_mark>#tex2html_wrap_inline1605# is the error bound.  If there are other input approximations
+it is not required that they all have the same error bounds.
+
+<P>
+When <tex2html_verbatim_mark>#math112#<tex2html_image_mark>#tex2html_wrap_inline1607# is an input, the size of <tex2html_image_mark>#tex2html_wrap_inline1609# depends upon at
+which stage we are in the approximation.  If <tex2html_verbatim_mark>#math113#<tex2html_image_mark>#tex2html_wrap_inline1611# is the
+<tex2html_image_mark>#tex2html_wrap_inline1613# at the <I>i</I><SUP><I>th</I></SUP> stage then  <tex2html_verbatim_mark>#math114#<tex2html_image_mark>#tex2html_wrap_inline1617#.
+
+<P>
+<LI><#483#><B>Q.</B><#483#> What is the effect of zero rewriting?  Is it really necessary? <BR>
+<#484#><B>A.</B><#484#> Yes.
+Let us suppose that when executed with a particular input and exact computation the algebraic algorithm <tex2html_image_mark>#tex2html_wrap_inline1619# outputs the real number <I>E</I>.  Then the algorithm
+<tex2html_verbatim_mark>#math115#<tex2html_image_mark>#tex2html_wrap_inline1623# when executed on approximation sequences for the input to
+<tex2html_image_mark>#tex2html_wrap_inline1625# has output <tex2html_verbatim_mark>#math116#<tex2html_image_mark>#tex2html_wrap_inline1627# where <tex2html_verbatim_mark>#math117#<tex2html_image_mark>#tex2html_wrap_inline1629# is an approximation 
+sequence for <I>E</I>, i.e. <tex2html_verbatim_mark>#math118#<tex2html_image_mark>#tex2html_wrap_inline1633# and 
+<tex2html_verbatim_mark>#math119#<tex2html_image_mark>#tex2html_wrap_inline1635#.<A NAME="tex2html15"
+ HREF="footnode.html#foot486"><SUP>12</SUP></A>
+Consider the two cases, whether <I>E</I> = 0 or not.  If <I>E</I>=0 then 
+<tex2html_verbatim_mark>#math121#<tex2html_image_mark>#tex2html_wrap_inline1645# implies that <tex2html_verbatim_mark>#math122#<tex2html_image_mark>#tex2html_wrap_inline1647#and so <tex2html_verbatim_mark>#math123#<tex2html_image_mark>#tex2html_wrap_inline1649# is rewritten to [0,0] and <I>E</I> is the first component of the rewritten <tex2html_verbatim_mark>#math124#<tex2html_image_mark>#tex2html_wrap_inline1655#.  Next suppose that <I>E</I> does not equal zero.  In this case <tex2html_verbatim_mark>#math125#<tex2html_image_mark>#tex2html_wrap_inline1659# implies that
+there is an <I>N</I> where  <tex2html_verbatim_mark>#math126#<tex2html_image_mark>#tex2html_wrap_inline1663# for <tex2html_image_mark>#tex2html_wrap_inline1665#.  Then 
+<tex2html_verbatim_mark>#math127#<tex2html_image_mark>#tex2html_wrap_inline1667# implies that <tex2html_verbatim_mark>#math128#<tex2html_image_mark>#tex2html_wrap_inline1669#for <tex2html_image_mark>#tex2html_wrap_inline1671#.  Hence <tex2html_verbatim_mark>#math129#<tex2html_image_mark>#tex2html_wrap_inline1673# does not get changed by 
+rewriting for  <tex2html_image_mark>#tex2html_wrap_inline1675#.  Thus for  <tex2html_image_mark>#tex2html_wrap_inline1677# the first component of the rewritten <tex2html_verbatim_mark>#math130#<tex2html_image_mark>#tex2html_wrap_inline1679# is <tex2html_image_mark>#tex2html_wrap_inline1681# and not 0 and hence
+converges to <I>E</I>.
+
+<P>
+Now suppose that instead of <I>E</I> being the output of <tex2html_image_mark>#tex2html_wrap_inline1689#, <I>E</I> is an internal quantity computed by <tex2html_image_mark>#tex2html_wrap_inline1693# in the course of execution of <tex2html_image_mark>#tex2html_wrap_inline1695# and a predicate of <I>A</I> which has zero discontinuity gets evaluated at <I>E</I>.  The same reasoning
+as above shows that the first component of the rewritten <tex2html_verbatim_mark>#math131#<tex2html_image_mark>#tex2html_wrap_inline1701# is 0 from some point onward if <I>E</I> = 0 and otherwise the first component is part of a sequence converging to <I>E</I>.
+Thus if the predicate does in fact have a discontinuity at 0 there will
+not be a problem because the (corresponding) predicate for <tex2html_verbatim_mark>#math132#<tex2html_image_mark>#tex2html_wrap_inline1711# will be
+evaluated at 0 and not on elements of a sequence converging to 0.
+
+<P>
+<LI>
+<#497#><B>Q.</B><#497#>  Suppose we wish to compute <I>x</I> + <I>z</I> - <I>x</I>, where <I>z</I> is some complicated but ultimately small (but not zero) quantity, and <I>x</I> 
+is large (or has large coefficients).  Then there is a good chance 
+that zero rewriting will throw away the <I>z</I> term; giving the final 
+answer of zero.  Evaluating the resulting symbolic expression in 
+exact arithmetic (namely <I>x</I> - <I>x</I>) will also give zero.  The author's 
+algorithm will conclude that all is well, but the answer will be wrong.
+What is wrong with this analysis of the stabilization methodology?
+
+<P>
+<#498#><B>A.</B><#498#>  Suppose at the <I>i</I><SUP><I>th</I></SUP> stage the interval coefficient 
+corresponding to <I>x</I> is <tex2html_verbatim_mark>#math133#<tex2html_image_mark>#tex2html_wrap_inline1731# and the interval coefficient 
+corresponding to <I>z</I> is <tex2html_verbatim_mark>#math134#<tex2html_image_mark>#tex2html_wrap_inline1735#.  Then the interval
+coefficient for <I>x</I> + <I>z</I> - <I>x</I> will be:  <tex2html_verbatim_mark>#math135#<tex2html_image_mark>#tex2html_wrap_inline1739#.
+The questioner seems to think that <tex2html_image_mark>#tex2html_wrap_inline1741# will be large because
+<I>x</I> is large but in fact <tex2html_image_mark>#tex2html_wrap_inline1745# is a bound for |<I>x</I> - <I>x</I><SUB><I>i</I></SUB>| and
+<tex2html_verbatim_mark>#math136#<tex2html_image_mark>#tex2html_wrap_inline1749# as <tex2html_verbatim_mark>#math137#<tex2html_image_mark>#tex2html_wrap_inline1751#.  Also,
+<tex2html_verbatim_mark>#math138#<tex2html_image_mark>#tex2html_wrap_inline1753# as <tex2html_verbatim_mark>#math139#<tex2html_image_mark>#tex2html_wrap_inline1755#.  It may happen 
+for low values of <I>i</I> that <tex2html_verbatim_mark>#math140#<tex2html_image_mark>#tex2html_wrap_inline1759# in which
+case <tex2html_verbatim_mark>#math141#<tex2html_image_mark>#tex2html_wrap_inline1761# will be rewritten to [0,0] but
+<tex2html_verbatim_mark>#math142#<tex2html_image_mark>#tex2html_wrap_inline1763# and <tex2html_verbatim_mark>#math143#<tex2html_image_mark>#tex2html_wrap_inline1765# imply that
+for large values of <I>i</I>:  <tex2html_verbatim_mark>#math144#<tex2html_image_mark>#tex2html_wrap_inline1769# since <I>z</I>is not zero.  At this stage <tex2html_verbatim_mark>#math145#<tex2html_image_mark>#tex2html_wrap_inline1773# is not
+rewritten to [0,0].
+</UL>
+<P>

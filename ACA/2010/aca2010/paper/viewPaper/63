@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Locatelli</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="http://aca2010.info/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="http://aca2010.info/styles/paperView.css" type="text/css" />
+
+			<link rel="stylesheet" href="http://aca2010.info/plugins/themes/classicNavy/classicNavy.css" type="text/css" />
+	
+	<script type="text/javascript" src="http://aca2010.info/js/general.js"></script>
+	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript" src="http://aca2010.info/js/sizer.js" ></script>
+
+	<!-- Add stylesheets for the font sizer -->
+	<link rel="alternate stylesheet" title="Small" href="http://aca2010.info/styles/fontSmall.css" type="text/css" />
+	<link rel="stylesheet" title="Medium" href="http://aca2010.info/styles/fontMedium.css" type="text/css" />
+	<link rel="alternate stylesheet" title="Large" href="http://aca2010.info/styles/fontLarge.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="body">
+
+<div id="main">
+
+<h2>University of Vlora - Conference Center,&nbsp;ACA&#039;10, Applications of Computer Algebra</h2>
+
+<div id="navbar">
+	<ul class="menu">
+		<li><a href="http://aca2010.info/index.php/index/index" target="_parent">Home</a></li>
+		<li><a href="../../about" target="_parent">About</a></li>
+					<li><a href="../../login" target="_parent">Log In</a></li>
+			<li><a href="../../user/account" target="_parent">Account</a></li>
+				<li><a href="../../search" target="_parent">Search</a></li>
+								<li><a target="_parent" href="../../../index/schedConfs/archive">Archive</a></li>							<li><a href="../../announcement" target="_parent">Announcements</a></li>
+						
+							<li><a href="http://univlora.edu.al" target="_parent">University of Vlora</a></li>
+					<li><a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/trackPolicies" target="_parent">Special Sessions</a></li>
+					<li><a href="https://sites.google.com/a/univlora.edu.al/aca-schedule/home/schedule" target="_parent">Schedule</a></li>
+			</ul>
+</div>
+
+<div id="breadcrumb">
+	<a href="../../index" target="_parent">Home</a> &gt;
+	<a href="../../../aca2010.4" target="_parent">ACA 2010, Applications of Computer Algebra, June 24-27,  Vlora, Albania</a> &gt;
+	<a href="../../index" target="_parent">ACA&#039;10, Applications of Computer Algebra</a> &gt;
+	<a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/presentations" target="_parent">Computer Algebra for Dynamical Systems and Celestial Mechanics</a> &gt;
+	<a href="../view/63/0" class="current" target="_parent">Locatelli</a>
+</div>
+
+<div id="content">
+	<div id="topBar">
+		<div id="paperFontSize">
+			Font Size:&nbsp;
+			<a href="63#" onclick="setFontSize('Small');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_small.gif" width="16" height="14" border="0" alt="Small" /></a>&nbsp;
+			<a href="63#" onclick="setFontSize('Medium');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_medium.gif" width="16" height="14" border="0" alt="Medium" /></a>&nbsp;
+			<a href="63#" onclick="setFontSize('Large');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_large.gif" width="16" height="14" border="0" alt="Large" /></a>
+		</div>
+	</div>
+
+	<h3>Long-time stability of the secular part of a planetary problem with more than three bodies</h3>
+	<div><em>Ugo Locatelli</em></div>
+	<br />
+
+	<blockquote>
+							Last modified:&nbsp;2010-03-29<br/>
+	</blockquote>
+
+		<h4>Abstract</h4>
+	<br />
+	<div>This work is part of a research project I'm carrying out in collaboration<br />with A. Giorgilli and M. Sansottera.<br /><br />We study the stability of the planetary problem including Sun,<br />Jupiter, Saturn and Uranus (SJSU, respectively). We first make<br />classical expansions of all the interaction terms between each pair of<br />planets appearing in the Hamiltonian of the SJSU system.  Therefore,<br />we remove the main perturbing terms depending on the mean motion<br />angles by a couple of canonical transformations similar to those<br />usually adopted in the Kolmogorov's scheme for the construction of KAM<br />tori. All these expansions are explicitly performed by algebraic<br />manipulation on a computer. In order to reduce the huge number of<br />terms to handle in the expansions, we limit ourselves to study the<br />SJSU problem in the planar case.<br /><br />Since we want to investigate the results we can produce in the<br />framework of the normal form theory, as a first stressing test, we<br />furtherly simplify our model in a drastic way, by averaging the<br />Hamiltonian with respect to the mean motion angles. Thus, we obtain a<br />three degrees of freedom model, which is able to approximate the<br />secular motions up to order 2 in the masses (and to high degree,<br />i.e. 12, in the eccentricities). <br /><br />In a previous work of us (i.e., "On the stability of the secular<br />evolution of the planar SJSU system", submitted to <em>Mathematics<br />and Computers in Simulation</em>), we applied a rather standard scheme of<br />estimates to the partial construction of the Birkhoff normal form<br />about the origin of the phase space which is an elliptic equilibrium<br />point. This allowed us to show that our secular Hamiltonian model is<br />"effectively stable" for times larger than the age of the solar<br />system "just" for all the initial conditions corresponding to<br />eccentricities smaller than (about) 1/2 of the real values.<br /><br />In the present talk, we reconsider the same problem in order to extend<br />the result to the "real" initial conditions. Therefore, we changed<br />our approach by firstly looking for a KAM torus in the vicinity of the<br />"real" orbit. Such a KAM torus is explicitly constructed up to a<br />high order of approximation, by using algebraic manipulations on a<br />computer; this allowed us to compare the flow on the torus with the<br />numerical integration of the secular system and to show the good<br />agreement between them. As a final step of our new approach, we<br />evaluate the stability time related to the Birkhoff normal form about<br />the KAM torus. This strongly improves our previous result.<br /></div>
+	<br />
+	
+						
+
+</div>
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+<!--
+	// Open "Define Terms" context when double-clicking any text
+	function openSearchTermWindow(url) {
+		var term;
+		if (window.getSelection) {
+			term = window.getSelection();
+		} else if (document.getSelection) {
+			term = document.getSelection();
+		} else if(document.selection && document.selection.createRange && document.selection.type.toLowerCase() == 'text') {
+			var range = document.selection.createRange();
+			term = range.text;
+		}
+		if (url.indexOf('?') > -1) openRTWindowWithToolbar(url + '&defineTerm=' + term);
+		else openRTWindowWithToolbar(url + '?defineTerm=' + term);
+	}
+
+	if(document.captureEvents) {
+		document.captureEvents(Event.DBLCLICK);
+	}
+	document.ondblclick = new Function("openSearchTermWindow('http://aca2010.info/index.php/aca2010/aca2010/rt/context/63/0/96')");
+// -->
+
+</script>
+
+</body>
+</html>

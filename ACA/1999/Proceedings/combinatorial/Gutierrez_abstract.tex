@@ -1,0 +1,66 @@
+{\bf   Computing subfields in pure trascendental extensions}
+
+\medskip
+
+\centerline{Jaime Gutierrez and Rosario Rubio}
+
+\centerline{Universidad de Cantabria, Spain}
+
+\bigskip
+
+
+\noindent  Rational function fields
+$K(x_1,\cdots,x_n)$ arise in various contexts
+within mathematics
+and computer science. Two  examples are
+the invariant theory  and the design of diffractive
+optical systems. Several questions related to
+subfields of $K(x_1,\cdots,x_n)$ occur in control
+theory in the structural
+identifiability problem, i.e., to check whether a differential equation model
+process uniquely determines the internal parameters of the process
+actions. Multivariate decompostion of
+rational functions proves useful for inverting rational
+functions. \par
+
+\noindent The motivation of this paper on the one hand is
+to generalize the univariate rational function decomposition
+problem to the multivariate one; on the other hand, we want to
+give new algorithms for questions concerning unirational and
+rational fields. We also hope that our approach will be a step to
+the better understanding of the design of optical systems for
+computation. For this we consider the
+following computational problem:
+
+\medskip
+
+\noindent Given $f_1,\cdots,f_m\in
+K(x_1,\cdots,x_n)$, we want to know if there
+exist
+$h_1,\cdots,h_t\in K(x_1,\cdots,x_n)$ such that
+$K(f_1,\cdots,f_m)\subset K(h_1,\cdots,h_t)$,
+is a proper  algebraic extension.
+
+\noindent And in the affirmative case,
+compute such
+$h$'s and rational functions
+$g_1,\cdots,g_m\in K(y_1,\cdots,y_t)$ such
+that
+
+$$f_i=g_i(h_1,\cdots,h_t) {\rm \hskip 2mm for
+\hskip 3mm all\hskip 2mm} i\in\{1,\cdots,m\}$$
+
+
+
+\medskip
+
+\noindent In this talk we present a polynomial time
+method to solve the above problem.
+The algorithm is based on
+the computation of subfields (using blocks of decomposition) of
+an algebraic extension. The basic idea underlying our approach
+is the translation of decompositions issues to factorization
+over algebraic extensions and then we find minimal blocks.
+
+
+\end

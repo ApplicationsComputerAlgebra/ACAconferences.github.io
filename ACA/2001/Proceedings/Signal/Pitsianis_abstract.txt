@@ -1,0 +1,16 @@
+Fast Multipole Algorithms via Symbolic Derivation
+
+Nikos Pitsianis,   &     Xiaobai Sun
+BOPS Inc & Duke U          Duke U
+
+There is a great variety of applications requiring the simulation of n-body
+problems where variants of the Fast Multipole Method (FMM) can be used.  In
+this talk I present a set of symbolic rewrite rules in Mathematica, that
+derives the formulae for fast multipole algorithms in three dimensions.  The
+rules are established identities in spherical harmonics.  The symbolic
+derivation produces a bilinear expression of the gravitational/electrostatic
+kernel function, separating source and target variables from well defined
+reference centers.  Our approach captures, verifies and recreates the
+algorithms by Greengard-Rokhlin and Barns-Hut for n-body problems in three
+dimensions.  This approach can be employed for a class of convolution
+algorithms.

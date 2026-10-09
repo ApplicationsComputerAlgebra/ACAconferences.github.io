@@ -1,0 +1,46 @@
+	Coding Theory and Computer Algebra
+	Igor Gachkov & Kenneth Hulth
+
+Applications of the theories of Error-Correcting Codes have in recent
+years risen tremendously.  Thus it is today hardly possible to imagine
+engineers working with data transmission and related fields without
+basic knowledge of coding/decoding of information. The possibilities
+of quantifying information with electronic equipment is developing
+rapidly, supplying the specialists working in communication theory with
+more and more sophisticated methods for circuit realization of concrete
+algorithms in Coding Theory.  During preceding years courses in Coding
+Theory have been considered only for students on postgraduate level.
+This is due to the complexity of the mathematical methods used in most
+codes, such as results from abstract algebra including linear spaces
+over Galois Fields. With the introduction of computers and computer
+algebra the methods can be fairly well illustrated. The authors have
+developed a course, Coding Theory in Mathematica, using the wide range
+of capabilities of MATHEMATICA.  The course was given during the autumn
+1994 at Jonkoping University, Sweden, on undergraduate level and with a
+minimum of prerequisites. The hands on sessions were based on a package
+of application programmes/algorithms, developed to illustrate the
+mathematical constructions, used in coding theory to encode and decode
+information.  We will in our seminar present some of our hands-on
+material, used to construct Block Codes with means of algebraical
+methods. We first present the basic concepts of coding theory, such as
+hamming distance, generator and parity check matrices, binary linear
+codes and group codes. We will then use some basic results from matrix
+algebra and linear spaces to construct code words from the information
+we want to send.  Due to noise in the channel of transmission the
+received words may differ from the code words which was sent, and the
+very aim of coding theory is to detect and correct possible errors.  In
+the linear codes (the code words having group structure) the encoding
+is accomplished by multiplying the information word (seen as a vector)
+with a generator matrix, whereas the encoding process starts with
+multiplication of the received word with the parity check matrix.
+Within the cyclic codes it is preferable to work with generator and
+parity check polynomials instead of matrices, and the code words here
+form a polynomial ring.  With algebraic extensions of the field Zp by
+irreducible (over Zp) polynomials, the final step is taken into the
+BCH-codes, which have a rich algebraical structure.  The application
+programmes in the package support the learning processes by
+illustrating the algorithms in the mathematical constructions. The rich
+variety of manipulations in the algebraical structures, the possibility
+to vary the parameters used in concrete cases and the simplicity to
+construct concrete codes with MATHEMATICA should strengthen the
+understanding of the mathematical ideas used in coding theory.

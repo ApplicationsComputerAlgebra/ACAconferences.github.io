@@ -1,0 +1,41 @@
+\begin{center}
+\LARGE
+Solver collaborations for non-linear constraints
+\end{center}
+
+\begin{center}
+\Large
+Eric Monfroy
+
+\end{center}
+
+\noindent
+Date:  July 19th (Friday)\\
+Time:  09:00-09:30\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+Constraint programming is a paradigm based on the notion of constraints and mechanisms for their
+resolution. Thus the key point of this class of languages is not only to offer a wide class of
+constraints for declarativity reasons, but also to treat them efficiently. For this purpose, the need
+for collaboration i.e. combination and cooperation of solvers is widely recognized. This new
+concept enables to solve problems that cannot be tackled or efficiently solved with a single solver.
+Furthermore the demand for integrating symbolic mathematical tools into automated deduction
+system has significantly increased. 
+
+In order to meet these motivations we propose BALI , an environment for designing/executing
+solver collaborations. BALI consists of a solver collaboration language and a host language. By
+providing several construction primitives (as concurrency, parallelism and sequentiality) and
+several control primitives for their composition (as iterator or guarded control), the solver
+collaboration language enables to build complex solvers from elementary ones. Then the host
+language, which is a constraint programming language, offers several strategies for manipulating
+constraints and executing solver collaborations. 
+
+In order to demonstrate the simplicity for designing solver collaborations in BALI, we give
+examples over non-linear constraints. The collaborations are made of several solvers as GB (from
+J.-C. Faugeere) for Groebner bases, extension of Gaussian elimination for linear equations and
+inequations (written in CHRs by T. Fruehwirth) and the symbolic computation software Maple. 
+

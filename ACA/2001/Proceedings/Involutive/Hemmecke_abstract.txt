@@ -1,0 +1,12 @@
+Title:  Dynamical Aspects of Involutive Bases Computations
+
+Author: Hemmecke, Ralf 
+
+Affiliation: RISC, University of Linz, Austria
+
+Abstract:
+
+In this talk we give a short introduction to involutive divisions and
+involutive bases computations.  Different approaches are discussed and compared
+and a new class of involutive divisions is presented.  We show results of our
+computer experiments with the different approaches.

@@ -1,0 +1,37 @@
+\begin{center}
+\LARGE
+Formal Lie Series and Applications to the Hamiltonian
+                           Mechanics
+
+\end{center}
+
+\begin{center}
+\Large
+Nikolay N.Vasiliev
+
+\end{center}
+
+\noindent
+Date:  July 19th (Friday)\\
+Time:  17:00-17:20\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+We consider different applications of formal Lie series to the hamiltonian mechanics. First
+example is the symplectic integration. Construction of most known symplectic methods, like
+Yoshida method is based on iterating process of superpositions of the exponential maps which can
+be represented as Lie series. Usually such superpositions can be evaluated on the base of BCH
+formula. We show how to construct implicit symplectic methods for numerical integration of
+hamiltonian ODE if the hamiltonian does not have the separated form H(P,Q)=U(P)+V(Q).
+Another problem which is also connected with application of symplectic methods is calculating of
+perturbation of hamiltonian due to concrete symplectic method for numerical integration. Some
+results about modeling of Henon-Heyles system via symplectic and nonsymplectic methods are
+also presented. We show how to use the procedure of normalisation based on the Lie series in order
+to construct the formal integral for the symplectic approximations of the Henon-Heiles system.
+We also discribe some algorithms for processing with formal Lie series, the problem of computer
+constructing of special basses in free Lie algebra and methods for representation of Lie series in
+the computer memory which allow effectively realize such algorithms. 
+

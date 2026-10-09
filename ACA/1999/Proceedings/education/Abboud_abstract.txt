@@ -1,0 +1,12 @@
+May C. Abboud* (Lebanon) Mabboud@beirut.lau.edu.lb
+Mathematica in Undergraduate Mathematics Courses - A Teaching or Learning Aid?
+
+This paper is based on a three years' experience in using "Mathematica" in the
+following undergraduate courses: Calculus, Abstract Algebra and Numerical
+Analysis. The experiences in each of the courses were dissimilar because of the
+extent of integration into the course, the size of the class and the maturity
+of the students. In one case, "Mathematica" became a tool for problem solving,
+visualization and interpretation of results, whereas on the other side, it
+became also a tool for exploration, abstracting, formulating and testing
+hypotheses. Classroom culture and the use of traditional textbooks were a
+further impediment in the creative use of the technology.

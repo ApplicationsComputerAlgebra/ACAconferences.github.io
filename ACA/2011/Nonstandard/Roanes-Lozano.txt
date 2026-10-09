@@ -1,0 +1,11 @@
+Revisiting Belnap's four-valued logic from the computer algebra system Maple
+
+Eugenio Roanes-Lozano (Universidad Complutense de Madrid)
+Antonio Hernando (Universidad Politécnica de Madrid)
+José A. Alonso (Universidad de Sevilla)
+
+Belnap's four-valued logic is a peculiar logic introduced in the seventies in
+order to deal with incomplete information.  Its truth values are: T, F, None
+and Both, and some elements in its truth tables are eye-catching.  We shall
+revisit this logic from Maple in order to achieve a better understanding of it.
+

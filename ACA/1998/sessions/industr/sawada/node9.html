@@ -1,0 +1,540 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Numeric part</TITLE>
+<META NAME="description" CONTENT="Numeric part">
+<META NAME="keywords" CONTENT="sawada">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sawada.css">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html120"
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html118"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html114"
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html121"
+ HREF="node10.html">Example</A>
+<B> Up:</B> <A NAME="tex2html119"
+ HREF="node2.html">Algebraic under constraint solver</A>
+<B> Previous:</B> <A NAME="tex2html115"
+ HREF="node8.html">Design variables whose values</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00025000000000000000">&#160;</A>
+<A NAME="subsec:numeric">&#160;</A>
+<BR>
+Numeric part
+</H2>
+The numeric part receives Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>) and (<A HREF="node7.html#eq:constraint-si">3</A>), and computes numerical solutions to it. Let <B><I>R</I></B> be a region defined by Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>) and (<A HREF="node7.html#eq:constraint-si">3</A>) and 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+be an objective function which has the minimum point in 
+<!-- MATH: $(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="76" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">-space. 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="582" HEIGHT="56"
+ SRC="img29.gif"
+ ALT="\begin{eqnarray*}R & = & \{(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\bol...
+...\mbox{\boldmath$x$ })=t_{r}, t_{1} \geq 0,\ldots,t_{r} \geq 0\}.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">Since all the boundaries of region <B><I>R</I></B> are closed, if <B><I>R</I></B> is not empty then the objective function 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+has its minimum value in region <B><I>R</I></B>. Therefore, by computing the minimum value of 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+in <B><I>R</I></B>, a solution to Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>) and (<A HREF="node7.html#eq:constraint-si">3</A>) is obtained as the minimum point. In this way, the algebraic under constrained problem Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>) and (<A HREF="node7.html#eq:constraint-si">3</A>) results in the constraint satisfaction minimizing problem. If 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+does not have its minimum value in <B><I>R</I></B>, <B><I>R</I></B> is empty. 
+
+<P>
+The minimum point of 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+in <B><I>R</I></B> is obtained by computing its extremal points. The extremal points are calculated by finding zero-points of differential of 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">.
+Thus, it is necessary to divide <B><I>R</I></B> into sub-regions in which differential of 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+is continuous.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:division">&#160;</A>
+<!-- MATH: \begin{eqnarray}
+R & = & \bigcup R_{ij},\nonumber\\
+R_{ij} & = & R\cap\{(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })|t_{a_{j}(i,1)}=\ldots=t_{a_{j}(i,j)}=0, t_{a_{j}(i,j+1)}>0,\ldots,t_{a_{j}(i,r)}>0\},
+\end{eqnarray} -->
+
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><I>R</I></TD>
+<TD ALIGN="CENTER" NOWRAP>=</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="56" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\displaystyle \bigcup R_{ij},$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><I>R</I><SUB><I>ij</I></SUB></TD>
+<TD ALIGN="CENTER" NOWRAP>=</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="532" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$\displaystyle R\cap\{(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath...
+...j}(i,1)}=\ldots=t_{a_{j}(i,j)}=0, t_{a_{j}(i,j+1)}>0,\ldots,t_{a_{j}(i,r)}>0\},$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where 
+<!-- MATH: $\{a_{j}(i,1),\ldots,a_{j}(i,j)\}$ -->
+<IMG
+ WIDTH="159" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\{a_{j}(i,1),\ldots,a_{j}(i,j)\}$">
+is a combination of <B><I>j</I></B> integers in the range of <B>[1,<I>r</I>]</B> and there exist <B><SUB><I>r</I></SUB><I>C</I><SUB><I>j</I></SUB></B> combinations. The suffix <B><I>i</I></B> is used to distinguish these combinations and changes from <B>1</B> to <B><SUB><I>r</I></SUB><I>C</I><SUB><I>j</I></SUB></B>.
+
+<P>
+If sub-region <B><I>R</I><SUB><I>ij</I></SUB></B> consists of a finite number of points, they are directly computed. Otherwise, stationary points of 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+and singular points of <B><I>R</I><SUB><I>ij</I></SUB></B> computed. 
+<DIV ALIGN="LEFT">
+<B>Stationary points and singular points</B>
+<UL>
+<LI>Stationary points of 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+<P>
+The stationary points of 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+are computed by Lagrange Multiplier Method. Firstly, Lagrange function 
+<!-- MATH: $L(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ },\mbox{\boldmath$\lambda$ },\mbox{\boldmath$\mu$ },\mbox{\boldmath$\nu$ },\mbox{\boldmath$\eta$ })$ -->
+<IMG
+ WIDTH="183" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$L(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ },\mbox{\boldmat...
+...ambda$ },\mbox{\boldmath$\mu$ },\mbox{\boldmath$\nu$ },\mbox{\boldmath$\eta$ })$">
+is defined and its stationary points are calculated.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:lagrange">&#160;</A>
+<!-- MATH: \begin{eqnarray}
+L(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ },\mbox{\boldmath$\lambda$ },\mbox{\boldmath$\mu$ },\mbox{\boldmath$\nu$ },\mbox{\boldmath$\eta$ }) & = & u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })+\sum_{k=1}^{p}\lambda_{k}f(\mbox{\boldmath$x$ })+\sum_{k=1}^{q}\mu_{k}(g(\mbox{\boldmath$x$ })\cdot s_{k}-1)\nonumber\\
+& & +\sum_{k=1}^{r}\nu_{k}(h(\mbox{\boldmath$x$ })-t_{k})+\sum_{k=1}^{j}\eta_{k}t_{a(i,k)},
+\end{eqnarray} -->
+
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="183" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\displaystyle L(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ },...
+...ambda$ },\mbox{\boldmath$\mu$ },\mbox{\boldmath$\nu$ },\mbox{\boldmath$\eta$ })$"></TD>
+<TD ALIGN="CENTER" NOWRAP>=</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="363" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.gif"
+ ALT="$\displaystyle u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })...
+...box{\boldmath$x$ })+\sum_{k=1}^{q}\mu_{k}(g(\mbox{\boldmath$x$ })\cdot s_{k}-1)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="259" HEIGHT="71" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$\displaystyle +\sum_{k=1}^{r}\nu_{k}(h(\mbox{\boldmath$x$ })-t_{k})+\sum_{k=1}^{j}\eta_{k}t_{a(i,k)},$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$\lambda$">,
+<IMG
+ WIDTH="15" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.gif"
+ ALT="$\mu$">,
+<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.gif"
+ ALT="$\nu$">
+and <IMG
+ WIDTH="14" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\eta$">
+are Lagrange Multipliers. Next, the stationary points which satisfy 
+<!-- MATH: $t_{a(i,j+1)}>0,\ldots,t_{a(i,r)}>0$ -->
+<IMG
+ WIDTH="199" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$t_{a(i,j+1)}>0,\ldots,t_{a(i,r)}>0$">
+are selected.
+<LI>Singular points of <B><I>R</I><SUB><I>ij</I></SUB></B>
+<P>
+In sub-region <B><I>R</I><SUB><I>ij</I></SUB></B>, a point at which the 
+<!-- MATH: $(p+q+r+j) \times (n+q+r)$ -->
+<IMG
+ WIDTH="211" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.gif"
+ ALT="$(p+q+r+j) \times (n+q+r)$">
+matrix of partial derivatives 
+<!-- MATH: $J(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$J(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+has rank less than <B>(<I>p</I>+<I>q</I>+<I>r</I>+<I>j</I>)</B> is a singular point. 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:jacobi">&#160;</A>
+<!-- MATH: \begin{eqnarray}
+J(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ }) & = & \left(\frac{\partial W_{k}}{\partial z_{l}}\right)_{k=1,\ldots,p+q+r+j;\; l=1,\ldots,n+q+r},\nonumber\\
+W_{k} & = & \left\{\begin{array}{l}
+f_{k}(\mbox{\boldmath$x$ })\;(k=1,\ldots,p),\\
+			g_{k-p}(\mbox{\boldmath$x$ }) \cdot s_{k-p}-1\;(k=p+1,\ldots,p+q),\\
+			h_{k-p-q}(\mbox{\boldmath$x$ })-t_{k-p-q}\;(k=p+q+1,\ldots,p+q+r),\\
+			t_{a_{j}(i,k-p-q-r)}\;(k=p+q+r+1,\ldots,p+q+r+j),
+			\end{array}\right.\\
+z_{l} & = & \left\{\begin{array}{l}
+			x_{k}\;(k=1,\ldots,n),\\
+			s_{k-n}\;(k=n+1,\ldots,n+q),\\
+			t_{k-n-q}\;(k=n+q+1,\ldots,n+q+r),
+			\end{array}\right.\nonumber
+\end{eqnarray} -->
+
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.gif"
+ ALT="$\displaystyle J(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$"></TD>
+<TD ALIGN="CENTER" NOWRAP>=</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="266" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.gif"
+ ALT="$\displaystyle \left(\frac{\partial W_{k}}{\partial z_{l}}\right)_{k=1,\ldots,p+q+r+j;\; l=1,\ldots,n+q+r},$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><I>W</I><SUB><I>k</I></SUB></TD>
+<TD ALIGN="CENTER" NOWRAP>=</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="413" HEIGHT="98" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.gif"
+ ALT="$\displaystyle \left\{\begin{array}{l}
+f_{k}(\mbox{\boldmath$x$ })\;(k=1,\ldots,...
+...p+q+r),\\
+t_{a_{j}(i,k-p-q-r)}\;(k=p+q+r+1,\ldots,p+q+r+j),
+\end{array}\right.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><I>z</I><SUB><I>l</I></SUB></TD>
+<TD ALIGN="CENTER" NOWRAP>=</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="312" HEIGHT="78" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.gif"
+ ALT="$\displaystyle \left\{\begin{array}{l}
+x_{k}\;(k=1,\ldots,n),\\
+s_{k-n}\;(k=n+1,\ldots,n+q),\\
+t_{k-n-q}\;(k=n+q+1,\ldots,n+q+r),
+\end{array}\right.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Since a singular point is often missed when computing extremal points, it has to be searched in another method. 
+
+<P>
+The condition that 
+<!-- MATH: $J(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$J(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+has rank less than <B>(<I>p</I>+<I>q</I>+<I>r</I>+<I>j</I>)</B> is equivalent to the condition that the row vectors of 
+<!-- MATH: $J(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$J(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+are linearly dependent. Then, at a singular point, Eq.&nbsp;(<A HREF="node9.html#eq:dependence">7</A>) is valid. 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eq:dependence">&#160;</A>
+<!-- MATH: \begin{eqnarray}
+\exists c_{1},\ldots,c_{p+q+r+j},\;\neg(c_{1}=\ldots=c_{p+q+r+j}=0) & & \nonumber\\
+c_{1}\left\{\begin{array}{c}
+\frac{\partial W_{1}}{\partial z_{1}}\\
+		\vdots\\
+		\frac{\partial W_{1}}{\partial z_{n+q+r}}
+		\end{array}\right\}
++\cdots+
+c_{p+q+r+j}\left\{\begin{array}{c}
+		\frac{\partial W_{p+q+r+j}}{\partial z_{1}}\\
+		\vdots\\
+		\frac{\partial W_{p+q+r+j}}{\partial z_{n+q+r}}
+		\end{array}\right\}
+& = & \left\{\begin{array}{c}
+		0\\
+		\vdots\\
+		0
+		\end{array}\right\}.
+\end{eqnarray} -->
+
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="340" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.gif"
+ ALT="$\displaystyle \exists c_{1},\ldots,c_{p+q+r+j},\;\neg(c_{1}=\ldots=c_{p+q+r+j}=0)$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="371" HEIGHT="98" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.gif"
+ ALT="$\displaystyle c_{1}\left\{\begin{array}{c}
+\frac{\partial W_{1}}{\partial z_{1}...
+...
+\vdots\\
+\frac{\partial W_{p+q+r+j}}{\partial z_{n+q+r}}
+\end{array}\right\}$"></TD>
+<TD ALIGN="CENTER" NOWRAP>=</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="67" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.gif"
+ ALT="$\displaystyle \left\{\begin{array}{c}
+0\\
+\vdots\\
+0
+\end{array}\right\}.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Therefore, by solving an equation set obtained by appending 
+<!-- MATH: $c_{k}=1\;(k=1,\ldots,p+q+r+j)$ -->
+<IMG
+ WIDTH="238" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.gif"
+ ALT="$c_{k}=1\;(k=1,\ldots,p+q+r+j)$">
+to Eq.&nbsp;(<A HREF="node9.html#eq:division">4</A>) and (<A HREF="node9.html#eq:dependence">7</A>) one by one, singular points corresponding to 
+<!-- MATH: $c_{k}\neq 0$ -->
+<IMG
+ WIDTH="51" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.gif"
+ ALT="$c_{k}\neq 0$">
+are computed. 
+</UL><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\Box$"></DIV>
+<P>
+If a finite number of extremal points or singular points exist, they are directly computed. Otherwise, in order to check whether there is a point which satisfies 
+<!-- MATH: $t_{a(i,j+1)}>0,\ldots,t_{a(i,r)}>0$ -->
+<IMG
+ WIDTH="199" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$t_{a(i,j+1)}>0,\ldots,t_{a(i,r)}>0$">,
+the obtained equation set of extremal points or singular points is regarded as a new constraint set and the above computation is recursively executed. 
+
+<P>
+In the case that there exist an infinite number of extremal points, the objective function 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+has to be replaced by another function 
+<!-- MATH: $u^{\prime}(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="90" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$u^{\prime}(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">.
+The new objective function 
+<!-- MATH: $u^{\prime}(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="90" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$u^{\prime}(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+must not be constant under the condition that 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+is constant. Because, since the extremal points of 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+define a locus which makes 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+constant, they are also extremal points of a function which is constant when 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+is constant. That is, if 
+<!-- MATH: $u^{\prime}(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="90" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$u^{\prime}(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+is constant under the condition that 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+is constant, new extremal points of 
+<!-- MATH: $u^{\prime}(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="90" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$u^{\prime}(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+obtained by the recursive computation are completely identical with the old. 
+
+<P>
+The numeric part uses the new objective function 
+<!-- MATH: $u^{\prime}(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="90" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$u^{\prime}(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+obtained by translation of 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">&nbsp;(Figure&nbsp;<A HREF="node9.html#fig:replacement">5</A>).
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig:replacement">&#160;</A><A NAME="529">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 5:</STRONG>
+Replacement of the objective function</CAPTION>
+<TR><TD><IMG
+ WIDTH="390" HEIGHT="126"
+ SRC="img55.gif"
+ ALT="\begin{figure}
+\begin{center}
+\ \epsfbox{sawada-5.eps}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+Figure&nbsp;<A HREF="node9.html#fig:procedure">6</A> shows the procedures of computing numerical solutions. 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig:procedure">&#160;</A><A NAME="537">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 6:</STRONG>
+Procedures of computing numerical solutions</CAPTION>
+<TR><TD><IMG
+ WIDTH="636" HEIGHT="184"
+ SRC="img56.gif"
+ ALT="\begin{figure}
+\begin{center}
+\ \epsfbox{sawada-6.eps}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+First of all, it is checked whether sub-region <B><I>R</I><SUB><I>ij</I></SUB></B> consists of a finite number of points. If it does, the numerical solutions are computed. Otherwise, singular point loci of <B><I>R</I><SUB><I>ij</I></SUB></B> and stationary point loci of the objective function 
+<!-- MATH: $u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$u(\mbox{\boldmath$x$ },\mbox{\boldmath$s$ },\mbox{\boldmath$t$ })$">
+are computed. In the stationary point computation, a list of objective functions which have been already used is made in order to avoid applying the same function in the recursive computation. Then, it is checked whether each obtained locus have a finite number of points. The computation is recursively executed until there exist a finite number of solutions. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html120"
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html118"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html114"
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html121"
+ HREF="node10.html">Example</A>
+<B> Up:</B> <A NAME="tex2html119"
+ HREF="node2.html">Algebraic under constraint solver</A>
+<B> Previous:</B> <A NAME="tex2html115"
+ HREF="node8.html">Design variables whose values</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

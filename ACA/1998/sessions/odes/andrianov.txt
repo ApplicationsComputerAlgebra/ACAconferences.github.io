@@ -1,0 +1,17 @@
+   "Symbolic Computation of Approximate Symmetries for Ordinary
+                  Differential Equations"
+
+   Serge Andrianov
+   Department of Applied Mathematics & Control Processes
+   St.Petersburg State University
+   Bibliotechnaja pl. 2,
+   St.Petersburg 198904, Russia
+   E-mail: Serge.Andrianov@pobox.spbu.ru
+
+
+   ABSTRACT: This report presents a method of construction of approximate
+   symmetries and invariants in dynamical systems. We consider the
+   problem of construction of approximate invariants and symmetries
+   based on the matrix formalism for Lie algebraic tools. The knowledge
+   of symmetries of  dynamical systems is also useful for problems of
+   synthesis of the dynamical systems with desired characteristics.

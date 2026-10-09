@@ -1,0 +1,18 @@
+Olga V Lobanova* (Russia), lobanova@ggpi.glazov.udm.net
+
+On the Use of Derive and MathCad When Training Teachers of Mathematics
+
+The research conducted by the author has shown that many teachers of
+mathematics would like to use computer at their lessons but they do not
+consider themselves to be ready for it.  One of important goals of teachers of
+teachers training colleges is training future teachers for the use of computers
+in their work with pupils.  But the majarity of mathematics teachers have but
+vague idea of opportunities of using computers when teaching mathematics.  The
+author has experience of conducnting special seminars on the work in Derive
+system and special seminar "Mathematics and Computer" where, in particular, the
+issues of application of Mathcad system by mathematics teachers were
+considered.  The special seminar in Derive system was conducted with 2nd year
+students.  The major attention was paid at solving mathematical analysis
+problems.  The opportunities of applaying Derive system when teaching pupils
+and students are analyzed in the book of the author of the report which is
+titled "Practicum on solving problems

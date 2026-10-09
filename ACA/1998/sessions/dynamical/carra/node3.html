@@ -1,0 +1,421 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Nonalgebraic Ordinary Differential Equations</TITLE>
+<META NAME="description" CONTENT="Nonalgebraic Ordinary Differential Equations">
+<META NAME="keywords" CONTENT="carra">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="carra.css">
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="carra.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html42"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html40"
+ HREF="carra.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html34"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html43"
+ HREF="node4.html">An Elimination Procedure</A>
+<B> Up:</B> <A NAME="tex2html41"
+ HREF="carra.html">Systems of Nonlinear and</A>
+<B> Previous:</B> <A NAME="tex2html35"
+ HREF="node2.html">Differential Algebra Preliminaries</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00030000000000000000">
+Nonalgebraic Ordinary Differential Equations</A>
+</H1>
+
+<P>
+Let
+<I>P</I>=
+<!-- MATH: $P(y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},v_{1},\ldots,v_{k})$ -->
+<IMG
+ WIDTH="334" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.gif"
+ ALT="$P(y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},v_{1},\ldots,v_{k})$">be a polynomial in the variables
+
+<!-- MATH: $y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},v_{1},\ldots,v_{k}$ -->
+<IMG
+ WIDTH="303" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},v_{1},\ldots,v_{k}$">
+with
+coefficients in a differential ring <I>R</I> of functions. So
+
+<!-- MATH: $P \in R\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$ -->
+<IMG
+ WIDTH="266" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.gif"
+ ALT="$P \in R\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$">.
+
+<P>
+Let <I>z</I><SUB><I>i</I></SUB>=
+<!-- MATH: $exp(Q_{i})$ -->
+<I>exp</I>(<I>Q</I><SUB><I>i</I></SUB>) and let <I>v</I><SUB><I>j</I></SUB>=
+<!-- MATH: $log(R_{j})$ -->
+<I>log</I>(<I>R</I><SUB><I>j</I></SUB>), where
+<I>Q</I><SUB><I>i</I></SUB>=
+<!-- MATH: $Q_{i}(y,y^{(1)},\ldots,y^{(q_{i})})$ -->
+<IMG
+ WIDTH="167" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.gif"
+ ALT="$Q_{i}(y,y^{(1)},\ldots,y^{(q_{i})})$">
+and
+<I>R</I><SUB><I>j</I></SUB>=
+<!-- MATH: $R_{j}(y,y^{(1)},\ldots,y^{(r_{j})})$ -->
+<IMG
+ WIDTH="170" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.gif"
+ ALT="$R_{j}(y,y^{(1)},\ldots,y^{(r_{j})})$">
+are polynomial functions with
+coefficients in the <BR>
+differential ring <I>R</I> for all 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">
+and
+all 
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">,
+e.g. 
+<!-- MATH: $Q_{i}, R_{j} \in R\{ y \}$ -->
+<IMG
+ WIDTH="127" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$Q_{i}, R_{j} \in R\{ y \}$">
+for all <I>i</I> and <I>j</I>.
+Moreover 
+<!-- MATH: $ord(Q_{i})$ -->
+<I>ord</I>(<I>Q</I><SUB><I>i</I></SUB>)=<I>q</I><SUB><I>i</I></SUB> and 
+<!-- MATH: $ord(R_{j})$ -->
+<I>ord</I>(<I>R</I><SUB><I>j</I></SUB>)=<I>r</I><SUB><I>j</I></SUB> for all <I>i</I> and <I>j</I>.
+
+<P>
+The ordinary differential equation 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\{ P=P(y,y^{(1)},\ldots,y^{(n)},exp(Q_{1}),\ldots,exp(Q_{h}),log(R_{1}),\ldots,
+log(R_{k}))=0 \}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="619" HEIGHT="39"
+ SRC="img9.gif"
+ ALT="\begin{displaymath}\{P=P(y,y^{(1)},\ldots,y^{(n)},exp(Q_{1}),\ldots,exp(Q_{h}),log(R_{1}),\ldots,
+log(R_{k}))=0\}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+is in general nonlinear and nonalgebraic.
+
+<P>
+Since <I>exp</I>(<I>a</I>) (respectively <I>log</I>(<I>a</I>)) with <I>a</I> in a differential ring <I>R</I>are uniquely defined by the differential equations
+{ 
+<!-- MATH: $y^{(1)}-a^{(1)}y$ -->
+<I>y</I><SUP>(1)</SUP>-<I>a</I><SUP>(1)</SUP><I>y</I>=0 } (respectively
+{ 
+<!-- MATH: $ay^{(1)}-a^{(1)}$ -->
+<I>ay</I><SUP>(1)</SUP>-<I>a</I><SUP>(1)</SUP>=0 }) up to a constant, then the equation
+<IMG
+ WIDTH="16" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$\{ $">P=0<IMG
+ WIDTH="16" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="$ \}$">
+is equivalent to the system
+<BLOCKQUOTE>
+<IMG
+ WIDTH="34" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="$(\alpha)$">={ <I>P</I>=
+<!-- MATH: $P(y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},
+v_{1},\ldots,v_{k})$ -->
+<IMG
+ WIDTH="334" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.gif"
+ ALT="$P(y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},v_{1},\ldots,v_{k})$">=0, <I>P</I><SUP>(1)</SUP>=0,..., <I>P</I><SUP>(<I>m</I>)</SUP>=0,
+<I>z</I><SUB><I>i</I></SUB>=
+<!-- MATH: $exp(Q_{i})$ -->
+<I>exp</I>(<I>Q</I><SUB><I>i</I></SUB>), <I>v</I><SUB><I>j</I></SUB>=
+<!-- MATH: $log(R_{j})$ -->
+<I>log</I>(<I>R</I><SUB><I>j</I></SUB>), 
+<!-- MATH: $z_{i}^{(1)}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>=
+
+<!-- MATH: $Q_{i}^{(1)}exp(Q_{i})$ -->
+<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>exp</I>(<I>Q</I><SUB><I>i</I></SUB>)=
+<!-- MATH: $Q_{i}^{(1)}z_{i}$ -->
+<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>,
+<BR> 
+<!-- MATH: $R_{j}v_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>=
+<!-- MATH: $R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>,
+
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">,
+
+<!-- MATH: $m \in {\bf N}_{0}$ -->
+<IMG
+ WIDTH="73" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$m\in {\bf N}_{0}$">
+},
+</BLOCKQUOTE>where <I>P</I><SUP>(<I>m</I>)</SUP> is the derivative of order <I>m</I> of <I>P</I> for all <IMG
+ WIDTH="59" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$m \geq 1$">.
+
+<P>
+<P>
+<DIV><B>EXAMPLE  2</B> &nbsp; 
+Let
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $P=P(y,y^{(1)},y^{(2)},exp(Q_{1}),exp(Q_{2}),log(R_{1})=
+yy^{(2)}-exp(y+(y^{(1)})^{2})log(y+y^{(3)})y^{(1)}-(exp(y-y^{(2)}))^{2}y^{2}
+(y^{(1)})^{3},$ -->
+<I>P</I>=<I>P</I>(<I>y</I>,<I>y</I><SUP>(1)</SUP>,<I>y</I><SUP>(2)</SUP>,<I>exp</I>(<I>Q</I><SUB>1</SUB>),<I>exp</I>(<I>Q</I><SUB>2</SUB>),<I>log</I>(<I>R</I><SUB>1</SUB>)=
+<I>yy</I><SUP>(2)</SUP>-<I>exp</I>(<I>y</I>+(<I>y</I><SUP>(1)</SUP>)<SUP>2</SUP>)<I>log</I>(<I>y</I>+<I>y</I><SUP>(3)</SUP>)<I>y</I><SUP>(1)</SUP>-(<I>exp</I>(<I>y</I>-<I>y</I><SUP>(2)</SUP>))<SUP>2</SUP><I>y</I><SUP>2</SUP>
+(<I>y</I><SUP>(1)</SUP>)<SUP>3</SUP>,</DIV>
+where <I>Q</I><SUB>1</SUB>=
+<!-- MATH: $y+(y^{(1)})^{2}$ -->
+<I>y</I>+(<I>y</I><SUP>(1)</SUP>)<SUP>2</SUP>, <I>Q</I><SUB>2</SUB>=<I>y</I>-<I>y</I><SUP>(2)</SUP>and <I>R</I><SUB>1</SUB>=<I>y</I>+<I>y</I><SUP>(3)</SUP>. <BR>
+If <I>z</I><SUB>1</SUB>=
+<!-- MATH: $exp(Q_{1})$ -->
+<I>exp</I>(<I>Q</I><SUB>1</SUB>), <I>z</I><SUB>2</SUB>=
+<!-- MATH: $exp(Q_{2})$ -->
+<I>exp</I>(<I>Q</I><SUB>2</SUB>) and <I>v</I><SUB>1</SUB>=
+<!-- MATH: $log(R_{1})$ -->
+<I>log</I>(<I>R</I><SUB>1</SUB>), then
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+P=yy^{(2)}-z_{1}v_{1}y^{(1)}-z_{2}^{2}y^{2}(y^{(1)})^{3}.
+\end{displaymath} -->
+
+
+<I>P</I>=<I>yy</I><SUP>(2)</SUP>-<I>z</I><SUB>1</SUB><I>v</I><SUB>1</SUB><I>y</I><SUP>(1)</SUP>-<I>z</I><SUB>2</SUB><SUP>2</SUP><I>y</I><SUP>2</SUP>(<I>y</I><SUP>(1)</SUP>)<SUP>3</SUP>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The equation { P=0 } is equivalent to the system <BR>
+<IMG
+ WIDTH="34" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="$(\alpha)$">={ <I>P</I>=
+<!-- MATH: $yy^{(2)}-z_{1}v_{1}y^{(1)}-z_{2}^{2}y^{2}(y^{(1)})^{3}$ -->
+<I>yy</I><SUP>(2)</SUP>-<I>z</I><SUB>1</SUB><I>v</I><SUB>1</SUB><I>y</I><SUP>(1)</SUP>-<I>z</I><SUB>2</SUB><SUP>2</SUP><I>y</I><SUP>2</SUP>(<I>y</I><SUP>(1)</SUP>)<SUP>3</SUP>=0,
+<I>P</I><SUP>(1)</SUP>=0,...,<I>P</I><SUP>(<I>m</I>)</SUP>=0, <I>z</I><SUB>1</SUB>=
+<!-- MATH: $exp(y+(y^{(1)})^{2})$ -->
+<I>exp</I>(<I>y</I>+(<I>y</I><SUP>(1)</SUP>)<SUP>2</SUP>),
+<I>z</I><SUB>2</SUB>=
+<!-- MATH: $exp(y-y^{(2)}))^{2})$ -->
+<I>exp</I>(<I>y</I>-<I>y</I><SUP>(2)</SUP>))<SUP>2</SUP>), <I>v</I><SUB>1</SUB>=
+<!-- MATH: $log(y+y^{(3)})$ -->
+<I>log</I>(<I>y</I>+<I>y</I><SUP>(3)</SUP>),
+
+<!-- MATH: $z_{1}^{(1)}$ -->
+<I>z</I><SUB>1</SUB><SUP>(1)</SUP>=
+<!-- MATH: $(y^{(1)}+2y^{(1)}y^{(2)})z_{1}$ -->
+(<I>y</I><SUP>(1)</SUP>+2<I>y</I><SUP>(1)</SUP><I>y</I><SUP>(2)</SUP>)<I>z</I><SUB>1</SUB>,
+
+<!-- MATH: $z_{2}^{(1)}$ -->
+<I>z</I><SUB>2</SUB><SUP>(1)</SUP>=
+<BR>
+<!-- MATH: $(y^{(1)}-y^{(3)})z_{2}$ -->
+(<I>y</I><SUP>(1)</SUP>-<I>y</I><SUP>(3)</SUP>)<I>z</I><SUB>2</SUB>,
+
+<!-- MATH: $(y+y^{(3)})v_{1}^{(1)}$ -->
+(<I>y</I>+<I>y</I><SUP>(3)</SUP>)<I>v</I><SUB>1</SUB><SUP>(1)</SUP>=
+<!-- MATH: $y^{(1)}+y^{(4)}$ -->
+<I>y</I><SUP>(1)</SUP>+<I>y</I><SUP>(4)</SUP>, 
+<!-- MATH: $m \in {\bf N}_{0}$ -->
+<IMG
+ WIDTH="73" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$m\in {\bf N}_{0}$">}.</DIV><P></P>
+
+<P>
+Let <IMG
+ WIDTH="33" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$(\beta)$">
+be the following system of algebraic differential equations
+<BLOCKQUOTE>
+<IMG
+ WIDTH="33" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$(\beta)$">={ <I>P</I>=
+<!-- MATH: $P(y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},v_{1},\ldots,
+v_{k})$ -->
+<IMG
+ WIDTH="334" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.gif"
+ ALT="$P(y,y^{(1)},\ldots,y^{(n)},z_{1},\ldots,z_{h},v_{1},\ldots,v_{k})$">=0, <I>P</I><SUP>(1)</SUP>=0,..., <I>P</I><SUP>(<I>m</I>)</SUP>=0,
+
+<!-- MATH: $z_{i}^{(1)}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>=
+<!-- MATH: $Q_{i}^{(1)}z_{i}$ -->
+<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>, 
+<!-- MATH: $R_{j}v_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>=
+<!-- MATH: $R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>,
+
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">,
+<BR>
+<!-- MATH: $m \in {\bf N}_{0}$ -->
+<IMG
+ WIDTH="73" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$m\in {\bf N}_{0}$">
+},
+</BLOCKQUOTE>with 
+<!-- MATH: $P \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$ -->
+<IMG
+ WIDTH="266" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$P \in F\{ y,z_{1},\ldots,z_{h},v_{1},\ldots,v_{k} \}$">,
+
+<!-- MATH: $Q_{i},
+R_{j} \in F\{ y \}$ -->
+<IMG
+ WIDTH="128" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$Q_{i},
+R_{j} \in F\{ y \}$">
+for all <I>i</I> and <I>j</I>. <BR>
+It is possible to find a system <IMG
+ WIDTH="32" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.gif"
+ ALT="$(\gamma)$">
+of algebraic ordinary differential
+equations in the same differential variables 
+<!-- MATH: $y,z_{1},\ldots,z_{h},
+v_{1},\ldots,v_{k}$ -->
+<IMG
+ WIDTH="191" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.gif"
+ ALT="$y,z_{1},\ldots,z_{h},
+v_{1},\ldots,v_{k}$">,
+that is equivalent to <IMG
+ WIDTH="33" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$(\beta)$">,
+such that it contains
+a differential polynomial equation in the differential variable <I>y</I>. In other
+words we can find a different set of differential generators of the
+differential ideal <I>I</I>=[<I>P</I>, 
+<!-- MATH: $z_{i}^{(1)}-Q_{i}^{(1)}z_{i}$ -->
+<I>z</I><SUB><I>i</I></SUB><SUP>(1)</SUP>-<I>Q</I><SUB><I>i</I></SUB><SUP>(1)</SUP><I>z</I><SUB><I>i</I></SUB>,
+
+<!-- MATH: $R_{j}v_{j}^{(1)}-R_{j}^{(1)}$ -->
+<I>R</I><SUB><I>j</I></SUB><I>v</I><SUB><I>j</I></SUB><SUP>(1)</SUP>-<I>R</I><SUB><I>j</I></SUB><SUP>(1)</SUP>, 
+<!-- MATH: $i=1,\ldots,h$ -->
+<IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=1,\ldots,h$">,
+
+<!-- MATH: $j=1,\ldots,k$ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j=1,\ldots,k$">], that has
+the riquired properties.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html44"
+ HREF="node4.html">An Elimination Procedure</A>
+<UL>
+<LI><A NAME="tex2html45"
+ HREF="node5.html">An Elimination Procedure of One Differential Variable</A>
+<LI><A NAME="tex2html46"
+ HREF="node6.html">An Elimination Procedure of Finitely Many Differential
+Variables</A>
+</UL>
+<LI><A NAME="tex2html47"
+ HREF="node7.html">Examples</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html42"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html40"
+ HREF="carra.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html34"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html43"
+ HREF="node4.html">An Elimination Procedure</A>
+<B> Up:</B> <A NAME="tex2html41"
+ HREF="carra.html">Systems of Nonlinear and</A>
+<B> Previous:</B> <A NAME="tex2html35"
+ HREF="node2.html">Differential Algebra Preliminaries</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

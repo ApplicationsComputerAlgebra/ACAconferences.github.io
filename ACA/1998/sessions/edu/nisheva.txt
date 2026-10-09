@@ -1,0 +1,26 @@
+"On the Applicability of Intelligent Computer Algebra Systems 
+in Mathematics Education"
+
+Maria M. Nisheva-Pavlova (*)
+Faculty of Mathematics and Informatics, "St.Kl.Ohridski" University of Sofia
+James Bourchier Blvd., 5
+Sofia 1164
+Bulgaria
+E-mail:marian@fmi.uni-sofia.bg
+
+
+The presentation emphasizes on the discussion of some features of 
+intelligent computer algebra systems that make them more applicable in 
+mathematics education than "classical" ones. 
+An experimental intelligent computer algebra system named STRAMS is
+briefly described. STRAMS can be characterized as a knowledge-based  
+computer algebra system with the following main features: 
+- it can solve various types of problems using a set of methods and
+techniques traditionally taught in the secondary school and in the 
+introductory university courses; 
+- it is able to do a kind of learning and explanation generation; 
+- it can easily be integrated with other software packages; 
+- its functional facilities can easily be extended. 
+These features of STRAMS are analyzed in order to give reasons for 
+its potential applicability in building intelligent tutoring systems in 
+various domains of mathematics.

@@ -1,0 +1,914 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.1 release (March 30, 1999)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>program</TITLE>
+<META NAME="description" CONTENT="program">
+<META NAME="keywords" CONTENT="program">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.1 release">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="program.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<DIV ALIGN="CENTER"><FONT SIZE="-1">
+<FONT SIZE="+1"> Program for the 5th International IMACS Conference on Applications of Computer Algebra ACA'99</FONT>
+<P>
+</FONT><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER" COLSPAN=5></FONT><FONT SIZE="-1"><B> June 25, 1999 (Friday)</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+SESSION </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA MEETS </SMALL>E<SMALL>DUCATION </SMALL>I <BR></FONT><FONT SIZE="-1"><EM> Bernhard Kutzler</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> A</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A<SMALL>PPROXIMATE </SMALL>A<SMALL>LGEBRAIC </SMALL>C<SMALL>OMPUTATION: TOWARDS </SMALL>S<SMALL>YMBOLIC-</SMALL>N<SMALL>UMERIC </SMALL>A<SMALL>LGORITHMS</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Tateaki Sasaki, Matu-Tarow Noda, Bernard Mourrain &amp; Robert Corless</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> B</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMBINATORIAL AND </SMALL>C<SMALL>OMPUTATIONAL </SMALL>M<SMALL>ETHODS IN </SMALL>A<SMALL>LGEBRAIC </SMALL>G<SMALL>EOMETRY</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Jie-Tai Yu &amp; Vladimir Shpilrain</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> C</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA FOR </SMALL>D<SMALL>YNAMICAL </SMALL>S<SMALL>YSTEMS AND </SMALL>M<SMALL>ECHANICS </SMALL>I <BR></FONT><FONT SIZE="-1"><EM> Victor Edneral, Ilias Kotsireas &amp; Nikolay Vasiliev</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> D</B></FONT></DIV>
+</TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+9:00 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Setting the Tone: CAS as pedagogical tools <BR><EM>Bernhard Kutzler
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+New results on the Table Maker's Dilemma <BR><EM>Jean-Michel Muller &amp; Vincent Lefevre*
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+The Parameterization Problem for Algebraic Surfaces <BR><EM>Josef Schicho
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Computer Algebraic Approximations--Creation of Approximated Solutions of Scientific and Engineering Problems in Symbolic Form <BR><EM>Victor Edneral
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+9:30 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Basic Skills versus Technology--not a Contradiction but a Completion <BR><EM>Josef Boehm
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Polynomial Algebra with Coefficients of Limited Accuracy <BR><EM>Hans Stetter
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Computing subfields in pure trascendental extensions <BR><EM>Jaime Gutierrez &amp; Rosario Rubio
+</EM></FONT></TD>
+<TD></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+10:00 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+The Use of Mathematics Specific Technology in Capstone Mathematics Teacher Preparation Courses <BR><EM>Gary A. Harris
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A System of Automatic Algorithm Stabilization <BR><EM>Hiroshi Sekigawa
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Again 
+<!-- MATH
+ $x + x^2 y + z^2 + t^3$
+ -->
+<IMG
+ WIDTH="124" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$x + x^2 y + z^2 + t^3$"> = 0 <BR><EM>Lenny Makar-Limanov
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Solving the problem of stabilization of a gyroscopic system with the help of Computer Algebra <BR><EM>A. V. Banshchikov, L. A. Bourlakova &amp; V. D. Irtegov
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+10:30 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Some Reflections About the Impact of Computer Algebra Systems in the Ordering of the Curricula of Mathematics <BR><EM>Justo Cabezas &amp; Eugenio Roanes-Lozano*
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+To Be Announced <BR><EM>Hiroshi Kai
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Invariants of algebraic varieties <BR><EM>Vladimir Shpilrain
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+About investigation of systems with first integrals <BR><EM>L. A. Bourlakova &amp; V. D. Irtegov
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+11:00 am </FONT></TD>
+<TD ALIGN="CENTER" COLSPAN=4></FONT><FONT SIZE="-1"><B> BREAK</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+11:30 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A Computer Classroom Lecture: Asymptotic Convergence of Rational Functions <BR><EM>Bill Pletsch
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+To Be Announced <BR><EM>Victor Y. Pan
+</EM></FONT></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Analytical Approach for Simplifying Dynamical Systems of Polynomial Type <BR><EM>J. Palacián &amp; P.  Yanguas
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+12:00 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Exam questions when using CAS for school mathematics teaching <BR><EM>Vlasta Kokol-Voljc
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Mechanism of Cancellation Errors in Multivariate Hensel Construction with Floating-point Numbers <BR><EM>Tateaki Sasaki
+</EM></FONT></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Communications of the Poisson Series Processors PSPC with General Scientific Software <BR><EM>A. Abad, A. Gavin &amp; J. F. San-Juan
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+12:30 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Using the TI-92Plus:  Examples <BR><EM>Michel Beaudin
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Exacts predicates for arrangement of arcs of circle <BR><EM>A. Fronville
+</EM></FONT></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Parallelisation of Perturbation Analysis: the method of Multiple Scales applied to vibration problems <BR><EM>Raya Khanin &amp; Matthew Cartmell
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+1:00 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Why use CAS with TI89 in mathematical education? Classrooms experiments. <BR><EM>Bengt Ahlander
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Approximate p-adic GCD computation <BR><EM>D. Rupprecht
+</EM></FONT></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Some computational experiments in Celestial Mechanics <BR><EM>Jean-Charles Faugere
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+1:30 pm </FONT></TD>
+<TD ALIGN="CENTER" COLSPAN=4></FONT><FONT SIZE="-1"><B> LUNCH</B></FONT></TD>
+</TR>
+</TABLE><FONT SIZE="-1">
+
+<P>
+
+</FONT><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER" COLSPAN=6></FONT><FONT SIZE="-1"><B> June 25, 1999 (Friday)</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+SESSION </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA MEETS </SMALL>E<SMALL>DUCATION </SMALL>I <BR></FONT><FONT SIZE="-1"><EM> Bernhard Kutzler</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> A</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A<SMALL>PPROXIMATE </SMALL>A<SMALL>LGEBRAIC </SMALL>C<SMALL>OMPUTATION: TOWARDS </SMALL>S<SMALL>YMBOLIC-</SMALL>N<SMALL>UMERIC </SMALL>A<SMALL>LGORITHMS</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Tateaki Sasaki, Matu-Tarow Noda, Bernard Mourrain &amp; Robert Corless</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> B</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+T<SMALL>ORIC </SMALL>I<SMALL>DEALS AND </SMALL>I<SMALL>NTEGER </SMALL>P<SMALL>ROGRAMMING</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Lorenzo Robbiano</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> C</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA FOR </SMALL>D<SMALL>YNAMICAL </SMALL>S<SMALL>YSTEMS AND </SMALL>M<SMALL>ECHANICS </SMALL>I <BR></FONT><FONT SIZE="-1"><EM> Victor Edneral, Ilias Kotsireas &amp; Nikolay Vasiliev</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> D</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A<SMALL>PPLICATIONS OF </SMALL>C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA TO </SMALL>S<SMALL>IGNAL </SMALL>P<SMALL>ROCESSING</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Jeremy Johnson &amp; Markus Pueschel</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> E</B></FONT></DIV>
+</TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+3:30 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Using Logo as a Scaffolding to Develop Algebraic Thinking in a Virtual Classroom <BR><EM>Garry Clark* &amp; Edward Redden
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Towards numerical stability in normal form algorithms <BR><EM>B. Mourrain
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Computing Toric Ideals <BR><EM>Lorenzo Robbiano
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Some remarks on differential Hilbert polynomials in two variables <BR><EM>G. Carra Ferro
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Minimal Syzygies and Multidimensional Filter Design <BR><EM>Hyungju Park
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+4:00 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Discovery Experiences in Synthetic Geometry with DERIVE <BR><EM>Miguel de Guzman
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Hybrid Rational Function Approximation and its Applications <BR><EM>Matu T. Noda
+</EM></FONT></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Extended Characteristic Sets of Finitely Generated Differential Ideals <BR><EM>G. Carra Ferro &amp; Vladimir Gerdt
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Group Representations and Automatic Derivation of Fast Signal Transforms <BR><EM>Markus Pueschel
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+4:30 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+About how to implement Geometric Transformations on a CAS <BR><EM>E. Roanes-Macias &amp; E. Roanes-Lozano*
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Approximate polynomial decomposition <BR><EM>M. Giesbrecht
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+New algorithms for Computing Toric Ideals <BR><EM>Anna Bigatti
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Enumeration of intersections of Newton's polyhedrons <BR><EM>Alexander Aranson
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A Wreath Product Approach to Signal and Image Processing <BR><EM>Dan Rockmore
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+5:00 pm </FONT></TD>
+<TD ALIGN="CENTER" COLSPAN=5></FONT><FONT SIZE="-1"><B> BREAK</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+5:30 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A number-based approach to introductory algebra: A study with 11-12 year olds using graphic calculators <BR><EM>Tenoch E. Cedillo A.
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+On approximate ideals <BR><EM>B. Trager or P. Gianni
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Decomposing Graver Test Sets in Stochastic Programming <BR><EM>Raymond Hemmecke
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Symbolic Computation of Formal Solutions for 2 and 3 Dimensional  Dynamical Systems <BR><EM>G. Eichenmueller
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Groebner Bases and Wavelet Design <BR><EM>Ivan Selesnick
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+6:00 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Instrumentation processes underlying the use of TI92 at high school level <BR><EM>Badr Defouad
+</EM></FONT></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Initial Ideals of Toric Ideals and Group Relaxations in Integer Programming <BR><EM>Serkan Hosten
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A new classification of planar homogeneous quadratic systems <BR><EM>Driss Boularas
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+To Be Announced <BR><EM>Jean-Charles Faugere &amp; Fabrice Rouillier
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+6:30 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A didactical laboratory: image filtering <BR><EM>A. Cavallone*, C. D'Apice*, M. Marsella &amp; S. Salerno
+</EM></FONT></TD>
+<TD></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Computation of Normal Forms of Hamiltonian Systems in the Presence of Poisson Commuting integrals (Liouville-Integrability and Birkhoff Normal Forms) <BR><EM>J. Mikram &amp; F. Zinoun
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+To Be Announced <BR><EM>Jeremy Johnson
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+</FONT></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+</TABLE></DIV>
+<DIV ALIGN="CENTER"><FONT SIZE="-1">
+
+<P>
+
+</FONT><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER" COLSPAN=6></FONT><FONT SIZE="-1"><B> June 26, 1999 (Saturday)</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+SESSION </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA MEETS </SMALL>E<SMALL>DUCATION </SMALL>II <BR></FONT><FONT SIZE="-1"><EM> Bernhard Kutzler</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> A</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTER </SMALL>A<SMALL>IDED </SMALL>G<SMALL>EOMETRIC </SMALL>D<SMALL>ESIGN AND </SMALL>C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA</SMALL> <BR></FONT><FONT SIZE="-1"><EM> L. Gonzalez-Vega &amp; J. R. Sendra</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> B</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A<SMALL>PPLICATIONS OF </SMALL>C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA TO </SMALL>R<SMALL>OBOTICS</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Peter Kovacs</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> C</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA FOR </SMALL>D<SMALL>YNAMICAL </SMALL>S<SMALL>YSTEMS AND </SMALL>M<SMALL>ECHANICS </SMALL>II <BR></FONT><FONT SIZE="-1"><EM> Victor Edneral, Ilias Kotsireas &amp; Nikolay Vasiliev</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> D</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTATIONS IN </SMALL>P<SMALL>URE </SMALL>M<SMALL>ATHEMATICS (</SMALL>A<SMALL>LGEBRA, </SMALL>A<SMALL>NALYSIS, </SMALL>G<SMALL>EOMETRY, ...)</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Maria-Emilia Alonso, Francisco Castro &amp; Laureano Gonzalez-Vega</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> E</B></FONT></DIV>
+</TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+9:00 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A Tutorial Mathematical System for Elementary Schools <BR><EM>Frank Postel* &amp; Ralf Hillebrand
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Missing points and branches of real parametric curves <BR><EM>Tomas Recio
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Forward kinematics of parallel robots <BR><EM>Jean-Pierre Merlet
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Computational aspects of the N-body problem <BR><EM>Ilias Kotsireas
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Homology of semidirect product of groups <BR><EM>V. Alvarez, J. A. Armario &amp; P. Real
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+9:30 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+High-Powered Technology in a Low-Level Mathematics Course <BR><EM>Jim Schultz
+</EM></FONT></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Using Computer algebra tools for off-line studies of parallel manipulators <BR><EM>Jean-Charles Faugere, Luc Rolland &amp; Fabrice Rouillier*
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+The study by symbolic computation of the sign of the riemannian curvature in the configuration space of the 3-body problem and applications <BR><EM>B. Elmabsout &amp; M. Barbosu
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Analyzing the transference of the coalgebra structure on the homology of CDGAs <BR><EM>M. J. Jimenez, P. Real &amp; B. Silva
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+10:00 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A Scheme for Conservative Use of Computer Algebra <BR><EM>Rein Prank
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Applying general-purpose symbolic and numerical computation programs for Computer Graphics and CAGD. Some applications to industry <BR><EM>Andres Iglesias &amp; Akemi Galvez
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Self-Motions of Griffis-Duffy Type Parallel Manipulators <BR><EM>Manfred Husty &amp; Adolf Karger
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Oscillators in Resonance <BR><EM>Antonio Elipe &amp; Andr&#233; Deprit
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Steenrod reduced powers and computability <BR><EM>Rocio Gonzalez-Diaz &amp; Pedro Real
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+10:30 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Mathematica and didactical innovation: a quadric use case <BR><EM>G. Albano*, A. Cavallone, C. D'Apice* &amp; G. Gargiulo
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Proper Parametrization of Real Algebraic Surfaces <BR><EM>Josef Schicho
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Functional Ideal Decomposition--a  Tool for Kinematics <BR><EM>Peter Kovacs
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Construction of Invariants of Simplectic Mapping <BR><EM>Nikolay Vasiliev
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+The use of Mathematica for the classification of some nilpotent Lie algebras <BR><EM>L. M. Camacho, J. R. Gomez &amp; R. M. Navarro
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+11:00 am </FONT></TD>
+<TD ALIGN="CENTER" COLSPAN=5></FONT><FONT SIZE="-1"><B> BREAK</B></FONT></TD>
+</TR>
+</TABLE><FONT SIZE="-1">
+
+<P>
+
+</FONT><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER" COLSPAN=6></FONT><FONT SIZE="-1"><B> June 26, 1999 (Saturday)</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+SESSION </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA MEETS </SMALL>E<SMALL>DUCATION </SMALL>II <BR></FONT><FONT SIZE="-1"><EM> Bernhard Kutzler</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> A</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTER </SMALL>A<SMALL>IDED </SMALL>G<SMALL>EOMETRIC </SMALL>D<SMALL>ESIGN AND </SMALL>C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA</SMALL> <BR></FONT><FONT SIZE="-1"><EM> L. Gonzalez-Vega &amp; J. R. Sendra</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> B</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+S<SMALL>YMBOLIC-</SMALL>N<SMALL>UMERIC </SMALL>I<SMALL>NTERFACE AND </SMALL>P<SMALL>ROBLEM </SMALL>S<SMALL>OLVING </SMALL>E<SMALL>NVIRONMENTS </SMALL>I <BR></FONT><FONT SIZE="-1"><EM> Richard Liska, Stanly Steinberg &amp; Robert van Engelen</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> C</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA FOR </SMALL>D<SMALL>YNAMICAL </SMALL>S<SMALL>YSTEMS AND </SMALL>M<SMALL>ECHANICS </SMALL>II <BR></FONT><FONT SIZE="-1"><EM> Victor Edneral, Ilias Kotsireas &amp; Nikolay Vasiliev</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> D</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTATIONS IN </SMALL>P<SMALL>URE </SMALL>M<SMALL>ATHEMATICS (</SMALL>A<SMALL>LGEBRA, </SMALL>A<SMALL>NALYSIS, </SMALL>G<SMALL>EOMETRY, ...)</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Maria-Emilia Alonso, Francisco Castro &amp; Laureano Gonzalez-Vega</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> E</B></FONT></DIV>
+</TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+11:30 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Computer Aided Instruction for Business Calculus in an International Liberal Arts College <BR><EM>A. Kehagias &amp; P. N. Vlachos*
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+An algorithm for approximate conversion of rational B-spline curves/surfaces to integral B-spline curves/surfaces and its implementation <BR><EM>Jesus Espinola, Laureano Gonzalez-Vega &amp; Ioana Necula
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Finite Difference Numerical Modelling Supported by Computer Algebra <BR><EM>Richard Liska
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Some properties of the symplectic Lie algebra <BR><EM>Rodney Coleman
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+New ways of defining filiform Lie algebras <BR><EM>J. C. Benjumea, F. J. Echarte, D. Fernandez, M. C. Marquez, J.  Nu&#241;ez &amp; F. Ramirez
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+12:00 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Flexible Mathematical GUI Controls for Mathematical Electronical Documents <BR><EM>Ralf Hillebrand* &amp; Frank Postel
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Groebner Bases and Statistics <BR><EM>Lorenzo Robbiano
+</EM></FONT></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1">  
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+About an algorithm of T. Oaku <BR><EM>Maribel Hartillo
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+SESSION </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+I<SMALL>NTERACTION ON </SMALL>P<SMALL>HYSICS, </SMALL>N<SMALL>UMBER </SMALL>T<SMALL>HEORY &amp; </SMALL>C<SMALL>OMPUTER </SMALL>S<SMALL>CIENCE </SMALL>I <BR></FONT><FONT SIZE="-1"><EM> Hoang Ngoc Minh</EM>  </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+12:30 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Mathematica in Undergraduate Mathematics Courses--A Teaching or Learning Aid? <BR><EM>May C. Abboud
+</EM></FONT></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Ctadel: A Computer Algebra System for  the Generation of Efficient Numerical Codes for PDEs <BR><EM>Robert van Engelen
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Colored multiple zeta values relations table <BR><EM>M. Bigotte
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Slopes in submodules of a free module <BR><EM>Jose Maria Ucha
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+1:00 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Searching roots for three degree polynomials with the help of Mathematica <BR><EM>Marilo Lopez Gonzalez &amp; Javier Rodrigo Hitos*
+</EM></FONT></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Invariant Variational Principles and Associated Numerical Schemes for Regularization of Ill-Posed Problems <BR><EM>Ravi Venkatesan
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Nested Sums and Iterated Integrals <BR><EM>D. Bradley
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Computing Toric First Syzygies <BR><EM>P. Pison-Casares &amp; A. Vigneron-Tenorio
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+1:30 pm </FONT></TD>
+<TD ALIGN="CENTER" COLSPAN=5></FONT><FONT SIZE="-1"><B> LUNCH</B></FONT></TD>
+</TR>
+</TABLE><FONT SIZE="-1">
+
+<P>
+
+</FONT><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER" COLSPAN=6></FONT><FONT SIZE="-1"><B> June 26, 1999 (Saturday)</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+SESSION </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA MEETS </SMALL>E<SMALL>DUCATION </SMALL>II <BR></FONT><FONT SIZE="-1"><EM> Bernhard Kutzler</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> A</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+D<SMALL>EMOS OF </SMALL>C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA </SMALL>S<SMALL>YSTEMS</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Michael Wester &amp; Winfried Neun</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> B</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+S<SMALL>YMBOLIC-</SMALL>N<SMALL>UMERIC </SMALL>I<SMALL>NTERFACE AND </SMALL>P<SMALL>ROBLEM </SMALL>S<SMALL>OLVING </SMALL>E<SMALL>NVIRONMENTS </SMALL>II <BR></FONT><FONT SIZE="-1"><EM> Richard Liska, Stanly Steinberg &amp; Robert van Engelen</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> C</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTER </SMALL>A<SMALL>LGEBRA IN THE </SMALL>S<SMALL>PANISH </SMALL>E<SMALL>DUCATIONAL </SMALL>S<SMALL>YSTEM</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Lola Rodriguez</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> D</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+C<SMALL>OMPUTATIONS IN </SMALL>P<SMALL>URE </SMALL>M<SMALL>ATHEMATICS (</SMALL>A<SMALL>LGEBRA, </SMALL>A<SMALL>NALYSIS, </SMALL>G<SMALL>EOMETRY, ...)</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Maria-Emilia Alonso, Francisco Castro &amp; Laureano Gonzalez-Vega</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> E</B></FONT></DIV>
+</TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+3:30 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Derivations and Visualizations for the Hydrogen Atom <BR><EM>Joseph D. Myers*, Kelley B. Mohrmann &amp; Terry T. Crow
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Some Perspectives on  the Usability of Computer Algebra Systems <BR><EM>Michael Wester
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Group Invariant Finite-Difference Schemes for Advection Equation <BR><EM>Ravi C. Venkatesan
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Aparicion de nuevos contenidos curriculares en matematicas mediante la aplicacion de nuevas tecnologias <BR><EM>Justo Cabezas Corchero
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+The ideal generation conjecture for s general rational curves <BR><EM>F. Orecchia
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+4:00 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+CONVODE: A Reduce package for solving differential equations <BR><EM>Alain Moussiaux
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Solving a RLC Circuit using Convolution with DERIVE for Windows <BR><EM>Michel Beaudin
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Usefulness of computer algebra methods  in numerical simulations <BR><EM>Michel Fournie
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Las herramientas euclideas y el ordenador <BR><EM>Tomas Recio
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Basic Algorithms for Specialization in Groebner Bases <BR><EM>A. Montes
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+4:30 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Exploring sequences with DERIVE <BR><EM>Paolo Boieri
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+The Computer Algebra System CoCoA <BR><EM>Lorenzo Robbiano
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Prototyping Symbolic-Numeric Algorithms  using Naglink <BR><EM>Brian J. Dupee* &amp; James H. Davenport
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Diferentes opciones para la resolucion de problemas con calculadoras graficas <BR><EM>Agustin Carrillo
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+The Generation of Polya Polynomials using Macsyma, with Applications <BR><EM>Bill Pletsch
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+5:00 pm </FONT></TD>
+<TD ALIGN="CENTER" COLSPAN=5></FONT><FONT SIZE="-1"><B> BREAK</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+SESSION </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+T<SMALL>EACHING OF </SMALL>E<SMALL>FFICIENT </SMALL>M<SMALL>ATHEMATICS</SMALL> <BR></FONT><FONT SIZE="-1"><EM> A. Akritas &amp; Gennadi Malaschonok</EM>  </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> </FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+5:30 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A project of Computer Aided Learning: A course of Computer Algebra in the web <BR><EM>Rafael J. Villanueva Mico &amp; A. Hervas
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+The REDLOG Package--Tools and Applications <BR><EM>Volker Weispfenning
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A symbolic-numerical package for linear stability analysis of numerical methods for ODEs <BR><EM>Massimo Cafaro &amp; Beatrice Paternoster*
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Cambios curriculares en la ense&#241;anza del Algebra <BR><EM>Lola Rodriguez Soalleiro
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Duality in Effective Algebraic Geometry <BR><EM>Bernard Mourrain
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+6:00 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A study of particular methods for the approximate construction of some regular polygons by using Mathematica 3.0 <BR><EM>Juan A. Aledo, Juan C. Cortes &amp; Fernando L. Pelayo
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+MuPAD--An Open Computer Algebra System and its Approach of Software Integration <BR><EM>Ralf Hillebrand &amp; Frank Postel
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A Symbolic Numeric Environment for  Analyzing Measurement Data in Multi-Model Settings <BR><EM>Christoph Richard &amp; Andreas Weber*
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Busqueda automatica de lugares geometricos <BR><EM>Eugenio Roanes Macias &amp; Eugenio Roanes Lozano
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A Fast Computation of Hook Schur Functions <BR><EM>F. Gaeta
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+6:30 pm
+</FONT></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Computer Algebra Applied to Mathematical Cartography <BR><EM>Carlos Enriguez Turi&#241;o
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Extraction of Low Order Boolean Rules from Trained Neural Networks using a Computer Algebra System <BR><EM>Terence Etchells
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Matematicas en Pantalla <BR><EM>Rafael Perez Gomez &amp; Miguel Posadas
+</EM></FONT></TD>
+<TD></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+evening </FONT></TD>
+<TD ALIGN="CENTER" COLSPAN=5>7:00pm - 8:00pm: Business Session in A</FONT></TD>
+</TR>
+</TABLE></DIV>
+<DIV ALIGN="CENTER"><FONT SIZE="-1">
+
+<P>
+
+</FONT><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER" COLSPAN=5></FONT><FONT SIZE="-1"><B> June 27, 1999 (Sunday)</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+SESSION </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+T<SMALL>EACHING OF </SMALL>E<SMALL>FFICIENT </SMALL>M<SMALL>ATHEMATICS</SMALL> <BR></FONT><FONT SIZE="-1"><EM> A. Akritas &amp; Gennadi Malaschonok</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> A</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+M<SMALL>ATHEMATICS ON THE </SMALL>I<SMALL>NTERNET</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Angel Diaz &amp; Erich Kaltofen</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> B</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A<SMALL>PPLICATIONS OF </SMALL>Q<SMALL>UANTIFIER </SMALL>E<SMALL>LIMINATION</SMALL> <BR></FONT><FONT SIZE="-1"><EM> Volker Weispfenning &amp; Hoon Hong</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> C</B></FONT></DIV>
+</TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+I<SMALL>NTERACTION ON </SMALL>P<SMALL>HYSICS, </SMALL>N<SMALL>UMBER </SMALL>T<SMALL>HEORY &amp; </SMALL>C<SMALL>OMPUTER </SMALL>S<SMALL>CIENCE </SMALL>II <BR></FONT><FONT SIZE="-1"><EM> Hoang Ngoc Minh</EM> <BR></FONT>
+<DIV ALIGN="CENTER"><FONT SIZE="-1"><B> D</B></FONT></DIV>
+</TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+9:00 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A comparative study between two general methods for the approximate construction of regular polygons by using Mathematica 3.0 <BR><EM>Juan A. Aledo, Juan C. Cortes &amp; Fernando L. Pelayo
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Interfacing Proof Checkers With OpenMath <BR><EM>Olga Caprotti
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A Robust Control System Design by a Special Quantifier Elimination Method using a Sturm-Habicht Sequence <BR><EM>Hirokazu Anai &amp; Shinji Hara
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Functional Equations on Polylogarithms with Axiom <BR><EM>Hoang Ngoc Minh
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+9:30 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Possibilities for Alternative Uses of the "Calculus and Mathematica" Approach <BR><EM>Alkiviadis Akritas, Stelios Kapranidis &amp; Athina Katalifou
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Plug and Play Mathematical Components <BR><EM>Mike Dewar
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A Special Quantifier Elimination Algorithm for Pham Systems <BR><EM>Laureano Gonzalez-Vega &amp; Neila Gonzalez-Campos
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Algebraic Structures on the Set of Multiple Zeta Values <BR><EM>Mike Hoffman
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+10:00 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Classical Mathematics with Mathematica <BR><EM>Alkiviadis Akritas &amp; Zamir Bavel
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+To Be Announced <BR><EM>Angel L. Diaz
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+A new solution of the quartic problem: with application to integration <BR><EM>David J. Jeffrey
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Computer aided Knot Theory using Mathematica and MathLink <BR><EM>N. Imafuji
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+10:30 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Calculus  and the Race Track Principle <BR><EM>Alkiviadis Akritas &amp; Zamir Bavel
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Mathematics on the Web--Past, Present and Future <BR><EM>Dave Raggett
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Reach Set Computation for Linear Vector Fields using Quantifier Elimination <BR><EM>Gerardo Lafferriere, George J. Pappas &amp; Sergio Yovine
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Combinatorics on Algebraic Identification <BR><EM>G. Jacob
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+11:00 am </FONT></TD>
+<TD ALIGN="CENTER" COLSPAN=4></FONT><FONT SIZE="-1"><B> BREAK</B></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+11:30 am
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Some elementary mathematics revisited and revised <BR><EM>David J. Jeffrey
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Unicode Encoding of Mathematics <BR><EM>Murray Sargent
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Quantifier Elimination for Trigonometric Polynomials by Cylindrical Trigonometric Decomposition <BR><EM>Petru Pau &amp; Josef Schicho
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Computational Construction of representation matrices for parallel version polynomial invariants <BR><EM>M. Ochiai
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+12:00 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Teaching Error-Correcting Codes, Discrete Mathematics and Modern Algebra with Computer Algebra <BR><EM>Igor Gachkov &amp; Kenneth Hulth
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Stylesheets for Mathematical Web Pages <BR><EM>Stephen Watt
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+The Study of Stability using Computer Algebra <BR><EM>Stanly Steinberg
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Computational Decomposition of homeomorphisms into canonical Dehn's twists <BR><EM>Y. Sakata
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+12:30 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Teaching of efficient mathematics <BR><EM>Gennadi Malaschonok &amp; Natalia Malaschonok
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Accessing Quantifier Elimination Packages Over the Internet  Out of General Purpose Systems <BR><EM>Andreas Weber
+</EM></FONT></TD>
+<TD></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+On l-adic iterated integral <BR><EM>Z. Wojtkowiak
+</EM></FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+1:00 pm
+</FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Efficient methods of mathematical analysis <BR><EM>Gennadi Malaschonok
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Concluding Discussion of the Issues Addressed in the Talks  (Moderator with Audience Participation) <BR><EM>Erich Kaltofen
+</EM></FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-1"> 
+Semilinear motion planning in REDLOG <BR><EM>Volker Weispfenning
+</EM></FONT></TD>
+<TD></TD>
+</TR>
+<TR><TD ALIGN="RIGHT"><FONT SIZE="-1"> 
+1:30 pm </FONT></TD>
+<TD ALIGN="CENTER" COLSPAN=4></FONT><FONT SIZE="-1"><B> LUNCH</B></FONT></TD>
+</TR>
+</TABLE></DIV>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Richard Liska</I>
+<BR><I>1999-06-23</I>
+</ADDRESS>
+</BODY>
+</HTML>

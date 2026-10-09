@@ -1,0 +1,27 @@
+                 Nonstandard Applications of Computer Algebra
+
+   at ACA'2010 to be held June 24-27, 2010 in Vlora, Albania
+
+   Organizers:
+
+   Eugenio Roanes-Lozano
+   Michael Wester
+   Antonio Hernando
+
+   Overview:
+
+   In many of the ACA conferences from 1996 onwards, we have chaired a
+   session devoted to ``Nonstandard Applications of Computer Algebra''.
+   The session traditionally collects contributions that, while using
+   Computer Algebra techniques and/or Computer Algebra Systems, can not
+   be easily allocated in the ``standard'' sessions. Examples of topics
+   treated in papers presented in previous editions of the conference
+   are: Verification and Development of Expert Systems (using algebraic
+   techniques), Railway Traffic Control, Artificial Intelligence,
+   Thermodynamics, Molecular Dynamics, Statistics, Electrical Networks,
+   Logic, Robotics, Sociology, Integration, Mechanics, Discrete Mathematics
+   ...
+
+   Selected papers from all these sessions have been published in different
+   special volumes of the journal "Mathematics and Computers in Simulation".
+   We plan to continue with this tradition.

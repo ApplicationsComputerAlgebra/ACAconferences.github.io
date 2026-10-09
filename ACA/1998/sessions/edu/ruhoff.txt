@@ -1,0 +1,23 @@
+"Computer Algebra Systems in Applied Mathematics Education: 
+ Experiences and Future Directions"
+
+Peder Thusgaard Ruhoff(*) 
+The Maersk Mc-Kinney Moller Institute for Production Technology 
+Odense University, Campusvej 55, DK-5230 Odense M, Denmark
+
+
+The development of sophisticated computer algebra systems such as 
+DERIVE, MAPLE and MATHEMATICA has definitely changed the way many 
+scientists and engineers are working. Therefore, in 1995 we decided  
+to reform the applied mathematics curriculum at our institution and  
+introduce the students to the use of computer algebra systems as tools in 
+mathematical modeling, problem solving and research. 
+We will in this presentation describe how this intiative has changed 
+the way we teach applied mathematics and the way students 
+study and learn. Further, we will report on the mainly positive 
+experiences we have had during the first three years, e.g.\ students 
+that become adventurous and begin to explore mathematical problems on 
+their own. We will also present examples of specific student projects and 
+exams. Finally, we discuss plans for the future use of these systems and 
+present a list of features we would like to see in future computer 
+algebra systems, such as on-line tutors.

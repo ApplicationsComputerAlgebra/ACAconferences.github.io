@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+
+% \usepackage{a4wide}
+\thispagestyle{empty}
+\begin{document}
+%\newfont{\twlsy}{cmsy10 scaled 1200}
+
+\Large
+{
+\begin{center}
+Analysing the Thermodynamics of Steam Reforming with Maple
+\end{center}
+}
+
+{\small
+\begin{center} Johannes Grotendorst${}^*$ and J\"urgen Dornseiffer${}^\dag$ \\
+\medskip
+${}^*$ Central Institute for Applied Mathematics\\
+${}^\dag$ Institute for Applied Physical Chemistry\\
+Research Centre J\"ulich\\  D-52425 J\"ulich, Germany\\
+\{j.grotendorst, j.dornseiffer\}@fz-juelich.de
+\end{center}
+}
+
+\begin{abstract}
+The catalytic steam reforming process converts hydrocarbons into mixtures of
+hydrogen, carbon monoxide, carbon dioxide, and methane. It is widely
+used in industry for the production of hydrogen, synthesis gas, ammonia,
+methanol and other useful chemicals.
+Important data for the design and optimization
+of a steam reformer are provided by thermodynamic calculations.
+For instance, to find the most economic reaction conditions and for
+predicting the carbon boundaries, it is necessary to study
+the reaction behavior with respect to the
+operating parameters. Steam reforming of a general hydrocarbon
+is based on the following simple system of reaction equations:
+
+\medskip
+
+\noindent
+1. The methane-steam equality
+%\chemical{CH_{4}+H_{2}O \rightleftharpoons CO+3H_{2}} \hfill (1)
+$${\rm CH_{4}+H_{2}O} \rightleftharpoons {\rm CO+3H_{2}}$$
+2. The water-gas shift
+$${\rm CO+H_{2}O} \rightleftharpoons {\rm CO_{2}+H_{2}}$$
+3. The carbon-methanation equality
+$${\rm CH_{4}} \rightleftharpoons {\rm C+2H_{2}}$$
+
+\medskip
+\noindent
+
+Using symbolic methods we introduce a flexible computation model
+for the thermodynamic description of the steam reforming process.
+The product gas composition at equilibrium is determined by solving
+a system of multiparameter nonlinear equations for the reaction extents.
+The applied computation techniques are chosen graduated according to
+the computation effort needed and range from direct calculations
+in Maple to the automatic generation of Fortran programs for complete
+parameter studies.
+We analyse the effects of temperature, pressure and the
+steam to carbon ratio on the equilibrium gas composition and
+the carbon formation.
+The theoretical equilibrium compositions are found to be closely
+matching with those obtained in experiments.
+The computed data were used to determine the mass and energy balances
+of a pilot reactor for reforming organic waste (fluids and gases).
+
+This work presents an example of interdisciplinary work done
+in the field of  scientific computing
+at the institutes for applied mathematics and physical chemistry
+of the research centre J\"ulich . It illustrates how the use of modern
+computing tools such as Maple changes the approach of mathematical
+modeling in science. The concept of scientific computation has evolved
+from a field encompassing primarily numerical methods to a much broader
+field that includes algebraic and analytical methods, numerical methods,
+and graphics.
+
+\end{abstract}
+\end{document}

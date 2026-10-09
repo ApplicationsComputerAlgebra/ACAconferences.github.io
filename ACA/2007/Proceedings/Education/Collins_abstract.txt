@@ -1,0 +1,7 @@
+Enhancing the Teaching of Calculus using a Computer Algebra System (TI-89)
+
+Ken Collins
+
+The TI-89 can solve math problems analytically using calculus.  We will show
+several > examples of using the TI-89 as a teaching and learning tool.  There
+will be a handout with these and other examples.

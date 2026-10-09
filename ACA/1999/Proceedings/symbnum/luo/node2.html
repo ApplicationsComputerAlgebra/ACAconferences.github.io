@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Explicit derivation of element stiffness matrix</TITLE>
+<META NAME="description" CONTENT="Explicit derivation of element stiffness matrix">
+<META NAME="keywords" CONTENT="luo">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="luo.css">
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="luo.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html29"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html27"
+ HREF="luo.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html21"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html30"
+ HREF="node3.html">Parametric study of finite</A>
+<B> Up:</B> <A NAME="tex2html28"
+ HREF="luo.html">No Title</A>
+<B> Previous:</B> <A NAME="tex2html22"
+ HREF="node1.html">Introduction</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00020000000000000000">
+Explicit derivation of element stiffness matrix</A>
+</H1>
+A common application of symbolic computer algebra in finite element methods is to explicitly obtain element stiffness matrix by analytically integration [<A
+ HREF="node7.html#Argyris96">3</A>,<A
+ HREF="node7.html#Nagabhushanam92">4</A>,<A
+ HREF="node7.html#Pinheiro97">5</A>,<A
+ HREF="node7.html#Rathod88-1">6</A>,<A
+ HREF="node7.html#Rathod88-2">8</A>,<A
+ HREF="node7.html#Chang90">7</A>]. It is demonstrated in [<A
+ HREF="node7.html#Eriksson96">9</A>,<A
+ HREF="node7.html#Pacoste98">10</A>,<A
+ HREF="node7.html#Hamml98">11</A>] that a symbolic derivation of element stiffness matrix can give computationally efficient procedures; the use of explicit element stiffness matrix in numerical simulation can improve computational efficiency by avoiding numerical integration. The larger the problem scale, which is represented by the number of degrees of freedom, the more obvious the reduction of computational cost; element accuracy, well-documented procedure and less computational cost are extremely required in simulating geometrically nonlinear problems such as interacting and higher order instability, where structural behaviour is complex and tangential stiffness matrices have to be calculated repeatedly; the common way for obtaining element stiffness matrix is to start from the formulation 
+<!-- MATH: $\displaystyle\int_\Omega\mbox{\boldmath$\space B $\unboldmath }^T\mbox{\boldmath$\space D $\unboldmath }\mbox{\boldmath$\space B $\unboldmath }d\Omega$ -->
+.
+Due to large number of operations needed in the matrix product, this way is often inefficient. An alternative way is to start from potential or strain energy expression in an element. After introducing interpolation functions, the element energy density is analytically or 'numerically' integrated over the element domain, then the obtained energy expression is differentiated with respect to element degrees of freedom. With this way, strain definition can be easily modified and adopted in the derivation. It must be emphasized that with symbolic computer algebra, not only exact integration of element stiffness matrix can be done, but also reduced/selective integrations can be included.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html29"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html27"
+ HREF="luo.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html21"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html30"
+ HREF="node3.html">Parametric study of finite</A>
+<B> Up:</B> <A NAME="tex2html28"
+ HREF="luo.html">No Title</A>
+<B> Previous:</B> <A NAME="tex2html22"
+ HREF="node1.html">Introduction</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../sym-num.html> IMACS ACA'99 Symbolic-Numeric Interface session</A>
+</ADDRESS>
+</BODY>
+</HTML>

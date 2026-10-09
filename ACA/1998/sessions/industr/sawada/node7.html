@@ -1,0 +1,346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Reduction tree</TITLE>
+<META NAME="description" CONTENT="Reduction tree">
+<META NAME="keywords" CONTENT="sawada">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sawada.css">
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html104"
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html102"
+ HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html96"
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html105"
+ HREF="node8.html">Design variables whose values</A>
+<B> Up:</B> <A NAME="tex2html103"
+ HREF="node6.html">Symbolic part</A>
+<B> Previous:</B> <A NAME="tex2html97"
+ HREF="node6.html">Symbolic part</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00024100000000000000">&#160;</A>
+<A NAME="subsubsec:reduction-tree">&#160;</A>
+<BR>
+Reduction tree
+</H3>
+Let Eq.&nbsp;(<A HREF="node7.html#eq:constraint">1</A>) be the constraint set defined at the conceptual design stage. 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\begin{array}{c}
+f_{1}(x_{1},\ldots,x_{n})=0,\ldots,f_{p}(x_{1},\ldots,x_{n})=0,\\
+g_{1}(x_{1},\ldots,x_{n}) \neq 0,\ldots,g_{q}(x_{1},\ldots,x_{n}) \neq 0,\\
+h_{1}(x_{1},\ldots,x_{n}) \geq 0,\ldots,h_{r}(x_{1},\ldots,x_{n}) \geq 0.
+\end{array}
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:constraint">&#160;</A><IMG
+ WIDTH="305" HEIGHT="68"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}
+\begin{array}{c}
+f_{1}(x_{1},\ldots,x_{n})=0,\ldots,f_{p}(x_...
+...n}) \geq 0,\ldots,h_{r}(x_{1},\ldots,x_{n}) \geq 0.
+\end{array}\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+By introducing slack variables <I>s</I><SUB><I>j</I></SUB> and <I>t</I><SUB><I>k</I></SUB>, Eq.&nbsp;(<A HREF="node7.html#eq:constraint">1</A>) is transformed to Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>) and (<A HREF="node7.html#eq:constraint-si">3</A>).
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\begin{array}{c}
+f_{1}(x_{1},\ldots,x_{n})=0,\ldots,f_{p}(x_{1},\ldots,x_{n})=0,\\
+g_{1}(x_{1},\ldots,x_{n}) \cdot s_{1}=1,\ldots,g_{q}(x_{1},\ldots,x_{n}) \cdot s_{q}=1,\\
+h_{1}(x_{1},\ldots,x_{n})=t_{1},\ldots,h_{r}(x_{1},\ldots,x_{n})=t_{r}.
+\end{array}
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:constraint-se">&#160;</A><IMG
+ WIDTH="357" HEIGHT="68"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}
+\begin{array}{c}
+f_{1}(x_{1},\ldots,x_{n})=0,\ldots,f_{p}(x_...
+..._{n})=t_{1},\ldots,h_{r}(x_{1},\ldots,x_{n})=t_{r}.
+\end{array}\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+t_{1} \geq 0,\ldots,t_{r} \geq 0.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:constraint-si">&#160;</A><IMG
+ WIDTH="128" HEIGHT="30"
+ SRC="img6.gif"
+ ALT="\begin{displaymath}
+t_{1} \geq 0,\ldots,t_{r} \geq 0.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+A set of Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>) and (<A HREF="node7.html#eq:constraint-si">3</A>) is equivalent to Eq.&nbsp;(<A HREF="node7.html#eq:constraint">1</A>). The symbolic part computes equations consisting of 
+<!-- MATH: $(t_{1},\ldots,t_{r})$ -->
+<IMG
+ WIDTH="82" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$(t_{1},\ldots,t_{r})$">
+from Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>), and finds out inconsistencies and new constraints according to the following criteria. 
+<DIV ALIGN="LEFT">
+<B>Criteria of inconsistency</B>
+<DL COMPACT>
+<DT>1.
+<DD><EM>If all the coefficients of a polynomial consisting of </EM>
+<!-- MATH: $(t_{1},\ldots,t_{r})$ -->
+<IMG
+ WIDTH="82" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$(t_{1},\ldots,t_{r})$"><EM> are positive and it is equal to a negative constant, there exists inconsistency.</EM>
+<BR>
+For example, if ``
+<!-- MATH: $t_{1} + t_{2}t_{3} = -3$ -->
+<I>t</I><SUB>1</SUB> + <I>t</I><SUB>2</SUB><I>t</I><SUB>3</SUB> = -3'' is computed, there exists inconsistency among ``
+<!-- MATH: $h_{1}(x_{1},\ldots,x_{n})\geq 0$ -->
+<IMG
+ WIDTH="138" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$h_{1}(x_{1},\ldots,x_{n})\geq 0$">'', ``
+<!-- MATH: $h_{2}(x_{1},\ldots,x_{n})\geq 0$ -->
+<IMG
+ WIDTH="138" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$h_{2}(x_{1},\ldots,x_{n})\geq 0$">'' and ``
+<!-- MATH: $h_{3}(x_{1},\ldots,x_{n})\geq 0$ -->
+<IMG
+ WIDTH="138" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$h_{3}(x_{1},\ldots,x_{n})\geq 0$">''.
+<DT>2.
+<DD><EM>If all the coefficients of a polynomial consisting of </EM>
+<!-- MATH: $(t_{1},\ldots,t_{r})$ -->
+<IMG
+ WIDTH="82" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$(t_{1},\ldots,t_{r})$"><EM> are positive and it is equal to zero, a new constraint is obtained.</EM>
+<BR>
+For example, if ``
+<!-- MATH: $t_{1} + t_{2}t_{3} = 0$ -->
+<I>t</I><SUB>1</SUB> + <I>t</I><SUB>2</SUB><I>t</I><SUB>3</SUB> = 0'' is computed, a new constraint ``
+<!-- MATH: $h_{1}(x_{1},\ldots,x_{n}) = 0 \land \{h_{2}(x_{1},\ldots,x_{n}) = 0 \lor h_{3}(x_{1},\ldots,x_{n}) = 0\}$ -->
+<IMG
+ WIDTH="457" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$h_{1}(x_{1},\ldots,x_{n}) = 0 \land \{h_{2}(x_{1},\ldots,x_{n}) = 0 \lor h_{3}(x_{1},\ldots,x_{n}) = 0\}$">'' is obtained.
+</DL><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\Box$"></DIV>
+<P>
+Figure&nbsp;<A HREF="node7.html#fig:geometry">2</A> shows the geometrical meaning of this method of checking inconsistency. By introducing slack variables <B><I>s</I></B> and <B><I>t</I></B>, the surface defined by Eq.&nbsp;(<A HREF="node7.html#eq:constraint">1</A>) in <B><I>x</I></B>-space is transformed to the surface defined by Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>) and (<A HREF="node7.html#eq:constraint-si">3</A>) in 
+<!-- MATH: $(\mbox{\boldmath$x,s,t$ })$ -->
+<IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$(\mbox{\boldmath$x,s,t$ })$">-space. The condition that there exists inconsistency in Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>) and (<A HREF="node7.html#eq:constraint-si">3</A>) means that the surface defined by Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>) does not pass through the region defined by Eq.&nbsp;(<A HREF="node7.html#eq:constraint-si">3</A>). Thus, by projecting the surface defined by Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>) in 
+<!-- MATH: $(\mbox{\boldmath$x,s,t$ })$ -->
+<IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$(\mbox{\boldmath$x,s,t$ })$">-space to <B><I>t</I></B>-space, the inconsistency in Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>) and Eq.&nbsp;(<A HREF="node7.html#eq:constraint-si">3</A>) can be checked.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig:geometry">&#160;</A><A NAME="169">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 2:</STRONG>
+Geometric meaning of the inconsistency checking</CAPTION>
+<TR><TD><IMG
+ WIDTH="332" HEIGHT="123"
+ SRC="img14.gif"
+ ALT="\begin{figure}
+\begin{center}
+\ \epsfbox{sawada-2.eps}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+Polynomials consisting of 
+<!-- MATH: $(t_{1},\ldots,t_{r})$ -->
+<IMG
+ WIDTH="82" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$(t_{1},\ldots,t_{r})$">
+are computed by constructing a reduction tree. At the initial state, a reduction tree is a tree whose nodes are Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>). After that, each equation is regarded as a reduction rule which reduces&nbsp;[<A
+ HREF="node14.html#buchberger3">2</A>] other equations, and new nodes are generated by applying the reduction rules according to the following procedures. In reduction, the slack variables <B><I>t</I></B> are given the lexicographically lower rank than any other variable. Figure&nbsp;<A HREF="node7.html#fig:red-tree">3</A> shows an example of a reduction tree.
+<DIV ALIGN="LEFT">
+<B>Procedures of constructing a reduction tree</B>
+<DL COMPACT>
+<DT>1.
+<DD><A NAME="ucfm:init">&#160;</A> The slack variables <B><I>t</I></B> are given the lexicographically lower rank than any other variable. Let <B><I>C</I></B> and 
+<!-- MATH: $C^{\prime}$ -->
+<IMG
+ WIDTH="23" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$C^{\prime}$">
+be 
+<!-- MATH: $\{f_{i}(\mbox{\boldmath$x$ })=0,g_{j}(\mbox{\boldmath$x$ })\cdot s_{j}=1,h_{k}(\mbox{\boldmath$x$ })=t_{k}\;(1\leq i\leq p,1\leq j\leq q,1\leq k\leq r)\}$ -->
+<IMG
+ WIDTH="532" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\{f_{i}(\mbox{\boldmath$x$ })=0,g_{j}(\mbox{\boldmath$x$ })\cdot s_{j}=1,h_{k}(\mbox{\boldmath$x$ })=t_{k}\;(1\leq i\leq p,1\leq j\leq q,1\leq k\leq r)\}$">
+and <IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\emptyset$">
+respectively. Then, a tree whose leaf nodes are equations in <B><I>C</I></B> is constructed. 
+<DT>2.
+<DD><A NAME="ucfm:reduce">&#160;</A> An equation held at each node of the reduction tree is reduced by each equation in <B><I>C</I></B> only once. If more than one equation in <B><I>C</I></B> can reduce the equation at the node, all of them are applied. Then, child nodes which hold the new equations generated by reduction are added to the node. If no equation in <B><I>C</I></B> can reduce the equation, it is appended to 
+<!-- MATH: $C^{\prime}$ -->
+<IMG
+ WIDTH="23" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$C^{\prime}$">.
+<DT>3.
+<DD><A NAME="ucfm:inconsistency">&#160;</A> If an equation consisting of <B><I>t</I></B> is generated, it is checked by the criteria described above. If inconsistency or a new constraint is found, the computation is finished. 
+<DT>4.
+<DD><A NAME="ucfm:return">&#160;</A> If there is a new node added to the reduction tree, go back to Step&nbsp;<A HREF="node7.html#ucfm:reduce">2</A>. 
+<DT>5.
+<DD><A NAME="ucfm:terminate">&#160;</A> If 
+<!-- MATH: $C^{\prime}$ -->
+<IMG
+ WIDTH="23" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$C^{\prime}$">
+is empty, the computation is finished. Otherwise, let <B><I>C</I></B> be 
+<!-- MATH: $C \cup C^{\prime}$ -->
+<IMG
+ WIDTH="55" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$C \cup C^{\prime}$">
+and go back to Step&nbsp;<A HREF="node7.html#ucfm:reduce">2</A>.
+</DL><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\Box$"></DIV>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig:red-tree">&#160;</A><A NAME="208">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 3:</STRONG>
+Reduction tree</CAPTION>
+<TR><TD><IMG
+ WIDTH="388" HEIGHT="130"
+ SRC="img19.gif"
+ ALT="\begin{figure}
+\begin{center}
+\ \epsfbox{sawada-3.eps}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+In order to efficiently find out inconsistency, the symbolic part uses the following heuristics.
+<DIV ALIGN="LEFT">
+<B>Heuristics improving computational efficiency</B>
+<DL COMPACT>
+<DT>1.
+<DD>Decreasing the number of generated nodes
+<P>
+<EM>If an equation held at a node can be reduced by several equations in </EM><B><I>C</I></B><EM> whose head terms are prime to each other, only one equation of them is applied and only one child node is generated.</EM>
+
+<P>
+In order to improve computational efficiency, it should be avoided to generate same equations. This heuristics is based on the fact that the normal form&nbsp;[<A
+ HREF="node14.html#buchberger3">2</A>] of an equation obtained by applying equations whose head terms are prime to each other is identical irrespective of the order of using these equations. 
+<DT>2.
+<DD>Ordering between variables and normalizing the equation set
+
+<P>
+<EM>Variables appearing in an inequality are given the lowest rank next to the slack variables </EM><B><I>t</I></B><EM>, and the equation set is normalized by computing its Gr&#246;bner base. </EM>
+
+<P>
+A constraint interact with another constraint which has common variables. Figure&nbsp;<A HREF="node7.html#fig:constraint-graph">4</A> shows a constraint graph&nbsp;[<A
+ HREF="node14.html#bahler">1</A>,<A
+ HREF="node14.html#nagai-e">3</A>] which visually represents interrelationships between constraints. A constraint graph is defined as a bipartite graph whose nodes are classified into two groups: variable nodes and constraint nodes. A variable node is connected with constraint nodes in which the variable appears. Reductions are conducted between two constraint nodes connected with the common variable nodes. Thus, it is considered that if distances between inequality constraint nodes are short then equations consisting of <B><I>t</I></B> are efficiently obtained. This heuristics has an effect of transforming a constraint graph into the new one which has shorter distances between inequality constraint nodes. 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig:constraint-graph">&#160;</A><A NAME="225">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 4:</STRONG>
+Constraint graph and its transformation</CAPTION>
+<TR><TD><IMG
+ WIDTH="577" HEIGHT="127"
+ SRC="img20.gif"
+ ALT="\begin{figure}
+\begin{center}
+\ \epsfbox{sawada-4.eps}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR></DL><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\Box$"></DIV>
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html104"
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html102"
+ HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html96"
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html105"
+ HREF="node8.html">Design variables whose values</A>
+<B> Up:</B> <A NAME="tex2html103"
+ HREF="node6.html">Symbolic part</A>
+<B> Previous:</B> <A NAME="tex2html97"
+ HREF="node6.html">Symbolic part</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

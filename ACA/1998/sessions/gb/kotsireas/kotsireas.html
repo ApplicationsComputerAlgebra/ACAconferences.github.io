@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Using Gr&#246;bner Bases and Invariant Theory to check a conjecture in Celestial Mechanics</TITLE>
+<META NAME="description" CONTENT="Using Gr&#246;bner Bases and Invariant Theory to check a conjecture in Celestial Mechanics">
+<META NAME="keywords" CONTENT="kotsireas">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="kotsireas.css">
+</HEAD>
+<BODY bgcolor=white>
+
+<P>
+<H1 ALIGN="CENTER">     Using Gr&#246;bner Bases and Invariant Theory to <BR>
+check a conjecture in Celestial Mechanics</H1>
+<P ALIGN="CENTER"><STRONG>Ilias Kotsireas
+<BR>
+Universite Pierre et Marie Curie, Paris VI
+<BR>
+LIP6  BP 168
+<BR>
+4, place Jussieu, 75252 Paris cedex 05
+<BR>
+France
+<BR>
+E-mail:Ilias.Kotsireas@lip6.fr</STRONG></P>
+<P ALIGN="LEFT"></P>
+
+<P>
+<B>Abstract</B>
+
+<P>
+The N-body problem is one of the most widely studied problems
+of Celestial mechanics. 
+We are interested in a conceptually simple but important 
+class of solutions, called central configurations.
+They are the only solutions of the N-body problem that can
+be computed analytically. Geometrically they represent solutions 
+where the configuration of the N bodies remains similar to 
+itself during motion. 
+<P>
+Much work has been done on the problem of central configurations. 
+Many different mathematical tools and methodologies have been used succesfully,
+to compute central configurations in various contexts. 
+Me mention briefly Morse Theory, Homology Theory, Determinants, Numerical Analysis
+by computer, and Lie transforms. 
+<P>
+It has been proved by A. Albouy [#!Alb95!#], that every planar central configuration
+of the newtonian 4-body problem with equal masses, has at least one 
+symmetry axis. This fact has been verified using Symbolic Computation
+methods by A. Albouy [#!Alb96!#] and the author [#!Kot!#]. 
+Moreover, this constructive proof revealed the fact that there 
+is only one central configuration with exactly one symmetry axis. 
+<P>
+In both the above approaches, the symmetry of the equations has been used 
+in different ways. 
+<P>
+By using the method presented in [#!KL!#] we obtain a formulation of
+the equations of the planar 4-body problem with equal masses, 
+which is adequate, 
+after an easy symetrisation of the equations,
+for solving the problem via 
+an Invariant Theory polynomial system solving algorithm, 
+proposed by A. Colin [#!Col!#]. 
+Ultimately, this algorithm makes use of Gr&#246;bner Bases computations.
+However, this method has the advantage that it can be applied 
+in a more general context, without significant modifications. 
+In particular we use this method to check the validity of the
+Albouy-Sim&#243; conjecture for the 4-body problem with equal masses. 
+<P>
+Moreover we obtain some interesting by-products, 
+namely some new formulae for a particular action of the symmetric 
+group <I>S</I><SUB>2</SUB> on 4 variables, involving binomial coeffcients and
+Newton-Gregory interpolation polynomials. 
+The discovery of these formulae has been done using Gr&#246;bner Bases computations
+in  GB [#!Fau!#] through its  AXIOM interface and following the ideas exposed in [#!BE!#].
+The on-line Encyclopedia of Integer Sequences, 
+maintaned by N. J. A. Sloane [#!Slo!#], has been of great help. 
+<P>
+It is interesting to note that in all cases considered, 
+we obtain a more compact form for the traditional Hironaka decomposition. 
+Indeed, the expressions obtained are of lower degree and with smaller coefficients.
+Only the application of an easy recursive algorithm is needed, to obtain the actual 
+Hironaka decomposition. These results suggest that perhaps the best way 
+to compute the Hironaka decomposition of big invariants, is to first decompose 
+them in small parts, find a formulae for each part and then combine the 
+pieces together. 
+We have thus computed for example the Hironaka decompositions of the invariants 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{B}^{156}{b}^{76}+{B}^{76}{b}^{75}{D}^{80}d+{D}^{76}{d}^{75}{B}^{80}b+{D}^{156}{d}^{76}
+\end{displaymath} -->
+
+
+<I>B</I><SUP>156</SUP><I>b</I><SUP>76</SUP>+<I>B</I><SUP>76</SUP><I>b</I><SUP>75</SUP><I>D</I><SUP>80</SUP><I>d</I>+<I>D</I><SUP>76</SUP><I>d</I><SUP>75</SUP><I>B</I><SUP>80</SUP><I>b</I>+<I>D</I><SUP>156</SUP><I>d</I><SUP>76</SUP>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{B}^{241}{b}^{159}+{B}^{156}{b}^{76}{D}^{85}{d}^{83}+{B}^{161}{b}^{158
+}{D}^{80}d+{B}^{76}{b}^{75}{D}^{165}{d}^{84}+{D}^{76}{d}^{75}{B}^{165}
+{b}^{84}+{D}^{161}{d}^{158}{B}^{80}b+{D}^{156}{d}^{76}{B}^{85}{b}^{83}
++{D}^{241}{d}^{159}
+\end{displaymath} -->
+
+
+<I>B</I><SUP>241</SUP><I>b</I><SUP>159</SUP>+<I>B</I><SUP>156</SUP><I>b</I><SUP>76</SUP><I>D</I><SUP>85</SUP><I>d</I><SUP>83</SUP>+<I>B</I><SUP>161</SUP><I>b</I><SUP>158
+</SUP><I>D</I><SUP>80</SUP><I>d</I>+<I>B</I><SUP>76</SUP><I>b</I><SUP>75</SUP><I>D</I><SUP>165</SUP><I>d</I><SUP>84</SUP>+<I>D</I><SUP>76</SUP><I>d</I><SUP>75</SUP><I>B</I><SUP>165</SUP>
+<I>b</I><SUP>84</SUP>+<I>D</I><SUP>161</SUP><I>d</I><SUP>158</SUP><I>B</I><SUP>80</SUP><I>b</I>+<I>D</I><SUP>156</SUP><I>d</I><SUP>76</SUP><I>B</I><SUP>85</SUP><I>b</I><SUP>83</SUP>
++<I>D</I><SUP>241</SUP><I>d</I><SUP>159</SUP>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+by implementing the recursive algorithm in  MAPLE. 
+These frontier Invariant Theory computations take some minutes using this approach, 
+whereas they are already by far unfeasible with the general-purpose systems, 
+such as  MAGMA or  INVAR. 
+In a forthcoming paper we plan to present algorithms which apply 
+in a more general Invariant-Theoretic context. 
+This more systematic study is joint work in progress with A. Colin. 
+<P>
+The final computations to check the validity 
+of the Albouy-Sim&#243; conjecture up to a certain range,
+have been performed in  FGB [#!Fau!#], on a Bi-Pentium machine under Linux.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

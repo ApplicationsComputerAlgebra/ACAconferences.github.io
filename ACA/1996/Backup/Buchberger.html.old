@@ -1,0 +1,464 @@
+<HTML>
+<HEAD>
+<TITLE>Automated Theorem Proving</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Automated Theorem Proving</H1>
+
+<h3>Organizer</h3>
+<p>
+<ADDRESS>
+<a href="http://info.risc.uni-linz.ac.at:70/1/people/buchberger">
+Bruno Buchberger</a> (<A HREF="mailto:Bruno.Buchberger@risc.uni-linz.ac.at">Bruno.Buchberger@risc.uni-linz.ac.at</a>)<br>
+<A HREF="http://info.risc.uni-linz.ac.at/">RISC-Linz</A> <br> 
+Schlo&szlig; Hagenberg <br> 
+A-4232 Hagenberg <br> Austria/Europe<br>
+Tel: +43 7236 3231 41<br>
+Fax:   +43 7236 3231 30<br>
+</ADDRESS>
+
+<p>
+
+<h3>Description</h3>
+
+<p>
+
+We envisage a merge of computer algebra and automated theorem
+proving systems in the near future. The merge can be started 
+from both ends: Either one may expand theorem proving systems
+by adding more algebra or one may grade up algebra systems by
+adding proving potential. In this session, we want to 
+encourage researchers active in at least one of the two 
+areas to get together and discuss how this merge could be
+achieved most efficiently and soundly.
+
+<p>
+
+<h3>Talks</h3>
+
+<ol>
+  <li> <B>An Overview on the Apply Math Project</B><BR>
+       <a href="http://info.risc.uni-linz.ac.at:70/1/people/buchberger">Bruno Buchberger</a> 
+
+  <li> <B>Efficient computations in formal proofs</B></BR>
+       <A HREF="mailto:henk@cs.kun.nl">Henk Barendregt</A> </br>
+
+  <li> <B>Computer Algebra Systems in an Environment of Cooperating Theorem
+Provers</B> <BR>
+       Bernd, Ingo Dahn <br>
+
+<li> <B>A Deductive Database for Mathematical formulas</B><BR>
+<A HREF="mailto:dalmas@sophia.inria.fr">St&#233;phane Dalmas</A>, 
+<A HREF="mailto:gaetano@sophia.inria.fr">Marc Ga&euml;tano</A>, 
+<A HREF="mailto:chuchet@sophia.inria.fr">Claude Huchet</A><br>
+
+<li><B>Automated deduction scheme</B><BR>
+<A HREF="mailto:dovier@dimi.uniud.it">Agostino Dovier</A>, 
+<A HREF="mailto:formisan@dimi.uniud.it">Andrea Formisano</A>,
+<A HREF="mailto:policrit@dimi.uniud.it">Alberto Policriti</A><BR>
+
+<li><B>Towards modelling the topology of homogeneous manifolds by means of
+symbolic computation</B> <BR>
+<A HREF="mailto:joswig@risc.uni-linz.ac.at">Michael Joswig</A><BR>
+
+<li><B>Domain-Independent Scheme for Constraint Solver Extension</B><br>
+<A HREF="mailto:Eric.Monfroy@loria.fr">Eric Monfroy</A>, 
+<A HREF="mailto:Christophe.Ringeissen@loria.fr">Christophe Ringeissen</A><BR>
+
+<li><B>Building abelian groups and commutative rings into first-order theorem proving</B><BR>
+<A HREF="mailto:juergen@mpi-sb.mpg.de">J&uuml;rgen Stuber</A><BR>
+
+<li><B>Formal and Informal Proofs</B><BR>
+Sara Kalvala<BR>
+
+<li><B>Integrating a CAS as Proof Planer in the OMEGA Proof Development Environment</B><BR>
+Volker Sorge<BR>
+
+<li><B>...</B><BR>
+.........<BR>
+
+
+
+</ol>
+
+
+<h3>Abstracts </h3>
+
+<ol>
+  <li> <B>An Overview on the Apply Math Project</B><BR>
+       <a href="http://info.risc.uni-linz.ac.at:70/1/people/buchberger">Bruno Buchberger</a> (<A HREF="mailto:Bruno.Buchberger@risc.uni-linz.ac.at">Bruno.Buchberger@risc.uni-linz.ac.at</a>)
+
+       <br>
+       <em>Abstract:</em>
+The goal of the Apply Math project at the RISC institute is the expansion
+of Mathematica by interactive proving facilities so that mathematical texts
+can be produced that contain both mathematical text, interactive
+mathematical formulae, proofs of these formulae, and algorithms based on
+these formulae. We present the logic concept, the syntax, the structuring
+concept based on functor programming, and some first examples of
+interactive theorem provers for certain mathematical domains in the frame
+of this project.
+
+  <li> <B>Efficient computations in formal proofs</B></BR>
+       <A HREF="mailto:henk@cs.kun.nl">Henk Barendregt</A> </br>
+       <em>Abstract</em>
+Formal proofs in mathematics and computer science are being studied
+because these objects can be verified by a very simple computer
+program. An important open problem is whether these formal proofs can
+be generated with an effort not much greater than writing a
+mathematical paper in, say, (La)TeX.  Modern systems for
+proof-development make the formalization of reasoning relatively
+easy. Formalizing computations such that the results can be used in
+formal proofs is not immediate.  In this paper it is shown how to
+obtain formal proofs of statements 
+like <I> Prime(n)</I> in the context of Peano arithmetic or
+<I><MATH>x<SUP>2</SUP>-1=(x-1)(x+1)</MATH></I> in the context of rings. 
+It is hoped that the
+method will help bridge the gap between systems of computer algebra
+and systems of proof-development.  
+
+  <li> <B>Computer Algebra Systems in an Environment of Cooperating Theorem
+Provers</B> <BR>
+       Bernd, Ingo Dahn <br>
+       <em>Abstract:</em>
+The specifics of some state-of-the-art theorem provers are discussed in
+order to point to the topics where they can benefit mostly from cooperation
+with computer algebra systems. Current fields of applications of theorem
+provers are sketched. This suggests demands on computer algebra systems to
+facilitate their cooperation with theorem provers, especially concerning
+problems of correctness and documentation. The talk is based on the
+experience from the integration of automated theorem provers into the
+interactive system ILF.
+
+<li> <B>A Deductive Database for Mathematical formulas</B><BR>
+<A HREF="mailto:dalmas@sophia.inria.fr">St&#233;phane Dalmas</A>, 
+<A HREF="mailto:gaetano@sophia.inria.fr">Marc Ga&euml;tano</A>, 
+<A HREF="mailto:chuchet@sophia.inria.fr">Claude Huchet</A><br>
+       <em>Abstract:</em>
+In this talk, we present <B>mfd2</B>, a deductive database for mathematical
+formulas. Mathematical relations such as the ones defined in the <IT>
+Handbook of mathematical functions</IT> (by M. Abramovitz and I. Stegun) can be
+stored in and retrieved from <B>mfd2</B>.<BR>
+The database itself is a stand-alone program which can run as a client in a
+client/server environment and it has been designed to be a powerful assistant
+for computer algebra systems as well as for other applications. For example,
+<B>mfd2</B> could be the heart of an electronic handbook of mathematical
+relations or could be used as a lemma database for a theorem prover.
+The information stored in <B>mfd2</B> is accessed through a specialized query
+language.<BR>
+A formula is always associated with its conditions of validity. These
+conditions are central to the retrieval mechanism of the database: <B>mfd2</B>
+usually answers to a query conditionaly. For example, if we ask the simple
+query <I><MATH>e<SUP>x</SUP> > 0 </MATH></I> for <I>x</I> complex ?</MATH> <B>mfd2</B> would not just answer
+<I>false</I> but it would answer <I>true</I> if <I>x</I> is real''.
+<BR>At the heart of <B>mfd2</B> is a deduction engine based on an algorithm for
+associate-commutative unification that takes care of the conditions
+associated with the formulas. To solve a particular query, the engine first
+tries to find a ``close enough'' formula in the database using
+associate-commutative unification. If it fails, the engine tries to analyse
+the failure reasons to generate some equations that can make the formula and
+the query to match. It then tries to solve these new equations using the
+statements contained in the database and some built-in mathematical
+transformations.  This can produce some new conditions (conditions for some
+solution to hold) that are in turn  analyzed by calling the database
+recursively. The complexity of this process is controlled by carefully
+chosing an order on the formulas in the database, depending on the query.
+<li><B>Automated deduction scheme</B><BR>
+<A HREF="mailto:dovier@dimi.uniud.it">Agostino Dovier</A>, 
+<A HREF="mailto:formisan@dimi.uniud.it">Andrea Formisano</A>,
+<A HREF="mailto:policrit@dimi.uniud.it">Alberto Policriti</A><BR>
+Dipartimento di Matematica e Informatica<BR>
+Universita` degli Studi di Udine<BR>
+Via delle Scienze, 206-33100 UDINE<BR>
+<em>Abstract:</em>
+In this research we discuss the problem of integrating domain-specific
+knowledge within a general framework for theorem proving.
+Our starting point is <B>T-resolution</B> [Policriti and Schwartz, 1996], that
+parametrically generalizes standard resolution with respect to a
+theory T (the parameter). T-resolution was introduced to provide a general
+theorem-proving framework in which the power of the basic inference
+rule can grow with the underlying theory T; another motivation 
+was to establish criteria to classify first-order theories with
+respect to  their suitability for theorem  proving. In the framework obtained 
+the tedious details of a proof are hidden inside the manager of  the theory. 
+<BR>
+Being binary, the T-resolution inference rule is simpler than the 
+previously proposed (n-ary) <B>theory-resolution</B> rule 
+[Stickel, 1985] and more suitable for integration with refinements
+already  proposed for (classical) resolution. Moreover,
+the T-resolution rule ensures a complete independence between
+the background level (the T-decider) of the T-theorem prover and
+its foreground reasoner.
+This could not be the case for theory-resolution, where the background
+reasoner plays an active role in the inference steps 
+(residues generation [Stickel, 1985]). <BR>
+
+
+The intrinsic non-determinism of T-resolution rule
+(as well as for theory-resolution)
+would reflect in a potential inefficiency of 
+the implementation of a T-theorem prover. 
+However, provided the theory T fulfills  some simple and uniform
+requirements (i.e., ground decidability), strong-linearity constraints on the
+resolution tree can be imposed, 
+without affecting completeness [Formisano and Policriti, 1995].
+<BR>
+
+As a matter of fact, linearity is one of the most important refinements
+of resolution strictly linked with the ability to integrate
+domain-specific knowledge and inferential engines.
+The Constraint Logic Programming scheme proposed as a framework
+to integrate efficient constraint solver in the Logic Programming
+paradigm, is in fact another of our starting points.
+<BR><BR>
+We show that <B>CLP(X)</B> scheme [Jaffar and Lassez, 1986;
+Jaffar and Maher, 1994] can be easily embedded inside <B>linear</B> 
+T-resolution. In a certain sense, 
+CLP(X) stands to Horn-clause programming as
+T-resolution stands to standard resolution.
+<BR>
+
+Extensions of the CLP(X)-scheme using the 
+T-resolution inference rule 
+allow to operate beyond equality and its drawbacks. 
+For instance
+it is possible to define/characterize particular objects
+with respect to T, i.e. specify the T-properties 
+of  (newly introduced) entities.
+<BR><BR>
+
+
+In this work we will discuss the basics of T-resolution and its refinements, as well as
+its ability to encode the CLP(X) scheme.
+Moreover, we present some results to be used in order to classify
+theories with respect to their suitability for a use within the
+T-resolution scheme.
+<BR>
+
+<B>References</B>
+<UL>
+<LI> [Formisano, A., and Policriti, A, 1995]
+T-resolution: Refinements and Model Elimination.
+Research Report 32/95, Dip. di Matematica e Informatica, Univ. di
+  Udine, 1995.
+
+<LI> [Jaffar, J., and Lassez, J.-L., 1986]
+Constraint Logic Programming.
+Tech. rep., Department of Computer Science, Monash University, June
+  1986.
+
+<LI> [Jaffar, J., and Maher, M. J., 1994]
+Constraint Logic Programming: A Survey.
+The Journal of Logic Programming 19-20 (1994), 503-581.
+
+<LI> [Policriti, A., and Schwartz, J. T., 1996]
+T-theorem proving I.
+Journal of Symbolic Computation (1996). To appear.
+
+<LI> [Stickel, M. E., 1985]
+Automated deduction by theory resolution.
+Journal of Automated Reasoning I (1985).
+</UL>
+
+<li><B>Towards modelling the topology of homogeneous manifolds by means of
+symbolic computation</B> <BR>
+<A HREF="mailto:joswig@risc.uni-linz.ac.at">Michael Joswig</A><BR>
+       <em>Abstract:</em>
+The theory of Lie groups is among the central topics in modern
+mathematics. It represents a natural link between geometry, group
+theory and mathematical physics. Problems arising from physics,
+e.g.~from the theory of special relativity, are transferable to the
+language of geometry.  Often the geometrical questions can be answered
+by group-theoretical means in case the geometrical structure has
+enough symmetry, i.e.  it admits sufficiently many automorphisms.  In
+this respect, transitive actions are most important. Manifolds which
+admit a transitive action of some Lie group are called <I>homogeneous</I>.
+
+In recent years quite a few attempts have been made to bring Lie
+theory to the computer, e.g. see van Leeuwen, Cohen and
+Lisser [.Cohen LiE.], Moody, Patera and Rand [.simpLie.], B&ouml;di and
+Joswig [.boedi Joswig.], not to mention the various packages devoted
+to the study of finite groups of Lie type.  When it comes to solving
+problems arising from real Lie groups by means of a computer
+frequently the derived linearized problems are studied instead. This
+means one tries to translate the initial problem about Lie groups into
+a (usually simpler one) about Lie algebras.  However, the
+correspondence between Lie groups and Lie algebras is <I>not</I>
+1--1. In fact, for a given Lie algebra <I>g</I> there are usually
+several (not isomorphic) groups having <I>g</I> as their associated Lie
+algebra. They are only <I>locally</I> isomorphic, which means that
+they are algebraically somehow similar but differ with respect to
+their global topological properties. Roughly speaking, during the
+linearization process the global topological information is lost.
+
+Here we want to suggest an approach with is in some sense
+complementary. Instead of skipping the topological information we
+intend to focus on it.
+
+We want to look for a computational method to solve problems of the
+following kind and related ones: Given a Lie group <I>Gamma</I> and a
+homogeneous manifold <I>M</I>.  Does there exist a (continuous) transitive
+action of <I>Gamma</I> on <I>M</I>?
+
+Without any doubt this immediately raises at least two questions.  How
+should a non-discrete Lie group (being of uncountable cardinality as a
+set) be represented in the computer? How can one even expect that a
+question like this is decidable at all?  Instead of trying to solve
+the problem in this generality we want to discuss a certain
+approximation of the problem which can be outlined as follows.  A
+transitive action of <I>Gamma</I> on <I>M</I> gives rise to an 
+infinitely long
+exact sequence of their respective homotopy groups (see below).  The
+group <I>Gamma</I> and the manifold <I>M</I> are described by some of
+their
+algebraic and topological properties such as the dimension,
+information about compactness, maybe some homotopy groups which are
+known etc. It is explicitly admitted that only partial information
+will be given.  Assume that a transitive action exists. Select
+finitely many among the infinitely many pieces of information obtained
+from the long exact homotopy sequence. Translate this into an
+arithmetical problem.  Check for a contradiction. In case we actually
+arrive at a contradiction then this falsifies the assumption
+concerning the existence of a transitive action. However, if we do not
+obtain a contradiction, we might not gain any information.
+<li><B>Domain-Independent Scheme for Constraint Solver Extension</B><br>
+<A HREF="mailto:Eric.Monfroy@loria.fr">Eric Monfroy</A>, 
+<A HREF="mailto:Christophe.Ringeissen@loria.fr">Christophe Ringeissen</A><BR>
+<em>Abstract</em><br>
+Constraint Logic Programming (CLP) is a class of programming languages
+inheriting declarativity from logic programming and efficiency from
+constraint solving. The CLP scheme enables to design applications
+by declaring relations (the constraints) between high-level objects.
+However, constraints are restricted to formulae handled by solvers.
+Thus, the declarativity may be jeopardized due to the scope of
+solvers.
+<BR>
+SoleX is a mechanism for extending constraint solvers in order to
+handle new function symbols on the computation domain. This extension
+consists in building two kinds of rule-based transformations: domain
+independent rules for symbolically processing constraints with
+additional function symbols and rules for completing the information
+on the domain with the usual interpretation of these additional
+functions. Some extensions of computation domains have already been
+solved in order to demonstrate the broad scope of SoleX potential
+applications.
+<li><B>Building abelian groups and commutative rings into first-order theorem proving</B><BR>
+<A HREF="mailto:juergen@mpi-sb.mpg.de">J&uuml;rgen Stuber</A><BR>
+<em>Abstract</em>
+For many theories from algebra there exist convergent term
+rewriting systems, possibly modulo some equational theory.
+We present a technique to build such a theory into
+ordering-restricted first-order clausal theorem proving.
+In this way one obtains a refutationally complete
+inference system which creates a smaller search space
+than by directly applying a more general prover
+to the axioms of the theory.
+
+Specifically, on the ground level
+equational literals are simplified, until
+they are in a <em>sufficiently simplified</em> form.
+For each of these forms one derives a <em>symmetrization</em>,
+that is a set of rules such that critical pairs with the
+theory converge.
+One then considers overlaps between symmetrizations.
+Since their structure is know, one can exploit this by showing
+that only a few critical pairs need to be tested
+to obtain convergence.
+
+To lift this to the non-ground level,
+each step of the simplification becomes an inference.
+These are either carefully controlled superpositions
+with theory axioms or derived inferences like cancellation.
+Then, for inferences between sufficiently simplified non-theory clauses,
+one distinguished between overlaps of two extended rules
+and overlaps where at least one rule is not extended.
+The former correspond to the critical pairs obtained above;
+the latter are similar to superposition inferences,
+except that they take the extended rules in the symmetrization
+into account.
+
+The technique is quite general, but it seems most useful
+for theories which have abelian groups as a subtheory.
+In that case a single term of a sum can be isolated on the
+left-hand side.  The inference systems obtained are extensions
+of the corresponding Gr&ouml;bner base algorithms.
+<li><B>Formal and Informal Proofs</B><BR>
+Sara Kalvala, University of Warwick<BR>
+<em>Abstract</em>
+One difficulty in the use of formal proof systems for applications
+such as Computer Algebra is the different levels of abstraction. Proof
+systems attempt proof by rigorous logical inferences, while proofs in
+algebra are presented in a more informal fashion. I will present a
+method for integrating these levels of abstraction using so-called
+annotations, which capture domain-specific explanations and hints and
+integrate them within the Isabelle theorem prover, providing the user
+with an abstract level in close connection with the underlying
+rigorous proof.
+<li><B>Integrating a CAS as Proof Planer in the OMEGA Proof Development Environment</B><BR>
+Volker Sorge<BR>
+<em>Abstract</em>
+The SAPPER system integrates the proof development environment Omega with a
+Computer Algebra System as a proof planner. For constructing plans it
+exploits the knowledge implicit in the algorithms of the CAS. To extract
+those informations the algorithms must be augmented with a verbose mode to
+return a trace of single computation steps. This output is then translated
+in proof plans using a tactic mechanism.
+<BR>
+So far SAPPER uses a small prototypical CAS with verbose algorithms for
+polynomial manipulations. In this setting we are able to apply it
+successfully to optimization problems in economy.
+<li><B>On an Algebraic Characterization of Default Reasoning</B><BR>
+Helmut Thiele<BR>
+<em>Abstract</em>
+This talk deals with non-monotonic logical consequence operators
+defined by default reasoning. <BR>
+The aim is to consider and investigate such operators within the
+general framework of the theory of closure operators, in particular,
+topological and algebraic closure operators used in topology, algebra,
+logic and metamathematics.The main result of the paper is an
+appropriate generalization of the well-known theorem of <I>G. Birkhoff</I>, 
+<I>P. Hall</I> and <I>J. Schmidt</I>, which gives an algebraic 
+characterization of
+compact closure operators by universal algebras and also by classical,
+"monotonic", deductive systems.<BR>
+For this p[urpose we introduce a new type of algebraic strusture
+generalizing the classical notion of universal algebra (introduced by
+<I>G. Birkhoff</I>) which we shall call <I>regulated algebra</I>. Furthermore,
+generalizing the concept of a classical monotonic deductive system
+which is closely asociated with the theorem of <I>G. Birkhoff</I>, 
+<I>P. Hall</I> and
+<I>J. Schmidt</I>, we introduce <I>Regulated Deductive Systems</I> 
+which include,
+for instance <I>Reiter</I>'s default theories as special cases. <BR>
+As we shall see in the sequel, many of the classical results in
+non-monotonic reasoning can be derived on the basis of this general
+axiomatic approach. Furthermore, this approach gives a deeper
+mathematical understanding of what default reasoning is and provides
+the starting point for further inverstigations of regulated algebras
+and regulated deductive systems.
+</ol>
+
+
+<P><img src="http://info.risc.uni-linz.ac.at/I/images/line-risc.gif" align=middle alt="________________________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/program-plan.html"><img src="../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

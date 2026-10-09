@@ -1,0 +1,19 @@
+Title: 
+Differential Bases and Algebraic Analysis : New Perspectives for Applications
+
+Author: Pommaret, Jean Francois
+
+Affiliation: CERMICS/Ecole Nationale des Ponts et Chaussees
+             MARNE-la-VALLEE, FRANCE
+
+Abstract: The purpose of this plenary lecture is to emphasize the use of
+Groebner, differential and involutive bases in "algebraic analysis".  This
+fashionable though difficult domain of pure mathematics today has been
+pioneered by V. P. Palamodov, M. Kashiwara and B. Malgrange around 1970 after
+the work of D. C. Spencer on the formal theory of systems of partial
+differential equations.  We shall focus on its application to control theory in
+order to study linear as well as nonlinear multidimensional control systems by
+means of new methods from module theory and homological algebra.  Our
+exposition will be rather elementary as we shall insist on the main ideas and
+open problems while illustrating the corresponding concepts through explicit
+examples.

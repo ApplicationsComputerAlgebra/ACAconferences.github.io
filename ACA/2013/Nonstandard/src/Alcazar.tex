@@ -1,0 +1,73 @@
+
+\documentclass[a4paper]{article} %
+\usepackage{graphicx,amssymb} %
+
+\textwidth=15cm \hoffset=-1.2cm %
+\textheight=25cm \voffset=-2cm %
+
+\pagestyle{empty} %
+
+\date{} %
+
+\def\keywords#1{\begin{center}{\bf Keywords}\\{#1}\end{center}} %
+
+\def\titulo#1{\title{#1}} %
+\def\autores#1{\author{#1}} %
+
+% Please, do not change any of the above lines
+
+
+
+
+
+
+
+
+\begin{document}
+
+% Type down your paper title
+\titulo{Similarity Detection for Rational Curves}
+
+% Authors
+\autores{Juan G. Alc\'azar, Carlos Hermoso \\ %
+       Universidad de Alcal\'a (Spain) \\ \\ % Affiliation 1
+       Georg Muntingh \\ % If any other author with different Affilation
+       University of Oslo (Norway) \\ \\ % Affiliation 2 (if needed)
+       % New author \\
+       % New affiliation \\
+       % Add authors and affiliation as needed
+       \tt{juange.alcazar@uah.es} % Only one corresponding e-mail
+       }%
+
+
+\maketitle
+
+\thispagestyle{empty}
+
+
+
+% The abstract
+
+\begin{abstract}
+In Pattern Recognition, there is a vast literature concerning the question how to detect whether two curves are \emph{similar}. Essentially, the problem is to recognize a certain curve as the result of applying a movement to another curve in a database. Most of the strategies proposed so far deal with curves in implicit form, and ultimately resort to numerics to decide whether such curves are related by a similarity.
+
+In this talk, we present a new, fast, and deterministic algorithm to address the problem in the case when the curves are defined by a rational 
+parametrization in exact arithmetic. The algorithm does not require to compute or use implicit equations of the curves, and takes advantage of the fact that the curves are similar if and only if their parametrizations are related by means of a M\"obius transformation. It has been implemented and tested in the {\tt Sage}
+computer algebra system, and shows good performance for middle inputs.
+\end{abstract}
+
+\keywords{Pattern Recognition, Planar Rational Curves, M\"obius transformation} % Write down at least 3 Keywords
+
+
+
+
+
+
+% \section{Introduction}
+
+
+
+
+
+
+\end{document}

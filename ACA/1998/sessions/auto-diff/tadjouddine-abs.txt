@@ -1,0 +1,30 @@
+"Reduction of Storage of Variables in Automatic Computation of Adjoint
+ Code"
+
+Mohamed Tadjouddine 
+Projet Safir, INRIA 
+2004, Route des Lucioles BP 93 
+06902 Sophia Antipolis,
+FRANCE. 
+
+The computation of derivatives by automatic differentiation in reverse
+mode requires storage or recomputation to transpose the computational
+graph.  One of the methods consists in storing all the modified
+variables. However, this method is costly in terms of memory
+requirement. An extra knowledge on the code, for instance a given loop
+is parallel, may lead to avoid the storage of some modified
+variables. The program analysis appears like a way for automatically
+generating more efficient code.
+
+To avoid useless storages, we propose to use array region analysis. This
+analyze relies on the fact that it might useful to store a variable that
+is Written after Read (WaR) according to the control-flow of the program. 
+In order to refine this criterion, we analyze individual elements of array 
+variables. Our method consists in computing and handling READ and 
+WRITE regions of arrays along the hierarchical control flow graph of 
+the program. Obviously, this array region analysis is conservative. 
+It enables us to extract, from the input program, information on access 
+array regions or flow between statements or procedures. But, this analyze 
+is not sufficient. An additional information must be associated to each 
+potential region of array to be stored. This information determines if a 
+WaR variable is really used in the derived code. 

@@ -1,0 +1,16 @@
+M V Grosheva* (grosheva@inmech.msu.ru), V A Samsonov (Russia) 
+
+A Certain Educational Course in Mechanics with Computer Algebra System
+
+This work is example of program system for computer application in one
+mechanical problem education.  It is educational course : "Introduction to the
+theory of a body motion in the resistant media".  This course is intended for
+study of the properties of dynamical models of a body motion under the media
+influence.  The search for the essential effects in a body behavior -
+auto-oscillations, bifurcation, catastrophes, stochastic motion - are
+fulfilled.  The course include: the text of lectures and the program library
+for the computation and visualization of the body motion trajectories.  In the
+lectures the simplified problems which permit analytical solution are
+discussed.  For the study of more complicated problems the computer programs
+can be used by the lector and the students.  This software can be also used for
+research studies in aerospace industry.  We're using C, Maple, Matlab.

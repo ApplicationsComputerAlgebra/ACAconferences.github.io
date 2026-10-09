@@ -1,0 +1,12 @@
+Eugenio Roanes Macias & Eugenio Roanes Lozano
+
+Automated Search for Geometric Loci
+
+Looking for geometric loci is easier using suitable computer systems. A Dynamic
+Geometry System can help in a first exploration of the problem and a Computer
+Algebra System is necessary to use algebraic methods of mechanical proving. How
+to use the last one in the discovering process and how to proof theorems
+relative to geometric loci in a automatic way is described. Two examples are
+shown as illustration: the extension of Simson's theorem (discovered last
+century by Jakob Steiner) and a second extension (recently found by Professor
+Miguel de Guzman).

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <link href="styles/master.css" type="text/css" rel="stylesheet" media="all"/>
+   <title>ACA 2008 Applications of Computer Algebra</title>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tbody>
+      <tr>
+        <td class="headerLeft"><a href="/"><img src="./_images/header/schloss21s.jpg" /></a></td>
+        <td width="20px"></td>
+        <td>
+        <table width="100%">
+        <tbody>
+        <tr><td class="headerTitle">Applications of Computer Algebra</td></tr>
+        <tr><td class="headerSub"><a href="/">RISC, Castle of Hagenberg, Austria.</a></td></tr>
+        <tr><td class="headerSub">July 27-30, 2008.</td></tr>
+      	</tbody>
+      	</table>
+        </td>
+      </tr>
+   </tbody>
+ </table>
+
+
+
+<table cellspacing="0" cellpadding="0" class="infobar">
+<tbody><tr><td height=20px></td></tr></tbody></table>
+
+
+<div class="class1">
+	
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspace">
+<tbody>
+<tr>
+<td>
+	
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+
+<td style="width:12px;"></td>          
+<td class="unselected">
+	<div><a href="?content=news">News</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=general">General</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=sessions">Sessions</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=submission">Submission</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=registration">Registration</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=program">Program</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=pictures">Pictures</a></div>
+</td>
+<td class="selected">
+	<div>Location</div>
+</td>	
+
+
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspaceSub">
+<tbody>
+<tr>
+<td>
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+<td style='width:550px;'></td>
+<td class="selectedSub">
+	Venue</td>	
+
+<td class="unselectedSub">
+	<a href="?content=location&amp;sub=directions">Directions</a>
+</td>
+<td class="unselectedSub">
+	<a href="?content=location&amp;sub=accommodation">Accommodation</a>
+</td>
+
+</tr>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table><div id="content">
+<div id="column">
+
+<table class="class2" cellspacing="0" cellpadding="0" style="padding-top:5px">
+<tbody>
+<tr>
+<td class="leftColumn">
+<img width="200" src="_images/photos/sunset.jpg" alt="Castle-sky"/><img width="200" style="padding-top:7px;" src="_images/photos/rainbow.jpg" alt="Castle"/>
+</td>
+<td class="centerColumn">
+
+<h4>The Castle of Hagenberg &amp; Linz</h4>
+
+The conference will take place
+ at the
+ <a href="http://www.risc.uni-linz.ac.at/">Research Institute for Symbolic Computation</a>
+ (RISC), which is
+ an institute of the
+ <a href="http://www.jku.at/">Johannes Kepler University</a>
+ in Linz. It is located in the
+ <a href="http://www.risc.uni-linz.ac.at/about/castle/">Castle of Hagenberg</a>,
+ a romantic medieval castle amidst the lovely, hilly landscape of the
+ <a href="http://www.tiscover.at/at/guide/5,en,SCH1/objectId,RGN212296at,curr,EUR,season,at1,selectedEntry,home/home.html">Mühlviertel</a>
+ 20 km north east of
+ <a href="http://en.wikipedia.org/wiki/Linz">Linz</a>,
+ the regional capital of
+ <a href="http://www.tiscover.at/upperaustria">Upper Austria</a>,
+ located halfway between Salzburg and Vienna.</p>
+ <p>
+ More information about RISC can be found on the institute <a href="http://www.risc.uni-linz.ac.at/">website</a> and in <a href="http://www.risc.uni-linz.ac.at/about/welcome/Folder_RISC.pdf">this folder</a>.
+
+</td>
+
+<td class="rightColumn">
+<img width="200" src="_images/photos/lentos.jpg" alt="Castle"/>
+<img width="200" style="padding-top:7px;" src="_images/photos/wartberg.jpg" alt="Castle"/>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

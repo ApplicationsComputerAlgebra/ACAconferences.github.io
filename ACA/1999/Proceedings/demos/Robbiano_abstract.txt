@@ -1,0 +1,21 @@
+TITLE:    The Computer Algebra System CoCoA
+
+ABSTRACT: CoCoA is a special-purpose system for doing Computations in
+Commutative Algebra.  It is one of the products of a research team in Computer
+Algebra whose members are: Lorenzo Robbiano, John Abbott, Anna Bigatti, Massimo
+Caboara, Antonio Capani, Martin Kreuzer, Gianfranco Niesi, David Perkinson and
+occasionally other researchers and students.  It is public domain software, and
+can be obtained by anonymous ftp from
+   http://cocoa.dima.unige.it
+
+The architecture of CoCoA is designed to offer flexibility through efficiency,
+portability and programmability.  It runs on most platforms.  With CoCoA one
+can basically do operations over commutative rings of polynomials.
+
+Currently CoCoA is used by researchers in several countries. Most of them are
+Commutative Algebraists and Algebraic Geometers, but also people working in
+different areas like Analysis and Statistics have already benefitted from our
+system.
+
+CoCoA is also used as the main system for teaching courses in several
+Universities.

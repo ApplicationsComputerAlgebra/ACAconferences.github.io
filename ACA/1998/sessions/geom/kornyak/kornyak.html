@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="kornyak">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="kornyak.css">
+</HEAD>
+<BODY >
+<DIV ALIGN="CENTER">
+<FONT SIZE="+1"><B>Computer Analysis of Cohomologies of Lie Superalgebras <BR>
+of Vector Fields</B></FONT>
+<BR>
+<B>V.V.Kornyak</B>
+</DIV>
+Speaker info.
+<BR>
+Name, Firstname: Kornyak, Vladimir
+<BR>
+Mail address   : LCTA, JINR, Dubna, Moscow region, 141980, Russia
+<BR>
+Institute      : Joint Institute for Nuclear Research
+<BR>
+Country        : Russia
+<BR>
+Tel.           : (+7)-(09621)-62552
+<BR>
+Fax            : (+7)-(09621)-65145
+<BR>
+e-mail         : kornyak@jinr.ru
+<BR>
+
+<H3>Abstract:</H3>
+<DIV>
+We describe here a C program for computing cohomologies and
+homologies for Lie algebras and superalgebras. When writing the
+program we paid the main attention to cohomologies in trivial and
+adjoint modules for Lie algebras and superalgebras of polynomial
+vector fields. Among them there are general and special vectorial,
+even and odd contact, special odd contact, Poisson, Hamiltonian,
+special Hamiltonian, Buttin, special Buttin (super)algebras. These
+algebras found applications to modern supersymmetric models of
+theoretical and mathematical physics.
+
+<P>
+Some examples of applications are: (1) possibility to write
+supergravity equations for any <I>N</I>-extended Minkowski superspace
+and to find out possible models for these superspaces; (2)
+possibility to study stability of nonholonomic systems
+(ballbearings, gyroscopes, electro-mechanical devices like a rotor
+collector with a gliding contact; waves in plasma, etc.); (3)
+description of an analogue of the curvature tensor for nonlinear
+nonholonomic constraints and the fields of solids or their
+surfaces, e.g., cones, as in optimal control; (4) a new method for
+the study of integrability of dynamical systems.
+
+<P>
+The above problems are particular instances of the general problem
+of computing the cohomology or homology of a given Lie algebra or
+superalgebra with various coefficients. At present, due to
+computational difficulties, only a limited number of cohomologies
+for different classes of Lie (super)algebras is known. That is why
+the application of computer algebra methods is important in this
+problem.
+
+<P>
+The program takes as an input the commutator table of Lie
+(super)algebra (for the mentioned above (super)algebras of vector
+fields the program constructs these tables itself), the type of a
+module (trivial or adjoint currently), the number of required
+cohomology and, in the case of infinite-dimensional graded algebra,
+the grade of the cohomology. Then the program constructs the
+determining equations for cocycles 
+<!-- MATH: $Z^n = \{C^n | dC^n = 0\}$ -->
+<IMG
+ WIDTH="177" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$Z^n = \{C^n \vert dC^n = 0\}$">,
+expressions for coboundaries 
+<!-- MATH: $B^n = dC^{n-1}$ -->
+<I>B</I><SUP><I>n</I></SUP> = <I>dC</I><SUP><I>n</I>-1</SUP> and computes the
+cohomology as a quotient space 
+<!-- MATH: $H^n = Z^n/B^n$ -->
+<I>H</I><SUP><I>n</I></SUP> = <I>Z</I><SUP><I>n</I></SUP>/<I>B</I><SUP><I>n</I></SUP>. As a result, the
+program prints out non-trivial cocycles, i.e., basis elements of
+<I>H</I><SUP><I>n</I></SUP>. Some results of computation are presented.
+</DIV>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

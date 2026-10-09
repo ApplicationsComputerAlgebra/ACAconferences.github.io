@@ -1,0 +1,33 @@
+\begin{center}
+\LARGE
+Solving Equational Constraints via Patterns
+
+\end{center}
+
+\begin{center}
+\Large
+Olga Caprotti, Hoon Hong
+
+\end{center}
+
+\noindent
+Date:  July 19th (Friday)\\
+Time:  10:30-11:00\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+olving equational constraints (over some important domains) is one of core problems in
+constraint logic programming. Unluckily, it is also a very difficult one (often uncomputable or
+intractable in general). 
+
+In this talk, we present an approach for tackling this problem in which the user is supposed to
+provide not only equations but also a ``pattern'', containing unknown variables, of the expected
+solutions. We then show how to compute values, if they exist, of the variables that turn the pattern
+into a solution. 
+
+It seems that this approach can enlarge the scope of the problems that can be handled. In the talk,
+we illustrate this for infinite integral domains, modules and commutative algebras. 
+

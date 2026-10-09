@@ -1,0 +1,186 @@
+
+<H2><A NAME="SECTION00052000000000000000"><tex2html_anchor_invisible_mark></A><A NAME="near"><tex2html_anchor_mark></A><BR>
+Approximate solutions
+</H2>
+
+<P>
+Suppose that <tex2html_verbatim_mark>#math184#<tex2html_image_mark>#tex2html_wrap_inline1941# is a vector in <I>R</I><SUP><I>n</I></SUP> where 
+<I>R</I> is a subfield 
+of the real numbers and suppose that <tex2html_image_mark>#tex2html_wrap_inline1947# is an algorithm which
+given such <I>I</I> as input is supposed to give a length one vector 
+<I>O</I> = <tex2html_verbatim_mark>#math185#<tex2html_image_mark>#tex2html_wrap_inline1955# which is orthogonal to <I>I</I> as output.  
+It is easy to check if the output of <tex2html_image_mark>#tex2html_wrap_inline1959# is correct, check if 
+substituting <tex2html_verbatim_mark>#math186#<tex2html_image_mark>#tex2html_wrap_inline1961# for <tex2html_verbatim_mark>#math187#<tex2html_image_mark>#tex2html_wrap_inline1963# satisfies
+the two equations:
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="CENTER"><I>x</I><SUB>1</SUB><SUP>2</SUP></TD>
+<TD ALIGN="CENTER">+</TD>
+<TD ALIGN="CENTER"><tex2html_image_mark>#tex2html_wrap_inline1969#</TD>
+<TD ALIGN="CENTER">+</TD>
+<TD ALIGN="CENTER"><I>x</I><SUB><I>n</I></SUB><SUP>2</SUP></TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="CENTER">1</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><I>r</I><SUB>1</SUB><I>x</I><SUB>1</SUB></TD>
+<TD ALIGN="CENTER">+</TD>
+<TD ALIGN="CENTER"><tex2html_image_mark>#tex2html_wrap_inline1983#</TD>
+<TD ALIGN="CENTER">+</TD>
+<TD ALIGN="CENTER"><I>r</I><SUB><I>n</I></SUB><I>x</I><SUB><I>n</I></SUB></TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="CENTER">0</TD>
+</TR>
+</TABLE></DIV>Let <tex2html_verbatim_mark>#math188#<tex2html_image_mark>#tex2html_wrap_inline1993# denote the set consisting of the two functions:
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="CENTER"><I>x</I><SUB>1</SUB><SUP>2</SUP></TD>
+<TD ALIGN="CENTER">+</TD>
+<TD ALIGN="CENTER"><tex2html_image_mark>#tex2html_wrap_inline1999#</TD>
+<TD ALIGN="CENTER">+</TD>
+<TD ALIGN="CENTER"><I>x</I><SUB><I>n</I></SUB><SUP>2</SUP></TD>
+<TD ALIGN="CENTER">-</TD>
+<TD ALIGN="CENTER">1</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><I>r</I><SUB>1</SUB><I>x</I><SUB>1</SUB></TD>
+<TD ALIGN="CENTER">+</TD>
+<TD ALIGN="CENTER"><tex2html_image_mark>#tex2html_wrap_inline2013#</TD>
+<TD ALIGN="CENTER">+</TD>
+<TD ALIGN="CENTER"><I>r</I><SUB><I>n</I></SUB><I>x</I><SUB><I>n</I></SUB></TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+</TABLE></DIV>The first of these two functions does not depend upon <I>I</I> but the
+second does and is an example of a function parameterized 
+by <I>I</I>.  <I>O</I> is a suitable output for <tex2html_image_mark>#tex2html_wrap_inline2025# run with input <I>I</I>if and only if the functions in <tex2html_verbatim_mark>#math189#<tex2html_image_mark>#tex2html_wrap_inline2029# vanish when evaluated on (the 
+coefficients of) <I>O</I>.
+
+<P>
+Let us consider a richer example.
+Given an <tex2html_image_mark>#tex2html_wrap_inline2033# matrix <I>A</I>, with real number entries, 
+it is relatively easy to check if an <tex2html_image_mark>#tex2html_wrap_inline2037# matrix <I>G</I> 
+which is purportedly a Moore-Penrose generalized inverse to <I>A</I> 
+actually is a Moore-Penrose generalized inverse.  One merely 
+checks whether <I>G</I> satisfies the matrix equations<A NAME="tex2html17"
+ HREF="footnode.html#foot792"><SUP>14</SUP></A>
+:
+<DL>
+<DT><STRONG><#3477#>(i)<#3477#></STRONG>
+<DD><tex2html_verbatim_mark>#math190#<I>A X A</I> - <I>A</I> = 0 <DT><STRONG><#3478#>(ii)<#3478#></STRONG>
+<DD><tex2html_verbatim_mark>#math191#<I>X A X</I> - <I>X</I> = 0 <DT><STRONG><#3479#>(iii)<#3479#></STRONG>
+<DD><tex2html_verbatim_mark>#math192#(<I>A X</I>)<SUP><I>T</I></SUP> - <I>A X</I> = 0 <DT><STRONG><#3480#>(iv)<#3480#></STRONG>
+<DD><tex2html_verbatim_mark>#math193#(<I>X A</I>)<SUP><I>T</I></SUP>- <I>X A</I> = 0</DL>If the <#559#><I>matrix variable</I><#559#> <I>X</I> is expressed as an <tex2html_image_mark>#tex2html_wrap_inline2055# 
+matrix with entries <tex2html_verbatim_mark>#math194#<tex2html_image_mark>#tex2html_wrap_inline2057#, which are variables, the 
+preceding matrix equations translate into a number of equations 
+which the coefficients of <I>G</I> must satisfy<A NAME="tex2html18"
+ HREF="footnode.html#foot562"><SUP>15</SUP></A>.  All of the 
+equations are of the form: <#793#><I>a function of <#563#><B>(</B><#563#>(the coefficients 
+of) </I><I>G</I><I><#564#><B>)</B><#564#></I><#793#> = 0.  Drop off the ``=0'' for each equation 
+leaving a family <tex2html_image_mark>#tex2html_wrap_inline2071# of polynomial functions.
+
+<P>
+Thus for the Moore-Penrose generalized inverse the question of
+whether <I>G</I> is an MPG inverse to <I>A</I> is equivalent to whether 
+the functions in <tex2html_image_mark>#tex2html_wrap_inline2077# vanish when evaluated on (the coefficients
+of) <I>G</I>.  The functions in <tex2html_image_mark>#tex2html_wrap_inline2081# are 
+parameterized by <I>A</I> in the sense that expressions based upon 
+the coefficients of <I>A</I> are used to form the 
+coefficients of the functions in <tex2html_image_mark>#tex2html_wrap_inline2087#.  Let us use <tex2html_verbatim_mark>#math195#<tex2html_image_mark>#tex2html_wrap_inline2089# to 
+stand for the specific family of functions <tex2html_image_mark>#tex2html_wrap_inline2091# arising from 
+the matrix <I>A</I>.
+
+<P>
+Suppose that for input <I>I</I> we have a family of functions <tex2html_verbatim_mark>#math196#<tex2html_image_mark>#tex2html_wrap_inline2097#parameterized by <I>I</I>.  We say that <I>O</I> is a <#565#><I>zero</I><#565#> of <tex2html_verbatim_mark>#math197#<tex2html_image_mark>#tex2html_wrap_inline2103#or <tex2html_verbatim_mark>#math198#<tex2html_image_mark>#tex2html_wrap_inline2105# vanishes on <I>O</I> if <I>E</I>(<I>O</I>)=0 for each function 
+<tex2html_verbatim_mark>#math199#<tex2html_image_mark>#tex2html_wrap_inline2111#.  Beyond orthogonality of vectors and Moore-Penrose
+Generalized inverses,
+for many algebraic problems which depend upon an initial
+condition <I>I</I>, the issue of whether <I>O</I> solves the 
+problem can be reduced to whether a family of functions 
+parameterized by <I>I</I> vanishes on <I>O</I>.  In such cases whether an 
+algorithm <tex2html_image_mark>#tex2html_wrap_inline2121# with input <I>I</I> provides a solution to the original 
+problem is equivalent to whether the algorithm, with input <I>I</I>, 
+gives an output which is a <#566#><I>zero</I><#566#> of the associated family 
+of functions <tex2html_verbatim_mark>#math200#<tex2html_image_mark>#tex2html_wrap_inline2127#.  In fact we may shift perspective and 
+think of the algorithm as (primarily) providing <#567#><I>zeros</I><#567#> of
+the parameterized families of functions <tex2html_verbatim_mark>#math201#<tex2html_image_mark>#tex2html_wrap_inline2129#.  I.e. given
+an input <I>I</I> the algorithm <tex2html_image_mark>#tex2html_wrap_inline2133# computes a zero of <tex2html_verbatim_mark>#math202#<tex2html_image_mark>#tex2html_wrap_inline2135#.
+This shift 
+in perspective enables us to speak of <#568#><I>approximate solutions</I><#568#> 
+to the extent that we may consider an <#569#><I>approximate 
+zero</I><#569#> of the functions in <tex2html_verbatim_mark>#math203#<tex2html_image_mark>#tex2html_wrap_inline2137# to be an approximate solution to 
+the original problem.  <I>O</I>' being an <#570#><I>approximate 
+zero</I><#570#> to the functions in <tex2html_verbatim_mark>#math204#<tex2html_image_mark>#tex2html_wrap_inline2141# is expressed by a distance or a valuation
+or a norm, a tolerance <tex2html_image_mark>#tex2html_wrap_inline2143# and the requirement that
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math205#
+
+<tex2html_image_mark>#displaymath1083#
+</DIV><BR CLEAR="ALL">
+<P></P>
+When this holds let us say that <I>O</I>' is an 
+``<#572#><I></I><tex2html_image_mark>#tex2html_wrap_inline2147#<I> approximate solution</I><#572#>'' of <tex2html_verbatim_mark>#math206#<tex2html_image_mark>#tex2html_wrap_inline2149#.
+Note that for <I>O</I>' to be an <#573#><I></I><tex2html_image_mark>#tex2html_wrap_inline2153#<I> approximate solution</I><#573#> 
+of <tex2html_verbatim_mark>#math207#<tex2html_image_mark>#tex2html_wrap_inline2155# there is no requirement that <I>O</I>' be near a 
+<#574#><I>zero</I><#574#> of <tex2html_verbatim_mark>#math208#<tex2html_image_mark>#tex2html_wrap_inline2159#.
+
+<P>
+The first example in this section considered unit vectors orthogonal
+to <I>I</I>.  If <I>I</I> were a unit vector or the length of <I>I</I> is taken into
+account in choosing <tex2html_image_mark>#tex2html_wrap_inline2167# one may control that an approximate 
+solution lies within a desired angle of perpendicular.
+
+<P>
+The rest of this section is about how the 
+stabilization methodology may be applied to an algorithm to 
+obtain approximate solutions.  Throughout the rest of the 
+section we assume that:
+<DL COMPACT>
+<DT><#3555#><#3544#>i.<#3544#><#3555#>
+<DD><tex2html_image_mark>#tex2html_wrap_inline2169# is an algebraic algorithm with zero discontinuity.
+<DT><#3556#><#3545#>ii.<#3545#><#3556#>
+<DD><tex2html_verbatim_mark>#math209#<tex2html_image_mark>#tex2html_wrap_inline2171# is a parameterized family of continuous functions
+for inputs <I>I</I> of <tex2html_image_mark>#tex2html_wrap_inline2175#.
+<DT><#3557#><#3546#>iii.<#3546#><#3557#>
+<DD>If <tex2html_image_mark>#tex2html_wrap_inline2177# is executed with input <I>I</I>, the output is 
+a zero of <tex2html_verbatim_mark>#math210#<tex2html_image_mark>#tex2html_wrap_inline2181#.
+</DL>
+<P>
+In the <#577#><I>orthogonal vector</I><#577#> example and Moore-Penrose example,
+for each <I>I</I> the functions in <tex2html_verbatim_mark>#math212#<tex2html_image_mark>#tex2html_wrap_inline2185# are of polynomials of degree
+two or less.  The main property that we shall use about the 
+functions in <tex2html_verbatim_mark>#math213#<tex2html_image_mark>#tex2html_wrap_inline2187# is that they are continuous functions.
+
+<P>
+The first step in obtaining an approximate solution is to 
+prepare an approximation sequence 
+<tex2html_verbatim_mark>#math214#<tex2html_image_mark>#tex2html_wrap_inline2189# for <I>I</I>.  Then set <I>n</I> to an initial 
+value, say <I>n</I>=1.
+Invoke <tex2html_verbatim_mark>#math215#<tex2html_image_mark>#tex2html_wrap_inline2197# on <tex2html_verbatim_mark>#math216#<tex2html_image_mark>#tex2html_wrap_inline2199#. Say the output is <I>O</I><SUB><I>n</I></SUB>.
+If one verifies that:
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math217#
+
+<tex2html_image_mark>#displaymath1084#
+</DIV><BR CLEAR="ALL">
+<P></P>
+then return <I>O</I><SUB><I>n</I></SUB> as the result.  Otherwise increase <I>n</I> and repeat.
+
+<P>
+From the stability theorem (Theorem~<A HREF=<tex2html_cr_mark>#th:support-conv#579><tex2html_cr_mark></A>), 
+it follows that <tex2html_image_mark>#tex2html_wrap_inline2207# forms an
+approximation sequence for <I>O</I>, that is, <tex2html_verbatim_mark>#math218#<tex2html_image_mark>#tex2html_wrap_inline2211#.
+Since the functions in <tex2html_verbatim_mark>#math219#<tex2html_image_mark>#tex2html_wrap_inline2213# are assumed to be continuous, it 
+follows that for <tex2html_verbatim_mark>#math220#<tex2html_image_mark>#tex2html_wrap_inline2215#:  <tex2html_verbatim_mark>#math221#<tex2html_image_mark>#tex2html_wrap_inline2217#.
+Thus for large enough <I>n</I>, <tex2html_verbatim_mark>#math222#<tex2html_image_mark>#tex2html_wrap_inline2221# for each 
+function <tex2html_verbatim_mark>#math223#<tex2html_image_mark>#tex2html_wrap_inline2223#.
+
+<P>
+The significant issue here is the computational difficulty or
+expense  of determining:
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math224#
+
+<tex2html_image_mark>#displaymath1085#
+</DIV><BR CLEAR="ALL">
+<P></P>
+
+<P>

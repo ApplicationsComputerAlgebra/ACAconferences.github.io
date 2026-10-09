@@ -1,0 +1,1013 @@
+%\documentstyle[twocolumn,proc]{article}
+\documentstyle{article}
+%\pagestyle{empty}
+\pagestyle{plain}
+%\textheight=235mm
+%\textwidth=177.0mm
+%\columnsep=8.5mm
+%\oddsidemargin -0.71cm
+%\topmargin=-5mm
+\title{Local Approximation Study of Johnson's Method for 2D Elasticity
+Problems}
+\author{
+V.G. Ganzha(*) and E.V. Vorozhtsov\\
+\\
+            Institute of Theoretical and Applied Mechanics,\\
+           Russian Academy of Sciences, Novosibirsk 630090, Russia\\
+(*) At the moment the University of Kassel, \\ Kassel D 34127, Germany}
+\date{}
+\begin{document}
+\maketitle
+%\thispagestyle{empty}
+%\renewcommand{\footnoterule}{\rule{3.5cm}{0.01cm}\vspace{10cm}}
+%\footnotetext{text}
+\pagenumbering{arabic}
+\begin{abstract}
+\hspace{1cm}
+    The Lagrangian finite-difference method, which was developed by
+G.R. Johnson in 1976 for the numerical solution of two-dimensional high
+velocity impact problems within the framework of the elasticity and plasticity
+theories, has gained a widespread acceptance. We investigate the local
+approximation of this method with the aid of the computer algebra systems.
+The problem under consideration involves tremendous intermediate expressions.
+We present an algorithm of decomposition of a complex approximation problem
+into a finite set of simpler subproblems whose union provides the solution of
+the original approximation problem. The results obtained with the aid of this
+algorithm show that the Johnson's method has no approximation in the case when
+the accelerations of the nodes are computed on the basis of four triangular
+elements surrounding a given node of the triangular mesh. We further show
+that the first-order approximation in the case of six irregular elements
+surrounding the given mesh node takes place only in the case of small
+deviations of the shapes of the elements from their regular shapes. The
+validity of the obtained results was checked by using two different computer
+algebra systems: REDUCE and Maple. It follows from the results obtained that
+the Johnson's method as applied to high-velocity impact problems should be
+augmented by an algorithm for the local mesh rezoning in the subdomains of
+strong distortions of the Lagrangian mass elements to ensure the local
+approximation.
+\end{abstract}
+\section{Introduction}
+\hspace{1cm}
+   The experimental and theoretical analyses of high velocity impact problems
+have been of interest for many years. The mathematical investigation of these
+problems had begun with the advent of sufficiently powerful computers. The
+high-velocity impact problems are characterized by the presence of large
+strains and displacements. In addition, it is necessary to take into account
+material strength and compressibility effects. This leads to the need in the
+development of big computer codes, which enable one to obtain the approximate
+numerical solutions of the class of problems under consideration.
+
+   The methods based on Lagrangian variables and explicit finite-difference
+schemes have gained a widespread acceptance for the numerical solution of
+problems on the elastoplastic deformation of solid bodies [1-5]. An extension
+of the Johnson's method has been presented in [4] for the cases of one, two
+and three spatial variables. This extension consists of the fact that the
+Lagrangian elements can be, for example, in the two-dimensional case not only
+triangular, but also quadrangular or pentagonal, so that in the same problem
+the Lagrangian elements are used, whose vertices form an arbitrary set of
+points.
+
+   The complexity of the computational formulas of the Johnson's method does
+not enable one to study the local approximation of this method with the aid of
+analytic calculations by hand. In this connection we propose in what follows
+to use the computer algebra means for this purpose.
+
+   It should be noted that the symbolic computations have previously been
+used for the determination of the local approximation order of difference
+operators on irregular grids. In particular, a symbolic algorithm has been
+presented in [6] for the determination of the approximation order of
+difference operators on a one-dimensional non-uniform mesh. The method of [6]
+was extended in [7] for the case of the study of difference operators on
+two-dimensional non-orthogonal spatial grids. The system of analytic
+computations REDUCE [8] was used in [7]. The method of the work [7] was
+extended for the case of any number of the spatial dimensions in [9].
+According to [9], this method can be applied also for the computer-aided
+investigation of the local approximation of difference operators on a mesh of
+Dirichlet cells.
+
+   The method of [7] enables one to solve the following problem: let a
+difference operator $P_hu$ be given, which approximates certain operator $Pu$
+on a spatial grid; for example, $Pu=grad(u)$. Find the value $k$ in the
+formula
+$$P_hu=Pu + O(h^k) + o(h^k),$$
+where $O(h^k)$ is the leading term of the approximation error, and $h$ is a
+quantity, which characterizes the local dimensions of the grid cells in the
+neighborhood of the spatial point under consideration. Thus the authors of
+[7, 9] have not considered the problem on the computation of an explicit
+form of the leading term of approximation error. However, it is well known that
+information of such kind is important for understanding the structure of the
+approximation "viscosity" of the numerical method [10,11], since this structure
+affects the computational stability, the presence of oscillations, dispersion.
+
+   We describe below a symbolic algorithm, which enables us to investigate the
+approximation of the Johnson's method [2] for the elastic regime
+of deformations and to obtain an explicit form of the leading term of the
+approximation error on the triangular spatial grid.
+
+\section{Description of Johnson's Method}
+\hspace{1cm}
+In the Johnson's method the solid bodies are represented by finite sets of the
+triangular cells. The displacements of the vertices of these cells in the
+passage from the time level $t_n$ to the time level $t_{n+1}=t_n + \tau_n$ are
+computed with the aid of the approximation of the elasticity equations on the
+triangular mesh. Consider a triangular element $ijk$ (see Fig. 1). Let $u$ and
+$v$ be the given displacements along the $x$-axis and $y$-axis, respectively.
+Denote the values of the displacements at the vertices
+of the element $ijk$ by $(u_i,v_i)$, $(u_j,v_j)$, etc. We further
+denote the coordinates $(x,y)$ of the element $ijk$ vertices at $t=t_n$ by
+$(x_i^0,y_i^0)$, $(x_j^0,y_j^0)$, etc.
+\begin{figure}
+\unitlength1mm
+\begin{center}
+\begin{picture}(69,45)
+\put(2,2){\vector(1,0){63}}
+\put(2,2){\vector(0,1){41}}
+\put(13,6){\circle*{1}}   \put(57,11){\circle*{1}}
+\put(39,36){\circle*{1}}   \put(14,30){\circle*{1}}
+\put(26,20){\circle*{1}}
+\put(10,4){\makebox(0,0)[cc]{$m$}}   \put(57,7){\makebox(0,0)[cc]{$j$}}
+\put(42,37){\makebox(0,0)[cc]{$k$}}   \put(12,31){\makebox(0,0)[cc]{$l$}}
+\put(26,17){\makebox(0,0)[cc]{$i$}}
+\put(32,13){\circle{6}}   \put(32,13){\makebox(0,0)[cc]{4}}
+\put(39,22){\circle{6}}   \put(39,22){\makebox(0,0)[cc]{1}}
+\put(25,28){\circle{6}}   \put(25,28){\makebox(0,0)[cc]{2}}
+\put(18,18){\circle{6}}   \put(18,18){\makebox(0,0)[cc]{3}}
+\put(62,5){\makebox(0,0)[cc]{$x$}}  \put(5,39){\makebox(0,0)[cc]{$y$}}
+\put(13,6){\special{em:point 1}} \put(57,11){\special{em:point 2}}
+\put(39,36){\special{em:point 3}} \put(14,30){\special{em:point 4}}
+\put(26,20){\special{em:point 5}}
+\special{em:line 1,5}  \special{em:line 5,2}  \special{em:line 2,1}
+\special{em:line 1,4}  \special{em:line 4,5}  \special{em:line 5,3}
+\special{em:line 3,4}  \special{em:line 3,2}
+\end{picture}
+\caption{Arrangement of four triangles into a composite element.}
+\end{center} \end{figure}
+
+   We must calculate the strains within each Lagrangian element. Since the
+strains are expressed in terms of the derivatives of the displacements $u$ and
+$v$ with respect to spatial variables, we must at first find the form of
+the displacements as the functions of $x$ and $y$ within the limits of
+each element. It is assumed in the Johnson's method that the displacements
+vary linearly between the nodes (the element vertices), that is
+\begin{equation}
+u = \alpha_1 + \alpha_2 x + \alpha_3 y,
+\end{equation}
+\begin{equation}
+v = \alpha_4 + \alpha_5 x + \alpha_6 y,
+\end{equation}
+where the constants $\alpha_1,\ldots,\alpha_{6}$ depend  on the geometry and
+the displacements of the nodes. The constants $\alpha_1,\alpha_2,\alpha_3$
+are found as a result of the solution of the algebraic system
+\begin{eqnarray}
+\begin{array}{l}
+\alpha_1 + \alpha_2 x_i^0 + \alpha_3 y_i^0 = u_i,\\
+\alpha_1 + \alpha_2 x_j^0 + \alpha_3 y_j^0 = u_j,\\
+\alpha_1 + \alpha_2 x_k^0 + \alpha_3 y_k^0 = u_k.
+\end{array}
+\end{eqnarray}
+The determinant of this system is
+\begin{eqnarray}
+\Delta= \left | \begin {array}{lll}
+1 & x_i^0 & y_i^0\\
+1 & x_j^0 & y_j^0\\
+1 & x_k^0 & y_k^0
+\end{array} \right |,
+\end{eqnarray}
+The constants $\alpha_4$, $\alpha_5$ and $\alpha_6$ are determined in a
+similar way; for this purpose the $x$-displacements are replaced in (3) by
+$y$-displacements.
+
+    It follows from (1)-(2) that the derivatives $\partial u/\partial x,
+~\partial u/\partial y,\partial v/\partial x$ and $\partial v/\partial y$
+are constant within the Lagrangian element. For example,
+$\partial u/\partial x= \alpha_2$. This enables us to determine the strains
+from the following equations [12]:
+\begin{equation}
+\varepsilon_x = \frac{\partial u}{\partial x} + \frac{1}{2}\Bigl[\Bigl(
+\frac{\partial u}{\partial x}\Bigr)^2 +\Bigl(\frac{\partial v}{\partial x}
+\Bigr)^2\Bigr]
+\end{equation}
+\begin{equation}
+\varepsilon_y = \frac{\partial v}{\partial y} + \frac{1}{2}\Bigl[\Bigl(
+\frac{\partial u}{\partial y}\Bigr)^2 +\Bigl(\frac{\partial v}{\partial y}
+\Bigr)^2\Bigr]
+\end{equation}
+\begin{equation}
+\gamma_{xy}=\frac{\partial u}{\partial y} + \frac{\partial v}{\partial x}
++ \frac{\partial u}{\partial x}\frac{\partial u}{\partial y}
++ \frac{\partial v}{\partial x}\frac{\partial v}{\partial y}
+\end{equation}
+\begin{equation}
+\varepsilon_v = \frac{A}{A^0} - 1,
+\end{equation}
+where $A^0$ is the area of the element,
+\begin{equation}
+A^0=\frac{1}{2}[x_i^0(y_j^0-y_k^0)+x_j^0(y_k^0-y_i^0)+x_k^0(y_i^0-y_j^0)].
+\end{equation}
+The area $A$ is computed by a similar formula on the basis of the displaced
+nodes coordinates $(x_i,y_i),(x_j,y_j),(x_k,y_k)$.
+The normal strains are represented by Eqs. (5)-(6), whereas the shear strain
+is represented by Eq. (7). The volumetric strain $\varepsilon_v$ is
+determined by Eq. (8). The higher-order terms are included in (5)-(7) to
+represent the effect of element rotation.
+
+   It should be noted that Eqs. (5)-(7) involve only the "differential"
+terms, whereas Eq. (8) involves the finite differences. In the local
+approximation study usually the truncated Taylor series are substituted into
+the equations of the numerical method instead of the dependent variables. As
+a result one finds the expression of the form
+\begin{center}
+{\em "original PDE + the leading term of the approximation error".}
+\end{center}
+All the terms in this expression involve certain partial derivatives of the
+dependent variables. The expression for $\varepsilon_v$ is purely algebraic,
+therefore, it cannot be used directly for the check-up of the results of the
+approximation study of the Johnson's method. On the other hand, it is well
+known that the volumetric strain $\varepsilon_v$ may be expressed in terms of
+the normal strains as follows (see, for example, [13, p. 70]):
+\begin{equation}
+\varepsilon_v = \frac{A}{A^0} - 1 = \varepsilon_x +\varepsilon_y.
+\end{equation}
+The expression on the right hand side already involves only the differential
+terms in accordance with Eqs. (5) and (6).
+
+   As regards the computer implementation of the Johnson's method the formula
+(8) is more preferable than Eq. (10), because the difference approximations
+of the normal strains $\varepsilon_x$ and $\varepsilon_y$ would
+involve many difference approximations of the derivatives $\partial u/\partial
+x,~\partial v/\partial x,\ldots,\partial v/\partial y$ in accordance with
+Eqs. (5),(6). It is well known that the approximation of the derivatives by
+the divided differences always leads to errors. On the other hand, the
+formula (8) indeed involves the difference approximation of only one
+derivative, namely $(\tau_n/A)(\partial A/\partial t)$, where $\tau_n$ is
+the time step of the numerical method.
+
+   In the present work we consider only the regime of elastic deformation. The
+elastic stresses can be obtained directly from the strains by use of Hooke's
+law [12].
+\begin{equation}
+\sigma_x=\lambda\varepsilon_v + 2G\varepsilon_x - Q
+\end{equation}
+\begin{equation}
+\sigma_y=\lambda\varepsilon_v + 2G\varepsilon_y - Q
+\end{equation}
+\begin{equation}
+\tau_{xy}=G\gamma_{xy}
+\end{equation}
+where $\sigma_x$ and $~\sigma_y$ are the normal stresses, and $\tau_{xy}$
+the shear stress. $\lambda$ and $G$ are Lam\'{e} elastic constants. The
+artificial viscosity $Q$, which is introduced for the smoothing of spurious
+oscillations of the numerical solution in the problems with propagating
+waves, includes both a linear term and a quadratic term and is applied only
+when the volumetric strain rate is negative.
+\begin{eqnarray}
+\begin{array}{l}
+Q = C_L\sqrt{(\lambda+2G)\rho A}|\dot{\varepsilon}_v| +
+C_0^2\rho A(\dot{\varepsilon}_v)^2
+~\mbox{for}~\dot{\varepsilon}_v < 0\\
+Q = 0,\quad \dot{\varepsilon}_v\geq 0,
+\end{array}
+\end{eqnarray}
+where the dot over $\varepsilon_v$ denotes the differentiation with respect to
+$t$. $C_L$ and $C_0^2$ are the dimensionless constants
+the typical values of which are $C_L=0.5$ and $C_0^2=4.0$ [1,2].
+
+   After the element stresses are determined, the concentrated forces at the
+node $i$ (cf. Fig. 1) are obtained. They are dependent on the coordinates
+$x_i^{n+1},y_i^{n+1}$, etc., of the triangular elements vertices obtained
+after the displacement during the passage from the time $t_n$ to the time
+$t_{n+1}$. The forces in the $x$ and $y$-directions at node $i$ of an
+element "1" (see Fig. 1), are given by
+\begin{equation}
+F_{i,1}^x = (\sigma_x)_1(y_k-y_j) + (\tau_{xy})_1(x_j-x_k);
+\end{equation}
+\begin{equation}
+F_{i,1}^y = (\tau_{xy})_1(y_k-y_j) + (\sigma_y)_1(x_j-x_k),
+\end{equation}
+where $(\sigma_x)_1$ is the value of $\sigma_x$ inside the element $ijk$,
+etc. The total force components
+\begin{eqnarray}
+\sum_{k=1}^4 F_{i,k}^x,~\sum_{k=1}^4 F_{i,k}^y
+\end{eqnarray}
+in the node $i$ of the element are obtained by summation of the contributions
+from each of the four elements having the vertex $i$ (see Fig. 1).
+
+   The equations of motion are integrated numerically by assuming a constant
+velocity in the interval $[t_n,t_n+\tau_n]$. The acceleration of the node $i$
+in the $x$-direction is
+\begin{equation}
+\ddot{u}_i = \Bigl(\sum_{k=1}^4 F_{i,k}^x\Bigr)/\Bigr(\sum_{k=1}^4 M_{i,k}
+\Bigr).
+\end{equation}
+The mass $M_{i,k}$ in (18) is the contribution from the $k$th element to the
+lumped mass at the node $i$; this mass is computed in the Johnson's method [2]
+by the formula
+\begin{equation}
+M_{i,k} = \frac{1}{3}A_k^0\rho_k^0,\quad k=1,2,\ldots, 4,
+\end{equation}
+where $\rho_k^0$ is the material density in the $k$th element at $t=t_n$, and
+only those four elements are taken, which have the common vertex $i$ (see Fig.
+1).
+
+   The new constant velocity in the $x$-direction is
+\begin{equation}
+\dot{u}_i^{n+1} = \dot{u}_i^n + \ddot{u}_i \tau_n.
+\end{equation}
+Finally, the new displacement of the $i$th node at time $t=t_{n+1} =t_n +
+\tau_n$ is determined by the formula
+\begin{equation}
+u_i^{n+1}=u_i^n+\dot{u}_i^{n+1}\tau_n.
+\end{equation}
+The equations of motion for the $y$-direction have a similar form.
+
+   We want to elucidate the following question: Do the computational formulas
+of the Johnson's method approximate the fundamental equations of the
+elasticity theory, which have the following form in the notations given above:
+\begin{equation}
+\rho \ddot{u}=\frac{\partial \sigma_x}{\partial x} + \frac{\partial \tau_{xy}}
+{\partial y}
+\end{equation}
+\begin{equation}
+\rho \ddot{v}=\frac{\partial \tau_{xy}}{\partial x} +
+\frac{\partial \sigma_y}{\partial y}
+\end{equation}
+
+\section{Algorithm of Decomposition for the Approximation Study}
+\hspace{6mm}
+   Our method of the local approximation study of the Johnson's method is also
+based, as in [7,9], on the Taylor expansions of the dependent grid variables
+at a chosen spatial grid point. However, the approximation problem under
+consideration involves tremendous intermediate expressions in the case of an
+irregular mesh of triangular elements. We present below an algorithm of
+decomposition of a complex approximation problem into a finite set of simpler
+subproblems whose union provides the solution of the original approximation
+problem. Let us at first enumerate the basic steps of our decomposition
+algorithm.
+
+ {\bf Step 1.} Representation of the differential operators on the right hand
+sides of Eqs. (22) and (23) as the sums of simpler differential operators.
+
+ {\bf Step 2.} Identification of the difference operators approximating the
+differential operators identified at Step 1.
+
+ {\bf Step 3.} Determination of the truncation error of each elementary
+difference operator identified at Step 2.
+
+ {\bf Step 4.} Assembly of the results obtained at Step 3.
+
+   Let us now describe in detail each of the Steps 1--4.
+
+  {\bf Step 1.} The difference approximations of the two equations (22), (23)
+for the nodes acceleration can be studied separately. The needed amount of
+computer memory thus reduces by a factor of two. In what follows we describe
+our decomposition strategy at the example of Eq. (22). Let ${\bf u}=(u,v)$.
+Then it is easy to see with regard for Eqs. (11)-(13) and (5)-(7) that
+$$\rho \ddot{u}=L{\bf u},$$
+where the differential operator $L$ can be presented in accordance with (22),
+(5)-(7), (11)-(13) as the sum of the operators:
+\begin{equation}
+L{\bf u}=\sum_{\mu=1}^{11}L_{\mu}{\bf u},
+\end{equation}
+where
+\begin{eqnarray}
+L_1{\bf u}=(\lambda + 2G)u_{xx},~L_2{\bf u}=(\lambda + 2G)(\frac{1}{2}u_x^2)_x,
+L_3{\bf u}=(\lambda + 2G)(\frac{1}{2}v_x^2)_x,
+\nonumber\\
+L_4{\bf u}=\lambda v_{yx},
+L_5{\bf u}=\lambda(\frac{1}{2}u_y^2)_x,~L_6{\bf u}=\lambda(\frac{1}{2}v_y^2)_x,
+L_7{\bf u}=Gu_{yy},\\
+L_8{\bf u}=Gv_{xy},~L_9{\bf u}=G(u_xu_y)_y,
+L_{10}{\bf u}=G(v_xv_y)_y,~L_{11}{\bf u}=-Q_x.\nonumber
+\end{eqnarray}
+
+ {\bf Step 2.} The structure of the differencing formulas of the Johnson's
+method enables us to easily identify the difference operators $\Lambda_{\mu}
+{\bf u}$ approximating the differential operators $L_{\mu}{\bf u},~\mu=1,
+\ldots,11$.
+
+ {\bf Step 3.} We now present the sequence of steps needed for the local
+approximation study of each elementary difference operator $\Lambda_{\mu}
+{\bf u},~\mu=1,\ldots,11$.
+
+ {\bf Step 3.1.} The derivatives $(\partial u/\partial x)_\nu,$
+$(\partial u/\partial y)_\nu,$ $(\partial v/\partial x)_\nu$,
+$\partial v/\partial y)_\nu,~\nu=1,2,3,4$, which are constant within the
+$\nu$th element, are given the temporary names: $(\partial u/\partial x)_1=$
+{\tt bu21}, $(\partial v/\partial x)_1=${\tt bv21}, $(\partial u/\partial y)_1
+=${\tt bu31}, $(\partial v/\partial y)_1=${\tt bv31}, etc.
+
+ {\bf Step 3.2.} These temporary representations of the derivatives $u_x,~u_y,
+~v_x,~v_y$ for all four elements are substituted into the expression of the
+rational form of the type (18) for the difference operator
+$\Lambda_\mu{\bf u}$. As a result we obtain a preliminary expression for this
+operator.
+
+ {\bf Step 3.3.} The algebraic system (3) is solved in a symbolic form for each
+of the four elements having their vertices in the node $i$, see Fig. 1. One
+can make the following table establishing a correspondence between
+the number $\nu$ of the element, $1\leq \nu\leq 4$, and the indices of the
+vertices of the $\nu$th element:
+\begin{eqnarray}
+\begin{array}{lclll}
+\nu & | & i, & i_1, & i_2\\
+\mbox{--}&\mbox{--}&\mbox{--}&\mbox{--}&\mbox{--}\\
+1 & | & i, & j,   & k  \\
+2 & | & i, & k, & l\\
+3 & | & i, & l, & m\\
+4 & | & i, & m, & j
+\end{array}
+\end{eqnarray}
+As a result of the symbolic form solution of system (3) we obtain the rational
+expressions for the $\alpha_1,\alpha_2,\alpha_3$, which involve the grid
+values $u_i,u_j,u_k$ of the displacements.
+
+ {\bf Step 3.4.} The temporary names $bu\xi\eta,~bv\xi\eta,~\xi=2,3,~\eta=
+1,2,3,4,$ in the expression for $\Lambda_\mu{\bf u}$ are replaced by the
+corresponding expressions for $\alpha_2,\alpha_3,\alpha_5,\alpha_6$ obtained
+at Step 3.3. This leads to a considerable increase of the length of the
+expression for $\Lambda_\mu{\bf u}$.
+
+  {\bf Step 3.5.} The displacements $u_\nu$ and $v_\nu$ entering the obtained
+expression for $\Lambda_\mu{\bf u}$ are expanded in accordance with the
+Taylor formula:
+\begin{eqnarray}
+u_{\nu}=u^* +\frac{\partial u(x^*,y^*)}{\partial x}(x_{\nu}-x^*) +
+\frac{\partial u(x^*,y^*)}{\partial y}(y_{\nu}-y^*)+ \nonumber\\
++\frac{1}{2}\frac{\partial^2 u(x^*,y^*)}{\partial x^2}(x_{\nu}-x^*)^2+
+\frac{\partial^2 u(x^*,y^*)}{\partial x\partial y}(x_{\nu}-x^*)(y_{\nu}
+-y^*)+\nonumber\\
+\frac{1}{2}\frac{\partial^2 u(x^*,y^*)}{\partial y^2}(y_\nu-y^*)^2,
+\end{eqnarray}
+where $\nu=i,j,k,l,m$ and $(x^*,y^*)$ is a point with respect to
+which the expansions are performed.
+
+   {\bf Step 3.6}. The specification of the $(x^*,y^*)$ point.
+The computational results presented below have been obtained at $x^*=x_i^0,~
+y^*=y_i^0$.
+
+ {\bf Step 3.7}. Representation of the initial coordinates of the four nodes
+$(x_j^0,y_j^0)$, $\ldots,(x_m^0,y_m^0)$ as the deviations from the point
+$(x^*=x_i^0,,y^*=y_i^0)$:
+\begin{eqnarray}
+x_j^0=x^*+C_j^x\cdot h,~x_k^0=x^*+C_k^x\cdot h,~x_l^0=x^*+C_l^x\cdot h,
+\nonumber\\
+x_m^0=x^*+C_m^x\cdot h, y_j^0=y^*+C_j^y\cdot h,~y_k^0=y^* + C_k^y\cdot h,\\
+y_l^0=y^*+C_l^y\cdot h,~y_m^0=y^* + C_m^y\cdot h.\nonumber\\
+\nonumber
+\end{eqnarray}
+Here $h$ is a quantitative measure, which locally characterizes the density of
+a grid of triangular elements in the neighborhood of the $(x^*,y^*)$
+point. Following [9] let us denote by $S(i)$ the stencil of the $i$th node,
+that is the vertices of those five elements, which are involved in the
+computation of the expression $\Lambda_\mu {\bf u}$. In the notations of Fig. 1
+these are the vertices $i,j,k,l,m$. If we take $x^*=x_i^0,~y^*=y_i^0$, then
+$h$ may be computed by the formula
+$$h=(1/4)\{\sum_{\nu\in S(i)}[(x_{\nu}-x^*)^2+(y_{\nu}-y^*)^2]\}^{0.5},$$
+where $S(i)=\{j,k,l,m\}$. The constants $C_j^x,\ldots,C_m^y$ in (28) do not
+depend on $h$. The representations (28) characterize the arbitrary distortions,
+which the Lagrangian mass elements can undergo in the process of high-velocity
+interaction of solid bodies.
+
+ {\bf Step 3.8}. The displaced coordinates $(x_\nu,y_\nu),~\nu=i,j,k,l,m,$ are
+also involved in
+the computation of the difference operator $\Lambda_\mu{\bf u}$.
+In the Johnson's method these coordinates are related to the coordinates
+$(x_\nu^0,y_\nu^0)$ by the formulas
+\begin{equation}
+x_\nu=x_\nu^0+u_\nu,~y_\nu=y_\nu^0+v_\nu,~\nu=i,j,k,l,m.
+\end{equation}
+If the displacements $u(x,y)$ and $v(x,y)$ are smooth functions in the vicinity
+of the node $(x_i^0,y_i^0)$, then we can write that
+\begin{equation}
+u(x_\nu^0,y_\nu^0)=u(x_i^0,y_i^0) + \frac{\partial u(\bar{x},\bar{y})}{
+\partial x}(x_\nu^0-x_i^0) + \frac{\partial u(\bar{x},\bar{y})}{\partial y}
+(y_\nu^0-y_i^0),
+\end{equation}
+where
+$$\bar{x}=x_i^0+\theta_1(x_\nu^0-x_i^0),~\bar{y}=y_i^0+\theta_2(y_\nu^0-y_i^0),$$
+$0<\theta_1,\theta_2<1$. Substituting the representations (28) into (30) we can
+obtain the formula
+\begin{eqnarray}
+u_\nu=u_i+A_\nu^x h,\quad \nu=i,j,k,l,m,
+\end{eqnarray}
+where
+\begin{eqnarray*}
+A_\nu^x=\frac{\partial u(\bar{x},\bar{y})}{
+\partial x}C_\nu^x + \frac{\partial u(\bar{x},\bar{y})}{\partial y}C_\nu^y.
+\end{eqnarray*}
+In a similar way we can obtain the representations
+\begin{eqnarray}
+v_\nu=v_i+A_\nu^y h,\quad \nu=i,j,k,l,m.
+\end{eqnarray}
+Substituting the formulas (31) and (32) into (29) we obtain that
+\begin{eqnarray}
+x_\nu=x_\nu^0+u_i+A_\nu^x h,~y_\nu=y_\nu^0+v_i+A_\nu^y h,~ \nu=i,j,k,l,m.
+\end{eqnarray}
+The representations (33) are substituted into the expression for the operator
+$\Lambda_\mu{\bf u}$.
+
+   At Step 4, the assembly of the expansions of the difference operators
+$\Lambda_\mu{\bf u}$, $\mu=1,\ldots,11,$ is performed in accordance with (24)
+simply by the concatenation of the files containing the expansion results for
+the individual operators $\Lambda_\mu{\bf u}$.
+
+\section{Results and Discussion}
+\hspace{6mm}
+
+   Let us consider similarly to [2] a problem on the high-velocity impact of a
+nickel rectangular projectile onto a thick aluminum plate. Let us introduce an
+uniform rectangular grid in the both of the bodies. Let $h_1$ and $h_2$ be the
+sizes of the cells in the directions of the $x$- and $y$-axes, respectively.
+Let us denote by $\kappa$ the cell aspect ratio, i.e. $\kappa=h_2/h_1$. Now let
+us draw two diagonals in each of the rectangular cells. Then we obtain an
+uniform triangular mesh shown in Fig. 2.
+\begin{figure}
+\unitlength0.8mm
+\begin{center}
+\begin{picture}(86,61)
+\multiput(2,2)(0,25){2}{\thicklines\line(1,0){80}}
+\multiput(2,2)(80,0){2}{\thicklines\line(0,1){25}}
+\multiput(26,27)(32,0){2}{\thicklines\line(0,1){30}}
+\put(26,57){\thicklines\line(1,0){32}}
+\multiput(42,2)(4,0){4}{\line(0,1){55}}
+\multiput(58,2)(4,0){6}{\line(0,1){25}}
+\multiput(42,7)(0,5){4}{\line(1,0){40}}
+\multiput(42,32)(0,5){5}{\line(1,0){16}}
+\put(10,10){\shortstack[l]{{\large Aluminum}\\{\large plate}}}
+%Diagonals
+\put(42,2){\special{em:point 1}}  \put(42,7){\special{em:point 2}}
+\put(42,12){\special{em:point 3}}  \put(42,17){\special{em:point 4}}
+\put(42,22){\special{em:point 5}}  \put(42,27){\special{em:point 6}}
+\put(42,32){\special{em:point 7}}  \put(42,37){\special{em:point 8}}
+\put(42,42){\special{em:point 9}}  \put(42,47){\special{em:point 10}}
+\put(42,52){\special{em:point 11}}  \put(42,57){\special{em:point 12}}
+\put(46,57){\special{em:point 13}}  \put(50,57){\special{em:point 14}}
+\put(54,57){\special{em:point 15}}  \put(58,57){\special{em:point 16}}
+\put(58,52){\special{em:point 17}}  \put(58,47){\special{em:point 18}}
+\put(58,42){\special{em:point 19}}  \put(58,37){\special{em:point 20}}
+\put(58,32){\special{em:point 21}}  \put(58,27){\special{em:point 22}}
+\put(62,27){\special{em:point 23}}  \put(66,27){\special{em:point 24}}
+\put(70,27){\special{em:point 25}}  \put(74,27){\special{em:point 26}}
+\put(78,27){\special{em:point 27}}  \put(82,27){\special{em:point 28}}
+\put(82,22){\special{em:point 29}}  \put(82,17){\special{em:point 30}}
+\put(82,12){\special{em:point 31}}  \put(82,7){\special{em:point 32}}
+\put(82,2){\special{em:point 33}}  \put(78,2){\special{em:point 34}}
+\put(74,2){\special{em:point 35}}  \put(70,2){\special{em:point 36}}
+\put(66,2){\special{em:point 37}}  \put(62,2){\special{em:point 38}}
+\put(58,2){\special{em:point 39}}  \put(54,2){\special{em:point 40}}
+\put(50,2){\special{em:point 41}}  \put(46,2){\special{em:point 42}}
+%Diagonals with positive inclination angle
+\special{em:line 34,32} \special{em:line 35,31} \special{em:line 36,30}
+\special{em:line 37,29} \special{em:line 38,28} \special{em:line 39,27}
+\special{em:line 40,26} \special{em:line 41,25} \special{em:line 42,24}
+\special{em:line 1,23} \special{em:line 2,22} \special{em:line 3,21}
+\special{em:line 4,20} \special{em:line 5,19} \special{em:line 6,18}
+\special{em:line 7,17} \special{em:line 8,16} \special{em:line 9,15}
+\special{em:line 10,14} \special{em:line 11,13}
+%Diagonals with negative inclination angle
+\special{em:line 42,2} \special{em:line 41,3} \special{em:line 40,4}
+\special{em:line 39,5} \special{em:line 38,6} \special{em:line 37,7}
+\special{em:line 36,8} \special{em:line 35,9} \special{em:line 34,10}
+\special{em:line 33,23} \special{em:line 32,24} \special{em:line 31,25}
+\special{em:line 30,26} \special{em:line 29,27} \special{em:line 21,11}
+\special{em:line 20,12} \special{em:line 19,13} \special{em:line 18,14}
+\special{em:line 17,15}
+\end{picture}
+\caption{Uniform triangular mesh. The case of two diagonals in each
+rectangular cell.}
+\end{center} \end{figure}
+
+   Let us take an individual rectangular cell (see Fig. 3). We can see that
+four elements have a common vertex at node $i$. Let us consider equation (22)
+for the $x$-acceleration. In what follows we present the results of the local
+approximation study of the sum
+\begin{equation}
+\Lambda_l{\bf u}=\Lambda_1{\bf u}+\Lambda_4{\bf u}+\Lambda_7{\bf u}+
+\Lambda_8{\bf u}
+\end{equation}
+of the linear operators present in the complete differential operator (24)
+corresponding to Eq. (22).
+\begin{figure}
+\unitlength1mm
+\begin{center}
+\begin{picture}(64,41)
+\multiput(7,5)(0,30){2}{\line(1,0){50}}
+\multiput(7,5)(50,0){2}{\line(0,1){30}}
+\put(2,4){\makebox(0,0)[cc]{$m$}}   \put(60,4){\makebox(0,0)[cc]{$j$}}
+\put(60,35){\makebox(0,0)[cc]{$k$}}   \put(2,35){\makebox(0,0)[cc]{$l$}}
+\put(32,15){\makebox(0,0)[cc]{$i$}}
+\put(35,10){\circle{6}} \put(35,10){\makebox(0,0)[cc]{4}}
+\put(48,20){\circle{6}} \put(48,20){\makebox(0,0)[cc]{1}}
+\put(35,28){\circle{6}} \put(35,28){\makebox(0,0)[cc]{2}}
+\put(15,20){\circle{6}} \put(15,20){\makebox(0,0)[cc]{3}}
+%Diagonals
+\put(7,5){\special{em:point 1}}  \put(57,5){\special{em:point 2}}
+\put(57,35){\special{em:point 3}}  \put(7,35){\special{em:point 4}}
+\special{em:line 1,3} \special{em:line 2,4}
+\end{picture}
+\caption{Individual rectangular cell and its triangulation.}
+\end{center} \end{figure}
+
+   We have implemented the algorithm of decomposition presented above in
+Section 3 in a REDUCE program. To verify the results obtained by the REDUCE
+program we have written a similar program in Maple [14]. The symbolic results
+obtained by the two programs for the case of the investigation of the operator
+(34) are the same and have the following form:
+\begin{eqnarray}
+\Lambda_l{\bf u}=\frac{3}{2}[(\lambda + 2G)u_{xx} + 2\lambda v_{xy} + 2
+\kappa^2Gu_{yy}+\nonumber\\
+\kappa^2\lambda u_{yy} + Gu_{yy} + 2Gv_{xy} +\frac{1}{\kappa^2}Gu_{xx}] +O(h).
+\end{eqnarray}
+The exact result should however have in accordance with Eqs. (25) the form
+\begin{eqnarray}
+L_l{\bf u}=L_1{\bf u} + L_4{\bf u}+L_7{\bf u} +L_8{\bf u}=\nonumber\\
+(\lambda + 2G)u_{xx} +\lambda v_{yx} + Gu_{yy} + Gv_{xy}.
+\end{eqnarray}
+Comparing formulas (35) and (36) we can see that there is no approximation of
+the operator $L_l{\bf u}$ by the Johnson's method. To understand the reason for
+this we have considered only the operator $\Lambda_1{\bf u}$. It turns out that
+the Johnson's method approximates instead of the operator $(\lambda + 2G)
+u_{xx}$ the operator
+\begin{equation}
+\frac{3}{2}(\lambda+2G)(u_{xx}+\kappa^2u_{yy}).
+\end{equation}
+This fact can in turn be explained as follows. In the particular case of a
+rectangular cell shown in Fig. 3 we must specify the following values of the
+constants $C_\nu^x$ and $C_\nu^y$ in Eqs. (28):
+\begin{eqnarray}
+\begin{array}{llll}
+C_j^x=\frac{1}{2}, & C_j^y=-\frac{\kappa}{2}, & C_k^x=\frac{1}{2}, &
+C_k^y=\frac{\kappa}{2},\\
+C_l^x=-\frac{1}{2}, & C_l^y=\frac{\kappa}{2}, & C_m^x=-\frac{1}{2}, &
+C_m^y=-\frac{\kappa}{2}.
+\end{array}
+\end{eqnarray}
+Then we can obtain that the difference operator $\Lambda_1{\bf u}$ has the
+form
+\begin{equation}
+\Lambda_1{\bf u}=(\lambda+2G)\frac{(u_j+u_k)\kappa-4u_i+u_m+u_l}{(1/3)h_1^2}.
+\end{equation}
+\begin{figure}
+\unitlength1mm
+\begin{center}
+\begin{picture}(64,41)
+\multiput(7,5)(0,30){2}{\line(1,0){50}}
+\multiput(7,5)(50,0){2}{\line(0,1){30}}
+\put(2,4){\makebox(0,0)[cc]{$m$}}   \put(60,4){\makebox(0,0)[cc]{$j$}}
+\put(60,35){\makebox(0,0)[cc]{$k$}}   \put(2,35){\makebox(0,0)[cc]{$l$}}
+\put(34,16){\makebox(0,0)[cc]{$i$}}
+\put(32,0){\makebox(0,0)[cc]{4}}  \put(32,38){\makebox(0,0)[cc]{2}}
+\put(59,20){\makebox(0,0)[cc]{1}} \put(4,20){\makebox(0,0)[cc]{3}}
+\multiput(7,20)(5,0){10}{\line(1,0){3.5}}
+\multiput(32,5)(0,5){6}{\line(0,1){3.5}}
+\end{picture}
+\caption{The partition of a rectangular cell into four cells with the
+stepsizes $h_1/2$ and $\kappa h_1/2$.}
+\end{center} \end{figure}
+Let us now subdivide the elementary rectangular cell of Fig. 3 into four
+rectangular cells shown in Fig. 4. Then we can see from Eq. (38) that on the
+mesh with the steps $h_1/2$ and $h_2/2$ the difference operator $\Lambda_1{\bf
+u}$ can be represented schematically as the discrete convolution
+\begin{equation}
+\Lambda_1{\bf u}=H_1*F_3,
+\end{equation}
+where
+\begin{eqnarray}
+H_1=\frac{3(\lambda+2G)}{h_1^2}\left [\begin{array}{ccc}
+1   &  0  & \kappa\\
+0   & -4  &   0   \\
+1   &  0  & \kappa
+\end{array}\right ], \quad
+F_3=\left [\begin{array}{ccc}
+u_l  &  a  &  u_k\\
+b    &  u_i&  c  \\
+u_m  &  d  &  u_j
+\end{array} \right ].
+\end{eqnarray}
+We have denoted by $a,b,c,d$ in (41) the missing values of $u$ at points 1,2,
+3,4; these values are indeed not needed, because they are multiplied by zero,
+see the expression for the mask $H_1$ in (41). On the other hand, it is well
+known that in the particular case of a square grid with the stepsize $h$ the
+Laplacian $\Delta u$ can be approximated with the aid of equation [15]
+$$\Delta u=H_2*F_3,$$
+where
+\begin{eqnarray*}
+H_2=\frac{1}{2\tilde{h}^2}\left [\begin{array}{ccc}
+1   &  0  & 1\\
+0   & -4  &   0   \\
+1   &  0  & 1
+\end{array}\right ].
+\end{eqnarray*}
+In our case $\tilde{h}=h_1/2$, so that
+\begin{eqnarray}
+H_2=\frac{2}{h^2}\left [\begin{array}{ccc}
+1   &  0  & 1\\
+0   & -4  &   0   \\
+1   &  0  & 1
+\end{array}\right ].
+\end{eqnarray}
+Comparing the expressions for the masks $H_1$ in (41) and $H_2$ (42) we can see
+that ($i$) the elements of the masks coincide in the particular case of
+$\kappa=1$; ($ii$) the factor "2" is absent in the numerator of the
+coefficient of $H_1$. This explains the appearance of the "2" in the
+denominator of the formula (37).
+\begin{figure}
+\unitlength0.8mm
+\begin{center}
+\begin{picture}(86,61)
+\multiput(2,2)(0,25){2}{\thicklines\line(1,0){80}}
+\multiput(2,2)(80,0){2}{\thicklines\line(0,1){25}}
+\multiput(26,27)(32,0){2}{\thicklines\line(0,1){30}}
+\put(26,57){\thicklines\line(1,0){32}}
+\multiput(42,2)(4,0){4}{\line(0,1){55}}
+\multiput(58,2)(4,0){6}{\line(0,1){25}}
+\multiput(42,7)(0,5){4}{\line(1,0){40}}
+\multiput(42,32)(0,5){5}{\line(1,0){16}}
+\put(10,10){\shortstack[l]{{\large Aluminum}\\{\large plate}}}
+%Diagonals
+\put(42,2){\special{em:point 1}}  \put(42,7){\special{em:point 2}}
+\put(42,12){\special{em:point 3}}  \put(42,17){\special{em:point 4}}
+\put(42,22){\special{em:point 5}}  \put(42,27){\special{em:point 6}}
+\put(42,32){\special{em:point 7}}  \put(42,37){\special{em:point 8}}
+\put(42,42){\special{em:point 9}}  \put(42,47){\special{em:point 10}}
+\put(42,52){\special{em:point 11}}  \put(42,57){\special{em:point 12}}
+\put(46,57){\special{em:point 13}}  \put(50,57){\special{em:point 14}}
+\put(54,57){\special{em:point 15}}  \put(58,57){\special{em:point 16}}
+\put(58,52){\special{em:point 17}}  \put(58,47){\special{em:point 18}}
+\put(58,42){\special{em:point 19}}  \put(58,37){\special{em:point 20}}
+\put(58,32){\special{em:point 21}}  \put(58,27){\special{em:point 22}}
+\put(62,27){\special{em:point 23}}  \put(66,27){\special{em:point 24}}
+\put(70,27){\special{em:point 25}}  \put(74,27){\special{em:point 26}}
+\put(78,27){\special{em:point 27}}  \put(82,27){\special{em:point 28}}
+\put(82,22){\special{em:point 29}}  \put(82,17){\special{em:point 30}}
+\put(82,12){\special{em:point 31}}  \put(82,7){\special{em:point 32}}
+\put(82,2){\special{em:point 33}}  \put(78,2){\special{em:point 34}}
+\put(74,2){\special{em:point 35}}  \put(70,2){\special{em:point 36}}
+\put(66,2){\special{em:point 37}}  \put(62,2){\special{em:point 38}}
+\put(58,2){\special{em:point 39}}  \put(54,2){\special{em:point 40}}
+\put(50,2){\special{em:point 41}}  \put(46,2){\special{em:point 42}}
+%Diagonals with positive inclination angle
+\special{em:line 34,32} \special{em:line 35,31} \special{em:line 36,30}
+\special{em:line 37,29} \special{em:line 38,28} \special{em:line 39,27}
+\special{em:line 40,26} \special{em:line 41,25} \special{em:line 42,24}
+\special{em:line 1,23} \special{em:line 2,22} \special{em:line 3,21}
+\special{em:line 4,20} \special{em:line 5,19} \special{em:line 6,18}
+\special{em:line 7,17} \special{em:line 8,16} \special{em:line 9,15}
+\special{em:line 10,14} \special{em:line 11,13}
+\end{picture}
+\caption{Uniform triangular mesh. The case of one diagonal in each
+rectangular cell.}
+\end{center} \end{figure}
+
+   Let us now consider the case when only one diagonal is drawn in each
+rectangular cell of an uniform grid. To be specific let us consider the case
+of a diagonal drawn at the angle $\alpha=arctan(h_2/h_1)$ to the positive
+direction of the $x$-axis. Then we obtain a triangular mesh shown in Fig. 5.
+It is easy to see from Fig. 5 that in this case six triangular elements have
+a common vertex at point $i$. It is not difficult to write down the difference
+formulas similar to Eqs. (15), (16) and (18) for this case. We will not present
+these formulas for the sake of brevity. We present only an analog of the
+formulas (28). Let us denote the vertices of the six elements surrounding the
+node $i$ as in Fig. 6. Then we can write that
+\begin{equation}
+x_\nu^0=x_i^0+C_\nu^x h,~y_\nu^0=y_i^0+C_\nu^y h,\quad \nu=j,k,l,m,n.
+\end{equation}
+\begin{figure}
+\unitlength1mm
+\begin{center}
+\begin{picture}(70,50)
+\put(8,9){\vector(1,0){59}}
+\put(8,9){\vector(0,1){38}}
+\multiput(23,9)(15,0){3}{\line(0,1){30}}
+\multiput(8,19)(0,10){3}{\line(1,0){45}}
+\put(5,9){\makebox(0,0)[cc]{$n$}}   \put(5,19){\makebox(0,0)[cc]{$m$}}
+\put(21,32){\makebox(0,0)[cc]{$l$}}   \put(36,32){\makebox(0,0)[cc]{$k$}}
+\put(26,15){\makebox(0,0)[cc]{$i$}}   \put(41,15){\makebox(0,0)[cc]{$j$}}
+\put(23,5){\makebox(0,0)[cc]{$p$}}   \put(63,13){\makebox(0,0)[cc]{$x$}}
+\put(13,45){\makebox(0,0)[cc]{$y$}}
+\put(38,9){\special{em:point 1}}  \put(53,19){\special{em:point 2}}
+\put(53,29){\special{em:point 3}}  \put(53,39){\special{em:point 4}}
+\put(38,39){\special{em:point 5}}  \put(23,39){\special{em:point 6}}
+\put(8,29){\special{em:point 7}}  \put(8,19){\special{em:point 8}}
+\put(8,9){\special{em:point 9}}  \put(23,9){\special{em:point 10}}
+\put(38,19){\special{em:point 11}}  \put(38,29){\special{em:point 12}}
+\put(23,29){\special{em:point 13}}  \put(8,19){\special{em:point 14}}
+\special{em:line 1,2} \special{em:line 3,10} \special{em:line 9,4}
+\special{em:line 5,8} \special{em:line 7,6} \special{em:line 9,4}
+\special{em:line 9,10, 0.8pt}  \special{em:line 10,11, 0.8pt}
+\special{em:line 11,12, 0.8pt}  \special{em:line 12,13, 0.8pt}
+\special{em:line 13,14, 0.8pt}  \special{em:line 14,9, 0.8pt}
+\end{picture}
+\caption{The environment of the node $i$.}
+\end{center} \end{figure}
+In the particular case of an uniform rectangular grid we should substitute the
+values
+\begin{eqnarray}
+\begin{array}{llll}
+C_j^x=1,  &  C_j^y=0,  & C_k^x=1,  &  C_k^y=\kappa, \\
+C_l^x=0   &C_l^y=\kappa,&C_m^x=-1, &  C_m^y=0,      \\
+C_n^x=-1, &C_n^y=-\kappa&~         &  ~
+\end{array}
+\end{eqnarray}
+into the formulas (43). Then the approximation of the linear operator (36) by
+the Johnson's method takes place only when the multiplier 2/3 is taken in the
+formula (18) instead of the multiplier 1/3 presented in [2]. In the case of the
+multiplier 2/3 we have obtained the second order of approximation in space,
+that is the order $O(h^2)$, where $h=h_1$.
+
+    Let us finally consider the approximation of the linear operator
+$L_1u=(\lambda+2G)u_{xx}$ by the corresponding operator $\Lambda_1 u$ in the
+case of the six distorted triangular elements surrounding the node $i$. Such
+severe distortions of the triangular mass elements occur in the region of the
+high-velocity interaction of a projectile with an obstacle. Fig. 7 gives some
+idea of these distortions. In this case we should use the general formulas (28)
+in the approximation study. The expression for the Taylor expansion of the
+operator $\Lambda_1 u$ is sufficiently large, it takes about 800 Kb. Therefore,
+we present only the general structure of this expression together with a few
+monomials involved:
+\begin{equation}
+\Lambda_1{\bf u}=3h(\lambda+2G)(A_1u_{xx}+2A_2u_{xy}+A_3u_{yy})/(2hB),
+\end{equation}
+where
+\begin{eqnarray}
+A_1=(C_j^x)^3C_k^xC_l^xC_m^xC_n^x(C_k^y)^2C_l^yC_m^yC_n^y(C_p^y)^2 +\ldots
+\nonumber\\
+- C_k^xC_l^xC_m^xC_n^x(C_p^x)^3(C_j^y)^2C_k^yC_l^yC_m^y(C_n^y)^2,\nonumber\\
+A_2=(C_j^x)^2C_k^xC_l^xC_m^xC_n^xC_j^y(C_k^y)^2C_l^yC_m^yC_n^y(C_p^y)^2 +
+\ldots \nonumber\\
+-C_k^xC_l^xC_m^xC_n^x(C_p^x)^2(C_j^y)^2C_k^yC_l^yC_m^y(C_n^y)^2C_p^y,
+\nonumber\\
+A_3=-(C_j^x)^2C_k^xC_l^xC_m^xC_k^yC_l^yC_m^y(C_n^y)^4(C_p^y)^2 + \ldots
+\nonumber\\
++C_l^xC_m^xC_n^x(C_p^x)^2(C_j^y)^2(C_k^y)^4C_l^yC_m^yC_n^y,\nonumber\\
+B=(C_j^x)^3C_k^xC_l^xC_m^xC_n^x(C_k^y)^2C_l^yC_m^yC_n^y(C_p^y)^2 +\nonumber\\
+\ldots -C_k^xC_l^xC_m^xC_n^x(C_p^x)^3(C_j^y)^2C_k^yC_l^yC_m^y(C_n^y)^2.
+\end{eqnarray}
+\begin{figure}
+\unitlength1mm
+\begin{center}
+\begin{picture}(59,22)
+\put(30,11){\makebox(0,0)[cc]{$i$}}
+\put(23,5){\special{em:point 1}}  \put(42,7){\special{em:point 2}}
+\put(55,17){\special{em:point 3}}  \put(38,15){\special{em:point 4}}
+\put(22,14){\special{em:point 5}}  \put(5,8){\special{em:point 6}}
+\put(30,9){\special{em:point 7}}
+\special{em:line 1,2} \special{em:line 2,3} \special{em:line 3,4}
+\special{em:line 4,5} \special{em:line 5,6} \special{em:line 6,1}
+\special{em:line 1,7} \special{em:line 7,4} \special{em:line 7,2}
+\special{em:line 3,7} \special{em:line 7,5} \special{em:line 6,7}
+\end{picture}
+\caption{Distorted six elements surrounding the node $i$.}
+\end{center} \end{figure}
+In each of the expressions (45) we have presented only the first and the last
+monomial. Note that the terms of similar structures were collected in these
+expressions by the REDUCE system. The expressions (45), (46) are presented
+under the assumption that the correct multiplier (2/3) is used instead of
+(1/3) in Eq. (18).
+
+   It follows from Eq. (45) that there is no approximation of the operator
+$(\lambda + 2G)u_{xx}$ by the Johnson's method in the case of large distortions
+of the triangular cells.
+
+   Let us now consider another case, when the shapes of the six triangular
+elements surrounding the node $i$ differ little from the regular shape shown
+in Fig. 6, in the sense that the relationships (cf. (44))
+\begin{eqnarray}
+\begin{array}{lll}
+C_j^x=1+D_j^x h,        & C_j^y=D_j^y h, & C_k^x = 1+D_k^x h,\\
+C_k^y=\kappa + D_k^y h, & C_l^x=D_l^x h, & C_l^y=\kappa + D_l^y h,\\
+C_m^x=-1+D_m^x h,       & C_m^y=D_m^y h, & C_n^x =-1 + D_n^x h,\\
+C_n^y=-\kappa + D_n^y h,& C_p^x= D_p^x h,& C_p^y =-\kappa + D_p^y h
+\end{array}
+\end{eqnarray}
+are satisfied, where the constants $D_\nu^x,~D_\nu^y$ have the order of
+smallness $O(1)$ and do not depend on $h$. In this case the operator
+$\Lambda_1{\bf u}$ approximates the operator $L_1{\bf u}$ with the order
+$O(h)$:
+$$\Lambda_1{\bf u}=L_1{\bf u} + O(h).$$
+Substituting the formulas (46) into Eqs. (28), we can see that, for example,
+$$x_j^0=x_i^0 + h +D_j^xh^2.$$
+This means that the positions of the vertices of the triangular elements
+should differ by an amount $O(h^2)$ from their regular positions to ensure a
+local approximation.
+
+   From this investigation we can draw a conclusion that it is reasonable to
+perform a local mesh rezoning in the result of which the regions of large
+distortions of the triangular cells are replaced by the regions of "nearly
+regular cells".
+
+
+\section{Conclusions}
+\hspace{6mm}
+   The obtained results on the local approximation of the Johnson's method
+can be summarized as follows.
+
+ 1. There is no approximation in the case when the accelerations of the nodes
+are computed on the basis of four triangular elements surrounding a given
+node of the triangular mesh.
+
+  2. In the case of six elements and of the uniform triangular mesh, the
+approximation takes place only if the lumped mass in the given node is equal
+to two thirds of the sum of masses of the six elements having a common vertex
+at the given node. In this particular case, the Johnson's method has the
+second order of approximation in space.
+
+  3. In the case of irregular, distorted Lagrangian mass elements the
+Johnson's method has no approximation of the original elasticity equations also
+in the case of six triangular elements surrounding the given node of the mesh.
+
+  4. The first-order approximation in the case of six irregular elements takes
+place only in the case of small deviations of the shapes of the elements from
+their regular shapes.
+
+  5. It is reasonable to augment the Johnson's method by an algorithm for the
+local mesh rezoning in the subdomains of severe distortions of the Lagrangian
+mass elements to ensure the local approximation.
+
+   In concluding we wish to formulate the following problem: Is it possible to
+modify the Johnson's method in such a way that it possesses the local
+approximation also in the case of severe distortions of the triangular
+elements?
+
+   A possible way for the solution of this problem is to refuse the linear
+approximations (1), (2) inside the elements and to use the finite volume method
+and the Green's theorem for the approximation of the second derivatives
+$u_{xx},~u_{xy}$,$\ldots$, $v_{yy}$ as this was described, for example, in [16].
+
+\section*{Acknowledgments}
+\hspace{6mm}
+   We express our gratitude to Prof. V.M. Fomin, the director of the Institute
+of Theoretical and Applied Mechanics of the Siberian Division of the Russian
+Academy of Sciences, Novosibirsk, who has drawn our attention to the problem
+of the approximation study of the Johnson's method.
+
+\section*{References}
+\begin{description}
+\item[ 1.]
+M.L. Wilkins. Calculation of elastic-plastic flow. In: {\em Methods in
+Computational Physics}, Vol. 3 / Eds. B. Alder, S. Fernbach and M. Rotenberg.
+Academic Press, New York, 1964, p. 211-263.
+\item[ 2.]
+G.R. Johnson. Analysis of elastic-plastic impact involving severe
+distortions. {\em J. Appl. Mech.,} vol. 43, No. 3, Trans. ASME, Vol. 98,
+Series E, Sept. 1976, p. 439-444.
+\item[ 3.]
+G.R. Johnson. Liquid-solid impact calculations with triangular elements.
+{\em Trans. ASME}, ser. I, vol. 99, No. 3, p. 598-600 (1977).
+\item[ 4.]
+A.I. Gulidov. Organization of the computational process and the data
+structures at the numerical solution of problems of the mechanics of deformable
+media. {\em Modeling in Mechanics} (in Russian), 1991, vol. 5, No. 3, p. 127-141.
+\item[ 5.]
+V.V. Bashurov and S.K. Buruchenko. Modeling of high-velocity penetration in
+Lagrangian coordinates. {\em Mathematical Modeling} (in Russian), 1992, vol. 4,
+No. 9, p. 37-42.
+\item[ 6.]
+V.G. Ganzha, M.Yu. Shashkov and V.P. Shapeev. {\em Local approximation study
+of difference operators in symbolic form}. Preprint of the Keldysh Institute
+of Applied Mathematics of the USSR Academy of Sciences (in Russian), No. 79,
+Moscow, 1987, p. 1-12.
+\item[ 7.]
+V.G. Ganzha and M.Yu. Shashkov. Local approximation study
+of difference operators by means of REDUCE system. In: {\em ISSAC'90
+Proceedings} /Eds. S. Watanabe and M. Nagata. Addison-Wesley Publishing
+Company, Reading, 1990, p. 185-192.
+\item[ 8.]
+A.C. Hearn. {\em REDUCE 3.5, User's Manual}. Rand Corporation, Santa Monica,
+Cal., 1993.
+\item[ 9.]
+V.G. Ganzha, A.V. Solovyov, and M.Yu. Shashkov. A new algorithm for the
+symbolic computation of the analyses of local approximation of difference
+operators. In: {\em Advances in Computer Methods for Partial Differential
+Equations -- VII. Proceedings of the Seventh IMACS Internat. Conf. on Computer
+Methods for Partial Differential Equations, New Brunswick, New Jersey, USA,
+June 22-24, 1992.} / Eds. R.Vichnevetsky, D. Knight and G.Richter. IMACS
+Publ., New Brunswick, NJ 08903, 1992, p. 280-286.
+\item[10.]
+Y.I. Shokin. {\em The Method of Differential Approximation}. (Translated
+from the Russian by K.G. Roesner). Springer-Verlag, Berlin, Heidelberg,
+New York, 1983.
+\item[11.]
+Yu.I. Shokin and N.N. Yanenko. {\em The Method of Differential Approximation.
+Application to Gas Dynamics}. (in Russian). Nauka, Siberian Division,
+Novosibirsk, 1985.
+\item[12.]
+A.P. Boresi. {\em Elasticity in Engineering Mechanics}. Prentice-Hall, Inc.,
+Englewood Cliffs, N.J., 1965.
+\item[13.]
+B.L. Glushak, V.F. Kuropatenko, and S.A. Novikov. {\em Investigation of
+Materials Strength at Dynamic Loadings}. (in Russian). Nauka, Novosibirsk,
+1992.
+\item[14.]
+B.W. Char, K.O. Geddes, G.H. Gonnet, M.B. Monagan, and S.M. Watt. {\em Maple
+Reference Manual}, 5th Edition. Waterloo Maple Publishing, Waterloo, Ontario,
+Canada, 1990.
+\item[15.]
+P.J. Roache. {\em Computational Fluid Dynamics.} Hermosa, Albuquerque, NM,
+1976.
+\item[16.]
+C.A.J. Fletcher. {\em Computational Techniques for Fluid Dynamics 1.
+Fundamental and General Techniques.} Springer-Verlag, Berlin, Heidelberg,
+New York, 1988.
+\end{description}
+\end{document}

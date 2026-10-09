@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Optimization by QE and SDP</TITLE>
+<META NAME="description" CONTENT="Optimization by QE and SDP">
+<META NAME="keywords" CONTENT="anai">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="anai.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="anai.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html62"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html60"
+ HREF="anai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html54"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html63"
+ HREF="node6.html">Solving BMI by QE</A>
+<B> Up:</B> <A NAME="tex2html61"
+ HREF="anai.html">Solving LMI and BMI</A>
+<B> Previous:</B> <A NAME="tex2html55"
+ HREF="node4.html">Reducing SDP to QE</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00050000000000000000">
+Optimization by QE and SDP</A>
+</H1>
+
+<P>
+By Sylvester's criterion semidefinite constraints
+are reduced to a conjunction of inequalities and
+the SDP problems are reduced to 
+the ordinary nonlinear programming problems.
+
+<P>
+In [<A
+ HREF="node8.html#Wei96b">21</A>] Weispfenning showed that 
+the optimization problem, in particular linear programming problems, 
+can be solved successfully by using his highly improved QE algorithm. 
+We utilize his algorithm for a nonlinear programming problem derived 
+from the SDP problem as above. 
+This explains how we solve the SDP problems by using QE.
+
+<P>
+Here we show the brief sketch of his method
+to solve optimization problems given by a Boolean 
+system <IMG
+ WIDTH="70" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.gif"
+ ALT="$\psi(X,U)$">
+consisting of 
+equations and inequalities and an objective function <I>h</I>(<I>X</I>,<I>U</I>); 
+First introduce a new indeterminate <I>z</I> assigned to the object function <I>h</I>.
+Consider the new Boolean system 
+
+<!-- MATH: $\psi' = \psi \ \land ( z - h \geq 0 ).$ -->
+<IMG
+ WIDTH="180" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.gif"
+ ALT="$\psi' = \psi \ \land ( z - h \geq 0 ).$">Then the problem minimizing <I>h</I> subject to <IMG
+ WIDTH="70" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.gif"
+ ALT="$\psi(X,U)$">
+is formulated as first-order formula 
+
+<!-- MATH: $\varphi = \ ^\exists x_1 \cdots  \ ^\exists x_n ( \psi' )$ -->
+<IMG
+ WIDTH="168" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.gif"
+ ALT="$\varphi = \ ^\exists x_1 \cdots \ ^\exists x_n ( \psi' )$">.
+Next eliminate all quantified variables 
+<!-- MATH: $x_1,\cdots,x_n$ -->
+<IMG
+ WIDTH="84" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.gif"
+ ALT="$x_1,\cdots,x_n$">to have the resulting qf formula 
+<IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.gif"
+ ALT="$\varphi'$">
+in <I>z</I> and <I>U</I>.
+After that we specialize parameters <I>U</I> of <IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.gif"
+ ALT="$\varphi'$">
+by an appropriate real values, 
+then <IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.gif"
+ ALT="$\varphi'$">
+gives a finite union <I>M</I> of intervals for <I>z</I>,
+which shows a possible range of <I>z</I>.
+If <I>M</I> is empty, <IMG
+ WIDTH="18" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$\psi$">
+is unsolvable (<EM>i.e.</EM> infeasible);
+if <I>M</I> is unbounded from below, <I>h</I> has no minimum w.r.t. <IMG
+ WIDTH="18" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$\psi$">;
+if <IMG
+ WIDTH="63" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$m \in M$">
+is a lowest endpoint of <I>M</I>, then <I>m</I> is the  minimum value
+of <I>z</I> w.r.t. <IMG
+ WIDTH="18" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$\psi$">
+(for details [<A
+ HREF="node8.html#Wei96b">21</A>]).
+As for the coordinates of a minimum point for <I>z</I> can be obtained 
+by <EM>back-substitution</EM> from the test terms used during the elimination 
+if we use test term approach (see [<A
+ HREF="node8.html#Wei96b">21</A>]).
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html62"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html60"
+ HREF="anai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html54"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html63"
+ HREF="node6.html">Solving BMI by QE</A>
+<B> Up:</B> <A NAME="tex2html61"
+ HREF="anai.html">Solving LMI and BMI</A>
+<B> Previous:</B> <A NAME="tex2html55"
+ HREF="node4.html">Reducing SDP to QE</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

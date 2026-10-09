@@ -1,0 +1,17 @@
+"Invariants of ordinary differential equations"
+
+Matthias Berth (University Greifswald, Germany).
+
+
+
+Abstract: 
+
+We describe the method of Sophus Lie for computing invariants of ODEs
+and its implementation using Computer Algebra. Invariants of second
+order ODEs have been computed by A. Tresse in a paper from 1896. These
+give criteria for determining the type (canonical form) of the symmetry
+algebra. For ODEs with free parameters, one can characterize special
+cases for which a richer symmetry structure may exist. 
+We discuss more specialized settings, i.e. a special class of ODEs 
+with a suitably chosen pseudo group of transformations. 
+

@@ -1,0 +1,19 @@
+Miguel de Guzman* (Spain), mdeguzman@bitmailer.net
+Discovery Experiences in Synthetic Geometry with DERIVE
+
+The capabilities of DERIVE for combining its graphical with its analytical
+tools in dealing with the exploration of certain traditional and less
+traditional problems of synthetic geometry have not been used as much as they
+deserve, in the author's opinion. DERIVE as a geometrical tool presents certain
+advantages over more familiar programs dealing with geometrical constructions,
+although of course it is not designed to be such an interactive instrument in
+the teaching of geometry like CABRI or GEOMETER SKETCHPAD. In this presentation
+several experiences are described on how DERIVE has helped the author to
+conjecture, and sometimes to prove, some new facts connected with such objects
+as the Wallace-Simson line, Jakob Steiner's deltoid, Morley's triangle,... The
+way one can proceed is to define certain DERIVE functions that allow one to
+graphically experiment in concrete cases and then one can use DERIVE's
+analytical capabilities in order to prove the conjectures one makes by
+exploring the figures one has obtained. This path has led for example to an
+interesting extension of the Wallace-Simson theorem which is going to be
+published in the American Mathematical Monthly (June-July, 1999).

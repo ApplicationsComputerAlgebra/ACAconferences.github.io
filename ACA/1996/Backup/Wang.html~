@@ -1,0 +1,135 @@
+<P>
+<HEAD>
+<TITLE>Polynomial Elimination</TITLE>
+
+</HEAD>
+<BODY><P>
+
+<H1 align="center">Polynomial Elimination </H1>
+
+<P><H3><b>Organizer</H3></b>
+<P>
+<P><A HREF = "http://cosmos.imag.fr/ATINF/Dongming.Wang">Dongming Wang</A> 
+(<a href="mailto:wang@leibniz.imag.fr">wang@leibniz.imag.fr</a>)
+<P>
+<P><P><H3><b>Description</H3></b>
+<P>
+<P>This special session focuses on applying classical and modern 
+elimination algorithms and tools to problems in various 
+domains of science, engineering and industry. Some already successful 
+applications (for example, in mathematical computation, geometric 
+reasoning/modeling/design, system/control theory, computer 
+vision/robotics and neural networks) will be surveyed and reported, 
+and still un-attackable problems are to be identified for further research 
+and as challenge to future improvement and development of elimination 
+algorithms and their implementation.
+<P>
+<P><H3><b>Talks</H3></b>
+Date: July 19th (Friday)
+
+<dl>
+  <dt> 08:30-09:00
+  <dd>
+      <A HREF="http:../participants.html#Miller">J. Lyn Miller</A><br>
+      <b>Algorithms for Extending Gr&#246;bner Bases to Subalgebras and 
+      Their Ideals</b><BR>
+      <a href="Wang/Miller.html"><em>Abstract</em></a>
+
+  <dt> 09:00-09:30
+  <dd> 
+      <A HREF="http:../participants.html#Pauer">Franz Pauer</A>,
+      <A HREF="http:../participants.html#Unterkircher">Andreas Unterkircher</A><br>
+      <b>Gr&#246;bner Bases for Ideals in Monomial Algebras and Their Application 
+      to Systems of Difference Equations</b><BR>
+      <a href="Wang/Pauer.ps"><em>Abstract</em></a>
+
+  <dt> 09:30-10:00
+  <dd>
+      <A HREF="http:../participants.html#Yang">Lu Yang</A>,
+      <A HREF="http:../participants.html#Hou">Xiao-Rong Hou</A>,
+      <A HREF="http:../participants.html#Zeng">Zhen-Bing Zeng</A><br>
+      <b>A Complete Discrimination System for Polynomials</b><BR>
+      <a href="Wang/Yang.html"><em>Abstract</em></a>
+      
+  <dt> 10:30-11:00
+  <dd> 
+      <A HREF="http:../participants.html#Noro">Masayuki Noro</A>,
+      <A HREF="http:../participants.html#Yokoyama"> Kazuhiro Yokoyama</A><br>
+      <b> An Efficient Method to Compute the Univariate Rational Representation
+      for Zero-dimensional Systems</b><BR>
+      <a href="Wang/Noro.html"><em>Abstract</em></a>
+      
+  <dt> 11:00-11:30 
+  <dd>
+      <A HREF="http:../participants.html#Saccomani">Maria  Pia  Saccomani</A>,
+      <A HREF="http:../participants.html#Audoly">Stefania  Audoly</A>,
+      <A HREF="http:../participants.html#Cobelli">Claudio Cobelli</A>,
+      <A HREF="http:../participants.html#Dangio">Leontina D'angi&ograve;</A><br>
+      <b>The Buchberger Algorithm to Study the a Priori Identifiability
+      of Biological Systems Models</b><BR>
+      <a href="Wang/Saccomani.html"><em>Abstract</em></a>
+
+  <dt> 11:30-12:00
+  <dd> 
+      <A HREF="http:../participants.html#Faugere">Jean-Charles Faug&#232;re</A>,
+      <A HREF="http:../participants.html#Moreau">Fran&#231;ois Moreau de Saint-Martin</A>,
+     <A HREF="http:../participants.html#Rouillier">Fabrice Rouillier</A><br>
+      <b>Design of Nonseparable Bidimensional Wavelets and Filter
+      Banks Using Gr&#246;bner Bases Techniques</b><BR>
+      <a href="Wang/Faugere.ps"><em>Abstract</em></a>
+</dl>
+
+      <hr>
+<dl>
+  
+  <dt> 14:00-14:30
+  <dd>
+     <A HREF="http:../participants.html#Carra">Giuseppa Carr&agrave; Ferro</A><br>
+      <b>Ritt's Algorithm and Differential Resultants of Two Algebraic
+      ODE's</b><BR>
+      <a href="Wang/Carra.ps"><em>Abstract</em></a>
+      
+
+  <dt> 14:30-15:00
+  <dd>
+      <A HREF="http:../participants.html#Wang ">Dongming Wang </A><br>
+      <b>A Polynomial System from Differential Equations</b><BR>
+      <a href="Wang/Wang.html"><em>Abstract</em></a>
+	  
+  <dt> 15:00-15:30 
+  <dd>
+      <A HREF="http:../participants.html#Gatermann">Karin Gatermann</A><br>
+      <b>Symmetry: A Package for Computation with Invariants and 
+      Equivariants</b><BR>
+      <a href="Wang/Gatermann.html"><em>Abstract</em></a>
+	  
+  <dt> ??:??-??:??
+  <dd>
+      <A HREF="http:../participants.html#Stetter">Hans J. Stetter</A><br>
+      <b>Computer Algebra with Data of Limited Accuracy</b><BR>
+      <a href="Wang/Stetter.html"><em>Abstract</em></a>
+	  
+
+</dl>
+
+<P><IMG SRC="../line-risc.gif" ALIGN=middle
+        ALT="________________________________________________________"><P>
+
+<A HREF=
+   "../program-plan.html">
+<IMG SRC="../up-button.gif" ALT="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<IMG ALT="RISC", SRC="../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<IMG ALT="SWP", SRC="../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<IMG ALT="Linz", SRC="../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<IMG ALT="Austria", SRC="../austria-button.gif">
+</A>
+</BODY>
+</HTML>

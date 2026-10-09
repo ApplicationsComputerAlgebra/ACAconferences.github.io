@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Building abelian groups and commutative rings into first-order theorem proving
+</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Stuber">J&uuml;rgen Stuber</A><br>
+</h3>
+
+Date: July 17th (Wednesday)<br>
+Time: ??.??<br>
+
+<center>
+Abstract
+</center>
+
+For many theories from algebra there exist convergent term
+rewriting systems, possibly modulo some equational theory.
+We present a technique to build such a theory into
+ordering-restricted first-order clausal theorem proving.
+In this way one obtains a refutationally complete
+inference system which creates a smaller search space
+than by directly applying a more general prover
+to the axioms of the theory.
+
+<p>
+Specifically, on the ground level
+equational literals are simplified, until
+they are in a <em>sufficiently simplified</em> form.
+For each of these forms one derives a <em>symmetrization</em>,
+that is a set of rules such that critical pairs with the
+theory converge.
+One then considers overlaps between symmetrizations.
+Since their structure is know, one can exploit this by showing
+that only a few critical pairs need to be tested
+to obtain convergence.
+
+<p>
+To lift this to the non-ground level,
+each step of the simplification becomes an inference.
+These are either carefully controlled superpositions
+with theory axioms or derived inferences like cancellation.
+Then, for inferences between sufficiently simplified non-theory clauses,
+one distinguished between overlaps of two extended rules
+and overlaps where at least one rule is not extended.
+The former correspond to the critical pairs obtained above;
+the latter are similar to superposition inferences,
+except that they take the extended rules in the symmetrization
+into account.
+
+<p>
+The technique is quite general, but it seems most useful
+for theories which have abelian groups as a subtheory.
+In that case a single term of a sum can be isolated on the
+left-hand side.  The inference systems obtained are extensions
+of the corresponding Gr&ouml;bner base algorithms.
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Buchberger.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

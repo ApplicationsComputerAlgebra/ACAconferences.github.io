@@ -1,0 +1,17 @@
+A Comparison of Various Methods for Computing Bounds for Positive Roots of
+Polynomials
+
+Alkiviadis G. Akritas and Panagiotis S. Vigklas
+Department of Computer and Communication Engineering
+University of Thessaly
+Volos, Greece
+
+The recent interest in isolating real roots of polynomials with continued
+fractions, has revived interest in computing bounds for _positive_ roots of
+polynomials.  Computing such bounds is totally missing in mathematical
+education, where emphasis is given on computing bounds on the _absolute_
+values of the roots of polynomials.
+
+In this paper we examine the methods of Cauchy, Lagrange and Stefanescu for
+computing bounds for _positive_ roots of polynomials and compare their 
+performance on various classes of polynomials.  

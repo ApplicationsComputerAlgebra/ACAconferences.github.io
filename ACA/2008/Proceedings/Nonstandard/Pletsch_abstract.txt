@@ -1,0 +1,18 @@
+Counting Double Cosets Using Maple
+
+Bill Pletsch
+Central New Mexico Community College
+Albuquerque, New Mexico, USA
+
+Unlike the coset, the double coset is poorly behaved.  Counting the number of
+double cosets a subgroup generates in a group can be difficult.  At ACA2007, it
+was shown how the number of Young double cosets in an overall symmetric group
+can be counted using the enumeration theory of George Polya.  While doing so
+some interesting patterns were demonstrated, but not proved.  This year these
+patterns will be proved.
+
+To do so first a canonical form is defined.  Maple is induced to generate a
+transversal of the double cosets in the canonical form.  Some set mappings are
+defined and used in Maple in a manner analogous to the method of subtraction
+used on ordinary data sets.  Sets are subtracted instead of numbers.  A final
+induction on the remaining sets finishes the proof.

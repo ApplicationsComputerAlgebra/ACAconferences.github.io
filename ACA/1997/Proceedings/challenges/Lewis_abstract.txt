@@ -1,0 +1,29 @@
+----------------------------------------------------------------------------
+                    Grand Challenges in Computer Algebra
+----------------------------------------------------------------------------
+
+               The Six-Line Problem and Polynomial Resultants*
+
+     The "Six-Line Problem" arises in the automated analysis of images. A
+     three-dimensional object is photographed and from the photographs (or
+     other means) a set of geometric invariants are obtained by techniques
+     of algebraic geometry. These three-dimensional invariants represent six
+     lines abstracted from the object. Suppose that later an object is
+     encountered and a photograph taken. The problem is to decide if this is
+     the same object as before. From the flat photograph, two-dimensional
+     invariants may be obtained.
+
+     The relationship between the three- and two-dimensional invariants may
+     be expressed as a set of polynomial equations. The photographed object
+     is the right one if the set of equations has a solution. One well known
+     method to solve such sets of equations is with resultants. The number
+     of variables and the size of the matrix seemed overwhelming until
+     recently. This talk will describe how the solution was obtained using
+     the Dixon-Kapur-Saxena-Yang resultant.
+
+     Robert H. Lewis
+     Department of Mathematics
+     Fordham University
+     rlewis@murray.fordham.edu
+
+     *Research supported by the Office of Naval Research.

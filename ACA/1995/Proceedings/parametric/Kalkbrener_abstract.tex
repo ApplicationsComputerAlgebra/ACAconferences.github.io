@@ -1,0 +1,64 @@
+\documentstyle [11pt]{article}
+\textheight 200mm
+\title{Implicitization by Gr\"obner basis conversion}
+\author{Michael Kalkbrener\\Department of Mathematics\\
+Swiss Federal Institute of 
+Technology\\
+CH-8092 Zurich, Switzerland \\
+mkalk@math.ethz.ch}
+
+
+
+\date{} 
+\pagestyle{empty}
+
+
+
+\begin{document}
+\maketitle
+
+\centerline{\bf Abstract}
+
+\medskip
+The problem of converting parametrically defined varieties into 
+their implicit form is of great importance in geometric modeling.
+It essentially is an elimination problem and therefore 
+techniques like resultants, Gr\"obner bases or characteristic sets
+can be applied.
+Gr\"obner bases have the important 
+advantage that
+they can be used for solving the implicitization problem in full 
+generality. On the other hand elimination by means of Buchberger's 
+Gr\"obner bases algorithm is often very time-consuming.
+
+In this talk we present an alternative approach: 
+implicitization by Gr\"ob\-ner basis conversion.
+The idea underlying Gr\"obner basis
+conversion is the following. It is well-known that the computing
+time of a Gr\"obner basis computation 
+heavily depends on the chosen order. Instead of computing 
+a Gr\"obner basis $G_1$
+with respect to a ``slow'' order directly
+we could compute a Gr\"obner basis $G_2$
+with respect to a ``fast'' order first and then convert $G_2$ to $G_1$.
+If the conversion can be done efficiently this method will be faster than
+the direct approach. 
+
+We present three conversion algorithms. 
+The FGLM-algorithm solves the conversion problem by linear algebra techniques.
+In the Gr\"obner walk algorithm the conversion is done in several 
+steps following a
+path in the Gr\"obner fan of the given ideal. The third algorithm uses the
+knowledge of the
+Hilbert-Poincar\'e series of an ideal $I$ to speed up Gr\"obner bases 
+computations for $I$.
+
+Gr\"obner basis conversion is well applicable to the implicitization
+problem since the parametric equations form ``almost'' a Gr\"obner basis.
+We investigate how these three conversion 
+algorithms can be applied.
+\vspace{2 mm}
+\newline
+{\bf keywords:} rational parametric varieties, implicitization, Gr\"obner 
+basis, basis conversion.
+\end{document}

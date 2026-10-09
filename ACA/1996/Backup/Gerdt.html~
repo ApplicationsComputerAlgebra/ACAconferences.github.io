@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+<TITLE>Formal Analysis of PDEs</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Formal Analysis of PDEs</H1>
+
+<h3>Organizer</h3>
+<p>
+Vladimir P. Gerdt 
+(<a href="mailto:gerdt@jinr.dubna.su">gerdt@jinr.dubna.su</a>)<br>
+Laboratory of Computing Techniques and Automation<br>
+Joint Institute for Nuclear Research<br>
+141980 Dubna<br>
+RUSSIA<br>
+Tel: (7-09621) 63437 <br>
+Fax: (7-09621) 65145
+<p>
+
+<h3>Description</h3>
+<p>
+The session is to be devoted to the algorithmic and applied
+aspects of analysis of algebraic PDEs, based on their transformation 
+into the special forms which are called in the literature as formal 
+integrable, passive, involutive or standard. Such forms are much like 
+to a Groebner basis and allow one to extract an important information 
+on the equation system without its explicit integration. This
+information includes, in particular, compatibility analysis, finding
+dimension of the solution space, formulation of the initial conditions
+providing uniqueness and holomorphy of solution. Recently a number of 
+different algorithmic techniques were designed and some of them have 
+been implemented in computer algebra systems Axiom, Maple and Reduce. 
+Over the session one expects presentation of some algorithmic approaches
+and their discussion in view of differential algebra, interconnection of 
+the above special forms of PDEs with differential Groebner bases and 
+characteristic sets, application to real problems of theoretical and
+mathematical physics, applied mathematics. One of the most important 
+applications is Lie symmetry analysis of nonlinear differential equations 
+which is the most universal tool of their integration.
+
+
+
+<p>
+
+<h3>Talks</h3>
+
+<dl>
+  <dt> ??:??
+  <dd>
+      <A HREF="http:../participants.html#Meleshko">S.V. Meleshko</A>,
+      <A HREF="http:../participants.html#Shapeev">V.P. Shapeev.</A><br>
+      <b>The Application of a System REDUCE for the
+      Construction of the
+      Solutions of Gas Dynamics Equations by the Method of differential
+      Constraints.</b><br>
+      <a href="Gerdt/Meleshko.html"><em>Abstract</em></a>
+
+  <dt> ??:??
+  <dd> 
+      <A HREF="http:../participants.html#Boulier">Fran&#231;ois Boulier</A><br>
+      <b>Some improvements of a lemma of Rosenfeld.</b><br>
+      <a href="Gerdt/Boulier.html"><em>Abstract</em></a>
+
+  <dt> ??:??
+  <dd>
+      <A HREF="http:../participants.html#Gerdt">Vladimir P. Gerdt</A>,
+      <A HREF="http:../participants.html#Blinkov">Yuri A. Blinkov</A><br>
+      <b>Minimal Involutive Bases</b><br>
+      <a href="Gerdt/Gerdt.html"><em>Abstract</em></a>
+
+  <dt> ??:??
+  <dd> 
+      <A HREF="http:../participants.html#Seiler">Werner M. Seiler</A><br>
+      <b>Involutive systems and the numerical analysis of constrained
+	Hamiltonian Systems</b><br>
+      <a href="Gerdt/Seiler.html"><em>Abstract</em></a>
+
+  <dt> ??:??
+  <dd> 
+      <A HREF="http:../participants.html#Carra">
+      Giuseppa Carr&agrave; Ferro</A><br>
+      <b> Triangular Matrices, Differential Resultants and Systems of Linear 
+      Homogeneous PDE's</b><br>
+      <a href="Gerdt/Carra.ps"><em>Abstract</em></a>
+
+  <dt> ??:??
+  <dd> 
+      <A HREF="http:../participants.html#Morrison">
+      Sally D. Morrison</A><br>
+      <b>A Generalization of Rosenfeld's Lemma.</b><br>
+      <a href="Gerdt/Morrison.html"><em>Abstract</em></a>
+
+  <dt> ??:??
+  <dd>
+      <A HREF="http:../participants.html#Reid">
+      Gregory J. Reid</A><br>
+      <b>The rif and radical rif algorithms.</b><br>
+      <a href="Gerdt/Reid.html"><em>Abstract</em></a>
+
+</dl>
+
+<P><img src="../line-risc.gif" align=middle alt="________________________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/program-plan.html"><img src="../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

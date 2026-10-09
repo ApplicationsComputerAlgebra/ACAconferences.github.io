@@ -1,0 +1,111 @@
+
+     		   T H I R D        C I R C U L A R
+
+		       I M A C S - A C A ' 9 8
+
+	      The Fourth International IMACS Conference
+		 on Applications of Computer Algebra
+
+(IMACS = International Association for Mathematics and Computers in Simulation)
+----------------------------------------------------------------------------
+August 9-11, 1998, Czech Technical University
+Hotel Krystal, Prague, Czech Republic
+----------------------------------------------------------------------------
+Just before ISSAC'98, August 13-15, Rostock, Germany
+----------------------------------------------------------------------------
+
+Registration:
+
+   Registration will be on Saturday August 8 from 7:00 pm to 9:00 pm, 
+   on Sunday August 9 from 8:00 am and then during the whole conference. 
+   The conference starts on Sunday August 9 at 8:30 am by Welcome session.
+   
+   If possible please register on Saturday, we have many participants.
+      
+
+On site payments:
+
+   On site payments will be accepted in Czech Crowns (Kc) in the actual
+   exchange rate offered by the hotel Krystal and will be rounded to
+   multiples of 50 Kc. Here are the on site fees at todays rate:
+				  USD      Kc
+	  IMACS member           $150     4,200
+	  IMACS non-member       $170     4,750
+	  student                $120     3,350
+	  party                  $20        550
+   Receipts will be issued in $(USD).
+      
+
+Cancellations:
+
+   If you need to cancell registration, hotel reservation or your talk,
+   please send a note to
+	   aca98@siduri.fjfi.cvut.cz
+   as soon as possible. 
+      
+
+Program:
+
+   Conference program including scheduling of talks is available at
+      http://www-troja.fjfi.cvut.cz/aca98/program/index.html
+   Every participant will obtain a hard copy of final program.
+
+
+Emergency numbers before the conference:
+
+  Phone: +420-2-2191 2272
+         +420-2-2191 2287
+  Fax:   +420-2- 688 4818
+
+
+Hotel Krystal numbers:
+
+  Phone: +420-2-316 2761
+  Fax:   +420-2-316 4215
+
+
+General Chair:
+
+	Richard Liska (liska@siduri.fjfi.cvut.cz)
+
+Program Chairs:
+
+	Victor Edneral (edneral@theory.npi.msu.su),
+	Wolfgang Kuchlin (kuechlin@informatik.uni-tuebingen.de)
+
+Organizing Committee:
+
+	Stanly Steinberg (stanly@math.unm.edu),
+	Michael Wester (wester@math.unm.edu)
+
+Local Arrangements:
+
+	Jiri Limpouch (limpouch@lilit.fjfi.cvut.cz),
+	Milan Sinor(sinor@antu.fjfi.cvut.cz),
+        Petr Kapusta (kapusta@dec1.fjfi.cvut.cz),
+	Faculty of Nuclear Sciences and Physical Engineering,
+	Czech Technical University
+
+Sponsors:
+
+   	Ministry of Education of Czech Republic
+   	Czech Technical University
+   	Faculty of Nuclear Sciences and Physical Engineering 
+   	Texas Instruments Inc.
+
+
+More Information:
+
+  For more information see
+        http://www-troja.fjfi.cvut.cz/aca98
+  or US mirror
+        http://math.unm.edu/ACA/1998/index.html
+  or send e-mail to
+        aca98@siduri.fjfi.cvut.cz
+  however PLEASE try to find it on the conference web page first.
+
+
+This conference is supported by The Ministry of Education of Czech
+Republic (Project PG 98213).
+
+

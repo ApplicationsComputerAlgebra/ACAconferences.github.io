@@ -1,0 +1,15 @@
+Investigating Complex Data and Dynamics via Computer Algebra
+
+Andrew Toon
+SIM University (Singapore)
+andrewtoon@unisim.edu.sg
+
+Computer algebra allows students to import and manipulate complex data sets
+that can give an early exposure the cutting edge research.  In particular, we
+show that data of complex real proteins (the Protein Data Bank) can be imported
+into computer algebra systems allowing students to investigate an array of
+issues from statistics, correlations, model testing to the differential
+equations of complex dynamics.
+
+Keywords
+Data sets, proteins, statistics, differential equations, animation

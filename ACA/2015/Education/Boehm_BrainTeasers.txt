@@ -1,0 +1,18 @@
+Solving Brain Teasers/Twisters - CAS Assisted
+
+Josef Bohm, Austria
+
+Most of brain teasers can be faced using Mathematical Logic procedures.
+Therefore, using a CAS, which handles with Logic expressions, may help solving
+this kind of problems.  The German weekly newspaper Die Zeit offers every week
+another brain teaser.  Just for fun I tried to solve one or the other problem
+assisted by CAS.  I will apply equations, Boolean expressions and other tools
+in order to solve the problems.  It is a special challenge to produce own brain
+teasers.
+
+The focus will not be directed on programming skills but on the mathematization
+process of the problems.
+
+The software chosen for the presentation is my old and good friend DERIVE.  I
+will also use TI-NspireCAS but the procedures presented can be transferred to
+all other CAS, of course.

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Computing Gr&#246;bner bases numerically: some experiments </TITLE>
+<META NAME="description" CONTENT="Computing Gr&#246;bner bases numerically: some experiments ">
+<META NAME="keywords" CONTENT="traverso">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="traverso.css">
+</HEAD>
+<BODY >
+<H1 ALIGN="CENTER">Computing Gr&#246;bner bases numerically:
+<BR>
+some
+  experiments </H1>
+<P ALIGN="CENTER"><STRONG>Cinzia Bonini, Klaus-Peter Nischke, Carlo Traverso<A NAME="tex2html1"
+ HREF="footnode.html#foot14"><SUP>1</SUP></A>
+  <BR>
+Dipartimento di Matematica,
+  Via Buonarroti 2, I-56123 PISA
+<BR>
+e-mail:<TT>{bonini,nischke,traverso}@posso.dm.unipi.it </TT></STRONG></P>
+<P ALIGN="CENTER"></P>
+<P ALIGN="LEFT"></P>
+
+<P>
+The paper reports some ideas and an implementation for the computation
+of a Gr&#246;bner basis using floats from either exact or inexact
+data. In this implementation we use <EM>hybrid coefficients</EM>, i.e. coefficients composed of a float (a bigfloat) and an integer mod <I>p</I>.
+
+<P>
+The main parts of the paper are the following:
+
+<P>
+<UL>
+<LI>outline of previous and current research in this domain;
+<LI>description of the hybrid arithmetic and its implementation;
+<LI>use of numerical strategies in Buchberger algorithm for exact
+  input, a variant modeled over the lazy tangent cone algorithm;
+<LI>inexact input, the complete intersection case;
+<LI>inexact input, the over-determined case;
+<LI>alternatives to hybrid computation: intervals, guard bits;
+<LI>experiments.
+</UL>
+<P>
+The aim of this research is manifold:
+<UL>
+<LI>To challenge the assertion that the numerical computation is
+  unsuited for Buchberger algorithm;
+<LI>To investigate numerical strategies in the Buchberger algorithm;
+<LI>To have indications on the feasibility of a purely numerical
+  Buchberger algorithm.
+</UL>
+<P>
+The hybrid arithmetic and some numerical pivoting strategies have been
+implemented in the FRISCO polynomial system solving C++ library and
+framework. We report the results of some preliminary experiments, and
+of some planned improvements to the implementation that will speed-up
+the computation.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../index.html> IMACS ACA'98</A>
+</ADDRESS>
+</BODY>
+</HTML>

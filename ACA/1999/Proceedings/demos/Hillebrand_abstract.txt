@@ -1,0 +1,13 @@
+Title: MuPAD - An Open Computer Algebra System and its Approach of
+         Software Integration
+Authors: Ralf Hillebrand, Frank Postel
+
+The talk gives a brief introduction to the general purpose Computer Algebra
+System MuPAD and its concepts of domains and using library packages and the
+technology of dynamic modules for flexible and efficient software integration
+in MuPAD.  With dynamic modules, simple C or C++ functions as well as complete
+software packages can be linked into MuPAD.  This is a very flexible and
+efficient alternative to interprocess communication for many applications.  We
+present some examples: integrating C/C++ code for numerical calculations
+(Singular), using MP / Singular for polynomial computations and using PVM for
+distributed computations (macro parallelism).

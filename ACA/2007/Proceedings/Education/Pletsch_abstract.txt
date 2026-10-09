@@ -1,0 +1,32 @@
+CAS and the Instruction of Mathematics: Where are we Today? - A Forum
+
+Moderator: Bill Pletsch
+           Central New Mexico Community College, Albuquerque, New Mexico, USA
+
+Forum Participants: Alkiviadis G. Akritas, Michel Beaudin, Robert H. Lewis,
+                    Eugenio Roanes-Lozano
+
+From Dr. Michael Wester's book Computer Algebra Systems, A Practical Guide in
+the chapter 'Computer Algebra in Mathematics Education', is taken the excerpt:
+
+The well constructed computer algebra system is a form of art.  They can add to
+the beauty of mathematics and mathematics instruction.  Computer algebra may
+indeed be a work of art, but it is not always the educational tool we would
+like it to be.  The fact is computer algebra has not yet lived up to its
+promise in the field of mathematics education.
+
+These words, though written in 1999, ring true to this very day.  Why?
+
+The fact is there is some evidence the advances up to 1999 are being rolled
+back.  Things seem to be almost in retrograde.  The forces of reaction are
+reversing what few advances were made.
+
+And yet surely this perception will eventually be proven wrong.  Surely the
+sheer forces unleashed by the leap in problem solving capability will force the
+issue forever in favor of computer algebra.
+
+A number of questions will be constructed with their design intended to shed
+light on these perplexing issues.  The panel of experts will be asked to
+respond, ask questions of their own, and take questions from the audience.  The
+forum will be directed so as to maximize the flow of discussion and ensure a
+lively debate.

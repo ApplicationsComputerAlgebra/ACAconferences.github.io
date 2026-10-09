@@ -1,0 +1,162 @@
+=============================================================================
+
+		   SECOND ANNOUNCEMENT AND CALL FOR PAPERS
+
+				   ISSAC'95
+
+	International Symposium on Symbolic and Algebraic Computation
+
+       10-12 July 1995, Concordia University, Montreal Quebec, Canada
+
+		    Sponsored by ACM Sigsam and ACM Signum
+
+ISSAC'95
+provides an opportunity to learn of new developments and to present original
+research results in all areas of symbolic mathematical computation.  Topics of
+the meeting include, but are not limited to,
+
+Algorithmic mathematics:
+Algebraic, symbolic, and symbolic-numeric algorithms in all areas of
+mathematics;
+
+Computer science:
+Theoretical and practical questions in symbolic mathematical computation,
+including computer algebra systems and problem solving environments,
+programming languages and libraries for symbolic computation, user interfaces,
+data structures, parallel computing, software architectures, concrete analysis
+and benchmarking, artificial intelligence techniques, automatic
+differentiation, and code generation;
+
+Applications:
+Problem treatments incorporating algebraic, symbolic or symbolic-numeric
+computation in an essential or novel way, including engineering, economics and
+finance, physical and biological sciences, computer science, logic,
+mathematics, statistics, and use in education.
+
+
+The symposium will be held on the campus of Concordia University.
+Accomodations will be available at nearby hotels. A limited number of low-cost
+university rooms will also be available.  The planned activities include
+invited presentations, original research papers, tutorial courses, vendor
+exhibits and software demonstrations.  Proceedings will be distributed at the
+symposium.
+
+Proposals for workshops, tutorial courses, demonstrations, panel discussions
+or related activities are welcomed.  User-groups, editorial boards or other
+associations desiring meeting space during the course of the symposium are
+encouraged to contact the conference organizers.
+
+Instructions to Authors:
+ISSAC'95 is foremost a conference for new and topical ideas of significance to
+the community and which deserve to be disseminated rapidly.  Research results
+and insightful analyses of current concerns are the primary focus.  Papers
+will be reviewed by a program committee and additional referees.
+
+Survey articles may be suitable for submission, if clearly identified as such,
+and will be considered in a separate category from the research papers.
+
+Papers may be submitted either electronically or by mail.  In either case,
+papers must be __received__ no later than
+			  Saturday January 14, 1995.
+Please state the contact author's name, address and telephone number, as well
+as fax and E-mail if available.  The authors may submit additional background
+reference material that is not widely available.
+
+
+Authors should aim for papers not exceeding 8 pages in the standard format for
+ACM proceedings.  This corresponds roughly to 20-24 pages of text in LaTeX
+12pt article style.  All papers must be written in English.
+
+Electronic submission must be either as a LaTeX file (preferred) or as a
+PostScript file.  Papers should be sent by E-mail with less than 80 characters
+per line to the Internet address
+			     issac95@dm.unipi.it
+
+Articles submitted by regular mail should be in 12 point font, and should be
+addressed either to the Program Chair or Vice-Chair; six copies of the
+submission, together with fifteen copies of a one-page abstract, should be
+enclosed.  Authors whose access to reproduction facilities is severely limited
+may submit a single copy of their paper.  Simultaneous submission for
+publication elsewhere is not allowed.
+
+Notification of acceptance or rejection will be sent by March 19, 1995.
+Camera-ready copies of the final papers must be received by April 16, 1995.
+Authors of accepted papers are expected to present their work at the
+symposium and will be required to sign the ACM copyright agreement.
+Some papers may be accepted for poster-session presentation; these will not
+appear in the proceedings.
+
+
+			      Program Committee:
+
+ Christian Bischof           Argonne National Lab, USA
+ Manuel    Bronstein         ETH Zuerich, Switzerland
+ Kevin     Broughan          University of Waikato, New Zealand
+ Richard   Fateman           University of California, Berkeley, USA 
+ Peter     Fritzson          Linkoeping Universitet, Sweden
+ Hoon      Hong              RISC-Linz, Austria
+ Franc,ois Ollivier          E'cole Polytechnique Palaiseau, France
+ Tomas     Recio             Universidad de Cantabria, Spain
+ Carlo     Traverso          Universita di Pisa, Italy 
+ Stephen   Vavasis           Cornell University, USA 
+ David     Withoff           Wolfram Research Inc, USA
+
+Other members pending confirmation.
+
+Further information:
+A document with more complete information on the conference and full
+instructions for authors is available. It can be obtained automatically by
+sending an E-mail message to the address
+			   issac-info@dm.unipi.it
+or by anonymous ftp as /pub/issac/info at \verb+ftp.dm.unipi.it+.
+
+Alternates in North America are e-mail at issac-info@ccs.neu.edu,
+or anonymous ftp as /pub/sigsam/issac95/author-info at ftp.ccs.neu.edu.
+
+The document includes the exact format and the \LaTeX\ style for the
+proceedings.  For a printed copy of this document, or information on other
+matters, please contact one of the organizers listed below.
+
+  General Chair
+  Stephen Watt
+  IBM T.J. Watson Research Center / P.O. Box 218
+   Yorktown Heights, NY 10598 USA
+  issac95@watson.ibm.com
+
+  Program Committee Chair
+  Carlo Traverso
+  Dipartimento di Matematica / U. Pisa / via Buonarroti 2 / I-56123 Pisa, Italy
+  issac95@dm.unipi.it
+
+  Program Committee Vice-Chair
+  Richard Fateman
+  CS Division, EECS Department / University of California
+   Berkeley, CA 94720 USA
+  fateman@cs.berkeley.edu
+
+  Local Arrangements Chair
+  John McKay
+  Concordia University / 1455 de Maisonneuve W / Montreal PQ / Canada H3G 1M8
+  mckay@vax2.concordia.ca
+
+  Local Arrangements Vice-Chair
+  Greg Butler
+  Concordia University / 1455 de Maisonneuve W / Montreal PQ / Canada H3G 1M8
+  gregb@cs.concordia.ca
+
+  Publicity Chair
+  Gene Cooperman
+  College of Computer Science / Northeastern University / Boston, MA 02115 USA
+  gene@ccs.neu.edu
+
+
+Letters may request either English or French correspondence from the Montreal
+addresses.
+
+A TeX version (.tex, .dvi, .ps) are available for anonymous ftp:
+  ftp ftp.ccs.neu.edu
+  cd /pub/sigsam/issac95
+  get issac-95-ann2.tex
+
+Finally, if there are additional questions not addressed in the announcement,
+I will be happy to address them as publicity chair:   Gene Cooperman

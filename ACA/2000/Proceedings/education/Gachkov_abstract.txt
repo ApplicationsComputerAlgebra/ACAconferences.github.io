@@ -1,0 +1,19 @@
+Igor Gachkov* (Sweden), Igor.Gachkov@kau.se 
+
+The Algorithms of Discrete Mathematics and Graph Theory with Mathematica and
+TI-83/89
+
+The author developed a non-standard, methodical-oriented course where hands-on
+sessions could add substantial understanding in the introduction of mentioned
+mathematical concepts.  The package in MATHEMATICA in the field "Coding Theory"
+was developed at the School of Engineering Jonkoping, Sweden, and the first
+course was given autumn 1994 for students on advanced undergraduate level.  The
+first results of our courses were presented at the International IMACS
+Conference on Applications on Computer Algebra in University of New Mexico in
+1995 and were presented at the IMACS conference in Wailea, Hawaii, USA 1997,
+along with a short presentation of the package "Coding Theory", written in
+MATHEMATICA.  An attempt to introduce Computer Algebra in the course program
+was made some years ago, as the course Discrete Mathematics with Computer
+Algebra (with TI 83,-89) was given for the first time.  In developing the
+course modules the author used the MATHEMATICA package "Discrete Mathematics"
+and the package in TI 83,-89.

@@ -1,0 +1,30 @@
+On Some Applications of the (Fast) Discrete Fourier Transform
+
+Alkiviadis G. Akritas*, Jerry Uhl+ and Panagiotis S. Vigklas*
+
+*University of Thessaly
+ Department of Computer and Communication Engineering
+ 37 Glavani & 28th October
+ GR-38221, Volos
+ Greece
+
+and
+
++University of Illinois at Urbana-Champaign
+ Department of Mathematics
+ 273 Altgeld Hall (mc 382)
+ 1409 W. Green
+ Urbana, IL  61801
+ USA
+
+akritas@uth.gr, juhl@cm.math.uiuc.edu, pviglas@uth.gr
+
+Motivated by the excellent work of Bill Davis and Jerry Uhl _Differential
+Equations & Mathematica_, we present in detail several little known
+applications of the fast Discrete Fourier Transform (DFT), also known as FFT.
+Namely, we first examine the use of FFT in: (a) multiplying univariate
+polynomials and integers, and (b) approximating polynomials with sines and
+cosines (also known as fast Fourier fit or FFF).  We then examine the use of
+the fast Fourier fit in: (c) solving differential equations with Laplace
+transforms, (d) _discovering_ trigonometric identities, and (e) deriving the
+heat and wave equations.

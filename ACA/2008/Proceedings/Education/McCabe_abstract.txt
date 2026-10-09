@@ -1,0 +1,61 @@
+Revolutionary Teaching, Learning and Assessment of Computer Algebra
+with Computer Algebra
+
+Dr Michael McCabe
+Principal Lecturer / National Teaching Fellow
+University of Portsmouth
+Department of Mathematics
+Lion Gate Building
+Lion Terrace
+PORTSMOUTH
+Hampshire PO1 3HF UK
+02392 846370
+
+Teaching and learning with computer algebra systems is nothing new.  Assessment
+with computer algebra is.  My paper will illustrate thiby charting the
+evolution of a course unit, which has taught students to use Maple and Matlab
+for problem solving, over the past 15 years.  It will emphasise the changes in
+assessment, which have become possible through advances in technology and the
+pedagogical benefits which they bring about.  In particular, I will explain how
+MapleTA has been used to improve the learning, not just of mathematicians, but
+also of computer scientists, civil engineers and biologists.
+
+"Computer Packages in Mathematical Studies" is a course unit designed in the
+mid-1990s mainly to promote mathematical problem solving using Maple computer
+algebra.  In those days students submitted their solutions to problems ranging
+from optimisation of airline fare pricing to wine glass design as completed
+worksheets.  The problems for the lecturer ranged from plagiarism to extremely
+time-consuming and inaccurate marking of submitted work.  Around 10 years ago
+computer marked assessment was introduced using QuestionMark Perception.
+Students were able to use CAS (Maple) to assist them in answering objective
+questions, have their answers marked automatically and receive immediate
+feedback.  The problems for the lecturer then ranged from an inability to ask
+pedagogically sound questions with algebraic answers, mathematical diagrams,
+e.g. graphs, to the generation of large question banks for formative (practice)
+and summative (exam) delivery.
+
+Over the past 3 years, MapleTA has replaced the older form of e-assessment.
+Benefits of its introduction include:
+
+ *  pedagogically sound mathematical questions with algebra and graphs
+ *  better feedback and hints
+ *  immediacy of on-line access through the university VLE (WebCT Vista)
+ *  reusable assessment objects (McCabe, 2007)
+
+One of the greatest benefits of MapleTA has been in the development of
+"reusable assessment objects", automatically generated e-assessment questions
+exploiting the use of random parameters (numeric, algebraic, graphic, symbolic
+or text) and algorithms (typically conditions placed upon these parameters).
+Reusable assessment objects motivate students by automatically providing a
+huge bank of questions of a standard similar to their final exams and
+immediate feedback on their progress.  Reusable assessment objects motivate
+lecturers by eliminating the need to set a large number of similar questions!
+Furthermore they promote "peer moderated assessment", by which students help to
+improve the quality of question banks.
+
+MapleTA and reusable assessment objects have now been extended from use with
+mathematicians to computer scientists, civil engineers and biologists.  Recent
+work in the development of reusable assessment objects for graph/network theory
+will be used to illustrate how the new technology is revolutionising
+mathematics education.  I will speculate on the future directions in this
+revolution.

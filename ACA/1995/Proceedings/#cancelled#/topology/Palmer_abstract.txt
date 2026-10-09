@@ -1,0 +1,25 @@
+                         Cholesky in Chains 
+
+                         Rick Palmer
+                         rick@cs.cornell.edu
+
+Abstract:
+
+The Chains algebraic-topological programming language is being
+developed to provide an elegant means for expressing efficient
+scientific computations.  The basic datatypes in Chains are
+implementations of mathematical objects from combinatorial and
+algebraic topology, such as simplicial complexes and k-chains defined
+over them.  In this talk I will describe how these topological
+datatypes provide a concise, formal means of specifying and executing
+a variety of scientific calculations, including automatic mesh
+generation, finite element calculations, and linear systems solving.
+
+In particular, I will describe how Chains has been used solve a finite
+element approximation, including 1) a concise (one page) specification
+of the finite element method using simplicial complexes, k-chains and
+simplicial maps, 2) a Chains specification of a guaranteed quality
+triangulation algorithm due to Paul Chew, and 3) a specification of
+the Cholesky decomposition algorithm for sparse positive definite
+linear systems, written in terms of (surprise!) simplicial complexes,
+k-chains and simplicial maps.

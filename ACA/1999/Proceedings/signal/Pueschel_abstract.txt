@@ -1,0 +1,22 @@
+Speaker:      Markus Pueschel
+Title:        Group Representations and Automatic Derivation of Fast Signal
+              Transforms
+Affiliation:  Mathematics and Computer Science
+              Drexel University and Carnegie Mellon University
+              Philadelphia, PA USA
+URL:          http://avalon.ira.uka.de/home/pueschel/
+Email:        pueschel@ece.cmu.edu
+
+Abstract
+
+Using methods from group representation theory it is possible to derive
+automatically many fast signal transforms including the FFT and fast
+trigonometric transforms.  The approach we use consists of two steps.  First
+the symmetry of the transform is determined.  Second a decomposition of the
+transform is derived from the symmetry using constructive representation
+theory.  This procedure has been implemented in the GAP share package AREP and
+successfully applied to a large number of signal transforms.
+
+This shows a strong relationship between discrete signal transforms and
+representation theory, opening a new area of research to exploit the benefits
+of this connection.

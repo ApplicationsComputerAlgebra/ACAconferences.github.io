@@ -1,0 +1,69 @@
+%==============
+\begin{center}
+{\LARGE \bf Automated Theorem Proving}
+\end{center}
+%==============
+\bigskip
+
+{\bf Organizer}
+
+\medskip
+Bruno Buchberger (Bruno.Buchberger@risc.uni-linz.ac.at)
+\bigskip
+
+{\bf Description}
+\medskip
+
+We envisage a merge of computer algebra and automated theorem proving systems in the near
+future. The merge can be started from both ends: Either one may expand theorem proving systems
+by adding more algebra or one may grade up algebra systems by adding proving potential. In this
+session, we want to encourage researchers active in at least one of the two areas to get together and
+discuss how this merge could be achieved most efficiently and soundly. 
+
+\bigskip
+{\bf Talks}
+\medskip
+
+\begin{description}
+\item[??:??-??:??] \ \\
+  Bruno Buchberger \\
+  {\bf An Overview on the Apply Math Project} 
+\item[??:??-??:??] \ \\
+  Henk Barendregt \\
+  {\bf Efficient computations in formal proofs} 
+\item[??:??-??:??] \ \\ 
+  Bernd Ingo Dahn \\
+  {\bf Computer Algebra Systems in an Environment of Cooperating Theorem Provers.} 
+\item[??:??-??:??] \ \\ 
+  St\'ephane Dalmas, Marc Ga\"etano, Claude Huchet \\
+  {\bf A Deductive Database for Mathematical formulas.} 
+\item[??:??-??:??] \ \\ 
+  Agostino Dovier, Andrea Formisano, Alberto Policriti\\
+  {\bf Automated deduction scheme.}
+\item[??:??-??:??] \ \\ 
+  Michael Joswig\\
+  {\bf Towards modelling the topology of homogeneous manifolds by
+    means of symbolic computation.} 
+\item[??:??-??:??] \ \\ 
+  Eric Monfroy, Christophe Ringeissen\\
+  {\bf Domain-Independent Scheme for Constraint Solver
+  Extension.}
+\item[??:??-??:??] \ \\ 
+  J\"urgen Stuber\\
+  {\bf Building abelian groups and commutative rings into first-order
+    theorem proving.} 
+\item[??:??-??:??] \ \\ 
+  Sara Kalvala\\
+  {\bf Formal and Informal Proofs.} 
+\item[??:??-??:??] \ \\ 
+  Volker Sorge\\
+  {\bf Integrating a CAS as Proof Planer in the OMEGA Proof
+    Development Environment.}  
+\item[??:??-??:??] \ \\ 
+  Helmut Thiele\\
+  {\bf On an Algebraic Characterization of Default Reasoning.}
+\item[??:??-??:??] \ \\ 
+  Wolfgang Gehrke\\
+  {\bf A method to combine algebraic computations with related deductions.} 
+\end{description}
+

@@ -1,0 +1,26 @@
+"Joys and Pains of Implementing the Reverse Mode of Automatic
+ Differentiation by Overloading"
+
+Uwe Naumann 
+Institute for Scientific Computing                   
+TU Dresden                                            
+01062 Dresden                                          
+Germany   
+
+
+We will give a brief introduction into the mathematical background
+behind Automatic Differentiation (AD) with regard to implementing it
+using overloading. Hereby, the emphasis lays on the special problems
+arising from the inverted information flow in the reverse mode resulting
+in some major global side effects that have to be dealt with when
+thinking about the implementation.
+
+Based on the existing AD-library ADOL-C/F we will discuss the problem of
+managing the compiler generated temporaries during the code list (tape)
+writing process followed by examples of how to interpret the generated
+abstract data structure for calculating derivatives.
+
+Furthermore, we will give an outlook on how the ideas of Automatic
+Differentiation could fit into future compilers allowing additional
+things like higher order derivatives or sparsity detection and
+exploitation.

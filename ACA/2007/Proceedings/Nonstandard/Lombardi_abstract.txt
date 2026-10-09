@@ -1,0 +1,30 @@
+Computer Algebra Assisted Analysis of Atonal Music
+ 
+Paul Lombardi and Michael Wester
+University of New Mexico, USA
+ 
+With the advent of atonal music at the beginning of the twentieth century,
+composers drastically changed the way they thought about pitches.  Octave
+equivalence became the prominent idea, in which pitches with the same relative
+placement in different octaves were considered to be functionally equivalent
+(leading to the definition of _pitch classes_ [PCs]), as well as sets of pitch
+classes arranged in any order in the same or different octaves (_set classes_).
+Common pitch classes between pitch-class sets are considered to be
+_invariances_ of the music.  In some types of atonal music, the order of the
+pitch classes is of little consequence, while in others, the music is based on
+the pitch-class order.  In this latter kind, the music is said to be serial,
+and a pitch-class series can be represented by its _prime_ form P, its
+_retrograde_ R (P written in reverse order), its _inversion_ I (the negative of
+P mod 12 and then transposed to start at the same PC as P), and its _retrograde
+inversion_ RI.  These forms can be combined into matrix representations such as
+twelve-tone matrices and rotational arrays.  We have developed a Maple program
+that, given the generating series, finds all the invariances of any size within
+a single matrix or set of matrices, as well as in slices of higher dimensional
+objects such as cubes and four-dimensional hypercubes.  The list of invariances
+within a twelve-tone matrix is useful because one can quickly search the list
+for significant musical qualities within a twelve-tone composition.  We use
+statistics from the complete list of invariances within the 16 rotational
+arrays from Igor Stravinsky's _Requiem Canticles_ to consider Stravinsky's
+serial mistakes.  Lastly, we search for specific invariances within the
+twelve-tone hypercube from Pierre Boulez's _Structures 1a_ to compare the
+seemingly arbitrary assignment of the various serialized musical elements.

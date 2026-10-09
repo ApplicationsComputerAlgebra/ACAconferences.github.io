@@ -1,0 +1,41 @@
+ "High Energy and Nuclear Physics"
+>
+> Cochairmen:
+> Dr. Vyacheslav Ilyin (Moscow State University)
+>              Vice Head of the Institute for Nuclear Physics of MSU
+>                      ilyin@theory.npi.msu.su
+> Dr. Michael Dubinin (Moscow State University)
+>                      dubinin@theory.npi.msu.su
+> Dr. Andrei Semenov (Joint Institute for Nuclear Research, Dubna)
+>
+>
+> Many pioneer developments on Computer Algebra have been made
+> by High Energy Physicists like A. C. Hearn with REDUCE, S. Wolfram
+> (Mathematica), M. Veltman (Schoonschip) or J.A.M. Vermaseren (Form).
+> >From an original narrow field of application these systems have become
+> general
+> purpose tools. It is therefore natural that a session of this conference
+> deals with
+> applications of Computer algebra in High Energy or particle Physics.
+>
+>
+>       This session is intended to discuss computer algebra methods
+> for High Energy and Nuclear Physics and includes a wide set of questions.
+> Some of them are formulated below:
+>
+>       Topics:
+>
+>   * Generation and symbolic calculation of Feynman diagrams;
+>   * Tools for one and multiloop Feynman diagrams integration;
+>   * Semianalytical approach to cross section calculation;
+>   * Automatic systems for calculation in High Energy Physics;
+>   * Spin calculations in High Energy Physics;
+>   * Generation and verification of Feynman rules for quantum field
+>     models  of particle interaction;
+>   * Lie algebra  and Lie super algebra computation;
+>   * Tensor calculus;
+>   * Optimization of phase space integration;
+>   * Computer programs for Particle Accelerator design;
+>   * Large expressions handling  and  compactification.
+>   * Symbolic calculation in nuclear physics
+

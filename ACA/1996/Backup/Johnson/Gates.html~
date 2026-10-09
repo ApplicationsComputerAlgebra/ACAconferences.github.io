@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Generic solutions to polynomial equations in distributive categories</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Gates">Robbie Gates</A><br>
+</h3>
+
+Date: July 18th (Thursday)<br>
+Time: ??.??<br>
+
+<center>
+Abstract
+</center>
+
+ Following a remark of Lawvere, Blass exhibited a particularly elementary
+    bijection between the set of binary trees, and seven tuples of binary trees. A "set of binary
+    trees" may be abstracted to "an object $T$ of a distributive category with a given
+    isomorphism $T^2 + 1 \cong T$". Particularly elementary in fact means "constructible from
+    the given isomorphism using distributive category operations". In this context, it is seen that
+    there is no such bijection for pairs, triples, ..., six-tuples of binary trees. 
+    The author has described, for a given polynomial P, the free distributive category containing
+    an object $X$ and given isomorphism $P(X) \cong X$, and the isomorphism classes of this
+    category. Since distributive operations correspond to the operations used to build straightline
+    circuits/programs from simpler circuits/programs, the results of the author may be
+    interpreted as proving the existence/non-existence of isomorphims constructible by straight
+    line circuits/programs. 
+    The talk will briefly describe the connection between distributive categories and circuits, the
+    bijection presented by Blass, the techniques used and results acheieved for the general case,
+    and some speculation on future directions. 
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Johnson.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

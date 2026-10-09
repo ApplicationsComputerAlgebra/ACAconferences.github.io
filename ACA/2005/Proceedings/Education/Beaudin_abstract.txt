@@ -1,0 +1,38 @@
+        This is Much More than just a New Way of Teaching Mathematics
+
+
+                               Michel Beaudin
+
+                     Service des enseignements généraux,
+
+                   École de technologie supérieure (ETS),
+
+                        1100, Notre-Dame street west,
+
+                      Montréal, Québec, Canada, H3C 1K3
+
+                       Email: michel.beaudin@etsmtl.ca
+
+
+
+                                  Abstract
+
+
+Colleagues who are using technology in their mathematics teaching say they
+found "a new way of teaching mathematics" ; others prefer to say that they
+are "making new from old".  Well, first, don't expect your students to be
+as enthusiastic as can be if they stay inactive.  This is where an
+affordable, powerful and easy to use graphing calculator with a built-in
+computer algebra system suitable for college mathematics and engineering
+coursework plays an important role.  Each of our engineering students at
+ETS has a Voyage 200 graphing calculator in the classroom.  Second, because
+technology, in mathematics education, is here to stay, teachers should use
+it to give live presentations of some mathematical concepts, exactly in the
+same way they use the blackboard.  This is where Derive 6 plays it's
+important role of a mathematical assistant : we must not forget, as far as
+education is concerned, that both teachers and students still need time to
+concentrate on mathematical concepts, avoiding as much as possible typing
+long commands.  In this talk, we will present examples of a classical way
+of teaching mathematics, showing that some of our "old" problems can have
+unexpected potential.  By the way, this is another benefit of technology:
+different levels of mathematics are well served by it.

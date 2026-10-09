@@ -1,0 +1,33 @@
+E-training of Formal Mathematics: Report on the CreaComp Project at the
+University of Linz
+
+Robert Vajda^1
+Research Institute for Symbolic Computation,
+Johannes Kepler University, Linz, Austria,
+rvajda@risc.uni-linz.ac.at
+
+
+CreaComp is a project at the University of Linz, which aims at  producing
+computer-supported learning units for mathematics.  The novelty of this
+e-learning platform is that besides providing tools for computations and
+real-time visualization for exploring new fields of mathematics it also offers
+the students computer-support in learning how to do mathematical proofs: the
+observations and conjectures collected by the students in the experimental
+phase can be formalized in a user-friendly logical language.
+
+The CreaComp mathematical assistant system can be viewed as an integration of
+MeetMath^2 and Theorema^3.  CreaComp inherits the didactical concepts and the
+navigation system from MeetMath, while Theorema provides a suitable formal
+mathematical language and several general and domain-specific reasoning
+engines. Both aforementioned systems are based upon the Mathematica computer
+algebra system and the CreaComp interactive mathematical course material is
+distributed in form of Mathematica notebooks.
+
+During the talk the speaker focuses on the educational units on real valued
+sequences and functions and demonstrates the entire bandwidth of
+computer-supported  mathematics learning/teaching through examples.
+
+1 Joint work with Bruno Buchberger and Wolfgang Windsteiger
+2 Interactive mathematical courseware developed at the University of Linz,
+  see www.aec.at/meetmath/
+3 Mathematical assistant system, see www.theorema.org

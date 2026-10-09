@@ -1,0 +1,315 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="soukup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="soukup.css">
+</HEAD>
+<BODY bgcolor=white>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>Approximate Bayesian computations <BR>
+<BR>
+with symbolic integration</B></FONT>
+</DIV>
+<P>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="LEFT"><FONT SIZE="+2"> Lubom&#237;r Soukup</FONT></TD>
+</TR>
+<TR><TD ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="LEFT">Department of Image Processing</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="LEFT">Institute of Information Theory and Automation</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="LEFT">Academy of Sciences of the Czech Republic</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="LEFT">Pod vod&#225;renskou vez&#237; 4,
+182 08 Praha 8</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="LEFT">Czech Republic</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">phone:</TD>
+<TD ALIGN="LEFT">+ 42 2 6605 2551</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">fax:</TD>
+<TD ALIGN="LEFT">+ 42 2 688 4903</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">e-mail:</TD>
+<TD ALIGN="LEFT"><TT> soukup@utia.cas.cz</TT></TD>
+</TR>
+</TABLE></DIV>
+<P>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+In Bayesian statistics it is to evaluate Bayes formula to obtain probability
+distribution of estimated parameters. Bayes formula for independent
+observations is as follows. 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+g(\mathbf{x}\,|\,\widetilde{\mathbf{y}}) = \frac{\displaystyle \prod_{j=1}^{n}
+f_j(a_j(\mathbf{x}) - \widetilde{y}_j)\,p(\mathbf{x})} {\displaystyle \int_{\cal X}
+  \prod_{j=1}^{n} f_j(a_j(\mathbf{t}) - \widetilde{y}_j)\,p(\mathbf{t})\,d\mathbf{t}} \; \mbox{.}
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="Bayesf">&#160;</A><IMG
+ WIDTH="327" HEIGHT="120"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}
+g(\mathbf{x}\,\vert\,\widetilde{\mathbf{y}}) = \frac{\displa...
+...}) - \widetilde{y}_j)\,p(\mathbf{t})\,d\mathbf{t}} \; \mbox{.}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+Here
+<BR>
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: ${\mathbf{x}}$ -->
+<B>x</B></TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">...</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT">vector of estimated parameters, 
+<!-- MATH: $\mathbf{x}\stackrel{\triangle}{=}
+({x}_1,\,{x}_2,\,\dots\,,\,{x}_m)$ -->
+<IMG
+ WIDTH="187" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\mathbf{x}\stackrel{\triangle}{=}
+({x}_1,\,{x}_2,\,\dots\,,\,{x}_m)$">,
+
+<!-- MATH: $\mathbf{x}\in {\cal X}$ -->
+<IMG
+ WIDTH="59" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\mathbf{x}\in {\cal X}$">,</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT">
+<!-- MATH: ${\cal X} \subseteq I\!\! R^m$ -->
+<IMG
+ WIDTH="81" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="${\cal X} \subseteq I\!\! R^m$">,
+
+<!-- MATH: $m \in I\!\! N$ -->
+<IMG
+ WIDTH="69" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$m \in I\!\! N$">,</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $\widetilde{\mathbf{y}}$ -->
+<IMG
+ WIDTH="18" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\widetilde{\mathbf{y}}$"></TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">...</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT">vector of measured values (observations),
+
+<!-- MATH: $\widetilde{\mathbf{y}} \stackrel{\triangle}{=}
+(\widetilde{y}_1,\,\widetilde{y}_2,\,\dots\,,\,\widetilde{y}_n)$ -->
+<IMG
+ WIDTH="179" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\widetilde{\mathbf{y}} \stackrel{\triangle}{=}
+(\widetilde{y}_1,\,\widetilde{y}_2,\,\dots\,,\,\widetilde{y}_n)$">,</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><I>a</I><SUB><I>j</I></SUB></TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">...</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT">functions that are measured for certain fixed argument 
+<!-- MATH: $\mathbf{x}
+\in {\cal X}$ -->
+<IMG
+ WIDTH="59" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\mathbf{x}\in {\cal X}$">,</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT">
+<!-- MATH: $j \in \{1,\,\dots\,,n\}$ -->
+<IMG
+ WIDTH="131" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$j \in \{1,\,\dots\,,n\}$">,
+
+<!-- MATH: $n \in I\!\! N$ -->
+<IMG
+ WIDTH="63" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$n \in I\!\! N$">,</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $g(\mathbf{x}\,|\,\widetilde{\mathbf{y}})$ -->
+<IMG
+ WIDTH="67" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$g(\mathbf{x}\,\vert\,\widetilde{\mathbf{y}})$"></TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">...</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT">a posterior density function,</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $f_j(\widetilde{y}_j-a_j(\mathbf{x}))$ -->
+<IMG
+ WIDTH="124" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$f_j(\widetilde{y}_j-a_j(\mathbf{x}))$"></TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">...</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT">probability density
+function of the error of measurement 
+<!-- MATH: $\widetilde{y}_j$ -->
+<IMG
+ WIDTH="23" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\widetilde{y}_j$">,</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $p(\mathbf{x})$ -->
+<I>p</I>(<B>x</B>)</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="CENTER">...</TD>
+<TD ALIGN="LEFT">&nbsp;</TD><TD ALIGN="LEFT">a prior density function.</TD>
+</TR>
+</TABLE>
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+The problem is how to evaluate the integral in the denominator in
+(<A HREF="soukup.html#Bayesf"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/cross_ref_motif.gif"></A>). In the general case when the functions <I>a</I><SUB><I>j</I></SUB> are nonlinear and
+density functions <I>f</I><SUB><I>j</I></SUB> are not normal, the integral have to be evaluated
+approximately. Unfortunately, no universal eficient method of integration
+in Bayes formula exist. The most general approach uses simulations based on
+Monte-Carlo method (see e.g. [#!j:MfAIiSwSEoBIP!#]), but it is too much time
+consuming for large <I>m</I>. Standard techniques of numerical integration
+(e.g. Simpson's method and its modifications) are
+also too slow even for the common number of estimated parameters (<I>m</I> &gt;
+4). The most efficient approach utilize symbolic integration, but the
+applicability of this approach depends on the analytical form of functions
+<I>a</I><SUB><I>j</I></SUB>, <I>f</I><SUB><I>j</I></SUB>, <I>p</I>.
+
+<P>
+When the functions <I>a</I><SUB><I>j</I></SUB> are only slightly nonlinear and probability
+distributions <I>f</I><SUB><I>j</I></SUB>, <I>p</I> are close to normal, assumptions of linearity and
+normality are adopted to evaluate the integral symbolically. It actually
+represents approximation of the posterior distribution by normal distribution
+and the estimation problem can be solved by linear least-squares method. In
+such an approach the computation is very fast but it is hard to estimate the
+influence of the simplifications to the outcoming posterior probability
+density function.
+
+<P>
+The assumptions of linearity and normality can be justified with the aid of
+modification of density functions <I>f</I><SUB><I>j</I></SUB> (see [#!c:PDfENE!#]). This
+modification corrects the nonlinearity while the mean values and standard
+deviations of the original distributions remain unchanged. To meet these
+requests another approximate integration have to be performed, that is easier
+then integration in (<A HREF="soukup.html#Bayesf"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/cross_ref_motif.gif"></A>) and can be done symbolically. This
+integration appears in equations of the form
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\int_{I\!\! R} b_k(x) \, \gamma_k \,
+    \exp\left(-\frac{1}{2}\left(\frac{x -  \mu_k}
+    {\sigma_k}\right)^2\right) \,d x = c_{kl}\;, \quad k \in
+    \{1,\,2,\,\dots\,,m\} \,,\; l \in \{0,\,1,\,2\} \;,
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="iglrad0">&#160;</A><IMG
+ WIDTH="676" HEIGHT="59"
+ SRC="img13.gif"
+ ALT="\begin{displaymath}
+\int_{I\!\! R} b_k(x) \, \gamma_k \,
+\exp\left(-\frac{1}{2...
+...uad k \in
+\{1,\,2,\,\dots\,,m\} \,,\; l \in \{0,\,1,\,2\} \;,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where <I>b</I><SUB><I>k</I></SUB> are given analytical functions, <I>c</I><SUB><I>kl</I></SUB> known constants,
+and <IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\gamma_k$">,
+<IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mu_k$">,
+<IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\sigma_k$">
+are unknown.
+
+<P>
+System of equations (<A HREF="soukup.html#iglrad0"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/cross_ref_motif.gif"></A>) can be solved by means of infinite series.
+In fact, only few terms of the resulting series have to be
+evaluated. Nevertheless, the symbolic treatment with series is very tedious
+work and some computer algebra system has to be used. System of equations
+(<A HREF="soukup.html#iglrad0"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/cross_ref_motif.gif"></A>) was solved with the aid of Mathematica software by Wolfram
+Research. The crucial operations that has been frequently used were
+differentiation (D), series inversion (SeriesInversion), and composition of
+series (ComposeSeries).
+
+<P>
+The designed method can be applied to such scientific and technical branches
+where slightly nonlinear models are usually used. This case is typical for
+geosciences such as geodesy, cartography, remote sensing, geology etc.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

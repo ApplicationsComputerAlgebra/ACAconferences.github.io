@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+
+\usepackage{a4wide}
+\usepackage{latexsym}
+\pagestyle{empty}
+
+\def\CC{\bf C}
+
+\title{About an algorithm of T. Oaku}
+
+\author{Mar\'{\i}a Isabel Hartillo Hermoso}
+
+\date{Universidad de C\'adiz}
+
+\begin{document}
+
+\maketitle
+
+Let be $f\in \CC$$ [x]$ with $x=(x_1,\ldots,x_n)$, and ${\cal A}_n$ the Weyl
+algebra with $n$ variables.
+The polynomials
+$b(s)\in\CC$$ [s]$ such that there exists $Q\in{\cal A}_{n}[s]$ with:
+$$
+Q(f^{s+1})=b(s)f^s,
+$$
+form an ideal of $\CC $$[s]$, which is a principal ideal domain.
+The Bernstein polynomial
+asociated to $f$ is this monic polynomial $b_f(s)$ of that ideal.
+
+The proof given by Bernstein of the existence of $b_f(s)$ is not constructive,
+and that is why there was not effective algorithm for the calculation of the
+Bernstein polynomial.
+
+In 1997, T. Oaku (``An algorithm of computing $b$-functions'', Duke
+Mathematical Journal, {\bf 87}, vol. 1, 115--132) gave a method which calculate
+the Bernstein polynomial. This algorithm used the computation of a Gr\"obner
+basis of an ideal for an order $\prec_F$ that was not a well ordering. In
+order to solve that problem, 
+the author introduced the $F$-homogenization of the
+operators, in the ring ${\cal A}_{n+1}[x_0]$. Then he defined a new order in
+that ring, the homogenization order, that was a well ordering and such that 
+there always exists
+a $H$-Gr\"obner basis. Dehomogenizing that Gr\"obner basis he
+returned to ${\cal A}_{n+1}$ and obtained a basis for the initial order
+$\prec_F$. Using elimination tecniques he finally gave the 
+Bernstein polynomial.
+
+From this work, we deal with the problem as  a Gr\"obner basis computation
+for a graded ideal in the graded algebra given by
+Kashiwara--Malgrange filtration. Using a new method, we define now the
+homogenization in the Rees algebra. This comes from ``Homogenising
+differential operators'' by F. J.
+Castro--Jim\'enez and L. Narv\'aez--Macarro, (Prepublicaciones de la Facultad
+de Matem\'aticas, Universidad de Sevilla, {\bf 36}, 1998), permiting an ample
+degree of freedom in the choice of the order. Let us introduce a new order
+$\prec_V$, that order monomials of bigger $V$-order first and besides, 
+is a elimination order in $x$ and $\partial$. This new method allows to
+calculate just a Gr\"obner basis in the Rees algebra, (for a homogenization
+order), and that basis chives directly to the Bernstein polynomial. 
+With this new
+algorithm we have a range of options for the elimination order. We finish
+with the calculation of non trivial examples using the new method.
+
+\vspace{.5cm}
+
+Address of author:
+
+Mar\'{\i}a Isabel Hartillo Hermoso
+
+E. U. Empresariales
+c/ Por--Vera, 54 
+
+11403 
+Jerez de la Frontera
+(C\'adiz)
+
+Phone: 956335762
+
+Fax:956345104
+
+E-mail: hartillo@deimos.us.es
+
+
+\end{document}
+

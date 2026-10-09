@@ -1,0 +1,13 @@
+Ralf Hillebrand*, Frank Postel (Germany), tonner@plato.uni-paderborn.de
+Flexible Mathematical GUI Controls for Mathematical Electronical Documents
+
+The MuPAD Group develops mathematical software components which may be used as
+plugins in other software packages: An editor for input and output of
+mathematical expressions, a Control for mathematical computations based on
+MuPAD and a graphics tool for visualization and manipulation of
+three-dimensional objects. These Controls can be integrated into presentation
+tools such as Microsoft PowerPoint, Internet Browsers or professional authoring
+tools such as Toolbook, Director or Authorware. The Control for mathematical
+computations combines the power of a computer algebra system with the demand
+for special user interfaces for educational purposes. The target group of these
+Controls are authors and publishers of electronical mathematical documents.

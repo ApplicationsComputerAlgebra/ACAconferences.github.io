@@ -1,0 +1,27 @@
+About a Computer Algebra Based Online Mathtest
+
+Thomas Wolf, Brock University, Ontario, Canada
+and 
+Winfried Neun, ZIB, Freie Universitaet Berlin
+
+In the talk the web based online test http://lie.math.brocku.ca/mathtest is
+described that
+- allows a teacher to compose a test within minutes, 
+- offers in total >150 question types from 12 subjects, 
+- varies most of the parameters in questions randomly and thus allows students
+  to take a test an unlimited number of times each time with slightly varied
+  questions, 
+- automatically marks the test, stores the mark in a database and sends an
+  email to the student,
+- allows the teacher to inspect easily all results of a specific test,
+- allows students to inspect all outcomes of any test they took,
+- is based on the computer algebra system REDUCE and thus accepts mathematical
+  input, i.e., it is not a multiple choice test and 
+- that is completely free.
+
+A technical problem with computer algebra based tests is that: on one hand it
+should be possible for the input to be, for example, x+y or y+x, i.e., input
+should be somewhat simplified and put in some canonical form, but on the other
+hand simplification is often the content of the question, so (x^2-y^2)/(x-y)
+should not be accepted as answer.  In other words a fine-tuned simplification
+is necessary.

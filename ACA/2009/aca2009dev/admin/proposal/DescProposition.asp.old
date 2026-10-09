@@ -1,0 +1,200 @@
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="1252"%>
+<html>
+<head>
+<title>Description de la proposition</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+</head>
+<link href="../style_ACA2009-divers.css" type="text/css" rel="stylesheet">
+<BODY BGCOLOR="#f9fbf1" TEXT="#000000" LINK="#000000" VLINK="#000000" ALINK="#000000">
+<%
+
+Set Conn = Server.CreateObject("ADODB.Connection")
+Set RS = Server.CreateObject("ADODB.RecordSet")
+Conn.Open "aca2009"
+sql = "select * from inscriptions where noinsc ="+Request("id")
+   set rs = Conn.Execute(sql)
+	AutPrincNom=rs("AuteurNom")
+	AutPrincPrenom=rs("AuteurPrenom")
+	Proposition=rs("Proposition")
+	Conference=rs("Conference")
+	TypeConference=rs("TypeConference")
+	NoInsc=rs("noInsc")
+%>
+<script>
+function MajProposition()
+{
+  var form = document.forms[0];
+  	form.submit();
+}
+function EffacerProposition()
+{
+  var form = document.forms[0];
+	reponse = confirm("êtes-vous certain ?");	
+	//alert(document.DescProposition.noinsc.value);
+	if (reponse==true)
+		window.location.href="del_proposition.asp?id="+form.noinsc.value;
+}
+</script>
+
+<body>
+<form name="DescProposition" action="Maj_Proposition.asp" method="post">
+<input type="hidden" name="noinsc" value="<%=NoInsc%>">
+
+  <table border="1">
+    <tr>
+      <td colspan="2" class="Titre2" align="center">Auteur</td>
+      <td></td>
+      <td colspan="2" class="Titre2" align="center">Co-Auteur(s)</td>
+    </tr>
+    <tr> 
+      <td width="155" class="NomChamps">Titre :</td>
+      <td width="200"><input type="text" name="txtAutPrincTitre" size="50" value="<%=rs("AuteurTitre")%>"></td>
+      <td class="NomChamps" ALIGN="center">Numéro</td>
+      <td width="145" class="NomChamps">Titre :</td>
+      <td width="150"><input type="text" name="CoAuteur1Titre" size="37" value="<%=rs("CoAuteur1Titre")%>"></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Nom :</td>
+      <td><input type="text" name="AutPrincNom" size="50" value="<%=rs("AuteurNom")%>"></td>
+      <td ALIGN="center"><input type="text" name="LocalNumber" value="<%=rs("LocalNumber")%>" size="10"></td>
+      <td class="NomChamps">Nom :</td>
+      <td><input type="text" name="CoAuteur1Nom" size="37" value="<%=rs("CoAuteur1Nom")%>"></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Prénom :</td>
+      <td><input type="text" name="AutPrincPrenom" size="50" value="<%=rs("AuteurPrenom")%>">
+      <td></td>
+      <td class="NomChamps">Prénom :</td>
+      <td><input type="text" name="CoAuteur1Prenom" size="37" value="<%=rs("CoAuteur1Prenom")%>"></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Courriel :</td>
+      <td><input type="text" name="AutPrincCourriel" size="50" value="<%=rs("AuteurCourriel")%>"></td>
+      <td class="NomChamps" ALIGN="center">Jour</td>
+      <td class="NomChamps">Courriel :</td>
+      <td><input type="text" name="CoAuteur1Courriel" size="37" value="<%=rs("CoAuteur1Courriel")%>"></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Institution ou cie :</td>
+      <td><input type="text" name="AutPrincCie" size="50" value="<%=rs("AuteurCie")%>"></td>
+      <td ALIGN="center"><input type="text" name="Jour" value="<%=rs("Jour")%>" size="10"></td>
+      <td class="NomChamps">Titre :</td>
+      <td><input type="text" name="CoAuteur2Titre" size="37" value="<%=rs("CoAuteur2Titre")%>"></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Département :</td>
+      <td><input type="text" name="AutPrincDept" size="50" value="<%=rs("AuteurDept")%>"></td>
+      <td></td>
+      <td class="NomChamps">Nom :</td>
+      <td><input type="text" name="CoAuteur2Nom" size="37" value="<%=rs("CoAuteur2Nom")%>"></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Adresse :</td>
+      <td><input type="text" name="AutPrincAdr" size="50" value="<%=rs("AuteurAdr")%>"></td>
+      <td class="NomChamps" ALIGN="center">Heure</td>
+      <td class="NomChamps">Prénom :</td>
+      <td><input type="text" name="CoAuteur2Prenom" size="37" value="<%=rs("CoAuteur2Prenom")%>"></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Ville :</td>
+      <td><input type="text" name="AutPrincVille" size="50" value="<%=rs("AuteurVille")%>"></td>
+      <td ALIGN="center"><input type="text" name="Heure" value="<%=rs("Heure")%>" size="10"></td>
+      <td class="NomChamps">Courriel :</td>
+      <td><input type="text" name="CoAuteur2Courriel" size="37" value="<%=rs("CoAuteur2Courriel")%>"></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">État/Province :</td>
+      <td><input type="text" name="AutPrincProv" size="50" value="<%=rs("AuteurProv")%>"></td>
+      <td></td>
+      <td class="NomChamps">Titre :</td>
+      <td><input type="text" name="CoAuteur3Titre" size="37" value="<%=rs("CoAuteur3Titre")%>"></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Pays :</td>
+      <td><input type="text" name="AutPrincPays" size="50" value="<%=rs("AuteurPays")%>"></td>
+      <td class="NomChamps" ALIGN="center">Room</td>
+      <td class="NomChamps">Nom :</td>
+      <td><input type="text" name="CoAuteur3Nom" size="37" value="<%=rs("CoAuteur3Nom")%>"></td>
+    </tr>
+	<tr>
+		<td class="NomChamps">Code postal :</td>
+		<td><input type="text" name="AutPrincZip" size="50" value="<%=rs("AuteurZip")%>"></td>
+		<td ALIGN="center"><input type="text" name="ConfLocal" value="<%=rs("ConfLocal")%>" size="10"></td>
+		<td class="NomChamps">Prénom :</td>
+      <td><input type="text" name="CoAuteur3Prenom" size="37" value="<%=rs("CoAuteur3Prenom")%>"></td>
+	</tr>
+    <tr> 
+      <td class="NomChamps">Téléphone :</td>
+      <td><input type="text" name="AutPrincTel" size="50" value="<%=rs("AuteurTel")%>"></td>
+      <td></td>
+      <td class="NomChamps">Courriel :</td>
+      <td><input type="text" name="CoAuteur3Courriel" size="37" value="<%=rs("CoAuteur3Courriel")%>"></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Télécopieur :</td>
+      <td><input type="text" name="AutPrincFax" size="50" value="<%=rs("AuteurFax")%>"></td>
+      <td class="NomChamps">Numéro inscription:</td>
+      <td><B><%=rs("NoInsc")%></B></td>
+	  <td></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Site internet :</td>
+      <td><input type="text" name="SiteWeb" size="50" value="<%=rs("SiteWeb")%>"></td>
+      <td></td>
+	  <td colspan="2"><input type="button" name="btMaj" value="Sauvegarder les modifications" onClick="MajProposition()"></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Conférence :</td>
+      <td><input name="txtConference" type="text" size="50" value="<%=rs("conference")%>"></td>
+ 	  <td class="NomChamps">Type : &nbsp;&nbsp;&nbsp;<input type="text" name="TypeConference" size="5" value="<%=rs("TypeConference")%>"></td>
+      <td colspan="2" class="NomChamps">Modifié par nous :&nbsp;&nbsp;&nbsp;<input name="txtModifieParNous" type="text" value="<%=rs("ModifieParNous")%>" size="10"></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Communication :</td>
+      <td colspan="4"><input type="text" name="Proposition" size="120" value="<%=rs("Proposition")%>"></td>
+      <td></td>
+    </tr>
+    <tr> 
+      <td colspan="5" class="NomChamps">Résumé de la communication :</td>
+    </tr>
+    <tr> 
+      <td colspan="5"><textarea name="ResumeProposition" rows=10 cols=115><%=rs("ResumeProposition")%></textarea></td>
+    </tr>
+    <tr> 
+      <td colspan="5" class="NomChamps">Note Spéciale :</td>
+    </tr>
+    <tr> 
+      <td colspan="5"><textarea name="NoteSpeciale" rows=4 cols=115><%=rs("NoteSpeciale")%></textarea></td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Langue :</td>
+      <td><input type="text" name="langue" value="<%=rs("langue")%>"></td>
+      <td align="center"></td>
+      <td class="NomChamps">Accepté : </td>
+      <td><input type="text" name="txtAccepter" value="<%=rs("accepte")%>" size="10"></td>
+    </tr>
+    
+   	<tr> 
+      <td colspan="5"> 
+        &nbsp; 
+        <input type="button" name="btMaj" value="Sauvegarder les modifications" onClick="MajProposition()">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" name="btDel" value="Effacer la proposition" onClick="EffacerProposition()">
+         
+      </td>
+    </tr>
+    <tr> 
+      <td class="NomChamps">Commentaires :</td>
+      <td colspan="6"><textarea name="Commentaires" cols="80" rows="3"><%=rs("Commentaires")%></textarea></td>
+    </tr>
+  </table>
+  <%
+Conn.Close
+  set rs = nothing
+  set Conn = nothing	
+%>
+</form>
+</table>
+
+</body>
+</html>

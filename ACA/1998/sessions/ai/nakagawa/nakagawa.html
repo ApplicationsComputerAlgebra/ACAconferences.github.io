@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Simplification for the Laplace-Beltrami Operator</TITLE>
+<META NAME="description" CONTENT="Simplification for the Laplace-Beltrami Operator">
+<META NAME="keywords" CONTENT="nakagawa">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="nakagawa.css">
+</HEAD>
+<BODY bgcolor=white>
+<H1 ALIGN="CENTER">Simplification for the Laplace-Beltrami Operator</H1>
+<P ALIGN="CENTER"><STRONG>Shigekazu Nakagawa
+<!-- MATH: $\hspace{-1pt}^{*}$ -->
+<IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\hspace{-1pt}^{*}$">
+,
+        Hiroki Hashiguchi
+<!-- MATH: $\hspace{-1pt}^{**}$ -->
+<IMG
+ WIDTH="19" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\hspace{-1pt}^{**}$">
+,
+        Naoto Niki
+<!-- MATH: $\hspace{-1pt}^{**}$ -->
+<IMG
+ WIDTH="19" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\hspace{-1pt}^{**}$"></STRONG></P>
+<P ALIGN="CENTER"><STRONG>
+<!-- MATH: $\hspace{-1pt}^{*}$ -->
+<IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\hspace{-1pt}^{*}$"><FONT SIZE="-1">Kurashiki University of Science and the Arts</FONT>
+ <BR>
+ 
+<!-- MATH: $\hspace{-1pt}^{**}$ -->
+<IMG
+ WIDTH="19" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\hspace{-1pt}^{**}$"><FONT SIZE="-1">Science University of Tokyo</FONT></STRONG></P>
+<P ALIGN="LEFT"></P>
+
+<P>
+
+<H3>Abstract:</H3>
+<DIV>
+The zonal polynomials are
+symmetric polynomial functions
+each of which have to be an eigenfunction of a differential operator
+called the Laplace-Beltrami operator.
+They appear in the expansions
+in many distributions of statistics based on
+normal populations.
+
+<P>
+Formally speaking, the definition of the zonal polynomials is
+as follows.
+Let 
+<!-- MATH: $P_{n,\ell}$ -->
+<IMG
+ WIDTH="38" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$P_{n,\ell}$">
+be the set of all partitions of the non-negative
+integer <I>n</I> no longer than <IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\ell > 0$">,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+P_{n,\ell} =\{\lambda =(\lambda_{1}, \lambda_{2}, \ldots , \lambda_{\ell})
+\mid \sum_{i=1}^{\ell}\lambda_{i} = n,
+\,\lambda_{1} \geq \lambda_{2} \geq \cdots \geq \lambda_{\ell} \geq 0
+\},
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="550" HEIGHT="63"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}P_{n,\ell} =\{\lambda =(\lambda_{1}, \lambda_{2}, \ldots , \l...
+...{1} \geq \lambda_{2} \geq \cdots \geq \lambda_{\ell} \geq 0
+\},\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and <IMG
+ WIDTH="29" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$D_{\ell}$">
+be the Laplace-Beltrami operator
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+D_{\ell} =
+\sum_{i=1}^{\ell}x_{i}^{2}\frac{\partial^{2}}{\partial x_{i}^{2}}
++
+\sum_{i \neq j}\frac{x_{i}^{2}}{x_{i} - x_{j}}
+\frac{\partial}{\partial x_{i}}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="280" HEIGHT="66"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}D_{\ell} =
+\sum_{i=1}^{\ell}x_{i}^{2}\frac{\partial^{2}}{\par...
+...rac{x_{i}^{2}}{x_{i} - x_{j}}
+\frac{\partial}{\partial x_{i}}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Then, for given 
+<!-- MATH: $\lambda \in P_{n,\ell}$ -->
+<IMG
+ WIDTH="73" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\lambda \in P_{n,\ell}$">the zonal polynomial 
+<!-- MATH: $z(\lambda)$ -->
+<IMG
+ WIDTH="42" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$z(\lambda)$">in variables 
+<!-- MATH: $x_{1}, x_{2}, \ldots , x_{\ell}$ -->
+<IMG
+ WIDTH="114" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$x_{1}, x_{2}, \ldots , x_{\ell}$">
+is not only
+a homogeneous degree <I>n</I> symmetric polynomial but also
+an eigenfunction of <IMG
+ WIDTH="29" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$D_{\ell}$">,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+D_{\ell}z(\lambda) = d(\lambda)z(\lambda),
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="164" HEIGHT="36"
+ SRC="img11.gif"
+ ALT="\begin{displaymath}D_{\ell}z(\lambda) = d(\lambda)z(\lambda),\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where 
+<!-- MATH: $d(\lambda)$ -->
+<IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$d(\lambda)$">
+is the corresponding eigenvalue
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+d(\lambda) = \sum_{i=1}^{\ell}\lambda_{i}(\lambda_{i} + \ell - i -1).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="241" HEIGHT="63"
+ SRC="img13.gif"
+ ALT="\begin{displaymath}d(\lambda) = \sum_{i=1}^{\ell}\lambda_{i}(\lambda_{i} + \ell - i -1).\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+For a fixed basis of symmetric polynomials,
+
+<!-- MATH: $z(\lambda)$ -->
+<IMG
+ WIDTH="42" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$z(\lambda)$">
+is uniquely expressed under some regular conditions.
+For example,
+if 
+<!-- MATH: $\lambda = (\lambda_{1}, \lambda_{2}, \ldots , \lambda_{\ell})$ -->
+<IMG
+ WIDTH="168" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\lambda = (\lambda_{1}, \lambda_{2}, \ldots , \lambda_{\ell})$">runs through all partitions in 
+<!-- MATH: $P_{n,\ell}$ -->
+<IMG
+ WIDTH="38" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$P_{n,\ell}$">then
+
+<!-- MATH: $\{e(\lambda)
+= e_{1}^{\lambda_{1}}e_{2}^{\lambda_{2}}\cdots e_{\ell}^{\lambda_{\ell}}
+\mid \lambda \in P_{n,\ell}\}$ -->
+<IMG
+ WIDTH="276" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\{e(\lambda)
+= e_{1}^{\lambda_{1}}e_{2}^{\lambda_{2}}\cdots e_{\ell}^{\lambda_{\ell}}
+\mid \lambda \in P_{n,\ell}\}$">forms a basis where 
+<!-- MATH: $e_{1}, e_{2}, \cdots , e_{\ell}$ -->
+<IMG
+ WIDTH="108" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$e_{1}, e_{2}, \cdots , e_{\ell}$">
+are
+fundamental symmetric polynomials
+
+<!-- MATH: $e_{1} = x_{1} + x_{2} + \cdots + x_{\ell},
+e_{2} = x_{1}x_{2} + x_{1}x_{3} \cdots + x_{\ell -1}x_{\ell},
+\cdots ,
+e_{\ell} = x_{1}x_{2}\cdots x_{\ell}$ -->
+<IMG
+ WIDTH="623" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$e_{1} = x_{1} + x_{2} + \cdots + x_{\ell},
+e_{2} = x_{1}x_{2} + x_{1}x_{3} \cdots + x_{\ell -1}x_{\ell},
+\cdots ,
+e_{\ell} = x_{1}x_{2}\cdots x_{\ell}
+$">.
+If we take such 
+<!-- MATH: $\{e(\lambda) \mid \lambda \in P_{n,\ell}\}$ -->
+<IMG
+ WIDTH="145" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\{e(\lambda) \mid \lambda \in P_{n,\ell}\}$">as a basis then 
+<!-- MATH: $z(\lambda)$ -->
+<IMG
+ WIDTH="42" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$z(\lambda)$">
+can be expressed
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+z(\lambda) = \sum_{\mu \in P_{n,\ell}} c[\lambda, \mu]e(\mu^{\prime}),
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="205" HEIGHT="57"
+ SRC="img19.gif"
+ ALT="\begin{displaymath}z(\lambda) = \sum_{\mu \in P_{n,\ell}} c[\lambda, \mu]e(\mu^{\prime}),\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>(where 
+<!-- MATH: $\mu^{\prime}$ -->
+<IMG
+ WIDTH="22" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\mu^{\prime}$">
+means the conjugate of <IMG
+ WIDTH="18" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\mu$">)
+and the coefficients 
+<!-- MATH: $c[\lambda, \mu]$ -->
+<IMG
+ WIDTH="57" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$c[\lambda, \mu]$">
+are uniquely determined.
+
+<P>
+The problem is to find 
+<!-- MATH: $c[\lambda, \mu]$ -->
+<IMG
+ WIDTH="57" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$c[\lambda, \mu]$">
+for given <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.gif"
+ ALT="$\lambda$">and develop a symbolic algorithm to determine them.
+The key is simplifying <IMG
+ WIDTH="29" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$D_{\ell}$">,
+that is,
+finding a simple expression of <IMG
+ WIDTH="29" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$D_{\ell}$">
+in terms of
+
+<!-- MATH: $e_{i}\,(1 \leq i \leq \ell)$ -->
+<IMG
+ WIDTH="117" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$e_{i}\,(1 \leq i \leq \ell)$">.
+The relevant problem is for the case 
+<!-- MATH: $\ell \geq 4$ -->
+<IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\ell \geq 4$">while a symbolic algorithm based on a recurrence formula is well-known
+for the case 
+<!-- MATH: $\ell \leq 3$ -->
+<IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\ell \leq 3$">.
+
+<P>
+In this paper, we give
+a simplification for the Laplace-Beltrami operator for any <IMG
+ WIDTH="14" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\ell$">.
+Moreover, for <IMG
+ WIDTH="50" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\ell = 4$">
+we give
+a symbolic algorithm including
+sufficient conditions that the coefficients vanish
+to determine the coefficients of zonal polynomials.
+</DIV>
+<P>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

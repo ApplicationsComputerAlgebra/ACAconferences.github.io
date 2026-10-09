@@ -1,0 +1,37 @@
+"Wrapping Computer Algebra Components with Java and CORBA"
+
+Wolfgang Kuechlin
+Andreas Weber
+
+Universit\"at T\"ubingen
+Wilhelm-Schickard Institut f\"ur Informatik
+Symbolic Computation Group
+http://www-sr.informatik.uni-tuebingen.de/
+
+We address two software reuse problems in the field of Computer Algebra.
+First, we investigate an architecture for the  use of installed remote 
+systems via a Java based Web interface. Second, we show how, and at
+what levels of granularity, algebraic algorithms can be efficiently
+reused in other Computer Algebra systems by calling them as CORBA objects.
+The first problem is illustrated by a parallel Gr\"obner solver
+\cite{AmrheinGloorKuechlin:96} which is best installed on a shared memory
+parallel SPARC server. While the system is portable to a large degree, porting
+parallel software is generally much more problematic than sequential software.
+Therefore it is advantageous to access the remote parallel server via
+a Java based Web interface. Our interface includes data format conversion
+routines for polynomials based on the MathBus protocol. The interface
+comes in two flavors, one for interactive GUI access, and one for
+scripting access from source code. For a more detailed exposition see
+\cite{WeberKuechlinEggers:98}.
+The second problem is illustrated by the task of extending the Gr\"obner
+basis software to include parametric Gr\"obner bases. The new algorithm
+needs g.c.d. computations on multivariate polynomials which already
+exist in various other systems, such as SACLIB. However, the memory 
+management of these systems is incompatible with ours. Therefore we wrapped
+the necessary SACLIB algorithms as CORBA objects, using the ILU implementation
+of CORBA, and thus reused the SACLIB code  rather than reimplementing the
+algorithms. We show detailed timings indicating the performance and overhead
+of this approach. Overall, we found that we could efficiently reuse
+algorithms at a granularity down to a few tens of milliseconds.
+For a more detailed exposition see \cite{WeberKuechlinHoss:98}.
+

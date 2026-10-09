@@ -1,0 +1,62 @@
+\documentclass[11pt, draft]{article}
+\topmargin=0mm
+\oddsidemargin=0mm
+\textwidth170mm
+\textheight230mm
+\begin{document}
+%\pagestyle{empty}
+\language=0
+%\hyphenation{}
+
+\begin{center}
+{\bf
+MORPHISMS AND BINOMIAL IDEALS IN POLYNOMIAL AND DIFFERENTIAL
+POLYNOMIAL RINGS}\\
+\vspace {0.3cm}
+{Giuseppa Carra' Ferro}\\
+{\it \small Department of Mathematics and Computer Science,
+University of Catania, Viale Andrea Doria 6
+
+95125 Catania, Italy, e-mail: carra@dmi.unict.it
+}
+\end{center}
+\newtheorem{definition}{DEFINITION}
+\newtheorem{theorem}{THEOREM}
+\newtheorem{example}{EXAMPLE}
+\newtheorem{remark}{REMARK}
+\newtheorem{proposition}{PROPOSITION}
+\newtheorem{corollary}{COROLLARY}
+\vspace {1.0cm}
+Binomial ideals in polynomial rings is one of the most studied subjects
+in the last years, since they are simpler than generic ideals but carry
+more informations than monomial ideals.
+Let $I$ be a nonzero ideal in $A$=$K[X_1,\ldots,X_n]$ and let $\sigma$ be a
+term ordering on $T_{A}$. Let
+$F$=$\{f_{1},\ldots,f_{r}\}$ be the reduced Gr\"{o}bner basis of $I$
+with respect to  $\sigma$ and let $f_{i}=\sum_{j=1,\ldots,s(i)}c_{ij}t_{ij}+
+c_{i0}$, $c_{ij} \in K^{*}$, $c_{i0} \in K$, $t_{ij} \in T_{A}$ and
+$t_{ij} \neq 1$ for all $i=1,\ldots,r$ and $j=1,\ldots,r(i)$.
+Let $m=\sum_{i=1,\ldots,r}s(i)$. Let $\varphi_{I}$ be the map from
+$B$=$K[Y_{11},\ldots,Y_{1s(1)},\ldots,Y_{r1},\ldots,Y_{rs(r)}]$=
+$K[Y_1,\ldots,Y_m]$ to $A$ defined by $\varphi(Y_{ij})=t_{ij}$ for all
+$i=1,\ldots,r$ and $j=1,\ldots,r(i)$.
+$\varphi_{I}$ defines a ring homorphism.
+Let $J_{\varphi_{I}}$=($Yij-tij$: $i=1,\ldots,r$ and $j=1,\ldots,r(i)$) in
+$K[Y_{11},\ldots,Y_{1s(1)},\ldots,Y_{r1},\ldots,Y_{rs(r)},X_1,\ldots,X_n]$.
+Let $\tau$ be an elimination term ordering with $X_{h} >_{\tau} Y_{ij}$ for
+all $h=1,\ldots,n$, $i=1,\ldots,r$ and $j=1,\ldots,r(i))$, such that its restriction to
+$T_{A}$ is $\sigma$. Let $H(I)=J_{\varphi_{I}} \cap B$.
+It is well known that $H(I)$ is a prime binomial ideal and
+$H(I)=Ker(\varphi_{I})$.\\
+$\varphi_{I}$ defines a polynomial morphism $\phi_{I}$ from $A^{n}_{K}$
+to $A^{m}_{K}$, such that
+$$\phi_{I} (X_1,\ldots,X_n)=
+(Y_{11},\ldots,Y_{1s(1)},\ldots,Y_{r1},\ldots,Y_{rs(r)}).$$
+The closure of $\phi_{I} (A^{n}_{K})$ in the Zariski
+topology is a binomial variety, whenever $\phi_{I} (A^{n}_{K}) \neq A^{m}_{K}$.
+The polynomial morphism $\phi_{I}$ defines a birational isomorphism between the
+affine algebraic set $V(I)$ in $A^{n}_{K}$ and an affine algebraic set
+in $A^{m}_{K}$, which is intersection of a binomial affine algebraic set
+and linear spaces. This result can be extended to the case of differential
+affine algebraic sets.
+\end{document}

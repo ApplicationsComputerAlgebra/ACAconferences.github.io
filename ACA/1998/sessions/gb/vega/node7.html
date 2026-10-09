@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>GPT Strategy.</TITLE>
+<META NAME="description" CONTENT="GPT Strategy.">
+<META NAME="keywords" CONTENT="vega">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="vega.css">
+</HEAD>
+<BODY bgcolor=white>
+
+<H2><A NAME="SECTION00024000000000000000">&#160;</A><A NAME="GPT">&#160;</A>
+<BR>
+GPT Strategy.
+</H2>
+  
+The strategy, here denoted GPT, was introduced in [<A
+ HREF="node15.html#GPT88">6</A>] in order    
+to avoid the growth of the coefficients when using Buchberger algorithm to  
+compute a Gr&#246;bner Basis of a multivariate polynomial ideal. The main  
+idea is to keep track, into the different steps of Buchberger algorithm,  
+of a list of potential factors (presented in factored form) such that in  
+many cases simplification is posible by dividing by the ``greatest between  
+the common divisors that are easy to compute" and in this way to avoid  
+gcd computations.   
+  
+In our case, it seems that to apply this strategy is even more natural   
+than to apply it to avoid the growing of the integers as it was the  
+initial motivation in [<A
+ HREF="node15.html#GPT88">6</A>]. In fact the list of potential factors,  
+in our case and working in 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}(\underline{T})[\underline{X}$ -->
+<IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}(\underline{T})[\underline{X}$">], is going to  
+give us a set of open conditions on the parameters such that if they are  
+verified it is clear that the specialization of the generic Gr&#246;bner  
+Basis is going to give us a Gr&#246;bner Basis of the specialized ideal.  
+  
+The example in [<A
+ HREF="node15.html#GPT88">6</A>] is very clear about how to proceed: if the  
+initial system is   
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+g_0=ax^3+byz+c,\quad g_1=dxy+ez^2,\quad g_2=fxz+gy
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="394" HEIGHT="30"
+ SRC="img84.gif"
+ ALT="\begin{displaymath}g_0=ax^3+byz+c,\quad g_1=dxy+ez^2,\quad g_2=fxz+gy\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+then the list of open conditions is given by   
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\{a,d,f,g,c,b^2e^2,b^2e\}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="153" HEIGHT="31"
+ SRC="img85.gif"
+ ALT="\begin{displaymath}\{a,d,f,g,c,b^2e^2,b^2e\}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and when all these polynomials in the parameters are different from 0,    
+the  specialization of the generic Gr&#246;bner Basis is  a Gr&#246;bner Basis  
+of the specialized ideal.  
+   
+In fact this is no more that a lazy application of the ``Dynamic Evaluation   
+Method" of D. Duval (see [<A
+ HREF="node15.html#Duv95">4</A>]) but following only one <B>open</B>  
+branch. The decision to make at this point is how much do we want to have  
+simplified the list of open conditions.  
+  
+The case of only one parameter is especially suited to apply the  
+so called GPT strategy since all the computations with the parameters  
+reduce to compute gcd's of univariate polynomials which is not very  
+expensive.  
+  
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

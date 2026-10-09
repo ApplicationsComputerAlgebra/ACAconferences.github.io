@@ -1,0 +1,3 @@
+"Polynomial Conditions on Spectra of Real, Symmetric Toeplitz Matrices"
+  David H. Wood
+  wood@udel.edu

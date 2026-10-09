@@ -1,0 +1,26 @@
+Form for proposing a special session for the
+IMACS Conference on Applications of Computer Algebra
+
+If you wish to organize a special session, then please fill out the
+following form.  Your proposal will be reviewed by the organizing
+committee and you will be notifed of the results as soon as possible.
+
+Please enter the organizers names, email addresses and session title:
+
+Organizer =
+Email =
+
+Organizer =
+Email =
+
+Title =
+
+Abstract:
+
+
+
+Tentative list of speakers to be invited:
+
+
+
+Please mail the completed form to aca@math.unm.edu

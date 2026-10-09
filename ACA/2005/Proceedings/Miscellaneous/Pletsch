@@ -1,0 +1,41 @@
+Counting Young Group Double Cosets with Computer Algebra
+
+Bill Pletsch
+Albuquerque Technical Vocational Institute
+
+Until the advent of computer algebra, the theory of double cosets has been
+restricted to a few elegant but computationally impossible theorems.
+Impossible in the sense that in principle the calculation can be done but it
+will take ten thousand years.  Today, using Computer Algebra much can be
+calculated quickly.  Using Macsyma and Maple in the special case of Young Group
+double cosets, we will see just how valuable Computer Algebra can be.
+
+We will focus on the use of CA in three areas of interest: the initial
+calculations, the generation of novel double coset symbols, and the
+generalization of the method of successive subtractions.
+
+Without CA the new insights into the theory of double cosets would never have
+been discovered.  There was no particular reason to believe that the long
+arduous calculations required to compute a each double coset number would yield
+any fruit.  Thanks to the power of MACSYMA these calculations were simple to
+conduct.  The result was a breakthrough that immediately revealed a multitude
+of patterns.
+
+In follow-up research a novel system of double coset symbols was developed.
+The novel system uses a special canonical form that can be expressed in Maple
+as a subroutine.  Using this subroutine and other Maple subroutines, lists of
+these symbols can be quickly generated.
+
+In the initial calculations, successive subtractions of the data eventually
+yielded a constant: thus uncovering a data fitting polynomial (in this case a
+quartic).   The initial calculations used successive subtractions to point at
+the pattern, but the pattern itself is not a proof.   However, the method of
+successive subtractions also points to the next step. Using the lists of
+DC-symbols and Maple once again the method of successive subtractions is
+generalized by successive subtractions of sets.  The patterns revealed resulted
+in a series of proofs.
+
+Time permitting; sketches of the proofs will be given with special emphasis on
+the roles of Macsyma and Maple.  It is easy to see that in all these cases, CA
+was a critical aid in speeding the requisite insight for the next leap in
+theory.

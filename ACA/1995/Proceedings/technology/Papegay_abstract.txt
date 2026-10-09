@@ -1,0 +1,24 @@
+Yves Papegay, Sophia, INRIA, France  (Yves.Papegay@sophia.inria.fr)
+
+Title: "Design and Performance Analysis of Optical Instruments with 
+        Computer Algebra"
+
+Abstract:  This talk describes a computer algebra package to help the design 
+           and performance analysis of optical instruments. 
+           The design of a complex optical instrument, such as an 
+           interferometer, leads to the study of a very large model 
+           represented as a set of equations that relate the parameters of 
+           the instrument. The problem is then to find some optimal values 
+           of these parameters with respect to some performances.
+           Due to the complexity of the models involved, there is no 
+           completely automatic method to solve this optimal design problem. 
+           We show how computer algebra can be an invaluable tool in the 
+           design process: 
+           - to generate the model from a physical description of the 
+             instrument (by applying suitable physical relations)
+           - to show how some parameters or performances can be expressed as
+             functions of other parameters, insuring the validity of each
+             physical relation (that comes with a set of inequations that
+             describe its domain of validity) 
+           - to generate some specialized numerical code when a 
+             symbolic treatment is no more possible.

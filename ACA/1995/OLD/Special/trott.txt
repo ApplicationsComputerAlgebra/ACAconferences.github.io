@@ -1,0 +1,5 @@
+        COMPUTER ALGEBRA APPLICATIONS of STOCHASTIC METHODS 
+             Finance, Wiener and Ito Integration, etc.
+                       Michael Trott
+                Wolfram Research Incorporated
+                        mtrott@wri.com 

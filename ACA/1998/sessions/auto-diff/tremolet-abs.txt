@@ -1,0 +1,24 @@
+"Adjoint parallel code"
+
+Yannick Tremolet 
+Environmental Modeling Center
+National Center for Environmental Prediction
+W/NP2, WWB, Room 207
+Washington, DC 20233
+
+
+Adjoint models are the basis of variational data assimilation both
+in meteorology and oceanography. Since these applications require a
+lot of computational power and memory, in the past few years many
+models have been developed for distributed memory parallel computers.
+We will present the methodology used at NCEP to derive the
+adjoint of the parallel spectral model which was written using a
+message passing library.
+
+We will describe the impact of the parallelism in the code on the 
+derivation of the adjoint and show how to obtain the adjoint of a code
+containing explicit message passing instructions, including point to
+point communications and group or global communications. We will then 
+present the automatic differentiation tool Odyssee and how it was
+possible to use it for our purpose. Finally, we will give some  
+validation results and performances of the derived code.

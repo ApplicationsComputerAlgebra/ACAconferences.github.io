@@ -1,0 +1,9 @@
+Constraint Hamiltonian Dynamics and Involutive Bases
+
+Vladimir Gerdt (JINR, Dubna, Russia)
+
+In this talk we apply the algorithmic techniques of commutative computer
+algebra based on the use of involutive polynomial bases to finite-dimensional
+constrained Hamiltonian systems of polynomial type.  We show that involutive
+bases allows one to compute the complete set of constraints and separate them
+into the first and second classes in accordance to the Dirac classification.

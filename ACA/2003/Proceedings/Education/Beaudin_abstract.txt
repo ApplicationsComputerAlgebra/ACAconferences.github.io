@@ -1,0 +1,16 @@
+Title:   Give Mathematics a Chance! (ACA-03  Education Session)
+Author:  Michel Beaudin, Ecole de technologie superieure, Montreal, Canada
+email:   michel.beaudin@etsmtl.ca
+
+Abstract
+
+Why is technology (CAS) dividing mathematics teachers into (at least) two
+groups?  Those (this is our case) who love to use it and think that software
+like Derive and the TI-92 Plus/Voyage 200 are very good tools for teaching and
+learning mathematics and those who think that students should learn to do
+everything by hand, first, before using Computer Algebra Systems.  We don't
+know the answer but we are going to give examples of how both (use of a CAS and
+paper/pencil techniques) can be happily joined.  There is no magic way to
+teaching but trying to convince our (engineering) students that mathematics are
+useful comes easier with a good use of technology.  Live examples will be
+performed, originating from students' questions.

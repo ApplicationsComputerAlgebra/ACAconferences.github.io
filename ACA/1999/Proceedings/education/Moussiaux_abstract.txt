@@ -1,0 +1,12 @@
+Alain Moussiaux* (Belgium), amoussia@fundp.ac.be
+CONVODE: A Reduce package for solving differential equations
+
+CONVODE is a REDUCE package that resolves ODE, PDE, systems of ODE, PDE, ...
+The use of CONVODE is very simple. The package is constructed on classical
+methods for finding solutions and also to keep its user aware of the solving
+process. By design, CONVODE is not a "black box" providing a solution without
+comments. In the opposite, we know the way followed by CONVODE to provide a
+solution. We do not claim that this way is always the best but we want also
+preserve the "pedagogical"' look of our package for use by students. Convode
+may also be used via E-mail without problems,see:
+http://www.physique.fundp.ac.be/physdpt/administration/convode.html

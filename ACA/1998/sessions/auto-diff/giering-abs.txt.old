@@ -1,0 +1,37 @@
+"Using TAMC to generate efficient adjoint code"
+
+
+Ralph Giering, Thomas Kaminski* 
+
+Ralf Giering 
+Center for Global Change Science			
+Department of Earth, Atmospheric, and Planetary Sciences
+Massachusetts Institute of Technology	
+Cambridge, MA 02139, USA.
+
+Thomas Kaminski 
+Max-Planck-Institut fur Meteorologie
+Bundesstr. 55, 20146 Hamburg, Germany
+
+
+
+Adjoint models are increasingly being used in computational fluid
+dynamics. Typical applications are data assimilation and sensitivity
+analysis. Adjoint code evaluates derivatives applying the reverse mode
+of automatic differentiation.
+
+TAMC (Tangent linear and Adjoint Model Compiler) is a source-to-source
+translator for Fortran programs to generate derivative computing code
+operating in forward or reverse mode.  The basic algorithms of adjoint
+code generation used by TAMC will be presented.  A mayor challenge of
+adjoint code is providing intermediate results required e.g. to
+evaluate the derivative of non linear operations.  Efficient adjoint
+code uses a combination of recalculating and restoring from a tape
+written previously; both strategies can be applied by TAMC.
+
+The performance of TAMC generated code will be compared to hand coded
+counterparts for functions in the MINPACK-2 collection.  Adjoint
+models have been constructed by TAMC for large scale applications in
+dynamic meteorology and oceanography; an implemented check-pointing
+technic reduces the memory requirements significantly.  Implementation
+and performance of some adjoint models will be discussed.

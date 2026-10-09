@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Solution of a polynomial system of equations</TITLE>
+<META NAME="description" CONTENT="Solution of a polynomial system of equations">
+<META NAME="keywords" CONTENT="pan">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL="STYLESHEET" HREF="pan.css">
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="pan.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html51"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html49"
+ HREF="pan.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html43"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html52"
+ HREF="node5.html">Approximate polynomial gcds</A>
+<B> Up:</B> <A NAME="tex2html50"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html44"
+ HREF="node3.html">Polynomial rootfinding</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00040000000000000000">&#160;</A><A NAME="sec4">&#160;</A>
+<BR>
+Solution of a polynomial system of equations
+</H1>
+
+<P>
+The next problem, highly important in computer algebra, is  a natural
+extension of Problem 3.1.
+
+<P>
+Problem 4.1, 
+
+solution of
+a  polynomial system of  equations.
+
+Given a positive <I>b</I> , a positive integer <I>D</I> ,
+a vector norm <IMG
+ WIDTH="39" HEIGHT="37"
+ SRC="img30.gif"
+ ALT="$\vert\vert \cdot \vert\vert$">,
+and the coefficients of a system of <I>n</I> polynomial equations, 
+
+<P>
+
+<P ALIGN="RIGHT"><A NAME="equ4.1">&#160;</A><IMG
+ WIDTH="581" HEIGHT="45"
+ SRC="img31.gif"
+ ALT="\begin{equation}
+p_i (x_1, \dots, x_n)=0, ~i=1, \ldots, n,
+\end{equation}">
+<BR></P>
+in <I>n</I>  
+ variables <IMG
+ WIDTH="84" HEIGHT="33"
+ SRC="img32.gif"
+ ALT="$x_1, \dots, x_n$">
+having at most <I>D</I> unknown common roots, 
+<IMG
+ WIDTH="155" HEIGHT="43"
+ SRC="img33.gif"
+ ALT="$Z=( {\bf z}^{(1)}, \ldots, {\bf z}^{(d)} )$">,
+<IMG
+ WIDTH="329" HEIGHT="49"
+ SRC="img34.gif"
+ ALT="${\bf z}^{(i)} = (z_1^{(i)}, \dots, z_n^{(i)}), ~ i=1, \dots, d;~ d \le D $">,
+compute  approximations 
+<IMG
+ WIDTH="103" HEIGHT="43"
+ SRC="img35.gif"
+ ALT="$\tilde{{\bf z}}^{(1)}, \ldots, \tilde{{\bf z}}^{(d)}$">
+to the roots satisfying 
+<IMG
+ WIDTH="151" HEIGHT="43"
+ SRC="img36.gif"
+ ALT="$\vert\vert \tilde{{\bf z}}^{(i)} -{\bf z}^{(i)} \vert\vert \le 2^{-b}$">max  <IMG
+ WIDTH="192" HEIGHT="43"
+ SRC="img37.gif"
+ ALT="$ \{ 1, \vert\vert {\bf z}^{(i)} \vert\vert \}, ~ i=1, \ldots, n$">.
+
+<P>
+Problem 4.1 is much harder  than Problem 3.1. 
+The known upper and lower bounds even  on the
+sequential  arithmetic computational cost of its solution
+ remain far apart  from each other; namely, they are <IMG
+ WIDTH="69" HEIGHT="40"
+ SRC="img38.gif"
+ ALT="$O_A(D^3)$">[<A
+ HREF="node7.html#Ren89">Ren89</A>] and <IMG
+ WIDTH="48" HEIGHT="37"
+ SRC="img39.gif"
+ ALT="$\Omega(D)$">,
+respectively.
+
+<P>
+Practically, one frequently needs a solution of various subproblems
+of Problem 4.1,  such as the following ones.
+
+<P>
+Problem 4.2,
+counting the roots. 
+Compute the number of the roots of  system (<A HREF="node4.html#equ4.1">4.1</A>).
+
+<P>
+Problem 4.3,
+counting the real  roots. 
+Compute the number of the real  roots of  system (<A HREF="node4.html#equ4.1">4.1</A>).
+
+<P>
+Problem 4.4,
+counting the   roots that lie in a fixed   polytop. 
+Compute the number of   the roots of system (<A HREF="node4.html#equ4.1">4.1</A>)
+lying in a fixed polytop  bounded by <I>H</I> hyperplanes in the complex <I>n</I> -dimensional space <IMG
+ WIDTH="28" HEIGHT="18"
+ SRC="img40.gif"
+ ALT="$\mathbb{ C} ^n$">.
+
+<P>
+As a particular case of Problem 4.4 for <I>H</I>=2<I>n</I> ,
+one may compute the number of nearly real roots  having imaginary parts
+ of all their <I>n</I>  coordinates  at the distance at
+most <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">from 0, for a fixed small positive <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">.
+
+<P>
+Problem 4.5.
+
+Approximate all roots of  system  (<A HREF="node4.html#equ4.1">4.1</A>)  that lie
+in a fixed polytop  in <IMG
+ WIDTH="28" HEIGHT="18"
+ SRC="img40.gif"
+ ALT="$\mathbb{ C} ^n$">bounded by  <I>H</I>  hyperplanes in <IMG
+ WIDTH="28" HEIGHT="18"
+ SRC="img40.gif"
+ ALT="$\mathbb{ C} ^n$">.
+
+
+<P>
+Problem 4.6.
+
+Approximate a root of  the system  (<A HREF="node4.html#equ4.1">4.1</A>)
+maximizing the  value <IMG
+ WIDTH="51" HEIGHT="37"
+ SRC="img42.gif"
+ ALT="$\vert h({\bf x})\vert$">of a fixed polynomial 
+<IMG
+ WIDTH="169" HEIGHT="37"
+ SRC="img43.gif"
+ ALT="$h({\bf x}) = h(x_1, \ldots, x_n)$">.
+
+<P>
+Problem 4.7.
+
+Approximate a root of  the system  (<A HREF="node4.html#equ4.1">4.1</A>)
+minimizing the  value <IMG
+ WIDTH="51" HEIGHT="37"
+ SRC="img42.gif"
+ ALT="$\vert h({\bf x})\vert$">of a 
+ fixed polynomial <IMG
+ WIDTH="41" HEIGHT="37"
+ SRC="img44.gif"
+ ALT="$h({\bf x})$">.
+
+<P>
+Until recently, <IMG
+ WIDTH="69" HEIGHT="40"
+ SRC="img38.gif"
+ ALT="$O_A(D^3)$">was the record known upper bound  on the
+sequential
+ arithmetic complexity
+of all these problems, even assuming generic system (<A HREF="node4.html#equ4.1">4.1</A>) whose 
+solution is only sought for  an algebraically open set in the
+input
+ coefficient space. 
+A  substantial asymptotic acceleration, however, was  achieved in  our joint work with
+Bernard Mourrain [<A
+ HREF="node7.html#MP98">MP98</A>],
+  [<A
+ HREF="node7.html#MP98a">MP98a</A>], [<A
+ HREF="node7.html#MPa">MP,a</A>] for Problems 4.2-4.7.
+We summarize this progress in the next theorem.
+
+<P>
+<P>
+<DIV><A NAME="the4.1"><B>T<SMALL>HEOREM </SMALL> 4.1</B></A> &nbsp; 
+There are algorithms supporting the following arithmetic cost estimates :
+<IMG
+ WIDTH="132" HEIGHT="40"
+ SRC="img45.gif"
+ ALT="$O_A(3^n D^2 \log D)$">for Problems 4.2 and 4.3,
+<IMG
+ WIDTH="149" HEIGHT="40"
+ SRC="img46.gif"
+ ALT="$O_A (3^n H D^2 \log D)$">for Problem 4.4, 
+<IMG
+ WIDTH="245" HEIGHT="40"
+ SRC="img47.gif"
+ ALT="$O_A (3^n (\delta +H) ( D^2 \log D) \log b) $">
+for Problem 4.5, and 
+<IMG
+ WIDTH="162" HEIGHT="42"
+ SRC="img48.gif"
+ ALT="$O((D^2 \log D) \log^2 b)$">for Problems 4.6 and 4.7, assuming all these problems for  generic polynomial  system 
+of equations
+(<A HREF="node4.html#equ4.1">4.1</A>).</DIV><P></P>
+
+<P>
+The  algorithms of [<A
+ HREF="node7.html#MP98">MP98</A>], [<A
+ HREF="node7.html#MP98a">MP98a</A>], [<A
+ HREF="node7.html#MPa">MP,a</A>]
+supporting Theorem <A HREF="node4.html#the4.1">4.1</A>
+combine several advanced algebraic and numerical techniques involving dual spaces of 
+linear forms (maps) on the  primal
+linear space  of polynomials in <IMG
+ WIDTH="28" HEIGHT="18"
+ SRC="img40.gif"
+ ALT="$\mathbb{ C} ^n$">,
+algebraic 
+residues, structured matrices, and the iterative processes of repeated 
+squaring and sign 
+iteration  in the primal and dual spaces.
+ So far, involvement of such sophisticated tools slowed down 
+the experimental testing and practical
+implementation  of  the algorithms, but 
+their simplified versions for Problems 4.6 and 4.7 
+(supporting the bounds <IMG
+ WIDTH="114" HEIGHT="40"
+ SRC="img49.gif"
+ ALT="$O_A(D^2 \log D)$">in terms of <I>D</I> ) have been successfully tested numerically
+(cf.  [<A
+ HREF="node7.html#BMP98">BMP98</A>]). 
+
+<P>
+Some distinct algorithms for the 
+fast and memory space efficient solution of sparse
+polynomial systems (<A HREF="node4.html#equ4.1">4.1</A>)
+were presented in [<A
+ HREF="node7.html#EP97">EP97</A>].
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html51"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html49"
+ HREF="pan.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html43"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html52"
+ HREF="node5.html">Approximate polynomial gcds</A>
+<B> Up:</B> <A NAME="tex2html50"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html44"
+ HREF="node3.html">Polynomial rootfinding</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

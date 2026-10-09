@@ -1,0 +1,28 @@
+   * Bruno Buchberger and Tudor Jebelean RISC Linz, Austria
+     Theorema: Application of Mathematica for Proof Training
+
+     The Thereoma Project at the Research Institute for Symbolic Computation
+     aims at expanding computer algebra systems by computer-support for
+     mathematical proving. The present version of Theorema is based on
+     Mathematica 3.0. One of the possible applications of Theorema is
+     computer-supported education in the art of proving.
+     In fact, it seems that systematic proof training is a problem in most
+     of the math and computer science curriculua worldwide. The reason for
+     this is twofold: First, proof training needs an extensive individual
+     interaction between teacher and student and, hence, is too
+     time-consuming for being considered in the curricula. Second, the proof
+     formalisms developed in logic books are not sufficient and too little
+     specific as an introduction and basis for practical proof training and
+     very little material is available on systematic proof techniques for
+     the various special areas of mathematics.
+     The Theorema project emphasizes the automatic generation of the
+     (routine parts of) mathematical proofs in natural language and in a
+     well structured form that imitates human proving in the various areas
+     of mathematics. Thus, the provers developed in the frame of the
+     Theorema project lend themselves to be used as a computer-based
+     training tool for teaching students the art of proving. In the talk we
+     report on first experiences of using the Theorema software for
+     supporting our proof training courses, which we organize at RISC as a
+     part of our diploma and PhD program and also on a similar teaching
+     experiment using Theorema in an intensive course at the Hirshima
+     University.

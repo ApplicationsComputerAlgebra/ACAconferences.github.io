@@ -1,0 +1,163 @@
+
+<H2><A NAME="SECTION00051000000000000000"><tex2html_anchor_invisible_mark></A><A NAME="precision"><tex2html_anchor_mark></A><BR>
+Hardness of the precision problem
+</H2>
+We have described the stability methodology for various algorithms. 
+At the present stage of development, bounds are lacking for the point where
+the execution path becomes the same as that made by an exact approach or where the correct support appears. This is an important issue.  The following simple example illustrates one of the difficulties in obtaining such a bound and in particular how a bound can depend upon the input.
+
+<P>
+Consider the algorithm, <tex2html_image_mark>#tex2html_wrap_inline1777#:
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Input</TD>
+<TD ALIGN="LEFT"><I>A</I>, <I>B</I></TD>
+</TR>
+<TR><TD ALIGN="LEFT">If</TD>
+<TD ALIGN="LEFT"><I>A</I>-<I>B</I>=0 then 1 else 0.</TD>
+</TR>
+</TABLE></DIV>Suppose that the inputs <I>A</I> and <I>B</I> are positive real numbers.
+By the stabilization methodology, <tex2html_verbatim_mark>#math147#<tex2html_image_mark>#tex2html_wrap_inline1793# (or its equivalent) is:
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Input</TD>
+<TD ALIGN="LEFT"><tex2html_verbatim_mark>#math148#<tex2html_image_mark>#tex2html_wrap_inline1795#, <tex2html_image_mark>#tex2html_wrap_inline1797#</TD>
+</TR>
+<TR><TD ALIGN="LEFT">If</TD>
+<TD ALIGN="LEFT"><tex2html_verbatim_mark>#math149#<tex2html_image_mark>#tex2html_wrap_inline1799# then 1 else 0.</TD>
+</TR>
+</TABLE></DIV>where we are neglecting roundoff errors from performing interval arithmetic.
+
+<P>
+For input intervals, let <tex2html_image_mark>#tex2html_wrap_inline1805# be a floating-point approximation to <I>A</I>with precision <tex2html_image_mark>#tex2html_wrap_inline1809# and <tex2html_verbatim_mark>#math150#<tex2html_image_mark>#tex2html_wrap_inline1811# be 
+an associated error, say <tex2html_verbatim_mark>#math151#<tex2html_image_mark>#tex2html_wrap_inline1813#, where 
+<I>e</I>(<I>A</I>) is the exponent of <I>A</I> in base 10, namely 
+<tex2html_verbatim_mark>#math152#<tex2html_image_mark>#tex2html_wrap_inline1821#,
+where <tex2html_verbatim_mark>#math153#<tex2html_image_mark>#tex2html_wrap_inline1823# is the largest integer less than or equal to <I>u</I>.
+Similarly define <tex2html_verbatim_mark>#math154#<tex2html_image_mark>#tex2html_wrap_inline1827# for <I>B</I>.
+
+<P>
+Say <I>A</I>=0.11 and <I>B</I>=0.10.  Obviously <tex2html_verbatim_mark>#math155#<tex2html_image_mark>#tex2html_wrap_inline1835#.
+What is 
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math156#
+
+<tex2html_image_mark>#displaymath1078#
+</DIV><BR CLEAR="ALL">
+<P></P>
+For <tex2html_image_mark>#tex2html_wrap_inline1837#,
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"><tex2html_verbatim_mark>#math157#<tex2html_image_mark>#tex2html_wrap_inline1839#</TD>
+<TD ALIGN="LEFT">=</TD>
+<TD ALIGN="LEFT"><tex2html_verbatim_mark>#math158#<tex2html_image_mark>#tex2html_wrap_inline1843#</TD>
+<TD ALIGN="LEFT"><tex2html_image_mark>#tex2html_wrap_inline1845#</TD>
+<TD ALIGN="LEFT"><tex2html_verbatim_mark>#math159#<tex2html_image_mark>#tex2html_wrap_inline1847#</TD>
+<TD ALIGN="LEFT">=</TD>
+<TD ALIGN="LEFT"><tex2html_verbatim_mark>#math160#<tex2html_image_mark>#tex2html_wrap_inline1851#</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><tex2html_verbatim_mark>#math161#<tex2html_image_mark>#tex2html_wrap_inline1853#</TD>
+<TD ALIGN="LEFT">=</TD>
+<TD ALIGN="LEFT">0</TD>
+<TD ALIGN="LEFT"><tex2html_image_mark>#tex2html_wrap_inline1859#</TD>
+<TD ALIGN="LEFT"><tex2html_verbatim_mark>#math162#<tex2html_image_mark>#tex2html_wrap_inline1861#</TD>
+<TD ALIGN="LEFT">=</TD>
+<TD ALIGN="LEFT">10<SUP>-1</SUP></TD>
+</TR>
+</TABLE></DIV>Hence, for <tex2html_image_mark>#tex2html_wrap_inline1867#:
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math163#
+
+<tex2html_image_mark>#displaymath1079#
+</DIV><BR CLEAR="ALL">
+<P></P>
+and so <tex2html_verbatim_mark>#math164#<tex2html_image_mark>#tex2html_wrap_inline1869# = 1,
+the wrong answer.
+
+<P>
+
+<P></P>
+
+<P>
+For <tex2html_image_mark>#tex2html_wrap_inline1873#,
+
+<P>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"><tex2html_verbatim_mark>#math165#<tex2html_image_mark>#tex2html_wrap_inline1875#</TD>
+<TD ALIGN="LEFT">=</TD>
+<TD ALIGN="LEFT"><tex2html_verbatim_mark>#math166#<tex2html_image_mark>#tex2html_wrap_inline1879#</TD>
+<TD ALIGN="LEFT"><tex2html_image_mark>#tex2html_wrap_inline1881#</TD>
+<TD ALIGN="LEFT"><tex2html_verbatim_mark>#math167#<tex2html_image_mark>#tex2html_wrap_inline1883#</TD>
+<TD ALIGN="LEFT">=</TD>
+<TD ALIGN="LEFT"><tex2html_verbatim_mark>#math168#<tex2html_image_mark>#tex2html_wrap_inline1887#</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><tex2html_verbatim_mark>#math169#<tex2html_image_mark>#tex2html_wrap_inline1889#</TD>
+<TD ALIGN="LEFT">=</TD>
+<TD ALIGN="LEFT">0.01</TD>
+<TD ALIGN="LEFT"><tex2html_image_mark>#tex2html_wrap_inline1895#</TD>
+<TD ALIGN="LEFT"><tex2html_verbatim_mark>#math170#<tex2html_image_mark>#tex2html_wrap_inline1897#</TD>
+<TD ALIGN="LEFT">=</TD>
+<TD ALIGN="LEFT"><tex2html_image_mark>#tex2html_wrap_inline1901#</TD>
+</TR>
+</TABLE></DIV>Hence, for <tex2html_image_mark>#tex2html_wrap_inline1903#: 
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math171#
+
+<tex2html_image_mark>#displaymath1080#
+</DIV><BR CLEAR="ALL">
+<P></P>
+and so <tex2html_verbatim_mark>#math172#<tex2html_image_mark>#tex2html_wrap_inline1905# 
+= 1, still wrong.
+
+<P>
+
+<P></P>
+
+<P>
+For <tex2html_verbatim_mark>#math173#<tex2html_image_mark>#tex2html_wrap_inline1909#:
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math174#
+
+<tex2html_image_mark>#displaymath1081#
+</DIV><BR CLEAR="ALL">
+<P></P>
+and so <tex2html_verbatim_mark>#math175#<tex2html_image_mark>#tex2html_wrap_inline1911# = 0,
+the right answer.
+
+<P>
+
+<P></P>
+
+<P>
+Thus <tex2html_verbatim_mark>#math176#<tex2html_image_mark>#tex2html_wrap_inline1915#outputs the correct answer when <tex2html_verbatim_mark>#math177#<tex2html_image_mark>#tex2html_wrap_inline1917# but not before.
+If <tex2html_verbatim_mark>#math178#<I>A</I><SUB><I>n</I></SUB>=0.1+10<SUP>-<I>n</I></SUP> and  <I>B</I><SUB><I>n</I></SUB>=0.1 the
+same reasoning shows that
+<BR><P></P>
+<DIV ALIGN="CENTER"><tex2html_verbatim_mark>#math179#
+
+<tex2html_image_mark>#displaymath1082#
+</DIV><BR CLEAR="ALL">
+<P></P>
+outputs the same answer as <tex2html_verbatim_mark>#math180#<tex2html_image_mark>#tex2html_wrap_inline1923# when 
+<tex2html_verbatim_mark>#math181#<tex2html_image_mark>#tex2html_wrap_inline1925# but not before.
+In general for 0;SPMlt;<I>A</I>;SPMlt;1, 0;SPMlt;<I>B</I>;SPMlt;1 and <tex2html_image_mark>#tex2html_wrap_inline1931# the worst case
+behaviour is that <tex2html_verbatim_mark>#math182#<tex2html_image_mark>#tex2html_wrap_inline1933# requires precision 
+<tex2html_verbatim_mark>#math183#<tex2html_image_mark>#tex2html_wrap_inline1935# to be certain of a 
+correct answer.  In general, it may be difficult to compute <I>A</I>-<I>B</I> 
+or its exponent exactly and if we knew the exact value of <I>A</I>-<I>B</I>,
+it would not have been necessary to use the stabilization methodology.
+
+<P>
+We do not mean to indicate that it is a wrong direction or unimportant 
+to pursue the precision problem.<A NAME="tex2html16"
+ HREF="footnode.html#foot791"><SUP>13</SUP></A>
+For some algorithms, it may be very 
+important to perform stochastic analysis on a large number of experiments 
+regarding precisions, 
+considering the worst case, the average case, and the best case.
+Is the stabilization methodology useless as long as the precision problem 
+is unsolved? Our answer is NO, and in the next two sections we propose new 
+directions in which one may make the best of the stabilization methodology.
+
+<P>

@@ -1,0 +1,24 @@
+@charset "iso-8859-1";
+
+BODY {	FONT-FAMILY: "Verdana"; background:#E6D2C9;  
+		FONT-SIZE: 12;}
+
+/* Les liens */
+A {FONT-SIZE: 12; FONT-WEIGHT: Bold}
+A:visited {TEXT-DECORATION: underline; FONT-WEIGHT: Bold}
+A:hover {TEXT-DECORATION: underline; FONT-WEIGHT: Bold}
+A:link {TEXT-DECORATION: underline; FONT-WEIGHT: Bold}
+
+/* Tableaux */
+TD {FONT-SIZE: 12; font-family: Verdana;}
+.EtoileRouge {FONT-SiZE: 12; font-family: Verdana; color:#FF0000;}
+.Titre1 {FONT-SIZE: 16; FONT-FAMILY: "Verdana"; COLOR:#000000; FONT-WEIGHT: Bold}
+.Titre2 {FONT-SIZE: 14; FONT-FAMILY: "Verdana"; COLOR:#000000; FONT-WEIGHT: Bold}
+.Titre3 {FONT-SIZE: 12; FONT-FAMILY: "Verdana"; COLOR:#000000; FONT-WEIGHT: Bold}
+.NomChamps {FONT-SIZE: 12; FONT-FAMILY: "Verdana"; COLOR:#990000; FONT-WEIGHT: Bold}
+/* Titres */
+H1 {FONT-SIZE: 18; FONT-FAMILY: Verdana; FONT-WEIGHT: Bold}
+H2 {FONT-SIZE: 16; FONT-FAMILY: Verdana; FONT-WEIGHT: Bold}
+H3 {FONT-SIZE: 13; FONT-FAMILY: Verdana; FONT-WEIGHT: Bold}
+
+HR {COLOR: #000000; WIDTH: 525;}

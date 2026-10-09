@@ -1,0 +1,27 @@
+   Though differential algebra historically grew out from the classical
+   analysis applied to algebraic differential equations, it has become a
+   pure algebraic tool of their investigating and solving.  Combined with 
+   computer algebra, it provides a researcher with a powerful tool 
+   applicable to those differential equations which are polynomials in 
+   unknown functions and their derivatives over a coefficient field which 
+   is stable under differentiation.
+
+   The session aims are to provide a forum for discussing differential 
+   algebra methods, algorithms and software packages applied to ordinary 
+   and partial differential equations.
+
+   Session topics:
+
+   Standard bases of differential ideals
+   Characteristic sets
+   Elimination of differential variables
+   Formal theory of PDEs
+   Involutive algorithms for PDEs
+   Differential dimensional polynomials
+   Differential Galois theory
+   Liouvillian solutions of ODEs
+   Factorization of linear differential operators
+   Group analysis of differential equations
+   Differential algebra applied to control theory
+   Differential algebraic equations
+   Constrained dynamics

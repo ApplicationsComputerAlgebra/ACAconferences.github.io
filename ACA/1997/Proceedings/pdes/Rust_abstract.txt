@@ -1,0 +1,27 @@
+Rankings of Partial Derivatives and Elimination Algorithms for PDE
+
+Colin Rust
+
+Mathematics Department
+University of Chicago
+
+Abstract
+
+Let $m,n$ be positive integers, $\N = \{0,1,2, ... \}$ and
+$\N_n = \{ 1,\ldots ,n\}$.  A ranking $\leq$ is a total order of
+$\N^m\times \N_n$ such that $(a,i) \leq (b,j)$ implies $(a+c,i)\leq (b+c,j)$
+for $a$, $b$, $c$ $\in \N^m$ and $i,j$ $\in \N_n$.
+
+We describe an approach to such rankings which yields a theorem which can
+describe any such ranking by finite explicit real data.  The case $n=1$
+corresponds to term-orderings of monomials which are crucial inputs for
+Buchberger's Gr\"obner Basis algorithm for polynomial rings.  The case $n>1$
+corresponds to rankings of partial derivatives which are inputs in algorithms
+in differential algebra and Buchberger's algorithm for free modules over
+polynomial rings.  A subclass of such rankings determined by finite integer
+data is given which is sufficient for effective implementation of such
+rankings.  This has been implemented in the symbolic language Maple.
+
+The rankings considered by Riquier are a special case of those considered here.
+Examples including applications to initial value problems and differential
+elimination algorithms, such as Riquier's algorithm are given.           

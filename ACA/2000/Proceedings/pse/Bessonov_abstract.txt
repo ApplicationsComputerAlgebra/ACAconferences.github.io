@@ -1,0 +1,26 @@
+VECTOR FINITE DIFFERENCE METHOD
+
+by NICHOLAS M. BESSONOV
+
+Institute of the Problems of Mechanical Engineering 
+Acad of Sci. of Russia, Bolshoj pr.61, St.Petersburg, 199178, Russia 
+bessonov@bess.ipme.ru
+
+
+Abstract
+
+The vector finite difference (VFD) method is a coordinate-free generalization
+of a traditional (``scalar") technology of approximation used in finite
+difference (FD), volume (FV) or elements (FE) methods.  The VFD method
+conserves compact and invariant vector-tensor notation (the natural language of
+continuum mechanics) from mathematical formulation, through numerical scheme,
+and computer program nomenclature and implementation.  As a result (in
+comparison with traditional FD, and other methods) the two last steps are
+simplified drastically, especially for multi-dimensional problems in the
+regions with irregular geometry, where nonorthogonal meshes are applied.  So
+more attention can be focused on physical part of problems.  Apart from the
+cleaner syntax, VFD allows to conserve the structure of traditional numerical
+algorithms (resolution methods) and to solve the high-dimensional problems with
+little additional programming efforts also.  Partial applications of this
+technique are described as well (simulation of elastic-plastics problems,
+simulation of hyperelastic 4D pyramid twisting)

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Sato</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="http://aca2010.info/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="http://aca2010.info/styles/paperView.css" type="text/css" />
+
+			<link rel="stylesheet" href="http://aca2010.info/plugins/themes/classicNavy/classicNavy.css" type="text/css" />
+	
+	<script type="text/javascript" src="http://aca2010.info/js/general.js"></script>
+	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript" src="http://aca2010.info/js/sizer.js" ></script>
+
+	<!-- Add stylesheets for the font sizer -->
+	<link rel="alternate stylesheet" title="Small" href="http://aca2010.info/styles/fontSmall.css" type="text/css" />
+	<link rel="stylesheet" title="Medium" href="http://aca2010.info/styles/fontMedium.css" type="text/css" />
+	<link rel="alternate stylesheet" title="Large" href="http://aca2010.info/styles/fontLarge.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="body">
+
+<div id="main">
+
+<h2>University of Vlora - Conference Center,&nbsp;ACA&#039;10, Applications of Computer Algebra</h2>
+
+<div id="navbar">
+	<ul class="menu">
+		<li><a href="http://aca2010.info/index.php/index/index" target="_parent">Home</a></li>
+		<li><a href="../../about" target="_parent">About</a></li>
+					<li><a href="../../login" target="_parent">Log In</a></li>
+			<li><a href="../../user/account" target="_parent">Account</a></li>
+				<li><a href="../../search" target="_parent">Search</a></li>
+								<li><a target="_parent" href="../../../index/schedConfs/archive">Archive</a></li>							<li><a href="../../announcement" target="_parent">Announcements</a></li>
+						
+							<li><a href="http://univlora.edu.al" target="_parent">University of Vlora</a></li>
+					<li><a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/trackPolicies" target="_parent">Special Sessions</a></li>
+					<li><a href="https://sites.google.com/a/univlora.edu.al/aca-schedule/home/schedule" target="_parent">Schedule</a></li>
+			</ul>
+</div>
+
+<div id="breadcrumb">
+	<a href="../../index" target="_parent">Home</a> &gt;
+	<a href="../../../aca2010.4" target="_parent">ACA 2010, Applications of Computer Algebra, June 24-27,  Vlora, Albania</a> &gt;
+	<a href="../../index" target="_parent">ACA&#039;10, Applications of Computer Algebra</a> &gt;
+	<a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/presentations" target="_parent">Solving Parametric Algebraic Systems and Their Applications</a> &gt;
+	<a href="../view/134/0" class="current" target="_parent">Sato</a>
+</div>
+
+<div id="content">
+	<div id="topBar">
+		<div id="paperFontSize">
+			Font Size:&nbsp;
+			<a href="134#" onclick="setFontSize('Small');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_small.gif" width="16" height="14" border="0" alt="Small" /></a>&nbsp;
+			<a href="134#" onclick="setFontSize('Medium');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_medium.gif" width="16" height="14" border="0" alt="Medium" /></a>&nbsp;
+			<a href="134#" onclick="setFontSize('Large');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_large.gif" width="16" height="14" border="0" alt="Large" /></a>
+		</div>
+	</div>
+
+	<h3>Stability of Gr\"obner Bases in terms of a commutative von Neumann regular ring</h3>
+	<div><em>Yosuke Sato</em></div>
+	<br />
+
+	<blockquote>
+							Last modified:&nbsp;2010-05-28<br/>
+	</blockquote>
+
+		<h4>Abstract</h4>
+	<br />
+	<div>Let $K$ be a field and $K'$ be its extension field.<br />$K[\bar A,\bar X]$ denotes a polynomial ring with variables<br />$\bar A=A_1,\ldots,A_m$ and $\bar X=X_1,\ldots,X_n$.<br />Let $\sigma$ be a homomorphism from $K[\bar A]$<br />to $K'$, i.e. a specialization of $\bar A$ with<br />elements $a_1,\ldots,a_m$ of $K'$, it is also naturally extended to<br />a homomorphism from $K[\bar A,\bar X]$ to $K'[\bar X]$.<br />We fix a term order $>$ of $\bar X$,   <br />$LM(h)$ and $LT(h)$ denotes the leading monomial and the<br />leading term of $h$ $\in K[\bar A,\bar X]$ w.r.t. $>$<br />regarding $K[\bar A,\bar X]$ as a polynomial<br />ring $(K[\bar A])[\bar X]$<br />over the coefficient ring $K[\bar A]$.<br />The following fact plays an important role in<br />Suzuki-Sato's algorithm to compute comprehensive Gr\"obner Systems \cite{SuSa06}.<br />\\ \\<br />{\bf Lemma 1}<br />\\<br />Let $I$ be an ideal of $K[\bar A,\bar X]$ and $G$ be its Gr\"obner basis<br />w.r.t. $>$<br />regarding $K[\bar A,\bar X]$ as a polynomial<br />ring $(K[\bar A])[\bar X]$<br />over the coefficient ring $K[\bar A]$. Let $G$ $=$ $\{ g_1,\ldots,g_s,\ldots,g_t\}$<br />such that $G\cap K[\bar A] = \{ g_{s+1},\ldots,g_t\}$.<br />If $\sigma(LM(g_1))\not=0,\ldots,\sigma(LM(g_s))\not=0$ and<br />$\sigma(g_{s+1})=0,\ldots,\sigma(g_t)=0$,<br />then $\sigma(G)$ $=$ $\{ \sigma(g_1),\ldots,$<br />$\sigma(g_s)\}$ is a<br />Gr\"obner basis of $\langle\sigma(I)\rangle$ w.r.t. $>$.<br />Where,  $\langle\sigma(I)\rangle$ denotes the<br />ideal of $K'[\bar X]$ generated by $\sigma(I)$.<br />\\ \\<br />This lemma is a special instance of the following theorem shown as<br />Theorem 3.1 in \cite{Kal97}.<br />\\\\<br />{\bf Theorem 1}<br />\\<br />Using the same notations as in the above lemma,<br />If $G$ $=$ $\{ g_1,\ldots,g_s,\ldots,g_t\}$<br />satisfies that $\sigma(LM(g_1))\not=0,\ldots,\sigma(LM(g_s))\not=0$ and<br />$\sigma(LM(g_{s+1}))=0,\ldots,$<br />$\sigma(LM(g_t))=0$.<br />Then $G'$ $=$ $\{ \sigma(g_1),\ldots,\sigma(g_s)\}$ is a Gr\"obner basis<br />of $\langle\sigma(I)\rangle$ in $K'[X]$ if and only if<br />$\sigma(g_i)\stackrel{*}{\to}_{G'}0$ for each $i=s+1,\ldots,t$.<br />\\ \\<br />The above lemma is further extended<br />in \cite{KaSuWa10} and \cite{Ku10}<br />independently for improving Suzuki-Sato's algorithm.<br />\\ \\<br />{\bf Lemma 2}(\cite{KaSuWa10} and \cite{Ku10})<br />\\<br />Using the same notations as in the above lemma,<br />let $G$ $=$ $\{ g_1,\ldots,g_s,\ldots,g_t\}$<br />such  that $G\cap K[\bar A] = \{ g_{s+1},\ldots,g_t\}$ and<br />$\sigma(g_{s+1})=0,\ldots,\sigma(g_t)=0$.<br />Let $\{ LT(g_{n_1}),\ldots,LT(g_{n_l})\}$ be the minimal subset of<br />$\{ LT(g_1),\ldots,LT(g_s)\}$ concerning the order of divisibility,<br />that is each term of $\{ LT(g_1),\ldots,LT(g_s)\}$ is divisible by<br />some term of $\{ LT(g_{n_1}),\ldots,LT(g_{n_l})\}$ and<br />any term of $\{ LT(g_{n_1}),\ldots,LT(g_{n_l})\}$ is not divisible<br />by others. <br />Then $G'$ $=$ $\{ \sigma(g_{n_1}),\ldots,\sigma(g_{n_l})\}$ is a Gr\"obner basis of<br />$\langle\sigma(I)\rangle$ w.r.t. $>$ regardless whether <br />$\sigma(LM(g_i))=0$ or not for each $i \in<br />\{1,\ldots,s\}-\{n_1,\ldots,n_l\}$.<br />\\ \\<br />At a glance, this extension looks a new result, however, unfortunately<br />it is a special instance of the following theorem which is an extension<br />of Theorem 1.<br />\\ \\<br />{\bf Theorem 2}<br />\\<br />Using the same notations as in the above lemma,<br />If $G$ $=$ $\{ g_1,\ldots,g_u,\ldots,g_s,\ldots,$<br />$g_t\}$<br />satisfies that $\sigma(LM(g_1))\not=0,\ldots,\sigma(LM(g_u))\not=0$,<br />each term of $\{ LT(g_{u+1}),$<br />$\ldots,LT(g_{s})\}$<br />is divisible by some term of $\{ LT(g_1),\ldots,LT(g_{u})\}$<br />but none of $\{ LT(g_{s+1}),\ldots,LT(g_t)\}$ is divisible by <br />any term of $\{ LT(g_1),\ldots,LT(g_{u})\}$ and\\<br />$\sigma(LM(g_{s+1}))=0,\ldots,$<br />$\sigma(LM(g_t))=0$.<br />Then $G'$ $=$ $\{ \sigma(g_1),\ldots,\sigma(g_u)\}$ is a Gr\"obner basis<br />of $\langle\sigma(I)\rangle$ in $K'[X]$ if and only if<br />$\sigma(g_i)\stackrel{*}{\to}_{G'}0$ for each $i=s+1,\ldots,t$.<br />\\ \\<br />If we carefully read the proof of Theorem 1, then we should notice <br />the above extension is actually proved. However, the proof is based<br />on stability of initials of ideals and it seems far from a natural and<br />simple proof. <br />\\ \\<br />In this presentation, we give a simple and natural proof<br />of Theorem 2 using the the theory of Gr\"obner bases<br />in a polynomial ring over a commutative von Neumann regular ring<br />introduced in \cite{We89} and studied in \cite{SuSa03} from a viewpoint of<br />comprehensive Gr\"obner systems.<br />We also show that several results concerning stability of Gr\"obner<br />bases obtained in \cite{Kal97} and others are {\em trivial} <br />with the theory of <br />Gr\"obner bases<br />in a polynomial ring over a commutative von Neumann regular ring.<br /><br />\begin{thebibliography}{99}<br />\bibitem{Kal97}<br /> Kalkbrener, M. <br />  On the Stability of Gr\"obner Bases Under Specializations. <br />   \textit{J. Symbolic Computation}. Vol. 24/1, pp. 51--58. 1997.<br /><br />\bibitem{KaSuWa10}<br />Kapur, D., Sun, Y. and Wang, D.<br />A New Algorithm for Computing Comprehensive Gr\"obner Systems.<br />To appear in ISSAC2010.<br /><br />\bibitem{Ku10}<br />Kurata, Y. <br />Improving Suzuki-Sato’s CGS Algorithm by Using<br />Stability of Gr\"obner Bases and Basic Manipulations for<br />Efficient Implementation.<br />To appear in Communications of JSSAC.<br /><br />\bibitem{SuSa03}<br />         Suzuki, A. and Sato, Y.<br />         An alternative approach to Comprehensive Gr\"obner Bases.<br />         \textit{J. Symbolic Computation}. Vol. 36/3-4,<br />         pp. 649--667. 2003.<br /><br />\bibitem{SuSa06}<br />     Suzuki, A. and Sato, Y.<br />     A Simple Algorithm to Compute Comprehensive Gr\"obner Bases<br />     Using Gr\"obner Bases. <br />     \textit{Proc. International Symposium on Symbolic and Algebraic<br />     Computation (ISSAC '06)}, ACM Press, New York,<br />    pp. 326--331. 2006.<br /><br />\bibitem{We89}<br />Weispfenning, V. <br />Gr\"obner bases in polynomial ideals over commutative regular<br />rings. In Davenport Ed., editor, EUROCAL’87, pages 336–347<br />Springer LNCS 378, 1989.<br /><br />\end{thebibliography}<br /><br />\end{document}<br /></div>
+	<br />
+	
+						
+
+</div>
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+<!--
+	// Open "Define Terms" context when double-clicking any text
+	function openSearchTermWindow(url) {
+		var term;
+		if (window.getSelection) {
+			term = window.getSelection();
+		} else if (document.getSelection) {
+			term = document.getSelection();
+		} else if(document.selection && document.selection.createRange && document.selection.type.toLowerCase() == 'text') {
+			var range = document.selection.createRange();
+			term = range.text;
+		}
+		if (url.indexOf('?') > -1) openRTWindowWithToolbar(url + '&defineTerm=' + term);
+		else openRTWindowWithToolbar(url + '?defineTerm=' + term);
+	}
+
+	if(document.captureEvents) {
+		document.captureEvents(Event.DBLCLICK);
+	}
+	document.ondblclick = new Function("openSearchTermWindow('http://aca2010.info/index.php/aca2010/aca2010/rt/context/134/0/96')");
+// -->
+
+</script>
+
+</body>
+</html>

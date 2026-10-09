@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\cc}{\mathbb{C}}
+
+\hoffset=3mm
+\voffset=5mm
+\oddsidemargin=-20pt
+\headheight=18pt     \topmargin=0pt
+\textheight=620pt   \textwidth=495pt
+\parskip=0.9pt 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+{\Large  The Center Variety of Polynomial Differential Systems} \\
+\medskip
+Abdul Salam Jarrah \\
+New Mexico State University\\
+\vspace{1.0cm}
+{\Large Abstract}
+\end{center}
+
+\bigskip
+Consider the two-dimensional differential system of the form
+\begin{equation}\label{gs}
+\frac{dx}{dt} = P(x,y), \;\;\;\;
+\frac{dy}{dt} = Q(x,y) 
+\end{equation} 
+where $P$ and $Q$ are polynomials with complex coefficients and $x$ 
+and $y$ are complex functions. Suppose $(0,0)$ is a singular point
+of System (\ref{gs}). Poincar\'e
+defined the notion of a center for real vector fields in 
+the plane. He was interested in the problem of the stability
+of the solar system. Dulac defined the notion of a center for
+complex vector fields and gave necessary and sufficient
+conditions for System (\ref{gs}) to have a center at the origin, 
+for the case $\deg(P) = \deg(Q) =2$. 
+Identifying those systems with a center 
+at the origin is the so-called {\it center problem}. This problem
+is still open for higher dimensional systems.
+
+To solve the center problem for a given system (\ref{gs}),
+one needs to compute the so-called Lyapunov quantities, which are
+polynomials in the coefficients of $P$ and $Q$. In this talk,
+we present an algorithm, using methods from computational algebra,
+to find all those systems with a center at the origin, such that the linear
+parts of $P$ and $Q$ form a nonsingular matrix over the complex numbers.
+If we restrict ourselves to real systems, our algorithm finds all the 
+systems with a center at the origin and an axis of symmetry through the origin. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

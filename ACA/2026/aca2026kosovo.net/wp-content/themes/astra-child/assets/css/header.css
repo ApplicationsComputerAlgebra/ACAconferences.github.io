@@ -1,0 +1,49 @@
+/* ======================================
+   Sticky Header Scroll-Up Behavior
+   ====================================== */
+   .site-header, #masthead {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: transform .25s ease, box-shadow .2s ease, background-color .2s ease;
+    will-change: transform;
+  }
+  
+  body.scrolling-down .site-header,
+  body.scrolling-down #masthead {
+    transform: translateY(-100%);
+  }
+  
+  body.scrolling-up .site-header,
+  body.scrolling-up #masthead {
+    transform: translateY(0);
+  }
+  
+  body.is-scrolled .site-header,
+  body.is-scrolled #masthead {
+    box-shadow: 0 4px 20px rgba(0,0,0,.06);
+    background: var(--ast-global-color-5, #fff);
+  }
+  
+  body.ast-mobile-popup-active .site-header,
+  body.ast-mobile-popup-active #masthead {
+    transform: none !important;
+  }
+  
+  @media (min-width: 782px) {
+    .admin-bar .site-header, .admin-bar #masthead { top: 32px; }
+  }
+  @media (max-width: 781px) {
+    .admin-bar .site-header, .admin-bar #masthead { top: 46px; }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .site-header, #masthead { transition: none; }
+  }
+  
+  /* ======================================
+     Mobile Popup Drawer — Sidebar Style
+     ====================================== */
+/* Fullscreen mobile popup drawer */
+/* Fullscreen Mobile Popup Drawer */
+/* Fullscreen Astra Mobile Popup Drawer */

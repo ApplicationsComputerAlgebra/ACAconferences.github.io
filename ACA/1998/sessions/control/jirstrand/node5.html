@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1-f (May 31, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>4 Exact Output Tracking</TITLE>
+<META NAME="description" CONTENT="4 Exact Output Tracking">
+<META NAME="keywords" CONTENT="jirstrand">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="jirstrand.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html63" HREF="node6.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://www.control.isy.liu.se/icons/next_motif.gif"></A> <A NAME="tex2html61" HREF="jirstrand.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://www.control.isy.liu.se/icons/up_motif.gif"></A> <A NAME="tex2html55" HREF="node4.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://www.control.isy.liu.se/icons/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html64" HREF="node6.html">5 Examples</A>
+<B>Up:</B> <A NAME="tex2html62" HREF="jirstrand.html">On Switched Polynomial Systems </A>
+<B> Previous:</B> <A NAME="tex2html56" HREF="node4.html">3 Stabilizing Polynomial Systems </A>
+<BR> <P>
+<H1><A NAME="SECTION00040000000000000000">4 Exact Output Tracking</A></H1>
+<P>
+<A NAME="secoutputtracking">&#160;</A>
+<P>
+In this section we show how some of the results presented on
+stabilizability of switched systems can be applied to investigate the
+problem of exact output tracking and minimum phase properties of a
+class of polynomial systems, which are not affine in the control. The
+material in this section is based on&nbsp;[<A HREF="node8.html#NesicSME97">11</A>].
+<P>
+Consider the following class of non control-affine systems
+<P><A NAME="eqsystem">&#160;</A> <IMG WIDTH=500 HEIGHT=30 ALIGN=BOTTOM ALT="equation400" SRC="img103.gif"  > <P>
+where  <IMG WIDTH=107 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1531" SRC="img104.gif"  >  and <I>f</I> and <I>h</I> are
+analytic vector valued functions of their arguments. The system
+(<A HREF="node5.html#eqsystem">21</A>) is a generalization of the nonlinear systems usually
+investigated in the nonlinear literature [<A HREF="node8.html#Isidori95">7</A>, <A HREF="node8.html#NijmeijerS90">12</A>],
+which is affine in the control. A good discussion on the motivation
+for considering the zero dynamics of the system&nbsp;(<A HREF="node5.html#eqsystem">21</A>) can
+be found in&nbsp;[<A HREF="node8.html#ByrnesH93">4</A>].
+<P>
+Note that the usual way of investigating systems of the form
+(<A HREF="node5.html#eqsystem">21</A>) is to introduce an integrator at the plant input
+[<A HREF="node8.html#NijmeijerS90">12</A>], which transforms it into a control-affine system.
+However, the new augmented system may have the following undesirable
+properties according to&nbsp;[<A HREF="node8.html#ByrnesH93">4</A>]:
+<DL COMPACT><DT><STRONG>(i)</STRONG>
+<DD> Stabilizability of the new system with static feedback
+  implies stabilizability of (<A HREF="node5.html#eqsystem">21</A>) by dynamic feedback.
+<DT><STRONG>(ii)</STRONG>
+<DD> The relative degree of the new system is higher than that
+  of (<A HREF="node5.html#eqsystem">21</A>).
+<DT><STRONG>(iii)</STRONG>
+<DD> The transformation may introduce singularities.
+<P>
+ </DL>
+<P>
+<P> <IMG WIDTH=411 HEIGHT=26 ALIGN=BOTTOM ALT="definition417" SRC="img105.gif"  > <P>
+Without loss of generality, it can be assumed that the origin is an
+output zeroing stationarizable state. We use the notation
+ <IMG WIDTH=62 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1541" SRC="img106.gif"  >  to denote the solution of&nbsp;(<A HREF="node5.html#eqsystem">21</A>) with
+initial value  <IMG WIDTH=11 HEIGHT=12 ALIGN=MIDDLE ALT="tex2html_wrap_inline1543" SRC="img107.gif"  > .
+<P>
+<P><A NAME="def2">&#160;</A> <IMG WIDTH=411 HEIGHT=122 ALIGN=BOTTOM ALT="definition422" SRC="img108.gif"  > <P>
+Hence, a viable set is a subset of the state space that can be made
+invariant by a suitable choice of state feedback.
+<P>
+<P><A NAME="def3">&#160;</A> <IMG WIDTH=411 HEIGHT=159 ALIGN=BOTTOM ALT="definition431" SRC="img109.gif"  > <P>
+<P>
+Definitions <A HREF="node5.html#def2">8</A> and <A HREF="node5.html#def3">9</A> are taken from [<A HREF="node8.html#ByrnesH93">4</A>],
+where continuity of the output zeroing controllers is required. We
+drop this assumption in the sequel.
+<P>
+The following definition of minimum phase is due to&nbsp;[<A HREF="node8.html#NesicSME97">11</A>]
+and differs from the usual definitions found in
+[<A HREF="node8.html#Isidori95">7</A>, <A HREF="node8.html#NijmeijerS90">12</A>]. Observe that continuity of output
+zeroing controllers is not required and the problem of minimum phase
+is that of stabilizability and not of stability of the zero dynamics.
+<P>
+<P><A NAME="defdefmp">&#160;</A> <IMG WIDTH=411 HEIGHT=26 ALIGN=BOTTOM ALT="definition449" SRC="img110.gif"  > <P>
+<P>
+In the sequel we will assume that there exists zero dynamics and an
+<em>a priori</em> known output zeroing stationarizable state  <IMG WIDTH=44 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1583" SRC="img111.gif"  >  at which we wish to investigate the minimum phase property.
+<P>
+<P><A NAME="defzddef">&#160;</A> <IMG WIDTH=412 HEIGHT=242 ALIGN=BOTTOM ALT="definition455" SRC="img112.gif"  > <P>
+<P>
+In order to analyze the minimum phase property it is very useful if we
+transform the system into a normal form [<A HREF="node8.html#Isidori95">7</A>]. Suppose that
+the system (<A HREF="node5.html#eqsystem">21</A>) has a relative degree  <IMG WIDTH=29 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1607" SRC="img113.gif"  >  at an
+output zeroing stationarizable state  <IMG WIDTH=11 HEIGHT=8 ALIGN=BOTTOM ALT="tex2html_wrap_inline1609" SRC="img114.gif"  > . Then there exists a locally
+invertible coordinate transformation  <IMG WIDTH=46 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1611" SRC="img115.gif"  >  such that the system
+(<A HREF="node5.html#eqsystem">21</A>) is transformed into the following form
+[<A HREF="node8.html#NijmeijerS90">12</A>]
+<P><A NAME="eqnf">&#160;</A> <IMG WIDTH=500 HEIGHT=112 ALIGN=BOTTOM ALT="equation467" SRC="img116.gif"  > <P>
+where  <IMG WIDTH=86 HEIGHT=21 ALIGN=MIDDLE ALT="tex2html_wrap_inline1613" SRC="img117.gif"  >  and  <IMG WIDTH=99 HEIGHT=21 ALIGN=MIDDLE ALT="tex2html_wrap_inline1615" SRC="img118.gif"  > . We say that the zero dynamics is defined by
+<P> <IMG WIDTH=500 HEIGHT=32 ALIGN=BOTTOM ALT="equation477" SRC="img119.gif"  > <P>
+which corresponds to Definition&nbsp;<A HREF="node5.html#def3">9</A>.
+<P>
+If we suppose that  <IMG WIDTH=44 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1617" SRC="img120.gif"  >  and  <IMG WIDTH=47 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1619" SRC="img121.gif"  >  are vector valued
+polynomial functions, we can use the result in the previous section to
+investigate minimum phase properties. Since <I>u</I> is implicitly defined
+by the equation  <IMG WIDTH=66 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1623" SRC="img122.gif"  >  there might be several solutions <I>u</I>
+for a given <I>x</I>, which cannot happen in the control-affine case.
+Analysis of minimum phase properties for non control-affine nonlinear
+systems which is based on linearization was considered in
+[<A HREF="node8.html#NesicSME97">11</A>, <A HREF="node8.html#NesicSME98">10</A>].
+<P>
+A number of issues arise when investigating the output zeroing control
+laws and the stability of the corresponding zero dynamics, which are
+not incorporated into the known definitions of minimum phase. We will
+illustrate these issues in a number of examples and at the same time
+demonstrate how quantifier elimination can be applied to analyze the
+stabilizability of the zero dynamics. To be able to use quantifier
+elimination we specialize our study to polynomial systems.
+<P>
+<HR><A NAME="tex2html63" HREF="node6.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://www.control.isy.liu.se/icons/next_motif.gif"></A> <A NAME="tex2html61" HREF="jirstrand.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://www.control.isy.liu.se/icons/up_motif.gif"></A> <A NAME="tex2html55" HREF="node4.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://www.control.isy.liu.se/icons/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html64" HREF="node6.html">5 Examples</A>
+<B>Up:</B> <A NAME="tex2html62" HREF="jirstrand.html">On Switched Polynomial Systems </A>
+<B> Previous:</B> <A NAME="tex2html56" HREF="node4.html">3 Stabilizing Polynomial Systems </A>
+<P><ADDRESS>
+<I>Mats Jirstrand <BR>
+Mon Nov 30 23:37:24 MET 1998</I>
+</ADDRESS>
+</BODY>
+</HTML>

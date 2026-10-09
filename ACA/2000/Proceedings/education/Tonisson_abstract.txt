@@ -1,0 +1,17 @@
+Eno Tonisson* (Estonia), eno@math.ut.ee 
+
+Preliminary Phases Of The Conversion Step And Computer Algebra Systems
+
+The students have to learn different algorithms for solving algebra problems in
+school mathematics.  It is possible to distinguish between various phases in
+every algorithm step.  Example: Phase A. Assessment: Is it necessary to make
+the step?; Phase B. Assigning concrete roles to the elements of an equation,
+expression, etc. (assigning concrete values to the variables of the rule
+mentioned in Phase C); Phase C. Application of the rule (property).
+
+The first two phases have not found in-depth treatment in school textbooks.  In
+reality, a number of mistakes are made in these very phases.  How do computer
+algebra systems handle these phases? This paper is focused on the means to
+execute the first two phases in different computer algebra systems (DERIVE,
+Maple, Mathematica, MuPAD).  The issues covered include the handling of
+conditions, the decomposition of the expression, etc.

@@ -1,0 +1,29 @@
+Computation of minimal idempotents in the Hecke algebra:
+a Schutzenberger-Gelfand-Zetlin approach.
+
+G.Duchamp, University of Rouen, France
+
+
+Abstract: 
+After a small presentation of Schutzenberger's
+combinatorial heritage, we focus on recent results concerning
+the computation of q-analogues of Young's idempotents.
+We give also a fast algorithm to evaluate minimal Jucys-Murphy
+idempotents in the Hecke algebra.
+
+Bibliography:
+
+G. Duchamp, D. Krob, A. Lascoux, B. Leclerc, T.Sharf, J.Y. Thibon
+Euler-Poincare characteristics and polynomial representations
+of Iwahori-Hecke algebras. Publications of the RIMS (Kyoto), 1995,
+pp 179-201.
+
+G. Duchamp, D. Krob,, B. Leclerc, J.Y. Thibon,
+NCSFIII: {\it Deformation of Cauchy and convolution algebras}
+DMTCS, {\bf II}, (1998) 1-58.
+
+A. Lascoux,
+{\it Young theory of representations of the symmetric group.}
+(preprint).
+
+

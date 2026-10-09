@@ -1,0 +1,18 @@
+Title:      Computations in Pure Mathematics (Algebra, Analysis, Geometry, ...)
+Organizers: Maria-Emilia Alonso (Universidad Complutense, Spain)
+            alonsog@eucmax.sim.ucm.es,
+            Francisco Castro (Universidad de Sevilla, Spain)
+            castro@cica.es
+            and
+            Laureano Gonzalez-Vega (Universidad de Cantabria, Spain)
+            gvega@matesco.unican.es
+
+The aim of this session is to present several examples of how computer
+experimentations can be very useful to get and/or guess new results in pure
+mathematics.  At least two kind of different presentations will be offered:
+either those showing the development of new algorithms and software to be
+used by mathematicians or those presenting successful applications of the
+previously mentioned algorithms/software.
+
+A specific subsession devoted to the computation of invariants for A_n
+modules will be organized.

@@ -1,0 +1,26 @@
+
+      "Perspectives on integrating mathematics and software"
+
+                            Richard Petti
+                            Macsyma, Inc.
+
+I will cover two topics in my talk.
+
+First I will briefly discuss how Macsyma Inc. combines Macsyma 
+(symbolic and numerical math in Lisp), Lapack (numerical linear 
+algebra in Fortran), PDease2D (finite element analysis in Pascal) 
+and a notebook interface (in C++).  This package includes multi-
+engine on-line help that supports several software packages in 
+the same user interface.
+
+Secondly I will discuss some ideas on how to optimize intellectual 
+returns on investment in mathematics, using concepts from strategic 
+and organizational analysis.  First we identify some underlying 
+"intellectual technologies" in mathemtics, and distinguish between 
+those technologies which are relatively mature and those whose basic 
+enabling technology is advancing very rapidly.  Organizational 
+concepts of effectiveness and competence provide some perspectives 
+on the pursuit of academic excellence in mathematics. This line of 
+thinking suggests some strong conclusions about the relationship 
+between conventional computational mathematics, modern abstract 
+mathematics and computerized computation.  

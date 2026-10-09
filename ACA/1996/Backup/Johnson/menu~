@@ -1,0 +1,24 @@
+# Created by rsalamon@yucca on Thu Jul  4 09:49:25 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Brown.html
+Path=0//Brown.html
+
+Name=Buckland.html
+Path=0//Buckland.html
+
+Name=Gates.html
+Path=0//Gates.html
+
+Name=Lawvere.html
+Path=0//Lawvere.html
+
+Name=Rosebrugh.html
+Path=0//Rosebrugh.html
+
+Name=Takeyama.html
+Path=0//Takeyama.html
+
+Name=Walters.html
+Path=0//Walters.html
+

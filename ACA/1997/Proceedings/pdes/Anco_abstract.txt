@@ -1,0 +1,11 @@
+A Direct Construction Method for Conservation Laws of Partial Differential
+Equations
+
+Stephen C Anco and George W Bluman*, Department of Mathematics,
+University of British Columbia, Vancouver BC Canada V6T 1Z2
+
+We present a method to obtain all local conservation laws for any given system
+of partial differential equations.  This method does not depend on the system
+having a Lagrangian formulation, in contrast to Noether's theorem which only
+applies to Lagrangian (i.e., self-adjoint) systems.  Examples will be given.
+A preliminary version of this work recently appeared in Phys. Rev. Lett.           

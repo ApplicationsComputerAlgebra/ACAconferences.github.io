@@ -1,0 +1,39 @@
+Investigating Magic Squares in a Linear Algebra Course
+
+KARSTEN SCHMIDT
+
+Schmalkalden University of Applied Sciences, Germany
+email: kschmidt@fh-sm.de
+
+A magic square of order n is a square arrangement of n² real numbers, such that
+the sum of the elements in each row, column, and diagonal is equal to a
+constant s, its magic sum.
+
+Let the nxn matrix M denote a magic square, the nx1 vector j the vector of
+ones, the nxn matrix F the flip matrix (e.g. for n=3: 0,0,1;0,1,0;1,0,0), and '
+transposition.  The following interesting activities can be carried out in
+class at very different stages of the course, using a Computer Algebra System
+like Derive to facilitate computations:
+(1) Computing the matrix product Mj and comparing it to the scalar product sj
+    to check whether the n row sums are indeed equal to s.
+(2) Computing the matrix product j'M and comparing it to the scalar product sj'
+    to check whether the n column sums are indeed equal to s.
+(3) Computing the trace of M to check whether the sum of the elements of the
+    main diagonal is equal to s.
+(4) Computing the trace of FM (left multiplication by F reverses the rows of a
+    matrix) to check whether the sum of the elements of the antidiagonal of M
+    is equal to s.
+(5) Reconsidering the equation Mj = sj to realize that s is one of the
+    eigenvalues, and j an associated eigenvector, of M.
+
+Any 3x3 magic square can be written as the sum of two matrices, M = sG + N,
+where G = 1/3J (J=jj' denotes the 3x3 matrix of ones), and N has a simple
+structure defined by only two real numbers as well.  The matrices G, N, and M
+provide good examples to compute the trace, determinant, rank, and eigenvalues,
+and investigate the connections between them.  A further interesting activity
+is to compute the inverse (if M is nonsingular), or Moore-Penrose inverse (if M
+is singular), of M, and investigate whether it is also magic.  Again, the use
+of a CAS is essential in order to facilitate computations.
+
+The famous Lo-Shu magic square (4,9,2;3,5,7;8,1,6) will be one of the examples
+used throughout the presentation.

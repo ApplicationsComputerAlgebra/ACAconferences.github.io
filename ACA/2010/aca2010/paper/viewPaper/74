@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Wroblewska</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="http://aca2010.info/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="http://aca2010.info/styles/paperView.css" type="text/css" />
+
+			<link rel="stylesheet" href="http://aca2010.info/plugins/themes/classicNavy/classicNavy.css" type="text/css" />
+	
+	<script type="text/javascript" src="http://aca2010.info/js/general.js"></script>
+	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript" src="http://aca2010.info/js/sizer.js" ></script>
+
+	<!-- Add stylesheets for the font sizer -->
+	<link rel="alternate stylesheet" title="Small" href="http://aca2010.info/styles/fontSmall.css" type="text/css" />
+	<link rel="stylesheet" title="Medium" href="http://aca2010.info/styles/fontMedium.css" type="text/css" />
+	<link rel="alternate stylesheet" title="Large" href="http://aca2010.info/styles/fontLarge.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="body">
+
+<div id="main">
+
+<h2>University of Vlora - Conference Center,&nbsp;ACA&#039;10, Applications of Computer Algebra</h2>
+
+<div id="navbar">
+	<ul class="menu">
+		<li><a href="http://aca2010.info/index.php/index/index" target="_parent">Home</a></li>
+		<li><a href="../../about" target="_parent">About</a></li>
+					<li><a href="../../login" target="_parent">Log In</a></li>
+			<li><a href="../../user/account" target="_parent">Account</a></li>
+				<li><a href="../../search" target="_parent">Search</a></li>
+								<li><a target="_parent" href="../../../index/schedConfs/archive">Archive</a></li>							<li><a href="../../announcement" target="_parent">Announcements</a></li>
+						
+							<li><a href="http://univlora.edu.al" target="_parent">University of Vlora</a></li>
+					<li><a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/trackPolicies" target="_parent">Special Sessions</a></li>
+					<li><a href="https://sites.google.com/a/univlora.edu.al/aca-schedule/home/schedule" target="_parent">Schedule</a></li>
+			</ul>
+</div>
+
+<div id="breadcrumb">
+	<a href="../../index" target="_parent">Home</a> &gt;
+	<a href="../../../aca2010.4" target="_parent">ACA 2010, Applications of Computer Algebra, June 24-27,  Vlora, Albania</a> &gt;
+	<a href="../../index" target="_parent">ACA&#039;10, Applications of Computer Algebra</a> &gt;
+	<a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/presentations" target="_parent">Computational Algebraic Geometry, coding theory, and cryptography</a> &gt;
+	<a href="../view/74/0" class="current" target="_parent">Wroblewska</a>
+</div>
+
+<div id="content">
+	<div id="topBar">
+		<div id="paperFontSize">
+			Font Size:&nbsp;
+			<a href="74#" onclick="setFontSize('Small');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_small.gif" width="16" height="14" border="0" alt="Small" /></a>&nbsp;
+			<a href="74#" onclick="setFontSize('Medium');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_medium.gif" width="16" height="14" border="0" alt="Medium" /></a>&nbsp;
+			<a href="74#" onclick="setFontSize('Large');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_large.gif" width="16" height="14" border="0" alt="Large" /></a>
+		</div>
+	</div>
+
+	<h3>On Algebraic Directed Graphs and Polynomial Public Key Cryptography</h3>
+	<div><em>Aneta Aneta Wroblewska</em></div>
+	<br />
+
+	<blockquote>
+						Building:&nbsp;Sciences and Engineering Building<br/>
+			Room:&nbsp;C 401<br/>
+							Date:&nbsp;2010-06-24 10:00 AM&nbsp;&ndash;&nbsp;10:25 AM<br/>
+				Last modified:&nbsp;2010-06-14<br/>
+	</blockquote>
+
+		<h4>Abstract</h4>
+	<br />
+	<div>documentclass[12pt,a4paper]{article}<br /><br /><br /><br /><br />\textheight 22cm \textwidth 14.5cm \oddsidemargin 1cm \topmargin<br />-0.5cm<br /><br /><br /><br />\begin{document}<br /><br />\title{On Algebraic Directed Graphs and<br /> Polynomial Public Key Cryptography}<br /><br />\author{A. Wroblewska}<br /><br />\date{University of Maria Curie Sklodowska, Lublin, Poland}<br /><br />\maketitle<br /><br /><br />The girth of the simple graph is the length of its smallest cycle.<br />Let   $ex(v, C_3, C_4, \dots, C_n)$ be the maximal value size<br /> (number of edges)<br />of a<br />graph on $v$ vertices<br />of the girth $>n$.<br /><br />According to the well known Even Circuite Theorem $ex(v, C_3, C_4, \dots, C_n)= O(v^{1+1/[n/2]})$.<br />This bound is known to be sharp for $n=2, 3$ and 5 only.<br /><br />The  best general lower bounds of kind<br /><br />$ex(v, n) \ge C(v^{1+c/([n/2])})$   (1),<br /><br />where $c\le 1$ and $C$ are positive constant had been obtained in<br />[1] ($c \ge 3/4$). The infinite sequence of $k$-regular simple<br />graphs<br /> is a family of large graphs if its  size evaluated from  below by<br /><br />The examples of algebraic graphs of large girth from [1] were used<br />in [2]  for the construction of polynomial public key maps<br />${F_q}^n$ onto itself  of kind $x_1 \rightarrow g_1(x_1, x_2,<br />\dots, x_n), x_2 \rightarrow g_2(x_1, x_2, \dots, x_n), \dots, x_n<br />\rightarrow g_n(x_1, x_2, \dots, x_n)$<br /><br />In [5] we proved that degree of each $g_i$ is 3 independently on<br />the size of the map.<br /><br />In the paper [3] the concept of the family of directed graphs of<br />large girth had been introduced together with examples of such a<br />families defined over finite commutative rings $K$. Such examples<br />were used for the construction of several polynomial public maps<br />of $K^n$ onto itself.<br /><br />We announce here that the degrees of that  keys maps are bounded<br />by 4. It means that the rules as above are feasible for the public user.<br /><br />REMARK. The security of algorithms are bounded from below by the<br />complexity of discrete logarithm problem for the affine algebraic<br />group of graph automorphisms [4].<br /><br /><br /><br /><br /><br />\renewcommand{\refname}{\vspace{-12mm}}<br />\begin{thebibliography}{99}<br />\small\itemsep=0pt<br /><br />\bibitem{1} F. Lazebnik, V. A. Ustimenko and A. J. Woldar, {\em A<br />New Series of Dense Graphs of High Girth}, Bull (New Series) of<br />AMS, v.32, N1, (1995), 73-79.<br /><br />\bibitem{2} V. Ustimenko, {\em   Maximality of affine group and hidden graph<br />cryptsystems}, Journal of Algebra and Discrete Mathematics,<br />October, 2004, v.10, pp. 51-65.<br /><br /><br />\bibitem{3} V. Ustimenko, {\em On the cryptographical properties<br /> of extremal algebraic graphs}, in T. Shaska, E. Hasimaj (editors),<br />Algebraic Aspects of Digital Communications, Volume 24, NATO Science for Peace and<br />Security Series - D: Information and Communication Security, IOS Press,<br />July 2009.<br /><br />\bibitem{4} V. Ustimenko, {\em On some results of Extremal Digraph<br />theory and their applications to Information Security}, Proceedings<br />of the 9th Central European Conference on Cryptology (to appear)<br /><br />\bibitem{5} A. Wroblewska, {\em On some properties of  graph based public key}, Albanian J. Math.,<br />vol. 2, No 3 (2008), Special Issue "New Challenges of Digital<br />Communications", Proc. of NATO Advanced Studies Institute, Vlora,<br />2008, pp. 229-234.<br /><br />\end{thebibliography}<br />\noindent<br />\end{document}<br /></div>
+	<br />
+	
+						
+
+</div>
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+<!--
+	// Open "Define Terms" context when double-clicking any text
+	function openSearchTermWindow(url) {
+		var term;
+		if (window.getSelection) {
+			term = window.getSelection();
+		} else if (document.getSelection) {
+			term = document.getSelection();
+		} else if(document.selection && document.selection.createRange && document.selection.type.toLowerCase() == 'text') {
+			var range = document.selection.createRange();
+			term = range.text;
+		}
+		if (url.indexOf('?') > -1) openRTWindowWithToolbar(url + '&defineTerm=' + term);
+		else openRTWindowWithToolbar(url + '?defineTerm=' + term);
+	}
+
+	if(document.captureEvents) {
+		document.captureEvents(Event.DBLCLICK);
+	}
+	document.ondblclick = new Function("openSearchTermWindow('http://aca2010.info/index.php/aca2010/aca2010/rt/context/74/0/96')");
+// -->
+
+</script>
+
+</body>
+</html>

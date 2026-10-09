@@ -1,0 +1,57 @@
+Session title:
+
+Approximate Algebraic Computation: towards Symbolic-Numeric Algorithms.
+
+a) What is APPROXIMATE ALGEBRAIC COMPUTATION 
+
+  In conventional computer algebra, we mostly aim at performing
+  algebraic computation exactly on the basis of rational number
+  arithmetic and the introduction of algebraic and transcendental numbers.
+
+  But many problems coming from areas like computer vision, robotics,
+  computational biology, physics, ... are described with incertitudes on the
+  input parameters or coefficients.
+  In this context, the usual exact algorithms of computer algebra are not 
+  applicable.
+
+  The recent years have witnessed the emergence of new researches
+  combining symbolic-numeric computations and leading to new kinds of 
+  algorithms, involving algebraic computations with approximate numeric
+  arithmetic, such as floating-point number arithmetic.  
+
+  We call computations with such algorithms AAC (Approximate Algebraic 
+  Computation).
+  
+  On the basis of such algebraic operations, new problems are occurring,
+  new points of view are coming forth and new approaches are being developed.
+
+  Symbolic-Numeric Algebra for Polynomials is one of the most 
+  rapidly developing area of approximate algebraic computation.
+
+  This is topic of this session.
+
+b) Problems to be discussed in the session
+
+  Approximate algebraic computation will have a large potentiality for
+  many application problems, because they are quite efficient in both
+  computation time and space.  However, research is in the infancy stage
+  and we have so many problems.
+  In this session, we will focus our attention (but not restrictively) on
+  instability problems, static and dynamic error analysis, certification of
+  the output, continuity, flatness, ... and also on algorithmic
+  development, system building and applications.
+
+c) Typical subjects to be discussed
+
+  Approximate GCD, approximate factorization, ...
+  How to solve polynomial equations with inexact coefficients
+      especially how to solve multivariate polynomial systems.
+  Connections between commutative algebra and numerical computations.
+  Error analysis of algorithms and stabilization techniques, 
+  Certification of the output. 
+  Application of approximate algebraic computation such as
+      hybrid integration and rational function approximation,
+  Software systems for approximate algebraic computation.
+  Examples of Symbolic-Numeric Applications ...
+
+

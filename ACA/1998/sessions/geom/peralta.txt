@@ -1,0 +1,27 @@
+"Graded Codes"
+
+Justo Peralta Lopez
+University of Almeria, Spain.
+jperalta@ualm.es
+
+
+Abstract:
+
+Since S.D.Berman showed in 1967 that cyclic codes and Reed Muller
+codes can be studied as ideals in a group algebra $KG$,( $K$ been a
+finite field and $G$ finite group cyclic and 2-group respectively),
+several authors have considered these codes, since if you have more
+algebraic structure then their study is more effective.  Following
+this way, we introduce the concept of graded code. A lineal code is
+graded if it is a graded ideal in a graded $K$-algebra for some
+suitable multiplicative group .  We'll show that some important
+properties about graded codes can be get from his homogeneous
+components and generalize some results about codes as ideals in group
+algebras. In particular,we'll consider a finite $K$-algebra $R$ graded
+of type $G$, with $G$ a finite group,and the code $C=(M \otimes_{R_e}
+R)$, with M a ideal in $R_e$, the homogeneous component of grade
+1. We'll show some properties the graded code $C$, for $R$ graded and
+strongly graded.
+
+
+

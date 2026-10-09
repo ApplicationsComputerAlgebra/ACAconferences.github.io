@@ -1,0 +1,29 @@
+Mikhail Shashkov
+Group T-7, Los Alamos National Laboratory, MS-B284,
+Los Alamos, NM  87544 USA
+
+V.G.Ganzha
+GH-Universitat, Kassel, Germany
+
+
+ Using the Symbolic Computation for Analysis of Local Approximation
+of Finite-Difference Operators
+
+
+                       Abstract
+
+  The construction and investigation of finite-difference schemes on irregular
+grid for multidimensional equations of mathematical physics involves the
+processing of great amount of symbolic information. An attempt to do this
+manipulation by hand on the paper may lead to errors. Therefore, the problem of
+the construction of the algorithms for solving these problems which would
+allow the application of computers for their implementation is important.
+
+In this lecture algorithms allowing to investigate the  order local
+approximation of finite-difference operators on the class of sufficiently
+smooth functions are considered. The case of arbitrary computational mesh
+and of an arbitrary number of spatial dimensions are considered. The
+grid must satisfy some natural regularity conditions.
+
+Examples of investigation of approximation for particular finite-difference
+operators in case of one ore two spatial variables are given.

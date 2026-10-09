@@ -1,0 +1,21 @@
+"Error Correcting Codes with DERIVE for Windows"
+
+Peter Schofield(*)
+Trinity & All Saints College
+Brownberrie Lane, Horsforth
+Leeds   LS18 5HD
+United Kingdom
+E-mail:p.schofield@tasc.ac.uk
+
+
+
+This paper considers ways in which DERIVE for Windows can 
+provide mathematics students with a set of powerful tools for 
+generating and displaying the large matrices and tables involved in a 
+detailed introduction to the study of error correcting codes. 
+Examples of how this can be carried out are given for: standard form 
+generator and parity-check matrices; codewords and minimum weights;  
+syndrome look-up tables; cyclic codes; Hamming codes; Reed-Muller 
+codes. Some educational issues will also be dicussed. These relate to 
+using DERIVE for Windows to support activities involved in the 
+teaching and assessment of the topic. 

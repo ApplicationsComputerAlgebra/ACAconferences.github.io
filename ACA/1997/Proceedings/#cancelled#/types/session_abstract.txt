@@ -1,0 +1,23 @@
+Session on _Types and Specification_ at IMACS-ACA
+Jacques Calmet (calmet@ira.uka.de)
+
+The IMACS-ACA'97 (Applications of Computer Algebra) meeting will be held at the
+Aston Wailea Resort, Maui, Hawaii on July 24-26, 1997. For information see:
+	http://math.unm.edu/ACA/1997.html
+
+The session on types and specification addresses the problem of how complete
+a typing system can be.  The topic of this session is not just applications to
+Computer Algebra but applications of typing and specifying into mathematical
+symbolic computing.  Another goal is to bring together experts of typing in
+programming languages, lambda calculi, specifications and computer algebra
+to make this session an interdisciplinary workshop.  In addition, talks
+describing the typing mechanisms in presently available computer algebra
+systems are strongly encouraged.
+
+To be invited to give a talk in this session, send a title and abstract to 
+the session organizer (and program co-chair) at
+	calmet@ira.uka.de
+There will not be printed proceedings. Accepted papers will appear
+electronically in the URL of the conference.  As done in the past, if this
+session is as outstanding as I hope, then the papers will be published as a
+special issue of a journal.

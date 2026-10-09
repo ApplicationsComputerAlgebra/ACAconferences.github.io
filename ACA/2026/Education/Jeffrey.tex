@@ -1,0 +1,56 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[left=25mm, right=25mm, top=15mm, bottom=20mm, noheadfoot]{geometry}
+\pagenumbering{gobble}
+\usepackage{amsmath}
+
+\usepackage{hyperref}
+\usepackage{eso-pic, rotating, graphicx}
+
+\AddToShipoutPicture{\put(30,200){\rotatebox{90}{\scalebox{1}{ \href{https://aca2026kosovo.net}{Applications of Computer Algebra (ACA) 2026 Conference.} }}}}
+
+\begin{document}
+
+% Please change the following abstract title and author description.
+\title{Diagonalization and Change of Basis  in Linear Algebra}
+\author{
+ \underline{D. J. Jeffrey}$^{1*}$ \\
+$^{1}$ University of Western Ontario \\
+ email. djeffrey@uwo.ca
+}
+
+% Please do not modify following lines
+\date{}
+\maketitle
+
+\noindent \textbf{Key words:}
+\emph{%
+% List your keywords here:
+Linear Algebra; 
+Similarity;
+Basis change
+}
+\\\\
+% Beginning of your abstract
+A common topic in a first course on Linear Algebra is
+diagonalization using eigenvectors \cite{poole}. Typically the textbooks define
+``similarity'' as $B=V^{-1} A V$  with the justification that the eigenvalues
+of $A$ and $B$ are the same. Later in the course (and in the text book)
+there is a brief section on change of basis. No connection is made
+between the topics. In this talk, I show the connection. It gives a
+geometrical justification for the similarity transform, and some nice
+plots. The change of basis connection extends to other diagonalizations
+met in more advanced courses: topics such as the SVD factors of a matrix.
+
+%You can cite articles or books such as \cite{} or \cite{}.
+
+
+% End of your abstract
+
+% Please add references below. 
+\begin{thebibliography}{01}
+\bibitem{poole} David Poole, Linear Algebra, 4th ed., ISBN 978-1-285-46324-7, Cengage Learning 2015.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,17 @@
+Title:
+A new solution of the quartic problem: with application to integration
+
+D.J. Jeffrey
+Department of Applied Mathematics
+The University of Western Ontario
+London, Ontario, Canada
+
+Abstract:
+The Quantifier Elimination problem "For all x, P(x) is positive, where P(x) is
+a 4th degree polynomial in R[x]" is solved.  In contrast to previous solutions,
+the present solution takes the form of a single inequality.  This inequality,
+however, is a more complicated expression than the expressions appearing in
+earlier solutions.  Therefore the new solution reduces the number of
+inequalities but at the price of a more complicated expression. The problem of
+integrating trigonometric functions is then presented, and the place where the
+QE problem arises is described.

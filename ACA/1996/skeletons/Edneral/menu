@@ -1,0 +1,30 @@
+# Created by rsalamon@crocus on Wed Jul  3 17:02:50 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Abad.html
+Path=0/conference/IMACS96/skeletons/Edneral/Abad.html
+
+Name=Abad.ps
+Path=9/conference/IMACS96/skeletons/Edneral/Abad.ps
+
+Name=Edneral.html
+Path=0/conference/IMACS96/skeletons/Edneral/Edneral.html
+
+Name=Edneral1.html
+Path=0/conference/IMACS96/skeletons/Edneral/Edneral1.html
+
+Name=Koepf.ps
+Path=9/conference/IMACS96/skeletons/Edneral/Koepf.ps
+
+Name=Mourrain.html
+Path=0/conference/IMACS96/skeletons/Edneral/Mourrain.html
+
+Name=Vasiliev.html
+Path=0/conference/IMACS96/skeletons/Edneral/Vasiliev.html
+
+Name=Vasiliev1.html
+Path=0/conference/IMACS96/skeletons/Edneral/Vasiliev1.html
+
+Name=Walcher.ps
+Path=9/conference/IMACS96/skeletons/Edneral/Walcher.ps
+

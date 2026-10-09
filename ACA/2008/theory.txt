@@ -1,0 +1,48 @@
+Computer Algebra in Group Theory and Representation Theory
+
+Arjeh Cohen, Eindhoven Institute of Technology, the Netherlands 
+Nikolai Vavilov, Saint-Petersburg State University, Russia 
+Robert Wilson, Queen Mary, University of London, U.K. 
+
+
+For the last decades several directions of group theory critically depend on
+the power of symbolic calculation. This is especially the case for the study
+of finite simple groups and algebraic groups, combinatorial group theory,
+and representation theory, but the influence of computer algebra rapidly
+expands into other branches of group theory.
+
+Several highly efficient specialised systems have been created and group-theory
+oriented packages within general purpose CAS have been developed over the
+last years.
+
+The purpose of the section is to exchange ideas and experience and discuss
+recent progress in applying computer tools to the study of deep and difficult
+problems of group theory, representation theory and Lie theory. In fact,
+applications to group theory and representation theory are (alongside with
+algebraic geometry and commutative algebra, and number theory), among the
+most significant applications of computers in mathematics.
+
+Computer algebra aspects of the following topics, among others, will be
+considered:
+
+Finite groups of Lie type 
+Sporadic simple groups 
+Algebraic simple groups 
+Finite subgroups of algebraic groups 
+Arithmetic and related groups 
+Representations of finite groups 
+Representations of algebraic groups 
+Efficient generation of groups 
+Classification of maximal subgroups 
+Group cohomology 
+Conjugacy classes and their products 
+Group related geometries and graphs 
+Laws defining various classes of groups 
+Finite and pro-finite p-groups 
+Groups of small orders 
+Classification of perfect groups 
+
+If you are interested in participation, please send your name, email and
+approximate title to nikolai-vavilov@yandex.ru. 
+
+Submission of talk title and abstract: June 15, 2008.

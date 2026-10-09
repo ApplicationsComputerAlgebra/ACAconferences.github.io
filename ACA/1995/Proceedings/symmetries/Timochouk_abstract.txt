@@ -1,0 +1,45 @@
+	ON THE TRANSLATION INVARIANTS OF QUADRATIC DIFFERENTIAL SYSTEMS
+
+	L. A. Timochouk, Delft University of Technology, The Netherlands
+
+	The study of translation invariants of planar autonomous differential
+systems with quadratic polynomial right-hand sides seems to be important in
+order to make a progress in the general affine-invariant classification of
+topological properties of this systems. So far, we obtained the following
+results in the specified direction.
+
+   --  For this (graded) algebra of invariants, the annihilating operators
+   	are constructed from the Lie equation.
+
+   --	By means of specifically developed software, the linear bases of
+   	homogeneous components of the invariant algebra constructed up to
+   	degree 5. Besides from 6 trivial invariants of degree 1, there exist
+   	8 non-trivial irreducible invariants of degree 3, 3 - of degree 4,
+   	ana none of degree 5.
+
+   --	The geometrical meaning of 3rd-degree invariants is revealed.
+
+   --	The absence of so-called "relative invariants" is proved for the
+   	shift transformations.
+
+   --  This transformation group acting on the 12-dim coefficient space is
+   	proved to be non-reductive, so that the property of its invariant
+   	algebra to be finitely generated is not guaranteed by the classical
+   	Nagata theorem, and requires a particular proof. That is done using
+   	some methods developed by Seshadri, Grosshans, et al.
+
+   --	By construction of the canonical representation of the set of orbits
+   	over some generic set of points in R^12, the general algorithm aimed
+   	to obtain all the generators of the mentioned algebra has been
+   	constructed and run on the basis of "Macaulay" computer algebra system.
+   	The new 4 irreducible invariants of degree 6 has been revealed, but
+   	the further progress was suspended due to serious computations
+   	difficulties.
+
+   --	At the present time, a new software system is being developed (in Ada
+   	language), which will hopefully allow to finish construction of the
+   	generators of the translation invariant algebra.
+
+The future plans include determination of homological dimension of this
+algebra, and the attempt to construct the polynomial basis of the general
+affine invariants.

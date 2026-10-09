@@ -1,0 +1,97 @@
+LANGUAGES OF THE FAMILY ANALYTI FOR DECIDING OF SCIENTIFIC AND
+ENGINEERING PROBLEMS
+
+V.P. Klimenko, Yu.S. Fishman
+
+Institute of mathematical machines and systems problems,
+NAS of Ukraine, Kiev, Ukraine
+
+klimenko@immsp.kiev.ua, tel. 044-266-70-54,
+fishman@immsp.kiev.ua, tel. 044-227-20-98
+
+In the beginning of sixties the group of the mathematicians and engineers led
+by the academician V.M. Glushkov began to develop the series of the computers
+for automation of scientific researches and designing MIR.  It is officially
+computer intended for engineering accounts.  List of requirements to results of
+this design contented the many general requirements to contemporary computers.
+The main purpose of development was the raising of the productivity of the
+user's working by the improvement of the artificial intelligence of the
+computer~Rs source language ANALYTIC [1,2].
+
+The artificial intelligence right away was understood as automation of the
+possibly greater number of procedures usually being executed by hand in the
+scientific and applied researches.  Thus symbolical computations should be
+executed also automatically.  The transition to dialog mode was considered as
+the forced deviation.  And although the computers of a series the MIR then had
+the most perfect dialogue means (it is the display and the trace on the high
+level language for the first time in USSR), the interactive mode was considered
+basically as means for debugging of programs.  The computer~Rs MIR-2 source
+language ANALYTIC had the effective system for recognizing of the functional
+properties of subjects being expressed by formulae [4].  It enabled to create
+many laconic programs and dialog systems.  Also it has been created one of
+first the universal integrating program.  Under the contract with Finland has
+been developed the software for solving of the problem by computer algebra.
+Together with user's associations also had been developed the software for
+solving of many urgent important problems.  There are calculating trajectories
+of some space solids, various problems of the theoretical physics, automation
+of the education on various disciplines saturated by mathematical models,
+automation of the programs designing for lathers with the numerical programmed
+driving and many others.
+
+In sixties-eighties were been developed computers MIR-2, MIR-3, SM-1410,
+ES-2680 that had the hard realization of the source languages.  There were
+ANALYTIC, ANALYTIC-74, ANALYTIC-79 oriented to applying of the
+numerical-analytical methods.  The realization of languages ANALYTIC in kind of
+software for modern computers was begun in nineties.  Had been created
+algorithmic languages ANALYTIC-89, ANALYTIC-91 and ANALYTIC-93.  New abilities
+of computers and the language's realization permit to apply the ANALYTIC on
+modern engineering problems.  Thus computer algebra system ANALYTIC has found
+new mass user.  It is in the first place engineers that use the mathematical
+modeling at the decision of various problems of the theories of elasticity,
+composite materials, geometric designing and others [5,6,7,8].  These problems
+have the following feature.  Expressions formed at the working have the huge
+informative volume and visual analyses of it practically are impossible.
+Abilities of ANALYTIC, the means for recognizing [3] first of all, enable to
+execute all necessary numeric and symbolic transformations by automatic mode.
+At present on base of the more thirty-year experience is developed the
+computer~Rs algebra programming system with source language named
+ANALYTIC-2000.
+
+References
+
+1. ANALYTIC  the language for describing of the computing
+processes containing the analytical transformations Gluskov V.M.,~E,
+Fishman Yu. S. et. al. Theory of automatic machines and methods of
+the formalizing synthesis of  computers and systems: Preceding of the
+seminar.  V. 1.  Kiev, 1968.  P. 3-105. (In Russ.).
+
+2. General principles for developing of systems and interpretation of
+languages oriented on scientific and engineering problems Klimenko V.P.
+Cybernetics.  N. 1.  1990.  P. 49-56.(In Russ.).
+
+3. ANALYTIC-93 Morozov A.A., Klimenko V.P., Fishman Yu.S. et. al. 
+Cybernetics and system analysis.  N.5.  1995.  P.27-56. (In Russ.).
+
+4. Basis procedures of the computer algebra Fishman Yu.S. Mathematical
+machines and systems.  N. 2.  1997. ----
+
+5. Klimenko V.P., Lyakhov A.L., Fishman Yu.S. Some properties of the
+programming system ANALYTIC 4-th INTERNATIONAL MODELLING SCHOOL of
+AMSE-UAPL. - Crimea, Alushta, Ukraine, September 10-15,1999.
+
+6. Klimenko V.P., Fishman Yu.S., Goryk A.V., Lyakhov A.L., Piskunov
+V.G. The programming of the solving of the engineering problems in
+media of the programming system ANALYTIC The first international
+conference by programming (UkyPROG-98). 2-4 September 1998. Ukraine,
+Kiev. Cybernetic centre NSC of Ukraine. Preceding. P. 553-562.(In Russ.)
+
+7. Klimenko V.P., Lyakhov A.L., Fishman Yu.S., Vinnikov Yu.L. Increasing of
+the effectivity of the boundary element methods by compute algebraXVI
+International conference Mathematical modeling in mechanic of the
+deformed solids. Boundary and finite elements methods, St-Peterburg,
+Russia, 23-26 June 1998.: Submit.  T. II.  St-Peterburg: Russia. OAO
+LenNIIPROECT, 1998.  P. 75-76. (In Russ.).
+
+8. Lyakhov A.L. Synthesis of the equation of the piece-smooth flat line
+by computer algebra methods Mathematical machines and systems. 
+1998. N. 1. P.32-37. (In Russ.).

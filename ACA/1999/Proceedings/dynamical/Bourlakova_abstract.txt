@@ -1,0 +1,21 @@
+    
+    ABOUT INVESTIGATION OF SYSTEMS WITH FIRST INTEGRALS
+          L.A. Bourlakova, V.D. Irtegov
+    (Institute of Systems Dynamics and Control Theory SB RAS
+        134, Lermontov St., Irkutsk, 664033, Russia
+            E-mail : irteg@icc.ru )
+
+The report discusses three examples of using computer algebra in
+investigation of mechanical systems.
+1. Obtaining first integrals.
+The subject of discussion are the cases (i) when the system of differential
+equations has simplest groups of symmetry, (ii) when we need to
+determine parameters of the system from existence conditions of the
+first integral of specific form.
+2. Obtaining partial solutions of the system of differential equations
+with first integrals. Here we find existence conditions of stationary
+motions and discuss variants of their solvability.
+3. Investigation of stability of stationary motions.  We provide
+examples from dynamics of single rigid body and system of rigid bodies.
+
+Keywords: computer algebra, first integrals, stationary solutions, stability.

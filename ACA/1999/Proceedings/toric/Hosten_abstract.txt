@@ -1,0 +1,12 @@
+Initial Ideals of Toric Ideals and Group Relaxations in Integer Programming
+by Serkan Hosten
+
+Group relaxations provide an algebraic relaxation method to solve integer
+programs where the condition on non-negativity of some integral variables is
+relaxed. The set of such relaxation variables for a fixed cost vector is
+closely related to the primary decomposotion and associated primes of the
+corresponding initial ideal of the underlying toric ideal. The structure of
+these relaxations and the associated primes are best understood using
+polyhedral techniques and we will introduce these ideas.  In particular, using
+these techniques we will show that associated primes of initial ideals of toric
+ideals come in saturated chains.

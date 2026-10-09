@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+html {
+	margin: 0;
+	padding: 0;
+	}
+td { 
+	font: 75% georgia, sans-serif;
+	color: #667049;
+	margin: 0; 
+	padding: 5;
+	}
+body { 
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #667049; 
+	margin: 0; 
+	padding: 8;
+	}
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+h3 { 
+	font: 1.3em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0;
+	padding: 4; 
+	color: #7D775C;
+	}
+
+a:link { 
+	font: 95% georgia, sans-serif;
+	font-weight: bold; 
+	text-decoration: none;
+	color: #667049; 
+	}
+	
+a:active { 
+	text-decoration: underline;
+	color: #667049;
+	}
+	
+a:visited { 
+	font: 95% georgia, sans-serif;
+	font-weight: bold; 
+	text-decoration: none;
+	color: #667049; 
+	}
+	
+a:hover {
+	font: 100% georgia, sans-serif;
+	font-weight: bold; 
+	text-decoration: underline;
+	color: #667049; 
+	}
+	
+#linkList ul {
+	margin: 0;
+	padding: 0;
+	}
+#linkList li {
+	line-height: 2.5ex;  
+	display: block; 
+	padding-top: 5px; 
+	margin-bottom: 5px;
+	list-style-type: none;
+	}
+#linkList li a:link { 
+	font: 95% georgia, sans-serif;
+	font-weight: bold; 
+	text-decoration: none;
+	color: #667049; 
+	}
+	
+#linkList li a:active { 
+	text-decoration: underline;
+	color: #667049;
+	}
+	
+#linkList li a:visited { 
+	font: 95% georgia, sans-serif;
+	font-weight: bold; 
+	text-decoration: none;
+	color: #667049; 
+	}
+	
+#linkList li a:hover { 
+	font: 100% georgia, sans-serif;
+	font-weight: bold; 
+	text-decoration: none;
+	color: #667049; 
+	}

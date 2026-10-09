@@ -1,0 +1,3 @@
+Differential Invariants and Computer Vision
+
+Peter Olver

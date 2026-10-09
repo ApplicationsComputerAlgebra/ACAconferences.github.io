@@ -1,0 +1,52 @@
+\documentstyle[11pt]{article}
+\textheight 200mm
+\title{Geometric Constraint Solving (I) Graph-Directed Solvers}
+\author{Christoph M. Hoffmann \\
+Computer Science Department \\
+Purdue University \\
+West Lafayette, IN 47907-1398 (USA) \\
+cmh@cs.purdue.edu}
+
+
+
+\date{} 
+\pagestyle{empty}
+
+
+
+\begin{document}
+\maketitle
+
+\centerline{\bf Abstract}
+
+\medskip
+   Geometric constraint systems arise in geometric modeling applications as 
+a means for expressing conveniently the design of three-dimensional shapes. 
+The two most important problem classes are for $2$-dimensional and for 
+$3$-dimensional configuration.  We concentrate on the $2$-dimensional  
+problem only.   The class of graph-directed solvers analyzes a constraint 
+graph whose edges are the constraints and whose vertices are the geometric 
+elements of the constraint problem.  After analyzing the graph, a solution 
+can be constructed by a sequence of construction steps and merging 
+operations. For a large and interesting class of geometric constraint 
+problems, a solution can be constructed in worst-case time proportional to 
+the square of the geometric elements involved.   From an algebraic point of 
+view, graph-directed solvers decompose a system of nonlinear equations into 
+small subsystems whose structure is known a-priori.  In part, the 
+decomposition can be thought of as standard algebraic computation, but 
+there are also additional steps involved that do not seem to have a 
+counterpart in symbolic algebraic computation.  In particular, smaller 
+subsystems are at some point combined using derived constraints that are 
+formulated from the partial solution instance rather than, more generally, by  
+general derivation.   In addition to being very efficient, graph-directed 
+solvers are capable of constructing all possible solutions of the underlying 
+system of algebraic equations.  To do so, the construction sequence is  
+partially retraced, and at some construction step(s) different solutions of 
+the subsystem are used.  This amounts to a traversal of a tree of solutions, 
+and is, of course, proportional in time to the size of the tree.
+\vspace{2 mm}
+\newline
+{\bf keywords:} geometric constraints, graph-directed solvers, algebraic 
+solvers, constraint graphs, construction steps, recursive extension and 
+open issues
+\end{document}

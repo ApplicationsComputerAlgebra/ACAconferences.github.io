@@ -1,0 +1,9 @@
+This is BibTeX, C Version 0.99c
+The top-level auxiliary file: kdv.aux
+I couldn't open style file alpha.bst
+---line 2 of file kdv.aux
+ : \bibstyle{alpha
+ :                }
+I'm skipping whatever remains of this command
+I found no style file---while reading file kdv.aux
+(There were 2 error messages)

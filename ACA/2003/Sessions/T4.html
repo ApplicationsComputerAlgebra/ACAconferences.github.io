@@ -1,0 +1,118 @@
+<html><head><title>ACA 2003 Session T4: Computer Algebra in Science and Technology</title></head>
+
+<body>
+
+
+<h1> T4: Computer Algebra in Science and Technology </h1>
+
+ACA 2003:  
+<a href="http://math.unm.edu/ACA/2003/2003.html">Home</a>,
+<a href="http://math.unm.edu/ACA/2003/Sessions.html">Sessions</a> 
+
+
+<h2>Organizers</h2>
+<ul>
+
+<li> <a href="mailto:djeffrey@uwo.ca">David Jeffrey</a> (University of Western Ontario, Canada)
+</li><li> <a href="mailto:lbernardin@maplesoft.com">Laurent Bernardin</a> (Maplesoft, Canada)<br>
+
+</li></ul>
+
+<h2>Overview</h2>
+
+<p>The goal of this session is to increase the interaction between those who
+apply computer algebra to science and technology and specialists in the systems.
+We hope that developers of computer algebra systems will learn about new
+applications of their products and we hope that the users will be able to
+discuss their computational problems with experts. Talks by those who use
+computer algebra while studying other problems in science, technology or
+industry are welcome.</p>
+
+<h2>Talks/Abstracts</h2>
+<ul>
+
+<li><h3>Automatic Code Generation</h3>
+    <a href="mailto:pchin@maplesoft.com">Paulina Chin</a> (Maplesoft, Canada)<br> 
+    <p>
+    <strong>Abstract</strong>: 
+</p><p>Automatic code generation facilities within a computer algebra system
+allow users to work within a symbolic environment while producing 
+code that can be incorporated into numeric systems for scientific
+applications.</p>
+
+<p>We will show how Maple's code generation tools fit into the process
+of modelling scientific problems and prototyping algorithms.  
+Furthermore, we will show how the tools may be customized for specific 
+target languages and environments.  Finally, we will discuss issues 
+and challenges related to source-to-source translation in this context.</p>
+
+    <p>         
+
+</p></li><li><h3>Statistical Genetics</h3>
+    <a href="mailto:claurie@gp.as.ua.edu">Cecelia Laurie</a> (University of Alabama, USA)
+    <p>
+
+</p></li><li><h3>Symofros: A symbolic modeling and simulation tool for mechanical systems</h3>
+    <a href="mailto:Brian.Moore@space.gc.ca">Brian Moore</a> (Canadian Space Agency, Canada)
+    <p>
+    <strong>Abstract</strong>: 
+</p><p>Software tools for design, modeling, analysis, and simulation
+can greatly improve the performance and efficiency of mechanic
+al systems. Symofros, an environment for modeling and simulation, is
+used for all robots and experimental systems at the Canad
+ian Space Agency R&amp;D Robotics Laboratory. In particular, Symofros
+is the core of the SPDM (Special Purpose Dextrous Manipulato
+r) Tasks Verification Facilities[1] where a ground robot is used to
+emulate the contact task of a space manipulator (here the S
+pace Station manipulator SPDM). In SMP[2], a generic simulator for
+astronauts training has been developed based on Symofros and other
+tools. SMP is used to develop situation awareness, provides kinematics
+and dynamics understandings of robotic systems an
+d increases the dexterity of the operator. SMP is now on board of the
+International Space Station.</p>
+
+<p>Symofros is composed of several modules for mechanical system description, modeling and simulation.  The modeling module of 
+Symofros, the Symbolic Model Generator, is built within Maple.  This module is composed of several Maple modules: topology, pre
+processing, kinematics, non-linear dynamics, linear dynamics and dynamics identification. It automatically derives a set of ove
+r 90 functions, called basic functions, which represent the kinematics and dynamics.  These functions are symbolic expressions 
+written in terms of variables (time dependent) and parameters (constant with time). Variables comprise positions, velocities, a
+ccelerations and system inputs while parameters can be the mass and the length of the links.   The functions are translated int
+o C for simulation purposes.</p>
+
+    <p>         
+
+</p></li><li><h3>Improving the element pre-conditioning method by symbolic computation</h3>
+    <a href="mailto:Josef.Schicho@risc.uni-linz.ac.at">Joseph Schicho</a> (University of Linz, Austria)<br>
+    joint work with: Ulrich Langer, Stefan Reitzinger (University of Linz, Austria)
+    <p>
+    <strong>Abstract</strong>: 
+</p><p>Recently, element preconditioning has been proposed as an improvement for
+the algebraic multigrid method (AGM) for solving elliptic 
+boundary value problems.  </p>
+
+<p>The sub-problem of finding the closest M-matrix to a given symmetric
+and positive matrix has to solved for many instances (namely, 
+for each element). The numerical solution of all these optimization
+problems can be very expensive. We achieve a speed-up by solving
+the optimization problem once and for all symbolically, and
+then instantiating the solution by the local data.</p>
+
+<p>Theoretically, it is possible to give a closed form solution in terms
+of field operations and square roots, and -- in one particular case --  
+roots of higher degree polynomials. Such a closed form would be
+too large to be useful, so we prefer to give a ``formula'' consisting
+of a program with arithmetic or square root (and in one case
+higher order root) assignments and {\bf if then else} branches, but
+no loops. Using these formula, we can compute the optimal preconditioners
+faster and more accurately than by standard numerical optimization
+techniques.</p>
+
+<p>The optimization problem can be reduced to a quantifier elimination
+problem over real closed fields. However, the problem is too complex
+for a solution by a general method like Gröbner bases, resultants,
+or cylindrical algebraic decomposition. It is necessary to exploit 
+the specific structure of the problem. We use some techniques from
+linear algebra and geometry. </p>
+</li></ul>
+
+</body></html>

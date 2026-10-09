@@ -1,0 +1,32 @@
+   "Involution and Lie Symmetry Analysis of Differential Equations"
+
+   Vladimir Gerdt
+   Laboratory of Computing Techniques and Automation
+   Joint Institute for Nuclear Research
+   141980 Dubna, Russia
+   Email: gerdt@jinr.ru
+
+
+
+ABSTRACT: We present a general algorithmic approach to completion to
+involution of linear systems of partial differential equations.  We
+consider an algorithm for computation of the minimal involutive
+system.  An important application of the new algorithm is Lie symmetry
+analysis of nonlinear differential equations. For construction of Lie
+symmetry generators one needs to integrate their determining equations
+which form a system of linear partial differential equations. This
+step of Lie symmetry analysis is generally the most difficult one, and
+completion of the determining equations to involution is the most
+universal algorithmic tool of their integration. Another important
+application of the involutive method is posing of an initial value
+problem providing the unique solution of a system of partial
+differential equations. For linear involutive systems we formulate
+such a well-posed initial value problem and thereby generalize the
+classical results of Janet to arbitrary involutive divisions. This
+formulation makes it possible, among other things, to reveal the
+structure of arbitrariness in general solution. In particular, for
+determining systems occurring in Lie symmetry analysis it allows one
+to find the size of symmetry groups, that has been shown by F.Schwarz
+for Janet division.
+
+

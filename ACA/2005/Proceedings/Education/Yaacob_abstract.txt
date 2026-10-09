@@ -1,0 +1,41 @@
+The Development of a Multimedia Symbolic Vector Analysis Package
+
+Yuzita Yaacob, Stanly Steinberg and Michael J. Wester
+
+Kulliyyah of Engineering, International Islamic University Malaysia
+Kuala Lumpur, Malaysia
+
+Department of Mathematics and Statistics, University of New Mexico
+Albuquerque, New Mexico, USA
+
+Office of Biocomputing, University of New Mexico Health Sciences Center
+Albuquerque, New Mexico, USA
+
+jujie_yuzita@hotmail.com
+
+This talk discusses the process of developing a multimedia symbolic package in
+the area of vector analysis that will specifically aid in enhancing the
+existing packages and thus, make Computer Algebra Systems (CASs) more useful in
+the advanced undergraduate calculus courses and for solving a wider range of
+analysis problems.  By using this package, it is hoped that the user will be
+able to enhance and develop his understanding in the area of vector analysis.
+The active learning environment provided by this package will encourage
+exploration, self-expression and a feeling of ownership by allowing the user to
+manipulate its components and thus, make learning stimulating, engaging and
+fun.  Moreover, the multimedia elements incorporated in the solution process
+will help to reinforce a sensory rich environment and increase the user's
+curiosity and interest in approaching problem solving.  The method used for
+developing this package consists of three phases: preliminary research phase,
+specification phase and implementation phase.  In the preliminary research
+phase, we created a review table that consists of six well known CASs (i.e.,
+Derive 6, Maple 9, Mathcad 11, Mathematica 5, MuPAD Pro 3.0 and REDUCE 3.8).
+The goal of this table is to provide a benchmark for comparing the above
+mentioned CASs in the area of vector analysis and multimedia capabilities.  The
+outcome of this phase is a project plan which contains information about the
+development of the package.  The next phase is the specification phase which is
+based on the notion of Package Requirement Specifications (PRS) that has been
+proposed by the National Bureau of Standards, IEEE (standard no: 830-1984) & US
+Dept. of Defense.  PRS is produced at the culmination of the preliminary
+research phase.  The outcome of this phase is a detailed description of the
+design of the package.  Finally, in the implementation phase, the package will
+be implemented and the outcome is the first version of the package.

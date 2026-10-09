@@ -1,0 +1,1156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Computer algebra systems as a tool for mathematical proofs in
+quantum logics</TITLE>
+<META NAME="description" CONTENT="Computer algebra systems as a tool for mathematical proofs in
+quantum logics">
+<META NAME="keywords" CONTENT="navara">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="navara.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY  BGCOLOR=white>
+
+
+<H1 ALIGN="CENTER">Computer algebra systems as a tool for mathematical proofs in
+quantum logics</H1>
+<P ALIGN="CENTER">Miroslav Hamouz and Mirko Navara
+<A NAME="tex2html1"
+ HREF="#foot4"><SUP>1</SUP></A>
+<BR> Center for Machine Perception
+<BR>  Faculty of Electrical Engineering
+<BR>  Czech Technical University
+<BR>  Technick&#225;&nbsp;2, 166 27 Praha, Czech Republic </STRONG>
+<BR> <TT>
+<A HREF="mailto:xhamouz@lab.felk.cvut.cz">
+xhamouz@lab.felk.cvut.cz</A>, 
+<A HREF="mailto:navara@cmp.felk.cvut.cz">
+navara@cmp.felk.cvut.cz</A>
+</TT></P>
+<P ALIGN="CENTER"></P>
+<P ALIGN="LEFT"></P>
+
+<H3>Abstract:</H3>
+<DIV>
+In the last years, computers became a useful tool in some 
+mathematical
+proofs. We argue that modern computer algebra systems simplify 
+this work.
+Their usefulness can be demonstrated on recent results in quantum 
+logic
+theory.
+We give two examples of highly nontrivial mathematical results which
+required computer verification that was performed by CASs.
+</DIV>
+<HR>
+
+<!--Table of Child-Links------------------------------------>
+<UL>
+<LI><A HREF="#node1">The structure of quantum logic</A>
+<LI><A HREF="#node2">First problem: efficient description of spaces of measures</A>
+<LI><A HREF="#node3">Second problem: orthomodular lattice without group-valued
+ measures</A>
+<LI><A HREF="#node4">Conclusion</A>
+<LI><A HREF="#node5">Bibliography</A>
+<LI><A HREF="#node6">About this document ... </A>
+</UL>
+<!--Table of Child-Links------------------------------------->
+<P>
+<HR></P>
+
+
+<PRE>.
+
+
+
+
+
+
+
+.
+.
+.
+
+
+.
+.
+.
+
+
+
+
+
+</PRE>
+
+
+<!-- -----------------  node1    --------------------------   -->
+<!-- -----------------  node1    --------------------------   -->
+<!-- -----------------  node1    --------------------------   -->
+<A NAME="node1">
+
+<H1><A NAME="SECTION00010000000000000000">
+The structure of quantum logic</A>
+</H1>
+
+<P>
+Looking for the appropriate algebraic structure describing the events
+of a quantum mechanical system, Birkhoff and von&nbsp;Neumann 
+[<A
+ HREF="#BvN">1</A>]
+suggested the notion of orthomodular lattice.
+This structure possesses a common generalization of Boolean 
+algebras and
+lattices of closed subspaces of Hilbert spaces. We refer to
+[<A
+ HREF="#Kalmbach">5</A>] for the basic information about orthomodular lattices.
+
+<P>
+Let us first review basic notions as we shall use them in the sequel.
+
+<P>
+An <EM>orthomodular lattice</EM> is a lattice <I>L</I> with a least and a
+greatest element (denoted by <B>0</B>, <B>1</B>, respectively) and with a unary
+operation ' (<EM>orthocomplementation</EM>) satisfying the following
+properties for all <IMG
+ WIDTH="56" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$a,b \in L$">:
+<DL COMPACT>
+<DT>1.
+<DD>(<I>a</I>')'=<I>a</I>,
+<DT>2.
+<DD>
+<!-- MATH: $a \leq b \ \Longrightarrow \ b' \leq a'$ -->
+<IMG
+ WIDTH="130" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$a \leq b \ \Longrightarrow \ b' \leq a'$">,
+<DT>3.
+<DD>
+<!-- MATH: $a \vee a'={\bf 1}$ -->
+<IMG
+ WIDTH="73" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$a \vee a'={\bf 1}$">,
+<DT>4.
+<DD>
+<!-- MATH: $a \leq b \ \Longrightarrow \ b=a \vee (b \wedge a')$ -->
+<IMG
+ WIDTH="189" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$a \leq b \ \Longrightarrow \ b=a \vee (b \wedge a')$">.
+</DL>Two elements <IMG
+ WIDTH="56" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$a,b \in L$">
+are called <EM>orthogonal</EM> iff <IMG
+ WIDTH="44" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$a\le b'$">.
+An <EM>atom</EM> of <I>L</I> is an element <IMG
+ WIDTH="42" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$a\in L$">
+such that there is no
+<IMG
+ WIDTH="40" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$b\in L$">
+satisfying 
+<!-- MATH: ${\bf0}<b<a$ -->
+<IMG
+ WIDTH="70" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="${\bf0}<b<a$">.
+A <EM>block</EM> of <I>L</I> is a maximal Boolean subalgebra of <I>L</I>.
+
+<P>
+In [<A
+ HREF="#Greechie">3</A>], Greechie suggested a description of an orthomodular lattice as a
+union of its blocks. It can be efficiently represented using
+hypergraphs.
+
+<P>
+A <EM>hypergraph</EM> is a couple 
+<!-- MATH: $H=(V,{{\cal E}})$ -->
+<IMG
+ WIDTH="78" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$H=(V,{{\cal E}})$">
+consisting of a 
+nonempty
+set <I>V</I> (of <EM>vertices</EM>) and of a covering 
+<!-- MATH: ${{\cal E}}$ -->
+<IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.gif"
+ ALT="${{\cal E}}$">
+of <I>V</I> by
+nonempty subsets (<EM>edges</EM>).
+A <EM>loop of order</EM> <I>n</I> in <I>H</I>(<IMG
+ WIDTH="42" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$n \geq 3$">)
+is an <I>n</I>-tuple of edges 
+<!-- MATH: $E_1, \ldots, E_n \in {{\cal E}}$ -->
+<IMG
+ WIDTH="107" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$E_1, \ldots, E_n \in {{\cal E}}$">
+such
+that the intersections 
+<!-- MATH: $E_1 \cap E_2, \ldots, E_{n-1} \cap E_n, E_n
+\cap E_1$ -->
+<IMG
+ WIDTH="233" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$E_1 \cap E_2, \ldots, E_{n-1} \cap E_n, E_n
+\cap E_1$">
+are nonempty and mutually disjoint.
+
+<P>
+Let <I>L</I> be a finite orthomodular lattice and let us denote by 
+<!-- MATH: ${{\cal A}}(L)$ -->
+<IMG
+ WIDTH="39" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="${{\cal A}}(L)$">
+the set of all
+atoms of <I>L</I>. The <EM>Greechie diagram</EM> of <I>L</I> (see
+[<A
+ HREF="#Greechie">3</A>]) is a hypergraph 
+<!-- MATH: $H=(V,{{\cal E}})$ -->
+<IMG
+ WIDTH="78" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$H=(V,{{\cal E}})$">
+such that 
+<!-- MATH: $V={{\cal A}}(L)$ -->
+<IMG
+ WIDTH="73" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$V={{\cal A}}(L)$">
+and
+
+<!-- MATH: ${{\cal E}}$ -->
+<IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.gif"
+ ALT="${{\cal E}}$">
+consists of all maximal subsets of mutually orthogonal 
+elements
+of 
+<!-- MATH: ${{\cal A}}(L)$ -->
+<IMG
+ WIDTH="39" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="${{\cal A}}(L)$">.
+
+<P>
+In [<A
+ HREF="#Dichtl">2</A>], necessary and sufficient conditions are given for a
+finite hypergraph to be a Greechie diagram of an orthomodular lattice. However, they are quite difficult to
+verify. This is why many results were obtained using a simpler
+sufficient condition given in the original Greechie's Loop Lemma:
+<BR>
+
+<P>
+<B>Loop Lemma</B> (see [<A
+ HREF="#Greechie">3</A>,<A
+ HREF="#Kalmbach">5</A>]) <B>:</B>
+<I>Let </I>
+<!-- MATH: $H=(V,{{\cal E}})$ -->
+<IMG
+ WIDTH="78" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$H=(V,{{\cal E}})$"><I> be a hypergraph satisfying the following
+conditions:
+</I><DL COMPACT>
+<DT>1.
+<DD>
+<!-- MATH: $\forall E \in {{\cal E}}:\ \mbox{\rm card}\,(E) \geq 3$ -->
+<IMG
+ WIDTH="160" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\forall E \in {{\cal E}}:\ \mbox{\rm card}\,(E) \geq 3$">,
+<DT>2.
+<DD>
+<!-- MATH: $\forall E,F \in {{\cal E}}, E \not= F:\ \mbox{\rm card}\,(E \cap F) \leq 1,$ -->
+<IMG
+ WIDTH="267" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\forall E,F \in {{\cal E}}, E \not= F:\ \mbox{\rm card}\,(E \cap F) \leq 1,$"><DT>3.
+<DD>there is no loop of order less than 5 in <I>H</I>.
+</DL><I>Then there is an orthomodular lattice </I><I>M</I><I> such that </I><I>H</I><I> is the Greechie diagram of 
+</I><I>M</I><I>.
+</I>
+<BR>
+
+<P>
+In the logico-algebraic approach to quantum mechanics, the events 
+of the
+system are supposed to form an orthomodular lattice. A state of the system is 
+described
+by the probabilities of events, so it corresponds to a probability
+measure (called also a <EM>state</EM>).
+Here we shall deal with
+more general measures attaining values in commutative groups:
+
+<P>
+Let <I>L</I> be an orthomodular lattice and let <I>G</I> be a commutative
+additive group. A mapping 
+<!-- MATH: $m\colon L \to G$ -->
+<IMG
+ WIDTH="72" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$m\colon L \to G$">
+is called a <I>G</I><EM>-
+valued
+measure</EM> on <I>L</I> if the following conditions are satisfied:
+<DL COMPACT>
+<DT>1.
+<DD>
+<!-- MATH: $m({\bf0})=0$ -->
+<IMG
+ WIDTH="68" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$m({\bf0})=0$">,
+<DT>2.
+<DD>
+<!-- MATH: $m(a \vee b)= m(a)+m(b)$ -->
+<IMG
+ WIDTH="171" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$m(a \vee b)= m(a)+m(b)$">
+whenever <IMG
+ WIDTH="44" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$a \leq b'$">.
+</DL>
+<P>
+In the (most common) particular case when <I>G</I>=<I>R</I> and <I>m</I> attains 
+only
+positive values, we may equivalently say that a positive real-valued
+measure on an orthomodular lattice is a mapping such that its restrictions to all
+blocks are (ordinary) measures on Boolean algebras.
+Obviously, every orthomodular lattice <I>L</I> admits the trivial measure <I>m</I>satisfying <I>m</I>(<I>a</I>)=0 for all <IMG
+ WIDTH="42" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$a\in L$">.
+
+<P>
+Originally, Greechie developed his pasting technique in order to prove
+the existence of an orthomodular lattice admitting no nontrivial positive real-valued
+measure.
+Of course, this is not desirable from the physical point of view.
+Nevertheless, this negative result had a lot of positive consequences.
+It became the base of many constructions which enriched the theory 
+of
+quantum logics substantially. Besides, it lead to the study of axioms
+which ensure the existence of ``sufficiently many" measures on 
+orthomodular lattices representing real systems. Both results described in this paper are
+extensions of this investigation initiated in [<A
+ HREF="#Greechie">3</A>].
+
+<HR>
+
+<!--Table of Child-Links------------------------------------>
+<UL>
+<LI><A HREF="#tex2html4">Top of the document</A>
+<LI><A HREF="#node1">The structure of quantum logic</A>
+<LI><A HREF="#node2">First problem: efficient description of spaces of measures</A>
+<LI><A HREF="#node3">Second problem: orthomodular lattice without group-valued
+ measures</A>
+<LI><A HREF="#node4">Conclusion</A>
+<LI><A HREF="#node5">Bibliography</A>
+<LI><A HREF="#node6">About this document ... </A>
+</UL>
+<!--Table of Child-Links------------------------------------->
+<P>
+<HR></P>
+
+<PRE>.
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+
+
+
+
+<!-- -----------------  node2    --------------------------   -->
+<!-- -----------------  node2    --------------------------   -->
+<!-- -----------------  node2    --------------------------   -->
+<A NAME="node2">
+
+
+<H1><A NAME="SECTION00020000000000000000">
+First problem: efficient description of spaces of measures</A>
+</H1>
+
+<P>
+Greechie diagrams and the Loop Lemma allow to understand many orthomodular lattices as 
+unions of
+Boolean algebras.
+Greechie diagrams describe the structure of an orthomodular lattice more efficiently than the
+classical tools of lattice theory (e.g., Hasse diagrams).
+They allow to represent also the spaces of measures of orthomodular lattices; these
+correspond naturally to measures on their Greechie diagrams, where measures on 
+hypergraphs are defined as follows:
+
+<P>
+Let 
+<!-- MATH: ${\cal H}=(V,{\cal E})$ -->
+<IMG
+ WIDTH="78" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="${\cal H}=(V,{\cal E})$">
+be a hypergraph and let <I>G</I> be a commutative additive
+group. A <I>G</I><EM>-valued measure</EM> on <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.gif"
+ ALT="${\cal H}$">
+is a mapping
+
+<!-- MATH: $m\colon V\to G$ -->
+<IMG
+ WIDTH="74" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.gif"
+ ALT="$m\colon V\to G$">
+such that, for each 
+<!-- MATH: $E\in{\cal E}$ -->
+<IMG
+ WIDTH="45" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$E\in{\cal E}$">,
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\sum_{v\in E} m(v)=m({\bf 1}).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="122" HEIGHT="75"
+ SRC="img26.gif"
+ ALT="\begin{displaymath}\sum_{v\in E} m(v)=m({\bf 1}).\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Despite the success of the Loop Lemma, its conditions (especially 
+the
+absence of loops of a low order) are still quite restrictive and lead to
+very complex Greechie diagrams when we want to find examples with special 
+properties
+of the space of measures.
+For this purpose, new tools were developed in
+[<A
+ HREF="#N:State_space">6</A>,<A
+ HREF="#N:Grado97Atti">8</A>,<A
+ HREF="#N:Semipast">9</A>,<A
+ HREF="#NR:HG">10</A>].
+They allow to describe the space of measures of an orthomodular lattice as the space of measures on a hypergraph which has a simplified structure.
+Although the algebraic
+correspondence is weakened, the space of measures remains 
+completely
+described. The advantage is that <B>every hypergraph</B> represents the 
+space
+of measures of some orthomodular lattice in this weaker sense.
+(For details, see [<A
+ HREF="#N:Grado97Atti">8</A>,<A
+ HREF="#N:Semipast">9</A>].)
+This result is based on the existence of arbitrarily large finite orthomodular lattices with the spaces of measures isomorphic to those of finite Boolean algebras.
+This means, among others, that their spaces of measures are cones 
+that have
+simplices as cone bases.
+As the initial step, the following lemma is proved:
+
+<P>
+<P>
+<DIV><B><B>Lemma  1</B> &nbsp; 
+<B>:</B><A NAME="l:66">&#160;</A>There is a finite non-Boolean orthomodular lattice </B><I>L</I><B> with the partition
+</B>
+<!-- MATH: $\{A_0,A_1,A_2\}$ -->
+<IMG
+ WIDTH="91" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\{A_0,A_1,A_2\}$"><B> of the set of atoms satisfying the following
+conditions:
+</B><DL COMPACT>
+<DT>(1)
+<DD>Each measure <I>m</I> on <I>L</I> and each 
+<!-- MATH: $a,b\in A_j$ -->
+<IMG
+ WIDTH="64" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$a,b\in A_j$">,
+<I>j</I>=0,1,2, satisfy
+<I>m</I>(<I>a</I>)=<I>m</I>(<I>b</I>).
+<DT>(2)
+<DD>Each measure <I>m</I> on <I>L</I> and each 
+<!-- MATH: $a_j\in A_j$ -->
+<IMG
+ WIDTH="57" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$a_j\in A_j$">,
+<I>j</I>=0,1,2, satisfy
+
+<!-- MATH: $\sum\limits_{j=0}^2 m(a_j)=m({\bf 1})$ -->
+<IMG
+ WIDTH="126" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\sum\limits_{j=0}^2 m(a_j)=m({\bf 1})$">.
+<DT>(3)
+<DD>For each 
+<!-- MATH: $p_0,p_1,p_2\in[0,\infty)$ -->
+<IMG
+ WIDTH="124" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$p_0,p_1,p_2\in[0,\infty)$">
+there is a unique measure <I>m</I>on <I>L</I> such that 
+<!-- MATH: $m(a_j)=p_j$ -->
+<I>m</I>(<I>a</I><SUB><I>j</I></SUB>)=<I>p</I><SUB><I>j</I></SUB> for all 
+<!-- MATH: $a_j\in A_j$ -->
+<IMG
+ WIDTH="57" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$a_j\in A_j$">,
+<I>j</I>=0,1,2.
+</DL><B></DIV><P></P>
+</B>
+<P>
+The first such example was published in [<A
+ HREF="#NR:HG">10</A>].
+It has 156 atoms and 314 elements.
+Later on, it was optimized to an example with 134 elements.
+It is the orthomodular lattice <I>L</I><SUB>66</SUB> with 66 atoms
+<I>e</I><SUB><I>i</I></SUB>, 
+<!-- MATH: $i=0,\ldots,65$ -->
+<IMG
+ WIDTH="89" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$i=0,\ldots,65$">,
+and 66 blocks
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\exp\{e_{2i},e_{2i+1},e_{2i+2}\},
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="148" HEIGHT="53"
+ SRC="img33.gif"
+ ALT="\begin{displaymath}\exp\{e_{2i},e_{2i+1},e_{2i+2}\},\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\exp\{e_{2i-7},e_{2i},e_{2i+13}\},
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="154" HEIGHT="53"
+ SRC="img34.gif"
+ ALT="\begin{displaymath}\exp\{e_{2i-7},e_{2i},e_{2i+13}\},\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where 
+<!-- MATH: $i=0,\ldots,32$ -->
+<IMG
+ WIDTH="89" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.gif"
+ ALT="$i=0,\ldots,32$">
+and indices are evaluated modulo 66.
+
+<P>
+The verification of conditions of the Loop Lemma for <I>L</I><SUB>66</SUB> is
+simplified by its cyclic symmetry. It is also easy to see that it admits
+the measures required in Lemma&nbsp;<A HREF="node2.html#l:66">1</A>&nbsp;(3) if we take
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+A_j=\{e_{3i+j}\mid i=0,\ldots,21\},\qquad j=0,1,2.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="298" HEIGHT="53"
+ SRC="img36.gif"
+ ALT="\begin{displaymath}A_j=\{e_{3i+j}\mid i=0,\ldots,21\},\qquad j=0,1,2.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+However, it is difficult to prove that there are no other measures.
+This requires to solve a system of 66 linear equations (with rank 64).
+Although this system is sparse and its entries are only 0 or 1, large
+integers appear during elimination.
+Using common programming languages (Pascal was used in the first 
+proof),
+one had to modify the procedure so that the coefficients were 
+minimized;
+otherwise an overflow in long integer format occurred.
+
+<P>
+Modern CASs allow to solve this problem in a standard way.
+We used Maple&nbsp;V Release&nbsp;5 for this calculation.
+It provides a symbolic (i.e., exact) solution doing calculations with
+integers of very high length (up to 500,000).
+The whole solution of the system of equations took several minutes 
+on a
+hardware that was standard in 1996.
+
+<HR>
+
+<!--Table of Child-Links------------------------------------>
+<UL>
+<LI><A HREF="#tex2html4">Top of the document</A>
+<LI><A HREF="#node1">The structure of quantum logic</A>
+<LI><A HREF="#node2">First problem: efficient description of spaces of measures</A>
+<LI><A HREF="#node3">Second problem: orthomodular lattice without group-valued
+ measures</A>
+<LI><A HREF="#node4">Conclusion</A>
+<LI><A HREF="#node5">Bibliography</A>
+<LI><A HREF="#node6">About this document ... </A>
+</UL>
+<!--Table of Child-Links------------------------------------->
+<P>
+<HR></P>
+<PRE>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+
+
+
+<!-- -----------------  node3    --------------------------   -->
+<!-- -----------------  node3    --------------------------   -->
+<!-- -----------------  node3    --------------------------   -->
+<A NAME="node3">
+
+
+
+<H1><A NAME="SECTION00030000000000000000">
+Second problem: orthomodular lattice without group-valued measures</A>
+</H1>
+
+<P>
+For a long time, it was an open
+problem whether there is an orthomodular lattice admitting no nontrivial group-valued
+measure (for any commutative group).
+Such an example with 239 atoms, 262 blocks and 504 elements
+is the main result of [<A
+ HREF="#N:Group">7</A>].
+It is frequently cited because of its relation to algebraic and
+ring-theoretical questions of quantum logics.
+It is interesting that an alternative (quite different) solution was
+found independently by Weber [<A
+ HREF="#Weber">11</A>].
+Both examples required a computer-aided verification. Moreover, in 
+the
+example by Weber, computer was also used to check the conditions 
+of the
+Loop Lemma. Hence specialized programs were necessary to prove 
+that the
+structure is really an orthomodular lattice and that it does not admit nonzero
+group-valued measures.
+
+<P>
+Contrary to this approach, in the example from [<A
+ HREF="#N:Group">7</A>] 
+arguments
+were presented that allowed even a manual (not computer-aided)
+verification of important facts. Nevertheless, these arguments were
+complex and they were found by an extensive use of a specialized
+software (again written originally in Pascal).
+The foundation stone of the construction is the orthomodular lattice <I>L</I><SUB>44</SUB> with
+44 atoms <I>e</I><SUB><I>i</I></SUB>, 
+<!-- MATH: $i=0,\ldots,43$ -->
+<IMG
+ WIDTH="89" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$i=0,\ldots,43$">,
+and 44 blocks
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\exp\{e_{2i},e_{2i+1},e_{2i+2}\},
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="148" HEIGHT="53"
+ SRC="img33.gif"
+ ALT="\begin{displaymath}\exp\{e_{2i},e_{2i+1},e_{2i+2}\},\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\exp\{e_{2i-7},e_{2i},e_{2i+13}\},
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="154" HEIGHT="53"
+ SRC="img34.gif"
+ ALT="\begin{displaymath}\exp\{e_{2i-7},e_{2i},e_{2i+13}\},\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where 
+<!-- MATH: $i=0,\ldots,21$ -->
+<IMG
+ WIDTH="89" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.gif"
+ ALT="$i=0,\ldots,21$">
+and indices are evaluated modulo 44.
+(Its structure is similar to that of <I>L</I><SUB>66</SUB> from the preceeding section
+and similar arguments are used to verify the conditions of the Loop
+Lemma.)
+
+<P>
+Looking for the measures on <I>L</I><SUB>44</SUB>, we again obtain a sparse 
+system of
+linear equations, but the task is more complex than in the preceding
+section. When it is solved over the field of reals, we obtain a
+one-dimensional space of solutions:
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+m({\bf 1})=3\cdot m(a_i)\quad \mbox{ for all }\quad i=0,\ldots,43.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="289" HEIGHT="53"
+ SRC="img39.gif"
+ ALT="\begin{displaymath}m({\bf 1})=3\cdot m(a_i)\quad \mbox{ for all }\quad i=0,\ldots,43.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+However, we need to find solutions in any commutative group.
+An easy argument shows that we may restrict attention to finite 
+fields.
+
+<P>
+First of all, we looked for finite fields in which the matrix of the
+system has a smaller rank than in 
+<!-- MATH: $\mathbb{Z}$ -->
+<IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\mathbb{Z} $">.
+There was a need for such a method of solving a system of linear 
+equations
+that does not divide rows of the matrix of the system (in order
+to find solutions in all finite fields).
+Maple offers a built-in function <TT>ffgausselim</TT>
+from the <TT>linalg</TT> package. This function performs a fraction free 
+Gaussian elimination of a matrix. The output matrix showed us that 
+the only
+finite fields that require special attention are 
+<!-- MATH: $\mathbb{Z} _3$ -->
+<IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$\mathbb{Z} _3$">
+and 
+<!-- MATH: $\mathbb{Z} _{23}$ -->
+<IMG
+ WIDTH="27" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.gif"
+ ALT="$\mathbb{Z} _{23}$">.
+It was very easy to find this result
+because the rows of the output matrix consisted of multiples of
+numbers 3 and 23; this was found by using function <TT>factorset</TT> 
+from the
+<TT>numtheory</TT> package.
+
+<P>
+Maple has a lot of facilities for calculations over finite fields.
+We used function <TT>Linsolve(.) mod p</TT> from the <TT>linalg</TT> package
+which solves systems of linear equations even over rings.
+This function returned the solutions over the Galois fields 
+
+<!-- MATH: $\mathbb{Z} _3,\mathbb{Z} _{23}$ -->
+<IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$\mathbb{Z} _3,\mathbb{Z} _{23}$">
+in
+a very transparent form.
+(Surprisingly, the latter are rather complex.)
+Maple&nbsp;V Release&nbsp;5 under Windows&nbsp;95 solved this problem in one 
+minute,
+running on a PC with processor AMD K5, 100MHz and 48MB RAM.
+
+<P>
+The rest of the example from [<A
+ HREF="#N:Group">7</A>] is a ``pasting" of 6 
+copies of
+<I>L</I><SUB>44</SUB> and 8 Boolean algebras in such a way that no nontrivial measure
+on <I>L</I><SUB>44</SUB> (even with values in 
+<!-- MATH: $\mathbb{Z} _{23}$ -->
+<IMG
+ WIDTH="27" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.gif"
+ ALT="$\mathbb{Z} _{23}$">)
+admits an extension
+to a measure on the whole structure. Thus the zero measure remains 
+the
+only group-valued measure on the resulting orthomodular lattice.
+
+<P>
+<HR>
+<!--Table of Child-Links------------------------------------>
+<UL>
+<LI><A HREF="#tex2html4">Top of the document</A>
+<LI><A HREF="#node1">The structure of quantum logic</A>
+<LI><A HREF="#node2">First problem: efficient description of spaces of measures</A>
+<LI><A HREF="#node3">Second problem: orthomodular lattice without group-valued
+ measures</A>
+<LI><A HREF="#node4">Conclusion</A>
+<LI><A HREF="#node5">Bibliography</A>
+<LI><A HREF="#node6">About this document ... </A>
+</UL>
+<!--Table of Child-Links------------------------------------->
+<P>
+<HR></P>
+<PRE>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+
+
+
+
+
+<!-- -----------------  node4    --------------------------   -->
+<!-- -----------------  node4    --------------------------   -->
+<!-- -----------------  node4    --------------------------   -->
+<A NAME="node4">
+
+
+<H1><A NAME="SECTION00040000000000000000">
+Conclusion</A>
+</H1>
+
+<P>
+We proved the applicability and usefulness of modern CASs (namely
+Maple&nbsp;V Release&nbsp;5) for computer proofs in mathematics. Writing
+specialized programs for this purpose requires a lot of work and 
+reduces
+the transparency and reliability of results. Contrary to this, CASs
+allow a solution using standard tools that are already prepared. The
+necessary code reduces to tens of lines and a risk of an error of the
+user is thus reduced to minimum. (A question remains open whether 
+there
+is no bug in the CAS producing a wrong output.)
+Even inexperienced users can use this CAS for solving nontrivial 
+mathematical
+problems very easily. Our worksheet consisted of only about 25 lines 
+of the
+source  code.  
+Current software and hardware allows to solve these tasks in a quite
+satisfactory computing time. Thus the present CASs are efficient 
+enough
+to become a common working tool even for mathematicians dealing 
+with
+basic research. We verified this on two highly nontrivial constructions
+from quantum logic theory which solved important problems that 
+remained
+open for long time.
+
+<P>
+Despite the progress of technique, the role of a mathematician as a
+designer of a possible example is still unavoidable. Although attempts
+have been made with automatic generation of algebraic structures
+(see e.g. [<A
+ HREF="#Kalmbach">5</A>]), we are not aware of any important result
+obtained by this ``blind search" strategy.
+As a partial success, one part of the construction of [<A
+ HREF="#Weber">11</A>] 
+uses
+a computer generation, but it is used to combine parts that were
+suggested by the author.
+So human intuition and ideas remain necessary for progress in
+mathematics. The role of a computer as a working tool for testing
+hypotheses increased substantially by the use of CASs.
+
+<P>
+<HR>
+<!--Table of Child-Links------------------------------------>
+<UL>
+<LI><A HREF="#tex2html4">Top of the document</A>
+<LI><A HREF="#node1">The structure of quantum logic</A>
+<LI><A HREF="#node2">First problem: efficient description of spaces of measures</A>
+<LI><A HREF="#node3">Second problem: orthomodular lattice without group-valued
+ measures</A>
+<LI><A HREF="#node4">Conclusion</A>
+<LI><A HREF="#node5">Bibliography</A>
+<LI><A HREF="#node6">About this document ... </A>
+</UL>
+<!--Table of Child-Links------------------------------------->
+<P>
+<HR></P>
+<PRE>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+
+
+<!-- -----------------  node5    --------------------------   -->
+<!-- -----------------  node5    --------------------------   -->
+<!-- -----------------  node5    --------------------------   -->
+<A NAME="node5">
+
+ <H2><A NAME="SECTIONREF">Bibliography</A>
+</H2>
+<DL COMPACT><DD>
+<P>
+<P></P><DT><A NAME="BvN"><STRONG>1</STRONG></A>
+<DD> Birkhoff, G., von Neumann, J.:
+<I>The logic of quantum mechanics</I>.
+Ann. Math. <B>37</B> (1936), 823-843.
+
+<P>
+<P></P><DT><A NAME="Dichtl"><STRONG>2</STRONG></A>
+<DD> Dichtl, M.: <I>Astroids and pastings</I>.
+Algebra Universalis <B>18</B> (1981), 380-385.
+
+<P>
+<P></P><DT><A NAME="Greechie"><STRONG>3</STRONG></A>
+<DD> Greechie, R.J.: <I>Orthomodular lattices 
+admitting no
+states</I>. J. Combin. Theory Ser. A <B>10</B> (1971), 119-132.
+
+<P>
+<P></P><DT><A NAME="GKR"><STRONG>4</STRONG></A>
+<DD> Gudder, S., Kl&#228;y, M.P., R&#252;ttimann, G.T.:
+<I>States on hypergraphs</I>. Demonstratio Math. <B>19</B> (1986), 503-526.
+
+<P>
+<P></P><DT><A NAME="Kalmbach"><STRONG>5</STRONG></A>
+<DD> Kalmbach, G.: <I>Orthomodular Lattices</I>. Academic
+Press, London, 1983.
+
+<P>
+<P></P><DT><A NAME="N:State_space"><STRONG>6</STRONG></A>
+<DD> Navara, M.: <I>State space properties of
+finite logics</I>. Czechoslovak Math. J. <B>37</B> (<B>112</B>) (1987),
+188-196.
+
+<P>
+<P></P><DT><A NAME="N:Group"><STRONG>7</STRONG></A>
+<DD> Navara, M.: <I>An orthomodular lattice
+admitting no group-valued measure.</I>
+Proc. Amer. Math. Soc. <B>122</B> (1994), 7-12.
+
+<P>
+<P></P><DT><A NAME="N:Grado97Atti"><STRONG>8</STRONG></A>
+<DD> Navara, M.:
+<I>Characterization of state spaces of orthomodular structures.</I>
+Atti Univ. Modena, to appear.
+
+<P>
+<P></P><DT><A NAME="N:Semipast"><STRONG>9</STRONG></A>
+<DD> Navara, M.:
+<I>Two descriptions of state spaces of orthomodular structures.</I>
+Int. J. Theor. Phys., submitted.
+
+<P>
+<P></P><DT><A NAME="NR:HG"><STRONG>10</STRONG></A>
+<DD> Navara, M., Rogalewicz, V.: <I>Construction of
+orthomodular lattices with given state spaces</I>. Demonstration Math.
+<B>21</B> (1988), 481-493.
+
+<P>
+<P></P><DT><A NAME="Weber"><STRONG>11</STRONG></A>
+<DD> Weber, H.:
+<I>There are orthomodular lattices without non-trivial group-valued 
+states:
+A computer-based construction.</I>
+J. Math. Analysis and Appl. <B>183</B> (1994), 89-93.
+</DL><BR><HR>
+
+<!--Table of Child-Links------------------------------------>
+<UL>
+<LI><A HREF="#tex2html4">Top of the document</A>
+<LI><A HREF="#node1">The structure of quantum logic</A>
+<LI><A HREF="#node2">First problem: efficient description of spaces of measures</A>
+<LI><A HREF="#node3">Second problem: orthomodular lattice without group-valued
+ measures</A>
+<LI><A HREF="#node4">Conclusion</A>
+<LI><A HREF="#node5">Bibliography</A>
+<LI><A HREF="#node6">About this document ... </A>
+</UL>
+<!--Table of Child-Links------------------------------------->
+<P>
+<HR></P>
+<BR>
+
+<PRE>
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+
+
+<!-- -----------------  foot4    --------------------------   -->
+<!-- -----------------  foot4    --------------------------   -->
+<!-- -----------------  foot4    --------------------------   -->
+<A NAME="foot4">
+
+
+<BR> <BR> <BR> <BR> <BR><BR>  
+<BR> <HR><BR>The authors gratefully acknowledge the support
+of the project no.&nbsp;VS96049 of the Czech Ministry of Education.
+<BR> <HR><BR>
+<PRE>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+
+
+
+<!-- -----------------  node6    --------------------------   -->
+<!-- -----------------  node6    --------------------------   -->
+<!-- -----------------  node6    --------------------------   -->
+<A NAME="node6">
+
+
+<H1><A NAME="SECTION00060000000000000000">
+  About this document ... </A>
+</H1> 
+ <STRONG>Computer algebra systems as a tool for mathematical proofs in
+quantum logics
+<br></STRONG>by <STRONG><br> 
+Miroslav Hamouz and Mirko Navara</STRONG><P>
+This document was generated using the
+<A
+HREF="http://www-dsed.llnl.gov/files/programs/unix/latex2html/manual/"><STRONG>LaTeX</STRONG>2<tt>HTML</tt></A>
+translator Version 98.1p1 release (March 2nd, 1998)
+<P>
+Copyright &#169; 1993, 1994, 1995, 1996, 1997,
+<A HREF="http://cbl.leeds.ac.uk/nikos/personal.html">Nikos Drakos</A>, 
+Computer Based Learning Unit, University of Leeds.
+<P>
+The command line arguments were: <BR>
+ <STRONG>latex2html</STRONG> <tt>navara.tex</tt>.
+<P>
+The translation was initiated  and manually edited by Ladislav Kocbach.
+<BR><HR>
+<ADDRESS>
+<I>Ladislav Kocbach</I>
+<BR><I>1999-01-04</I>
+</ADDRESS>
+
+<!--Table of Child-Links------------------------------------>
+<UL>
+<LI><A HREF="#tex2html4">Top of the document</A>
+<LI><A HREF="#node1">The structure of quantum logic</A>
+<LI><A HREF="#node2">First problem: efficient description of spaces of measures</A>
+<LI><A HREF="#node3">Second problem: orthomodular lattice without group-valued
+ measures</A>
+<LI><A HREF="#node4">Conclusion</A>
+<LI><A HREF="#node5">Bibliography</A>
+</UL>
+<!--Table of Child-Links------------------------------------->
+<P>
+<HR></P>
+
+</BODY>
+</HTML>
+

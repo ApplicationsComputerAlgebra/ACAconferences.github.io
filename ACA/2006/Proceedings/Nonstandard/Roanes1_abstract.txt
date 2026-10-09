@@ -1,0 +1,27 @@
+Measuring the Evolution of the Flexibility of a Railway Network
+
+Eugenio Roanes-Lozano (1), Luis M. Laita (2), 
+Eugenio Roanes-Macias (1), Jose Luis Ruiz (3), 
+Carlos Roncero (4)
+
+(1) Departamento de Algebra, 
+    Universidad Complutense de Madrid
+(2) Departamento de Inteligencia Artificial, 
+    Universidad Politecnica de Madrid
+(3) Escuela Superior de Ingenieros Industriales, 
+    Universidad de Sevilla
+(4) Escuela de Ingenierias Industriales, 
+    Universidad de Extremadura
+
+The goal of our work is to design and develop a piece of software that can
+objectively evaluate the evolution of the flexibility of a railway network.  We
+have focused on the topology of the network considered as a graph (ignoring
+quality indicators).  We have considered two indicators as the most accurate in
+this sense: the number of cycles that provide an alternative to reach a station
+and the number of stations of intermediate degree.  We have chosen to implement
+an ``ad hoc'' extension of Maple's networks package.  It has been applied to
+study different steps of the evolution of the Spanish national broad gauge
+network (1956-2006) as illustration.
+
+This work is partially supported by the research project MTM2004-03175
+(Ministerio de Educacion y Ciencia, Spain.)

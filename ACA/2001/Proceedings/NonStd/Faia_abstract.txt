@@ -1,0 +1,36 @@
+Title of the talk
+
+"Ready, Fire, Aim": Social Systems and Rational Choice
+
+Author:
+
+Michael A. Faia
+
+Affiliation: 
+
+- The College of William & Mary
+- Soft-Eclectic Solutions
+
+Abstract
+
+"Frictions of space," although hard to measure, impinge on many forms of
+mobility in society.  Zipf's principle of least effort, emphasizing cost
+minimization, is a fruitful way to conceptualize the idea that high mobility
+costs tend to be avoided.  Zipf's work parallels many elements of rational
+choice theory (RCT) and linear programming (LP).  Further exploration of
+least-effort, least-cost, and LP principles leads to the claim that LP
+inquiries into cost minimization have implications for chaos theory.
+
+We explore a migration process with two unknowns, facilitating geometric
+illustrations.  Chaos events involve potential migratory streams that remain
+empty, along with abrupt shifts of corner solutions.  Post-optimality
+experiments give further evidence of such events.  In a model involving school
+enrollments, we show that apparently minor policy constraints, construed as
+emergent social norms, may create large shifts of optimal LP solutions.  We
+speculate about the prospects of extending Zipf's hypotheses to mentalistic
+phenomena.
+
+Finally, we develop an LP model of social mobility containing utilities to be
+maximized.  This analysis---although more experimentation is needed---leads to
+the finding that a mobility pattern with realistic utilities may eliminate
+nearly all "stayers."

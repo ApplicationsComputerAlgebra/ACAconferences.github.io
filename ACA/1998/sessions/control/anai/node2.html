@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Quantifier Elimination</TITLE>
+<META NAME="description" CONTENT="Quantifier Elimination">
+<META NAME="keywords" CONTENT="anai">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="anai.css">
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="anai.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html32"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html30"
+ HREF="anai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html24"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html33"
+ HREF="node3.html">Existing methods for LMI</A>
+<B> Up:</B> <A NAME="tex2html31"
+ HREF="anai.html">Solving LMI and BMI</A>
+<B> Previous:</B> <A NAME="tex2html25"
+ HREF="node1.html">Introduction</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00020000000000000000">
+Quantifier Elimination</A>
+</H1>
+
+<P>
+Many mathematical and industrial problems can be translated to 
+formulas consisting of 
+polynomial equations, inequalities, quantifiers (
+<!-- MATH: $\forall, \exists$ -->
+<IMG
+ WIDTH="34" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\forall, \exists$">)
+and Boolean operators (
+<!-- MATH: $\land, \lor, \lnot, \rightarrow, etc$ -->
+<IMG
+ WIDTH="115" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\land, \lor, \lnot, \rightarrow, etc$">).
+Such formulas construct sentences in the so-called <EM>first-order theory</EM>
+of real closed fields 
+and are called <EM>first-order formulas</EM>.
+
+<P>
+Let 
+<!-- MATH: $f_i(X,U) \in {\bf Q}[X,U]$ -->
+<IMG
+ WIDTH="158" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$f_i(X,U) \in {\bf Q}[X,U]$">,
+
+<!-- MATH: $i=1,2,\cdots,t,$ -->
+<IMG
+ WIDTH="114" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$i=1,2,\cdots,t,$">
+where <B>Q</B> is the fields of rational numbers,
+
+<!-- MATH: $X=(x_1,\cdots,x_n)$ -->
+<IMG
+ WIDTH="139" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$X=(x_1,\cdots,x_n)$">
+
+<!-- MATH: $\in {\bf R}^n$ -->
+<IMG
+ WIDTH="48" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\in {\bf R}^n$">
+a vector of quantified variables,
+and 
+<!-- MATH: $U=(u_1,\cdots,u_m)$ -->
+<IMG
+ WIDTH="141" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$U=(u_1,\cdots,u_m)$">
+
+<!-- MATH: $\in {\bf R}^m$ -->
+<IMG
+ WIDTH="52" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$\in {\bf R}^m$">
+a vector of unquantified parameter variables.
+Let 
+<!-- MATH: $F_i = f_i(X,U) \ \Box_i \ 0$ -->
+<IMG
+ WIDTH="154" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$F_i = f_i(X,U) \ \Box_i \ 0$">,
+where 
+<!-- MATH: $\Box_i \in \{ =,\geq,>,\ne \}$ -->
+<IMG
+ WIDTH="146" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\Box_i \in \{ =,\geq,>,\ne \}$">,
+for 
+<!-- MATH: $i=1,\cdots,s$ -->
+<IMG
+ WIDTH="94" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$i=1,\cdots,s$">,
+
+<!-- MATH: $Q_j \in \{ \forall, \exists \},$ -->
+<IMG
+ WIDTH="101" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$Q_j \in \{ \forall, \exists \},$">
+and
+<I>X</I><SUB><I>j</I></SUB> a block of <I>q</I><SUB><I>j</I></SUB> quantified variables for 
+<!-- MATH: $j=1,\cdots,s$ -->
+<IMG
+ WIDTH="96" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$j=1,\cdots,s$">.
+In general, quantified formula <IMG
+ WIDTH="18" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\varphi$">
+is given 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\varphi = {(^{Q_1}X_1 \cdots \ ^{Q_s}X_s)} \  G(F_1,\cdots,F_t)
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="first-order-formula">&#160;</A><IMG
+ WIDTH="277" HEIGHT="34"
+ SRC="img31.gif"
+ ALT="\begin{displaymath}
+\varphi = {(^{Q_1}X_1 \cdots \ ^{Q_s}X_s)} \ G(F_1,\cdots,F_t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where 
+<!-- MATH: $G(F_1,\cdots,F_t)$ -->
+<IMG
+ WIDTH="112" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$G(F_1,\cdots,F_t)$">
+is a quantifier-free (qf) Boolean formula.
+
+<P>
+QE procedure is an algorithm 
+to compute equivalent qf formula for 
+a given first-order formula.
+If all variables are quantified, <I>i.e.</I> <I>m</I>=0,
+QE procedure decides whether the given formula (<A HREF="node2.html#first-order-formula">5</A>)
+is <EM>true</EM> or <EM>false</EM>. This problem is called <EM>decision problem</EM>.
+When there are some unquantified variables <I>U</I>, 
+QE procedure find a qf formula 
+<!-- MATH: $\varphi(U)$ -->
+<IMG
+ WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\varphi(U)$">
+describing the range of possible <I>U</I> where
+
+<!-- MATH: $\varphi(U)$ -->
+<IMG
+ WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\varphi(U)$">
+is true. If there is no such range QE outputs false.
+This problem is called <EM>general quantifier elimination problem</EM>.
+
+<P>
+The history of the algorithms QE begins with 
+<EM>Tarski-Seidenberg decision procedure</EM> in 1950's
+<FONT SIZE="-1">([<A
+ HREF="node8.html#Tarski">17</A>],[<A
+ HREF="node8.html#Seidenberg">14</A>])</FONT>.
+But this is intricate and far from feasible.
+In 1975, Collins presented a more efficient general purpose 
+QE algorithm based on Cylindrical Algebraic Decomposition (CAD) 
+[<A
+ HREF="node8.html#Collins75">5</A>]. 
+The algorithm has improved by Collins and Hong in [<A
+ HREF="node8.html#CollinsHong91">6</A>]
+and was implemented on SACLIB as ``QEPCAD'' by Hong.
+Weispfenning also presented a very efficient QE algorithm 
+based on test terms [<A
+ HREF="node8.html#Wei88">18</A>],[<A
+ HREF="node8.html#Wei93">19</A>]. 
+Though there is some degree restriction of a quantified variable in input 
+formulas for this approach, it seems very practical. 
+Implementation of the method was done on 
+Reduce as ``REDLOG'' and <EM>Risa/Asir</EM> 
+<A NAME="tex2html2"
+ HREF="footnode.html#foot317"><SUP>1</SUP></A>
+[<A
+ HREF="node8.html#nt">13</A>] by Sturm [<A
+ HREF="node8.html#Sturm94">15</A>], [<A
+ HREF="node8.html#Sturm96">16</A>].
+Here we use both QE implementation on <EM>Risa/Asir</EM> and 
+REDLOG.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html32"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html30"
+ HREF="anai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html24"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html33"
+ HREF="node3.html">Existing methods for LMI</A>
+<B> Up:</B> <A NAME="tex2html31"
+ HREF="anai.html">Solving LMI and BMI</A>
+<B> Previous:</B> <A NAME="tex2html25"
+ HREF="node1.html">Introduction</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

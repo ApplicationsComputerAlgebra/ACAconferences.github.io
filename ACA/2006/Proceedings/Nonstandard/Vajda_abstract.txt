@@ -1,0 +1,86 @@
+Combining Logical and Algebraic Techniques for Natural Style Proving in
+Elementary Analysis
+
+Robert Vajda, Tudor Jebelean, Bruno Buchberger
+Research Institute for Symbolic Computation,
+Johannes Kepler University, Linz, Austria,
+{buchberg, jebelean, rvajda}@risc.uni-linz.ac.at
+
+
+Resolution based automatic theorem provers turned out to be successful in many
+areas (classification of quasigroups, axiomatization of Boolean algebras,
+etc.), but they certainly do not satisfy those requirements which originate
+from application fields like mathematical education or program verification,
+where typically a non-expert interacts with the proof assistant.  Human
+readability and human-like inferencing is lost, when one uses only the
+resolution rule for obtaining new clauses from a set of clauses.  The
+alternative would be to use a system of 'natural deduction'.  The problem is
+with the latter that although the sound inference rules are known, the
+strategies in which order and in which combination the rules should be applied
+are generally not well understood.  One promising way for improving the
+capabilities of deduction systems of the second type is to apply a particular
+strategy with combination of domain-specific decision methods which are based
+on algebraic techniques [Shankar 2002].
+
+PCS (Proving-Computing-Solving) [Buchberger 2001]  and S-Decomposition
+[Jebelean 2001] are strategies for handling proof problems by combining logic
+inference steps (e.g., modus ponens, Skolemization, instantiation) with
+rewriting steps (application of definitions) and solving procedures based on
+algebraic techniques (e.g., Groebner Bases, Cylindrical Algebraic
+Decomposition).
+
+If one formalizes the main notions of elementary analysis like continuity,
+convergence, etc., usually a sequence of alternating quantifier blocks pops up
+in the quantifier prefix of the corresponding formula.  This makes the proof
+problems involving these notions not easy.  S-Decomposition strategy is
+especially suitable for property-preserving problems like continuity of sum,
+because it is designed for handling problems where the goal and the main
+assumptions have a similar structure.  During proof deduction, existentially
+quantified goals and universal assumptions are handled by introducing
+metavariables, if no suitable ground instance is known in advance.  For
+finalizing proof attempts, the metavariables should be instantiated in such a
+way that they satisfy the cumulated algebraic constraints collected during the
+proof attempt.  The instantiation problem is considered to be difficult in the
+logical calculus.  Appropriate instances can be often found using quantifier
+elimination (QE) over real closed fields.  In order to obtain witness terms we
+utilize the QE method based on cylindrical algebraic decomposition (CAD)
+[Collins 1975]. However, the QE method alone is not sufficient. One needs to
+pre-process the (closed, quantified) conjectured formula and  post-process the
+resulting CAD-structure after the call of the QE algorithm.
+
+The steps of the pre-processing of input formula:
+
+1) eliminating terms containing function symbols by introducing new variables
+2) partitioning the quantifier prefix into alternating quantifier blocks
+3) marking the existentially and universally quantified variables and
+deleting the quantifiers in the outermost block
+
+The steps of the post-processing of the CAD-structure after the QE call for
+obtaining witness terms:
+
+1) transforming the CAD into normal form
+2) checking projection conditions
+3) isolating the constraints for the originally existentially quantified
+variables
+4) choosing a sample value for each existential variable  satisfying the
+constraints.
+
+Our implementation is based on Theorema and Mathematica.  In the Mathematica
+computer algebra system real quantifier elimination and cylindrical
+decomposition is supported [Strzebonski 2002].
+
+
+[Buchberger 2001]: B. Buchberger, The PCS Prover in Theorema. In: Lecture Notes
+in Computer Science (LNCS) 2178, pp. 19-23, Springer Verlag, Berlin, 2001.
+
+[Colins 1975]: G. E. Collins, Quantifier Elimination for Real Closed Fields by
+Cylindrical Algebraic Decomposition. In: Lecture Notes in Computer Science
+(LNCS) 33, pp. 134-183, Springer Verlag, Berlin, 1975.
+
+[Jebelean 2001]: T. Jebelean, Natural Proofs in Elementary Analysis by
+S-Decomposition. Technical report no. 01-33 in RISC Report Series, University
+of Linz, Austria.  November 2001.
+
+[Strzebonski 2002]: A. Strzebonski, Cylindrical Algebraic Decomposition Using
+Validated Numerics. Paper presented at the ACA 2002 Session on
+Symbolic-Numerical Methods in Computational Science, Volos, Greece.

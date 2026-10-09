@@ -1,0 +1,11 @@
+E. Roanes-Macias and E. Roanes-Lozano* (Spain), eroanes@eucmos.sim.ucm.es
+About how to implement Geometric Transformations on a CAS
+
+The purpose of this paper is to give the basic ideas about how to elaborate an
+implementation on a CAS of the transformations in the 3-dimensional real
+Euclidean space. These transformations could be defined in three optional ways:
+in synthetic mode, by its equations, or by taking a given list of points into
+another one. We also describe how to classify the product transformations, find
+fixed planes, split isometries as product of reflections and obtain a plot of a
+polygonal line and its image. Some practical and didactic comments are
+included. We also describe our implementation in Maple V.

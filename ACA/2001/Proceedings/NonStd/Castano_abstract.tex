@@ -1,0 +1,83 @@
+% Title:  Computing the adjoint matrix of multivariate polynomial matrices given 
+%         by straight-line programs
+
+ 
+% Authors:  B. Castaño, J. Heintz, J. Llovet
+
+
+% Affiliation:  B. Castaño, J. Llovet:
+%               Department of Mathematics, University of Alcalá, Madrid, Spain
+%
+%               J. Heintz:
+%               Department of Mathematics, Faculty of Science, University of Cantabria,
+%               Santander, Spain
+%               and
+%               Department of Mathematics, University of Buenos Aires, Buenos Aires,
+%               Argentina
+
+
+% Abstract (in LaTeX): 
+
+\documentstyle[12pt]{article}
+\newcounter{cms}
+\pagestyle{myheadings}       % estilo de p\'agina
+\setlength{\parskip}{0.0cm}  % espacio entre parrafos 
+\setlength{\parsep}{0.0cm}  
+%\renewcommand{\itemsep}
+% ---------------- Margenes --------------------------
+\oddsidemargin  0.7 cm  % margen + 1 pulgada  0.7 cm
+\evensidemargin 0.7 cm  % margen + 1 pulgada  0.7 cm
+\textwidth       15.5 cm  % anchura del texto   15  cm
+\textheight      23 cm  % longitud del texto  21  cm
+%----------------- Cabecera --------------------------
+\topmargin   0 pt  % distancia a la cabacera
+\headheight  .5 cm  % anchura de la cabacera
+\headsep     0 cm  % desde la cabecera hasta el texto
+\topskip     0 pt  % borde del texto a primera linea
+\setlength{\partopsep}{-10 pt} % separacion entre texto y primer item
+%-------------- la ñ ---------------------------------
+\newcommand{\gn}{\~{n}}
+% ------------- Distancia entre líneas -----------------
+\renewcommand{\baselinestretch}{1.0}
+\pagestyle{empty}
+
+\begin{document} % <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+\begin{center}
+{\Large {\bf Abstract}}
+\end{center}
+\vspace{.3 cm}
+\setlength{\parskip}{0 cm}
+
+In this paper we describe a new implementation of an algorithm for computing the adjoint matrix of a multivariate 
+polynomial matrix. The innovation of our approach consists on using an arithmetic circuit implemented in the computer as 
+a directed acyclic graph (DAG) for representing the polynomials, the matrices and the algorithms as well. The mentioned 
+DAG represents a straight-line program (SLP) when executing an evaluation algorithm, otherwise known as pebble game 
+across the arithmetic circuit. 
+
+The spoken of procedure has been described extensively in previously published papers, presented at ACA [{\it Llovet 
+(1998), Casta\~no (2000)}]. In all these papers we have described very interesting results. Thus, it was shown that by 
+using above mentioned SLP representation it was possible to compute the characteristic polynomial of multivariate 
+polynomial matrices and the greatest common divisor of two multivariate polynomials in less time. It also required less 
+computer memory than other, more common computer algebra systems such as MAPLE or MAGMA.
+
+In the current paper we describe a design that is based on the same mathematical principle. Subsequently, we have 
+managed to compute the adjoint matrix of a $n\times n$ square polynomial matrix $A=(A_{ij}= P_{ij}(x_1,\ldots,x_m))$ by 
+deriving the determinant of $A$ given in DAG representation with respect to all its entries. 
+This entirely novel approach, which required backward-derivation we made possible by relying on Baur-Strassen's 
+algorithm in the Jacques Morgenstern's version[{\it Morgenstern}]. 
+
+{\bf References. }
+\renewcommand{\labelenumi}{[\arabic{enumi}]}
+
+\begin{enumerate}
+\setlength{\itemsep}{0 pt}
+\setlength{\parsep}{2 pt}
+\item J. Llovet, B. Casta\gn o, R. Mart\'{\i}nez, Computing the characteristic polynomial of multivariate polynomial 
+matrices given by straight-line programs, Mathematics and Computers in Simulation 45, (1998), pp. 39-57.
+\item B. Casta\gn o, J. Heintz, J. Llovet, R. Mart\'{\i}nez, On the data structure straight-line program and its 
+implementation in symbolic computation, Mathematics and Computers in Simulation 51, (2000), pp. 497-528.
+\item J. Morgenstern, How to compute fast a function and all its derivatives A variation on the theorem of 
+Baur-Strassen, preprint.
+\end{enumerate}
+\end{document}

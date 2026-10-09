@@ -1,0 +1,38 @@
+Non-Euclidean Geometry in School
+
+Margarita Spirova and Yulian Tsankov
+Faculty of Mathematics and Informatics
+University of Sofia, Bulgaria
+
+Non-Euclidean geometries are a common subject of serious studies at
+universities.  But by recently developed computer algebra systems this topic
+can be made better understandable for students, and even suitable class-room
+presentations in school can be easily prepared.  For instance, in [1] a method
+for studying Euclidean and hyperbolic geometry in the spirit of Cayley-Klein is
+discussed, using the computer system Cinderella.
+
+In our talk we present some computer programs created by Mathematica.  These
+programs might support the study, even in school, of the simplest of all
+Cayley-Klein geometries, namely the isotropic geomety.  We think that this
+geometry is very useful for a general understanding of non-Euclidean
+geometries.  In order to introduce the basic notions of the isotropic plane
+(cf. [2]),  one needs only knowledge about coordinate systems, whereas in the
+hyperbolic plane it is necessary to introduce notations like complex numbers,
+infinite elements, homogeneous coordinates, the cross ratio and so on.  The
+presented programs have two aims:
+
+- to visualize the basic objects in the isotropic plane (segments, angles,
+  circles,...) which are different to their analogues from usual Euclidean
+  geometry,
+
+- to "prove" in basic relations concerning a triangle in the isotropic plane in
+  an experimental way (the law of sines, etc.).
+
+In this way the (non-Euclidean) isotropic geometry would be not only
+understandable for students with special interests in mathematics, but also for
+a wider circle of persons (e.g., for pupils in school).
+
+[1] Kortenkamp, U., Richter-Gebert, J.: Euclidische und nicht-Euklidische
+    Geometrie in Cinderella, J. Math.-Didaktik (2002), no. 3/4, p.301-322.
+
+[2] Sachs, H.: Ebene isotrope Geometrie, Vieweg, Braunschweig-Wiesbaden, 1987.

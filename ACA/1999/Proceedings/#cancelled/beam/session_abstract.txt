@@ -1,0 +1,7 @@
+The session "Computer Algebra Applications in Beam Physics" is a possibility
+for scientists and practitioners in mathematics and particle accelerator
+physics througout the world to present the latest research results, ideas, and
+developments in such a new area of computer algebra application as particle
+beam physics.  They can discuss the current status and applications of computer
+algebra methods and codes and look forward to future developments of software
+for beam physics modeling.

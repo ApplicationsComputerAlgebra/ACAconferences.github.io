@@ -1,0 +1,29 @@
+
+A symbolic-numerical package for linear stability analysis
+of numerical methods for ODEs
+                        by
+          M.Cafaro (*), B.Paternoster (**)
+(*) Faculty of Engineering, University of Lecce,
+    Palazzo Stecca, Via per Monteroni, 73100 Lecce, Italy,
+    e-mail: cafaro@sara.unile.it
+
+(**) Dipartimento di Matematica e Informatica, 
+     Universita' di Salerno,
+     Via S. Allende, 84081 Baronissi (Salerno), Italy,
+     e-mail: beapat@dia.unisa.it
+             na.paternoster@na-net.ornl.gov
+     84081 Baronissi (Salerno)
+ 
+In recent years we have been considering the possibility of using
+symbolic computation in the analysis and development of new numerical
+methods for Ordinary Differential Equations (ODEs), looking at computer
+algebra from the point of view of its users.
+We present the Mathematica package StabInt.m which computes the intervals of
+stability of rational functions, when they are regarderd as stability
+functions of numerical methods for ODEs. The package is very flexible
+because it ignores the form of the method under analysis, considering
+the inequalities which represent the stability  conditions.
+The possibility to perform the computation with different accuracies allows
+the user to detect ill-conditioned situations.
+The package is freely available on http://www.netlib.org/ode/symbolic.
+    

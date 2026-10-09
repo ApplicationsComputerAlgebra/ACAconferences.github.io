@@ -1,0 +1,31 @@
+Student Undergraduate Research Projects in Linear Algebra Using a Computer
+Algebra System
+
+Rosemary Carroll Farley
+Manhattan College
+Manhattan College Parkway
+Riverdale, NY 10471
+rosemary.farley@manhattan.edu
+
+This presentation will demonstrate how the computer algebra system Maple is
+used to motivate students to undertake undergraduate research problems in
+linear algebra.  First, a simple four step method used to create interesting
+graphs and animations is explained to the students.  The students are then
+encouraged to use the computer algebra system Maple as a tool to experiment and
+to use that experimentation to create mathematical hypotheses which they
+ultimately prove or reject.
+
+This presentation will first explain the four step method mentioned above and
+then provide specific examples of research projects that developed as a result
+of this method.  These projects all involve creating visualizations to clarify
+linear algebra material.  Among these are projects creating visualizations of 
+the iterates of a point under the action of a 2 x 2 matrix with complex
+eigenvalues, creating visualizations of invariant planes under linear 
+transformations, creating visualizations of the condition number of an ill-
+conditioned matrix, and creating visualizations of a least squares solution to
+an ill-posed problem.  The value of such projects in terms of linear algebra 
+learned will be discussed.
+
+
+Keywords:  Use of CAS, technological tools, linear algebra, animation,
+eigenvalues, least squares solution, condition number of a matrix.

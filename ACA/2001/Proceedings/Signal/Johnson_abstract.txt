@@ -1,0 +1,37 @@
+SPIRAL: A System for Implementation and Platform-Adaptation
+        of Signal Processing Algorithms.
+
+    Jeremy Johnson 
+    Drexel University
+    email:  jjohnson@mcs.drexel.edu
+
+    Markus Pueschel
+    Carnegie Mellon University
+    email: pueschel@ece.cmu.edu
+
+    Abstract:
+
+The SPIRAL system allows the user to obtain high-performance platform-adapted
+implementations of fast signal transforms from a high-level mathematical
+formulation.  At the simplest level, the user can specify the desired
+transforms by giving their names and sizes and ask for an implementation on a
+given platform.  A more interactive session would allow the user to guide the
+implementation process selecting from a database of algorithm rules,
+implementation strategies, and search methods.  A more sophisticated user can
+define new transforms and symbolic rules for deriving fast algorithms for the
+transform.
+
+Signal transforms can be represented by matrices and fast algorithms for
+computing the transform are derived by factoring the transform matrix into a
+product of sparse structured matrices.  The SPIRAL system derives algorithm
+choices from symbolic rules corresponding to such matrix factorizations.  Tools
+are provided for automatically deriving matrix factorizations (formula
+generator), translating matrix factorizations into efficient programs (SPL
+language and compiler), verifying the derived factorizations and
+implementations (verifier), and searching though the space of formulas and
+implementation strategies for the optimal implementation (search engine).
+
+This poster presents an implementation of the SPIRAL system using the GAP
+computer algebra system. SPIRAL is a joint project funded by DARPA.  More
+information about the SPIRAL system and project can be obtained at
+http://www.ece.cmu.edu/~spiral.

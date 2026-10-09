@@ -1,0 +1,12 @@
+Justo Cabezas, Eugenio Roanes-Lozano* (Spain), eroanes@eucmos.sim.ucm.es
+Some Reflections About the Impact of Computer Algebra Systems in the Ordering
+   of the Curricula of Mathematics
+
+The contents of a curriculum can be ordered w.r.t. different criteria, but for
+many years Mathematics have been taught everywhere following the same
+``general'' pattern. We are designing, implementing and testing a set of
+classroom experiences in order to try to prove that the use of Computer Algebra
+Systems (CASs) makes it possible to change the order of topics. Also a CAS can
+override the need of a detailed knowledge of algorithms in some cases. These
+reflections are extensions of well-known theories (scaffolding, black and white
+boxes...). The experiences already carried out confirm our thesis.

@@ -1,0 +1,5 @@
+TITLE : Automatic Differentiation in Computer Algebra Systems
+AUTHOR : Michael Monagan
+AFFILIATION : 
+Centre for Experimental & Constructive Mathematics, Simon Fraser
+University, Burnaby, British Columbia, CANADA, V5A 1S6.

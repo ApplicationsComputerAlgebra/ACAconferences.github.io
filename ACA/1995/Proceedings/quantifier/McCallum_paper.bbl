@@ -1,0 +1,88 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{BOKR86}
+
+\bibitem{Arnon_Collins_McCallum:84a}
+D.~S. Arnon, G.~E. Collins, and S.~McCallum.
+\newblock Cylindrical algebraic decomposition {I}: The basic algorithm.
+\newblock {\em SIAM J. on Computing}, 13(4):865--877, 1984.
+
+\bibitem{Arnon_Collins_McCallum:84b}
+D.~S. Arnon, G.~E. Collins, and S.~McCallum.
+\newblock Cylindrical algebraic decomposition {II}: An adjacency algorithm for
+  the plane.
+\newblock {\em SIAM J. on Computing}, 13(4):878--889, 1984.
+
+\bibitem{Arnon_Collins_McCallum:88}
+D.~S. Arnon, G.~E. Collins, and S.~McCallum.
+\newblock An adjacency algorithm for cylindrical algebraic decompositions
+  of three-dimensional space.
+\newblock {\em J. Symbolic Comp.}, 5(1,2):163--187, 1988.
+
+\bibitem{Arnon:81}
+D.~S. Arnon.
+\newblock {\em Algorithms for the Geometry of Semi-Algebraic Sets}.
+\newblock PhD thesis, Comp. Sci. Dept., Univ. of Wisconsin-Madison, 1981.
+\newblock Tech. Report No. 436.
+
+\bibitem{Collins_Hong:91}
+G.~E. Collins and H.~Hong.
+\newblock Quantifier elimination by partial {CAD} construction.
+\newblock {\em J. Symbolic Comp.}, 12(3):299--328, Sept. 1991.
+
+\bibitem{Collins_McCallum:95}
+G.~E. Collins and S. McCallum.
+\newblock Adjacency algorithms for cylindrical algebraic decompositions
+          of four and higher dimensional spaces.
+\newblock In preparation.
+
+\bibitem{Collins:75}
+G.~E. Collins.
+\newblock Quantifier elimination for the elementary theory of real closed
+  fields by cylindrical algebraic decomposition.
+\newblock In H.~Brakhage, editor, {\em Automata Theory and Formal Languages},
+  volume~33 of {\em Lec. Notes Comp. Sci.}, pages 134--183. Springer-Verlag,
+  Berlin, 1975.
+
+\bibitem{Collins:95}
+G.~E. Collins.
+\newblock Quantifier elimination by cylindrical algebraic decomposition -
+   twenty years of progress.
+\newblock To appear.
+
+\bibitem{Davenport:86}
+J.~H. Davenport.
+\newblock On a ``piano movers'' problem.
+\newblock {\em ACM SIGSAM Bulletin}, 20 (1,2):15--17, 1986.
+
+\bibitem{Dugundji:66}
+J. Dugundji.
+\newblock {\em Topology}.
+\newblock Allyn and Bacon, Boston, 1966.
+
+\bibitem{Hong:90}
+H. Hong.
+\newblock {\em Improvements in CAD-Based Quantifier Elimination}.
+\newblock PhD thesis, Ohio State University, 1990.
+\newblock Tech. Report No. OSU-CISRC-10/90-TR29.
+
+\bibitem{Kalkbrener_Stifter:87}
+M. Kalkbrener and S. Stifter.
+\newblock Some examples for using quantifier elimination for the
+   collision problem.
+\newblock Technical Report 87-22, Research Institute for
+   Symbolic Computation, J. Kepler University, Linz, Austria, 1987.
+
+\bibitem{Schwartz_Sharir:83a}
+J.~T. Schwartz and M. Sharir.
+\newblock On the ``piano movers'' problem I.
+   The case of a two-dimensional rigid polygonal body moving
+   amidst polygonal barriers.
+\newblock {\em Comm. on Pure and Applied Math.}, 26:345--398, 1983.
+
+\bibitem{Schwartz_Sharir:83b}
+J.~T. Schwartz and M. Sharir.
+\newblock On the ``piano movers'' problem II.
+   General techniques for computing topological properties
+   of real algebraic manifolds.
+\newblock {\em Advances in Applied Mathematics}, 4:298--351, 1983.
+\end{thebibliography}

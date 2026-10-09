@@ -1,0 +1,153 @@
+                  CALL FOR PAPERS
+                  ---------------
+
+
+Journal
+-------
+
+Mathematics and Computers in Simulation
+
+
+Special Issue on
+----------------
+
+Applications of Computer Algebra in Science, Engineering, Simulation and
+Special Software
+
+
+Guest Editors
+-------------
+
+Michael Wester, Elizabeth A. Arnold, Patrizia Gianni, Ilias S. Kotsireas, 
+Eugenio Roanes-Lozano, Stanly Steinberg
+
+
+Aim
+---
+
+This special issue of _Mathematics and Computers in Simulation_ (MatCom) will
+contain selected papers from the conferences ACA'2001 (Albuquerque, NM, USA)
+and ACA'2002 (Volos, Greece) that emphasize computer algebra applications.
+
+Computer Algebra has found applications in many domains of science such as
+Applied and Theoretical Mathematics, Computer Science, Biology, Medicine ... as
+well as Engineering, Social Sciences ...  According to the MatCom web page:
+
+   http://authors.elsevier.com/journal/matcom
+
+this journal is devoted to an audience of "Simulation Specialists, Applied
+Mathematicians, Statisticians and Systems Analysts".  Thus, some of the topics
+explicitly covered by the journal are contained in the title of this special
+issue.
+
+Therefore, this CFP is directed to papers with a strong "applied" component.
+It is suggested that authors of theoretical papers about Computer Algebra or
+where a Computer Algebra System is only used at a certain step to perform some
+auxiliary calculations, submit their papers elsewhere.
+
+Please observe that the deadlines in this CFP are the same for those in the
+Special volume of JSC (also) containing papers from ACA'2001 and ACA'2002.
+Please avoid double submissions of the same paper.  It is up to the authors to
+decide which of the special issues they wish to submit.
+
+Calls for papers from JSC and this notice can be found at
+
+   http://math.unm.edu/~aca/ACA/Publish/publish.html
+
+
+Submission Guidelines
+---------------------
+
+Papers must be submitted to any of the guest editors.  They must be prepared
+using the LaTeX Class File Elsart.cls, which can be obtained from
+
+   http://authors.elsevier.com/journal/matcom
+
+When using bibtex, use the file elsart_num.bst
+
+   http://www.elsevier.com/locate/latex
+
+The recommended paper length is 15 pages (using Elsart.cls)-- longer papers
+must be justifed by the importance of their content.
+
+Electronic submissions are encouraged, and may be sent as one email (MIME
+attachments are allowed).  The message should contain
+(i)  the abstract in ASCII and
+(ii) the whole paper in Postscript.
+The Postscript form must be interpretable by Ghostscript, and must use standard
+fonts, or include the necessary fonts.  Authors who cannot meet these
+requirements should submit 5 hard copies by post instead.
+
+All submitted papers will be refereed according to the usual refereeing
+process.
+
+To help in estimating the number of papers that will be submitted, we would
+appreciate an email expressing the intention to submit a paper (including
+author information, a tentative title and abstract, and an estimated number of
+pages) as early as possible.
+
+
+Important Dates
+---------------
+
+Submission of papers:                    December 30, 2002
+Deadline extension                       January 15, 2003
+Notification of acceptance/rejection:    June 30, 2003
+Delivery of final LaTeX file:            September 30, 2003
+Publication of special issue:            2004
+
+
+Guest Editors' Addresses
+------------------------
+
+Elizabeth A. Arnold
+Visiting Assistant Professor 
+Department of Mathematics 
+Texas A&M University 
+College Station, TX 77843 
+USA
+phone: +1 (979) 862 2182  
+Beth.Arnold@math.tamu.edu
+
+Patrizia Gianni
+Univerisita di Pisa,
+Dipartimento di Matematica,
+Via Buonarroti 2
+56127 Pisa, ITALY
+gianni@dm.unipi.it
+
+Ilias S. Kotsireas
+Department of Physics & Computing
+Wilfrid Laurier University
+75 University Avenue
+Waterloo Ontario N2L 3C5 Canada
+ikotsire@wlu.ca
+
+Eugenio Roanes-Lozano
+Universidad Complutense de Madrid
+Dept. Algebra, Desp. 3005
+Edificio "La Almudena"
+c/ Rector Royo-Villanova s/n
+28040 - Madrid (Spain)
+phone: (+34) 91 394 62 48
+fax:   (+34) 91 394 62 48
+eroanes@mat.ucm.es
+
+Stanly Steinberg
+Department of Mathematics and Statistics
+University of New Mexico
+Albuquerque, New Mexico
+USA 87131
+stanly@math.unm.edu
+
+Michael Wester
+Cotopaxi
+1801 Quincy, SE
+Albuquerque, New Mexico
+USA 87108-4427
+phone: +1 (505) 272-0692
+fax:   +1 (505) 272-8738
+wester@math.unm.edu
+
+-------------------------------------------------------------------------------
+

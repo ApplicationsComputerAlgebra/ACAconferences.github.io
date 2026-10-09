@@ -1,0 +1,19 @@
+Speaker:      Hyungju Park
+Title:        Minimal Syzygies and Multidimensional Filter Design
+Affiliation:  Oakland University
+              Rochester, MI USA
+URL:          http://www.oakland.edu/~park/
+Email:        park@oakland.edu
+
+Abstract
+
+Many problems in DSP (digital signal processing) can be converted to algebraic
+problems over polynomial and Laurent polynomial rings, and can be solved using
+the existing methods of algebraic and symbolic computation. We model various
+DSP problems in terms of "Linear Algebra over Polynomial Rings", and
+demonstrate how a hybrid of numeric/symbolic computations can settle difficult
+problems in multidimensional signal processing. Symbolic syzygy computation
+coupled with numerical optimization technique will be presented as a main
+example. In this regard, a heuristic algorithm for minimal syzygy computation
+will be outlined, and its relationship to Quilen-Suslin Theorem will be
+explored. No prior background in DSP will be assumed for the audience.

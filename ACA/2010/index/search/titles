@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Browse Title Index</title>
+	<meta name="description" content="Applicatios of Computer Algebra, University of Vlora June 24-27, 2010" />
+	<meta name="keywords" content="computer algebra; vlora" />
+	<meta name="generator" content="Open Conference Systems 2.1.1.2" />
+	
+
+	<link rel="stylesheet" href="http://aca2010.info/styles/common.css" type="text/css" />
+
+	
+	
+	<link rel="stylesheet" href="http://aca2010.info/styles/sidebar.css" type="text/css" />	<link rel="stylesheet" href="http://aca2010.info/styles/leftSidebar.css" type="text/css" />	<link rel="stylesheet" href="http://aca2010.info/styles/rightSidebar.css" type="text/css" />	<link rel="stylesheet" href="http://aca2010.info/styles/bothSidebars.css" type="text/css" />
+			<link rel="stylesheet" href="http://aca2010.info/plugins/themes/classicNavy/classicNavy.css" type="text/css" />
+	
+	<script type="text/javascript" src="http://aca2010.info/js/general.js"></script>
+	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript" src="http://aca2010.info/js/sizer.js" ></script>
+
+	<!-- Add stylesheets for the font sizer -->
+	<link rel="alternate stylesheet" title="Small" href="http://aca2010.info/styles/fontSmall.css" type="text/css" />
+	<link rel="stylesheet" title="Medium" href="http://aca2010.info/styles/fontMedium.css" type="text/css" />
+	<link rel="alternate stylesheet" title="Large" href="http://aca2010.info/styles/fontLarge.css" type="text/css" />
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+<div id="headerTitle">
+<h1>
+	<img src="http://aca2010.info/public/conferences/1/pageHeaderLogoImage_en_US.jpg" width="186" height="186" alt="UV logo" />
+	ACA 2010, Vlora, Albania,  June 24-27, 2010
+</h1>
+</div>
+</div>
+
+<div id="body">
+
+	<div id="sidebar">
+					<div id="leftSidebar">
+				<div class="block" id="sidebarInformation">
+	<span class="blockTitle">Information</span>
+	<ul>
+		<li><a href="../information/readers">For Readers</a></li>		<li><a href="../information/presenters">For Authors</a></li>	</ul>
+</div>
+<div class="block" id="sidebarUser">
+	<span class="blockTitle">User</span>
+		<form method="post" action="http://aca2010.info/index.php/aca2010/index/login/signIn">
+	<table>
+	<tr>
+		<td><label for="sidebar-username">Username</label></td>
+		<td><input type="text" id="sidebar-username" name="username" value="" size="12" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr>
+		<td><label for="sidebar-password">Password</label></td>
+		<td><input type="password" id="sidebar-password" name="password" value="" size="12" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">Remember me</label></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit" value="Log In" class="button" /></td>
+	</tr>
+	</table>
+	</form>
+	</div>	<div class="block" id="sidebarNavigation">
+		<span class="blockTitle">Conference Content</span>
+		
+		<span class="blockSubtitle">Search</span>
+		<form method="post" action="http://aca2010.info/index.php/aca2010/index/search/results">
+		<table>
+		<tr>
+			<td><input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /></td>
+		</tr>
+		<tr>
+			<td><select name="searchField" size="1" class="selectMenu">
+				<option label="All" value="">All</option>
+<option label="Authors" value="1">Authors</option>
+<option label="Title" value="2">Title</option>
+<option label="Abstract" value="4">Abstract</option>
+<option label="Index terms" value="120">Index terms</option>
+<option label="Full Text" value="128">Full Text</option>
+
+			</select></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Search" class="button" /></td>
+		</tr>
+		</table>
+		</form>
+		
+		<br />
+	
+	
+				<span class="blockSubtitle">Browse</span>
+		<ul>
+			<li><a href="schedConfs">By Conference</a></li>
+			<li><a href="presenters">By Author</a></li>
+			<li><a href="titles">By Title</a></li>
+					</ul>
+			</div>
+<div class="block" id="sidebarFontSize">
+	<span class="blockTitle">Font Size</span>
+	<a href="titles#" onclick="setFontSize('Small');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_small.gif" width="16" height="14" border="0" alt="Small" /></a>&nbsp;
+	<a href="titles#" onclick="setFontSize('Medium');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_medium.gif" width="16" height="14" border="0" alt="Medium" /></a>&nbsp;
+	<a href="titles#" onclick="setFontSize('Large');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_large.gif" width="16" height="14" border="0" alt="Large" /></a>
+</div>
+			</div>
+							<div id="rightSidebar">
+				<div class="block" id="sidebarDevelopedBy">
+	<a class="blockTitle" href="http://pkp.sfu.ca/ocs/" id="developedBy">Open Conference Systems</a>
+</div>	<div class="block" id="sidebarHelp">
+	<a class="blockTitle" href="javascript:openHelp('http://aca2010.info/index.php/aca2010/index/help/view/user/topic/000006')">Conference Help</a>
+</div>
+			</div>
+			</div>
+
+<div id="main">
+<div id="navbar">
+	<ul class="menu">
+		<li><a href="http://aca2010.info/index.php/index/index">Home</a></li>
+		<li><a href="../about">About</a></li>
+					<li><a href="../login">Log In</a></li>
+			<li><a href="../user/account">Account</a></li>
+				<li><a href="../search.1">Search</a></li>
+								<li><a href="../schedConfs/archive">Archive</a></li>							<li><a href="../announcement">Announcements</a></li>
+						
+							<li><a href="http://univlora.edu.al">University of Vlora</a></li>
+					<li><a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/trackPolicies">Special Sessions</a></li>
+					<li><a href="https://sites.google.com/a/univlora.edu.al/aca-schedule/home/schedule">Schedule</a></li>
+			</ul>
+</div>
+
+<div id="breadcrumb">
+	<a href="http://aca2010.info/index.php/index/index/index">Home</a> &gt;
+			<a href="../search.1" class="hierarchyLink">Search</a> &gt;
+		<a href="titles" class="current">Browse Title Index</a>
+</div>
+
+<h2>Browse Title Index</h2>
+
+<div id="content">
+<br />
+
+	
+<a name="results"></a>
+
+<table width="100%" class="listing">
+<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
+<tr class="heading" valign="bottom">
+		<td width="20%">Scheduled Conference</td>
+	<td width="80%" colspan="2">Title</td>
+</tr>
+<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
+
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">2 groups associated to partially ordered sets</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/124" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Thomas Bier			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">3-dim. scalar discrete integrable equations -  an application for parallel CA</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/159" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Thomas Wolf,					Winifried Neun,					Sergey Tsarev			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">A constructive approach to integral representations of finite groups.</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/87" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Ekaterina Khrebtova,					Dmitry Malinin			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">A Formal Proof of Confluence for an Infinitely Generated Noncommutative Polynomial Ideal Parametrized over Integro-Differential Algebras</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/81" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Loredana Tec			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">A free educational tool for visualizing topological properties: Voxelo</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/114" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Ainhoa Berciano,					Javier Carnero,					Daniel Díaz-Pernil,					Pedro Real			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">A parametric approach to combinatorial problems</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/142" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Shutaro Inoue			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">A project of Parallel Computer Algebra</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/135" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Gennadi Ivanovich Malaschonok			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">A static analogue to Ritt resolvents : efficient computation of Lagrange resolvents</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/150" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Marc Giusti			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">A symbolic   algorithm for parallel  solving of systems of partial differential equations.</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/105" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Natalia Aleksandrovna Malashonok			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">All mathematics in eight weeks!</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/37" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					J F Ogilvie			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">An automatic homology-based method for processing Gel Electrophoresis digital Images</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/113" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Pedro Real,					Jose Manuel Falces,					Belen Romero,					Helena Molina-Abril,					Antonio Suarez-Pliego			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Analytical model for the motion of a low-thrust spacecraft</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/82" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Francesco Biscani			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">ANTIQUANTIZATION AND INTEGRAL RELATIONS   	FOR HEUN EQUATIONS AND SYMMETRIES FOR THE   	CORRESPONDING PAINLEVE EQUATIONS</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/57" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Sergey Yuryevich Slavyanov,					Alexandr Ya. Kazakov,					Filip R. Vukajlovic			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Applications of Collusion in Parallel Computer Algebra</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/157" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Stephen M Watt			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Applications of Groebner bases technique to the geometry of pairs of Keplerian orbits</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/76" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Nikolay Nikolaevich Vasiliev			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Ball arithmetic</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/154" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Joris Van der Hoeven			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Classifying Matrix Types by Abstraction</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/155" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Volker Sorge			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Combinatorial Effective Homology and Homological Trees</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/112" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Pedro .. Real,					Helena Molina-Abril			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Combinatorics and Complexity of Group-theoretic Matrix Multiplication</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/35" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Sandeep Rajkumar Murthy			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Combining symbolic tools with interval analysis. An application to solve robust control problems.</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/138" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Inès Ferrer- Mallorquí,					Josep Vehi			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Comparison of the geometric capabilities of GeoGebra and Xcas</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/28" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Alkis G Akritas,					Evgenia K. Akritas			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Computer Algebra - a World of Ideas for Enhancement of Mathematics Education</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/71" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Elena Apostolova Varbanova			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Computer Algebra Challenges from Integrable non-abelian Laurent ODEs</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/141" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Thomas Wolf,					Olga Efimovskaya,					Eberhard Schruefer			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Computer-Assisted Proofs and Symbolic Computations</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/77" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Walter Kraemer			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Computing polycyclic quotients of finitely and certain infinitely presented groups</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/33" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Max Horn			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Connectivity of experimental designs using computational commutative algebra</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/103" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Hugo Maruri-Aguilar,					Eduardo Saenz-de-Cabezon,					Henry Wynn			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Derivation of resonant conditions with CGS</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/126" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Hiroshi Yoshida,					Katsusuke Nabeshima			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Determination of preliminary orbits of extrasolar planets using the radial velocity curve.</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/52" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Aleksandr Mylläri,					Darja Tolumbaeva			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Discrete vector fields for monomial resolutions</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/19" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Eduardo Saenz-de-Cabezon,					Francis Sergeraert			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Dixon-EDF: A Premier Method for Parametric Polynomial Systems</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/136" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Robert H. Lewis			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Dougall's bilateral $_2H_2$-series  and Ramanujan's $\pi$-formulae</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/133" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					WENCHANG CHU			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Doxelo: Towards a Software for Processing and Visualizing Topology Computations in Doxel-based 3D+t Images</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/116" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Javier Carnero,					Daniel Díaz-Pernil,					Pedro Real,					Jean-Luc Mari			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Effective Homology and Membrane Computing</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/117" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Pedro Real,					Hepzibah A. Christinal,					Miguel A. Gutierrez-Naranjo,					Daniel Diaz-Pernil			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Effective Homotopy: a first approach</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/120" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Ana Romero,					Francis Sergeraert			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Embedding C-XSC Automatic Differentiation in Mathematica</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/54" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Evgenija Dimitrova Popova,					Walter Kraemer,					Milan Russev			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Experiences setting individualized questions in linear algebra</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/100" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					David J Jeffrey			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Explicit construction of elliptic tori for planetary systems</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/45" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Marco Sansottera			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Families of Gromov-Witten invariants</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/119" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Artur Elezi			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">FGLM for Hermite and Popov normal forms of Ore polynomial matrices</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/125" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Johannes Middeke			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Finding Recurrences for Mellin-Barnes Integrals</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/60" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Flavia Stan			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Flexibility of Cyclo-Octane Using Resultants of Polynomial Systems</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/140" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Robert H. Lewis			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">From integral representations to special function identities</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/51" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Clemens Gunter Raab			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Generalized Fourier Series for Solutions of Linear Differential Equations.</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/61" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Alexandre Benoit			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Geometric resolution for Implicit Systems of Differential Algebraic Equations</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/152" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Pablo Solerno			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Harmonic Oscillator in Chemistry</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/36" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					J F Ogilvie			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Homological models for semidirect products of finitely generated abelian groups</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/121" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Pedro Real,					Andrés Armario,					Victor Alvarez Solano,					María Dolores Frau			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Homology-based filter for fits images</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/111" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Pedro Real,					Darian Onchis,					Javier Carnero,					 			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">INTEGRABLE DYNAMICAL SYSTEMS GENERATED BY 	QUANTUM MODELS WITH ADIABATIC PARAMETER</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/56" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Sergey Yuryevich Slavyanov,					Aleksandr Myllary			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Integro-differential Operators via Normal Forms in MAPLE</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/97" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Anja Korporal			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Invariant algebraic curves of rational vector fields and their explicit rational solutions</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/88" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Lam Xuan Chau Ngo			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Investigation of a model of plasmid-bearing, plasmid-free competition in a chemostat under uncertainties</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/72" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Neli Stoyanova Dimitrova			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Jacobi's bound and applications</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/149" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					François Ollivier			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Knowledge bases and conjugation of groups</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/130" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Marina Knyazhansky,					Tatjana Plotkin			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Kramers-Kronig and Fourier transforms between optical dispersion and absorption spectra</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/41" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					J F Ogilvie,					G J Fee			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Linear Differential Elimination for Analytic Functions</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/78" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Daniel Robertz			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Long-time stability of the secular part of a planetary problem with more than three bodies</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/63" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Ugo Locatelli			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Matrix Reordering Problem and Applications</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/144" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Lemnouar Noui			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Mixed Transcendental and Algebraic Extensions for the Risch-Norman Algorithm</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/50" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Stefan Thomas Boettner			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Multiple Factorizations of Linear Partial Differential Operators of Arbitrary Order and of Arbitrary Number of Variables</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/145" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Ekaterina Shemyakova			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">On Algebraic Directed Graphs and Polynomial Public Key Cryptography</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/74" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Aneta Aneta Wroblewska			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">On Geometries of Simple Groups of Lie type and their applications to Information Security</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/73" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Vasyl Alex Ustimenko			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">On Integrability of a Degenerated Planar Multiparameter System of ODE</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/58" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Alexander Dmitrievich Bruno,					Victor Fedorovich Edneral			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">On Integrability of a Degenerated Planar Multiparameter System of ODE II.</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/123" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Victor Fedorovich Edneral,					Valery G. Romanovski			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">ON ONE METHOD OF ANALYSIS OF LAGRANGIAN SYSTEMS.</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/86" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Valentin D. Irtegov,					Larisa A. Burlakova			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">On the $PSL_2(q)$, Ramanujan graphs and key exchange protocols</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/80" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Urszula Urszula Romanczuk,					Vasyl Alex Ustimenko			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">On the Expected  Waiting Time in the Penny Ante Game</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/53" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Aleksandr Mylläri			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">On the Problem of Removing Apparent Singularities of Linear Differential   Equations  with Polynomial Coefficients</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/147" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Moulay Barkatou			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Operational Methods in the Environment of a Computer Algebra System</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/96" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Margarita Nikolova Spiridonova			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Partial Integro-Differential Operators</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/89" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Markus G Rosenkranz			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Perturbation of chain homotopy operators preserving homology</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/118" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Pedro Real,					Ana María Pacheco			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">PRECONDITIONNING TECHNIQUES FOR SYSTEMS OF PARTIAL DIFFERENTIAL EQUATIONS USING ALGEBRAIC TOOLS</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/139" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Thomas Cluzeau			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Rational points and Hasse principle for Shimura curves: a constructive approach</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/68" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					andrei yafaev			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Relaxed power series solutions of DAEs</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/153" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Joris Van der Hoeven			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Representation issues regarding mathematical ontologies: why Description Logic does not suffice</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/62" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Fred Freitas			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Searching high order invariants in Computer Imagery</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/110" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Helena Molina-Abril,					Ainhoa Berciano,					Pedro Real			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Semiotics Acts and Processes in the definition of limit of a function according to Weierstrass</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/43" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Gabriel Humberto Tamayo Valdés,					Pedro Juan Torres Florez			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Semiotics Tools and Mathematics Curriculum</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/42" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Gabriel Humberto Tamayo Valdés,					Pedro Juan Torres Florez			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Solving ODEs in a Larger Context</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/20" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Michel Beaudin,					Gilles Picard			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Some Computation Problems arising in Fontaine Theory</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/38" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Benjamin Justus,					Radu Gaba			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Some recent developments in (parallel) REDUCE</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/160" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Winfried Neun			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Stability of Gr\"obner Bases in terms of a commutative von Neumann regular ring</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/134" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Yosuke Sato			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Summation in Finite Terms over Algebraic Extensions</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/59" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Burcin Erocal			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Symbolic and verification software tools  for bifurcation analysis of bioprocess models</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/70" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Milen Kolev Borisov			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">The arithmetic of genus 2 curves</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/22" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Tanush Shaska			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">The Lambert W-functions and some of their integrals</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/49" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Walter Gautschi			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">The model of optical diffraction on stratified media</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/66" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Endri Mydini,					Alexey Anatoljevitch Khokhlov,					Anastasiya Aleksandrovna Tyutyunnik			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">The qTSPP Theorem</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/31" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Manuel Kauers			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Theta functions of hyperelliptic curves.</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/91" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Lubjana Beshaj			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Truss Models with Uncertain Node Locations and Their Verified Finite Element Solution</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/30" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Jürgen Garloff			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Using algebraic local cohomology with parameters</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/127" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Katsusuke Nabeshima,					Yayoi Nakamura,					Shinichi Tajima			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">VarInt - Variational Integrators with Maple</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/101" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Christian Hellström			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Very high-order normal form for the circular restricted three-body problem in the spatial Lunar case</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/79" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Jesus Palacian			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Vincent’s Theorem of 1836: Parallel algorithms for real root isolation</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/148" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Gennadi I. Malaschonok,					Alkiviadis G. Akritas,					Alexey O. Lapaev,					Alexandr Pochtarkov			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Why AI, why Computation, why Mathematics?</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/146" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Jacques Calmet			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">Writing on Clouds</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/156" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Stephen M Watt			</td>
+</tr>
+<tr><td colspan="3" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+		<td><a href="../../aca2010/schedConf/view">ACA&#039;10, Applications of Computer Algebra</a></td>
+	<td width="35%">{Calcrostics - a marathon test for the algebraic solution of polynomial systems</td>
+	<td width="25%" align="right">
+			<a href="../../aca2010/paper/view/132" class="file">Abstract</a>
+			</td>
+</tr>
+<tr>
+	<td colspan="3" style="padding-left: 30px;font-style: italic;">
+					Thomas Wolf			</td>
+</tr>
+<tr><td colspan="3" class="endseparator">&nbsp;</td></tr>
+	<tr>
+		<td align="left">1 - 96 of 96 Items</td>
+		<td colspan="2" align="right"></td>
+	</tr>
+</table>
+
+<br /><br />
+<h3 dir="ltr"><span id="sites-page-title">Sponsors</span></h3><div style="margin: 5px 10px 0pt 0pt; display: inline; float: left;"><br /><br /><br /></div><div style="margin: 5px 10px 0pt 0pt; display: inline; float: left;"><a href="https://sites.google.com/a/univlora.edu.al/conferences-at-uv/aca/UV_Logo.png?attredirects=0"><img src="https://sites.google.com/a/univlora.edu.al/conferences-at-uv/_/rsrc/1263144519874/aca/UV_Logo.png?height=200&width=0" border="0" alt="" width="0" height="200" /></a></div><ul><li><strong>College of Technical Sciences, <a rel="nofollow" href="http://www.univlora.edu.al/">University of Vlora</a></strong></li></ul><ul><li><em><span style="text-decoration: underline;"><a href="http://sites.google.com/site/aulonnapress/" target="_blank"><strong>Aulona Press</strong></a></span></em><br /></li></ul><ul><li><a href="https://sites.google.com/a/univlora.edu.al/albanian-math-society/" target="_blank"><span style="text-decoration: underline;"><strong>Albanian Mathematical Society</strong></span></a></li></ul>
+
+
+
+</div><!-- content -->
+</div><!-- main -->
+</div><!-- body -->
+
+
+
+</div><!-- container -->
+</body>
+</html>

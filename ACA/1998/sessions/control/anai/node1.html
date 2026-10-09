@@ -1,0 +1,317 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction</TITLE>
+<META NAME="description" CONTENT="Introduction">
+<META NAME="keywords" CONTENT="anai">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="anai.css">
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="anai.html">
+<LINK REL="up" HREF="anai.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html22"
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html20"
+ HREF="anai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html14"
+ HREF="anai.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html23"
+ HREF="node2.html">Quantifier Elimination</A>
+<B> Up:</B> <A NAME="tex2html21"
+ HREF="anai.html">Solving LMI and BMI</A>
+<B> Previous:</B> <A NAME="tex2html15"
+ HREF="anai.html">Solving LMI and BMI</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00010000000000000000">
+Introduction</A>
+</H1>
+
+<P>
+Several interesting control system design and analysis problems
+can be reduced to quantifier elimination (QE) problems
+as shown in 
+[<A
+ HREF="node8.html#Anderson">3</A>],[<A
+ HREF="node8.html#Dorato">7</A>],[<A
+ HREF="node8.html#Liska">1</A>],[<A
+ HREF="node8.html#Jirstrand">11</A>],[<A
+ HREF="node8.html#Neubacher">12</A>].
+The first attempt 
+by Anderson <I>et al.</I>[<A
+ HREF="node8.html#Anderson">3</A>] was made in 1970's,
+but at that time the algorithm of QE was very intricate and 
+no appropriate software was available. However, recently 
+some improved algorithms have been developed by several authors
+(see [<A
+ HREF="node8.html#Collins75">5</A>],[<A
+ HREF="node8.html#CollinsHong91">6</A>],[<A
+ HREF="node8.html#Wei93">19</A>]) 
+and implemented on computers (see [<A
+ HREF="node8.html#Hong92">10</A>],[<A
+ HREF="node8.html#Sturm94">15</A>],[<A
+ HREF="node8.html#Sturm96">16</A>]).
+By virtue of the considerable developments of both algorithms and 
+software in QE methods, we explore the application of the QE theory to
+control problems of great practical interest.
+
+<P>
+Many control problems and design specifications are described 
+by using matrix inequalities. Here we focus on LMI and BMI problems;
+When <IMG
+ WIDTH="36" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$A \in$">
+<B>R</B>
+<!-- MATH: $^{n\times n}$ -->
+<IMG
+ WIDTH="35" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$^{n\times n}$">
+is <EM>(semi) positive definite,</EM>
+we denote it by 
+<!-- MATH: $A >_d 0 \ ( \geq_d 0).$ -->
+<IMG
+ WIDTH="122" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$A >_d 0 \ ( \geq_d 0).$">
+A <EM>linear matrix inequality (LMI)</EM> is a matrix inequality of the form
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+F(x)=F_0+ \sum_{i=1}^mx_i F_i
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="LMI">&#160;</A><IMG
+ WIDTH="164" HEIGHT="59"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}
+F(x)=F_0+ \sum_{i=1}^mx_i F_i
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where <IMG
+ WIDTH="33" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$x \in$">
+<B>R</B><SUP><I>m</I></SUP> is the variable vector and 
+
+<!-- MATH: $F_i=F_i^T \in$ -->
+<IMG
+ WIDTH="90" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$F_i=F_i^T \in$">
+<B>R</B>
+<!-- MATH: $^{n\times n}$ -->
+<IMG
+ WIDTH="35" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$^{n\times n}$">
+for 
+<!-- MATH: $i=0,\cdots,m$ -->
+<IMG
+ WIDTH="102" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$i=0,\cdots,m$">.
+And a <EM>bilinear matrix inequality (BMI)</EM> is of the form
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+G(x,y) = G_{0,0}+
+\sum_{i=1}^{n_x} x_i G_{i,0} +
+\sum_{j=1}^{n_y} y_j G_{0,j} +
+\sum_{i=1}^{n_x} \sum_{j=1}^{n_y} x_i y_j G_{i,j}
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="BMI">&#160;</A><IMG
+ WIDTH="447" HEIGHT="64"
+ SRC="img8.gif"
+ ALT="\begin{displaymath}
+G(x,y) = G_{0,0}+
+\sum_{i=1}^{n_x} x_i G_{i,0} +
+\sum_{j=1}^...
+..._j G_{0,j} +
+\sum_{i=1}^{n_x} \sum_{j=1}^{n_y} x_i y_j G_{i,j}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where <IMG
+ WIDTH="33" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$x \in$">
+<B>R</B><SUP><I>n</I><SUB><I>x</I></SUB></SUP>, <IMG
+ WIDTH="32" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$y \in$">
+<B>R</B><SUP><I>n</I><SUB><I>y</I></SUB></SUP>,
+
+<!-- MATH: $G_{i,j} = G_{i,j}^T \in$ -->
+<IMG
+ WIDTH="108" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$G_{i,j} = G_{i,j}^T \in$">
+<B>R</B>
+<!-- MATH: $^{n\times n}$ -->
+<IMG
+ WIDTH="35" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$^{n\times n}$">
+for 
+
+<!-- MATH: $i \in \{ 0, \cdots, n_x\},$ -->
+<IMG
+ WIDTH="127" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$i \in \{ 0, \cdots, n_x\},$">
+
+<!-- MATH: $j \in \{ 0, \cdots, n_y\}$ -->
+<IMG
+ WIDTH="123" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$j \in \{ 0, \cdots, n_y\}$">.
+
+<P>
+A number of important problems 
+can be are reduced to the optimization problems with LMI or BMI constraints.
+The problem of minimizing a linear objective function in <IMG
+ WIDTH="33" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$x \in$">
+<B>R</B><SUP><I>m</I></SUP> 
+subject to LMI constraint,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\begin{array}{cl}
+minimize & c^T x \\
+subject \ to \  & F(x)  \geq_d  0
+\end{array}
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="SDP">&#160;</A><IMG
+ WIDTH="181" HEIGHT="54"
+ SRC="img13.gif"
+ ALT="\begin{displaymath}
+\begin{array}{cl}
+minimize & c^T x \\
+subject \ to \ & F(x) \geq_d 0
+\end{array}\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where <IMG
+ WIDTH="31" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$c \in$">
+<B>R</B><SUP><I>m</I></SUP>, is called <EM>semidefinite programming (SDP)</EM>.
+SDP problem is solved numerically as convex optimization problems
+(see [<A
+ HREF="node8.html#Boyd">4</A>],[<A
+ HREF="node8.html#VandB">20</A>]). 
+But when we consider the real parametric uncertainties
+the problems are not always convex (often become non-convex) and 
+most of such methods does not work.
+
+<P>
+Moreover, we also consider <EM>extended SDP (ESDP)</EM> <EM>i.e.</EM> 
+the extension of the SDP obtained by replacing 
+LMI constraint by BMI
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\begin{array}{cl}
+minimize & c^T x + b^T y \\
+subject \ to \  & G(x,y) \geq_d 0
+\end{array}
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="ESDP">&#160;</A><IMG
+ WIDTH="199" HEIGHT="54"
+ SRC="img15.gif"
+ ALT="\begin{displaymath}
+\begin{array}{cl}
+minimize & c^T x + b^T y \\
+subject \ to \ & G(x,y) \geq_d 0
+\end{array}\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where <IMG
+ WIDTH="31" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$c \in$">
+<B>R</B><SUP><I>n</I><SUB><I>x</I></SUB></SUP>, <IMG
+ WIDTH="31" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$b \in$">
+<B>R</B><SUP><I>n</I><SUB><I>y</I></SUB></SUP>.
+Though BMIs includes much wider variety of control problems than LMIs,
+BMI problems are non-convex and, in general, hard to find the solution 
+numerically.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html22"
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html20"
+ HREF="anai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html14"
+ HREF="anai.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html23"
+ HREF="node2.html">Quantifier Elimination</A>
+<B> Up:</B> <A NAME="tex2html21"
+ HREF="anai.html">Solving LMI and BMI</A>
+<B> Previous:</B> <A NAME="tex2html15"
+ HREF="anai.html">Solving LMI and BMI</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

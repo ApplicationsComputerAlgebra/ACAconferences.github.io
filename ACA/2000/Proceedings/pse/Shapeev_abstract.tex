@@ -1,0 +1,98 @@
+\documentclass[10pt]{article}
+%\documentstyle[10pt]{article}
+\pagestyle{empty}
+\topmargin=0mm
+\oddsidemargin=0mm
+\textwidth=170mm
+\textheight=250mm
+\headheight=0mm
+\headsep=0mm
+
+\begin{document}
+\large
+\begin{center}
+{\Large \bf
+Application of computer algebra systems to construct
+high\,-\,order difference schemes
+}\\
+\vspace {4mm}
+A. V. Shapeev
+\\
+{\it \small Novosibirsk State University, 630090, Novosibirsk, Russia\\
+ e-mail: shapeew@itam.nsc.ru}
+\end{center}
+\vspace {6mm}
+
+ In paper presented, in contrast to \cite{bk:val,bk:shap3}, new approach
+to application of computer algebra systems (CAS) to constructing
+high\,-\,order difference schemes is stated.
+ Programming language is developed, which is some extension of C++ language
+and which preserves syntax of MATHEMATICA language.
+ Let us call it C\&MATH.
+ Language proposed allows to use functions of MATHEMATICA language
+(for instance, functions of solving systems of linear algebraic equations,
+ simplification of algebraic expressions, etc.).
+ Computer program\,-\,preprocessor is written in CAS MATHEMATICA which 
+ converts code written in C\&MATH to code in C++ language.
+ Then the code obtained can be compiled as ordinary computer program in
+ C++ language.
+
+Two ways to construct schemes by method of undetermined coefficients
+are implemented in C\&MATH language:
+as analytical formulae and numerically \cite{bk:shap1,bk:shap2},
+when for given equation and boundary conditions for each computational node
+numerical values of difference equations coefficients are found during
+solving boundary\,-\,value problem.
+ In the first way of scheme constructing, program\,-\,preprocessor forms
+ system of linear algebraic equations to determine scheme coefficients on
+given stencils and then solves it.
+ In the second way, only coefficients of the latter system of equations are
+computed explicitly. Further they are used to find scheme coefficients during
+solving difference problem.
+ Approach proposed was successfully used to get over huge analytical work
+concerned with constructing high\,-\,order schemes for solving 
+boundary\,-\,value problems for elliptic equations in domain with curvilinear
+bounary.
+ For the first time we succeeded in creation schemes up to 18th order on
+grids with square and triangle cells inside the domain and with irregular
+cells near its curvilinear boundary.
+ Application of this approach to Navier\,---\,Stokes equations permits to
+create 4th\,-\,order scheme on 5\,-\,nodes stencil.
+ Great number of numerical experiments on solving different boundary\,-\,value
+problems by schemes created and comparison of results obtained with tests and
+with known results of other researches were made.
+ Effectiveness of obtained schemes was shown \cite{bk:shap1,bk:shap2}.
+
+{\footnotesize This work was supported by FSP "Integration", grant No~276
+%{\footnotesize Работа поддержана грантом ФЦП "Интеграция" \No 276.}
+and by the Russian Foundation for Basic
+Research, grant No~00-15-96162.}
+
+\begin{thebibliography}{}
+\bibitem{bk:val}
+ A.N.~Valiullin, V.P.~Shapeev et al.
+ Problem of automatic development and investigation of difference schemes 
+ in analytic form using computer //
+ Dokl. AN SSSR, 1984, Vol.~275, No~3, p.~528--532.
+
+\bibitem{bk:shap3}
+V.P. Shapeev.
+Application of computer algebra in numerical methods //
+Proceedings of 31-th regional youth conference "Problems of theoretical
+and applied mechanics" --- Ekaterinburg, 2000. --- Pp.~80--84
+(in Russian)
+
+\bibitem{bk:shap1}
+ A.V.~Shapeev, V.P.~Shapeev.
+ High\,-\,order difference schemes for solving elliptic equations in domain
+with curvilinear boundary //
+ J. Comput. Math. and Math. Phys., 2000, Vol.~40, No~2 (in Russian).
+
+\bibitem{bk:shap2}
+A.V.~Shapeev, V.P.~Shapeev.
+High-precision approximation schemes in a domain with curvilinear
+boundary. // ENUMATH'99,
+Book of abstracts, Jyvaskyla, Finland, July. 26-30, 1999, pp.~134--135.
+\end{thebibliography}
+
+\end{document}

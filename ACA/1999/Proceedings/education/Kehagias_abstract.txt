@@ -1,0 +1,14 @@
+A Kehagias and  P. N. Vlachos* (Greece), pvla@ac.anatolia.edu.gr
+Computer Aided Instruction for Business Calculus in an International Liberal
+   Arts College
+
+In this paper we present a Computer Aided Instruction project that was
+conducted at the American College of Thessaloniki, Greece. Using a formal
+controlled experiment, we assess the efficiency of a computer based designed
+course  (Laboratory setting, use of MathCad electronic notes specifically
+prepared for the course, Web Based system for dissemination of information
+etc.) in enhancing the understanding of important mathematical concepts, in
+improving overall performance and in making mathematics more interesting and
+attractive for students. The assessment of the experiment is based on both
+statistical hypothesis testing and analysis of qualitative data (perception
+questionnaires, etc.)

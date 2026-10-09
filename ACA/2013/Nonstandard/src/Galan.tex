@@ -1,0 +1,84 @@
+
+\documentclass[a4paper]{article} %
+\usepackage{graphicx,amssymb} %
+
+\textwidth=15cm \hoffset=-1.2cm %
+\textheight=25cm \voffset=-2cm %
+
+\pagestyle{empty} %
+
+\date{} %
+
+\def\keywords#1{\begin{center}{\bf Keywords}\\{#1}\end{center}} %
+
+\def\titulo#1{\title{#1}} %
+\def\autores#1{\author{#1}} %
+
+% Please, do not change any of the above lines
+
+
+
+
+
+
+
+
+\begin{document}
+
+% Type down your paper title
+\titulo{Simulating Car Traffic with Smart Signals using a CAS}
+
+% Authors
+\autores{Jos\'e Luis Gal\'an, Gabriel Aguilera, Jos\'e Carlos Campos, Pedro Rodr\'{\i}guez \\ %
+       University of M\'alaga (Spain) \\ \\ % Affiliation 1
+       % New author \\
+       % New affiliation \\
+       % Add authors and affiliation as needed
+       \tt{jl\_galan@uma.es} % Only one corresponding e-mail
+       }%
+
+
+\maketitle
+
+\thispagestyle{empty}
+
+
+
+% The abstract
+
+\begin{abstract}
+
+Smart cities designs involve different characteristics, being the use of smart traffic lights and smart signals two of the most important ones. One of the greatest problems to deal with is that any physical implementation of these smart traffic signals are expensive in both, money and resources.
+
+Therefore, any virtual implementation of such signals within a traffic structure can provide important information in order to test the behavior of different designs previously to a physical implementation.
+
+In this talk, we present a model which allow accelerated-time simulations of car traffic using smart signals in a city. The implementation of the model has been developed using {\sc Maxima}. The use of this CAS enable the use of different probability distributions for the different controlled aspects including the possibility of defining an ad-hoc distribution which can fit better the user necessities for the simulation. The use of a CAS is needed mainly because in order to deal with an ad-hoc distribution, exact and symbolic computations are required (for example, for antiderivatives computation). On the other hand, when using a CAS with classical probability distributions, such as exponential distribution, Poisson distribution or normal distribution, exact computations produce better results than when approximating the generated values for such distributions.
+
+In order to easily follow the simulation, a graphical approach of the model has been also developed using Java. This combination of Java and Maxima allows also to have a portable implementation of the model which can run in most computer systems.
+
+Finally, this work is part of the future work stated in previous works on accelerated-time simulations presented in ACA'11 and ACA'12 also in the Nonstandard Session.
+
+\end{abstract}
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+\bibitem{An accelerated-time simulation of car traffic on a motorway using a CAS}
+{\sc Gabriel Aguilera and Jos\'e Luis Gal\'an and Jos\'e Manuel Garc\'{\i}a and Enrique M\'erida and Pedro Rodr\'{\i}guez}. {An accelerated-time simulation of car traffic on a motorway using a CAS}. Math. Comput. Simul. (2012), http://dx.doi.org/10.1016/j.matcom.2012.03.010.
+\end{thebibliography}
+
+
+\keywords{Accelerated-time simulation, Smart cities, Smart signals, CAS} % Write down at least 3 Keywords
+
+
+
+
+
+
+% \section{Introduction}
+
+
+
+
+
+
+\end{document}

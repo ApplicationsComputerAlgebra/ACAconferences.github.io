@@ -1,0 +1,24 @@
+# Created by rsalamon@yucca on Thu Jul  4 10:21:28 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Akers.html
+Path=0/conference/IMACS96/skeletons/Roanes/Akers.html
+
+Name=Calmet.html
+Path=0/conference/IMACS96/skeletons/Roanes/Calmet.html
+
+Name=Montes.html
+Path=0/conference/IMACS96/skeletons/Roanes/Montes.html
+
+Name=Nakagawa.html
+Path=0/conference/IMACS96/skeletons/Roanes/Nakagawa.html
+
+Name=Roanes.html
+Path=0/conference/IMACS96/skeletons/Roanes/Roanes.html
+
+Name=Taylor.html
+Path=0/conference/IMACS96/skeletons/Roanes/Taylor.html
+
+Name=Trejo.html
+Path=0/conference/IMACS96/skeletons/Roanes/Trejo.html
+

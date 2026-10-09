@@ -1,0 +1,27 @@
+----------------------------------------------------------------------------
+                    Grand Challenges in Computer Algebra
+----------------------------------------------------------------------------
+
+      The Diatomic Anharmonic Oscillator According to Matrix Mechanics
+
+     The model of a vibrating diatomic molecule as an anharmonic oscillator
+     is investigated with matrix mechanics and perturbation theory of high
+     orders. Using the commutation properties of matrices that represent
+     coordinate and momentum, with the commutation law applied explicitly
+     for the harmonic oscillator, we solve the eigenvalue problem taking
+     successive anharmonic terms in the function for potential energy in
+     successive orders of perturbation theory. We use Maple to solve the
+     sets of linear equations and to seek general relations for the matrix
+     elements of the hamiltonian and unitary matrices to diagonalise the
+     hamiltonian.
+
+     Michael B. Monagan                         John F. Ogilvie
+     Simon Fraser University,                   Simon Fraser University,
+     Canada                                     Canada
+     monagan@cecm.sfu.ca                        ogilvie@cecm.sfu.ca
+
+Back to the session homepage
+
+----------------------------------------------------------------------------
+Last update: May 29, 1997
+----------------------------------------------------------------------------

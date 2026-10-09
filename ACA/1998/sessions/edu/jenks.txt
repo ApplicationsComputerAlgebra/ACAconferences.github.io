@@ -1,0 +1,16 @@
+"How To Create Textbooks With Live Mathematics Using LATEX"
+
+Richard D. Jenks
+IBM Research
+P.O. Box 218
+Yorktown Heights, New York   10598
+USA
+E-mail:jenks@watson.ibm.com
+
+
+This reports a study of designs and techniques for creating live 
+mathematics from markup in new or existing mathematical 
+documents written in LATEX. We present LATEX extensions to techexplorer 
+that provide both presentation and semantic 
+content markup suitable for transmission to computer algebra systems using 
+OpenMath and/or MathML.

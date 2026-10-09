@@ -1,0 +1,26 @@
+ "Matrix Methods for Sparse Polynomial Systems"
+  John Canny
+  jfc@cs.berkeley.edu
+
+
+Prof. John Canny
+Computer Science Division
+529 Soda Hall
+Berkeley CA 94720-1776
+jfc@cs.berkeley.edu
+
+
+
+There  are  a variety of ways  of  solving polynomial  systems in many
+variables.  The systems that  arise in engineering problems often have
+few solutions relative to their Bezout bound, which  is the product of
+their degrees. A sharper measure is the Bernstein bound which is based
+on  the  Newton  polytopes  of  the system.   I  will  give   a  short
+introduction  to Newton polytopes and  the  mixed volumes, and explain
+how the latter bounds  the number  of roots. The  mixed volume  can be
+defined using a mixed subdivision of a  polytope. This subdivision has
+been  used  by B.  Sturmfels  to derive  an efficient equation-solving
+method  based on homotopies, and by  us  to derive efficient resultant
+matrices. In both cases,  the complexity depends  on the sparse  bound
+rather than Bezout. Given  a sparse  resultant matrix, any  polynomial
+equation solving problem reduces to an eigenvalue calculation.

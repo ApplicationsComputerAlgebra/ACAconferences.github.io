@@ -1,0 +1,13 @@
+A. Cavallone*, C. D'Apice*, M. Marsella, S. Salerno (Italy),
+   dapice@diima.unisa.it
+A didactical laboratory: image filtering
+
+Fixed images can adequately be represented in mathematical form like functions
+f(x,y) of two variable x and y, space co-ordinates that characterise several
+points in the plan of the image, where f is the level of gray in such points,
+or the reference to a data structure that contains information on the three
+fundamental colours of images. The aim of this work is to create a virtual
+laboratory by which it is possible to carry out experiments on the images
+filtering. In such a way teachers are able to introduce students to some
+mathematical functions, as the Fast Fourier Transform, that otherwise would
+seem abstract.

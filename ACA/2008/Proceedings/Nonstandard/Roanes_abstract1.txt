@@ -1,0 +1,13 @@
+A Symbolic-Numeric Approach to Minimal Polynomial Logic and to Rule Based
+Expert Systems that Use this Logic
+
+E. Roanes-Lozano, Luis M. Laita and E. Roanes-Macias
+
+We had previously developed an algebraic model of classic Boolean and modal
+many-valued logics.  A similar approach, also using computer algebra techniques
+(Groebner bases) and oriented to perform effective calculus in a certain
+continuous logic: minimal polynomial logic (MPL), and also to perform knowledge
+extraction and to check consistency in rule based expert systems (RBES) whose
+underlying logic is MPL, is presented.  The implementation has been developed
+in the computer algebra system Maple.  The presentation will be illustrated
+with examples of simple RBES.

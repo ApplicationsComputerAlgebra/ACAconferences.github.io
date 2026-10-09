@@ -1,0 +1,62 @@
+\documentstyle[11pt]{article}
+\textheight         21cm
+\textwidth        14.6cm
+\oddsidemargin      10pt
+\evensidemargin     10pt
+\title{Zero Decomposition for Theorem Proving in Geometry}
+\author{Dongming Wang \\ LIFIA--IMAG, 46, avenue F\'elix Viallet, 
+38031 Grenoble Cedex, France}
+\date{}
+\input{amssym.def}                 
+\input{amssym}
+\newcommand{\PS}{{\Bbb P}}
+\newcommand{\QS}{{\Bbb Q}}
+\newcommand{\TF}{{\Bbb T}}
+\newcommand{\US}{{\Bbb U}}
+\newcommand{\thm}{${\cal T}$}
+\newcommand{\Zero}{{\rm \mbox{Zero}}}
+\newcommand{\k}{\vec{K}}
+\def\vec#1{{\boldmath%
+\mathchoice{\hbox{$\displaystyle#1$}}{\hbox{$\textstyle#1$}}%
+{\hbox{$\scriptstyle#1$}}{\hbox{$\scriptscriptstyle#1$}}}}%
+\begin{document}     
+\maketitle
+
+\vskip 1cm
+\centerline{\bf Abstract}
+
+\medskip
+Let $\k$ be a field of characteristic $0$ and $\tilde{\k}$
+some extension field of $\k$. A polynomial system is a pair 
+$[\PS, \QS]$ of sets of polynomials in $\k[x_1,\ldots,x_n]$, 
+with which the zero set 
+$$\Zero(\PS/\QS)=\{(x_1,\ldots,x_n)\in\tilde{\k}^n|~P(x_1,\ldots,x_n)=0, 
+Q(x_1,\ldots,x_n)\neq 0,~\forall P\in\PS,Q\in\QS\}$$
+is of concern. We present two algorithms for decomposing any polynomial 
+system $[\PS, \QS]$ into finitely many triangular systems $[\TF_1, \US_1],
+\ldots, [\TF_e, \US_e]$ such that
+$$\Zero(\PS/\QS)=\bigcup_{i=1}^e\Zero(\TF_i/\US_i).\eqno(\mbox{I})$$ 
+To prove a geometric theorem \thm\ which may be formulated 
+algebraically in the form 
+$$(\forall x_1\cdots\forall x_n)\,[H_1=0\wedge\cdots\wedge H_h=0\wedge 
+D_1\neq 0\wedge\cdots\wedge D_d\neq 0\Longrightarrow C=0]\eqno(\mbox{II})$$
+with $H_i, D_j, C\in\k[x_1,\ldots,x_n]$,
+we follow Wu's method by first computing a zero decomposition of the 
+form (I) with $\PS=\{H_1,\ldots,H_h\}$ and $\QS=\{D_1,\ldots,D_d\}$, 
+and then determining whether $C$ vanishes on $\Zero(\TF_i/\US_i)$ for
+each $i$. The latter can be done straightforwardly by successive 
+pseudo-division. In particular, we advocate using irreducible zero 
+decomposition; based on this, a prover has been implemented 
+which can decide whether the above algebraic form (II) of \thm\
+is true universally or only for some part of the hypothesis
+configuration defined by $\Zero(\PS/\QS)$. Determining the latter 
+is of interest not only for ruling out the degenerate cases in which 
+the theorem may be meaningless or false, but also for dealing with 
+such theorems which involve reducibility or whose precise algebraic 
+formulation involves inequalities. We illustrate the performance of 
+our decomposition algorithms, with several examples and in comparison 
+with Ritt-Wu's, for theorem proving in geometry. Extension of the 
+algorithms for proving theorems in differential geometry 
+is discussed briefly.
+
+\end{document}

@@ -1,0 +1,337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Using Hilbert Function.</TITLE>
+<META NAME="description" CONTENT="Using Hilbert Function.">
+<META NAME="keywords" CONTENT="vega">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="vega.css">
+</HEAD>
+<BODY bgcolor=white>
+
+<H1><A NAME="SECTION00030000000000000000">
+Using Hilbert Function.</A>
+</H1>  
+  
+Let <I>J</I> be an ideal in 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[X_0, \ldots, X_n]= {\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$ -->
+<IMG
+ WIDTH="176" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[X_0, \ldots, X_n]= {\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$">.
+<I>J</I> is  
+said homogeneous if the relation <IMG
+ WIDTH="49" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$F \in J$">
+implies that all the homogeneous  
+components of <I>F</I> are in <I>J</I>.  Let 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]_s$ -->
+<IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]_s$">
+denote the set of
+homogeneous polynomials of   total degree <I>s</I> (including the zero polynomial)
+which is a 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}$ -->
+<IMG
+ WIDTH="22" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}$">-vector   space of dimension 
+<!-- MATH: $\theta(n, s)={{n+s}
+\choose{s}}$ -->
+<IMG
+ WIDTH="114" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.gif"
+ ALT="$\theta(n, s)={{n+s}
+\choose{s}}$">.
+If  
+<I>J</I> is a homogeneous ideal, we let   
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+J_s=J \cap {\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]_s.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="119" HEIGHT="31"
+ SRC="img90.gif"
+ ALT="\begin{displaymath}J_s=J \cap {\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]_s.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Then the <EM>Hilbert function of </EM><I>J</I> is defined by  
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+H_J(s)= \dim_{{\rm I\kern -2.2pt K\hskip 1pt}} {\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]_s/J_s.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="186" HEIGHT="31"
+ SRC="img91.gif"
+ ALT="\begin{displaymath}H_J(s)= \dim_{{\rm I\kern -2.2pt K\hskip 1pt}} {\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]_s/J_s.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+It is also possible to define the Hilbert Function for inhomogeneous  
+ideals: it is enough to replace 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[X_0, \ldots, X_n]_s$ -->
+<IMG
+ WIDTH="120" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[X_0, \ldots, X_n]_s$">
+by 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[X_1,
+\ldots, X_n]_{\leq s}$ -->
+<IMG
+ WIDTH="130" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[X_1,
+\ldots, X_n]_{\leq s}$">,
+the set of polynomials in 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[X_1,
+\ldots, X_n]$ -->
+<IMG
+ WIDTH="112" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[X_1,
+\ldots, X_n]$">
+of  
+total degree at most <I>s</I> (including the zero polynomial).  
+  
+Following the ideas in [<A
+ HREF="node15.html#Trav96">12</A>] it is posible to use the Hilbert  
+function, to check if the specialisation of a Gr&#246;bner Basis of a  
+homogeneous (with respect to  
+<!-- MATH: $\underline{X}=(X_0, \ldots, X_n)$ -->
+<IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.gif"
+ ALT="$\underline{X}=(X_0, \ldots, X_n)$">)
+ideal <I>J</I>in  
+
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$ -->
+<IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$">
+with respect to a block ordering is a  
+Gr&#246;bner Basis of the specialised homogeneous ideal. The main tool is the  
+following theorem appearing in [<A
+ HREF="node15.html#Trav96">12</A>] and its corollary to the  
+situation we are dealing with.  
+  <P>
+<DIV><A NAME="Hilb"><B>Theorem  3</B></A> ([<A
+ HREF="node15.html#Trav96">12</A>])  &nbsp; 
+  
+Let <I>J</I> be an ideal in 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$ -->
+<IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$">
+and <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img97.gif"
+ ALT="$\sigma$">
+a  
+degree-compatible term ordering. Let 
+<!-- MATH: $G=\{g_1,\ldots,g_k\}$ -->
+<IMG
+ WIDTH="126" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.gif"
+ ALT="$G=\{g_1,\ldots,g_k\}$">
+be a set of  
+elements of <I>J</I>. If <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+H_{Lt_{\sigma}(J)}=H_{Lt_{\sigma}(G)}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="132" HEIGHT="33"
+ SRC="img99.gif"
+ ALT="\begin{displaymath}H_{Lt_{\sigma}(J)}=H_{Lt_{\sigma}(G)}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+then <I>G</I> is a  
+Gr&#246;bner basis of <I>J</I> with respect to <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img97.gif"
+ ALT="$\sigma$">.
+</DIV><P></P>
+  
+  <P>
+<DIV><A NAME="SpecHilb"><B>Corollary  1</B></A> &nbsp; 
+Let <I>J</I> be a homogeneous ideal in  
+
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$ -->
+<IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$">,
+<I>G</I> its Gr&#246;bner  basis with respect to
+a   block 
+<!-- MATH: $\underline{X}$ -->
+<IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\underline{X}$">-degree-compatible ordering <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img97.gif"
+ ALT="$\sigma$">
+in  
+
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$ -->
+<IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$">
+and  <IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.gif"
+ ALT="$\phi$">
+the specialization map giving  
+values to the parameters in 
+<!-- MATH: $\underline{T}$ -->
+<IMG
+ WIDTH="17" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\underline{T}$">.
+Let 
+<!-- MATH: $\overline{\sigma}$ -->
+<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.gif"
+ ALT="$\overline{\sigma}$">
+be  
+the restriction of <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img97.gif"
+ ALT="$\sigma$">
+to 
+<!-- MATH: ${\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$ -->
+<IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$">,
+
+<!-- MATH: $H_{Lt_{\overline{\sigma}}(G)}$ -->
+<IMG
+ WIDTH="63" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.gif"
+ ALT="$H_{Lt_{\overline{\sigma}}(G)}$">
+the Hilbert function of the ideal  
+generated by the 
+<!-- MATH: $\underline{X}$ -->
+<IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\underline{X}$">-leading power products of <I>G</I> and   
+
+<!-- MATH: $H_{Lt_{\overline{\sigma}}(\phi(G))}$ -->
+<IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.gif"
+ ALT="$H_{Lt_{\overline{\sigma}}(\phi(G))}$">
+the Hilbert function of the ideal  
+generated by the leading power products of <IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.gif"
+ ALT="$\phi(G)$">.
+If   
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+H_{Lt_{\overline{\sigma}}(G)}=H_{Lt_{\overline{\sigma}}(\phi(G))}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="153" HEIGHT="33"
+ SRC="img105.gif"
+ ALT="\begin{displaymath}H_{Lt_{\overline{\sigma}}(G)}=H_{Lt_{\overline{\sigma}}(\phi(G))}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+then  <IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.gif"
+ ALT="$\phi(G)$">
+is a Gr&#246;bner  basis of <IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.gif"
+ ALT="$\phi(J)$">
+with respect to   
+
+<!-- MATH: $\overline{\sigma}$ -->
+<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.gif"
+ ALT="$\overline{\sigma}$">.
+</DIV><P></P>
+  
+<BR>
+<IMG
+ WIDTH="580" HEIGHT="95" ALIGN="BOTTOM" BORDER="0"
+ SRC="img107.gif"
+ ALT="\begin{proof}% latex2html id marker 283
+Any specialization $\psi$\space producin...
+...
+\vrule width 1.4mm height 1.4mm depth 0mm
+\par\goodbreak \medskip
+\end{proof}">
+<BR>
+The key point here is to compute  
+a ``generic" Gr&#246;bner Basis of the ideal <I>J</I> regarded in  
+
+<!-- MATH: ${{\rm I\kern -2.2pt K\hskip 1pt}}[\underline{T},\underline{X}]$ -->
+<IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{T},\underline{X}]$">
+with respect to a degree-compatible  
+monomial ordering and to use this Gr&#246;bner Basis to derive the ``generic"  
+Hilbert function of <I>J</I> considered as ideal in 
+<!-- MATH: ${{\rm I\kern -2.2pt K\hskip 1pt}}[\underline{X}]$ -->
+<IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="${\rm I\kern -2.2pt K\hskip 1pt}[\underline{X}]$">.
+For a given specialization of the parameters, the specialization of the  
+``generic" Gr&#246;bner Basis is a Gr&#246;bner Basis if the ``generic"  
+Hilbert function agrees with the Hilbert function of the monomial ideal  
+generated by the leading power products of the specialized Gr&#246;bner  
+Basis. To remark finally that  the Hilbert function of a monomial ideal is  
+very easy to compute and thus it seems to be an immediate tool to use in  
+order to check the correctness of the specialization process.  
+  
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html115"
+ HREF="node10.html">Computing a set of good specialization parameter conditions.</A>
+<LI><A NAME="tex2html116"
+ HREF="node11.html">Simplification of the set of conditions.</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

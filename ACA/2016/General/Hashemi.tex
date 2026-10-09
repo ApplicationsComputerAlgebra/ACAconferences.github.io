@@ -1,0 +1,77 @@
+%    Latex Template for ACA 2016
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS BELOW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{url}
+
+
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    DO NOT CHANGE THE SETTINGS ABOVE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\vspace{-0.8cm}
+\begin{flushleft}
+\Large \textbf{\noindent
+%%% PLEASE INSERT THE TITLE OF YOUR TALK HERE %%%%%%%
+N\oe ther Normalization and Involutive Bases}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5cm}
+\normalsize
+ %%%%%%             NAMES OF AUTHORS         %%%%%%
+ %%%%%% NAME OF SPEAKER SHOULD BE UNDERLINED %%%%%%%%%
+\normalsize{
+ %%%%%% FOR EXAMPLE %%%%%
+ Amir Hashemi
+ %%%%%%%%%%%%%%%%%%%%%%%%
+} \\
+\vspace{5mm}
+\textit{\footnotesize
+ %%%%%% AFFILIATION OF AUTHORS %%%%%%
+ Department of Mathematical Sciences, 
+Isfahan University of Technology, Isfahan, 84156-83111, Iran and\\
+School of Mathematics, Institute for Research in Fundamental
+Sciences (IPM), Tehran, P.O.Box: 19395-5746, Iran\\
+Amir.Hashemi@cc.iut.ac.ir\\
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+\end{flushleft}
+In this talk, we present a relationship between N\oe ther normalization and involutive bases. Based on a new definition of N\oe ther position called {\em D-quasi stability} \cite{hashemi} we present an efficient algorithm based on the algorithm described by Seiler in \cite{wms:comb2} (to transform an ideal into  quasi stable position) to find, for a given homogeneous ideal, a linear change of variables which transforms the ideal into N\oe ther position. For this purpose, the type of linear  changes we apply is the elementary linear changes, i.e. at each iteration we make a linear change of the form $x_k\mapsto x_k+ax_\ell$ where the pair $(x_k,x_\ell)$ presents an obstacle for being in N\oe ther position and $a$ is a random number. We have implemented the described algorithm in {\sc Maple} and illustrate its efficiency via a set of benchmark polynomials. In this direction, we shall mention the work \cite{Daniel} due to Robertz in which he applied the cone decomposition of the given ideal using Janet division to obtain also an sparse linear change of variables for the N\oe ther normalization. Remark that the criterion to get N\oe ther normalization described in \cite{Daniel} is {\em not} equivalent to N\oe ther position, however, our new criterion is equivalent and this may lead to achieve a more sparse linear change of variables.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{00}
+\addcontentsline{toc}{chapter}{References}
+\setlength{\itemsep}{-1mm}
+\footnotesize
+
+\bibitem{hashemi}
+Hashemi A.: Effective computation of radical of ideals and its application to invariant theory. International Congress on Mathematical Software (ICMS 2014), Seoul, Korea, 2014. {\em Lecture Notes in Computer Science}, Volume 8592, pages 382--389, 2014.
+
+\bibitem{wms:comb2}
+Seiler, W.M.: A combinatorial approach to involution and $\delta$-regularity
+  {II}: Structure analysis of polynomial modules with {P}ommaret bases. {\em Appl.\
+  Alg.\ Eng.\ Comm.\ Comp.}  {\bf 20}, pages  261--338, 2009.
+
+\bibitem{Daniel}
+Robertz, D.: Noether normalization guided by monomial cone decompositions. {\em J. of Sym. Comput.}  {\bf 44}(10), pages  1359--1373, 2009.
+\end{thebibliography}
+\normalsize
+\end{document} 

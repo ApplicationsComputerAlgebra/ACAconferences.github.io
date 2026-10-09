@@ -1,0 +1,50 @@
+\documentstyle{article}
+\begin{document}
+
+\centerline{\bf Solving Linear Differential Equations with Polynomial}
+\centerline{\bf Coefficients in Some Power Series Classes}
+
+\vskip 0.3cm
+
+\centerline{Sergei A.~Abramov\thanks{Supported in part by
+the RFBR and INTAS under grant 95-IN-RU-412.}}
+\centerline{Computer Center of the Russian Academy of Science}
+\centerline{Vavilova 40, Moscow 117967, Russia}
+\centerline{abramov@ccas.ru, sabramov@cs.msu.su}
+
+\vskip 0.3cm
+
+Let a linear homogeneous ordinary differential equation $Ly=0$
+with polynomial coefficients be given.
+First we demonstrate how to find all points
+$a$ (ordinary or singular of the given equation) and all formal power
+series
+$$y_a(x) = \sum _{n=0}^\infty a_n (x-a)^n$$
+which satisfy $Ly_a(x)=0$ and whose coefficients $a_n$ have
+a ``nice'' explicit representation in terms of $n$.
+We consider the cases where $a_n$ is a polynomial or a rational
+function of $n$, and where $a_n$ is a hypergeometric term (i.e.,
+$a_{n+1}/a_n$ is a rational function of $n$). Hypergeometric series
+are in the latter class of power series.
+
+Then we introduce the notion of the $m$-sparse power series
+(e.g., expanding $\sin x$ and $\cos x$ at $x=0$ gives
+2-sparse power series: a coefficient $a_n$ of the series
+can be nonzero only if $remainder(n,2)$ is equal to a
+fixed number). We consider the problem of finding all
+$m$-points of a linear ordinary differential equation
+$Ly=0$ with polynomial coefficients (i.e., the points
+at which the equation has a solution in the form of an
+$m$-sparse series). It is easy to find an upper bound for $m$.
+We prove that if $m$ is fixed then either there exists a finite
+number of $m$-points and all of them can be found or all points
+are $m$-points and $L$ can be factored $L=L_1 \circ C$ where $C$
+is an operator of a special kind with constant coefficients.
+Additionally we formulate simple necessary and sufficient
+conditions for the existence of $m$-points for an irreducible $L$.
+
+Combining the algorithms described in the paper with
+Petkov\v sek-Salvy's algorithm we find all $m$-sparse
+$m$-hypergeometric solutions of the equation $Ly=0$.
+
+\end{document}

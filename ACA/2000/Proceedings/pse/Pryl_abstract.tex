@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\begin{document}
+
+\title{Generating Parallel Numerical Codes for PDE's
+ \thanks{Research sponsored in part by the Phillips Laboratory, Air Force Materiel  Command, USAF, under cooperative agreement
+number F29601-93-2-0001. Views and conclusions contained in this document are those of the author(s) and should not be
+interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of Phillips Laboratory
+or the U.S. Government.; 
+CCR-9531828 NSF; 
+ME 050 (1997) program KONTAKT, Czech Republic.}
+}
+
+\author{Dobromil Pryl}
+
+\date{}
+
+\maketitle
+
+\begin{center}
+Faculty of Nuclear Sciences and Physical Engineering,
+ Czech Technical University, Prague
+\end{center}
+E-mail: pryl@atlas.cz
+
+\begin{abstract}
+The talk presents a package for generating numerical programs 
+for solving PDE's using finite differences method.
+The package is implemented in LISP programing language
+in REDUCE computer algebra system, interfacing to many existing software tools.
+Complete FORTRAN source codes can be generated,
+including all declarations, output of results, and comments.
+It is easy to switch between creating sequential and parallel codes.
+Parallelization is done by domain decomposition using message passing, 
+utilising the MPI standard.
+Parallelism is supported for both implicit and explicit difference schemes.
+Applications to several simple (one-way wave equation)
+and more complex (shallow water equations) problems
+are included for illustration and parallel speedup analysis.
+\end{abstract}
+
+\end{document}

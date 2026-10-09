@@ -1,0 +1,20 @@
+"The TI-92 as a Vehicle for Teaching Algebraic Thinking"
+
+Edward S. Miller * 
+Laura Bracken * 
+Lewis-Clark State College
+
+
+This presentation illustrates the impact of the changing technological 
+playing field has on the balance between the need for fast manual 
+algorithms and the depth of conceptual understanding which students may 
+achieve. The central example will be the controversial issue of factoring. 
+Factoring polynomials over the integers has been programmed into the 
+TI-92. Some would argue that this makes the teaching of factoring 
+obsolete. A better inference is that students need not learn fast 
+algorithms as a vehicle for solving equations or reducing fractions; they 
+may now learn one or two algorithms and concentrate on what factoring is 
+together with its role in the manipulation of algebraic objects. We as 
+mathematics teachers are now free to use the power of the properties of 
+rings (of real numbers, polynomials, continuous functions) in intermediate 
+algebra or earlier.

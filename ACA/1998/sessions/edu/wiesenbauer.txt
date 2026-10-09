@@ -1,0 +1,17 @@
+"Chances and Risks of Heuristic Reasoning: Some Examples using Derive"
+
+Johann Wiesenbauer
+Institut fuer Algebra und Diskrete Mathematik, Technische Universitaet Wien
+Wiedner Hauptstrasse 8-10
+Vienna, Austria, A-1040
+Austria
+E-mail:j.wiesenbauer@tuwien.ac.at
+
+
+Unlike everyday life in mathematics it is not sufficient that a certain 
+statement is true in many cases or is derived on the grounds of "plausible" 
+assumptions, but what is needed here is an exact proof. On the other hand, 
+if such a proof is either not known or too difficult for classroom 
+teaching, it may be a good idea to use heuristic reasoning instead. Some 
+examples of this kind are given using Derive which clearly show the chances 
+but also the risks in this field.

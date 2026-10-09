@@ -1,0 +1,106 @@
+Session 01
+Computer Algebra in Education
+
+#@@@ Monday (5)
+
+Using the Universal Math Environment ``Math-XPress'' for teaching and assessment of math courses (1 hour)
+Philip Slobodsky, Alexander Ocheretovy, Eugine Roiz and Anatoly Shtarkman
+http://math.unm.edu/~aca/ACA/2017/Education/Slobodsky.pdf
+
+Supporting Mathematical Thinking with CAS: The Need of Epistemic Change Among Teachers
+Rotem Abdu
+http://math.unm.edu/~aca/ACA/2017/Education/Abdu.pdf
+### early in the week
+
+Active learning in High-School mathematics using Interactive Interfaces
+E.S. Cheb-Terrab and K. von B\"ulow
+http://math.unm.edu/~aca/ACA/2017/Education/Cheb-Terrab.pdf
+### also speaking in General, prefers all talks early and on 1 or 2 days
+
+Dynamic Computer Illustrations and Didactic Considerations in the Learning and Teaching of Mathematics
+Michal Fraenkel
+http://math.unm.edu/~aca/ACA/2017/Education/Fraenkel.pdf
+
+#@@@ Tuesday [1st] (4)
+
+Activities in Geometry built with GeoGebra around traditional Jewish artifacts
+Thierry Dana-Picard and Sara Hershkovitz
+http://math.unm.edu/~aca/ACA/2017/Education/Dana-Picard.pdf
+
+Dynamic Geometry Software Supplemented with Computer Algebra as a proving tool
+R. Ha\v{s}ek
+http://math.unm.edu/~aca/ACA/2017/Education/Hasek.pdf
+### Monday-Thursday, not Tuesday 11-13 (Dynamic Geometry), prefer in block
+
+Geometric constructions problems in dynamic environment: new elegance and new dilemmas in teacher training
+Ilya Sinitsky
+http://math.unm.edu/~aca/ACA/2017/Education/Sinitsky.pdf
+
+Searching for loci using DGS and CAS
+J. Bla\v{z}ek and P. Pech
+http://math.unm.edu/~aca/ACA/2017/Education/Blazek.pdf
+### Monday-Thursday, not Tuesday 11-13 (Dynamic Geometry), prefer in block
+
+#@@@ Tuesday [2nd] (5)
+
+Checking solutions of tasks on expressibility in Boolean algebra of sets
+R. Prank
+http://math.unm.edu/~aca/ACA/2017/Education/RPrank.pdf
+
+Constructing Rational Gram-Schmidt Problems and QR Problems
+David Jeffrey and Nasir Khattak
+http://math.unm.edu/~aca/ACA/2017/Education/Jeffrey.pdf
+
+How to Use CAS (Maple) to Help Students Learn Number Theory
+M. Durcheva
+http://math.unm.edu/~aca/ACA/2017/Education/Durcheva.pdf
+### not Monday
+
+Using Maple cloud computing in financial education of pre-service teachers
+V. Petr\'a\v{s}kov\'a and P. Rosa
+http://math.unm.edu/~aca/ACA/2017/Education/Petraskova.pdf
+### Monday-Thursday, not Tuesday 11-13 (Dynamic Geometry), prefer in block
+
+Some examples of solving nonlinear programming problems with CAS
+Włodzimierz Wojasa and Jan Krupa
+http://math.unm.edu/~aca/ACA/2017/Education/Wojas_nonlinear.pdf
+
+#@@@ Wednesday (4)
+
+Engineering Mathematics and CAS
+Michel Beaudin
+http://math.unm.edu/~aca/ACA/2017/Education/Beaudin.pdf
+### not Friday
+
+Generating Power Summation Formulas Using a Computer Algebra System
+M. Xue
+http://math.unm.edu/~aca/ACA/2017/Education/Xue_S.pdf
+### Monday-Thursday
+
+A sympy/sage Module for Computing Polynomial Remainder Sequences
+Alkiviadis G. Akritas, Gennadi I. Malaschonok and Panagiotis S. Vigklas
+http://math.unm.edu/~aca/ACA/2017/Education/Akritas.pdf
+
+Automated Function Analysis for Calculus
+A. Naiman
+http://math.unm.edu/~aca/ACA/2017/Education/Naiman.pdf
+
+#@@@ Thursday (4)
+
+DUDAMATH - The Digital Environment for Demonstrating Mathematical Ideas and Problem Solving
+Ethan Hall, Leo Zak, Shirley Gitelman and Anatoli Kouropatov
+http://math.unm.edu/~aca/ACA/2017/Education/Hall.pdf
+### Thursday/Friday
+
+The use of digital tools to confront errors
+Regina Ovodenko and Anatoli Kouropatov
+http://math.unm.edu/~aca/ACA/2017/Education/Ovodenko.pdf
+
+Computer-Algebra-Aided Chebyshev Methods for Ordinary Differential Equations
+M. Xue
+http://math.unm.edu/~aca/ACA/2017/Education/Xue_C.pdf
+### Monday-Thursday
+
+Teaching complex potential model to students of environmental engineering faculty using Mathematica
+Włodzimierz Wojasa and Jan Krupa
+http://math.unm.edu/~aca/ACA/2017/Education/Wojas_potential.pdf

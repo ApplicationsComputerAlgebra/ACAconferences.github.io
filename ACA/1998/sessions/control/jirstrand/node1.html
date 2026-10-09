@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1-f (May 31, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>1 Introduction</TITLE>
+<META NAME="description" CONTENT="1 Introduction">
+<META NAME="keywords" CONTENT="jirstrand">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="jirstrand.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html24" HREF="node2.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://www.control.isy.liu.se/icons/next_motif.gif"></A> <A NAME="tex2html22" HREF="jirstrand.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://www.control.isy.liu.se/icons/up_motif.gif"></A> <A NAME="tex2html16" HREF="jirstrand.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://www.control.isy.liu.se/icons/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html25" HREF="node2.html">2 Preliminaries</A>
+<B>Up:</B> <A NAME="tex2html23" HREF="jirstrand.html">On Switched Polynomial Systems </A>
+<B> Previous:</B> <A NAME="tex2html17" HREF="jirstrand.html">On Switched Polynomial Systems </A>
+<BR> <P>
+<H1><A NAME="SECTION00010000000000000000">1 Introduction</A></H1>
+<P>
+<A NAME="secintro">&#160;</A>
+<P>
+Switching between different controllers to achieve a required behavior
+is rather common in practical applications. A common way of
+implementing switching is for example by the use of PID controllers
+with selectors&nbsp;[<A HREF="node8.html#AstromH95">1</A>]. This can be used to guarantee that
+certain process variables are kept within specified bounds. Simple
+simulation studies and results from optimal control theory such as
+bang-bang control show that performance can be enhanced by switching
+between a number of state-feedback laws. A sufficient condition to be
+able to design control laws based on switching between different
+controllers, is that we can choose a controller that makes the time
+derivative of a positive definite function negative along all
+trajectories in a neighborhood of the desired
+set-point&nbsp;[<A HREF="node8.html#SkafidasPES98">14</A>]. Here we give a computational test of
+this requirement, formulated as a quantifier elimination problem.
+<P>
+For nonlinear systems, switched controllers can be used for
+stabilization. Brockett has given a necessary condition for when a
+system with continuously differentiable right hand side can be
+stabilized by a continuously differentiable state
+feedback&nbsp;[<A HREF="node8.html#Brockett83">3</A>, <A HREF="node8.html#Sontag90">15</A>].  However, there are many examples
+of systems that do not satisfy this condition but can be stabilized by
+a discontinuous state feedback&nbsp;[<A HREF="node8.html#NesicSME97">11</A>].
+<P>
+In output regulation and tracking problems, the zero
+dynamics&nbsp;[<A HREF="node8.html#Isidori95">7</A>, <A HREF="node8.html#ByrnesH93">4</A>] plays an important role. Stable
+zero dynamics is necessary for proper regulation or tracking, since
+otherwise there are internal variables that exhibit unbounded
+behavior. There are nonlinear systems whose zero dynamics cannot be
+stabilized by continuous state feedback but can be stabilized by
+switched controllers&nbsp;[<A HREF="node8.html#NesicSME97">11</A>, <A HREF="node8.html#NesicSME98">10</A>]. In this report we
+approach the problem of analysis and design of discontinuous control
+laws in a constructive way. Quantifier elimination is used to answer a
+number of questions. Is it possible to stabilize a system by switching
+between a number of so called <em>basic controllers</em>?  Can we obtain
+stable zero dynamics for the output regulation or tracking problem using
+a switched controller? Can we obtain an invariant set of states using a
+switched controller?
+<P>
+The report is organized as follows. In
+Section&nbsp;<A HREF="node2.html#secpreliminaries">2</A> we review some basic concepts and
+definitions related to stability. Since we focus on switched systems
+we also need to define what we mean by a solution to a system of
+differential equations with discontinuous right hand sides.
+Section&nbsp;<A HREF="node4.html#secstabswitch">3</A> deals with the problem of stabilizing a
+polynomial system by switching between a number of continuous
+controllers. These results are further applied in
+Section&nbsp;<A HREF="node5.html#secoutputtracking">4</A> where we show how zero dynamics of a
+nonlinear system which is not affine in the control can be stabilized
+by switching between different output zeroing controllers. A number of
+examples, where we use quantifier elimination software, is presented
+in Section&nbsp;<A HREF="node6.html#secswex">5</A>, and Section&nbsp;<A HREF="node7.html#secqeconc">6</A> gives a
+summary of the report. Throughout the report we utilize quantifier
+elimination to deal constructively with the computational questions
+that arise.
+<P>
+<HR><A NAME="tex2html24" HREF="node2.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://www.control.isy.liu.se/icons/next_motif.gif"></A> <A NAME="tex2html22" HREF="jirstrand.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://www.control.isy.liu.se/icons/up_motif.gif"></A> <A NAME="tex2html16" HREF="jirstrand.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://www.control.isy.liu.se/icons/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html25" HREF="node2.html">2 Preliminaries</A>
+<B>Up:</B> <A NAME="tex2html23" HREF="jirstrand.html">On Switched Polynomial Systems </A>
+<B> Previous:</B> <A NAME="tex2html17" HREF="jirstrand.html">On Switched Polynomial Systems </A>
+<P><ADDRESS>
+<I>Mats Jirstrand <BR>
+Mon Nov 30 23:37:24 MET 1998</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,37 @@
+\begin{center}
+\LARGE
+Overview talk on symbolic techniques for circuit analysis
+\end{center}
+
+\begin{center}
+\Large
+Ralf Sommer, Eckhard Hennig
+
+\end{center}
+
+\noindent
+Date:  July 19th (Friday)\\
+Time:  08:30-09:00\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+This presentation will give an introduction to the computer-aided approach to the analysis and
+design of analog electronic circuits. At the beginning, typical engineering tasks will be
+characterized by several examples, and their mathematical background will be formulated. This
+will include different techniques for setting up circuit equations. Hence, network elements and
+their characteristics as well as Kirchhoff laws will be covered. Then the symbolic formulation of
+analysis and design equations will be looked into. 
+
+Special attention will be attached to the problem of solving the equations since the explosion of
+terms in the solutions is the main problem in symbolic circuit analysis. Three fundamental
+approaches for the automated approximation of circuit transfer function and circuit equations will
+be presented which allow for the extraction of dominant circuit behaviour - linear and even
+nonlinear. These approximation strategies are based on combining symbolic and numeric
+information: They hold the key for gaining insight in how circuits work, and the obtained results
+may even be used for the generation of sizing formulas. From a mathematical point of view these
+new mixed symbolic-numerical approximation strategies open up a large field of unsolved
+problems. 
+

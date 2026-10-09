@@ -1,0 +1,13 @@
+  Title:        EROC: A Maple Library for Exact Real Object
+                Computation
+  Authors:      G. Bodnar, J. Schicho
+  Affiliation:  RISC-Linz, J. Kepler University, Linz, Austria
+  Abstract:
+The EROC package implements computable real numbers and related objects in
+Maple.  It is meant to be a tool that can be used in symbolic-numeric
+computation.
+
+The main topics we discuss are: representation and arithmetic of exact real
+numbers, vectors and matrices; polynomial arithmetic and root computation.
+Some operations raise ill-posed problems; we used regularization methods to
+solve them.

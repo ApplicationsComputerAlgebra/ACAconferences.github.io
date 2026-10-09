@@ -1,0 +1,34 @@
+			CA in Robotics
+
+Prof.Dr.Jochen Pfalzgraf
+Institut fuer Computerwissenschaften           (Computer Science Institute)
+Universitaet Salzburg                          (University of Salzburg)
+Jakob Haringer Str. 2
+A-5020 Salzburg/Austria
+
+TEL: +43 662 8044-6309  (-6300 = Secretary)
+FAX: +43 662 8044- 611
+E-mail: jpfalz@cosy.sbg.ac.at
+
+Robotics is a very interdisciplinary area in theoretical research and
+development and in industrial applications.  This session of ACA
+concentrates on the aspects of symbolic computation (SC) and computer
+algebra (CA) deployment in robotics.  Natural applications are symbolic
+modeling  of robot arms (kinematic chains) and their computational
+treatment by methods of CA.  Typical problems amenable to such CA
+approaches are (inverse) kinematics problems and detection of
+singularities in robot arm movements (and also singular configurations
+in so-called parallel manipulators).  Other challenging problem fields
+are (among others) path tracking, obstacle avoidance, finding collision
+free paths.  We further mention the very complex problem area of
+cooperating robots and production cells.  (The above list is far from
+being exhaustive).  CA applications to modeling kinematic chains lead
+to hard performance problems when the degree of freedom of a robot arm
+increases.  Hybrid approaches, mixing SC with numerical methods, seem
+to be promising.
+
+[As a brief information, the session chairman can provide (on request)
+a survey article "On Geometric  and Topological Reasoning in Robotics",
+"An Application of Grassmann Geometry to a Problem in Robotics" and a
+short special note on "Robotics Benchmarks for CA".
+E-mail address:   jpfalz@cosy.sbg.ac.at].

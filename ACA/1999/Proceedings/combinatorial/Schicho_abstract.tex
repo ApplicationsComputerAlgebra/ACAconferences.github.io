@@ -1,0 +1,212 @@
+\documentstyle{article}
+
+\title{The Parameterization Problem for of Algebraic Surfaces}
+\author{Josef Schicho%
+        \thanks{supported by the Austrian Science Fund in the
+                frame of project P12662-TEC} \\
+        Research Institute for Symbolic Computation \\
+        Johannes Kepler University \\
+        A-4040 Linz, Austria \\
+        e-mail: {\tt Josef.Schicho@risc.uni-linz.ac.at} \\
+        www: {\tt http://www.risc.uni-linz.ac.at/people/jschicho}}
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}{Proposition}
+\newtheorem{cor}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{rem}{Remark}
+\newtheorem{example}{Example}
+\newtheorem{definition}{Definition}
+%\hyphenation{pa-ra-met-ri-zation pa-ra-met-ric}
+\begin{document}
+\maketitle
+
+\section{Extended Abstract}
+
+We give an overview on the parametrization problem, including recent
+achievements and open problems.
+
+The parameterization problem is the following. Given is the implicit
+representation of a surface, in terms of an algebraic equation
+in three variables.
+Wanted are three rational functions in two variables,
+such that the image of the rational map defined by
+this triple is a two-dimensional subset of the surface.
+For instance, the the unit sphere
+with equation $x^2+y^2+z^2-1=0$
+has the parameterization
+\[ (x,y,z) =
+  (\frac{2s}{s^2+t^2+1},\frac{2t}{s^2+t^2+1},\frac{s^2+t^2-1}{s^2+t^2+1}) , \]
+which can be found by stereographic projection.
+
+Over the complex numbers, the well-known criterion of
+Castelnouvo~\cite{Castelnuovo:96} is very relevant: a complex
+surface has a rational parametrization iff its arithmetic genus
+and its second plurigenus both vanish. An algorithm for deciding
+this criterion and computing a parametrization in case the criterion
+is fulfilled is contained in \cite{Schicho:97}. This algorithm
+is currently being implemented by W. Hei{\ss} and the author,
+and we give a first report on computational experiments.
+
+Over the real numbers, Castelnuovo's criterion is necessary,
+but it is not known whether it is sufficient
+for the existence of a parametrization with real coefficients.
+Important subcases have been solved, for instance the case
+of tubular or conical surfaces (see \cite{Schicho:98c,Peternell:97}).
+This result is relevant for applications in CAD/CAM
+(see \cite{Arrondro_Sendra_Sendra:97,Pottmann:97}).
+
+Related problems are the parametrization problem for algebraic
+curves (studied in
+\cite{Walker:78,Abhyankar_Bajaj:87,Sendra_Winkler:91,Schicho:92,%
+Hoeij:94,Mnuk_Sendra_Winkler:96,Mnuk:96,Sendra_Winkler:97,Hoeij:97})
+and the implicitization problem
+studied in \cite{Canny_Manocha:92,Gao_Chou:92,Kalkbrener:90c,Choinh_Goldman:92}.
+Another related problem is the problem of resolution of singularities
+(see \cite{Walker:35,Hironaka:64,Lipman:78,Villamayor:89,Bierstone_Milman:91,%
+Bodnar_Schicho:98,Schicho_u:99c}),
+which is required as a subtask for surface parametrization.
+
+
+
+\begin{thebibliography}{10}
+
+\bibitem{Abhyankar_Bajaj:87}
+{\sc Abhyankar, S.~S., and Bajaj, B.}
+\newblock {Automatic parametrization of curves and surfaces III}.
+\newblock {\em Computer Aided Geometric Design 5-4\/} (1987), 309--323.
+
+\bibitem{Arrondro_Sendra_Sendra:97}
+{\sc Arrondo, E., Sendra, J., and Sendra, J.~R.}
+\newblock Parametric generalized offsets to hypersurfaces.
+\newblock {\em Journal of Symbolic Computation 23\/} (1997), 267--285.
+
+\bibitem{Bierstone_Milman:91}
+{\sc Bierstone, E., and Milman, P.}
+\newblock A simple constructive proof of canonical resolution of singularities.
+\newblock In {\em Effective methods in algebraic geometry}, T.~Mora and
+  C.~Traverso, Eds. {Birkh\"{a}user}, 1991, pp.~11--30.
+
+\bibitem{Schicho_u:99c}
+{\sc Bodnar, G., and Schicho, J.}
+\newblock Automated resolution of singularities for hypersurfaces.
+\newblock Tech. Rep. 99-06, RISC-Linz, Univ. Linz, A-4040 Linz, 1999.
+
+\bibitem{Bodnar_Schicho:98}
+{\sc Bodn\'{a}r, G., and Schicho, J.}
+\newblock A computer program for the resolution of singularities.
+\newblock In {\em Working Week on Mountains and Singularities\/} (1999),
+  Springer.
+\newblock to appear.
+
+\bibitem{Canny_Manocha:92}
+{\sc Canny, J., and Manocha, D.}
+\newblock Implicit representation of rational parametric surfaces.
+\newblock {\em Journal of Symbolic Computation 13}, 5 (1992).
+
+\bibitem{Castelnuovo:96}
+{\sc Castelnuovo, G.}
+\newblock {Sulle superficie di genere zero}.
+\newblock In {\em {Memoria scelte}}. Zanichelli, 1939, pp.~307--334.
+
+\bibitem{Choinh_Goldman:92}
+{\sc Chionh, E.-W., and Goldman, R.}
+\newblock {Degree, multiplicity and inversion formulas for rational surfaces
+  using $u$-resultants}.
+\newblock {\em Comp. Aided Geom. Des. 9\/} (1992), 93--108.
+
+\bibitem{Gao_Chou:92}
+{\sc Gao, X.-S., and Chou, S.-C.}
+\newblock {Implicitization of Rational Parametric Equations}.
+\newblock {\em J. Symb. Comput. 14\/} (1992), \ pages 459--470.
+
+\bibitem{Hironaka:64}
+{\sc Hironaka, H.}
+\newblock Resolution of singularities of an algebraic variety over a field of
+  characteristic 0.
+\newblock {\em Ann. Math. 79\/} (1964), 109--326.
+
+\bibitem{Kalkbrener:90c}
+{\sc Kalkbrener, M.}
+\newblock {Implicitization of Rational Curves and Surfaces}.
+\newblock In {\em Lect. Notes in Comp. Sci. 508, AAECC-8\/} (Tokyo, Japan, Aug.
+  1990), Sakata, Ed.
+
+\bibitem{Lipman:78}
+{\sc Lipman, J.}
+\newblock Desingularization of two-dimensional schemes.
+\newblock {\em Ann. Math. 107\/} (1978), 151--207.
+
+\bibitem{Mnuk:96}
+{\sc {M\~{n}uk}, M.}
+\newblock {\em {Algebraic parametrization of rational curves}}.
+\newblock PhD thesis, RISC Linz, 1996.
+
+\bibitem{Mnuk_Sendra_Winkler:96}
+{\sc {M\~{n}uk}, M., Sendra, J.~R., and Winkler, F.}
+\newblock {On the complexity of parametrizing curves}.
+\newblock {\em Beitr. Algebra und Geometrie 37/2\/} (1996), 309--328.
+
+\bibitem{Peternell:97}
+{\sc Peternell, M.}
+\newblock {\em Rational parametrizations for envelopes of quadric families}.
+\newblock PhD thesis, Techn. Univ. Vienna, 1997.
+
+\bibitem{Pottmann:97}
+{\sc Peternell, M., and Pottmann, H.}
+\newblock Computing rational parametrizations of canal surfaces.
+\newblock {\em Journal of Symbolic Computation 23\/} (1997), 255--266.
+
+\bibitem{Schicho:92}
+{\sc Schicho, J.}
+\newblock On the choice of pencils in the parametrization of curves.
+\newblock {\em J. Symb. Comp. 14}, 6 (1992), 557--576.
+
+\bibitem{Schicho:98c}
+{\sc Schicho, J.}
+\newblock Rational parameterization of real algebraic surfaces.
+\newblock In {\em ISSAC-98\/} (1998), ACM Press, pp.~302--308.
+
+\bibitem{Schicho:97}
+{\sc Schicho, J.}
+\newblock Rational parametrization of surfaces.
+\newblock {\em J. Symb. Comp. 26}, 1 (July 1998), 1--30.
+
+\bibitem{Sendra_Winkler:91}
+{\sc Sendra, J., and Winkler, F.}
+\newblock Symbolic parametrization of curves.
+\newblock {\em Journal of Symbolic Computation 12}, 6 (1991), 607--632.
+
+\bibitem{Sendra_Winkler:97}
+{\sc Sendra, J., and Winkler, F.}
+\newblock Parametrization of algebraic curves over optimal field extensions.
+\newblock {\em Journal of Symbolic Computation 23}, 2/3 (1997), 191--208.
+
+\bibitem{Hoeij:94}
+{\sc van Hoeij, M.}
+\newblock {Computing parametrizations of rational algebraic curves}.
+\newblock In {\em ISSAC-94\/} (1994), ACM Press, pp.~187--190.
+
+\bibitem{Hoeij:97}
+{\sc van Hoeij, M.}
+\newblock {Rational parametrizations of algebraic curves using canonical
+  divisors}.
+\newblock {\em Journal of Symbolic Computation 23\/} (1997), 209--227.
+
+\bibitem{Villamayor:89}
+{\sc Villamayor, O.}
+\newblock {Constructiveness of Hironaka's resolution}.
+\newblock {\em Ann. Scient. Ecole Norm. Sup. 4 22\/} (1989), 1--32.
+
+\bibitem{Walker:35}
+{\sc Walker, R.~J.}
+\newblock {Reduction of the singularities of an algebraic surface}.
+\newblock {\em Ann. Math. 36\/} (1935), 336--365.
+
+\bibitem{Walker:78}
+{\sc Walker, R.~J.}
+\newblock {\em Algebraic Curves}.
+\newblock Springer, 1978.
+
+\end{thebibliography}
+
+\end{document}

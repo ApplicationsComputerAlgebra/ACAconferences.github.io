@@ -1,0 +1,881 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Computations with dense structured matrices, correlations to polynomial and rational interpolation and multipoint evaluation</TITLE>
+<META NAME="description" CONTENT="Computations with dense structured matrices, correlations to polynomial and rational interpolation and multipoint evaluation">
+<META NAME="keywords" CONTENT="pan">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL="STYLESHEET" HREF="pan.css">
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="pan.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html71"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html69"
+ HREF="pan.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html63"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html72"
+ HREF="node7.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html70"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html64"
+ HREF="node5.html">Approximate polynomial gcds</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00060000000000000000">&#160;</A><A NAME="sec6">&#160;</A>
+<BR>
+Computations with dense structured matrices, correlations to 
+polynomial and rational 
+interpolation and multipoint evaluation
+</H1>
+
+<P>
+We consider  Toeplitz,  Hankel,  Vandermonde and Cauchy 
+matrices as well as the matrices having similar structures.
+These are  the most popular classes of dense 
+structured matrices, omnipresent in scientific,  engineering and electrical
+engineering computations. For
+readers convenience, we recall the definitions  (cf. [<A
+ HREF="node7.html#BP94">BP94</A>],  [<A
+ HREF="node7.html#PCZa">PCZ,a</A>]).
+
+<P>
+<P>
+<DIV><A NAME="def6.1"><B>D<SMALL>EFINITION </SMALL> 6.1</B></A> &nbsp; 
+A matrix <IMG
+ WIDTH="80" HEIGHT="37"
+ SRC="img106.gif"
+ ALT="$T= (t_{i, j})$">
+is called a Toeplitz matrix if
+<IMG
+ WIDTH="106" HEIGHT="35"
+ SRC="img107.gif"
+ ALT="\begin{displaymath}t_{i+1, j+1} =t_{i, j}
+\end{displaymath}">
+for all pairs  (<I>i</I>,<I>j</I>) for which <IMG
+ WIDTH="28" HEIGHT="33"
+ SRC="img108.gif"
+ ALT="$t_{i, j}$">and  <IMG
+ WIDTH="64" HEIGHT="33"
+ SRC="img109.gif"
+ ALT="$t_{i+1, j+1}$">
+are defined.</DIV><P></P>
+
+<P>
+Toeplitz matrices are a special class (where <IMG
+ WIDTH="55" HEIGHT="37"
+ SRC="img110.gif"
+ ALT="$r \le 2)$">of the following important and well-studied class of Toeplitz-like
+matrices having a small displacement rank 
+<I>r</I> (cf. [<A
+ HREF="node7.html#BP94">BP94</A>], pp. 174-211).
+
+<P>
+<P>
+<DIV><A NAME="def6.2"><B>D<SMALL>EFINITION </SMALL> 6.2</B></A> (cf. e.g. [<A
+ HREF="node7.html#BP94">BP94</A>], Definition
+11.1)  &nbsp; 
+.   For an <IMG
+ WIDTH="50" HEIGHT="33"
+ SRC="img83.gif"
+ ALT="$n\times n$">
+matrix <I>T</I> ,
+define the two  displacement generators, 
+
+<P>
+
+<P ALIGN="RIGHT"><A NAME="equ6.1">&#160;</A><IMG
+ WIDTH="581" HEIGHT="45"
+ SRC="img111.gif"
+ ALT="\begin{equation}
+F_-(T)= T-Z^TTZ,~~
+F_+(T)=T-ZTZ^T, %
+\end{equation}">
+<BR></P>
+where 
+
+<P>
+
+<P ALIGN="RIGHT"><A NAME="equ6.2">&#160;</A><IMG
+ WIDTH="581" HEIGHT="136"
+ SRC="img112.gif"
+ ALT="\begin{equation}
+Z=\pmatrix{
+&0&&&&0&\cr
+&1&0&&&&\cr
+&&1&\ddots&\cr
+&&&\ddots&\cr
+&0&&&1&0&\cr
+}
+\end{equation}">
+<BR></P>
+is a down-shift <IMG
+ WIDTH="50" HEIGHT="33"
+ SRC="img83.gif"
+ ALT="$n\times n$">
+matrix. 
+If for <IMG
+ WIDTH="68" HEIGHT="35"
+ SRC="img113.gif"
+ ALT="$F=F_+$">
+or <IMG
+ WIDTH="68" HEIGHT="35"
+ SRC="img114.gif"
+ ALT="$F=F_-$">
+we have 
+
+<P>
+
+<P ALIGN="RIGHT"><A NAME="equ6.3">&#160;</A><IMG
+ WIDTH="581" HEIGHT="45"
+ SRC="img115.gif"
+ ALT="\begin{equation}
+F(T) = GH^T,
+\end{equation}">
+<BR></P>
+where <I>G</I>  and <I>H</I>  are <IMG
+ WIDTH="47" HEIGHT="33"
+ SRC="img116.gif"
+ ALT="$n \times r$">
+matrices,  then 
+the pair of 
+matrices ( <I>G</I>, <I>H</I> )  is called an <I>F</I> -generator 
+or a displacement generator 
+of <I>T</I>  of length <I>r</I>  
+and will be denoted <IMG
+ WIDTH="69" HEIGHT="37"
+ SRC="img117.gif"
+ ALT="$d.g._r(T)$">.
+The minimum <I>r</I>  allowing the above representation 
+(<A HREF="node6.html#equ6.3">6.3</A>) is called the <I>F</I> -rank 
+or the displacement rank 
+of <I>T</I> . 
+<I>T</I>  is called a Toeplitz-like matrix 
+if <I>r</I>=<I>O</I>(1)  as <IMG
+ WIDTH="63" HEIGHT="17"
+ SRC="img118.gif"
+ ALT="$n \rightarrow \infty$">.
+</DIV><P></P>
+Next, we will recall  a basic   property of 
+Toeplitz-like matrices,
+which will enable us to manipulate with them by means of operating with a few 
+entries of 
+their short displacement generators, rather than with their own more numerous entries.
+
+<P>
+<P>
+<DIV><A NAME="the6.1"><B>T<SMALL>HEOREM </SMALL> 6.1</B></A> &nbsp; 
+[<A
+ HREF="node7.html#KKM79">KKM79</A>]. 
+ Let <IMG
+ WIDTH="128" HEIGHT="35"
+ SRC="img119.gif"
+ ALT="$F_-, F_+, T, G, H$">,
+and <I>r</I>  be as in (<A HREF="node6.html#equ6.1">6.1</A>) and (<A HREF="node6.html#equ6.3">6.3</A>). Then 
+<IMG
+ WIDTH="258" HEIGHT="43"
+ SRC="img120.gif"
+ ALT="$F(T) = GH^T = \sum_{k=1}^r
+{\bf g}^{(k)} {\bf h}^{(k)T}$">
+if and only if 
+
+<P>
+<IMG
+ WIDTH="596" HEIGHT="63"
+ SRC="img121.gif"
+ ALT="\begin{displaymath}T= \sum_{k=1}^rL^T( {\bf g}^{(k)})
+L({\bf h}^{(k)})~ for~ F=...
+...sum_{k=1}^rL({\bf g}^{(k)})
+L^T({\bf h}^{(k)})~ for~ F=F_+, %
+\end{displaymath}">where 
+<IMG
+ WIDTH="163" HEIGHT="43"
+ SRC="img122.gif"
+ ALT="$G=({\bf g}^{(1)}, \ldots, {\bf g}^{(r)}),$">
+<IMG
+ WIDTH="167" HEIGHT="43"
+ SRC="img123.gif"
+ ALT="$H=({\bf h}^{(1)}, \ldots, {\bf h}^{(r)}),$">
+and <IMG
+ WIDTH="43" HEIGHT="37"
+ SRC="img124.gif"
+ ALT="$L({\bf v})$">
+is a lower triangular Toeplitz 
+matrix with the first column <IMG
+ WIDTH="17" HEIGHT="17"
+ SRC="img125.gif"
+ ALT="${\bf v}$">.
+</DIV><P></P>
+
+<P>
+Hankel  matrices  and  the Hankel-like matrices 
+ of displacement rank <I>r</I> are  
+ obtained  from Toeplitz matrices and Toeplitz-like matrices of 
+displacement rank <I>r</I> ,
+respectively, by their
+pre-multiplication (or post-multiplication) by the reflection 
+matrix 
+<I>J</I> having ones on its antidiagonal  and zero entries elsewhere. (Note that 
+<IMG
+ WIDTH="25" HEIGHT="20"
+ SRC="img126.gif"
+ ALT="$J^2$">
+is the identity matrix.)
+
+<P>
+<P>
+<DIV><A NAME="def6.3"><B>D<SMALL>EFINITION </SMALL> 6.3</B></A> &nbsp; 
+Let <IMG
+ WIDTH="102" HEIGHT="33"
+ SRC="img127.gif"
+ ALT="$x_0, \ldots, x_{n-1}$">
+denote <I>n</I>  distinct values   and let 
+<IMG
+ WIDTH="163" HEIGHT="33"
+ SRC="img128.gif"
+ ALT="$s_0, t_0, \ldots, s_{n-1}, t_{n-1}$">
+denote
+2<I>n</I>  distinct values. 
+Let <IMG
+ WIDTH="99" HEIGHT="42"
+ SRC="img129.gif"
+ ALT="${\bf x}=(x_i)_{i=0}^{n-1}$">,
+<IMG
+ WIDTH="94" HEIGHT="42"
+ SRC="img130.gif"
+ ALT="${\bf s}=(s_i)_{i=0}^{n-1}$">,
+<IMG
+ WIDTH="93" HEIGHT="42"
+ SRC="img131.gif"
+ ALT="${\bf t}=(t_j)_{j=0}^{n-1}$">.
+Then the <IMG
+ WIDTH="50" HEIGHT="33"
+ SRC="img83.gif"
+ ALT="$n\times n$">
+matrices  <IMG
+ WIDTH="174" HEIGHT="45"
+ SRC="img132.gif"
+ ALT="$V=V({\bf x}) = (x_i^j)_{i,j=0}^{n-1}$">and  <IMG
+ WIDTH="208" HEIGHT="42"
+ SRC="img133.gif"
+ ALT="$C=C({\bf s}, {\bf t}) =(\frac{1}{s_i -t_j})_{i,j=0}^{n-1} $">are called Vandermonde and  Cauchy matrices,
+respectively.  Furthermore, the <IMG
+ WIDTH="50" HEIGHT="33"
+ SRC="img83.gif"
+ ALT="$n\times n$">
+matrices <IMG
+ WIDTH="98" HEIGHT="37"
+ SRC="img134.gif"
+ ALT="$V_f({\bf x}, G, H)$">
+and 
+<IMG
+ WIDTH="106" HEIGHT="37"
+ SRC="img135.gif"
+ ALT="$C({\bf s}, {\bf t}, G, H)$">
+are said to be  given with their 
+<IMG
+ WIDTH="49" HEIGHT="37"
+ SRC="img136.gif"
+ ALT="$(f, {\bf x})$">-scaling/displacement  generator (<I>G</I>, <I>H</I>)  and 
+<IMG
+ WIDTH="44" HEIGHT="37"
+ SRC="img137.gif"
+ ALT="$({\bf s}, {\bf t} )$">-scaling generator 
+(<I>G</I>, <I>H</I>) , both of length <I>r</I> , respectively, if
+
+<P>
+
+<P ALIGN="RIGHT"><A NAME="equ6.4">&#160;</A><IMG
+ WIDTH="581" HEIGHT="63"
+ SRC="img138.gif"
+ ALT="\begin{equation}
+%
+V_f({\bf x}, G, H)= \sum^{r}_{k=1} {\rm ~diag~}
+(fg_i^{(k)}/ (f-x_i^n))_{i=0}^{n-1}
+V({\bf x}) Z^T_{1/f} ({\bf h}^{(k)}),
+\end{equation}">
+<BR></P>
+<P>
+
+<P ALIGN="RIGHT"><A NAME="equ6.5">&#160;</A><IMG
+ WIDTH="581" HEIGHT="74"
+ SRC="img139.gif"
+ ALT="\begin{equation}
+%
+C({\bf s},
+{\bf t}, G, H)= \sum_{k=1}^{r}{\rm
+~diag~} (s_i g...
+...^{n-1} C({\bf s}, {\bf t})
+{\rm ~diag~}
+(h_j^{(k)})_{j=0}^{n-1}
+\end{equation}">
+<BR></P>
+where
+
+<P ALIGN="RIGHT"><A NAME="equ6.6">&#160;</A><IMG
+ WIDTH="633" HEIGHT="58"
+ SRC="img140.gif"
+ ALT="\begin{equation}
+{\bf g}^{(k)}=(g_i^{(k)})_{i=0}^{n-1},
+{\bf h}^{(k)}=(h_j^{(k)...
+...-1,
+G=({\bf g}^{(k)})_{k=0}^{n-1}, H=({\bf h}^{(k)})_{k=0}^{n-1},
+\end{equation}">
+<BR></P><IMG
+ WIDTH="102" HEIGHT="42"
+ SRC="img141.gif"
+ ALT="${\rm diag} ({\bf w}_i)_{i=0}^{n-1}$">denotes the diagonal matrix with  the diagonal entries <IMG
+ WIDTH="107" HEIGHT="33"
+ SRC="img142.gif"
+ ALT="$w_0, \ldots, w_{n-1}$">;
+<IMG
+ WIDTH="149" HEIGHT="42"
+ SRC="img143.gif"
+ ALT="$Z_q({\bf y})=(y_{i, j})_{i,j =0}^{n-1}$">
+is the <I>q</I> -circulant  matrix, 
+<IMG
+ WIDTH="134" HEIGHT="33"
+ SRC="img144.gif"
+ ALT="$y_{i,j}=y_{i-j~ mod~ n}$">
+for <IMG
+ WIDTH="45" HEIGHT="34"
+ SRC="img145.gif"
+ ALT="$i \ge j$">,
+<IMG
+ WIDTH="143" HEIGHT="33"
+ SRC="img146.gif"
+ ALT="$y_{i, j}=q y_{i-j ~mod~ n}$">for <IMG
+ WIDTH="45" HEIGHT="34"
+ SRC="img147.gif"
+ ALT="$i <j$">,
+<IMG
+ WIDTH="100" HEIGHT="42"
+ SRC="img148.gif"
+ ALT="${\bf y}=(y_k)^{n-1}_{k=0}$">,
+<I>q</I>=1/<I>f</I> ,  and <I>f</I>  
+is a scalar,  <IMG
+ WIDTH="119" HEIGHT="35"
+ SRC="img149.gif"
+ ALT="$f\ne 0,~ f \ne x_i^n$">for <IMG
+ WIDTH="133" HEIGHT="34"
+ SRC="img150.gif"
+ ALT="$i=1, \dots, n-1,$">
+so that <IMG
+ WIDTH="88" HEIGHT="37"
+ SRC="img151.gif"
+ ALT="$Z_0(y)=Z$">
+for the matrix <I>Z</I>  of 
+(<A HREF="node6.html#equ6.2">6.2</A>) and  <IMG
+ WIDTH="159" HEIGHT="41"
+ SRC="img152.gif"
+ ALT="${\bf y}=(0,1,0, \ldots, 0)^T$">.
+1-circulant matrices are called circulant.
+The minimum length <I>r</I>  in the above representations of the matrices 
+<IMG
+ WIDTH="98" HEIGHT="37"
+ SRC="img134.gif"
+ ALT="$V_f({\bf x}, G, H)$">
+and 
+<IMG
+ WIDTH="106" HEIGHT="37"
+ SRC="img135.gif"
+ ALT="$C({\bf s}, {\bf t}, G, H)$">
+(for all pairs <IMG
+ WIDTH="49" HEIGHT="37"
+ SRC="img136.gif"
+ ALT="$(f, {\bf x})$">
+and <IMG
+ WIDTH="44" HEIGHT="37"
+ SRC="img137.gif"
+ ALT="$({\bf s}, {\bf t} )$">,
+respectively)
+is called  the scaling/displacement rank and the scaling rank 
+of these
+matrices, respectively. If 
+ <I>r</I>=<I>O</I>(1)  as <IMG
+ WIDTH="63" HEIGHT="17"
+ SRC="img118.gif"
+ ALT="$n \rightarrow \infty$">,
+then
+the above matrices are called Vandermonde-like and Cauchy-like 
+matrices,
+respectively.</DIV><P></P>
+
+<P>
+Note that  Vandermonde and Cauchy matrices have scaling/displacement and scaling
+ ranks 1,  respectively. 
+
+<P>
+We  also recall the next well-known results
+[<A
+ HREF="node7.html#BP94">BP94</A>].
+
+<P>
+<P>
+<DIV><A NAME="the6.2"><B>T<SMALL>HEOREM </SMALL> 6.2</B></A> &nbsp; 
+The cost of multplication of an <IMG
+ WIDTH="50" HEIGHT="33"
+ SRC="img83.gif"
+ ALT="$n\times n$">matrix by a vector is bounded by <IMG
+ WIDTH="96" HEIGHT="37"
+ SRC="img153.gif"
+ ALT="$O_A(n \log n)$">for Toeplitz and Hankel matrices and by <IMG
+ WIDTH="104" HEIGHT="42"
+ SRC="img154.gif"
+ ALT="$O_A(n \log^2 n)$">for Vandermonde and Cauchy matrices.</DIV><P></P>
+
+<P>
+Dut to Theorem <A HREF="node6.html#the6.1">6.1</A> and equations (<A HREF="node6.html#equ6.1">6.1</A>)-(<A HREF="node6.html#equ6.3">6.3</A>),
+Theorem <A HREF="node6.html#the6.2">6.2</A>
+is immediately extended to Toeplitz-like, Hankel-like, Vandermonde-like 
+and Cauchy-like matrices.
+
+<P>
+As this was shown in 
+[<A
+ HREF="node7.html#P89/90">P89/90</A>],  some  computations with dense   structured matrices
+of  the above four classes can be conveniently reduced to each other, so that
+any successful algorithm for some fundamental 
+computations
+for matrices
+of one class
+ can be effectively extended
+to the matrices of the other three classes.
+In [<A
+ HREF="node7.html#GKO95">GKO95</A>], [<A
+ HREF="node7.html#Hei95">Hei95</A>]
+such a reduction from Toeplitz and Toeplitz-like matrices to Cauchy-like matrices 
+was simplified and exploited to yield an effective practical 
+algorithm for fast and
+numerically stable solution of Toeplitz and Toeplitz-like linear 
+systems of <I>n</I> equations by Gaussian elimination with pivoting
+(at the cost <IMG
+ WIDTH="64" HEIGHT="40"
+ SRC="img155.gif"
+ ALT="$O_A(n^2)$">)), and surely, this is immediately extended to the Hankel
+and Hankel-like linear systems.
+The main point of this approach is that the row and/or column 
+interchange destroys the structure of  Toeplitz-like and Hankel-like
+matrices (which either blocks the application of pivoting
+in Gaussion elimination or slows down the computation) but
+preserves the Cauchy-like matrix structure.
+The latter property of Cauchy-like matrices  can be observed either from matrix equation
+(<A HREF="node6.html#equ6.5">6.5</A>) or from the following equivalent representation,
+<IMG
+ WIDTH="287" HEIGHT="61"
+ SRC="img156.gif"
+ ALT="\begin{displaymath}C({\bf s}, {\bf t}, G, H)=
+( \frac{ \sum^r_{k=1} g_i^{(k)} h_j^{(k)}}{ s_i-t_j})^{n-1}_{i,j=0}.
+\end{displaymath}">
+<P>
+Another known approach to  solving Toeplitz-like and Hankel-like linear systems 
+of equations as well
+as to the computation of short displacement generators of the inverses of
+<IMG
+ WIDTH="50" HEIGHT="33"
+ SRC="img83.gif"
+ ALT="$n\times n$">
+Toeplitz, Hankel, Toeplitz-like and Hankel-like matrices, in all cases
+at the cost <IMG
+ WIDTH="104" HEIGHT="42"
+ SRC="img154.gif"
+ ALT="$O_A(n \log^2 n)$">,
+is by the  divide-and-conquer MBA algorithm of [<A
+ HREF="node7.html#M80">M80</A>], [<A
+ HREF="node7.html#BA80">BA80</A>].
+
+<P>
+The algorithm relies  on the following well-known factorization of 
+<IMG
+ WIDTH="46" HEIGHT="33"
+ SRC="img157.gif"
+ ALT="$2 \times 2$">
+block matrices,  
+
+<P>
+
+<P ALIGN="RIGHT"><A NAME="equ6.7">&#160;</A><IMG
+ WIDTH="581" HEIGHT="52"
+ SRC="img158.gif"
+ ALT="\begin{equation}
+%
+A=\pmatrix{
+&I&O&\cr
+&EB^{-1}&I&\cr
+}\pmatrix{
+&B&O&\cr
+&O&S&\cr
+}\pmatrix{
+&I&B^{-1}C&\cr
+&O&I&\cr
+},
+\end{equation}">
+<BR></P>
+<P ALIGN="RIGHT"><A NAME="equ6.8">&#160;</A><IMG
+ WIDTH="581" HEIGHT="74"
+ SRC="img159.gif"
+ ALT="\begin{equation}
+%
+A^{-1}=\pmatrix{
+&I&-B^{-1}C&\cr
+&O&I&\cr
+}\pmatrix{
+&B^{-1}&O&\cr
+&O&S^{-1}&\cr
+}\pmatrix{
+&I&O&\cr
+&-EB^{-1}&I&\cr
+},
+\end{equation}">
+<BR></P>
+where
+<I>I</I>  and <I>O</I>  
+denote the   
+identity 
+and 
+null matrices of appropriate sizes,  
+
+<P ALIGN="RIGHT"><A NAME="equ6.9">&#160;</A><IMG
+ WIDTH="581" HEIGHT="63"
+ SRC="img160.gif"
+ ALT="\begin{equation}
+%
+A=\pmatrix{
+&B&C&\cr
+&E&J&\cr
+},~~~~~S=J-EB^{-1}C,
+\end{equation}">
+<BR></P><I>B</I>  is a <IMG
+ WIDTH="48" HEIGHT="35"
+ SRC="img161.gif"
+ ALT="$k\times k$">
+matrix, 
+and <I>S</I>=<I>S</I>(<I>B</I>, <I>A</I>)  is 
+called the 
+Schur complement of <I>B</I>  in <I>A</I> . 
+(<A HREF="node6.html#equ6.7">6.7</A>) 
+represents block Gauss-Jordan elimination applied 
+to the <IMG
+ WIDTH="46" HEIGHT="33"
+ SRC="img157.gif"
+ ALT="$2 \times 2$">
+block matrix <I>A</I>  of 
+(<A HREF="node6.html#equ6.9">6.9</A>). If the matrix <I>A</I>  is 
+strongly nonsingular
+(that is, has nonsingular <IMG
+ WIDTH="48" HEIGHT="35"
+ SRC="img161.gif"
+ ALT="$k\times k$">leading principal submatrices for all <I>k</I> ), then the 
+matrix <I>S</I>  of (<A HREF="node6.html#equ6.9">6.9</A>) can be obtained in 
+<I>n</I>-<I>k</I>  steps of Gauss-Jordan 
+elimination. <P>
+<DIV><A NAME="lem6.1"><B>L<SMALL>EMMA </SMALL> 6.1</B></A> (cf. [<A
+ HREF="node7.html#BP94">BP94</A>], 
+Exercise 4, p. 212)  &nbsp; 
+. 
+If <I>A</I>  is strongly nonsingular, 
+so are <I>B</I>  and <I>S</I> .  </DIV><P></P>
+
+<P>
+For a strongly nonsingular 
+matrix <I>A</I> , the factorization (<A HREF="node6.html#equ6.7">6.7</A>)-(<A HREF="node6.html#equ6.9">6.9</A>)
+can be extended to the matrices <I>B</I> and <I>S</I>  and then recursively to the  matrices of  smaller
+size until we arrive at <IMG
+ WIDTH="46" HEIGHT="33"
+ SRC="img162.gif"
+ ALT="$1 \times 1$">matrices. The important point
+is to preserve the structure of the input matrix <I>A</I> throughout the recursive process, which enables the
+application of  Theorem 6.2 and
+respective decrease of the 
+computational time to the cited level <IMG
+ WIDTH="104" HEIGHT="42"
+ SRC="img154.gif"
+ ALT="$O_A(n \log^2 n)$">.
+The algorithm of [<A
+ HREF="node7.html#M80">M80</A>], [<A
+ HREF="node7.html#BA80">BA80</A>]
+achieved this goal for Toeplitz-like
+matrices.
+
+<P>
+By using the reduction of [<A
+ HREF="node7.html#P89/90">P89/90</A>] from
+Cauchy-like to Toeplitz-like matrices, the latter  cost estimate can 
+be extended to the Cauchy-like case. Such a  reduction, however,
+is more involved than the reduction into the  opposite  direction 
+(from Toeplitz-like to Cauchy-like matrices), 
+and its numerical properties are not clear. In 
+[<A
+ HREF="node7.html#PZ96">PZ96</A>], [<A
+ HREF="node7.html#PTCPS98">PTCPS98</A>] and [<A
+ HREF="node7.html#OP98">OP98</A>],  
+the  divide-and-conquer  algorithm based on(<A HREF="node6.html#equ6.7">6.7</A>)-(<A HREF="node6.html#equ6.9">6.9</A>)
+was devised directly  for the Cauchy-like inversion and the solution of
+Cauchy-like linear systems of equations,  at the cost
+<IMG
+ WIDTH="104" HEIGHT="42"
+ SRC="img163.gif"
+ ALT="$O_A(n \log^3 n)$">
+(cf. Theorem 6.2).
+In [<A
+ HREF="node7.html#OP98">OP98</A>], the  algorithm 
+was  also applied to  some major problems of rational
+interpolation,  which are the basis for some
+fundamental signal processing computations 
+and which can be expressed as the 
+recursive factorization problem based on (<A HREF="node6.html#equ6.7">6.7</A>)-(<A HREF="node6.html#equ6.9">6.9</A>). 
+The main technicality of the extension of the MBA algorithm is the extension to 
+the Cauchy-like case
+of the results of [<A
+ HREF="node7.html#M80">M80</A>], [<A
+ HREF="node7.html#BA80">BA80</A>] on 
+maintaining the Toeplitz-like structure throughout the recursive factorization 
+process.
+
+<P>
+If the 
+inverses of the dense structured matrices of the above classes 
+are computed
+ numerically, with some bounded output errors due to roundoff,  
+then  the output approximations can be very rapidly refined
+by Newton's iteration. Straightforward application of  such  
+an iteration causes rapid  growth of the length of 
+the displacement or scaling generators and a  slowdown of
+the computations as a results, but some nontrivial
+modifications  avoid this  problem [<A
+ HREF="node7.html#P92a">P92a</A>], [<A
+ HREF="node7.html#P93">P93</A>], [<A
+ HREF="node7.html#PZHD97">PZHD97</A>], 
+[<A
+ HREF="node7.html#PBRZa">PBRZ,a</A>].
+
+<P>
+The basic block of all these algorithms is the multiplication of a  dense
+structured matrix of a given class by a vector (cf. Theorem
+<A HREF="node6.html#the6.2">6.2</A> on the complexity of such a multiplication). In the Cauchy-like case, we have the reduction to the
+problem of multiplication of a Cauchy matrix by a vector, also known as
+Trummer's  celebrated problem, having various applications to
+scientific and engineering computing (see bibliography in [<A
+ HREF="node7.html#PTCLS98">PTCLS98</A>]).
+By Theorem <A HREF="node6.html#the6.2">6.2</A>, its solution cost is bounded by <IMG
+ WIDTH="104" HEIGHT="42"
+ SRC="img154.gif"
+ ALT="$O_A(n \log^2 n)$">,
+but the algorithm of [<A
+ HREF="node7.html#Ger87">Ger87</A>] supporting this bound is numerically
+unstable. For numerical solution of Trummer's problem, the methods of
+practical choice are the multipole algorithms (cf. [<A
+ HREF="node7.html#Rok85">Rok85</A>],
+[<A
+ HREF="node7.html#Ger87">Ger87</A>], [<A
+ HREF="node7.html#AGR88">AGR88</A>], [<A
+ HREF="node7.html#GR87">GR87</A>],  [<A
+ HREF="node7.html#War98">War98</A>]), which are numerically stable and
+compute an approximate solution of Trummer's problem at the cost <IMG
+ WIDTH="64" HEIGHT="37"
+ SRC="img164.gif"
+ ALT="$O_A(bn)$">where <IMG
+ WIDTH="33" HEIGHT="21"
+ SRC="img25.gif"
+ ALT="$2^{-b}$">
+bounds the output error norm. 
+
+<P>
+The cited transitions among various classes of structured matrices have
+some interesting applications to polynomial computations. In particular,
+recall that polynomial interpolation and multipoint evaluation can be
+expressed as the computation of the vector <IMG
+ WIDTH="17" HEIGHT="33"
+ SRC="img165.gif"
+ ALT="$\bf p$">
+for a given pair of
+vectors <IMG
+ WIDTH="17" HEIGHT="17"
+ SRC="img166.gif"
+ ALT="$\bf x$">
+and <IMG
+ WIDTH="17" HEIGHT="17"
+ SRC="img125.gif"
+ ALT="${\bf v}$">
+and of the vector <IMG
+ WIDTH="17" HEIGHT="17"
+ SRC="img125.gif"
+ ALT="${\bf v}$">
+for  a given pair of
+vectors  <IMG
+ WIDTH="17" HEIGHT="17"
+ SRC="img166.gif"
+ ALT="$\bf x$">
+and <IMG
+ WIDTH="17" HEIGHT="33"
+ SRC="img165.gif"
+ ALT="$\bf p$">,
+respectively, where the three vectors <IMG
+ WIDTH="17" HEIGHT="17"
+ SRC="img166.gif"
+ ALT="$\bf x$">,
+<IMG
+ WIDTH="17" HEIGHT="33"
+ SRC="img165.gif"
+ ALT="$\bf p$">
+and <IMG
+ WIDTH="17" HEIGHT="17"
+ SRC="img125.gif"
+ ALT="${\bf v}$">
+of the same dimension <I>n</I>  satisfy the vector equation
+
+<P>
+
+<P ALIGN="RIGHT"><A NAME="equ6.10">&#160;</A><IMG
+ WIDTH="581" HEIGHT="45"
+ SRC="img167.gif"
+ ALT="\begin{equation}
+V({\bf x}){\bf p}={\bf v},
+\end{equation}">
+<BR></P>
+and
+<IMG
+ WIDTH="45" HEIGHT="37"
+ SRC="img168.gif"
+ ALT="$V({\bf x})$">
+is defined in Definition <A HREF="node6.html#def6.2">6.2</A>. Here we assume a
+polynomial <I>p</I>(<I>x</I>)  of degree at most <I>n</I>-1  with the coefficient vector <IMG
+ WIDTH="17" HEIGHT="33"
+ SRC="img165.gif"
+ ALT="$\bf p$">,
+whereas <IMG
+ WIDTH="17" HEIGHT="17"
+ SRC="img166.gif"
+ ALT="$\bf x$">
+is the vector of the <I>n</I>  nodes of evaluation or
+interpolation, and <IMG
+ WIDTH="17" HEIGHT="17"
+ SRC="img125.gif"
+ ALT="${\bf v}$">
+is the vector of the values of <I>p</I>(<I>x</I>)  at these
+nodes. 
+
+<P>
+The known fast algorithms  yield the cost bound <IMG
+ WIDTH="104" HEIGHT="42"
+ SRC="img154.gif"
+ ALT="$O_A(n \log^2 n)$">
+for both problems but are numerically unstable. The similarity with
+Trummer's problem can be continued from this point; furthermore, we 
+reduce polynomial interpolation and multipoint evaluation to Trummer's
+problem based on the next equation (such a reduction was first proposed
+in [<A
+ HREF="node7.html#PLST93">PLST93</A>], [<A
+ HREF="node7.html#PZHY97">PZHY97</A>]; cf. also [<A
+ HREF="node7.html#PTCLS98">PTCLS98</A>], [<A
+ HREF="node7.html#PTCPS98">PTCPS98</A>]): 
+
+<P>
+
+<P ALIGN="RIGHT"><A NAME="equ6.11">&#160;</A><IMG
+ WIDTH="581" HEIGHT="60"
+ SRC="img169.gif"
+ ALT="\begin{equation}
+V({\bf x})=-\frac{1}{\sqrt {n}}~{\rm diag}(1-x_i^n)_{i=0}^{n-1}~C({\bf
+x},{\bf w})~{\rm diag}(w_i)_{i=0}^{n-1}~F.
+\end{equation}">
+<BR></P>
+Here <IMG
+ WIDTH="106" HEIGHT="42"
+ SRC="img170.gif"
+ ALT="${\bf w}=(w^i)_{i=0}^{n-1}$">,
+<IMG
+ WIDTH="147" HEIGHT="42"
+ SRC="img171.gif"
+ ALT="$F=\frac{1}{\sqrt
+n}(w^{jk})_{j,k=0}^{n-1}$">,
+is the matrix of discrete Fourier transform,
+<IMG
+ WIDTH="164" HEIGHT="41"
+ SRC="img172.gif"
+ ALT="$w={\rm exp}(2\pi \sqrt{-1}/n)$">
+being a primitive <I>n</I> -th root of 1.  At a cost <IMG
+ WIDTH="96" HEIGHT="37"
+ SRC="img153.gif"
+ ALT="$O_A(n \log n)$">,
+equations
+(<A HREF="node6.html#equ6.10">6.10</A>) and (<A HREF="node6.html#equ6.11">6.11</A>)  combined reduce the multipoint
+polynomial evaluation problem to Trummer's problem, where one may apply effective
+multipole  algorithms. The resulting approximation algorithms for polynomial evaluation
+are fast and numerically stable, as this was confirmed by the results of
+extensive numerical experiments reported in [<A
+ HREF="node7.html#PZHY97">PZHY97</A>]. To yield a
+similar reduction of the polynomial interpolation problem, one may invert
+equation (<A HREF="node6.html#equ6.11">6.11</A>) and then use the known expressions for
+the matrices
+ <IMG
+ WIDTH="87" HEIGHT="40"
+ SRC="img173.gif"
+ ALT="$C^{-1}({\bf
+x},{\bf w})$">
+and <IMG
+ WIDTH="64" HEIGHT="40"
+ SRC="img174.gif"
+ ALT="$V^{-1}({\bf x})$">
+(see [<A
+ HREF="node7.html#BP94">BP94</A>], p. 131;
+[<A
+ HREF="node7.html#PTCLS98">PTCLS98</A>], [<A
+ HREF="node7.html#PTCPS98">PTCPS98</A>]). The constructions  proposed in the papers
+[<A
+ HREF="node7.html#PTCLS98">PTCLS98</A>] and
+ [<A
+ HREF="node7.html#PTCPS98">PTCPS98</A>] also involve and exploit
+some matrix equations extending (<A HREF="node6.html#equ6.11">6.11</A>),
+which enable the reverse reduction, that is, from Trummer's problem to the evaluation
+and interpolation, with the objective to improve the known algorithms for 
+Trummer's problem.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html71"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html69"
+ HREF="pan.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html63"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html72"
+ HREF="node7.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html70"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html64"
+ HREF="node5.html">Approximate polynomial gcds</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

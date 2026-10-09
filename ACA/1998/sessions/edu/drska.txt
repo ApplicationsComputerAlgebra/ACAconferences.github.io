@@ -1,0 +1,20 @@
+"Complex Application of CA / ICS in High-Tech Engineering Education"
+
+* L. Drska, R. Liska, M. Sinor
+  Faculty of Nuclear Sciences and Physical Engineering
+  Czech Technical University in Prague
+
+
+This contribution discusses the following topics related to the 
+application of Computer Algebra (CA) and Integrated Computing Systems 
+(ICS) in higher education : (1) CA / ICS as a key tool in high-tech  
+research and education of exact sciences and modern engineering. (2) The 
+use of CA / ICS as a part of a complex application of information 
+technology in education. (3) Specific requirements on the CA / ICS 
+packages to be used in physics and engineering curricula. (4) Particular 
+application of CA / ICS at the FNSPE CTU, information on selected courses 
+in information sciences and introductory / advanced physics. (5) Plans for 
+future application of CA / ICS in education at the FNSPE CTU, their role 
+in the development of the virtual department of physical sciences and 
+information pedagogy. The full text of the presentation will be available 
+at the URL http://www-troja.fjfi.cvut.cz/~drska/edu/aca981/. 

@@ -1,0 +1,16 @@
+The Regulation of Restoration Algorithms
+
+Svetlana Ivanova and Robert Ashinyants
+
+We consider the problem of entrance signal restoration if we know the exit
+signal in the case of the bad conditionality of the correlation noise matrix.
+We offer to solve this problem using the regularization method. Reverse
+problems concern a wide class of incorrect raised problems. Problem of a
+entrance signal restoration in measuring of the exit signal is incorrect
+raised too. If correlation noise matrix is degenerated, it's impossible to
+use classic method of Kalman filter. In the general case this method can't
+use for definition of restoration system parameters unambiguously and
+guaranty its stability. But often this method gives very effective solutions.
+We also demonstrate applicatibility computer algebra to a simple control
+system at the presense of noise and computer the results obtained with and
+without computer algebra.

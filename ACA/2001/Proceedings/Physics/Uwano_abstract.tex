@@ -1,0 +1,97 @@
+\documentstyle[11pt]{article}
+\oddsidemargin 0.mm
+\evensidemargin 0.mm
+\pagestyle{empty}
+\parskip=2pt
+\setlength{\textwidth}{160.mm}
+\setlength{\textheight}{240.mm}
+\setlength{\topmargin}{-15mm}
+%\headheight 0mm \headsep 0mm
+%\footheight 0mm
+%\setlength{\footskip}{40pt}
+%\def\thepage{}
+%
+\begin{document}
+\begin{center}
+{\large {\bf
+A Use of Computer Algebra in the Inverse Problem of the
+Birkhoff-Gustavson Normalization
+}}
+\\
+\bigskip
+%[.5cm]
+Yoshio UWANO
+\\
+\medskip
+Department of Applied Mathematics and Physics,
+Kyoto University \\
+Kyoto 606-8501, Japan
+\end{center}
+%
+\smallskip
+\begin{center}
+{\bf abstract}
+\end{center}
+%\medskip
+The Birkhoff-Gustavson (BG) normalization has been utilized
+very effectively in various studies in Hamiltonian systems.
+For example, for a given Hamiltonian system with a semi-simple
+stable equilibrium point, the BG normal-form power series
+of the given Hamiltonian around the equilibrium point
+provides an \lq approximate Hamiltonian system' if truncated
+up to a finite degree: the approximate system provides a
+good account of the surfaces of section with sufficiently
+small energies. The example above implies that finding the class
+of Hamiltonian systems sharing a certain polynomial in BG normal
+form amounts to finding a class of Hamiltonian systems exhibiting
+similar surfaces of sections.
+{\it The inverse problem of the BG normalization} has been
+thereby posed by the speaker [U1,U2]:
+{\it What kind of polynomial Hamiltonians can be brought into
+a given polynomial Hamiltonian in the Birkhoff-Gustavson normal form ?}
+Since elementary algebraic operations, differentiation, and integration
+of polynomials have to be repeated many times both in the inverse and
+the direct problems, computer algebra is worth applying to these problems;
+the program named \lq $\mbox{ANFER}$' working on REDUCE has been
+proposed [U1, U2].
+\par
+The inverse problem of the BG normalization is expected to
+provide rich subjects related with the integrability of Hamiltonian systems.
+For example, in solving the inverse problem associated with
+the two-dimensional perturbed harmonic oscillators with homogeneous
+cubic-polynomial potentials (PHOCP), the Bertrand-Darboux integrability
+condition comes out as a necessary and sufficient condition for the PHOCPs
+to share a BG normal form up to degree-4 with a certain the two-dimensional
+perturbed harmonic oscillators with homogeneous quartic-polynomial
+potentials
+(PHOQP).
+\par
+The aim of talk is to present
+\begin{description}
+\item[{(1)}]
+the algorithm of ANFER solving the inverse problem,
+\item[{(2)}]
+how ANFER works effectively in the inverse problem
+associated with the PHOCPs,
+\item[{(3)}]
+further results in the inverse problem with the PHOCPs
+obtained from the viewpoint of separability,
+\end{description}
+not only from the viewpoint of computer algebra but also
+from that of mathematical analysis: computer algebra and mathematical
+analysis have been combined very well in the inverse problem, indeed.
+\medskip
+\baselineskip=14pt
+\begin{center}
+{\bf References}
+\end{center}
+\begin{description}
+\item[{[U1]}]
+Y.Uwano, Journal of Physics {\bf A}, {\bf 33}, 6635--53 (2000).
+\item[{[U2]}]
+Y.Uwano {\it et.~al.},
+{\it Computer Algebra in Scientific Computing},
+V.Ganzha {\it et.~al.} eds.,
+441--61 (Springer-Verlag, 1999).
+\end{description}
+\end{document}

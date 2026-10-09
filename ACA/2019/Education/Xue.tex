@@ -1,0 +1,45 @@
+% This file should be rename with the speaker's last name. (e.g : smith)
+
+% Write the author names in the order you wish them to appear
+% and underline the one who will give the talk.
+
+% Only the speaker's email address is required.
+
+\begin{abstract_online}{Boosting Rocket Performance without Calculus}{%
+        \underline{Michael Xue}$^{1}$}{[mxue@vroomlab.com]
+        }{%
+        $^1$ Vroom Laboratory for Advanced Computing, Indianapolis, USA\newline{}}
+    
+The stages of a two-stage rocket have initial masses $m_1$ and $m_2$ respectively and carry a payload
+of mass $P$. Both stages have equal structure factors $e$ and equal relative exhaust speed $c$. 
+The rocket mass, $m_1 + m_2$ is fixed and $\frac{P}{m_1+m_2}=b$.
+
+According to multi-stage rocket's flight equation [2], the final speed of a two-stage rocket is
+
+\[v=-c\log(1-\frac{em_1}{m_1+m_2+P})-c\log(1-\frac{em_2}{m_2+P})\quad\quad\quad(1)\].
+
+Let $a=\frac{m_1}{m_2}$, (1) becomes
+
+\[v = -c \log(1-\frac{ea}{a+1+b(a+1)})-c \log(1-\frac{e}{1+b(a+1)})\quad\quad\quad(2)\] 
+
+where $a>0, b>0, c>0, 0<e<1$. We will maximize $v$ with an appropriate choice of $a$. \newline{}
+
+The above rocket performance optimization problem is solved using calculus [1]. 
+However, there is an alternative that requires only high school mathematics with the help of a 
+Computer Algebra System (CAS). We reduce (2) successively to a new optimization problem 
+where the target function is quadratic. The reduced problem is then solved analytically using 
+high school level algebra (quadratic equation and inequality). This non-calculus approach places 
+more emphasis on problem solving through mathematical thinking, as all symbolic calculations are 
+carried out by the CAS [3]. It also makes a range of interesting problems readily tackled with 
+minimum mathematical prerequisites.
+
+\textbf{Keywords} \newline{} Optimization, Computer Algebra, High School Mathematics
+
+\textbf{References} \newline{}
+% Model for references to books.
+[1] \textsc{D. Burghes; M. Borrie}, \emph{Modelling with Differential Equations}. Ellis Horwood Limited, Chichester, 1982. \newline{}
+%  Model for references to articles
+[2] \textsc{M. Xue}, \emph{Viva Rocketry!}, at http://vroomlab.wordpress.com/2019/01/31/viva-rocketry-part-2-2. \newline{}
+[3] \emph{Omega: A Computer Algebra System Explorer}, at http://www.omega-math.com. \newline{}
+    
+\end{abstract_online}

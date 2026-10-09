@@ -1,0 +1,635 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Approximate polynomial gcds</TITLE>
+<META NAME="description" CONTENT="Approximate polynomial gcds">
+<META NAME="keywords" CONTENT="pan">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL="STYLESHEET" HREF="pan.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="pan.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html61"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html59"
+ HREF="pan.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html53"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html62"
+ HREF="node6.html">Computations with dense structured</A>
+<B> Up:</B> <A NAME="tex2html60"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html54"
+ HREF="node4.html">Solution of a polynomial</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00050000000000000000">&#160;</A><A NAME="sec5">&#160;</A>
+<BR>
+Approximate polynomial gcds
+</H1>
+
+<P>
+Problem 5.1, computation of approximate polynomial 
+greatest common divisors (gcds).
+Given two polynomials, <IMG
+ WIDTH="143" HEIGHT="41"
+ SRC="img50.gif"
+ ALT="$u(x)=\sum_{i=0}^m u_ix^i$">
+and 
+<IMG
+ WIDTH="140" HEIGHT="41"
+ SRC="img51.gif"
+ ALT="$v(x)=\sum_{i=0}^nv_ix^i$">,
+a fixed polynomial norm <IMG
+ WIDTH="37" HEIGHT="37"
+ SRC="img52.gif"
+ ALT="$\Vert \cdot \Vert$">,
+and 
+a positive <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">,
+compute an  <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-gcd of <I>u</I>(<I>x</I>)  and <I>v</I>(<I>x</I>) , that is,  a
+nonunique polynomial <IMG
+ WIDTH="48" HEIGHT="37"
+ SRC="img53.gif"
+ ALT="$d^*(x)$">
+of the  maximum degree <IMG
+ WIDTH="22" HEIGHT="35"
+ SRC="img54.gif"
+ ALT="$d_{\epsilon}$">
+that divides two
+polynomials <IMG
+ WIDTH="48" HEIGHT="37"
+ SRC="img55.gif"
+ ALT="$u^*(x)$">
+and <IMG
+ WIDTH="48" HEIGHT="37"
+ SRC="img56.gif"
+ ALT="$v^*(x)$">
+satisfying 
+
+<P>
+
+<P ALIGN="RIGHT"><A NAME="equ5.1">&#160;</A><IMG
+ WIDTH="581" HEIGHT="45"
+ SRC="img57.gif"
+ ALT="\begin{equation}
+\ {\rm deg} \ u^* (x)\leq \ m, \ \
+{\rm deg} \ v^* (x)\leq \ n ,
+\end{equation}">
+<BR></P>
+<P>
+
+<P ALIGN="RIGHT"><A NAME="equ5.2">&#160;</A><IMG
+ WIDTH="581" HEIGHT="34"
+ SRC="img58.gif"
+ ALT="\begin{equation}
+\parallel u^* (x)-u(x)\parallel \leq \epsilon
+\parallel u(x) ...
+...lel v^* (x)-v(x)\parallel \leq \epsilon \parallel
+v(x)\parallel .
+\end{equation}">
+<BR></P> 
+
+<P>
+The study of this problem is motivated by its applications to
+control linear systems, network theory and computer aided design (see some 
+bibliography in [<A
+ HREF="node7.html#CGTW95">CGTW95</A>],  [<A
+ HREF="node7.html#EGL96">EGL96</A>],  [<A
+ HREF="node7.html#CCC98">CCC98</A>], 
+[<A
+ HREF="node7.html#P98">P98</A>], [<A
+ HREF="node7.html#Pa">P,a</A>]).
+
+<P>
+Effective algorithms are known that estimate the weighted least-squares distances
+from <I>u</I>(<I>x</I>)  and  <I>v</I>(<I>x</I>)  to two  polynomials <IMG
+ WIDTH="48" HEIGHT="37"
+ SRC="img55.gif"
+ ALT="$u^*(x)$">
+and <IMG
+ WIDTH="48" HEIGHT="37"
+ SRC="img56.gif"
+ ALT="$v^*(x)$">
+satisfying
+(<A HREF="node5.html#equ5.1">5.1</A>) and divisible by a given polynomial  <IMG
+ WIDTH="48" HEIGHT="37"
+ SRC="img53.gif"
+ ALT="$d^*(x)$">
+[<A
+ HREF="node7.html#CGTW95">CGTW95</A>], 
+[<A
+ HREF="node7.html#Pa">P,a</A>]. The computation of such a candidate polynomial <IMG
+ WIDTH="48" HEIGHT="37"
+ SRC="img53.gif"
+ ALT="$d^*(x)$">
+is a harder
+problem, however.  Only exponential time algorithms are known for its solution
+ [<A
+ HREF="node7.html#Hou77">Hou77</A>],
+[<A
+ HREF="node7.html#KL96">KL96</A>], [<A
+ HREF="node7.html#CCC98">CCC98</A>];  they are based on using the (weighted) least-squares norm and
+quadratic programming approach. There are several
+alternative techniques, which define the polynomial neighborhoods (<A HREF="node5.html#equ5.2">5.2</A>)
+ based on  the  coefficient vector norms.
+These techniques 
+give us  heuristic solutions of
+ Problem 5.1, that is, produce a
+common
+<IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-divisor <IMG
+ WIDTH="46" HEIGHT="37"
+ SRC="img59.gif"
+ ALT="$d_\epsilon (x)$">
+of <I>u</I>(<I>x</I>)  and <I>v</I>(<I>x</I>)  and, 
+furthermore,
+for some input pairs
+<I>u</I>(<I>x</I>)  and <I>v</I>(<I>x</I>)  verify that the degree of such a divisor is maximum but for 
+other input pairs leave the latter question open. These techniques include Euclidean
+algorithm [<A
+ HREF="node7.html#Sc85">Sc85</A>],  [<A
+ HREF="node7.html#NS91">NS91</A>],  [<A
+ HREF="node7.html#HS96">HS96</A>],  [<A
+ HREF="node7.html#EGL96">EGL96</A>],  [<A
+ HREF="node7.html#EGL97">EGL97</A>],  [<A
+ HREF="node7.html#SaSa97">SaSa97</A>], 
+computations with subresultant matrices  [<A
+ HREF="node7.html#CGTW95">CGTW95</A>],  [<A
+ HREF="node7.html#EGL96">EGL96</A>],  [<A
+ HREF="node7.html#EGL97">EGL97</A>]
+ and  Lazard's algorithm  [<A
+ HREF="node7.html#L81">L81</A>], having an equivalent matrix pencil version
+ [<A
+ HREF="node7.html#KM94">KM94</A>]. 
+
+<P>
+We propose two alternative approaches, based on Pad&#233;
+approximation and polynomial rootfinding
+(cf. [<A
+ HREF="node7.html#P98">P98</A>], [<A
+ HREF="node7.html#Pa">P,a</A>]).
+ The former one is similar to the 
+subresultant approach. It leads to a little simpler computations (involving 
+symmetric Hankel or Bezout matrices of smaller sizes, versus unsymmetric
+subresultant matrices) but to a little less efficient techniques for the insurance
+ of the  <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-divisiblity. This approach relies on the observation that
+the polynomial
+<IMG
+ WIDTH="182" HEIGHT="37"
+ SRC="img60.gif"
+ ALT="$g(x)={\rm gcd} (u(x),v(x))$">
+satisfies the equations
+
+<P>
+
+<P ALIGN="RIGHT"><A NAME="equ5.3">&#160;</A><IMG
+ WIDTH="581" HEIGHT="62"
+ SRC="img61.gif"
+ ALT="\begin{equation}
+g(x)=\frac{u(x)}{w(x)}=\frac{v(x)}{z(x)}
+\end{equation}">
+<BR></P>
+where <IMG
+ WIDTH="106" HEIGHT="37"
+ SRC="img62.gif"
+ ALT="$(z(x),~ w(x))$">
+is the (<I>m</I>,<I>n</I>)  Pad&#233; approximation of the power
+series <IMG
+ WIDTH="198" HEIGHT="48"
+ SRC="img63.gif"
+ ALT="$h(x)=\sum_{i=0}^{\infty} h_ix^i=\frac{u(x)}{v(x)}$">.
+Here, with no loss of generality,  we assume that <IMG
+ WIDTH="72" HEIGHT="37"
+ SRC="img64.gif"
+ ALT="$v(0)\ne 0$">.
+
+<P>
+The  computation
+of the gcd by this approach consists of the three successive stages of the
+computation of the following polynomials:
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>
+<IMG
+ WIDTH="113" HEIGHT="37"
+ SRC="img65.gif"
+ ALT="$h_N(x)= h(x)$">
+mod  <IMG
+ WIDTH="146" HEIGHT="41"
+ SRC="img66.gif"
+ ALT="$x^{N+1}, N=m+n$">,
+<P>
+<DT>2.
+<DD>
+<I>z</I>(<I>x</I>)  and  <I>w</I>(<I>x</I>) , being the (<I>m</I>,<I>n</I>) -Pad&#233; approximation of <IMG
+ WIDTH="54" HEIGHT="37"
+ SRC="img67.gif"
+ ALT="$h_N(x)$">,
+
+<P>
+<DT>3.
+<DD>
+<I>g</I>(<I>x</I>)  of (<A HREF="node5.html#equ5.3">5.3</A>).
+</DL>
+<P>
+For the computation of an <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-gcd, stages 2 and 3 are modified as 
+follows [<A
+ HREF="node7.html#P98">P98</A>], [<A
+ HREF="node7.html#Pa">P,a</A>].
+At first, the pairs <IMG
+ WIDTH="108" HEIGHT="37"
+ SRC="img68.gif"
+ ALT="$(z_d(x), w_d(x)$">)
+of polynomials being the (<I>m</I>-<I>d</I>, <I>n</I>-<I>d</I>)  
+Pad&#233; approximations of <IMG
+ WIDTH="54" HEIGHT="37"
+ SRC="img67.gif"
+ ALT="$h_N(x)$">
+are computed for <I>d</I>  recursively decreasing
+from a given upper bound <IMG
+ WIDTH="27" HEIGHT="21"
+ SRC="img69.gif"
+ ALT="$d^+$">
+on the degree of <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-gcds (say,
+<IMG
+ WIDTH="135" HEIGHT="39"
+ SRC="img70.gif"
+ ALT="$d^+={\rm min}\{m,n\}$">)
+down to an unknown 
+nonnegative integer
+ <IMG
+ WIDTH="27" HEIGHT="21"
+ SRC="img71.gif"
+ ALT="$d^- $">;
+each computed polynomial <IMG
+ WIDTH="51" HEIGHT="37"
+ SRC="img72.gif"
+ ALT="$w_d(x)$">
+is tested for 
+being an <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-divisor of <I>u</I>(<I>x</I>) ; the process continues recursively for
+<IMG
+ WIDTH="165" HEIGHT="39"
+ SRC="img73.gif"
+ ALT="$d=d^+, ~d^+-1,\ldots ,$">
+until we either
+ arrive at
+ <I>d</I>=0  (in which case the
+value <IMG
+ WIDTH="60" HEIGHT="21"
+ SRC="img74.gif"
+ ALT="$d^-=0$">
+and the
+ constant polynomial 
+<IMG
+ WIDTH="85" HEIGHT="39"
+ SRC="img75.gif"
+ ALT="$ g^-(x)=1$">
+are  output) or
+ satisfy the inequalities
+  <IMG
+ WIDTH="261" HEIGHT="39"
+ SRC="img76.gif"
+ ALT="$\vert\vert u(x)-w_d(x)g^-(x)\vert\vert
+\leq \epsilon
+\vert\vert u(x)\vert\vert$">,
+ <IMG
+ WIDTH="247" HEIGHT="39"
+ SRC="img77.gif"
+ ALT="$\vert\vert v(x)-z(x)g^-(x)\vert\vert \leq \epsilon
+\vert\vert v(x)\vert\vert $">for some polynomials <IMG
+ WIDTH="51" HEIGHT="39"
+ SRC="img78.gif"
+ ALT="$g^-(x)$">
+of degree at most <I>d</I>  and <I>z</I>(<I>x</I>)  of degree at most
+<I>n</I>-<I>d</I>  (in which case <IMG
+ WIDTH="61" HEIGHT="21"
+ SRC="img79.gif"
+ ALT="$d^-=d$">
+and <IMG
+ WIDTH="51" HEIGHT="39"
+ SRC="img78.gif"
+ ALT="$g^-(x)$">
+are output).
+
+<P>
+Such an algorithm outputs a common <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-divisor of <I>u</I>(<I>x</I>) , <I>v</I>(<I>x</I>)  having
+degree <IMG
+ WIDTH="27" HEIGHT="21"
+ SRC="img71.gif"
+ ALT="$d^- $">.
+If other methods show that <IMG
+ WIDTH="27" HEIGHT="21"
+ SRC="img71.gif"
+ ALT="$d^- $">
+is 
+actually
+an upper
+(and consequently the tight) 
+ bound on the degree
+of <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-gcd, then the computed <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-divisor <IMG
+ WIDTH="27" HEIGHT="39"
+ SRC="img80.gif"
+ ALT="$g^-$">
+is 
+a certified  <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-gcd of  <I>u</I>(<I>x</I>)  and <I>v</I>(<I>x</I>) . 
+
+<P>
+The   arithmetic  cost of
+performing the above computations is 
+bounded by 
+<IMG
+ WIDTH="207" HEIGHT="39"
+ SRC="img81.gif"
+ ALT="$O_A(( d^+ - d^- + 1) n \log n)$">,
+for a generic  input  pair (<I>u</I>(<I>x</I>) , <I>v</I>(<I>x</I>)), and 
+by
+ <IMG
+ WIDTH="215" HEIGHT="42"
+ SRC="img82.gif"
+ ALT="$O_A((d^+-d^- +1 )n\log^2 n)$">,
+for any pair (<I>u</I>(<I>x</I>) ,
+<I>v</I>(<I>x</I>)) , provided that 
+the Pad&#233; approximations   are  computed by means  of the extended Euclidean algorithm
+[<A
+ HREF="node7.html#BGY80">BGY80</A>], [<A
+ HREF="node7.html#BP94">BP94</A>].  An alternative way is to obtain them  via the
+ computations 
+ with the associated structured (Hankel or Bezout) matrices, that is, via the
+computation of the rank <I>r</I>  of such an <IMG
+ WIDTH="50" HEIGHT="33"
+ SRC="img83.gif"
+ ALT="$n\times n$">
+matrix <IMG
+ WIDTH="30" HEIGHT="35"
+ SRC="img84.gif"
+ ALT="$H_n$">
+or <IMG
+ WIDTH="29" HEIGHT="35"
+ SRC="img85.gif"
+ ALT="$B_n$">
+followed by
+solving a nonsingular linear system of <I>r</I>  equations with a structured coefficient
+matrix 
+[<A
+ HREF="node7.html#BGY80">BGY80</A>], [<A
+ HREF="node7.html#BP94">BP94</A>].
+In the context of <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-gcd computation, one computes the rank
+numerically and obtains an upper bound <IMG
+ WIDTH="27" HEIGHT="21"
+ SRC="img69.gif"
+ ALT="$d^+$">
+on the degree of <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-gcds 
+equal to
+the number of the eigenvalues of <IMG
+ WIDTH="30" HEIGHT="35"
+ SRC="img84.gif"
+ ALT="$H_n$">
+and <IMG
+ WIDTH="29" HEIGHT="35"
+ SRC="img85.gif"
+ ALT="$B_n$">
+lying in the interval
+<IMG
+ WIDTH="107" HEIGHT="37"
+ SRC="img86.gif"
+ ALT="$(-\sigma(\epsilon), \sigma(\epsilon))$">
+for a positive function  <IMG
+ WIDTH="38" HEIGHT="37"
+ SRC="img87.gif"
+ ALT="$\sigma(\epsilon)$">.
+This way of computation is slower but allows numerical stabilization
+and defines an upper bound <IMG
+ WIDTH="27" HEIGHT="21"
+ SRC="img69.gif"
+ ALT="$d^+$">
+on the degree of an <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-gcd.
+
+<P>
+In our second approach,
+we rely on the observation that the behavior of the gcd of the perturbed pairs of polynomials is directly governed
+by the perturbation of their zeros and only indirectly by the perturbation of their coefficients. Thus, in
+this  approach,
+ we first recall Theorem <A HREF="node3.html#the3.1">3.1</A> to compute some higher
+precision approximations, <IMG
+ WIDTH="23" HEIGHT="35"
+ SRC="img88.gif"
+ ALT="$y^*_i$">
+and <IMG
+ WIDTH="23" HEIGHT="35"
+ SRC="img89.gif"
+ ALT="$z^*_j$">,
+to all the zeros <IMG
+ WIDTH="20" HEIGHT="33"
+ SRC="img90.gif"
+ ALT="$y_i$">
+of  <I>u</I>(<I>x</I>) and <IMG
+ WIDTH="21" HEIGHT="33"
+ SRC="img26.gif"
+ ALT="$z_j$">
+of <I>v</I>(<I>x</I>) , <IMG
+ WIDTH="102" HEIGHT="34"
+ SRC="img91.gif"
+ ALT="$i=1,\ldots,m$">;
+<IMG
+ WIDTH="99" HEIGHT="34"
+ SRC="img92.gif"
+ ALT="$j=1,\ldots,n$">.
+Then we define a bipartite graph with the two sets of vertices, <IMG
+ WIDTH="80" HEIGHT="37"
+ SRC="img93.gif"
+ ALT="$Y=\{y^*_i\}$">
+and
+<IMG
+ WIDTH="75" HEIGHT="37"
+ SRC="img94.gif"
+ ALT="$Z=(z^*_j)$">,
+and with the  edges connecting <IMG
+ WIDTH="39" HEIGHT="35"
+ SRC="img95.gif"
+ ALT="$y^*_{i(k)}$">
+and <IMG
+ WIDTH="40" HEIGHT="35"
+ SRC="img96.gif"
+ ALT="$z^*_{j(k)}$">
+if and only if 
+<IMG
+ WIDTH="160" HEIGHT="37"
+ SRC="img97.gif"
+ ALT="$\vert y^*_{i(k)}-z^*_{j(k)}\vert<\delta(\epsilon)$">
+for a specified positive
+<IMG
+ WIDTH="36" HEIGHT="37"
+ SRC="img98.gif"
+ ALT="$\delta(\epsilon)$">.
+We compute the maximum cardinality matching
+<IMG
+ WIDTH="150" HEIGHT="37"
+ SRC="img99.gif"
+ ALT="$M=\{(y^*_{i(k)},z^*_{j(k)}\}$">
+in the graph and the candidate <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-gcd,
+<IMG
+ WIDTH="258" HEIGHT="37"
+ SRC="img100.gif"
+ ALT="$g(x)=\prod_k(x-(y^*_{i(k)}+z^*_{j(k)})/2)$">,
+where the product is over all <I>k</I>  such that
+<IMG
+ WIDTH="137" HEIGHT="37"
+ SRC="img101.gif"
+ ALT="$(y^*_{i(k)},z^*_{j(k)})\in M$">.
+Finally, we test <I>g</I>(<I>x</I>)  for being a common 
+<IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-divisor of <I>u</I>(<I>x</I>)  and <I>v</I>(<I>x</I>)  and compare its degree with the known upper
+bound <IMG
+ WIDTH="27" HEIGHT="21"
+ SRC="img69.gif"
+ ALT="$d^+$">,
+set equal to min<IMG
+ WIDTH="59" HEIGHT="37"
+ SRC="img102.gif"
+ ALT="$\{ m, n \}$">
+or obtained by different approaches. 
+
+<P>
+The computational cost of  our
+second  approach is quite low; it is defined by Theorem <A HREF="node3.html#the3.1">3.1</A> and by the well
+known bound of <IMG
+ WIDTH="70" HEIGHT="40"
+ SRC="img103.gif"
+ ALT="$O(N^{2.5})$">comparisons, <I>N</I>=<I>m</I>+<I>n</I> , on the cost of the
+matching computation. We also show that the latter  bound  can be decreased to <I>O</I>(<I>mn</I>) comparisons (by replacing the matching stage by the computation of
+the connected components in a  bipartite  graph) if elastic choice of <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">is allowed (cf.  [<A
+ HREF="node7.html#P98">P98</A>],  [<A
+ HREF="node7.html#Pa">P,a</A>]).
+
+<P>
+This approach leads  to a natural extension of the definition of
+<IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-gcd where the norm (of the perturbation) of a  polynomial is defined in terms
+ of the absolutely  maximum (perturbation of)
+its  zeros rather than its coefficients.
+In this case our approach  always outputs correctly 
+an <IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-gcd.  Furthermore, the resulting solution of such an 
+<IMG
+ WIDTH="13" HEIGHT="17"
+ SRC="img41.gif"
+ ALT="$\epsilon$">-gcd
+problem can be extended to a heuristic algorithm for
+the problem of computing a Hankel matrix of a lower rank <IMG
+ WIDTH="26" HEIGHT="21"
+ SRC="img104.gif"
+ ALT="$r^-$">approximating a given Hankel matrix of 
+rank <I>r</I> , with <IMG
+ WIDTH="59" HEIGHT="39"
+ SRC="img105.gif"
+ ALT="$r^- < r$">,
+this problem has important  applications to signal and image
+processing 
+[<A
+ HREF="node7.html#Cad88">Cad88</A>],  [<A
+ HREF="node7.html#CaW90">CaW90</A>],  [<A
+ HREF="node7.html#DeM94">DeM94</A>],  [<A
+ HREF="node7.html#vdV96">vdV96</A>].
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html61"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html59"
+ HREF="pan.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html53"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html62"
+ HREF="node6.html">Computations with dense structured</A>
+<B> Up:</B> <A NAME="tex2html60"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html54"
+ HREF="node4.html">Solution of a polynomial</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

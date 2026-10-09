@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Approximate Multivariate Factorization and Its Time Complexity</TITLE>
+<META NAME="description" CONTENT="Approximate Multivariate Factorization and Its Time Complexity">
+<META NAME="keywords" CONTENT="nagasaka">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="nagasaka.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<H1 ALIGN="CENTER">Approximate Multivariate Factorization
+<BR>
+and Its Time Complexity</H1>
+<P ALIGN="CENTER"><STRONG>Kosaku Nagasaka
+<!-- MATH: $^{\dagger}$ -->
+<IMG
+ WIDTH="13" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\dagger}$">
+and Tateaki Sasaki
+<!-- MATH: $^{\ddagger}$ -->
+<IMG
+ WIDTH="13" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$^{\ddagger}$">
+<BR>
+
+<!-- MATH: $^{\dagger}$ -->
+<IMG
+ WIDTH="13" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\dagger}$">
+Doctoral Program of Mathematics <BR>
+
+<!-- MATH: $^{\ddagger}$ -->
+<IMG
+ WIDTH="13" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$^{\ddagger}$">
+Institute of Mathematics <BR>
+Univiversity of Tsukuba <BR>
+Tsukuba-shi, Ibaraki 305-8571, Japan</STRONG></P>
+<P ALIGN="CENTER"><STRONG><TT>{nagasaka,sasaki}@math.tsukuba.ac.jp</TT></STRONG></P>
+<P ALIGN="LEFT"></P>
+
+<P>
+
+<H3>Abstract:</H3>
+<DIV>
+Approximate factorization of multivariate polynomial is that, given 
+a polynomial <I>F</I> in 
+<!-- MATH: ${\mathbf C}[x,y,\ldots,z]$ -->
+<IMG
+ WIDTH="117" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="${\mathbf C}[x,y,\ldots,z]$">,
+we determine polynomials <I>G</I>,<I>H</I> 
+and 
+<!-- MATH: ${\mit \Delta}_F$ -->
+<IMG
+ WIDTH="34" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="${\mit \Delta}_F$">
+in 
+<!-- MATH: ${\mathbf C}[x,y,\ldots,z]$ -->
+<IMG
+ WIDTH="117" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="${\mathbf C}[x,y,\ldots,z]$">
+satisfying 
+
+<!-- MATH: $F=GH+{\mit \Delta}_F$ -->
+<IMG
+ WIDTH="133" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$F=GH+{\mit \Delta}_F$">,
+
+<!-- MATH: $\parallel\hspace{-3pt}{\mit \Delta}_F
+\hspace{-3pt}\parallel/\parallel\hspace{-3pt} F\hspace{-3pt}\parallel =
+\varepsilon \ll 1$ -->
+<IMG
+ WIDTH="183" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\parallel\hspace{-3pt}{\mit \Delta}_F
+\hspace{-3pt}\parallel/\parallel\hspace{-3pt} F\hspace{-3pt}\parallel =
+\varepsilon \ll 1$">,
+where
+
+<!-- MATH: $\parallel\hspace{-3pt} P\hspace{-3pt}\parallel$ -->
+<IMG
+ WIDTH="42" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\parallel\hspace{-3pt} P\hspace{-3pt}\parallel$">
+denotes a suitably
+defined <B>norm</B> of polynomial <I>P</I>. 
+For approximate factorization, we need a completely different 
+algorithm from those for exact factorization. In 1991, 
+Sasaki et al.  presented an algorithm of approximate factorization. 
+The algorithm determines irreducible factors by handling
+ the combinations of roots of the form 
+<!-- MATH: $c_1 \varphi_1^i + \cdots
++ c_n \varphi_n^i$ -->
+<IMG
+ WIDTH="154" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$c_1 \varphi_1^i + \cdots
++ c_n \varphi_n^i$">,
+
+<!-- MATH: $i=1,2,\ldots$ -->
+<IMG
+ WIDTH="99" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$i=1,2,\ldots$">,
+where 
+<!-- MATH: $\varphi_1,\ldots,
+\varphi_n$ -->
+<IMG
+ WIDTH="92" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\varphi_1,\ldots,
+\varphi_n$">
+are the power-series roots of a given polynomial 
+
+<!-- MATH: $F(x,y,\ldots,z)$ -->
+<IMG
+ WIDTH="120" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$F(x,y,\ldots,z)$">
+and 
+<!-- MATH: $c_1,\ldots,c_n$ -->
+<IMG
+ WIDTH="84" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$c_1,\ldots,c_n$">
+are numbers. 
+The algorithm was analyzed by Sasaki et al.  in 1992, but it was 
+incomplete in that the truncation degree of power-series roots was 
+not shown. In this paper, we give a sufficient condition to 
+truncate the power-series, improve the algorithm in several points, 
+and show that the algorithm works in polynomial-time w.r.t. 
+<!-- MATH: $\textrm{\rm deg}_x(F)$ -->
+<IMG
+ WIDTH="74" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\textrm{\rm deg}_x(F)$">
+and 
+<!-- MATH: $\textrm{\rm tdeg}_{y,\ldots,z}(F)$ -->
+<IMG
+ WIDTH="108" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\textrm{\rm tdeg}_{y,\ldots,z}(F)$">.
+</DIV>
+<P>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

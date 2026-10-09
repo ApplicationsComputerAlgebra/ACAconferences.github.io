@@ -1,0 +1,171 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">The Buchberger Algorithm to Study
+the a Priori Identifiability of Biological Systems Models</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Saccomani">Maria Pia Saccomani</A>,
+<A HREF="../../participants.html#Audoly">Stefania Audoly</A>,
+<A HREF="../../participants.html#Cobelli"> Claudio Cobelli</A>,
+<A HREF="../../participants.html#Dangio"> Leontina D'angi&ograve; </A><br>
+</h3>
+
+Date: July 19th (Friday)<br>
+Time: 11:00-11:30<br>
+
+<center>
+Abstract
+</center>
+
+<P>In this paper we present an application of the Buchberger algorithm to 
+the solution of a crucial step in the identification of compartmental 
+models of biological systems from input-output experiments: the a priori 
+identifiability problem.
+<P>
+Linear compartmental models are a class of dynamic 
+models based on mass conservation principles which are widely used in 
+biology and medicine to study the kinetics of substances [4,5]. 
+Compartmental models are mathematically described by ordinary differential 
+equations, where the state variables usually are the compartment masses 
+and the parameters are the transfer rate constants among them. The 
+input-output experiment usually consists in injecting some material 
+into one (or more) compartment and measuring a linear function of some 
+of the state variables.
+<P>
+The a priori structural identifiability of linear 
+compartmental models consists in testing if, under the ideal conditions 
+of noise-free observations and error-free model structure (a priori) and 
+independently of the particular values of the parameters (structurally), 
+the unknown parameters of the model can or can not be uniquelly (globally) 
+estimated from the designed experiment [1-4]. A priori identifiability is 
+clearly a necessary prerequisite for well posedness of parameter estimation. 
+It is also crucial in qualitative experiment design [10], that is selecting 
+the input-output configuration necessary to ensure unique identifiability 
+of the unknown parameters.Various methods to test a priori structural 
+identifiability have been proposed, including the transfer function 
+method [1,2], the transfer function topological method [6], the modal 
+matrix method [2,7], and the similarity transformation method [2,3]. 
+However, whatever is the method used there is the need to solve a system 
+of nonlinear algebraic equations (the identifiability equations) which 
+fast increases in number of unknowns, terms and nonlinearity degree as 
+the model connectivity and/or the number of compartments increase. 
+While some identifiability results are available on specific classes 
+of models, there is no algorithm to test global identifiability of 
+compartmental models of general structure. Recently, a differential 
+algebra algorithm, implemented in Maple, has been proposed [8] for 
+low dimension nonlinear models: however its applicability to linear 
+compartmental models is severely limited by computability bounds 
+(up to three compartments).
+<P>
+The aim of our work has been to develop a new algorithm for checking 
+a priori global identifiability of linear compartmental models of general 
+structure by combining one classical method with computer algebra methods, 
+in particular with the Gr&#246;bner basis. In principle all the methods 
+discussed above could be used to generate the identifiability equations, 
+but we have chosen the one which makes the algorithm to calculate the 
+Gr&#246;bner basis successful for the largest class of models, i.e. the one 
+which reduces the complexity of the identifiability equations in terms of 
+number of unknowns, number of terms, and nonlinearity degree. The algorithm 
+is essentially a two stage one. First, the transfer function topological 
+method [6] is used which is based on the transfer function and on the 
+topological properties of the graph associated to the model. In particular, 
+the method defines as unknowns in the identifiability equations not the 
+model parameters (transfer rate constants), but some topological functions 
+of them, i.e. the cycles and paths of the compartmental graph. The 
+mapping of the compartmental parameter space into that of cycles and paths, 
+considerably reduces the number of terms and the number of the high degree 
+terms. Then, this new system of equations is handled by using the Buchberger 
+algorithm [9] which calculates the Gr&#246;bner basis. By substituting the 
+model parameters to the cycles and paths in this basis and applying a second 
+time the Buchberger algorithm, it is possible to determine, for each model 
+parameter, if there is one, more than one (and how many), or an infinite 
+number of solutions. The domain of validity of the algorithm is essentially 
+due to the limits of applicability of the Buchberger algorithm in solving 
+the identifiability equations and is thus difficult to be established 
+rigorously. In particular, the Buchberger algorithm has limitations on 
+the number of simultaneous equations to solve, number of unknowns, number 
+of terms and on the nonlinearity degree. Note that the choice of the order 
+relation plays an important role in the computational complexity of the 
+algorithm. We thus checked the algorithm in testing a priori identifiability 
+of the models present in the biomedical literature. From our experience, we 
+can state that, for the first time, it is possible to test automatically a 
+priori structural global identifiability of linear compartmental models 
+characterized by the most general muti input-multi output experimental 
+configuration and by a structure of relatively large connectivity and 
+dimension, i.e. up to twelve compartments.The algorithm described has 
+been implemented in the software GLOBI (GLOBI for GLOBal Identifiability) 
+which is written in PASCAL 6.0 and REDUCE 3.5 [11], where a Gr&#246;bner 
+basis package is available with the Buchberger algorithm. In particular, 
+for the user graphical interface, GLOBI utilizes DELPHI [12], an 
+object-oriented program allowing WINDOWS application to PASCAL programs.
+<P>
+<P><b>REFERENCES</b>
+<P>
+<OL><LI>        Cobelli C. and J.J. DiStefano III. Parameter and  structural 
+identifiability concepts and ambiguities: a  critical  review and analysis. 
+Am. J. Physiol. 239:R7-R24, 1980.
+<P>
+<LI>    Godfrey K.R. and J.J. DiStefano III. Identifiability of model 
+parameters. In Identifiability of  Parametric  Models, E. Walter, Ed. 
+Oxford: Pergamon Press, chapt. 1, pp. 1-20, 1987.
+<P>
+<LI>    Walter E. Identifiability of State Space Models. Springer, 
+Berlin, 1982.
+<P>
+<LI>     Carson E.R., Cobelli C. and L. Finkelstein.The Mathematical 
+Modeling of Metabolic and Endocrine  Systems. New York: Wiley, 1983.
+<P>
+<LI>    Jacquez J.A. Compartmental Analysis in Biology and Medicine. 
+Ann Arbor: The University of  Michigan  Press, 1985.
+<P>
+<LI>    Audoly S. and L. D'Angio'. On the identifiability of linear 
+compartmental systems: a revisited transfer function approach based 
+on topological properties. Math. Biosci. 66:201-228, 1983.
+<P>
+<LI>    Norton J.P. Normal mode identifiability analysis of linear 
+compartmental systems in linear stages. Math. Biosci. 50:95-115, 1980.
+<P>
+<LI>    Glad T. and L. Liung. On global identifiability for arbitrary 
+model parametrisation. Automatica, 30.2: 265-276, 1994.
+<P>
+<LI>    Buchberger B. An algorithmical criterion for the solvability 
+of algebraic system of equation. Aequationes Mathematicae, 4, 3:45-50, 1988.
+<P>
+<LI> Saccomani M.P. and C. Cobelli. Qualitative experiment design in 
+physiological system identification. IEEE  Control Systems Magazine, 
+vol. 12, n. 6, 18-23, 1992.
+<P>
+<LI>    Mueller H.M. Algebraic Computing with REDUCE. M.A.H. Mac Callum 
+&amp; F.J. Wright, Clarendom Press, Oxford, 1991.
+<P>
+<LI> Matcho J., D.R. Faulkner, et al. Using DELPHI. Publisher R. Elgey, 
+    QUE Corporation, 1995.
+</OL>
+<BR> 
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="../../skeletons/Wang.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

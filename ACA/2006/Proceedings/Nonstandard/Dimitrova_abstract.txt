@@ -1,0 +1,22 @@
+A Model of Metabolic Processes using Maple
+
+N. Dimitrova,  S. Markov
+Institute of Mathematics and Informatics
+Bulgarian Academy of Sciences
+Acad. G. Bonchev str., bldg. 8,   Sofia 1113, Bulgaria
+e-mail:  {smarkov, nelid}@bio.bas.bg
+
+Metabolic processes can be effectively described mathematically by systems of
+nonlinear differential equations.  The basic model of enzyme kinetics is
+proposed by Michaelis and Menten and describes the conversion of a substrate
+into a product  in the presence of an enzyme.  Metabolic processes involve
+thousands of substrates and enzymes.
+
+In an organism the enzymes (and more generally the proteins) are a product of
+biochemical reactions involving other enzymes.  Thus, formally speaking,
+enzymes reproduce themselves.  This observation lies at the basis of the
+proposed models.  We also assume that in the long term the reproduction of
+enzymes depends on the type of the subsrates entering the organism.  Under a
+number of assumptions aiming at the simplification of the whole process we
+build a mathematical model and present the results of relevant numerical
+experiments.  As a computer platform we use the computer algebra system MAPLE.

@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Cryptographic Aspects Of Real Quadratic Congruence Function Fields </H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Stein ">Andreas Stein </A><br>
+</h3>
+
+Date: July 19th (Friday)<br>
+Time: 15:00--15:30 <br>
+
+<center>
+Abstract
+</center>
+
+We show how the theory of real quadratic congruence function fields can be used
+    to produce a secure key distribution protocol. The technique is similar to that advocated by
+    Diffie and Hellman in 1976, but instead of making use of a group for its underlying
+    structure, makes use of a structure which is ``almost'' a group. The method is an extension of
+    the recent ideas of Scheidler, Buchmann and Williams, but, because it is implemented in
+    these function fields, several of the difficulties with their protocol can be eliminated. A
+    description of the protocol is provided, together with a discussion of the difficulty of the
+    so-called discrete logarithm problem (DLP) in real quadratic congruence function fields. In
+    this context, we will point out that the DLP for real quadratic congruence function fields of
+    genus one is equivalent to the DLP for elliptic curves over finite fields. 
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Sakata.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

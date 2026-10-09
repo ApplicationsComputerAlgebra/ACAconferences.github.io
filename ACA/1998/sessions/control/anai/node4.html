@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Reducing SDP to QE problems</TITLE>
+<META NAME="description" CONTENT="Reducing SDP to QE problems">
+<META NAME="keywords" CONTENT="anai">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="anai.css">
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="anai.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html52"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html50"
+ HREF="anai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html44"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html53"
+ HREF="node5.html">Optimization by QE and</A>
+<B> Up:</B> <A NAME="tex2html51"
+ HREF="anai.html">Solving LMI and BMI</A>
+<B> Previous:</B> <A NAME="tex2html45"
+ HREF="node3.html">Existing methods for LMI</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00040000000000000000">
+Reducing SDP to QE problems</A>
+</H1>
+
+<P>
+In this section we consider the method to solve 
+BMI problems by using QE [<A
+ HREF="node8.html#Anai1998">2</A>].
+This method is applicable to not only BMI but also
+general matrix inequality (Polynomial Matrix Inequality; PMI).
+Here we denote a polynomial matrix inequality by 
+
+<!-- MATH: $M(X) >_d (or \geq_d) 0$ -->
+<IMG
+ WIDTH="156" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$M(X) >_d (or \geq_d) 0$">
+,
+where  
+<!-- MATH: $X=\{x_1,\cdots,x_n \}$ -->
+<IMG
+ WIDTH="143" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.gif"
+ ALT="$X=\{x_1,\cdots,x_n \}$">
+and we use
+
+<!-- MATH: $>_d (\geq_d)$ -->
+<IMG
+ WIDTH="69" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$>_d (\geq_d)$">
+for definiteness of matrices in order to 
+distinguish ordinary inequality sign.
+
+<P>
+Determining (semi)definiteness for a real symmetric matrix 
+is achieved without computing eigenvalues 
+by using the following well-known as Sylvester's theorem;
+For a matrix <IMG
+ WIDTH="42" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$M \in$">
+<B>R</B>
+<!-- MATH: $^{n\times n}$ -->
+<IMG
+ WIDTH="35" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$^{n\times n}$">,
+we denote by 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+M \left (
+\begin{array}{c}
+i_1 \ i_2 \ \cdots \ i_r \\
+j_1 \ j_2 \ \cdots \ j_r
+\end{array}
+\right )
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="152" HEIGHT="58"
+ SRC="img38.gif"
+ ALT="\begin{displaymath}M \left (
+\begin{array}{c}
+i_1 \ i_2 \ \cdots \ i_r \\
+j_1 \ j_2 \ \cdots \ j_r
+\end{array}\right )\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+the 
+<!-- MATH: $r \times r$ -->
+<IMG
+ WIDTH="45" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.gif"
+ ALT="$r \times r$">
+submatrix of <I>M</I> which consists of 
+(<I>i</I><SUB><I>k</I></SUB>,<I>j</I><SUB><I>l</I></SUB>)-entries of <I>M</I>,
+where
+
+<!-- MATH: $1 \leq i_1 < i_2  < \cdots < i_r \leq n$ -->
+<IMG
+ WIDTH="210" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$1 \leq i_1 < i_2 < \cdots < i_r \leq n$">
+and
+
+<!-- MATH: $1 \leq j_1 < j_2  < \cdots < j_r \leq n$ -->
+<IMG
+ WIDTH="214" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$1 \leq j_1 < j_2 < \cdots < j_r \leq n$">.
+
+<P>
+<P>
+<DIV><B>Theorem  1</B> (<EM>Sylvester's criterion</EM>)  &nbsp; 
+
+Let 
+<!-- MATH: $M=(a_{ij}) \in$ -->
+<IMG
+ WIDTH="103" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.gif"
+ ALT="$M=(a_{ij}) \in$">
+<B>C</B>
+<!-- MATH: $^{n\times n}$ -->
+<IMG
+ WIDTH="35" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$^{n\times n}$">
+be a Hermitian matrix. Then 
+
+<P>
+(i) 
+<I>M</I> is positive semi-definite if and only if
+all principal minors of <I>M</I> are non negative <EM>i.e.</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+det \ M \left (
+\begin{array}{c}
+i_1 \ i_2 \ \cdots \ i_r \\
+i_1 \ i_2 \ \cdots \ i_r
+\end{array}
+\right ) \geq 0, 
+
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="220" HEIGHT="58"
+ SRC="img43.gif"
+ ALT="\begin{displaymath}det \ M \left (
+\begin{array}{c}
+i_1 \ i_2 \ \cdots \ i_r \\
+i_1 \ i_2 \ \cdots \ i_r
+\end{array}\right ) \geq 0,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+for 
+<!-- MATH: $1 \leq i_1 < i_2  < \cdots < i_r \leq n, \ r=1,2,\cdots,n.$ -->
+<IMG
+ WIDTH="340" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.gif"
+ ALT="$1 \leq i_1 < i_2 < \cdots < i_r \leq n, \ r=1,2,\cdots,n.$">
+<P>
+(ii) 
+<I>M</I> is positive definite if and only if 
+all leading principal minors of <I>M</I> are positive <EM>i.e.</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+det \ M \left (
+\begin{array}{c}
+1 \ 2 \ \cdots \ r \\
+1 \ 2 \ \cdots \ r
+\end{array}
+\right ) > 0 \ \ \ for \  r=1,2,\cdots,n.
+
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="368" HEIGHT="58"
+ SRC="img45.gif"
+ ALT="\begin{displaymath}det \ M \left (
+\begin{array}{c}
+1 \ 2 \ \cdots \ r \\
+1 \ 2...
+...cdots \ r
+\end{array}\right ) > 0 \ \ \ for \ r=1,2,\cdots,n.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P></DIV><P></P>
+This is the key to reduce SDP problems to QE problems.
+By Theorem 1 (i), 
+<!-- MATH: $M(x) \geq_d 0$ -->
+<IMG
+ WIDTH="91" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.gif"
+ ALT="$M(x) \geq_d 0 $">
+can be reduced to 
+the formula which is the conjunction of 
+<!-- MATH: $2^n-1 ( \equiv \sum_{r=1}^n \ _nC_r)$ -->
+<IMG
+ WIDTH="171" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.gif"
+ ALT="$2^n-1 ( \equiv \sum_{r=1}^n \ _nC_r)$">
+inequalities. <P>
+<DIV><B>Remark  1</B> &nbsp; 
+By this theorem,
+Positive-Definite Programming can be also 
+resolved in the same manner as SDP problems if we use (<I>ii</I>).</DIV><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html52"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html50"
+ HREF="anai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html44"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html53"
+ HREF="node5.html">Optimization by QE and</A>
+<B> Up:</B> <A NAME="tex2html51"
+ HREF="anai.html">Solving LMI and BMI</A>
+<B> Previous:</B> <A NAME="tex2html45"
+ HREF="node3.html">Existing methods for LMI</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

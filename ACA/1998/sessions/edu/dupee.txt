@@ -1,0 +1,20 @@
+"Composite Algorithms in the Teaching of Mathematical Methods"
+
+Brian Dupee, University of Bath, U.K. * 
+Raquel Martinez, Polytechnic University of Madrid, Spain 
+Santiago Tapia, Polytechnic University of Madrid, Spain
+
+
+The combination of the power of symbolic systems and the reliability of 
+numerical methods together with graphical facilities has significant uses 
+in the teaching of mathematical methods to scientists and  engineers.
+This presentation will describe a prototype package which uses algorithms 
+created within the symbolic algebra system Axiom, numerical routines from 
+the NAG Libraries together with the easy-to-use facilities of modern 
+graphical interfaces.
+The application considers the implementation of different techniques, both 
+symbolic and numeric, for the analysis and calculation of interpolating 
+functions for curve fitting with the intention of providing scientists, 
+engineers and their students with a graphical student-friendly tool for the 
+understanding and explanation of relationships between interpolation 
+methods. 

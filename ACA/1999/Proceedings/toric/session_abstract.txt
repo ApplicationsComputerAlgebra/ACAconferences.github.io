@@ -1,0 +1,9 @@
+   Title:     Toric Ideals and Integer Programming
+   Organizer: Lorenzo Robbiano (Universita' di Genova, Italy)
+
+   The purpose of this session is to discuss the interaction
+   between classical problems in integer programming and new methods
+   coming from computer algebra.
+
+   Potential speakers (so far):
+   L. Robbiano, A. M. Bigatti,  R. Hemmecke,  S. Hosten

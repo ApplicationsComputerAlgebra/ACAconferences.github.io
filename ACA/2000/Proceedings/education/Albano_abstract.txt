@@ -1,0 +1,25 @@
+Giovanna Albano* (albano@diima.unisa.it), Ciro D'Apice (dapice@diima.unisa.it),
+Rosanna Manzo* (manzo@diima.unisa.it) (Italy) 
+
+Experimenting Mathematics by Mathematica
+
+Since the first time they were introduced, MathematicaTM and all similar
+systems of C.A. (Computer Algebra), have been useful to change both the way
+people looked and thought of didactics in mathematics.  Students are no longer
+passive watchers of a process which used to be distant and unrelated to them.
+Such symbolic software have been used in order to facilitate and to encourage
+the experiments, to illustrate new mathematical contents and to bring a more
+effective way of teaching abstract mathematical subjects.  The visualisation
+through computation and testing are now becoming a fundamental condition for
+learning.
+
+MathematicaTM is a software able to do symbolic and numeric computations and
+able to manipulate (generate and modify) 2D and 3D images and graphs.  The aim
+of the workshop can be summarise in the following points:
+Syntax and basic rules for a good conversation
+How to use the Help On Line
+Some additional notions about the basic objects and functions
+Some tricks  for doing efficient symbolic computation with MathematicaTM
+The basic 2D-3D graphical functions
+
+A case study: a first year Engineering mathematics course using MathematicaTM

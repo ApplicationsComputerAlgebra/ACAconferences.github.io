@@ -1,0 +1,18 @@
+
+         Facilities for General Relativity in Macsyma
+         --------------------------------------------
+
+                          Richard Petti
+                          Macsyma Inc.
+
+This presentation surveys facilities in Macsyma that are 
+particularly useful for computations in general relativity. 
+These include (1) indicial tensor analysis, including new 
+capabilities for variational tensor calculus; (2) component 
+tensor analysis; (3) frame fields including noncommuting 
+frame derivatives; (4) general non-commuting derivatives 
+outside the tensor packages; (5) affine torsion and conformal 
+nonmetricity; (6) an algebraic tensor package; (7) ten 
+executable demonstrations of computations with special and 
+general relativity, including black holes, cosmological 
+solutions, weak field approximations, and spin groups.

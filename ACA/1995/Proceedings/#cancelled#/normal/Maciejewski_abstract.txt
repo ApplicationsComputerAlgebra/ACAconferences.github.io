@@ -1,0 +1,20 @@
+          Notes on Transcendent Cases of the Stability
+                     Andrzej J. Maciejewski
+
+                     Institute of Astronomy, 
+                 Nicolaus Copernicus University
+                      87-100 Torun, POLAND
+                e-mail: maciejka@mat.torun.edu.pl
+                       fax: (48-56) 289-79 
+
+    Liapunov stability of an equilibrium of a Hamiltonian  system  
+with  two  degrees of freedom is determined  by  coefficients  of  
+Birkhoff  normal  form.  A  transcendental case  occur  when  all  
+coefficients whose sign decide on stability vanish.
+    Symbolic  normalization up to higher an higher terms  is  not 
+decisive  in such a case.  I consider such cases that appear  for  
+low order resonances and prove that transcended cases  considered 
+can  appear  only  when the equilibrium is  degenerated  in  some 
+sense: it lies on a manifold of equilibria or specific  invariant 
+manifold.  I give examples of mechanical systems where such cases 
+appear.

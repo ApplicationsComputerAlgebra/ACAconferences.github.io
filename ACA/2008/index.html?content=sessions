@@ -1,0 +1,1196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <link href="styles/master.css" type="text/css" rel="stylesheet" media="all"/>
+   <title>ACA 2008 Applications of Computer Algebra</title>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tbody>
+      <tr>
+        <td class="headerLeft"><a href="/"><img src="./_images/header/schloss21s.jpg" /></a></td>
+        <td width="20px"></td>
+        <td>
+        <table width="100%">
+        <tbody>
+        <tr><td class="headerTitle">Applications of Computer Algebra</td></tr>
+        <tr><td class="headerSub"><a href="/">RISC, Castle of Hagenberg, Austria.</a></td></tr>
+        <tr><td class="headerSub">July 27-30, 2008.</td></tr>
+      	</tbody>
+      	</table>
+        </td>
+      </tr>
+   </tbody>
+ </table>
+
+
+
+<table cellspacing="0" cellpadding="0" class="infobar">
+<tbody><tr><td height=20px></td></tr></tbody></table>
+
+
+<div class="class1">
+	
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspace">
+<tbody>
+<tr>
+<td>
+	
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+
+<td style="width:12px;"></td>          
+<td class="unselected">
+	<div><a href="?content=news">News</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=general">General</a></div>
+</td>
+<td class="selected">
+	<div>Sessions</div>
+</td>	
+
+<td class="unselected">
+	<div><a href="?content=submission">Submission</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=registration">Registration</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=program">Program</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=pictures">Pictures</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=location">Location</a></div>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspaceSub">
+<tbody>
+<tr>
+<td>
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+
+</tr>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table><div id="content">
+<div id="column">
+
+<div class="class2" style="padding-top:10px; padding-bottom:0px; text-indent:0px">
+<h4> Session Proposals</h4>
+We accept proposals for special sessions at ACA 2008. Session proposals must be sent to the <a href="?content=general&sub=committees#chairs">conference chairs</a> before June 1, 2008. Information on how to propose sessions is available at the <a href="http://math.unm.edu/aca.html">ACA website</a>.
+
+<a name="schedule"></a>
+<h4> Session Schedule</h4>
+
+Find <a href="Schedule.html">here</a> the <a href="Schedule.html">session schedule</a>. 
+
+<h4> Accepted Sessions</h4>
+
+<ol>
+<li><a href="#1">Symbolic and Algebraic Computation for Optimization Tasks in Science and Engineering</a> (Chibisov, Ganzha, Mayr)</li>
+<li><a href="#2">Symbolic Symmetry Analysis and Its Applications</a> (Bila, Kogan)</li>
+<li><a href="#3">Computer Algebra and Coding Theory</a> (Mart&iacute;nez-Moro, Ruano, Hernando)</li>
+<li><a href="#4">Nonstandard Applications of Computer Algebra</a> (Roanes-Lozano, Wester, Steinberg)</li>
+<li><a href="#5">Computer Algebra in Education</a> (Akritas, Wester, Kutzler, Pletsch)</li>
+<li><a href="#6">Computer Algebra for Dynamical Systems, and Celestial Mechanics</a> (Edneral, Myllari, Vassiliev)</li>
+<li><a href="#7">Compact Computer Algebra</a> (Smirnova, Watt)</li>
+<li><a href="#8">Algebraic and Algorithmic Aspects of Differential and Integral Operators</a> (Regensburger, Rosenkranz, Tsarev)</li>
+<li><a href="#9">Gr&ouml;bner Bases and their Applications</a> (Arnold, Kotsireas, Rosenkranz)</li>
+<li><a href="#10">Interaction Between Computer Algebra and Interval Computations</a> (Kr&auml;mer, Popova)</li>
+<li><a href="#11">Symbolic Computation and Deduction 
+                   in System Design and Verification</a> (Anai, Kanno, Sofronie-Stokkermans, Sturm)</li>
+<li><a href="#12">Symbolic Computation and Quantum Field Theory</a> (Kauers, Schneider)</li>
+<li><a href="#13">Symbolic and Numeric Computation</a> (Akritas, Kai, Sasaki, Shirayanagi, Stefanescu)</li>
+<li><a href="#14">Parallel Computer Algebra</a> (Malaschonok)</li>
+<li><a href="#15">Computer Algebra in Group Theory and Representation Theory</a> (Cohen, Vavilov, Wilson)</li>
+</ol>
+<p>
+
+
+In order to contribute to one of the sessions, please contact the session organizers directly.<p>
+
+<!-- Session #1 -->
+<a name="1"></a> 
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://wwwmayr.in.tum.de/konferenzen/ACA2008/ACA2008.html">Symbolic and Algebraic Computation for Optimization Tasks in Science and Engineering</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:chibisov@in.tum.de">Dmitry Chibisov</a> (chibisov@in.tum.de)</td></tr>
+  <tr><td><a href="mailto:ganzha@in.tum.de">Victor Ganzha</a> (ganzha@in.tum.de)</td></tr>
+  <tr><td><a href="mailto:mayr@in.tum.de">Ernst W. Mayr</a> (mayr@in.tum.de)</td></tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>Various applications in robotics, manufacturing, molecular biology, nanotechnology, etc. involve optimization and optimal control with constraints given by algebraic and differential equations (both ODEs and PDEs). Especially in the case of differential constraints, the "naive" approaches combining numerical solvers for differential equations and optimization algorithms may lead to lack of robustness or be very inefficient.
+
+<p>In order to deal with real life applications stability and fast convergence of numerical methods have to be provided. However, research in this field is very much in progress, and many problems concerning both the theoretical foundations and practical issues remain open: existence of optimizers for underlying continuous problem and necessary optimality conditions, questions of stability and convergence for numerical methods, the interplay between discretization and optimization, etc.
+
+<p>These issues require a wide range of mathematical disciplines (e.g. optimal control theory, functional analysis, numerical analysis, etc.) as well as engineering understanding in order to choose the appropriate mathematical model for the problem at hand. The goal of this session is to bring together mathematicians and engineers, who develop or use algebraic and numerical methods, to exchange ideas and views, and to present both original research results involving computer algebra as well as challenging directions and industrial applications.
+
+<p>Possible topics for this session include (but are not limited to):
+<ul>
+    <li>numerical simulation for engineering design using computer algebra systems</li>
+    <li>symbolic-numerical methods for (global) optimization</li> 
+    <li>handling constraints given by differential, differential-algebraic, and
+      difference equations </li>
+    <li>(computational) optimal control </li>
+    <li> (non)linear programming </li>
+    <li> complexity considerations </li>
+    <li> applications:
+       <ul>
+          <li> mechanism design and robotics</li>
+          <li> manufacturing</li>
+          <li> nanotechnology</li>
+          <li> medical devices</li>
+          <li> molecular biology</li>
+          <li> etc.</li>
+       </ul></li></ul>
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #2 -->
+<a name="2"></a> 
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://faculty.uncfsu.edu/nbila/WebPage%20FSU/data/Session_ACA08.htm">Symbolic Symmetry Analysis and Its Applications</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:nbila@uncfsu.edu">Nicoleta Bila</a> (nbila@uncfsu.edu)</td></tr>
+  <tr><td><a href="mailto:iakogan@ncsu.edu">Irina Kogan</a> (iakogan@ncsu.edu)</td></tr>
+  </table>
+</td>
+</tr>
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>Phenomena observed in nature often have symmetry properties. These
+symmetry properties are inherited by the equations that model these
+phenomena and can be exploited to either obtain explicit solutions, or
+an important geometric information about the solution set.
+Symmetry analysis links various research disciplines  including
+differential equations,  differential and algebraic  geometry, numerical analysis,
+and symbolic computation. Over the years, new types of symmetries have been
+studied, such as nonclassical symmetries, potential symmetries, and
+generalized symmetries, and used to obtain new solutions of equations
+arising in mathematical physics, mathematical biology, image processing,
+engineering, and financial mathematics. Many, but far from all symmetry
+reduction techniques have been implemented, and many theoretical and
+computational open problems remain.
+The aim of this special session is to bring together researchers
+interested in symmetry analysis, symbolic computation, and their
+applications.
+<p>
+Here is the link to the <a href="http://faculty.uncfsu.edu/nbila/WebPage%20FSU/data/Session_ACA07.html">web-page for our session at ACA 2007</a>.
+
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #3 -->
+<a name="3"></a> 
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://www.math.arq.uva.es/~edgar/CACT/">Computer Algebra and Coding Theory</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:edgar@maf.uva.es">Edgar Mart&iacute;nez-Moro</a>, Universidad de Valladolid (Chair) </td></tr>
+  <tr><td>Diego Ruano, Technical University of Denmark </td></tr>
+  <tr><td>Fernando Hernando, University College, Cork </td></tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+This is the fifth session (previous was held at ACA 2004, ACA 2005 with the 
+same title and senior organizer E. Mart&iacute;nez Moro and in ACA 2006, ACA 2007 
+were entitled "coding theory and cryptography" by T. Shaska) devoted to 
+providing a forum for exchange of ideas and research results related to 
+Computer Algebra, both theoretical and algorithmic treatment of all kinds of 
+symbolic objects, in application to Coding Theory. Nowadays error-correcting 
+codes are important from both a mathematical-theoretical point of view and 
+practical reasons. Computer Algebra evolved linking algorithmic and abstract 
+algebra to methods of computer science, at the same time Coding Theory is a 
+branch of communication theory using algebraic and algorithmic theories. As a 
+result there is a mutual interest from both disciplines. Applications of 
+Computer Algebra to Coding Theory can be divided in two categories: 
+application at an experimental level and applications at a conceptual or 
+theoretical level. At this session we will be devoted to both approaches.
+
+<p>The organizers will invite the speakers maintain a web page describing 
+the session with talk abstracts provided.
+
+<p>The session will be held in three hour blocks of time, with nine 1/2 hour 
+talks.
+
+<p>Prospective and interested invited speakers could be (among others):
+<ul>
+<li>Iwan M. Duursmaa,  University of Illinois at Urbana-Champaign, USA</li>
+<li>Michael E. O'Sullivan, San Diego State University</li>
+<li>Mar&iacute;a Bras-Amor&oacute;s, Autonomous University of Barcelona</li>
+<li>Olav Geil, Aalborg University</li>
+<li>Ferruh &Ouml;zbudak, Middle East Technical University, Turkey</li>
+<li>John B. Little, Holy Cross Mathematics and Computer Science, USA</li>
+<li>Judy Walker, Katherine Bartley Department of Mathematics,University of 
+Nebraska - Lincoln</li>
+<li>Jose-Angel Dominguez, Jos&eacute; Mar&iacute;a Mu&ntilde;oz Porras, G. Serrano Sotelo  Univ. de 
+Salamanca.</li>
+<li>Jon-Lark Kim, Department of Mathematics, University of Louisville</li>
+<li>Patrick Fiztpatrick, University College, Cork</li>
+<li>Edgar Mart&iacute;nez-Moro, Universidad de Valladolid </li>
+<li>Diego Ruano, Technical University of Denmark</li>
+<li>Fernando Hernando, University College, Cork</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #4 -->
+<a name="4"></a> 
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://math.unm.edu/~aca/ACA/2008/nonstandard.html">Nonstandard Applications of Computer Algebra</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:eroanes@mat.ucm.es">Eugenio Roanes-Lozano</a>  </td></tr>
+  <tr><td><a href="mailto:wester@math.unm.edu">Michael Wester</a>  </td></tr>
+  <tr><td><a href="mailto:stanly@math.unm.edu">Stanly Steinberg</a>  </td></tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+  In many of the ACA conferences from 1996 onwards, we have chaired a
+   session devoted to "Nonstandard Applications of Computer Algebra".
+   The session traditionally collects contributions that, while using
+   Computer Algebra techniques and/or Computer Algebra Systems, can not
+   be easily allocated in the "standard" sessions. Examples of topics
+   treated in papers presented in previous editions of the conference
+   are: Verification and Development of Expert Systems (using algebraic
+   techniques), Railway Traffic Control, Artificial Intelligence,
+   Thermodynamics, Molecular Dynamics, Statistics, Electrical Networks,
+   Logic, Robotics, Sociology ... 
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #5 -->
+<a name="5"></a> 
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://math.unm.edu/~aca/ACA/2008/education.html">Computer Algebra in Education</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:akritas@uth.gr">Alkis Akritas </a>  </td></tr>
+  <tr><td><a href="mailto:wester@math.unm.edu">Michael Wester</a>  </td></tr>
+  <tr><td><a href="mailto:b.kutzler@aon.at">Berhnard Kutzler</a>  </td></tr>
+  <tr><td><a href="mailto:bpletsch@cnm.edu">Bill Pletsch </a>  </td></tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+
+   Education has become one of the fastest growing application areas for
+   computers in general and computer algebra in particular. Computer
+   algebra tools such as the TI Voyage 200/TI-89 Titanium, Axiom, Derive,
+   Maple, Maxima, Mathematica, MuPAD or Reduce, make powerful teaching
+   tools in mathematics, physics, chemistry, biology, economy, etc.
+<p>
+   The goal of this session is to exchange ideas and experiences, to hear
+   about classroom experiments, and to discuss all issues related with
+   the use of computer algebra tools in classroom (such as assessment,
+   change of curricula, new support material, ...)
+<p>
+   If you are interested in presenting a paper, please contact one of the
+   organizers.
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #6 -->
+<a name="6"></a>
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://theory.sinp.msu.ru/~edneral/ACA2008/DSsession.html">Computer Algebra for Dynamical Systems, and Celestial Mechanics</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:edneral@theory.sinp.msu.ru">Victor Edneral</a>, Moscow State University, Russia  </td></tr>
+  <tr><td><a href="mailto:alemio@utu.fi">Aleksandr Myllari</a>, University of Turku, Finland  </td></tr>
+  <tr><td><a href="mailto:vasiliev@pdmi.ras.ru">Nikolay Vassiliev</a>, Steklov Institute of Mathematics at St.Petersburg, Russia  </td></tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+Celestial Mechanics and Dynamical Systems are traditional fields for applications of computer algebra. This session is intended to discuss Computer Algebra methods and modern algorithms in the study of general continuous and discrete Dynamical Systems, Ordinary Differential Equations and Celestial Mechanics.
+<p>
+The following topics, among others, will be considered:
+
+<ol>
+<li>Stability and bifurcation analysis of dynamical systems
+
+<li>Construction and analysis of the structure of integral manifolds
+
+<li>Symplectic methods.
+
+<li>Symbolic dynamics.
+
+<li>Normal forms and programs for their computations.
+
+<li>Deterministic chaos in dynamical systems.
+
+<li>Families of periodic solutions.
+
+<li>Perturbation theories.
+
+<li>Exact solutions and partial integrals.
+
+<li>Analysis of singularities of equations by Power Geometry algorithms.
+
+<li>Computation of asymptotic forms and asymptotic expansions of solutions and its program implementation.
+
+<li>Integrability and Nonintegrability of ODEs.
+
+<li>Computation of formal integrals.
+
+<li>Computer Algebra for Celestial Mechanics and Stellar Dynamics.
+
+<li>Specialized Computer Algebra software for Celestial Mechanics.
+
+<li>Topological structure of phase portraits and computer visualization.
+</ol>
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #7 -->
+<a name="7"></a> 
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://www.orcca.on.ca/conferences/cca2008/">Compact Computer Algebra</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:e-smirnova@ti.com">Elena Smirnova</a>, Education Technology, Texas Instruments  </td></tr>
+  <tr><td><a href="mailto:watt@uwo.ca">Stephen Watt</a>, Ontario Research Centre for Computer Algebra, Univ. Western Ontario  </td></tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+
+A few decades ago, minimizing resource use was a crucial factor in the
+development of any computer algebra software.  Many successful systems
+were born under these conditions, including CAMAL, Maple, Derive and
+Macaulay as examples.  Since then, hardware improvements have pushed the
+concern of base resource requirements into the background:  the user
+interfaces to modern systems typically require more resources to launch
+than the algebra engine, and algorithm implementation often focuses on
+the complexity to solve very large problems.  
+<p>
+The art of compact computer algebra is becoming again increasingly
+important.  New directions for symbolic computing include the migration
+from workstations to handheld devices and the changing role from
+standalone applications to lightweight services within integrated
+systems.
+Whether running on a graphing calculator or as support of a client-side
+web application, certain applications of computer algebra require
+compact data representation, space-efficient algorithms and effective
+memory management. 
+<p>
+The purpose of this session is to communicate efforts in research,
+design, development and application of compact computer algebra.  We
+invite contributions in all aspects of this area, including, but not
+limited to
+
+<ul>
+<li>math education tools (eg. Derive, TI-Nspire, Class-Pad, HP 50g),
+<li>portable and Internet-accessible symbolic calculators (eg. Mate,
+Symbolic Calculator),
+<li>CAS for personal digital assistants (eg. AzirPad). 
+<li>"spell checkers" for math content in document processing software 
+<li>validators for online and offline mathematical recognizers 
+<li>backend engines to pen-computing interfaces 
+<li>math editing components for 2D expressions
+</ul>
+
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #8 -->
+<a name="8"></a>
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://www.ricam.oeaw.ac.at/people/page/rosenkranz/aca08/aadios.html">Algebraic and Algorithmic Aspects of Differential and Integral Operators</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:georg.regensburger@oeaw.ac.at">Georg Regensburger</a>, RICAM, Linz, Austria  </td></tr>
+  <tr><td><a href="mailto:Markus.Rosenkranz@oeaw.ac.at">Markus Rosenkranz</a>, RICAM, Linz, Austria  </td></tr>
+  <tr><td><a href="mailto:tsarev@newmail.ru">Sergej Tsarev</a>, Institut f&uuml;r Mathematik, Technische Universit&auml;t Berlin, Germany  </td></tr>  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+The algebraic treatment of differential equations is a well-established
+field with close ties to the symbolic community (see also the ACA
+Session "Symbolic Symmetry Analysis and its Applications"). Algebraic
+methods often commence from an operator perspective on the underlying
+differential equations, e.g. in D-Module theory or in factoring linear
+differential operators (ODE/PDE, scalar/vector). On the other hand,
+integral operators have as yet received comparably little attention in
+an algebraic setting. In the context of linear differential equations,
+they arise naturally as Green's operators for initial/boundary value
+problems.
+<p>
+In this session, we would like to examine various relations between
+differential and integral operators. To this end, we want to bring
+together the following topics and communities:
+<ul>
+<li>Factorization of Differential/Integral Operators
+<li>Constructive Methods for D-Modules
+<li>Linear Initial/Boundary Value Problems and Green's
+Operators
+<li>Rota-Baxter Algebras
+<li>Symbolic Computation with Differential Polynomials
+<li>Initial/Boundary Value Problems for Nonlinear Differential Equations
+</ul>
+Recent connections between these topics include algebraic structures
+combining derivations with integrals (e.g. differential Rota-Baxter
+algebras) and the correspondence between factorizations of differential
+and integral operators (e.g. by splitting their boundary value
+problems). We hope that we will have a stimulating discussion that may
+lead to further interrelations.
+<p>
+For the current list of speakers, please refer to the
+<a href="http://www.ricam.oeaw.ac.at/people/page/rosenkranz/aca08/aadios.html">session webpage</a>.
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #9 -->
+<a name="9"></a> 
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://www.wlu.ca/science/physcomp/kotsireas/ACA2008GB.html">Gr&ouml;bner Bases and their Applications </a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:arnoldea@math.jmu.edu">Elizabeth Arnold</a>, Virginia, USA  </td></tr>
+  <tr><td><a href="mailto:ikotsire@wlu.ca">Ilias Kotsireas</a>, Waterloo, Canada  </td></tr>
+  <tr><td><a href="mailto:Markus.Rosenkranz@oeaw.ac.at">Markus Rosenkranz</a>, Linz, Austria  </td></tr>
+  <tr><td>Honorary Session Chairman: <a href="mailto:Bruno.Buchberger@risc.uni-linz.ac.at">Bruno Buchberger</a>  </td></tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+
+The theory of Groebner Bases is a cornerstone of Computer Algebra which
+has also found (often unexpected) applications to a wide spectrum of areas
+in Science and Engineering. All major computer algebra systems offer
+Gr&ouml;bner Bases functionalities, and powerful stand-alone implementations
+are also available.
+<p>
+This session is intended to discuss recent theoretical and practical
+developments in the theory of Gr&ouml;bner bases as well as applications of
+Gr&ouml;bner bases to other fields. Research contributions as well as
+expository papers are solicited. For more information and/or to present a
+paper at the session, please contact the session organizers by e-mail.
+<p>
+This session is a continuation of a series of sessions on the theory of
+Gr&ouml;bner bases and its applications organized at previous ACA conferences
+and other workshops.
+<p>
+Session Topics inlcude (but are not limited to): 
+
+<ul>
+<li>elimination theory 
+<li>computational commutative algebra 
+<li>multivariate polynomial ideal theory 
+<li>solving systems of algebraic equations 
+<li>Algorithms for computing GB's 
+<li>GB for improving oil drilling platforms 
+<li>GB for guessing "missing links" in palaeontology 
+<li>GB in cryptography (code breaking) 
+<li>GB in software engineering (automated inductive assertion generation) 
+<li>GB for sudoku 
+<li>GB in origami 
+<li>GB in combinatorial design theory 
+<li>GB in computer aided design 
+<li>GB in solid modeling 
+<li>GB in mathematics 
+<li>GB in logic 
+<li>GB in education 
+<li>GB in geometrical theorem proving 
+<li>GB in integer programming 
+<li>GB in sciences and engineering 
+</ul>
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #10 -->
+<a name="10"></a>
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://www.math.bas.bg/~epopova/ACA2008/">Interaction Between Computer Algebra and Interval Computations
+</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:kraemer@math.uni-wuppertal.de">Walter Kr&auml;mer</a>, Bergische Universit&auml;t, Wuppertal  </td></tr>
+  <tr><td><a href="mailto:epopova@bio.bas.bg">Evgenija D. Popova</a>, Inst. of Maths &amp; Informatics, Bulgarian Academy of Sciences  </td></tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+
+
+For many years there is a considerable interaction between symbolic-
+algebraic and result-verification methods. The usage of validated
+computations at critical points of some algebraic algorithms improves
+the stability of the complete solution. Several hybrid algorithms
+using floating-point and/or interval arithmetic in intermediate
+computations combine the speed of numerical computations with the
+exactness of symbolic methods providing still guaranteed correct
+results and a dramatic speed up of the corresponding algebraic
+algorithm. Embedding of interval data structures, hybrid and result-
+verification methods in computer algebra systems turn the latter into
+valuable tool for reliable scientific computing while by applying
+symbolic-algebraic methods interval computations expand the
+methodology tools and get an increased efficiency.
+<p>
+This special session continues the tradition established by previous
+conferences and special sessions (including e.g. the conferences
+Interval-xx, ACA 2000, ACA 2003 and ACA 2006 sessions) on interval
+and computer-algebraic methods in science and engineering.
+The aim is to bring
+together participants from diverse areas of mathematics, computer
+science, various life &amp; engineering/science disciplines that will
+demonstrate the progress in the interaction between symbolic-
+algebraic and result-verification methods. The meeting goal is to
+stimulate the communication, coordination, integration, and cross-
+fertilization of ideas capable to meet the research challenges.
+
+<dl>
+<dt>SCOPE</dt>
+<dd>For this special session, we invite survey papers, presentations of
+some recent developments, application case studies and research
+challenges. The topics include but are not limited to:
+
+<ul>
+<li> Algebraic approach to interval mathematics; theoretical foundations
+for combining interval and symbolic-algebraic techniques; formalisms
+for presentation of interval knowledge in CA; usage of analytical
+transformations and other techniques from computer algebra in
+interval computations;
+
+<li> Exact methods, computer aided proofs, computational complexity
+analysis of symbolic computation problems with interval uncertainty;
+
+<li> Verified multiple-precision computation of special functions
+
+<li> Bugs in current CA systems
+
+<li> Development and implementation of symbolic-numeric methods for
+problems involving interval data;
+
+<li> (Interval) Taylor models
+
+<li> Embedding of interval data structures, hybrid and result-
+verification algorithms in CA systems and specialized software;
+
+<li> Applications of combined interval-analytical techniques in science,
+biology, engineering, control and other areas;
+
+<li> Interval mathematics on the Internet: the use of web and grid
+service infrastructures, and semantic web technologies for
+identifying and describing web-based interval resources;
+
+<li> Interval Software Interoperability: interoperability between
+computing systems (like Mathematica, Maple, Matlab, etc.) and
+languages for dynamic applications (Java, JavaScript, C, C++, ...)
+that support interval computations aiming at an increased
+functionality and effectiveness;
+
+<li> CA in interval education and online interval knowledge (e-Learning).
+</ul>
+</dd>
+<dt>DEADLINES</dt>
+<dd>If you are interested in participation, please send your name, email
+and approximate title to <a href="mailto:kraemer@math.uni-wuppertal.de">kraemer@math.uni-wuppertal.de</a>
+or <a href="mailto:epopova@bio.bas.bg">epopova@bio.bas.bg</a> or fill in the form
+available at <a href="http://www.math.bas.bg/~epopova/ACA2008/">http://www.math.bas.bg/~epopova/ACA2008/</a>.
+<p>
+Submission of talk title - April 15, 2008<br>
+Submission of abstract - May 15, 2008.
+</dd>
+<dt>PUBLICATIONS</dt>
+<dd>Papers presented at the special session will be proposed for post-
+conference publication in "Serdica Journal of Computing" or another
+specialised journal.</dd>
+</dl>
+
+
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #11 -->
+<a name="11"></a>
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://www.mpi-inf.mpg.de/~sofronie/aca-scdsdv08.html">Symbolic Computation and Deduction 
+                   in System Design and Verification</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:anai@jp.fujitsu.com">Hirokazu Anai</a>  </td></tr>
+  <tr><td><a href="mailto:Masaaki_Kanno@ipc.i.u-tokyo.ac.jp">Masaaki Kanno</a>  </td></tr>
+  <tr><td><a href="mailto:sofronie@mpi-sb.mpg.de">Viorica Sofronie-Stokkermans</a>  </td></tr>
+  <tr><td><a href="mailto:sturm@fim.uni-passau.de">Thomas Sturm</a>  </td></tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+<dl>
+<dt>MOTIVATION</dt>
+<dd>
+In the last years, interest in applying methods from computer algebra to 
+various problems in system design, verification and control has increased. 
+Precise symbolic computation techniques are needed e.g. in order to 
+properly handle parameters in parametric descriptions of systems. 
+In particular, parametric/non-convex constraint solving and 
+optimization methods are used in plant design. 
+<p>
+In fact, numerous problems in science and engineering, in particular 
+problems which occur in the verification of parametric reactive and 
+hybrid systems, can be reduced to reasoning in complex theories &ndash; 
+typically combinations of concrete theories  (e.g. theories of 
+integers or reals) and abstract theories (e.g. theories of data 
+structures). Therefore, finding methods for efficiently combining 
+deductive techniques with symbolic computation techniques and devising 
+parametric variants of computer algebra and deduction algorithms will 
+have a significant impact in these areas. 
+<p>
+The goal of this session is to enhance the interaction between the 
+symbolic computation, automated reasoning and verification communities. 
+<p>
+The session is devoted to research on 
+<ul>
+<li>mathematical theories, which have a direct practical application, 
+<li>algorithms (symbolic, symbolic-numeric), 
+<li>software libraries/packages, 
+<li>applications in science and engineering
+</ul> 
+for efficiently solving (parametric) problems in verification. 
+</dd>
+<dt>AIMS</dt>
+<dd>
+The main aim of this session is to encourage discussions and to
+stimulate collaborations among researchers working in 
+<ul>
+<li> symbolic computation (e.g. comprehensive Gr&ouml;bner bases, quantifier
+  elimination);
+
+<li> deduction and automated reasoning, in particular in theorem proving 
+  over complex domains, which explicitly make use of computer algebra methods; 
+
+<li> SAT-checking &ndash; including methods that go beyond traditional SAT-checking 
+  (e.g. QSAT, parametric SAT,  SAT modulo theories); 
+
+<li> the design, verification, and control of real time and hybrid systems.
+</ul>
+as well as among researchers interested in using symbolic computation 
+systems and systems for automated deduction for solving concrete problems 
+in verification and control. 
+<p>
+This will help in 
+<ul>
+<li> investigating computational issues in the control design methodology
+  yielding parametric optimization,
+<li> identifying interesting problems in deduction and symbolic
+  computation stemming from the verification of reactive and hybrid
+  systems, and
+<li> clarifying the expectations and wishes the users from verification
+  and control have from symbolic computation systems or from systems
+  which combine deduction and computation.
+</ul>
+The ultimate aim is to expand the horizons of this area of 
+research, deepen the interactions, sensibilize researchers from 
+the symbolic computation and deduction community to the problems 
+occurring in verification, and, conversely, the researchers in 
+verification to the newest symbolic computation systems and methods 
+and &mdash; last but not least &mdash;  offer persons working in research and 
+development centers of software companies the possibility to get an 
+overview of the problems and their solutions. 
+</dd>
+
+<dt>TOPICS</dt> 
+<dd>
+Topics of interest are those at the borderline between theoretical 
+research in  symbolic computation and deduction and applications. 
+These include, but are not restricted to: 
+<ul>
+<li> Deductive verification and symbolic computation. <p>
+
+  Of particular interest are examples from verification of 
+  reactive and hybrid systems which illustrate the type of 
+  deductive problems appearing in relationship with verification 
+  tasks: symbolic computation, decision procedures for numerical 
+  (or possibly mixed) domains, deduction, SAT checking,
+  quantifier elimination, interpolation. 
+
+<li> Integration of deduction and computation. <p>
+
+  Of particular interest are possibilities of combining decision 
+  procedures or of combining deductive techniques with symbolic 
+  computation techniques. 
+
+<li> Parametric verification vs parametric deduction and computation. <p>
+
+  Devising parametric variants of computer algebra and deduction 
+  algorithms will have a significant impact on applications. 
+  In particular, effective parametric/non-convex constraint solving 
+  and optimization methods (possibly combined with methods for 
+  reasoning in more complex domains) are strongly required in wide 
+  areas of industrial manufacturing and science. This includes but 
+  is not limited to: 
+  <ul>
+   <li> loop parallelization, 
+   <li> software verification, 
+   <li> analysis and design of differential equations, 
+   <li> system design in control, signal processing etc. 
+  </ul>
+
+<li> Parametric optimization and optimization over parameters <p>
+
+  Current computation in modern control is based almost exclusively
+  on standard numerical linear algebra routines. However, computer
+  algebra is gaining importance as a computational tool due to its 
+  capability of dealing with parameters, since many problems in practical 
+  applications can be reduced to parameter optimization problems.
+
+<li> Applications to:
+  <ul> 
+  <li> verification of real time and hybrid systems,
+  <li> control system design and verification,
+  <li> manufacturing design and design automation.
+  </ul>
+</ul>
+
+This session will emphasize methods in verification that combine the 
+use of computer algebra techniques &mdash; such as Gr&ouml;bner bases or 
+quantifier elimination &mdash; with methods for reasoning in complex domains 
+(hierarchical and modular reasoning, DPLL reasoning modulo theories). 
+</dd>
+</dl>
+
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #12 -->
+<a name="12"></a>
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="sessions/scqft/">Symbolic computation and quantum field theory</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:Manuel.Kauers@risc.uni-linz.ac.at">Manuel Kauers</a>, RISC  </td></tr>
+  <tr><td><a href="mailto:Carsten.Schneider@risc.uni-linz.ac.at">Carsten Schneider</a>, RISC</td></tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+Feynman parameter integrals play an important role in perturbative quantum theory. Depending on the mass-scale parameters of the problem
+and the number of external invariants, these multiple integrals can be written in Mellin space, e.g., in terms of generalized hypergeometric multi-sums.
+Then the resulting sum expressions in terms of e (the divergent integrals are regularized by analytical continuation of the space-time to the dimension 4-2e
+for a small parameter e) and of the Mellin parameter N are considered in its Laurent series expansion w.r.t. e. For instance, in single scale problems up to loop
+order 3 the coefficients of the corresponding Laurent expansion can be simplified to closed form in terms of nested harmonic sums.
+Within the physics community, highly specialized efficient algorithms and software, like Vermaseren's package SUMMER implemented in FORM,
+have been developed for carrying out these computations for the sum expressions.<p>
+
+Mostly independent of these developments, algorithms for symbolic summation and integration have ever since been subject to research in computer algebra.
+Today, a fairly far developed algebraic summation and integration theory is available which gives rise to algorithms applicable to to a wide class of
+problems. Implementations of these algorithms are also available and these have been able to discover and/or prove many deep identities in special
+functions and combinatorics in the past. It turns out that the more general algorithms arising from this research can also be successfully applied in particle physics.
+<p>
+In the session, we want to bring together people from both sides, to present the different techniques, and to discuss possible combinations that may
+help in handling challenging problems from quantum field theory.
+
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #13 -->
+<a name="13"></a>
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://www.hpc.cs.ehime-u.ac.jp/~kai/SNC2008/">Symbolic and Numeric Computation</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:kai@cs.ehime-u.ac.jp">Hiroshi Kai</a>, Ehime Univ., Japan  </td></tr>
+  <tr><td><a href="mailto:akritas@uth.gr">Alkis Akritas</a>, Univ. Volos, Greece  </td></tr>
+  <tr><td><a href="mailto:sasaki@math.tsukuba.ac.jp">Tateaki Sasaki</a>, Univ. Tsukuba, Japan  </td></tr>
+  <tr><td><a href="mailto:shirayan@ss.u-tokai.ac.jp">Kiyoshi Shirayanagi</a>, Univ. Tokai, Japan </td></tr>
+  <tr><td><a href="mailto:stef@rms.unibuc.ro">Doru Stefanescu</a>, Univ. Bucharest, Romania </td></tr>
+  </table>
+</td>
+</tr>
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+Symbolic and Numeric Computation or Approximate Algebraic Computation,
+is now one of the main streams of current computer algebra. Even so,
+only relatively few fundamental algebraic operations have been studied
+so far, and many applications have been left untouched. Researchers
+continue to study many more algebraic operations from the viewpoint
+of approximate computation, to take advantage of the fusion of
+symbolic and numeric computations, and to apply approximate algebraic
+algorithms to science and technology.
+
+<p>
+Research contributions as well as expository papers are welcomed.
+For more information please contact the session organizers by email.
+<p>
+
+This session covers the following topics, but is not restricted to these.
+
+<ol>
+<li>Approximate GCD and approximate factorization.
+<li>Approximate computation of Groebner bases.
+<li>Algebraic computation using floating-point numbers and numeric algorithms.
+<li>Approximate computation by series expansion.
+<li>Error analysis and stabilization of algorithms.
+<li>Validation of approximate algebraic computation.
+<li>Computation of bounds for roots of polynomials
+<li>Isolation of polynomial roots
+<li>Software for solving hyperbolic polynomials
+<li>Computation of bounds for polynomial divisors
+<li>Symbolic-numerical methods of finding roots of polynomial systems
+<li>Software for solving polynomial systems
+<li>New algorithms suited to approximate algebraic computation.
+<li>Model construction by approximate algebraic algorithms.
+<li>Applications to science and technology.
+</ol>
+
+</td>
+</tr>
+</table>
+<p>
+
+<!-- Session #14 -->
+<a name="14"></a>
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="http://malaschonok.googlepages.com/ACA2008_ParCA.html">Parallel Computer Algebra</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:malaschonok@gmail.com">Gennadi Malaschonok</a>, Tambov State University, Tambov, Russia  </td></tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+The goal of the session is to provide a forum for developers of parallel methods,
+algorithms and software in the field of Computer Algebra.
+
+<dl>
+<dt>SESSION TOPICS</dt>
+<dd>The session topics include but not restricted to:
+<ul>
+  <li> reinvention and adaption of existing highly sophisticated symbolic algorithms to  a parallel setting </li>
+  <li> computer algebra systems specifically designed to exploit and operate in multiprocessor environment </li>
+  <li> parallel methods for solving systems of differential equations</li>  
+  <li> parallel methods for Groebner basis computations </li>  
+  <li> parallel algorithms for solving linear and polynomial systems  </li>
+
+</ul>
+<p> For suggesting a talk, please contact the session organizers until <b>May 30</b>. </dd>
+<dt>TALKS</dt>
+<dd>
+<ul>
+  <li><i>Gennadi Malaschonok, Mikhail Zueyv</i> (Tambov State University, Tambov, Russia): Two recursive pivot-free algorithms for parallel matrix inversion
+</li>
+    <li><i>Alkiviadis Akritas</i> (Phessaly University, Volos, Greece):
+Parallel implementation of Sendov's real root approximation method</li>   
+    <li><i>Natasha Malaschonok</i> (Tambov State University, Tambov, Russia):
+    Solving differential equations by parallel Laplace method with assured accuracy</li>  
+    </ul>
+</dd>
+</dl>
+</td>
+</tr>
+</table>
+<p>
+<!-- Session #15 -->
+<a name="15"></a>
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href="">Computer Algebra in Group Theory and Representation Theory</a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:A.M.Cohen@tue.nl">Arjeh Cohen</a>, Eindhoven Institute of Technology, the Netherlands  </td></tr>
+  <tr><td><a href="mailto:nikolai-vavilov@yandex.ru">Nikolai Vavilov</a>, Saint-Petersburg State University, Russia  </td></tr>
+  <tr><td><a href="mailto:R.A.Wilson@qmul.ac.uk">Robert Wilson</a>, Queen Mary, University of London, U.K.  </td></tr>
+  </table>
+</td>
+</tr>
+ 
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+For the last decades several directions of group
+theory critically depend on the power of symbolic
+calculation. This is especially the case for the
+study of finite simple groups and algebraic groups,
+combinatorial group theory, and representation theory,
+but the influence of computer algebra rapidly 
+expands into other branches of group theory.
+<p>
+Several highly efficient specialised systems have 
+been created and group-theory oriented packages 
+within general purpose CAS have been developed over 
+the last years. 
+<p>
+The purpose of the section is to exchange ideas and 
+experience and discuss recent progress in applying 
+computer tools to the study of deep and difficult 
+problems of group theory, representation theory 
+and Lie theory. In fact, applications to group theory
+and representation theory are (alongside with
+algebraic geometry and commutative algebra, and 
+number theory), among the most significant 
+applications of computers in mathematics.
+<p>
+ 
+Computer algebra aspects of the following topics, 
+among others, will be considered:
+
+<ol>
+<li>Finite groups of Lie type 
+<li>Sporadic simple groups
+<li>Algebraic simple groups
+<li>Finite subgroups of algebraic groups
+<li>Arithmetic and related groups
+<li>Representations of finite groups
+<li>Representations of algebraic groups
+<li>Efficient generation of groups
+<li>Classification of maximal subgroups
+<li>Group cohomology 
+<li>Conjugacy classes and their products
+<li>Group related geometries and graphs
+<li>Laws defining various classes of groups
+<li>Finite and pro-finite p-groups
+<li>Groups of small orders 
+<li>Classification of perfect groups
+</ol>
+
+If you are interested in participation, please send 
+your name, email and approximate title to 
+<a href="mailto:nikolai-vavilov@yandex.ru">nikolai-vavilov@yandex.ru</a>.
+<p>
+Submission of talk title and abstract: June 15, 2008. 
+
+</td>
+</tr>
+</table>
+<p>
+
+
+</div>
+</div>
+</div>
+
+
+
+<!--
+<!-- Session ### -->
+<a name="##"></a>
+<table border="1" width="100%" cellpadding="5px" style="background:#d5d5FF;">
+<col width=20%><col width=80%>
+<tr>
+<td valign="top"><b>Session Title</b></td>
+<td><em><a href=""></a></em></td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Organization</b></td>
+<td>
+  <table>
+  <tr><td><a href="mailto:"></a>  </td></tr>
+  <tr><td><a href="mailto:"></a>  </td></tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Session Description</b></td>
+<td>
+
+</td>
+</tr>
+</table>
+<p>
+-->
+
+</div>
+
+</body>
+</html>

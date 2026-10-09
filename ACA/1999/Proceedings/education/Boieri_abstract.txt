@@ -1,0 +1,12 @@
+Paolo Boieri* (Italy), boieri@calvino.polito.it
+Exploring sequences with DERIVE
+
+Sequences usually are not treated as deeply as functions in Calculus courses.
+However, sequences show many interesting properties that do not appear in
+elementary presentation of functions.  This paper describes a teaching unit
+that, using DERIVE, helps the student of a first year University course in
+Calculus to discover and understand some features of the behaviour of a
+sequence, defined as a function of n or by recursion.  Several computer
+experimentations introduce the problem of understanding the idea of how fast a
+sequence grows for n going to infinity and what is the meaning of comparing
+sequences behaviour at infinity.

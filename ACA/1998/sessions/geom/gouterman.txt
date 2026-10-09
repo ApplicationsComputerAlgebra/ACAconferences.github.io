@@ -1,0 +1,18 @@
+"Graded  mappings  of  Frobenius  type  and  their   algorithmic
+ constructions".
+
+Alexander Gouterman.
+Department of Mechanics and Mathematics, Moscow State University
+
+
+
+     ABSTRACT.
+
+     In the proposed work a clasification of one-to-one, linear,
+even  mappings  of  the  tensor  product  spaces   over   graded
+superalgebra, which preserves tensors of rang one, is  obtained.
+Let $F$ be a graded superalgebra, $U$ and $V$ be  graded  spaces
+over $F$. If mapping $T$ on their tesor  product  has  aforesaid
+properties, it can be represented as tensor product of to linear
+bijective mappings $A: U\to U$  and  $B:V\to  V$.  The  mappings
+matrices are constructed algorithmically.

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>"Brainy" Functions in DERIVE</TITLE>
+<META NAME="description" CONTENT=""Brainy" Functions in DERIVE">
+<META NAME="keywords" CONTENT="wiesenbauer">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="wiesenbauer.css">
+</HEAD>
+<BODY bgcolor=white>
+
+<P>
+<H1 ALIGN="CENTER">"Brainy" Functions in <EM>DERIVE</EM></H1>
+<P ALIGN="CENTER"><STRONG>Johannn Wiesenbauer
+<BR> 
+<EM>Technical University of Wien, Austria
+<BR>
+j.wiesenbauer@tuwien.ac.at</EM></STRONG></P>
+<P ALIGN="CENTER"></P>
+<P ALIGN="LEFT"></P>
+
+<P>
+<B>Abstract</B>
+
+<P>
+In contrast to other CAS, self-assignments, i.e. assignments where the
+variable on the left hand side also occurs in the expression on the right
+hand side, are  not possible in <EM>DERIVE</EM>. For example, as a consequence
+of the input:
+<PRE>
+#1:   a:=1
+#2:   a:=2a
+</PRE>the variable a will have the value 2a, instead of the expected value 2.
+Using undocumented features of <EM>DERIVE</EM>, there is nevertheless a way to
+overcome this difficulty. For the example above, it looks like this:
+<PRE>
+#3: NEWA(u):=a:=u
+#4: a:=1
+#5: NEWA(2a)
+</PRE>In fact, after simplifying #5 the variable a has the value 2 now.
+
+<P>
+For the very first time this inconspicuous utility-function <EM>NEWA</EM> was used
+by J.Lechner, E.Roanes L.,E.Roanes M. and the author (cf. The
+DERIVE-NEWSLETTER #25, 15-22) to implement a turtle graphics in <EM>DERIVE</EM>.
+In the meantime, it has turned out that a lot of other amazing things can be
+done with it. In particular, it can be used for storing and retrieving data
+in the background without the user noticing it. One important application
+of this feature are "brainy" functions that will memorize the results or
+previous computations and use them in an intelligent way. Some examples of
+this sort will be given in my talk.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,22 @@
+  Representatives classes conjugation 
+    of nilpotence elements in a
+  simple Lie algebras low dimensions
+
+ Alexander A. Sukhanov <sukh@mech.math.msu.su>
+
+ ( Laboratory of computing methods,
+   departmant of computational mathematics,
+   mecanics and mathematics faculty,
+   Moscow State University)
+
+   In the talk we will say about next problems:
+
+ 1) gived full description classes conjugation
+        of nilpotence elements 
+ 2) classified classes conjugation of semiregular
+        nilpotence elements
+ 3) gived exact algorithm search representative
+        of class conjugation
+ 4) worked out algorithms method research sistems
+        of roots
+ 5) gived characteristics classes conjugation

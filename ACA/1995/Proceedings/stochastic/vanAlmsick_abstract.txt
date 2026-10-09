@@ -1,0 +1,79 @@
+Title:
+
+   Quantum coupling coefficients seen as discrete wave functions
+
+by Markus van Almsick
+   Am Markuskreuz 6
+   45133 Essen
+   Germany
+   (Applications Consultant of Wolfram Research Inc.)
+   markus@wri.com
+
+Work Shop:
+   Stochastic Methods  (Michael Trott)
+
+key words:
+   application of CA to science, quantum mechanical probabilities, group theory.
+
+
+Abstract:
+
+Quantum mechanical coupling coefficients are conditional probabilities
+between different symmetry eigenstates.
+
+Computer algebra systems allow one to easily obtain quantum coupling
+coefficients, in particular SU(2)-coupling coefficients. We review three
+different ways to numerically, as well as symbolically, determine
+Clebsch-Gordan-, 3j-, and 6j-coefficients. We will derive them
+
+   recursively,
+   via generating functions, and
+   explicitly exploiting symmetry relations between coupling coefficients.
+
+All three methods are suited for CA implementations. They incorporate a
+wide range of CA techniques; optimizing recursion relations of difference
+equations or putting generatingfunctionology to use. The possibilities to
+extend these techniques to other symmetry groups besides SU(2) will be
+discussed.
+
+With these CA implementations of coupling coefficients we investigate their
+properties. Coupling coefficients seen as functions of their magnetic or
+angular quantum numbers can be interpreted as quantum mechanical
+probability distributions.
+We thus obtain "discrete wave functions" in the configuration space of the
+vector model of angular momentum coupling.
+
+The classical limit of these "wave functions" is given by the Wigner estimate.
+Furthermore, the above vector model guides us in deriving and explaining
+relations between 3j-coefficients, 6j-coefficients and rotation matrices.
+
+
+Literature:
+
+Semiclassical Limit of Racah Coefficients,
+by G. Ponzano, T. Regge
+in  Spectroscopic and group theoretical methods in physics,
+North-Holland Publ.,
+Amsterdam, 1968
+
+Drehimpulse in der Quantenmechanik, by  A. Lindner
+Teubner Studienbuecher (Physik),
+Stuttgart 1984
+
+Group Theory,
+by  E.P. Wigner
+Academic Press,
+New York, 1959
+
+Group Theory in Physics Vol. 1 + 2
+(Techniques in Physics 7)
+by J.F. Cornwell
+Academic Press,
+New York, 1984
+
+Exact recursive evaluation of 3j- and 6j-coefficients for
+quantum mechnical coupling of angular momenta
+J. Math. Phys. Vol 11, no. 2, 1976
+by K.J. Schulten  and  G.R. Gordon
+North-Holland Publishing Company,
+Amsterdam

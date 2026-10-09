@@ -1,0 +1,55 @@
+\documentstyle[12pt,fullpage]{article}
+
+\textheight 24cm
+
+\begin{document}
+
+\title{Computational aspects of the N-body problem }
+\author{ 
+ILIAS KOTSIREAS 
+\\LIP6, CalFor, Case 168, Universit\'e Paris 6, 
+\\4, place Jussieu, 75252 Paris Cedex 05, France
+\\E-mail\,: Ilias.Kotsireas@lip6.fr
+\\web\,: http://posso.lip6.fr/$ \ \tilde{\left. \right.} \ $ilias/}
+\date{January 1999}
+\maketitle
+
+The study of central configurations 
+in the N-body problem of Celestial Mechanics
+offers great computational challenges
+that can be successfully settled using 
+Computer Algebra methods and techniques.  \par
+The general aim is to search and classify
+all possible types of central configurations.
+This is especially interesting 
+for the planar newtonian 4-body problem with equal masses and
+for the spatial newtonian 5-body problem with equal masses
+as well as for various types of corresponding problems 
+with non equal masses. \par  
+The fundamental fact that allows us to apply Computer Algebra methods to
+the problem of central configurations is the description of
+the equations of central configurations by a system of polynomial 
+equations. A theoretical tool that is used to simplify 
+the problem is the demonstration of the symmetry theorems.
+The original polynomial equations are processed using the
+matrix formalism in order to obtain an equivalent but easier
+to solve system. The algorithmic tools used are resultants, Gr\"obner bases,
+Triangular sets and some Invariant theory of Finite Groups.
+The Computer Algebra programs used are Axiom, Macsyma, Maple, Pari,
+NTL, Gb, FGb, Magma, MPS, RealSolving and RS. \par
+On the bare computational level the study of central configurations
+gives rise to zero-dimensional polynomial systems in the case of equal masses.
+Some of these systems are easy to solve but others are inaccessible.
+In the case of non equal masses one obtains parametric polynomial systems. \par
+Another interesting computational aspect of the problem is the use of
+quadratic forms to interpret the determinental identities that arise
+in the proofs of the symmetry theorems. The study of the corresponding 
+isotropic cones might lead to easier proofs. Since the number of
+variables of these quadratic forms is more than $10$, 
+a Maple package called {\tt QF} has been developed in order 
+to study them. \par
+The study of central configurations gives rise to a wide variety of
+challenging problems that are suitable for Computer Algebra.
+The key notion is a better understanding of the symmetries.   
+
+\end{document}

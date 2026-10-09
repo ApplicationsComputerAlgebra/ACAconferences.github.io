@@ -1,0 +1,1798 @@
+% mangletex (11 May 1992) run at 15:34 BST Wednesday 20 July 1994
+\message{<Paul Taylor's commutative diagrams, version 3.82, 20 July 1994>}%
+%%======================================================================%
+%%      TeX  macros for drawing rectangular category-theory diagrams    %
+%%                                                                      %
+%%                              Paul  Taylor                            %
+%%                                                                      %
+%%      Department of Computing, Imperial College, London SW7 2BZ       %
+%%      +44 71 594 8263                           pt@doc.ic.ac.uk       %
+%%                                                                      %
+%%              For user documentation, see "diagram-doc.tex"           %
+%%                      PLEASE READ THE MANUAL!                         %
+%%                                                                      %
+%%      Authoritative version:   /tex/contrib/Taylor/tex/diagrams.tex   %
+%%      by anonymous ftp from:   theory.doc.ic.ac.uk (146.169.2.27)     %
+%%                                                                      %
+%%      Please ensure that you are registered with me as a user so that %
+%%      you can be informed of future releases.  Any electronic mail    %
+%%      message with "commutative" or "diagram" in the subject line     %
+%%      (such as your request for the package, a question about it, or  %
+%%      even an otherwise blank message) automatically registers you, as%
+%%      does fetching it directly by ftp (quoting your email address).  %
+%%                                                                      %
+%%              ALPHA RELEASE FOR ADJUSTED DIAGONALS                    %
+%%                                                                      %
+%%      Diagonal maps are now, at last, adjusted to meet their          %
+%%      endpoints  ---  but only if you use the PostScript option.      %
+%%                                                                      %
+%%      This is an "alpha" release, ie for testing by experts only.     %
+%%      When the experts are happy it will become version 3.90 and      %
+%%      4.0 when it seems robust enough to stay in use for a while.     %
+%%                                                                      %
+%%      New "grid" feature, for regular pentagons, etc.                 %
+%%      "Increase width" warnings made more accurate and informative.   %
+%%      Option "landscape" for whole diagram (PostScript only).         %
+%%      Supports \usepackage[option-list]{diagrams} in LaTeX2e.         %
+%%      Name of DVI->PS translator as argument to PostScript option.    %
+%%      As I need curved arrows for my book, they are on the agenda!    %
+%%                                                                      %
+%% CONTENTS:                                                            %
+%%  (O) corruption-sensitive hacks    (to approx line 360)              %
+%%              Arrow components & commands - starts approx line 1180   %
+%% (21) auxillary macros for adjustment of components                   %
+%% (22) bits of arrows  (\rhvee etc)                                    %
+%% (23) arrow commands  (\rTo etc)                                      %
+%% (24) miscellaneous                                                   %
+%% Apart from these five sections, the rest is intended to be totally   %
+%% meaningless in the undocumented version, which is approximately 1800 %
+%% lines long. Please do not waste trees by printing it out.            %
+%%                                                                      %
+%% COPYRIGHT NOTICE:                                                    %
+%%      This package may be copied and used freely for any academic     %
+%%      (not commercial or military) purpose, on condition that it      %
+%%      is not altered in any way, and that an acknowledgement is       %
+%%      included in any published work making substantial use of it.    %
+%%                                                                      %
+%%      IT IS SUPPLIED "AS IS", WITHOUT WARRANTY, EXPRESS OR IMPLIED.   %
+%%                                                                      %
+%%      If you are doing something where mistakes cost money (or where  %
+%%      success brings financial profit) then you must use commercial   %
+%%      software, not this package. In any case, please remember to     %
+%%      keep several backup copies of all files, and check everything   %
+%%      visually before sending final copy to the publishers.           %
+%%                                                                      %
+%%      You may use this package as a (substantial) aid to writing an   %
+%%      academic research or text book on condition that                %
+%%       (i) you contact me at a suitable time to ensure that you have  %
+%%           an up-to-date version (and any infelicities can be fixed), %
+%%      (ii) you send me a copy of the book when it's published.        %
+%%                                                                      %
+%%                                                                      %
+%% HISTORY                                                              %
+%% 3.81 Second alpha release 18 July 1994                               %
+%%      Fixed displaced parenthesis instead of hook tails in manual p8. %
+%%      Parentheses and braces (not quite right): see end of source.    %
+%%      \overprint{text} sets text in maths and overprints it in the    %
+%%      current cell, centered in the column irrespective of other stuff%
+%%      "repositionpullbacks" option uses this for \SEpbk etc           %
+%%      \newdiagramgrid declaration, grid option and pentagon grid.     %
+%% 3.80 Alpha release for adjusted diagonals 15 July 1994.              %
+%%      Some options can now take (x,y) values.                         %
+%%      Name of DVI->PS translator as argument to PostScript option.    %
+%%      Improved recovery from missing {} in labels.                    %
+%%      Removed error message from \across since this works now.        %
+%%      Loading after \begin{document} in LaTeX2e possible.             %
+%%      Loading before \documentstyle or \documentclass possible.       %
+%%      Equilateral triangle or regular hexagon size options.           %
+%%      Introduced landscape and portrait options.                      %
+%%      Define PS commands once for each (outermost) diagram needing    %
+%%      them; previously they were defined for every map.               %
+%%      Don't hide width of vertical middle components.                 %
+%%      Parse []-options during label processing.                       %
+%%      Made midhshaft work; always set it for single-row diagrams.     %
+%%      \diagramstyle may be used within diagrams.                      %
+%%      Vertical maps targetted at labels of horizontals avoid them.    %
+%%      Wide object on right no longer causes "increase width" warning. %
+%%      Make these warnings more accurate and informative.              %
+%%      Fixed decapitated arrows (I think!).                            %
+%%      Diagonals adjusted to meet their endpoints, at last!!!!         %
+%% 3.29 Released 11 March 1994                                          %
+%%      Corrected error message when "&" or object is inserted before   %
+%%      horizontal maps etc outside diagram.                            %
+%%      Also when label missing after <>^_~.                            %
+%%      Switch to centredisplay if flushleft doesn't fit on the page.   %
+%%      Added Y head & tail from St. Mary Rd. font (not yet adjusted).  %
+%%      First attempt to support LaTeX2e \usepackage options.           %
+%%      Fixed bug (missing \endgroup and no arrow) with \rTo[opt][opt]. %
+%%      Set \mathsurround=0pt for everything within our code.           %
+%% 3.28 Released 30 November 1993                                       %
+%%      Fixed bug causing diagram to disappear in vert mode in LaTeX    %
+%%      Peter Freyd's \puncture symbol provided.                        %
+%% 3.27 Released 26 March 1993                                          %
+%%      Fixed bug which forced LaTeX slopes on PostScript diagonals.    %
+%% 3.26 Released 11 February 1993                                       %
+%%      Added 1pt space between label (strut) and horizontal shaft.     %
+%% 3.25 Released 30 January 1993                                        %
+%%      Resolution-dependent fudge (dpi) applied to horizontal arrows.  %
+%%      LaTeX heads made default (unless \tenln undefined, when vee)    %
+%%      Also cures zero-length shafts of arrows in text in footnotes.   %
+%%      Made \labelstyle and \objectstyle available as options.         %
+%%      New display options give warning if used within maths.          %
+%%      Catch missing bracket at end of label and misplaced (but not    %
+%%      missing) bracket at end of \pile.                               %
+%%      Small adjustments on some heads and tails. hbox option.         %
+%%      Circle, cross, little vee, little black triangle heads.         %
+%%      Fixed spaces before & after diagram in display and textflow.    %
+%%      Catch em-braced arrow commands.                                 %
+%%      Adjusted hook tails yet again (some theory behind horizontals!).%
+%%      Default \MapBreadth as TeXbook p447; pixel round on input.      %
+%%      First-use warning when defaulted diagonal components are used.  %
+%%      Warning if diagonals used & columns stretched significantly.    %
+%%      Warning if diagonals with repeating components are too short.   %
+%%      Added \@use@TPIC@false to diagonal dot repeater.                %
+%%      Allowed curly instead of square brackets in \diagramstyle.      %
+%%      Also \diagramsstyle.                                            %
+%%      AMSTEX emulation - works at least when amstex not present.      %
+%%      Position horizontal labels using strut rather than \baselineskip%
+%%      Removed \outer from \diagramstyle.                              %
+%%      Lots of adjustments to bits of arrows (drives me mad!).         %
+%% 3.24 Release 7 Sept 1992 advertised to users.                        %
+%%      \lq and \rq (instead of ` and ') for catcodes and octals.       %
+%%      Made it consistent with texinfo - for loading, at least.        %
+%%      PostScript option introduced:                                   %
+%%      LaTeX, vee, curlyvee, triangle & blacktriangle heads & tails    %
+%%      TPIC option introduced as an alternative to \LaTeX@make@line.   %
+%%      Fixed vmiddle positioning of one-row diagrams.                  %
+%%      Fixed catastrophic error of empty first cell in nested diagram  %
+%%      New reformatting program.                                       %
+%%      Optional arguments on \diagram, maps and \diagramstyle.         %
+%%      Made \PileSpacing between verticals local.                      %
+%%      Piles vertically centered ignoring outer labels.                %
+%%      Move labels away from wide vertical arrow middles.              %
+%% 3.20 (29.4.92) early release of version 4                            %
+%%      Ensure \enddiagram occurs only at correct {}-level              %
+%%      Blank line and \par within diagram =\enddiagram.                %
+%%      Clashing (horizontal) arrows detected at first pass             %
+%%      Postscript arrows (basic code).                                 %
+%%      Implemented \newarrow \newarrowhead etc.                        %
+%%      Corruption-sensitive characters avoided wherever possible.      %
+%%      Reloading prevented.                                            %
+%%      Horizontal arrows outside diagram can stretch by wordspacing.   %
+%%      Changed \lt and \gt to \lessthan and \greaterthan for Roy Crole.%
+%%      Added < and > for labels on left and right of arrow;            %
+%%      also [] for optional arguments on arrows (not used yet);        %
+%% 3.16 (20.7.90) as mass mailed; only have mangled version             %
+%% -- all following version numbers are post-facto --                   %
+%%  3   (Jan 90) stretching vertical arrows                             %
+%%  2   (Sept 89) horizontals stretch to objects; "superscript" labels  %
+%%  1   (1987) horizontal arrows stretch to edge of cell                %
+%%  0   (1986) implementation of Knuth's TeXercise 18.46                %
+%%======================================================================%
+
+%%======================================================================%
+%%                                                                      %
+%%      (1) CORRUPTION-SENSITIVE HACKS                                  %
+%%                                                                      %
+%%======================================================================%
+
+%%                      CORRUPTION & \catcode WARNING
+
+%% BITNET (IBM) machines may corrupt certain important characters
+%% in transmission by electronic mail:
+%%        0123456789=digits, abcdefghijklmnopqrstuvwxyz=lowers,
+%%        ABCDEFGHIJKLMNOPQRSTUVWXYZ=uppers, @=at (internal names),
+%%        {}=curly braces (grouping), \=backslash (keywords),
+%%        %=percent (comment), #=hash/sharp (argument), +=plus, -=minus,
+%%        <>=angle brackets (relations \ifnum,\ifdim), ==equals,
+%%        ,=comma, .=dot, :=colon, ;=semicolon,  =space
+%% $=dollar (maths) is only used in the "bits of maps" section
+
+%% The following characters are marked by a comment including the word "ASCII",
+%% except in comments and messages:
+%%        &=and (alignment), ~=tilde, |=vertical, []=square brackets,
+%%        ^=caret (superscript), _=underline (subscript),
+%%        `=grave/backquote (catcodes), '=acute/single quote (octal),
+%%        "=double quote (hex), ()=round brackets,
+%%        /=slash, ?=query, !=pling/bang, 
+
+%% The \catcode's marked * are assumed for reading this file:
+%%          \=0* {=1* }=2* $=3 &=4 return=5* #=6 ^=7 _=8 ignored=9*
+%%          space=10* letter=11* other=12 active=13 %=14* invalid=15
+%% If you want to load this package inside Stallman's "texinfo", you must do
+%%% @catcode`@\=0 \catcode`\%=14 \input diagrams \catcode`\%=12 \catcode`\\=13
+%% and then use @diagram @rTo @\ @enddiagram etc. (braces {} stay the same).
+%% Also need @catcode`@&=4.
+
+%%*** You *MUST NOT* use the internal commands (with names beginning \Cd@)****
+
+%% don't load me twice!
+\ifx\diagram\undefined\else\message{WARNING: the \string\diagram\space command
+is already defined and will not be loaded again}\expandafter\endinput\fi
+
+%% make @ letter, saving its old code to restore at the end of this file
+%%% look for this on the last line of the file if you think something's missing!
+%% the other \catcode assignments are to make it work with texinfo.
+\edef\cdrestoreat{%%
+\noexpand\catcode\lq\noexpand\@=\the\catcode\lq\@%%
+\noexpand\catcode\lq\noexpand\#=\the\catcode\lq\#%%
+\noexpand\catcode\lq\noexpand\$=\the\catcode\lq\$%%
+\noexpand\catcode\lq\noexpand\<=\the\catcode\lq\<%%
+\noexpand\catcode\lq\noexpand\>=\the\catcode\lq\>%%
+\noexpand\catcode\lq\noexpand\+=\the\catcode\rq53%
+%% texinfo @+ is @outer@active
+}\catcode\lq\@=11 \catcode\lq\#=6 \catcode\lq\<=12 \catcode\lq\>=12 \catcode
+\rq53=12
+
+%% Change y to n if pool_size in your implementation of TeX is small.
+%% This is reasonable if you have a small ("personal") computer, but if you
+%%% have a sun, dec, hp, ... workstation or a mainframe, complain to your local
+%% system manager and get him/her to install a version of TeX with bigger
+%% parameters. The "hash size" (number of command names) gets you next.
+\ifx\diagram@help@messages\undefined\let\diagram@help@messages y\fi
+
+%% The following macro is used to include literal PostScript commands in the
+%% DVI file for rotation, etc.  Since this goes beyond standard TeX, it is
+%%% dependent on the convention used by your local DVI-to-PostScript translator.
+%% Choose whichever line applies to the program used at your site, or, if
+%% yours is not listed, consult the manual, experiment with this macro and
+%% (please) tell me what is needed to make it work.
+%%
+%%
+%%% dvips (Tomas Rokicki, Radical Eye) labrea.stanford.edu /pub/dvips9999.tar.Z
+%% CTAN: dviware/dvips
+\def\cdps@Rokicki#1{\special{ps:#1}}\let\cdps@dvips\cdps@Rokicki\let
+\cdps@RadicalEye\cdps@Rokicki\let\Cd@KJ\cdps@Rokicki\let\Cd@CB\cdps@Rokicki
+%%
+%% I'm not sure that the rest work.
+%%
+%% dvitps (Stephan Bechtolsheim, Integrated Computer Systems)
+%% arthur.cs.purdue.edu /pub/TeXPS-9.99.tar.Z
+\def\cdps@Bechtolsheim#1{\special{dvitps: Literal "#1"}}%
+%% ASCII two dbl quotes
+\let\cdps@dvitps\cdps@Bechtolsheim\let\cdps@IntegratedComputerSystems
+\cdps@Bechtolsheim%%
+%% dvitops (James Clark)
+%% CTAN: dviware/dvitops
+\def\cdps@Clark#1{\special{dvitops: inline #1}}%%
+\let\cdps@dvitops\cdps@Clark%%
+%% OzTeX (Andrew Trevorrow) cannot be used
+\let\cdps@OzTeX\empty\let\cdps@oztex\empty\let\cdps@Trevorrow\empty%%
+%% dvi3ps (Kevin Coombes)
+%% CTAN: dviware/dvi2ps/dvi3ps
+\def\cdps@Coombes#1{\special{ps-string #1}}%%
+%% psprint (Trevorrow) CTAN: dviware/psprint
+%% dvi2ps (Senn) CTAN: dviware/dvi2ps
+%% psdvi (Elwell) CTAN: dviware/dvi2ps/psdvi
+
+%\count@=\year\multiply\count@12 \advance\count@\month%%
+%\ifnum\count@>23947 %% (July 1995) It's changing very fast at the moment!
+%\message{***********************************************************}%%ascii
+%\message{! THIS IS AN EXPERIMENTAL VERSION OF COMMUTATIVE DIAGRAMS *}%%
+%\message{! it expired in July 1995 and is time-bombed for November *}%%
+%\message{! You may obtain an up to date version of this package by *}%%ascii
+%\message{! "anonymous FTP" from theory.doc.ic.ac.uk (146.169.2.27) *}%%
+%\message{***********************************************************}%%ascii
+%\ifnum\count@>23948 %% (August 1995)
+%\errhelp{You may press RETURN and carry on for the time being.}\message{! It
+%is embarrassing to see papers in conference proceedings}\message{! and
+%journals containing bugs which I had fixed years before.}\message{! It is easy
+%to obtain and install a new version, which will}\errmessage{! remain
+%compatible with your files. Please get it NOW.}\fi\fi
+
+\def\Cd@oD{\global\let}\def\Cd@mG{\outer\def}
+
+%% safe names for braces, tab (&) and maths ($), as commands and for messages
+{\escapechar\m@ne\xdef\Cd@k{\string\{}\xdef\Cd@mC{\string\}}%%
+%%
+%% three ASCII ampersands (ands) (&&&) appear on the next line
+\catcode\lq\&=4 \Cd@oD\Cd@N=&\xdef\Cd@P{\string\&}%%ascii three ands
+%%
+%% ASCII ^ and _ each appear twice on next line
+%% six ASCII dollars ($$$$$$) appear on the next two lines.
+\catcode\lq\$=3 \Cd@oD\Cd@h=$\Cd@oD\Cd@zC=$%%ascii three dollars
+\xdef\Cd@dC{\string\$}\gdef\Cd@mF{$$}%%ascii three dollars
+%%
+%% two ASCII underlines (__) appear on the next line.
+\catcode\lq\_=8 \Cd@oD\Cd@oI=_%%ascii two underlines
+%%
+%% six ASCII carets (^^^^^^) appear on the next three lines.
+\obeylines\catcode\lq\^=7 \Cd@oD\@super=^%%ascii two carets
+\ifnum\newlinechar=10 \gdef\Cd@QG{^^J}%%ascii two carets
+\else\ifnum\newlinechar=13 \gdef\Cd@QG{^^M}%%ascii two carets
+\else\Cd@oD\Cd@QG\space\expandafter\message{! input error: \noexpand
+\newlinechar\space is ASCII \the\newlinechar, not LF=10 or CR=13.}%%
+\fi\fi}%%
+
+%% avoid using <> (because I personally re-define them to mean \langle\rangle)
+\mathchardef\lessthan=\rq30474 \mathchardef\greaterthan=\rq30476
+
+%% LaTeX line and arrowhead font
+%% the "hit return" comments show up if the font is missing.
+\ifx\tenln\undefined%%
+\font\tenln=line10\relax%% Hit return - who needs diagonals?
+\fi\ifx\tenlnw\undefined\ifx\tenln\nullfont\let\tenlnw\nullfont\else%%
+\font\tenlnw=linew10\relax%% Hit return - who needs diagonals?
+\fi\fi%%
+
+%% report line numbers in TeX3 only
+\ifx\inputlineno\undefined\csname newcount\endcsname\inputlineno\inputlineno
+\m@ne\message{***************************************************}\message{!
+Obsolete TeX (version 2). You should upgrade to *}\message{! version 3, which
+has been available since 1990. *}\message{***********************************%
+****************}\fi
+
+\newif\if@ignore
+
+\def\cd@shouldnt#1{\Cd@FB{* THIS (#1) SHOULD NEVER HAPPEN! *}}
+
+%% turn round- and square-bracketed arguments into curly-bracketed
+\def\get@round@pair#1(#2,#3){#1{#2}{#3}}%%ascii round brackets ()
+\def\get@square@arg#1[#2]{#1{#2}}%%ascii square brackets []
+\def\Cd@lD#1{\Cd@QJ\Cd@kD#1,],}%%ascii sq brackets
+\def\Cd@j{[}\def\Cd@BD{]}\def\commdiag#1{{\let\enddiagram\relax\diagram[]#1%
+\enddiagram}}
+
+%% ASCII open square bracket occurs on next line
+\def\Cd@iE{{\ifx\Cd@aG[\aftergroup\get@square@arg\aftergroup\Cd@tG\else
+\aftergroup\Cd@eG\fi}}%%
+\def\Cd@hE#1#2{\def\Cd@tG{#1}\def\Cd@eG{#2}\futurelet\Cd@aG\Cd@iE}
+
+%% ASCII vertical bar (|) occurs on the next line
+\def\Cd@MJ{|}
+
+\def\Cd@KB{%% arguments to maps inside diagrams
+\tokcase\Cd@qC:\Cd@u\break@args;\catcase\@super:\upper@label;\catcase\Cd@oI:%
+\lower@label;\tokcase{~}:\middle@label;%%ascii tilde
+\tokcase<:\left@label;%%ascii less-than
+\tokcase>:\right@label;%%ascii greater-than
+\tokcase(:\Cd@wB;%%)%ascii open round bracket
+\tokcase[:\optional@;%%]%ascii open square bracket
+\tokcase.:\Cd@RI;%%ascii dot 12.7.94
+\catcase\space:\eat@space;\catcase\bgroup:\positional@;\default:\Cd@w
+\break@args;\endswitch}
+
+\def\switch@arg{%% arguments to horizontal maps outside diagrams
+\catcase\@super:\upper@label;\catcase\Cd@oI:\lower@label;\tokcase[:\optional@
+;%%]%ascii open square bracket
+\tokcase.:\Cd@RI:%%ascii dot 12.7.94
+\catcase\space:\eat@space;\catcase\bgroup:\positional@;\tokcase{~}:%
+\middle@label;%%ascii tilde (questionable!)
+\default:\Cd@u\break@args;\endswitch}
+
+%% That's as much as you get to read "in clear" - the rest is private!
+
+\def\Cd@VA#1#2{\def#1{\Cd@bB{#2\Cd@XD}\Cd@oD#1\relax}}\let\Cd@wI\relax\ifx
+\protect\undefined\let\protect\relax\fi\def\Cd@VF#1\repeat{\def\Cd@l{#1}%
+\Cd@tE}\def\Cd@tE{\Cd@l\relax\expandafter\Cd@tE\fi}\def\Cd@TF#1\repeat{\def
+\Cd@m{#1}\Cd@uE}\def\Cd@uE{\Cd@m\relax\expandafter\Cd@uE\fi}\def\Cd@UF#1%
+\repeat{\def\Cd@n{#1}\Cd@vE}\def\Cd@vE{\Cd@n\relax\expandafter\Cd@vE\fi}\def
+\Cd@PG#1#2#3{\def#2{\let#1\iftrue}\def#3{\let#1\iffalse}#3}\if y%
+\diagram@help@messages\def\Cd@NG#1#2{\csname newtoks\endcsname#1#1=%
+\expandafter{\csname#2\endcsname}}\else\csname newtoks\endcsname\no@cd@help
+\no@cd@help{See the manual}\def\Cd@NG#1#2{\let#1\no@cd@help}\fi\chardef\Cd@OF
+=1 \chardef\Cd@xH=2 \chardef\Cd@hG=5 \chardef\Cd@IH=6 \chardef\Cd@HH=7
+\chardef\Cd@GC=9 \dimendef\Cd@uH=2 \dimendef\Cd@LF=3 \dimendef\Cd@PF=4
+\dimendef\Cd@yH=5 \dimendef\Cd@zI=6 \dimendef\Cd@EI=8 \dimendef\Cd@DI=9
+\skipdef\Cd@oB=1 \skipdef\Cd@sE=2 \skipdef\Cd@nB=3 \skipdef\Cd@IE=4 \skipdef
+\Cd@LJ=5 \skipdef\Cd@wH=6 \skipdef\Cd@NF=7 \skipdef\Cd@BI=8 \skipdef\Cd@AI=9
+\countdef\Cd@BC=9 \countdef\Cd@QD=8 \countdef\Cd@A=7 \def\sdef#1#2{\def#1{#2}%
+}\def\Cd@I#1{\expandafter\aftergroup\csname#1\endcsname}\def\Cd@IC#1{%
+\expandafter\def\csname#1\endcsname}\def\Cd@dD#1{\expandafter\gdef\csname#1%
+\endcsname}\def\Cd@jC#1{\expandafter\edef\csname#1\endcsname}\def\Cd@QF#1#2{%
+\expandafter\let\csname#1\expandafter\endcsname\csname#2\endcsname}\def\Cd@pD
+#1#2{\expandafter\Cd@oD\csname#1\expandafter\endcsname\csname#2\endcsname}%
+\def\Cd@CJ#1{\csname#1\endcsname}\def\Cd@bI#1{\expandafter\show\csname#1%
+\endcsname}\def\Cd@dI#1{\expandafter\showthe\csname#1\endcsname}\def\Cd@aI#1{%
+\expandafter\showbox\csname#1\endcsname}\def\Cd@oA{Commutative Diagram}\edef
+\Cd@CH{\string\par}\edef\Cd@UC{\string\diagram}\edef\Cd@uC{\string\enddiagram
+}\edef\Cd@xB{\string\\}\def\Cd@IF{LaTeX}\def\Cd@d{{\ifnum0=\lq}\fi}\def\Cd@kC
+{\ifnum0=\lq{\fi}}\def\catcase#1:{\ifcat\noexpand\Cd@aG#1\Cd@wI\expandafter
+\Cd@aC\else\expandafter\Cd@hI\fi}\def\tokcase#1:{\ifx\Cd@aG#1\Cd@wI
+\expandafter\Cd@aC\else\expandafter\Cd@hI\fi}\def\Cd@aC#1;#2\endswitch{#1}%
+\def\Cd@hI#1;{}\let\endswitch\relax\def\default:#1;#2\endswitch{#1}\ifx\at@
+\undefined\def\at@{@}\fi\edef\Cd@M{\Cd@k pt\Cd@mC}\Cd@IC{\Cd@M>}#1>#2>{\Cd@v
+\rTo\sp{#1}\sb{#2}\Cd@v}\Cd@IC{\Cd@M<}#1<#2<{\Cd@v\lTo\sp{#1}\sb{#2}\Cd@v}%
+\Cd@IC{\Cd@M)}#1)#2){\Cd@v\rTo\sp{#1}\sb{#2}\Cd@v}%%ascii round
+\Cd@IC{\Cd@M(}#1(#2({\Cd@v\lTo\sp{#1}\sb{#2}\Cd@v}%%ascii brack
+\def\Cd@L{\def\endCD{\enddiagram}\Cd@IC{\Cd@M A}##1A##2A{\uTo<{##1}>{##2}%
+\Cd@v\Cd@v}\Cd@IC{\Cd@M V}##1V##2V{\dTo<{##1}>{##2}\Cd@v\Cd@v}\Cd@IC{\Cd@M=}{%
+\Cd@v\hEq\Cd@v}\Cd@IC{\Cd@M\Cd@MJ}{\vEq\Cd@v\Cd@v}\Cd@IC{\Cd@M\string\vert}{%
+\vEq\Cd@v\Cd@v}\Cd@IC{\Cd@M.}{\Cd@v\Cd@v}\let\Cd@v\Cd@N}\def\Cd@sD{\let\tmp
+\Cd@tD\ifcat A\noexpand\Cd@ZG\else\ifcat=\noexpand\Cd@ZG\else\ifcat\relax
+\noexpand\Cd@ZG\else\let\tmp\at@\fi\fi\fi\tmp}\def\Cd@tD#1{\Cd@QF{tmp}{\Cd@M
+\string#1}\ifx\tmp\relax\def\tmp{\at@#1}\fi\tmp}\def\Cd@v{}\begingroup
+\aftergroup\def\aftergroup\Cd@Q\aftergroup{\aftergroup\def\catcode\lq\@%
+\active\aftergroup @\endgroup{\futurelet\Cd@ZG\Cd@sD}}\newcount\Cd@pA
+\newcount\Cd@qA\newcount\Cd@rA\newcount\Cd@sA\newdimen\Cd@KA\newdimen\Cd@LA
+\Cd@PG\Cd@ME\Cd@w\Cd@u\Cd@PG\Cd@NE\Cd@AA\Cd@y\newdimen\Cd@NA\newdimen\Cd@OA
+\newcount\Cd@tA\newcount\Cd@uA\newdimen\Cd@MA\newbox\Cd@@A\Cd@PG\Cd@RE\Cd@YA
+\Cd@XA\newcount\Cd@gG\newcount\Cd@KC\def\Cd@S#1#2{\ifdim#1<#2\relax#1=#2%
+\relax\fi}\def\Cd@U#1#2{\ifdim#1>#2\relax#1=#2\relax\fi}\newdimen\Cd@sG\Cd@sG
+=1sp \newdimen\Cd@nC\Cd@nC\z@\def\Cd@gI{\ifdim\Cd@nC=1em\else\Cd@qI\fi}\def
+\Cd@qI{\Cd@nC1em\def\Cd@FC{\fontdimen8\textfont3 }\Cd@LI\setbox0=\vbox{\Cd@p
+\noindent\Cd@h\null\penalty-9993\null\Cd@zC\null\endgraf\setbox0=\lastbox
+\unskip\unpenalty\setbox1=\lastbox\global\setbox\Cd@jF=\hbox{\unhbox0\unskip
+\unskip\unpenalty\setbox0=\lastbox}\global\setbox\Cd@lF=\hbox{\unhbox1\unskip
+\unpenalty\setbox1=\lastbox}}}\newdimen\Cd@NH\Cd@NH=1true in \divide\Cd@NH300
+\def\Cd@MH#1{\multiply#1\tw@\advance#1\ifnum#1<\z@-\else+\fi\Cd@NH\divide#1%
+\tw@\divide#1\Cd@NH\multiply#1\Cd@NH}\def\MapBreadth{\afterassignment\Cd@tH
+\Cd@qE}\newdimen\Cd@qE\newdimen\Cd@@I\def\Cd@tH{\Cd@@I\Cd@qE\Cd@S\Cd@NH{4%
+\Cd@sG}\Cd@U\Cd@NH\p@\Cd@MH\Cd@@I\ifdim\Cd@qE>\z@\Cd@S\Cd@@I\Cd@NH\fi\Cd@gI}%
+\def\Cd@WI#1{\Cd@jD\count@\Cd@NH#1\ifnum\count@>\z@\divide\Cd@NH\count@\fi
+\Cd@tH}\def\Cd@MI{\Cd@EI\axisheight\advance\Cd@EI-.5\Cd@@I\Cd@MH\Cd@EI\Cd@DI-%
+\Cd@EI\advance\Cd@EI\Cd@qE}\def\Cd@fJ{\Cd@DI\z@\Cd@EI\Cd@qE\relax}\def
+\horizhtdp{height\Cd@EI depth\Cd@DI}\def\axisheight{\fontdimen22\the\textfont
+\tw@}\def\script@axisheight{\fontdimen22\the\scriptfont\tw@}\def
+\ss@axisheight{\fontdimen22\the\scriptscriptfont\tw@}\def\Cd@FC{0.4pt}\def
+\Cd@WJ{\fontdimen3\textfont\z@}\def\Cd@VJ{\fontdimen3\textfont\z@}\newdimen
+\PileSpacing\newdimen\Cd@hA\Cd@hA\z@\newdimen\Cd@kA\newdimen\Cd@TB\def
+\CellSize{\afterassignment\Cd@fB\DiagramCellHeight}\newdimen
+\DiagramCellHeight\DiagramCellHeight-\maxdimen\newdimen\DiagramCellWidth
+\DiagramCellWidth-\maxdimen\def\Cd@fB{\DiagramCellWidth\DiagramCellHeight}%
+\def\Cd@HC{3em}\newdimen\MapShortFall\def\MapsAbut{\MapShortFall\z@
+\objectheight\z@\objectwidth\z@}\newdimen\Cd@cA\Cd@cA\z@\def\newarrowhead{%
+\Cd@IG h\Cd@cF\Cd@hF>}\def\newarrowtail{\Cd@IG t\Cd@cF\Cd@hF>}\def
+\newarrowmiddle{\Cd@IG m\Cd@cF\hbox@maths\empty}\def\newarrowfiller{\Cd@IG f%
+\Cd@KE\Cd@OJ-}\def\Cd@IG#1#2#3#4#5#6#7#8#9{\Cd@IC{r#1:#5}{#2{#6}}\Cd@IC{l#1:#%
+5}{#2{#7}}\Cd@IC{d#1:#5}{#3{#8}}\Cd@IC{u#1:#5}{#3{#9}}\Cd@jC{-#1:#5}{%
+\expandafter\noexpand\csname-#1:#4\endcsname\noexpand\Cd@EC}\Cd@jC{+#1:#5}{%
+\expandafter\noexpand\csname+#1:#4\endcsname\noexpand\Cd@EC}}\Cd@VA\Cd@EC{%
+\Cd@IF\space diagonals are used unless PostScript is set}\def
+\defaultarrowhead#1{\edef\Cd@vI{#1}\Cd@LI}\def\Cd@LI{\Cd@QI\Cd@vI<>ht\Cd@QI
+\Cd@vI<>th}\def\Cd@QI#1#2#3#4#5{\Cd@OI{r#4}{#3}{l#5}{#2}{r#4:#1}\Cd@OI{r#5}{#%
+2}{l#4}{#3}{l#4:#1}\Cd@OI{d#4}{#3}{u#5}{#2}{d#4:#1}\Cd@OI{d#5}{#2}{u#4}{#3}{u%
+#4:#1}}\def\Cd@OI#1#2#3#4#5{\begingroup\aftergroup\Cd@PI\Cd@I{#1+:#2}\Cd@I{#1%
+:#2}\Cd@I{#3:#4}\Cd@I{#5}\endgroup}\def\Cd@PI#1#2#3#4{\csname newbox%
+\endcsname#1\def#2{\copy#1}\def#3{\copy#1}\setbox#1=\box\voidb@x}\def\Cd@vI{}%
+\Cd@LI\def\Cd@PI#1#2#3#4{\setbox#1=#4}\ifx\tenln\nullfont\def\Cd@vI{vee}\else
+\let\Cd@vI\Cd@IF\fi\def\Cd@XF#1#2#3{\begingroup\aftergroup\Cd@YF\Cd@I{#1#2:#3%
+#3}\Cd@I{#1#2:#3}\endgroup}\def\Cd@YF#1#2{\def#1{\hbox{\rlap{#2}\kern.4\Cd@nC
+#2}}}\Cd@XF rh>\Cd@XF lh>\Cd@XF rt>\Cd@XF lt>\Cd@XF rh<\Cd@XF lh<\Cd@XF rt<%
+\Cd@XF lt<\def\Cd@YF#1#2{\def#1{\vbox{\vbox to\z@{#2\vss}\nointerlineskip
+\kern.4\Cd@nC#2}}}\Cd@XF dh>\Cd@XF uh>\Cd@XF dt>\Cd@XF ut>\Cd@XF dh<\Cd@XF uh%
+<\Cd@XF dt<\Cd@XF ut<\def\Cd@cF#1{\hbox{\mathsurround\z@\offinterlineskip
+\Cd@h\mkern-1.5mu{#1}\mkern-1.5mu\Cd@zC}}\def\hbox@maths#1{\hbox{\Cd@h#1%
+\Cd@zC}}\def\Cd@hF#1{\hbox to\Cd@qE{\setbox0=\hbox{\offinterlineskip
+\mathsurround\z@\Cd@h{#1}\Cd@zC}\dimen0.5\wd0\advance\dimen0-.5\Cd@@I\Cd@MH{%
+\dimen0}\kern-\dimen0\unhbox0\hss}}\def\Cd@dJ#1{\hbox to2\Cd@qE{\hss
+\offinterlineskip\mathsurround\z@\Cd@h{#1}\Cd@zC\hss}}\def\Cd@WF#1{\hbox{%
+\mathsurround\z@\Cd@h{#1}\Cd@zC}}\def\Cd@KE#1{\hbox{\kern-.15\Cd@nC\Cd@h{#1}%
+\Cd@zC\kern-.15\Cd@nC}}\def\Cd@OJ#1{\vbox{\offinterlineskip\kern-.2ex\Cd@hF{#%
+1}\kern-.2ex}}\def\@fillh{\xleaders\vrule\horizhtdp}\def\@fillv{\xleaders
+\hrule width\Cd@qE}\Cd@QF{rf:-}{@fillh}\Cd@QF{lf:-}{@fillh}\Cd@QF{df:-}{%
+@fillv}\Cd@QF{uf:-}{@fillv}\Cd@QF{rh:}{null}\Cd@QF{rm:}{null}\Cd@QF{rt:}{null%
+}\Cd@QF{lh:}{null}\Cd@QF{lm:}{null}\Cd@QF{lt:}{null}\Cd@QF{dh:}{null}\Cd@QF{%
+dm:}{null}\Cd@QF{dt:}{null}\Cd@QF{uh:}{null}\Cd@QF{um:}{null}\Cd@QF{ut:}{null%
+}\Cd@QF{+h:}{null}\Cd@QF{+m:}{null}\Cd@QF{+t:}{null}\Cd@QF{-h:}{null}\Cd@QF{-%
+m:}{null}\Cd@QF{-t:}{null}\Cd@IC{rf:}{\hbox{\kern1pt}}\Cd@QF{lf:}{rf:}\Cd@QF{%
++f:}{rf:}\Cd@IC{df:}{\vbox{\kern1pt}}\Cd@QF{uf:}{df:}\Cd@QF{-f:}{df:}\edef
+\Cd@HG{\string\newarrow}\def\newarrow#1#2#3#4#5#6{\begingroup\edef\@name{#1}%
+\edef\Cd@rI{#2}\edef\Cd@SD{#3}\edef\Cd@qF{#4}\edef\Cd@TD{#5}\edef\Cd@vD{#6}%
+\let\Cd@rD\Cd@OG\let\Cd@HJ\Cd@YG\let\@x\Cd@XG\ifx\Cd@rI\Cd@SD\let\Cd@rI\empty
+\fi\ifx\Cd@vD\Cd@TD\let\Cd@vD\empty\fi\def\Cd@ZH{r}\def\Cd@xE{l}\def\Cd@AC{d}%
+\def\Cd@AJ{u}\def\Cd@zG{+}\def\@m{-}\ifx\Cd@SD\Cd@TD\ifx\Cd@qF\Cd@SD\let
+\Cd@qF\empty\fi\ifx\Cd@vD\empty\ifx\Cd@SD\Cd@JE\let\@x\Cd@UG\else\let\@x
+\Cd@VG\fi\fi\else\edef\Cd@X{\Cd@SD\Cd@rI}\ifx\Cd@X\empty\ifx\Cd@qF\Cd@TD\let
+\Cd@qF\empty\fi\fi\fi\ifmmode\aftergroup\Cd@GG\else\Cd@w\Cd@jB rh{head\space
+\space}\Cd@vD\Cd@jB rf{filler}\Cd@SD\Cd@jB rm{middle}\Cd@qF\ifx\Cd@TD\Cd@SD
+\else\Cd@jB rf{filler}\Cd@TD\fi\Cd@jB rt{tail\space\space}\Cd@rI\Cd@ME\Cd@rD
+\Cd@HJ\@x\Cd@JG l-2+2{lu}{nw}\NorthWest\Cd@JG r+2+2{ru}{ne}\NorthEast\Cd@JG l%
+-2-2{ld}{sw}\SouthWest\Cd@JG r+2-2{rd}{se}\SouthEast\else\aftergroup\Cd@Y
+\Cd@I{r\@name}\fi\fi\endgroup}\def\Cd@OG{\Cd@RG\Cd@ZH\Cd@xE rl\Horizontal@Map
+}\def\Cd@YG{\Cd@RG\Cd@AC\Cd@AJ du\Vertical@Map}\def\Cd@XG{\Cd@RG\Cd@zG\@m+-%
+\Vector@Map}\def\Cd@UG{\Cd@RG\Cd@zG\@m+-\Slant@Map}\def\Cd@VG{\Cd@RG\Cd@zG\@m
++-\Slope@Map}\catcode\lq\/=\active\def\Cd@RG#1#2#3#4#5{\Cd@FG#1#3#5t:\Cd@rI/f%
+:\Cd@SD/m:\Cd@qF/f:\Cd@TD/h:\Cd@vD//\Cd@FG#2#4#5h:\Cd@vD/f:\Cd@TD/m:\Cd@qF/f:%
+\Cd@SD/t:\Cd@rI//}\def\Cd@FG#1#2#3#4//{\edef\Cd@BG{#2}\aftergroup\sdef\Cd@I{#%
+1\@name}\aftergroup{\aftergroup#3\Cd@J#4//\aftergroup}}\def\Cd@J#1/{\edef
+\Cd@aG{#1}\ifx\Cd@aG\empty\else\Cd@I{\Cd@BG#1}\expandafter\Cd@J\fi}\catcode
+\lq\/=12 \def\Cd@JG#1#2#3#4#5#6#7#8{\aftergroup\sdef\Cd@I{#6\@name}%
+\aftergroup{\Cd@I{#2\@name}\if#2#4\aftergroup\Cd@QH\else\aftergroup\Cd@PH\fi
+\Cd@I{#1\@name}%% ASCII round brackets and comma (,) appear on the next line
+\aftergroup(\aftergroup#3\aftergroup,\aftergroup#5\aftergroup)\aftergroup}}%
+\def\Cd@jB#1#2#3#4{\expandafter\ifx\csname#1#2:#4\endcsname\relax\Cd@u\Cd@bB{%
+arrow#3 "#4" undefined}\fi}\Cd@NG\Cd@EE{All five components must be defined
+before an arrow.}\Cd@NG\Cd@BE{\Cd@HG, unlike \string\HorizontalMap, is a
+declaration.}\def\Cd@Y#1{\Cd@UA{Arrows \string#1 etc could not be defined}%
+\Cd@EE}\def\Cd@GG{\Cd@UA{misplaced \Cd@HG}\Cd@BE}\def\newdiagramgrid#1#2#3{%
+\Cd@IC{cdgh@#1}{#2,],}\Cd@IC{cdgv@#1}{#3,],}}\Cd@PG\ifincommdiag
+\incommdiagtrue\incommdiagfalse\Cd@PG\Cd@fE\Cd@nE\Cd@mE\newcount\Cd@RA\Cd@RA=%
+0 \def\Cd@LH{\Cd@RA6 }\def\Cd@JB{\Cd@RA1 \global\Cd@tA1 \Cd@oD\Cd@CF\empty}%
+\def\Cd@CF{}\def\Cd@iB#1{\relax\Cd@xC\edef\Cd@yI{#1}\begingroup\Cd@XE\else
+\ifcase\Cd@RA\ifmmode\else\Cd@wF\Cd@E0\fi\or\Cd@LE5\or\Cd@wF\Cd@F5\or\Cd@wF
+\Cd@B5\or\Cd@wF\Cd@B5\or\Cd@wF\Cd@C5\or\Cd@LE7\or\Cd@wF\Cd@D7\fi\fi\endgroup
+\xdef\Cd@CF{#1}}\def\Cd@kB#1#2#3#4#5{\relax\Cd@xC\xdef\Cd@yI{#4}\begingroup
+\ifnum\Cd@RA<#1 \expandafter\Cd@LE\ifcase\Cd@RA0\or#2\or#3\else#2\fi\else
+\ifnum\Cd@RA<6 \Cd@wI\Cd@wF\Cd@B#2\else\Cd@wF\Cd@G#2\fi\fi\endgroup\Cd@oD
+\Cd@CF\Cd@yI\ifincommdiag\let\Cd@JD#5\else\let\Cd@JD\Cd@NJ\fi}\def\Cd@JI{%
+\global\Cd@tA=\ifnum\Cd@RA<5 1\else2\fi\relax}\def\Cd@cH{\Cd@RA\Cd@tA}\def
+\Cd@LE#1{\aftergroup\Cd@RA\aftergroup#1\aftergroup\relax}\def\Cd@dG{\def
+\Cd@iB##1{\relax}\let\Cd@kB\Cd@bG\let\Cd@LH\relax\let\Cd@JB\relax\let\Cd@JI
+\relax\let\Cd@cH\relax}\def\Cd@bG#1#2#3#4#5{\ifincommdiag\let\Cd@JD#5\else
+\xdef\Cd@yI{#4}\let\Cd@JD\Cd@NJ\fi}\def\Cd@wF#1{\aftergroup#1\aftergroup
+\relax\Cd@LE}\def\Cd@B{\Cd@HE\Cd@P\Cd@wD\Cd@N}\def\Cd@G{\Cd@HE{\Cd@mC\Cd@P}%
+\Cd@GE\Cd@@D\Cd@N}\def\Cd@F{\Cd@HE{*\Cd@P}\Cd@AE\clubsuit\Cd@N}\def\Cd@C{%
+\Cd@HE{\Cd@P*\Cd@P}\Cd@AE\Cd@N\clubsuit\Cd@N}\def\Cd@D{\Cd@HE\Cd@xB\Cd@CE\\}%
+\def\Cd@E{\Cd@HE\Cd@dC\Cd@@E\Cd@h}\def\Cd@NJ{\Cd@UA{\Cd@yI\space ignored
+\Cd@yG}\Cd@FE}\def\Cd@qD{}\def\Cd@a{\Cd@UA{maps must never be enclosed in
+braces}\Cd@yD}\def\Cd@yG{outside diagram}\def\Cd@yB{\string\HonV, \string
+\VonH\space and \string\HmeetV}\Cd@NG\Cd@wD{The way that horizontal and
+vertical arrows are terminated implicitly means\Cd@QG that they cannot be
+mixed with each other or with \Cd@yB.}\Cd@NG\Cd@GE{\string\pile\space is for
+parallel horizontal arrows; verticals can just be put together in\Cd@QG a cell%
+. \Cd@yB\space are not meaningful in a \string\pile.}\Cd@NG\Cd@AE{The
+horizontal maps must point to an object, not each other (I've put in\Cd@QG one
+which you're unlikely to want). Use \string\pile\space if you want them
+parallel.}\Cd@NG\Cd@CE{Parallel horizontal arrows must be in separate layers
+of a \string\pile.}\Cd@NG\Cd@@E{Horizontal arrows may be used \Cd@yG s, but
+must still be in maths.}\Cd@NG\Cd@FE{Vertical arrows, \Cd@yB\space\Cd@yG s don%
+'t know where\Cd@QG where to terminate.}\Cd@NG\Cd@yD{This prevents them from
+stretching correctly.}\def\Cd@HE#1{\Cd@UA{"#1" inserted \ifx\Cd@CF\empty
+before \Cd@yI\else between \Cd@CF\ifx\Cd@CF\Cd@yI s\else\space and \Cd@yI\fi
+\fi}}\count@=\year\multiply\count@12 \advance\count@\month\ifnum\count@>23952
+\message{because this one expired in July 1995!}\expandafter\endinput\fi\def
+\Horizontal@Map{\Cd@iB{horizontal map}\Cd@DC\Cd@YI\let\Cd@UD\hfdot\Cd@bD}\def
+\Cd@YI{\Cd@BB-9999 \let\Cd@JD\Cd@HD\ifincommdiag\else\Cd@gI\skip2\z@ plus 1.5%
+\Cd@WJ minus .5\Cd@VJ\skip4\skip2 \fi\let\Cd@VD\@fillh}\def\Vector@Map{\Cd@JJ
+4}\def\Slant@Map{\Cd@JJ{\Cd@kE255\else6\fi}}\def\Slope@Map{\Cd@JJ{255}}\def
+\Cd@JJ#1#2#3#4#5#6{\Cd@DC\def\Cd@XJ{2}\def\Cd@bJ{2}\def\Cd@aJ{1}\def\Cd@cJ{1}%
+\let\Horizontal@Map\Cd@zH\def\Cd@pF{#1}\def\Cd@bH{\Cd@R#2#3#4#5#6}}\def\Cd@zH
+{\Cd@YI\Cd@EB\let\Cd@JD\Cd@DD\Cd@bD}\Cd@PG\Cd@VE\Cd@mA\Cd@lA\Cd@mA\def
+\cds@missives{\Cd@mA}\def\Cd@DD{\Cd@bE\def\Cd@pF{255}\Cd@t\Cd@AF\setbox\z@
+\hbox{\incommdiagfalse\Cd@VH}\Cd@VE\Cd@KD\else\global\Cd@PC\Cd@LD\fi\else
+\Cd@bH\Cd@aH\global\Cd@PC\Cd@ID\fi}\def\Cd@DC{\begingroup\dimen1=%
+\MapShortFall\dimen2\Cd@kA\dimen5=\MapShortFall\setbox3=\box\voidb@x\setbox6=%
+\box\voidb@x\setbox7=\box\voidb@x\Cd@aD\mathsurround\z@\skip2\z@ plus1fill
+minus 1000pt\skip4\skip2 \Cd@OB}\Cd@PG\Cd@ZE\Cd@PB\Cd@OB\def\Cd@R#1#2#3#4#5{%
+\let\Cd@rI#1\let\Cd@SD#2\let\Cd@qF#3\let\Cd@TD#4\let\Cd@vD#5\Cd@OB\ifx\Cd@SD
+\Cd@TD\Cd@PB\fi}\def\Cd@bD#1#2#3#4#5{\Cd@R#1#2#3#4#5\Cd@eD}\def\Vertical@Map{%
+\Cd@kB433{vertical map}\Cd@MD\Cd@DC\Cd@BB-9995 \let\Cd@VD\@fillv\let\Cd@UD
+\vfdot\Cd@bD}\def\break@args{\def\Cd@eD{\Cd@JD}\Cd@JD\endgroup\aftergroup
+\Cd@qD}\def\Cd@TI{\setbox1=\Cd@rI\setbox5=\Cd@vD\ifvoid3 \ifx\Cd@qF\null\else
+\setbox3=\Cd@qF\fi\fi\Cd@aF2\Cd@SD\Cd@aF4\Cd@TD}\def\Cd@aF#1#2{\ifx#2\Cd@VD
+\setbox#1=\box\voidb@x\else\setbox#1=#2\def#2{\xleaders\box#1}\fi}\Cd@VA
+\Cd@DJ{\string\HorizontalMap, \string\VerticalMap\space and \string
+\DiagonalMap\Cd@QG are obsolete - use \Cd@HG\space to pre-define maps}\def
+\HorizontalMap#1#2#3#4#5{\Cd@DJ\Cd@iB{old horizontal map}\Cd@DC\Cd@YI\def
+\Cd@rI{\Cd@pG{#1}}\Cd@nG\Cd@SD{#2}\def\Cd@qF{\Cd@pG{#3}}\Cd@nG\Cd@TD{#4}\def
+\Cd@vD{\Cd@pG{#5}}\Cd@eD}\def\VerticalMap#1#2#3#4#5{\Cd@DJ\Cd@kB433{vertical
+map}\Cd@MD\Cd@DC\Cd@BB-9995 \let\Cd@VD\@fillv\def\Cd@rI{\Cd@hF{#1}}\Cd@qG
+\Cd@SD{#2}\def\Cd@qF{\Cd@hF{#3}}\Cd@qG\Cd@TD{#4}\def\Cd@vD{\Cd@hF{#5}}\Cd@eD}%
+\def\DiagonalMap#1#2#3#4#5{\Cd@DJ\Cd@DC\def\Cd@pF{4}\let\Cd@VD\undefined\let
+\Cd@JD\Cd@ID\def\Cd@XJ{2}\def\Cd@bJ{2}\def\Cd@aJ{1}\def\Cd@cJ{1}\def\Cd@qF{%
+\Cd@WF{#3}}\ifPositiveGradient\let\mv\raise\def\Cd@rI{\Cd@WF{#5}}\def\Cd@SD{%
+\Cd@WF{#4}}\def\Cd@TD{\Cd@WF{#2}}\def\Cd@vD{\Cd@WF{#1}}\else\let\mv\lower\def
+\Cd@rI{\Cd@WF{#1}}\def\Cd@SD{\Cd@WF{#2}}\def\Cd@TD{\Cd@WF{#4}}\def\Cd@vD{%
+\Cd@WF{#5}}\fi\Cd@eD}\def\Cd@JE{-}\def\Cd@oC{\empty}\def\Cd@nG{\Cd@fF\Cd@KE
+\Cd@JE\@fillh}\def\Cd@qG{\Cd@fF\Cd@OJ\Cd@MJ\@fillv}\def\Cd@fF#1#2#3#4#5{\def
+\Cd@ZG{#5}\ifx\Cd@ZG#2\let#4#3\else\let#4\null\ifx\Cd@ZG\empty\else\ifx\Cd@ZG
+\Cd@oC\else\let#4\Cd@ZG\fi\fi\fi}\def\Cd@pG#1{\hbox{\mathsurround\z@
+\offinterlineskip\def\Cd@ZG{#1}\ifx\Cd@ZG\empty\else\ifx\Cd@ZG\Cd@oC\else
+\Cd@h\mkern-1.5mu{\Cd@ZG}\mkern-1.5mu\Cd@zC\fi\fi}}\def\Cd@hD#1#2{\setbox#1=%
+\hbox\bgroup\setbox0=\hbox{\Cd@h\labelstyle()\Cd@zC}%% ASCII round brackets
+\setbox1=\null\ht1\ht0\dp1\dp0\box1 \kern.1\Cd@nC\Cd@h\bgroup\labelstyle
+\aftergroup\Cd@yC\Cd@iD}\def\Cd@yC{\Cd@zC\kern.1\Cd@nC\egroup\Cd@eD}\def
+\Cd@iD{\futurelet\Cd@aG\Cd@pI}\def\Cd@pI{%% qualifiers on label arguments
+\catcase\bgroup:\Cd@r;\catcase\egroup:\missing@label;\catcase\space:\Cd@yE;%
+\tokcase[:\Cd@BF;%%]%ascii close square bracket 
+\default:\Cd@BJ;\endswitch}\def\Cd@r{\let\Cd@xC\Cd@Z\let\Cd@ZG}\def\Cd@BJ#1{%
+\let\Cd@zE\egroup{\let\actually@braces@missing@around@macro@in@label\Cd@uG
+\let\Cd@xC\Cd@lC\let\Cd@zE\Cd@@F#1%
+\actually@braces@missing@around@macro@in@label}\Cd@zE}\def
+\actually@braces@missing@around@macro@in@label{\let\Cd@ZG=}\def\missing@label
+{\egroup\Cd@UA{missing label}\Cd@zD}\def\Cd@lC{\egroup\missing@label}\outer
+\def\Cd@uG{}\def\Cd@zE{}\def\Cd@@F{\egroup\Cd@zE}\def\Cd@xC{}\def\Cd@BF{\let
+\Cd@K\Cd@iD\get@square@arg\Cd@lD}\Cd@NG\Cd@zD{The text which has just been
+read is not allowed within map labels.}\def\Cd@Z{\egroup\Cd@UA{missing \Cd@mC
+\space inserted after label}\Cd@zD}\def\upper@label{\Cd@ZD\Cd@hD6}\def
+\lower@label{\def\positional@{\Cd@w\break@args}\Cd@hD7}\def\middle@label{%
+\Cd@hD3}\Cd@PG\Cd@eE\Cd@aD\Cd@ZD\def\left@label{\ifPositiveGradient\Cd@wI
+\expandafter\upper@label\else\expandafter\lower@label\fi}\def\right@label{%
+\ifPositiveGradient\Cd@wI\expandafter\lower@label\else\expandafter
+\upper@label\fi}\Cd@VA\Cd@lG{labels as positional arguments are obsolete}\def
+\positional@{\Cd@lG\Cd@eE\Cd@wI\expandafter\upper@label\else\expandafter
+\lower@label\fi-}\def\Cd@eD{\futurelet\Cd@aG\switch@arg}\def\eat@space{%
+\afterassignment\Cd@eD\let\Cd@aG= }\def\Cd@yE{\afterassignment\Cd@iD\let
+\Cd@aG= }\def\Cd@wB{\get@round@pair\Cd@fD}\def\Cd@fD#1#2{\def\Cd@XJ{#1}\def
+\Cd@bJ{#2}\Cd@eD}\def\optional@{\let\Cd@K\Cd@eD\get@square@arg\Cd@lD}\def
+\Cd@RI.{\let\Cd@SD\Cd@UD\let\Cd@TD\Cd@UD\def\Cd@aH{\let\Cd@SD\dfdot\let\Cd@TD
+\dfdot}\Cd@eD}\def\Cd@aH{}\def\Cd@kD#1,{\Cd@EH#1,\let\Cd@ZG\Cd@fC\ifx\@name
+\Cd@BD\let\Cd@ZG\Cd@K\let\Cd@K\relax\Cd@lE\Cd@b\fi\fi\Cd@ZG}\def\Cd@fC{\Cd@eC
+\Cd@kD}\def\Cd@eC{\expandafter\let\expandafter\Cd@ZG\csname\Cd@AB @\@name
+\endcsname\ifx\Cd@ZG\relax\expandafter\let\expandafter\Cd@ZG\csname\Cd@AB
+\@name\endcsname\ifx\Cd@ZG\relax\Cd@bB{option `\@name' undefined}\else\Cd@ZG
+\fi\else\Cd@lE\expandafter\Cd@ZG\Cd@IJ\Cd@QJ\else\Cd@RJ\fi\fi}\Cd@PG\Cd@lE
+\Cd@RJ\Cd@QJ\def\Cd@EH#1,{\Cd@lE\expandafter\Cd@GH\Cd@IJ,#1,(,),(,)[]%
+%%ASCII 5commas two pairs round, pair square
+\fi\Cd@lE\else\Cd@FH#1==,\fi}\def\Cd@b{\Cd@bB{option `\@name' needs (x,y)
+value}\Cd@QJ\let\@name\empty}\def\Cd@FH#1=#2=#3,{\def\@name{#1}\def\Cd@IJ{#2}%
+\def\Cd@wE{#3}\ifx\Cd@wE\empty\let\Cd@IJ\undefined\fi}%
+%% ASCII 2commas 2pair round, pair square on next line
+\def\Cd@GH#1(#2,#3)#4,(#5,#6)#7[]{\def\Cd@IJ{{#2}{#3}}\def\Cd@wE{#1#4#5#6}%
+\ifx\Cd@wE\empty\def\Cd@wE{#7}\ifx\Cd@wE\empty\Cd@b\fi\else\Cd@b\fi}\def
+\Cd@AB{cds@}\let\Cd@K\relax\def\Cd@jD#1{\ifx\Cd@IJ\undefined\Cd@bB{option `%
+\@name' needs a value}\else#1\Cd@IJ\relax\fi}\def\Cd@mD#1#2{\ifx\Cd@IJ
+\undefined#1#2\relax\else#1\Cd@IJ\relax\fi}\def\cds@@showpair#1#2{\message{x=%
+#1,y=#2}}\def\cds@@diagonalbase#1#2{\edef\Cd@aJ{#1}\edef\Cd@cJ{#2}}\def\Cd@RH
+#1{\Cd@QF{@x}{cdps@#1}\ifx\@x\undefined\Cd@c{unknown}\else\ifx\@x\empty\Cd@c{%
+cannot be used}\else\let\Cd@KJ\@x\fi\fi}\def\Cd@c#1{\Cd@bB{PostScript
+translator `\Cd@IJ' #1}\Cd@UB\let\cds@PS\empty\let\cds@noPS\empty}\def\Cd@kG{%
+}\def\Cd@VI{\Cd@ZA\edef\Cd@kG{\noexpand\Cd@FB{\@name\space ignored within
+maths}}}\def\diagramstyle{\Cd@gI\let\Cd@K\relax\Cd@hE\Cd@lD\Cd@lD}\let
+\diagramsstyle\diagramstyle\Cd@PG\Cd@YE\Cd@NB\Cd@MB\Cd@PG\Cd@WE\Cd@@B\Cd@zA
+\Cd@PG\Cd@UE\Cd@jA\Cd@iA\Cd@PG\Cd@OE\Cd@DA\Cd@CA\Cd@DA\Cd@PG\Cd@PE\Cd@FA
+\Cd@EA\Cd@PG\Cd@QE\Cd@HA\Cd@GA\Cd@PG\Cd@bE\Cd@VB\Cd@UB\Cd@PG\Cd@kE\Cd@FJ
+\Cd@EJ\Cd@PG\Cd@XE\Cd@EB\Cd@DB\Cd@PG\Cd@SE\Cd@aA\Cd@ZA\Cd@PG\Cd@TE\Cd@eA
+\Cd@dA\Cd@PG\Cd@gE\Cd@EG\Cd@DG\Cd@IC{cds@ }{}\Cd@IC{cds@}{}\Cd@IC{cds@1em}{%
+\CellSize1\Cd@nC}\Cd@IC{cds@1.5em}{\CellSize1.5\Cd@nC}\Cd@IC{cds@2em}{%
+\CellSize2\Cd@nC}\Cd@IC{cds@2.5em}{\CellSize2.5\Cd@nC}\Cd@IC{cds@3em}{%
+\CellSize3\Cd@nC}\Cd@IC{cds@3.5em}{\CellSize3.5\Cd@nC}\Cd@IC{cds@4em}{%
+\CellSize4\Cd@nC}\Cd@IC{cds@4.5em}{\CellSize4.5\Cd@nC}\Cd@IC{cds@5em}{%
+\CellSize5\Cd@nC}\Cd@IC{cds@6em}{\CellSize6\Cd@nC}\Cd@IC{cds@7em}{\CellSize7%
+\Cd@nC}\Cd@IC{cds@8em}{\CellSize8\Cd@nC}\def\cds@abut{\MapsAbut\dimen1\z@
+\dimen5\z@}\def\cds@alignlabels{\Cd@EA\Cd@GA}\def\cds@amstex{\ifincommdiag
+\Cd@L\else\def\CD{\diagram[amstex]}%%ascii square brackets []
+\fi\Cd@Q\catcode\lq\@\active}\def\cds@b{\let\Cd@YB\Cd@WB}\def\cds@balance{%
+\let\Cd@bA\Cd@x}\let\cds@bottom\cds@b\def\cds@center{\cds@vcentre
+\cds@nobalance}\let\cds@centre\cds@center\def\cds@centerdisplay{\Cd@DA\Cd@VI
+\cds@balance}\let\cds@centredisplay\cds@centerdisplay\def\cds@defaultsize{%
+\Cd@mD{\let\Cd@HC}{3em}}\def\cds@displayoneliner{\Cd@zA}\def\cds@dpi{\Cd@WI{1%
+truein}}\def\cds@dpm{\Cd@WI{100truecm}}\def\cds@eqno{\let\Cd@TA\Cd@IJ}\def
+\cds@fixed{\Cd@lA}\def\cds@flushleft{\Cd@CA\Cd@VI\cds@nobalance\Cd@mD\Cd@hA
+\z@}\def\cds@grid{\ifx\Cd@IJ\undefined\let\h@grid\relax\let\v@grid\relax\else
+\Cd@QF{h@grid}{cdgh@\Cd@IJ}\Cd@QF{v@grid}{cdgv@\Cd@IJ}\ifx\h@grid\relax\Cd@UA
+{unknown grid `\Cd@IJ'}\else\Cd@RB\fi\fi}\let\h@grid\relax\let\v@grid\relax
+\def\cds@gridx{\ifx\Cd@IJ\undefined\else\cds@grid\fi\let\Cd@ZG\h@grid\let
+\h@grid\v@grid\let\v@grid\Cd@ZG}\def\cds@h{\Cd@jD\DiagramCellHeight}\def
+\cds@hcenter{\let\Cd@bA\Cd@WA}\let\cds@hcentre\cds@hcenter\def\cds@heads{%
+\Cd@mD{\let\Cd@vI}\Cd@vI\Cd@LI\Cd@bE\else\ifx\Cd@vI\Cd@IF\else\Cd@EC\fi\fi}%
+\let\cds@height\cds@h\let\cds@hmiddle\cds@balance\def\cds@htriangleheight{%
+\Cd@mD\DiagramCellHeight\DiagramCellHeight\DiagramCellWidth1.73205%
+\DiagramCellHeight}\def\cds@htrianglewidth{\Cd@mD\DiagramCellWidth
+\DiagramCellWidth\DiagramCellHeight.57735\DiagramCellWidth}\def\cds@inline{%
+\Cd@aA\let\Cd@kG\empty}\def\cds@inlineoneliner{\Cd@@B}\Cd@IC{cds@l>}{\Cd@jD
+\Cd@kA\dimen2\Cd@kA}\def\cds@labelstyle{\Cd@jD{\let\labelstyle}}\def
+\cds@landscape{\Cd@eA}\def\cds@large{\CellSize5\Cd@nC}\def\cds@lefteqno{%
+\Cd@jA}\def\cds@leftshortfall{\Cd@jD{\dimen1 }}\def\cds@lowershortfall{%
+\ifPositiveGradient\cds@leftshortfall\else\cds@rightshortfall\fi}\def
+\cds@loose{\Cd@QB}\def\cds@midhshaft{\Cd@FA}\def\cds@midshaft{\Cd@FA}\def
+\cds@midvshaft{\Cd@HA}\def\cds@moreoptions{\Cd@w}\let\cds@nobalance
+\cds@hcenter\def\cds@nohcheck{\Cd@dG}\def\cds@nooptions{\def\Cd@RC{\Cd@FD}}%
+\let\cds@noorigin\cds@nobalance\def\cds@nopixel{\Cd@NH4\Cd@sG\Cd@gI}\def
+\cds@noPostScript{\Cd@mD\Cd@RH\empty\Cd@UB\let\cds@PS\empty\let\cds@noPS
+\empty}\let\cds@noPS\Cd@UB\def\cds@notextflow{\Cd@MB}\def\cds@noTPIC{\Cd@EJ}%
+\def\cds@objectstyle{\Cd@jD{\let\objectstyle}}\def\cds@origin{\let\Cd@bA
+\Cd@dB}\def\cds@p{\Cd@jD\PileSpacing}\let\cds@pilespacing\cds@p\def
+\cds@pixelsize{\Cd@jD\Cd@NH\Cd@tH}\def\cds@portrait{\Cd@dA}\def
+\cds@PostScript{\Cd@VB\let\cds@PS\Cd@VB\let\cds@noPS\Cd@UB\Cd@mD\Cd@RH\empty}%
+\let\cds@PS\Cd@VB\def\cds@repositionpullbacks{\let\make@pbk\Cd@kJ}\def
+\cds@righteqno{\Cd@iA}\def\cds@rightshortfall{\Cd@jD{\dimen5 }}\def
+\cds@ruleaxis{\Cd@jD{\let\axisheight}}\def\cds@cmex{\let\Cd@hF\Cd@dJ\let
+\Cd@MI\Cd@fJ}\def\cds@s{\cds@height\DiagramCellWidth\DiagramCellHeight}\def
+\cds@scriptlabels{\let\labelstyle\scriptstyle}\def\cds@shortfall{\Cd@jD
+\MapShortFall\dimen1\MapShortFall\dimen5\MapShortFall}\def\cds@showfirstpass{%
+\Cd@mD{\let\Cd@YD}\z@}\let\cds@size\cds@s\def\cds@small{\CellSize2\Cd@nC}\def
+\cds@t{\let\Cd@YB\Cd@aB}\def\cds@textflow{\Cd@NB\Cd@VI}\def\cds@thick{\let
+\Cd@SF\tenlnw\Cd@qE\Cd@FC\Cd@mD\MapBreadth{2\Cd@qE}}\def\cds@thin{\let\Cd@SF
+\tenln\Cd@mD\MapBreadth{\Cd@FC}}\def\cds@tight{\Cd@RB}\let\cds@top\cds@t\def
+\cds@TPIC{\Cd@FJ}\def\cds@uppershortfall{\ifPositiveGradient
+\cds@rightshortfall\else\cds@leftshortfall\fi}\def\cds@vcenter{\let\Cd@YB
+\Cd@XB}\let\cds@vcentre\cds@vcenter\def\cds@vtriangleheight{\Cd@mD
+\DiagramCellHeight\DiagramCellHeight\DiagramCellWidth.577035%
+\DiagramCellHeight}\def\cds@vtrianglewidth{\Cd@mD\DiagramCellWidth
+\DiagramCellWidth\DiagramCellHeight1.73205\DiagramCellWidth}\def\cds@vmiddle{%
+\let\Cd@YB\Cd@ZB}\def\cds@w{\Cd@jD\DiagramCellWidth}\let\cds@width\cds@w\def
+\diagram{\relax\protect\Cd@QC}\def\enddiagram{\protect\Cd@rF}\def\Cd@QC{\Cd@d
+\Cd@FI\incommdiagtrue\edef\Cd@HI{\the\Cd@IB}\global\Cd@IB\z@\boxmaxdepth
+\maxdimen\Cd@RC}\def\Cd@RC{\Cd@u\let\Cd@K\Cd@SC\Cd@hE\Cd@lD\Cd@FD}\def\Cd@SC{%
+\Cd@ME\expandafter\Cd@RC\else\expandafter\Cd@FD\fi}\def\Cd@FD{\let\Cd@aG
+\relax\Cd@TE\Cd@bE\else\Cd@FB{landscape ignored without PostScript}\Cd@dA\fi
+\fi\setbox2=\vbox\bgroup\Cd@oE\Cd@GD}\def\Cd@xG{\Cd@TE\Cd@aB\else\Cd@YB\fi
+\Cd@bA\nointerlineskip\setbox0=\null\ht0-\Cd@AI\dp0\Cd@AI\wd0\Cd@wH\box0
+\global\Cd@MA\Cd@NF\global\Cd@tA\Cd@SB\egroup\Cd@ZF\Cd@TE\setbox2=\hbox to\dp
+2{\dp2=\Cd@MA\global\Cd@MA\ht2\ht2\wd2\global\Cd@EG\Cd@KJ{0 1 bturn}\box2%
+\Cd@KJ{eturn}\hss}\Cd@zA\fi\ifnum\Cd@tA=1 \else\Cd@zA\fi\global\@ignorefalse
+\Cd@SE\leavevmode\fi\ifvmode\Cd@PA\else\ifmmode\Cd@kG\Cd@UH\else\Cd@WE\Cd@aA
+\fi\ifinner\Cd@aA\fi\Cd@SE\Cd@UH\else\Cd@YE\Cd@LB\else\Cd@PA\fi\fi\fi\fi
+\Cd@ND}\def\Cd@ND{\global\Cd@IB\Cd@HI\relax\Cd@dE\global\Cd@vC\else
+\aftergroup\Cd@cC\fi\if@ignore\aftergroup\ignorespaces\fi\Cd@kC\ignorespaces}%
+\def\Cd@aB{\advance\Cd@AI\dimen1\relax}\def\Cd@ZB{\advance\Cd@AI.5\dimen1%
+\relax}\def\Cd@WB{}\def\Cd@XB{\Cd@aB\advance\Cd@AI\Cd@TB\divide\Cd@AI2
+\advance\Cd@AI-\axisheight\relax}\def\Cd@WA{}\def\Cd@dB{\Cd@NF\z@}\def\Cd@x{%
+\ifdim\dimen2>\Cd@NF\Cd@NF\dimen2 \else\dimen2\Cd@NF\Cd@wH\dimen0 \advance
+\Cd@wH\dimen2 \fi}\def\Cd@LB{\skip0\z@\relax\loop\skip1\lastskip\ifdim\skip1>%
+\z@\unskip\advance\skip0\skip1 \repeat\vadjust{\prevdepth\dp\strutbox\penalty
+\predisplaypenalty\vskip\abovedisplayskip\Cd@QA\penalty\postdisplaypenalty
+\vskip\belowdisplayskip}\ifdim\skip0=\z@\else\hskip\skip0 \global\@ignoretrue
+\fi}\def\Cd@PA{\Cd@mF\kern-\displayindent\Cd@QA\Cd@mF\global\@ignoretrue}\def
+\Cd@QA{\hbox to\hsize{\setbox1=\hbox{\ifx\Cd@TA\undefined\else\Cd@h\Cd@TA
+\Cd@zC\fi}\Cd@UE\Cd@OE\else\advance\Cd@MA\wd1 \fi\wd1\z@\box1 \fi\dimen0\wd2
+\advance\dimen0\wd1 \advance\dimen0-\hsize\ifdim\dimen0>-\Cd@hA\Cd@DA\fi
+\advance\dimen0\Cd@MA\ifdim\dimen0>\z@\Cd@FB{wider than the page by \the
+\dimen0 }\Cd@DA\fi\Cd@OE\hss\else\Cd@S\Cd@MA\Cd@hA\fi\Cd@UH\hss\kern-\wd1\box
+1 }}\def\Cd@UH{\Cd@gE\Cd@fE\else\Cd@JC\global\Cd@DG\fi\fi\kern\Cd@MA\box2 }%
+\Cd@PG\Cd@cE\Cd@PC\Cd@OC\def\Cd@oE{\Cd@gI\ifdim\DiagramCellHeight=-\maxdimen
+\DiagramCellHeight\Cd@HC\fi\ifdim\DiagramCellWidth=-\maxdimen
+\DiagramCellWidth\Cd@HC\fi\global\Cd@OC\Cd@nE\let\Cd@qD\empty\let\Cd@v\Cd@N
+\let\overprint\Cd@jJ\let\Cd@o\Cd@uI\let\enddiagram\Cd@rC\let\\\Cd@TC\let\par
+\Cd@AH\let\Cd@xC\empty\let\switch@arg\Cd@KB\let\shift\Cd@cA\baselineskip
+\DiagramCellHeight\lineskip\z@\lineskiplimit\z@\mathsurround\z@\tabskip\z@
+\Cd@JB}\def\Cd@GD{\penalty-123 \begingroup\Cd@dA\aftergroup\Cd@H\halign
+\bgroup\global\advance\Cd@IB1 \vadjust{\penalty1}\global\Cd@BA\z@\Cd@JB\Cd@f#%
+#\Cd@qC\Cd@N\Cd@N\Cd@cH\Cd@f##\Cd@qC\cr}\def\Cd@rC{\Cd@xC\Cd@tC\crcr\egroup
+\global\Cd@wC\endgroup}\def\Cd@f{\global\advance\Cd@BA1 \futurelet\Cd@aG\Cd@g
+}\def\Cd@g{\ifx\Cd@aG\Cd@qC\Cd@wI\hskip1sp plus 1fil \relax\let\Cd@qC\relax
+\else\hfil\Cd@h\objectstyle\let\Cd@qD\Cd@a\fi}\def\Cd@qC{\Cd@xC\relax\Cd@JI
+\global\Cd@MA\Cd@cA\penalty-9993 \Cd@zC\hfil\null\kern-2\Cd@MA\null}\def
+\Cd@TC{\cr}\def\across#1{\span\omit\mscount=#1 \global\advance\Cd@BA\mscount
+\global\advance\Cd@BA\m@ne\Cd@TF\ifnum\mscount>2 \Cd@iI\repeat\ignorespaces}%
+\def\Cd@iI{\relax\span\omit\advance\mscount\m@ne}\def\Cd@tI{\ifincommdiag\ifx
+\Cd@SD\@fillh\ifx\Cd@TD\@fillh\ifdim\dimen3>\z@\else\ifdim\dimen2>93\Cd@NH
+\ifdim\dimen2>18\p@\ifdim\Cd@qE>\z@\count@\Cd@fI\advance\count@\m@ne\ifnum
+\count@<\z@\count@20\let\Cd@eI\Cd@xI\fi\xdef\Cd@fI{\the\count@}\fi\fi\fi\fi
+\fi\fi\fi}\def\Cd@@G#1{\vrule\horizhtdp width#1\dimen@\kern2\dimen@}\def
+\Cd@xI{\rlap{\dimen@\Cd@NH\Cd@S\dimen@{.182\p@}\Cd@MH\dimen@\advance\Cd@EI
+\dimen@\Cd@@G0\Cd@@G0\Cd@@G2\Cd@@G6\Cd@@G6\Cd@@G2\Cd@@G0\Cd@@G0\Cd@@G2\Cd@@G6%
+\Cd@@G0\Cd@@G0\Cd@@G2\Cd@@G2\Cd@@G6\Cd@@G0\Cd@@G0\Cd@@G2\Cd@@G6\Cd@@G2\Cd@@G2%
+\Cd@@G0\Cd@@G0}}\def\Cd@fI{10}\def\Cd@eI{}\def\Cd@HD{\Cd@ME\Cd@OB\fi\Cd@t
+\Cd@AF\Cd@VH}\def\Cd@t{\Cd@MI\Cd@TI\ifvoid3 \setbox3=\null\ht3\Cd@EI\dp3%
+\Cd@DI\else\Cd@S{\ht3}\Cd@EI\Cd@S{\dp3}\Cd@DI\fi\dimen3=.5\wd3 \ifdim\dimen3=%
+\z@\Cd@ZE\else\dimen3-\Cd@sG\fi\else\Cd@OB\fi\Cd@S{\dimen2}{\wd7}\Cd@S{\dimen
+2}{\wd6}\Cd@S{\dimen2}{.5em}\Cd@tI\advance\dimen2-2\dimen3 \dimen4.5\dimen2
+\dimen2\dimen4 \advance\dimen2-\wd1 \advance\dimen4-\wd5 \ifvoid2 \else\Cd@S{%
+\ht3}{\ht2}\Cd@S{\dp3}{\dp2}\Cd@S{\dimen2}{\wd2}\fi\ifvoid4 \else\Cd@S{\ht3}{%
+\ht4}\Cd@S{\dp3}{\dp4}\Cd@S{\dimen4}{\wd4}\fi\advance\skip2\dimen2 \advance
+\skip4\dimen4 \Cd@ZE\advance\skip2\skip4 \dimen0\dimen5 \advance\dimen0\wd5
+\skip3-\skip4 \advance\skip3-\dimen0 \let\Cd@TD\empty\else\skip3\z@\relax
+\dimen0\z@\fi}\def\Cd@AF{\offinterlineskip\lineskip.2\Cd@nC\ifvoid6 \else
+\setbox3=\vbox{\hbox to2\dimen3{\hss\box6\hss}\box3}\fi\ifvoid7 \else\setbox3%
+=\vtop{\box3 \hbox to2\dimen3{\hss\box7\hss}}\fi}\def\Cd@VH{\kern\dimen1 \box
+1 \Cd@eI\Cd@SD\hskip\skip2 \kern\dimen0 \ifincommdiag\kern\dimen3 \Cd@PE
+\penalty1\fi\penalty\Cd@BB\hskip\skip3 \null\kern-\dimen3 \else\hskip\skip3
+\fi\box3 \Cd@TD\hskip\skip4 \box5 \kern\dimen5}\def\Cd@rE{\ifnum\Cd@gG>\Cd@KC
+\Cd@S{\dimen1}\objectheight\Cd@S{\dimen5}\objectheight\else\Cd@S{\dimen1}%
+\objectwidth\Cd@S{\dimen5}\objectwidth\fi}\def\Cd@V{\begingroup\ifdim\dimen7=%
+\z@\kern\dimen8 \else\ifdim\dimen6=\z@\kern\dimen9 \else\dimen5\dimen6 \dimen
+6\dimen9 \Cd@SI\dimen4\dimen2 \Cd@AG{\dimen4}\dimen6\dimen5 \dimen7\dimen8
+\Cd@SI\Cd@ZC{\dimen2}\ifdim\dimen2<\dimen4 \kern\dimen2 \else\kern\dimen4 \fi
+\fi\fi\endgroup}\def\Cd@mI{\Cd@XH\setbox\z@\hbox{\lower\axisheight\hbox to%
+\dimen2{\Cd@jE\ifPositiveGradient\dimen8\ht\Cd@hG\dimen9\Cd@yH\else\dimen8\dp
+3 \dimen9\dimen1 \fi\else\dimen8 \ifPositiveGradient\objectheight\else\z@\fi
+\dimen9\objectwidth\fi\advance\dimen8 \ifPositiveGradient-\fi\axisheight\Cd@V
+\unhbox\z@\Cd@jE\ifPositiveGradient\dimen8\dp3 \dimen9\dimen0 \else\dimen8\ht
+\Cd@hG\dimen9\Cd@PF\fi\else\dimen8 \ifPositiveGradient\z@\else\objectheight
+\fi\dimen9\objectwidth\fi\advance\dimen8 \ifPositiveGradient\else-\fi
+\axisheight\Cd@V}}}\def\Cd@LD{\dimen6 \Cd@bJ\DiagramCellHeight\dimen7 \Cd@XJ
+\DiagramCellWidth\Cd@mI\ifPositiveGradient\advance\dimen7-\Cd@aJ
+\DiagramCellWidth\else\dimen7 \Cd@aJ\DiagramCellWidth\dimen6\z@\multiply
+\Cd@gG\m@ne\fi\advance\dimen6-\Cd@cJ\DiagramCellHeight\setbox0=\rlap{\global
+\Cd@EG\kern-\dimen7 \lower\dimen6\hbox{\Cd@OD{\the\Cd@KC\space\the\Cd@gG
+\space bturn}\box0 \Cd@KJ{eturn}}}\ht0\z@\dp0\z@\raise\axisheight\box0 }\def
+\Cd@pB{\advance\Cd@LF-\Cd@yH\Cd@zI\Cd@LF\advance\Cd@zI\Cd@uH\ifvoid\Cd@HH
+\ifdim\Cd@zI<.1em\ifnum\Cd@QD=\@m\else\Cd@yF h\Cd@zI<.1em:objects overprint:%
+\Cd@BA\Cd@QD\fi\fi\else\ifhbox\Cd@HH\Cd@TJ\else\Cd@UJ\fi\advance\Cd@zI\Cd@yH
+\Cd@wG{-\Cd@yH}{\box\Cd@HH}{\Cd@zI}\z@\fi\Cd@LF-\Cd@PF\Cd@QD\Cd@BA\Cd@uH\z@}%
+\def\Cd@TJ{\setbox\Cd@HH=\hbox{\unhbox\Cd@HH\unskip\unpenalty}\setbox\Cd@IH=%
+\hbox{\unhbox\Cd@IH\unskip\unpenalty}\setbox\Cd@HH=\hbox to\Cd@zI{\Cd@KA\wd
+\Cd@HH\unhbox\Cd@HH\ifnum\lastpenalty=\z@\else\Cd@FA\unpenalty\fi\ifdim
+\lastkern=\z@\Cd@PB\advance\Cd@KA-\wd\Cd@IH\else\Cd@OB\fi\ifdim\Cd@LF<\Cd@KA
+\Cd@FA\fi\ifdim\Cd@uH<\wd\Cd@IH\Cd@FA\fi\Cd@PE\Cd@uH\Cd@zI\advance\Cd@uH-%
+\Cd@KA\advance\Cd@uH\wd\Cd@IH\ifdim\Cd@uH<2\wd\Cd@IH\Cd@yF h\Cd@uH<2\wd\Cd@IH
+:arrow too short:\Cd@BA\Cd@QD\fi\divide\Cd@uH\tw@\Cd@LF\Cd@zI\advance\Cd@LF-%
+\Cd@uH\fi\Cd@ZE\kern-\Cd@uH\fi\hbox to\Cd@uH{\unhbox\Cd@IH}\Cd@iF}}\def\pile{%
+\protect\Cd@ZI\protect\Cd@JH}\def\Cd@JH#1{\Cd@i#1\Cd@@D}\def\Cd@ZI{\Cd@iB{%
+pile}\setbox0=\vtop\bgroup\aftergroup\Cd@WD\let\Cd@qD\empty\let\pile\Cd@pE
+\let\Cd@@D\Cd@AD\let\Cd@tC\Cd@sC\Cd@LH\baselineskip.5\PileSpacing\lineskip.1%
+\Cd@nC\relax\lineskiplimit\lineskip\mathsurround\z@\tabskip\z@\let\\\Cd@KH}%
+\def\Cd@i{\Cd@oD\Cd@CF\empty\halign\bgroup\hfil\Cd@h\let\Cd@qD\Cd@a##\Cd@xC
+\Cd@zC\hfil\Cd@N\Cd@O##\cr}\Cd@NG\Cd@xD{pile only allows one column.}\Cd@NG
+\Cd@DE{you left it out!}\def\Cd@O{\Cd@@D\Cd@N\relax\Cd@UA{missing \Cd@mC
+\space inserted after \string\pile}\Cd@xD}\def\Cd@AD{\Cd@xC\crcr\egroup
+\egroup}\def\Cd@tC{\Cd@xC}\def\Cd@sC{\Cd@xC\relax\Cd@@D\Cd@UA{missing \Cd@mC
+\space inserted between \string\pile\space and \Cd@uC}\Cd@DE}\def\Cd@@D{%
+\Cd@xC}\def\Cd@WD{\vbox{\dimen1\dp0 \unvbox0 \setbox0=\lastbox\advance\dimen1%
+\dp0 \nointerlineskip\box0 \nointerlineskip\setbox0=\null\dp0.5\dimen1\ht0-%
+\dp0 \box0}\ifincommdiag\Cd@wI\penalty-9998 \fi\xdef\Cd@CF{pile}}\def\Cd@KH{%
+\cr}\def\Cd@pE#1{#1}\def\Cd@UJ{\setbox\Cd@HH=\vbox{\unvbox\Cd@HH\setbox1=%
+\lastbox\setbox0=\box\voidb@x\Cd@UF\setbox\Cd@HH=\lastbox\ifhbox\Cd@HH\Cd@gC
+\repeat\unvbox0 \global\Cd@MA\Cd@IE}\Cd@IE\Cd@MA}\def\Cd@gC{\Cd@PE\setbox
+\Cd@HH=\hbox{\unhbox\Cd@HH\unskip\setbox\Cd@HH=\lastbox\unskip\unhbox\Cd@HH}%
+\ifdim\Cd@zI<\wd\Cd@HH\Cd@yF h\Cd@zI<\wd\Cd@HH:arrow in pile too short:\Cd@BA
+\Cd@QD\else\setbox\Cd@HH=\hbox to\Cd@zI{\unhbox\Cd@HH}\fi\else\Cd@jI\fi
+\setbox0=\vbox{\box\Cd@HH\nointerlineskip\ifvoid0 \Cd@wI\box1 \else\vskip
+\skip0 \unvbox0 \fi}\skip0=\lastskip\unskip}\def\Cd@jI{\penalty7 \noindent
+\unhbox\Cd@HH\unskip\setbox\Cd@HH=\lastbox\unskip\unhbox\Cd@HH\endgraf\setbox
+\Cd@IH=\lastbox\unskip\setbox\Cd@IH=\hbox{\Cd@kF\unhbox\Cd@IH\unskip\unskip
+\unpenalty}\ifcase\prevgraf\cd@shouldnt P\or\ifdim\Cd@zI<\wd\Cd@IH\Cd@yF h%
+\Cd@zI<\wd\Cd@HH:object in pile too wide:\Cd@BA\Cd@QD\setbox\Cd@HH=\hbox to%
+\Cd@zI{\hss\unhbox\Cd@IH\hss}\else\setbox\Cd@HH=\hbox to\Cd@zI{\hss\kern
+\Cd@LF\unhbox\Cd@IH\kern\Cd@uH\hss}\fi\or\setbox\Cd@HH=\lastbox\unskip\Cd@TJ
+\else\cd@shouldnt P\fi\unskip\unpenalty}\def\Cd@MD{\Cd@TI\ifvoid3 \setbox3=%
+\null\ht3\axisheight\dp3-\ht3 \dimen3.5\Cd@qE\else\dimen4\dp3 \dimen3.5\wd3
+\setbox3=\Cd@hF{\box3}\dp3\dimen4 \ifdim\ht3=-\dp3 \else\Cd@OB\fi\fi\setbox0=%
+\null\Cd@ZE\dimen4=\ht\Cd@hG\advance\dimen4\dp5 \advance\dimen4\dimen1 \let
+\Cd@TD\empty\else\dimen4\ht3 \fi\ht0\dimen4 \offinterlineskip\setbox8=\vbox
+spread2ex{\kern\dimen5 \box1 \Cd@SD\vfill\box0}\ht8=\z@\setbox9=\vtop spread2%
+ex{\kern-\ht3 \box3 \Cd@TD\vfill\box5 \kern\dimen1}\dp9=\z@\dimen0\dimen3
+\advance\dimen0-.5\Cd@qE\hskip\z@ plus.0001fil \box6 \kern\dimen0 \box9 \kern
+-\Cd@qE\box8 \Cd@ZE\penalty1 \fi\kern\PileSpacing\kern-\PileSpacing\kern-.5%
+\Cd@qE\penalty\Cd@BB\null\kern\dimen3 \box7}\def\Cd@qH{\ifhbox\Cd@RA\Cd@FB{%
+clashing verticals}\ht\Cd@hG.5\dp\Cd@RA\dp\Cd@hG-\ht5 \Cd@rB\ht\Cd@hG\z@\dp
+\Cd@hG\z@\fi\dimen1\dp\Cd@RA\Cd@sA\prevgraf\unvbox\Cd@RA\Cd@rA\lastpenalty
+\unpenalty\setbox\Cd@RA=\null\setbox\Cd@xH=\hbox{\Cd@kF\unhbox\Cd@xH\unskip
+\unpenalty\dimen0\lastkern\unkern\unkern\unkern\kern\dimen0 \Cd@iF}\setbox
+\Cd@OF=\hbox{\unhbox\Cd@OF\dimen0\lastkern\unkern\unkern\global\Cd@MA
+\lastkern\unkern\kern\dimen0 }\Cd@UF\ifnum\Cd@sA>4 \Cd@KI\repeat\unskip
+\unskip\advance\Cd@PF.5\wd\Cd@RA\advance\Cd@PF\wd\Cd@OF\advance\Cd@yH.5\wd
+\Cd@RA\advance\Cd@yH\wd\Cd@xH\setbox\Cd@RA=\hbox{\kern-\Cd@PF\box\Cd@OF
+\unhbox\Cd@RA\box\Cd@xH\kern-\Cd@yH\penalty\Cd@rA\penalty\Cd@IB}\ht\Cd@RA
+\dimen1 \dp\Cd@RA\z@\wd\Cd@RA\Cd@nB\Cd@pB}\def\Cd@KI{\ifdim\wd\Cd@OF<\Cd@MA
+\setbox\Cd@OF=\hbox to\Cd@MA{\Cd@kF\unhbox\Cd@OF}\fi\advance\Cd@sA\m@ne
+\setbox\Cd@RA=\hbox{\box\Cd@OF\unhbox\Cd@RA}\unskip\setbox\Cd@OF=\lastbox
+\setbox\Cd@OF=\hbox{\unhbox\Cd@OF\unskip\unpenalty\dimen0\lastkern\unkern
+\unkern\global\Cd@MA\lastkern\unkern\kern\dimen0 }}\def\Cd@rB{\dimen1\dp
+\Cd@RA\ifhbox\Cd@RA\Cd@sB\else\Cd@tB\fi\setbox\Cd@RA=\vbox{\penalty\Cd@IB}\dp
+\Cd@RA-\dp\Cd@hG\wd\Cd@RA\Cd@nB}\def\Cd@tB{\unvbox\Cd@RA\Cd@rA\lastpenalty
+\unpenalty\ifdim\dimen1<\ht\Cd@hG\Cd@yF v\dimen1<\ht\Cd@hG:rows overprint:%
+\Cd@IB\Cd@rA\fi}\def\Cd@sB{\dimen0=\ht\Cd@RA\Cd@QE\advance\dimen0\dimen1
+\dimen1.5\dimen0 \dimen0\dimen1 \fi\setbox\Cd@RA=\hbox\bgroup\advance\dimen1-%
+\ht\Cd@hG\unhbox\Cd@RA\Cd@sA\lastpenalty\unpenalty\Cd@rA\lastpenalty
+\unpenalty\global\Cd@NA-\lastkern\unkern\setbox0=\lastbox\Cd@UF\setbox\Cd@RA=%
+\hbox{\box0\unhbox\Cd@RA}\setbox0=\lastbox\ifhbox0 \Cd@nI\repeat\global\Cd@OA
+-\lastkern\unkern\global\Cd@MA\Cd@LJ\unhbox\Cd@RA\egroup\Cd@LJ\Cd@MA\Cd@wG{%
+\Cd@OA}{\box\Cd@RA}{\Cd@NA}{\dimen1}}\def\Cd@nI{\setbox0=\hbox to\wd0\bgroup
+\unhbox0 \unskip\unpenalty\dimen7\lastkern\unkern\ifnum\lastpenalty=1
+\unpenalty\Cd@PB\else\Cd@OB\fi\setbox0=\lastbox\dimen6\lastkern\unkern\setbox
+1=\lastbox\setbox0=\vbox{\unvbox0\Cd@ZE\kern-\dimen1\fi}\ifdim\dimen0<\ht0
+\Cd@yF v\dimen0<\ht0:upper part of vertical too short:{\Cd@ZE\Cd@IB\else
+\Cd@rA\fi}\Cd@sA\else\setbox0=\vbox to\dimen0{\unvbox0}\fi\setbox1=\vtop{%
+\unvbox1}\ifdim\dimen1<\dp1 \Cd@yF v\dimen1<\dp1:lower part of vertical too
+short:\Cd@IB\Cd@rA\else\setbox1=\vtop to\dimen1{\unvbox1}\fi\box1 \kern\dimen
+6 \box0 \kern\dimen7 \Cd@iF\global\Cd@MA\Cd@LJ\egroup\Cd@LJ\Cd@MA\relax}%
+\countdef\Cd@q=14 \newcount\Cd@z\newcount\Cd@SB\newcount\Cd@IB\let\Cd@GB
+\insc@unt\newcount\Cd@BA\newcount\Cd@fA\let\Cd@gA\Cd@SB\newcount\Cd@HB\Cd@PG
+\Cd@jE\Cd@pH\Cd@oH\Cd@oH\def\Cd@YD{-1}\def\Cd@H{\ifnum\Cd@YD<\z@\else
+\begingroup\scrollmode\showboxdepth\Cd@YD\showboxbreadth\maxdimen\showlists
+\endgroup\fi\Cd@pH\Cd@ZF\Cd@z=\Cd@q\advance\Cd@z1 \Cd@SB=\Cd@z\ifnum\Cd@IB=1
+\Cd@FA\fi\advance\Cd@SB\Cd@IB\dimen1\z@\skip0\z@\count@=\insc@unt\advance
+\count@\Cd@q\divide\count@2 \ifnum\Cd@SB>\count@\Cd@FB{The diagram has too
+many rows! It can't be reformatted.}\else\Cd@oF\Cd@kH\fi\Cd@xG}\def\Cd@oF{%
+\Cd@IB\Cd@z\Cd@VF\ifnum\Cd@IB<\Cd@SB\setbox\Cd@IB\box\voidb@x\advance\Cd@IB1%
+\relax\repeat\Cd@IB\Cd@z\skip\z@\z@\Cd@VF\Cd@BB\lastpenalty\unpenalty\ifnum
+\Cd@BB>\z@\Cd@uD\repeat\ifnum\Cd@BB=-123 \Cd@wI\unpenalty\else\cd@shouldnt M%
+\fi\ifx\v@grid\relax\else\Cd@IB\Cd@SB\advance\Cd@IB\m@ne\expandafter\Cd@hJ
+\v@grid\fi\Cd@HB\Cd@gA\Cd@nB\z@\Cd@vF\ifx\h@grid\relax\else\expandafter\Cd@gJ
+\h@grid\fi\count@\Cd@SB\advance\count@\m@ne\Cd@TB\ht\count@}\def\Cd@uD{%
+\ifcase\Cd@BB\or\Cd@nF\else\Cd@pA-\lastpenalty\unpenalty\Cd@qA\lastpenalty
+\unpenalty\setbox0=\lastbox\Cd@uF\fi\Cd@gD}\def\Cd@gD{\skip1\lastskip\unskip
+\advance\skip0\skip1 \ifdim\skip1=\z@\else\expandafter\Cd@gD\fi}\def\Cd@nF{%
+\setbox0=\lastbox\Cd@AI\dp0 \advance\Cd@AI\skip\z@\skip\z@\z@\advance\Cd@sE
+\Cd@AI\Cd@aE\ifnum\Cd@IB>\Cd@z\Cd@sE\DiagramCellHeight\Cd@AI\Cd@sE\advance
+\Cd@AI-\Cd@BI\fi\fi\Cd@BI\ht0 \Cd@sE\Cd@BI\setbox\Cd@IB\hbox{\unhbox\Cd@IB
+\unhbox0}\dp\Cd@IB\Cd@AI\ht\Cd@IB\Cd@BI\advance\Cd@IB1 }\def\Cd@uF{\advance
+\Cd@pA\Cd@SB\ifnum\Cd@pA<\Cd@z\Cd@FB{diagonal goes below diagram - ignored}%
+\else\Cd@KA\dp\Cd@pA\Cd@LA\ht\Cd@pA\setbox\Cd@pA\hbox{\box\z@\penalty\Cd@qA
+\penalty\Cd@BB\unhbox\Cd@pA}\dp\Cd@pA\Cd@KA\ht\Cd@pA\Cd@LA\fi}\def\Cd@eJ{%
+\advance\Cd@pA\Cd@SB\ifnum\Cd@pA<\Cd@z\Cd@FB{diagonal goes below diagram -
+ignored}\else\ifnum\Cd@pA=\Cd@IB\Cd@tF\else\Cd@KA\dp\Cd@pA\Cd@LA\ht\Cd@pA
+\setbox\Cd@pA\hbox{\box\z@\penalty\Cd@qA\penalty\Cd@BB\unhbox\Cd@pA}\dp\Cd@pA
+\Cd@KA\ht\Cd@pA\Cd@LA\fi\fi}\def\Cd@kH{\Cd@p\Cd@MI\setbox\Cd@GC=\hbox{\Cd@h A%
+\@super f\Cd@oI f\Cd@zC}\Cd@IE\z@\Cd@LJ\z@\Cd@wH\z@\Cd@NF\z@\Cd@IB=\Cd@SB
+\Cd@sE\z@\Cd@oB\z@\Cd@VF\ifnum\Cd@IB>\Cd@z\advance\Cd@IB\m@ne\Cd@BI\ht\Cd@IB
+\Cd@AI\dp\Cd@IB\advance\Cd@sE\Cd@BI\Cd@CI\advance\Cd@oB\Cd@sE\Cd@CC\Cd@nH
+\Cd@s\ht\Cd@IB\Cd@BI\dp\Cd@IB\Cd@AI\nointerlineskip\box\Cd@IB\Cd@sE\Cd@AI
+\setbox\Cd@IB\null\ht\Cd@IB\Cd@oB\repeat\Cd@qB\nointerlineskip\box\Cd@IB
+\Cd@CG\Cd@IE\DiagramCellWidth{width}\Cd@CG\Cd@LJ\DiagramCellHeight{height}%
+\Cd@RA\Cd@GB\advance\Cd@RA-\Cd@fA\advance\Cd@RA\m@ne\advance\Cd@RA\Cd@gA
+\dimen0\wd\Cd@RA\Cd@EI\axisheight\dimen1\Cd@oB\advance\dimen1-\Cd@TB\dimen7%
+\Cd@wH\advance\dimen7-\dimen0 \advance\Cd@SB-\Cd@z\advance\Cd@GB-\Cd@fA}%
+\count@\year\multiply\count@12 \advance\count@\month\ifnum\count@>23953 \loop
+\iftrue\message{gone November 1995!}\repeat\fi\def\Cd@qB{\Cd@BI-\Cd@sE\Cd@AI
+\Cd@sE\setbox\Cd@hG=\null\dp\Cd@hG\Cd@sE\ht\Cd@hG-\Cd@sE\Cd@PF\z@\Cd@yH\z@
+\Cd@fA\Cd@GB\advance\Cd@fA-\Cd@HB\advance\Cd@fA\Cd@gA\Cd@BA\Cd@GB\Cd@RA\Cd@HB
+\Cd@TF\ifnum\Cd@BA>\Cd@fA\advance\Cd@BA\m@ne\advance\Cd@RA\m@ne\Cd@nB\wd
+\Cd@RA\setbox\Cd@BA=\box\voidb@x\Cd@rB\repeat\Cd@s\ht\Cd@IB\Cd@BI\dp\Cd@IB
+\Cd@AI}\def\Cd@CG#1#2#3{\ifdim#1>.01\Cd@nC\Cd@LA#2\relax\advance\Cd@LA#1%
+\relax\advance\Cd@LA.99\Cd@nC\count@\Cd@LA\divide\count@\Cd@nC\Cd@FB{increase
+cell #3 to \the\count@ em}\fi}\def\Cd@CI{\Cd@BA=\Cd@GB\penalty4 \noindent
+\unhbox\Cd@IB\Cd@TF\unskip\setbox0=\lastbox\ifhbox0 \advance\Cd@BA\m@ne
+\setbox\Cd@BA\hbox to\wd0{\null\penalty-9990\null\unhbox0}\repeat\Cd@fA\Cd@BA
+\advance\Cd@BA\Cd@HB\advance\Cd@BA-\Cd@gA\ifnum\Cd@BA<\Cd@GB\count@\Cd@BA
+\advance\count@\m@ne\dimen0=\wd\count@\count@\Cd@HB\advance\count@\m@ne\Cd@nB
+\wd\count@\Cd@TF\ifnum\Cd@BA<\Cd@GB\Cd@NI\Cd@vF\dimen0\wd\Cd@BA\advance\Cd@BA
+1 \repeat\fi\Cd@TF\Cd@BB\lastpenalty\unpenalty\ifnum\Cd@BB>\z@\Cd@qA
+\lastpenalty\unpenalty\Cd@tF\repeat\endgraf\unskip\ifnum\lastpenalty=4
+\unpenalty\else\cd@shouldnt S\fi}\def\Cd@tF{\advance\Cd@qA\Cd@fA\advance
+\Cd@qA\m@ne\setbox0=\lastbox\ifnum\Cd@qA<\Cd@GB\setbox\Cd@qA\hbox{\box0%
+\penalty\Cd@BB\unhbox\Cd@qA}\else\Cd@FB{missive goes to right of diagram -
+ignored}\fi}\def\Cd@zF{}\Cd@PG\Cd@aE\Cd@RB\Cd@QB\def\Cd@NI{\advance\dimen0\wd
+\Cd@BA\divide\dimen0\tw@\Cd@aE\dimen0\DiagramCellWidth\else\Cd@S{\dimen0}%
+\DiagramCellWidth\Cd@sI\fi\advance\Cd@nB\dimen0 }\def\Cd@vF{\setbox\Cd@HB=%
+\vbox{}\dp\Cd@HB=\Cd@oB\wd\Cd@HB\Cd@nB\advance\Cd@HB1 }\def\Cd@gJ#1,{\def
+\Cd@IJ{#1}\ifx\Cd@IJ\Cd@BD\else\advance\Cd@nB\Cd@IJ\DiagramCellWidth\Cd@vF
+\expandafter\Cd@gJ\fi}\def\Cd@hJ#1,{\def\Cd@IJ{#1}\ifx\Cd@IJ\Cd@BD\else\ifnum
+\Cd@IB>\Cd@z\Cd@sE\Cd@IJ\DiagramCellHeight\advance\Cd@sE-\dp\Cd@IB\advance
+\Cd@IB\m@ne\ht\Cd@IB\Cd@sE\expandafter\expandafter\expandafter\Cd@hJ\fi\fi}%
+\def\Cd@sI{\Cd@cE\Cd@KA\dimen0 \advance\Cd@KA-\DiagramCellWidth\ifdim\Cd@KA>2%
+\MapShortFall\Cd@FB{badly drawn diagonals - see manual}\let\Cd@sI\empty\fi
+\else\let\Cd@sI\empty\fi}\def\Cd@CC{\Cd@RA\Cd@gA\Cd@TF\ifnum\Cd@RA<\Cd@HB
+\dimen0\dp\Cd@RA\advance\dimen0\Cd@sE\dp\Cd@RA\dimen0 \advance\Cd@RA1 \repeat
+}\def\Cd@wG#1#2#3#4{\ifnum\Cd@BA<\Cd@GB\Cd@KA=#1\relax\setbox\Cd@BA=\hbox{%
+\setbox0=#2\dimen7=#4\relax\dimen8=#3\relax\ifhbox\Cd@BA\unhbox\Cd@BA\advance
+\Cd@KA-\lastkern\unkern\fi\ifdim\Cd@KA=\z@\else\kern-\Cd@KA\fi\raise\dimen7%
+\box0 \kern-\dimen8 }\ifnum\Cd@BA=\Cd@fA\Cd@S\Cd@NF\Cd@KA\fi\else\cd@shouldnt
+O\fi}\def\Cd@s{\setbox\Cd@IB=\hbox{\Cd@BA\Cd@fA\Cd@RA\Cd@gA\Cd@LA\z@\relax
+\Cd@TF\ifnum\Cd@BA<\Cd@GB\Cd@nB\wd\Cd@RA\relax\Cd@sH\advance\Cd@BA1 \advance
+\Cd@RA1 \repeat}\Cd@S\Cd@wH{\wd\Cd@IB}\wd\Cd@IB\z@}\def\Cd@sH{\ifhbox\Cd@BA
+\Cd@KA\Cd@nB\relax\advance\Cd@KA-\Cd@LA\relax\ifdim\Cd@KA=\z@\else\kern\Cd@KA
+\fi\Cd@LA\Cd@nB\advance\Cd@LA\wd\Cd@BA\relax\box\Cd@BA\unhbox\Cd@BA\advance
+\Cd@LA-\lastkern\unkern\fi}\def\Cd@nH{\setbox\Cd@HH=\box\voidb@x\Cd@RA=\Cd@HB
+\Cd@BA\Cd@GB\Cd@RA\Cd@gA\advance\Cd@RA\Cd@BA\advance\Cd@RA-\Cd@fA\advance
+\Cd@RA\m@ne\Cd@nB\wd\Cd@RA\count@\Cd@GB\advance\count@\m@ne\Cd@LF.5\wd\count@
+\advance\Cd@LF\Cd@nB\Cd@A\m@ne\Cd@QD\@m\Cd@TF\ifnum\Cd@BA>\Cd@fA\advance
+\Cd@BA\m@ne\advance\Cd@LF-\Cd@nB\Cd@dH\wd\Cd@RA\Cd@nB\advance\Cd@LF\Cd@nB
+\advance\Cd@RA\m@ne\Cd@nB\wd\Cd@RA\repeat\Cd@PF\Cd@NF\Cd@yH-\Cd@PF\Cd@pB}%
+\newcount\Cd@BB\def\Cd@o{}\def\Cd@p{\mathsurround\z@\hsize\z@\rightskip\z@
+plus1fil minus\maxdimen\parfillskip\z@\linepenalty9000 \looseness0 \hfuzz
+\maxdimen\hbadness10000 \clubpenalty0 \widowpenalty0 \displaywidowpenalty0
+\interlinepenalty0 \predisplaypenalty0 \postdisplaypenalty0
+\interdisplaylinepenalty0 \interfootnotelinepenalty0 \floatingpenalty0
+\brokenpenalty0 \everypar{}\leftskip\z@\parskip\z@\parindent\z@\pretolerance
+10000 \tolerance10000 \hyphenpenalty10000 \exhyphenpenalty10000 \binoppenalty
+10000 \relpenalty10000 \adjdemerits0 \doublehyphendemerits0
+\finalhyphendemerits0 \prevdepth\z@}\newbox\Cd@lF\newbox\Cd@jF\def\Cd@kF{%
+\unhcopy\Cd@lF}\def\Cd@iF{\unhcopy\Cd@jF}\def\Cd@lI{\hbox{}\penalty1%
+\nointerlineskip}\def\Cd@dH{\penalty5 \noindent\setbox\Cd@hG=\null\Cd@PF\z@
+\Cd@yH\z@\ifnum\Cd@BA<\Cd@GB\ht\Cd@hG\ht\Cd@BA\dp\Cd@hG\dp\Cd@BA\unhbox\Cd@BA
+\skip0=\lastskip\unskip\else\Cd@PJ\skip0=\z@\fi\endgraf\ifcase\prevgraf
+\cd@shouldnt Y \or\cd@shouldnt Z \or\Cd@fH\or\Cd@lH\else\Cd@eH\fi\unskip
+\setbox0=\lastbox\unskip\unskip\unpenalty\noindent\unhbox0\setbox0\lastbox
+\unpenalty\unskip\unskip\unpenalty\setbox0\lastbox\Cd@UF\Cd@BB\lastpenalty
+\unpenalty\ifnum\Cd@BB>\z@\setbox\z@\lastbox\Cd@gB\repeat\endgraf\unskip
+\unskip\unpenalty}\def\Cd@cI{\Cd@pA\Cd@SB\advance\Cd@pA-\Cd@IB\Cd@qA\Cd@BA
+\advance\Cd@qA-\Cd@fA\advance\Cd@qA1 \expandafter\message{prevgraf=\the
+\prevgraf at (\the\Cd@pA,\the\Cd@qA)}}\def\Cd@lH{\Cd@nD\setbox\Cd@xH=\lastbox
+\setbox\Cd@xH=\hbox{\unhbox\Cd@xH\unskip\unpenalty}\unskip\ifdim\ht\Cd@xH>\ht
+\Cd@GC\setbox\Cd@hG=\copy\Cd@xH\else\ifdim\dp\Cd@xH>\dp\Cd@GC\setbox\Cd@hG=%
+\copy\Cd@xH\else\Cd@gF\Cd@xH\fi\fi\advance\Cd@PF.5\wd\Cd@xH\advance\Cd@yH.5%
+\wd\Cd@xH\setbox\Cd@xH=\hbox{\unhbox\Cd@xH\Cd@iF}\Cd@wG\Cd@PF{\box\Cd@xH}%
+\Cd@yH\z@\Cd@rB\Cd@pB}\def\Cd@nD{\ifnum\Cd@A>0 \advance\dimen0-\Cd@nB\Cd@cA-.%
+5\dimen0 \Cd@A-\Cd@A\else\Cd@A0 \Cd@cA\z@\fi\setbox\Cd@hG=\lastbox\setbox
+\Cd@hG=\hbox{\unhbox\Cd@hG\unskip\unskip\unpenalty\setbox0=\lastbox\global
+\Cd@MA\lastkern\unkern}\advance\Cd@cA-.5\Cd@MA\unskip\setbox\Cd@hG=\null
+\Cd@yH\Cd@cA\Cd@PF-\Cd@cA}\def\Cd@W{\ht\Cd@hG\Cd@EI\dp\Cd@hG\Cd@DI}\def\Cd@gF
+#1{\setbox\Cd@hG=\hbox{\Cd@S{\ht\Cd@hG}{\ht#1}\Cd@S{\dp\Cd@hG}{\dp#1}\Cd@S{%
+\wd\Cd@hG}{\wd#1}\vrule height\ht\Cd@hG depth\dp\Cd@hG width\wd\Cd@hG}}\def
+\Cd@eH{\Cd@nD\Cd@W\setbox\Cd@xH=\lastbox\unskip\setbox\Cd@OF=\lastbox\unskip
+\setbox\Cd@OF=\hbox{\unhbox\Cd@OF\unskip\global\Cd@tA\lastpenalty\unpenalty}%
+\advance\Cd@tA9999 \ifcase\Cd@tA\Cd@iH\or\Cd@mH\or\Cd@hH\or\Cd@rH\or\Cd@qH\or
+\Cd@gH\else\cd@shouldnt9\fi}\def\Cd@iH{\Cd@gF\Cd@xH\Cd@jH\setbox\Cd@HH=\box
+\Cd@OF\setbox\Cd@IH=\box\Cd@xH}\def\Cd@mH{\Cd@gF\Cd@OF\Cd@jH\setbox\Cd@OF=%
+\hbox{\unhbox\Cd@OF\unskip\unpenalty\global\setbox\Cd@@A=\lastbox}\setbox
+\Cd@HH=\box\Cd@@A}\def\Cd@jH{\Cd@rB\ifvoid\Cd@HH\else\Cd@FB{Clashing
+horizontal arrows}\Cd@yH.5\Cd@LF\Cd@PF-\Cd@yH\Cd@pB\Cd@yH\z@\Cd@PF\z@\fi
+\Cd@uH\Cd@LF\advance\Cd@uH-\Cd@yH\Cd@LF-\Cd@PF\Cd@BC\Cd@BA}\def\Cd@fH{\setbox
+0\lastbox\unskip\Cd@cA\z@\Cd@W\ifdim\skip0>\z@\Cd@wI\Cd@A0 \else\ifnum\Cd@A<1
+\Cd@A0 \dimen0\Cd@nB\fi\advance\Cd@A1 \fi}\def\VonH{\Cd@IA46\VonH{.5\Cd@qE}}%
+\def\HonV{\Cd@IA57\HonV{.5\Cd@qE}}\def\HmeetV{\Cd@IA44\HmeetV{-\MapShortFall}%
+}\def\Cd@IA#1#2#3#4{\Cd@kB34#1{\string#3}\Cd@CD\Cd@BB-999#2 \dimen0=#4\Cd@EI
+\dimen0\advance\Cd@EI\axisheight\Cd@DI\dimen0\advance\Cd@DI-\axisheight\Cd@hE
+\Cd@@C\Cd@JD}\def\Cd@@C#1{\setbox0=\hbox{\Cd@h#1\Cd@zC}\dimen0.5\wd0 \Cd@EI
+\ht0 \Cd@DI\dp0 \Cd@JD}\def\Cd@CD{\setbox0=\null\ht0=\Cd@EI\dp0=\Cd@DI\wd0=%
+\dimen0 \copy0\penalty\Cd@BB\box0 }\def\Cd@hH{\Cd@zB\Cd@rB}\def\Cd@rH{\Cd@zB
+\Cd@pB}\def\Cd@gH{\Cd@zB\Cd@rB\Cd@pB}\def\Cd@zB{\setbox\Cd@xH=\hbox{\unhbox
+\Cd@xH}\setbox\Cd@OF=\hbox{\unhbox\Cd@OF\global\setbox\Cd@@A=\lastbox}\ht
+\Cd@hG\ht\Cd@@A\dp\Cd@hG\dp\Cd@@A\advance\Cd@PF\wd\Cd@@A\advance\Cd@yH\wd
+\Cd@xH}\Cd@PG\ifPositiveGradient\Cd@QH\Cd@PH\Cd@QH\Cd@PG\ifClimbing\Cd@mB
+\Cd@lB\Cd@mB\newcount\DiagonalChoice\DiagonalChoice\m@ne\ifx\tenln\nullfont
+\Cd@wI\def\Cd@RF{\Cd@fG\ifPositiveGradient/\else\Cd@h\backslash\Cd@zC\fi}%
+\else\def\Cd@RF{\Cd@SF\char\count@}\fi\let\Cd@SF\tenln\def\Use@line@char#1{%
+\hbox{#1\Cd@SF\ifPositiveGradient\else\advance\count@64 \fi\char\count@}}\def
+\Cd@GF{\Use@line@char{\count@\Cd@KC\multiply\count@8\advance\count@-9\advance
+\count@\Cd@gG}}\def\Cd@DF{\Use@line@char{\ifcase\DiagonalChoice\Cd@KF\or
+\Cd@JF\or\Cd@JF\else\Cd@KF\fi}}\def\Cd@KF{\ifnum\Cd@KC=\z@\count@\rq33 \else
+\count@\Cd@KC\multiply\count@\sixt@@n\advance\count@-9\advance\count@\Cd@gG
+\advance\count@\Cd@gG\fi}\def\Cd@JF{\count@\rq\ifcase\Cd@gG55\or\ifcase\Cd@KC
+66\or22\or52\or61\or72\fi\or\ifcase\Cd@KC66\or25\or22\or63\or52\fi\or\ifcase
+\Cd@KC66\or16\or36\or22\or76\fi\or\ifcase\Cd@KC66\or27\or25\or67\or22\fi\fi
+\relax}\def\Cd@iC#1{\hbox{#1\setbox0=\Use@line@char{#1}\ifPositiveGradient
+\else\raise.3\ht0\fi\copy0 \kern-.7\wd0 \ifPositiveGradient\raise.3\ht0\fi
+\box0}}\def\Cd@MF#1{\hbox{\setbox0=#1\kern-.75\wd0 \vbox to.25\ht0{%
+\ifPositiveGradient\else\vss\fi\box0 \ifPositiveGradient\vss\fi}}}\def\Cd@vH#%
+1{\hbox{\setbox0=#1\dimen0=\wd0 \vbox to.25\ht0{\ifPositiveGradient\vss\fi
+\box0 \ifPositiveGradient\else\vss\fi}\kern-.75\dimen0 }}\Cd@IC{+h:>}{%
+\Use@line@char\Cd@JF}\Cd@IC{-h:>}{\Use@line@char\Cd@KF}\Cd@QF{+t:<}{-h:>}%
+\Cd@QF{-t:<}{+h:>}\Cd@IC{+t:>}{\Cd@MF{\Use@line@char\Cd@JF}}\Cd@IC{-t:>}{%
+\Cd@vH{\Use@line@char\Cd@KF}}\Cd@QF{+h:<}{-t:>}\Cd@QF{-h:<}{+t:>}\Cd@IC{+h:>>%
+}{\Cd@iC\Cd@JF}\Cd@IC{-h:>>}{\Cd@iC\Cd@KF}\Cd@QF{+t:<<}{-h:>>}\Cd@QF{-t:<<}{+%
+h:>>}\Cd@IC{+t:>>}{\Cd@MF{\Cd@iC\Cd@JF}}\Cd@IC{-t:>>}{\Cd@vH{\Cd@iC\Cd@KF}}%
+\Cd@QF{+h:<<}{-t:>>}\Cd@QF{-h:<<}{+t:>>}\Cd@IC{+f:-}{\Cd@kE\null\else\Cd@GF
+\fi}\Cd@QF{-f:-}{+f:-}\def\Cd@hC#1#2{\vbox to#1{\vss\hbox to#2{\hss.\hss}\vss
+}}\def\hfdot{\Cd@hC{2\axisheight}{.7em}}%%
+\def\vfdot{\Cd@hC{1.46ex}\z@}\def\Cd@FF{\hbox{\dimen0=.3\Cd@nC\dimen1\dimen0
+\ifnum\Cd@gG>\Cd@KC\Cd@ZC{\dimen1}\else\Cd@AG{\dimen0}\fi\Cd@hC{\dimen0}{%
+\dimen1}}}\newarrowfiller{.}\hfdot\hfdot\vfdot\vfdot\def\dfdot{\Cd@FF\Cd@EJ}%
+\Cd@IC{+f:.}{\dfdot}\Cd@IC{-f:.}{\dfdot}\def\Cd@iJ#1{\hbox\bgroup\def\Cd@ZG{#%
+1\egroup}\afterassignment\Cd@ZG%%
+\count@=\rq}\def\lnchar{\Cd@iJ\Cd@RF}\let\laf\lnchar\let\lah\lnchar\def\lad{%
+\Cd@iJ\xlad}\def\xlad{\setbox2=\hbox{\Cd@RF}\setbox0=\hbox to.3\wd2{\hss.\hss
+}\dimen0=\ht0 \advance\dimen0-\dp0 \dimen1=.3\ht2 \advance\dimen1-\dimen0 \dp
+0=.5\dimen1 \dimen1=.3\ht2 \advance\dimen1\dimen0 \ht0=.5\dimen1 \raise\dp0%
+\box0}\def\lahh{\Cd@iJ\xlahh}\def\lat{\Cd@iJ\xlat}\def\xlat{\setbox0=\hbox{%
+\Cd@RF}\dimen0=\ht0 \setbox1=\hbox to.25\wd0{\ifcase\DiagonalChoice\box0\hss
+\or\hss\box0 \or\hss\box0 \or\box0\hss\fi}\vbox to.25\dimen0{\ifClimbing\box1%
+\vss\else\vss\box1\fi\kern\z@}}\def\xlahh{\setbox0=\hbox{\Cd@RF}%
+\ifPositiveGradient\Cd@wI\copy0 \kern-.7\wd0 \mv.3\ht0\box0 \else\ifClimbing
+\Cd@wI\copy0 \kern-.7\wd0 \mv.3\ht0\box0 \else\mv-.3\ht0\copy0 \kern-.7\wd0
+\box0 \fi\fi}\def\Cd@HF#1{\setbox#1=\hbox{\dimen5\dimen#1 \setbox8=\box#1
+\dimen1\wd8 \count@\dimen5 \divide\count@\dimen1 \ifnum\count@=0 \box8 \ifdim
+\dimen5<.95\dimen1 \Cd@bB{diagonal line too short}\fi\else\dimen3=\dimen5
+\advance\dimen3-\dimen1 \divide\dimen3\count@\dimen4\dimen3 \Cd@AG{\dimen4}%
+\ifPositiveGradient\multiply\dimen4\m@ne\fi\dimen6\dimen1 \advance\dimen6-%
+\dimen3 \loop\raise\count@\dimen4\copy8 \ifnum\count@>0 \kern-\dimen6 \advance
+\count@\m@ne\repeat\fi}}\def\Cd@dF#1{\Cd@kE\Cd@@J{#1}\else\Cd@HF{#1}\fi}%
+\newdimen\objectheight\objectheight1.8ex \newdimen\objectwidth\objectwidth1em
+\def\Cd@ID{\dimen6=\Cd@bJ\DiagramCellHeight\dimen7=\Cd@XJ\DiagramCellWidth
+\Cd@SI\ifnum\Cd@gG>0 \ifnum\Cd@KC>0 \Cd@EF\else\aftergroup\Cd@MC\fi\else
+\aftergroup\Cd@LC\fi}\def\Cd@MC{\Cd@UA{diagonal map is nearly vertical}\Cd@JA
+}\def\Cd@LC{\Cd@UA{diagonal map is nearly horizontal}\Cd@JA}\Cd@NG\Cd@JA{Use
+an orthogonal map instead}\def\Cd@EF{\Cd@TI\dimen3\dimen7\dimen7\dimen6\Cd@ZC
+{\dimen7}\advance\dimen3-\dimen7 \Cd@rE\ifnum\Cd@gG>\Cd@KC\advance\dimen6-%
+\dimen1\advance\dimen6-\dimen5 \Cd@ZC{\dimen1}\Cd@ZC{\dimen5}\else\dimen0%
+\dimen1\advance\dimen0\dimen5\Cd@AG{\dimen0}\advance\dimen6-\dimen0 \fi\dimen
+2.5\dimen7\advance\dimen2-\dimen1 \dimen4.5\dimen7\advance\dimen4-\dimen5
+\ifPositiveGradient\dimen0\dimen5 \advance\dimen1-\Cd@XJ\DiagramCellWidth
+\advance\dimen1 \Cd@aJ\DiagramCellWidth\setbox6=\llap{\unhbox6\kern.1\ht2}%
+\setbox7=\rlap{\kern.1\ht2\unhbox7}\else\dimen0\dimen1 \advance\dimen1-\Cd@aJ
+\DiagramCellWidth\setbox7=\llap{\unhbox7\kern.1\ht2}\setbox6=\rlap{\kern.1\ht
+2\unhbox6}\fi\setbox6=\vbox{\box6\kern.1\wd2}\setbox7=\vtop{\kern.1\wd2\box7}%
+\Cd@AG{\dimen0}\advance\dimen0-\axisheight\advance\dimen0-\Cd@cJ
+\DiagramCellHeight\dimen5-\dimen0 \advance\dimen0\dimen6 \advance\dimen1.5%
+\dimen3 \ifdim\wd3>\z@\ifdim\ht3>-\dp3\Cd@OB\fi\fi\dimen3\dimen2 \dimen7%
+\dimen2\advance\dimen7\dimen4 \ifvoid3 \else\Cd@ZE\else\dimen8\ht3\advance
+\dimen8-\axisheight\Cd@ZC{\dimen8}\Cd@U{\dimen8}{.5\wd3}\dimen9\dp3\advance
+\dimen9\axisheight\Cd@ZC{\dimen9}\Cd@U{\dimen9}{.5\wd3}\ifPositiveGradient
+\advance\dimen2-\dimen9\advance\dimen4-\dimen8 \else\advance\dimen4-\dimen9%
+\advance\dimen2-\dimen8 \fi\fi\advance\dimen3-.5\wd3 \fi\dimen9=\Cd@bJ
+\DiagramCellHeight\advance\dimen9-2\DiagramCellHeight\Cd@ZE\advance\dimen2%
+\dimen4 \Cd@dF{2}\dimen2-\dimen0\advance\dimen2\dp2 \else\Cd@dF{2}\Cd@dF{4}%
+\ifPositiveGradient\dimen2-\dimen0\advance\dimen2\dp2 \dimen4\dimen5\advance
+\dimen4-\ht4 \else\dimen4-\dimen0\advance\dimen4\dp4 \dimen2\dimen5\advance
+\dimen2-\ht2 \fi\fi\setbox0=\hbox to\z@{\kern\dimen1 \ifvoid1 \else
+\ifPositiveGradient\advance\dimen0-\dp1 \lower\dimen0 \else\advance\dimen5-%
+\ht1 \raise\dimen5 \fi\rlap{\unhbox1}\fi\raise\dimen2\rlap{\unhbox2}\ifvoid3
+\else\lower.5\dimen9\rlap{\kern\dimen3\unhbox3}\fi\kern.5\dimen7 \lower.5%
+\dimen9\box6 \lower.5\dimen9\box7 \kern.5\dimen7 \Cd@ZE\else\raise\dimen4%
+\llap{\unhbox4}\fi\ifvoid5 \else\ifPositiveGradient\advance\dimen5-\ht5 \raise
+\dimen5 \else\advance\dimen0-\dp5 \lower\dimen0 \fi\llap{\unhbox5}\fi\hss}\ht
+0=\axisheight\dp0=-\ht0\box0 }\def\NorthWest{\Cd@PH\Cd@mB\DiagonalChoice0 }%
+\def\NorthEast{\Cd@QH\Cd@mB\DiagonalChoice1 }\def\SouthWest{\Cd@QH\Cd@lB
+\DiagonalChoice3 }\def\SouthEast{\Cd@PH\Cd@lB\DiagonalChoice2 }\def\Cd@KD{%
+\vadjust{\Cd@pA\Cd@BA\advance\Cd@pA\ifPositiveGradient\else-\fi\Cd@aJ\relax
+\Cd@qA\Cd@IB\advance\Cd@qA-\Cd@cJ\relax\hbox{\advance\Cd@pA
+\ifPositiveGradient-\fi\Cd@XJ\advance\Cd@qA\Cd@bJ\box\z@\penalty\Cd@pA
+\penalty\Cd@qA}\penalty\Cd@pA\penalty\Cd@qA\penalty104}}\def\Cd@jJ#1{\ifmmode
+\vadjust{\hbox@maths{#1}\penalty\Cd@BA\penalty\Cd@IB\penalty\tw@}\else\Cd@bB{%
+mis-placed over-print ignored}\fi}\def\Cd@gB{\ifcase\Cd@BB\or\or\Cd@wG{.5\wd0%
+}{\box0}{.5\wd0}\z@\or\unhbox\z@\setbox\z@\lastbox\Cd@wG{.5\wd0}{\box0}{.5\wd
+0}\z@\unpenalty\unpenalty\setbox\z@\lastbox\or\Cd@sF\else\advance\Cd@BB-100
+\ifnum\Cd@BB<\z@\cd@shouldnt B\fi\setbox\z@\hbox{\kern\Cd@PF\copy\Cd@hG\kern
+\Cd@yH\Cd@pA\Cd@SB\advance\Cd@pA-\Cd@IB\penalty\Cd@pA\Cd@pA\Cd@BA\advance
+\Cd@pA-\Cd@fA\penalty\Cd@pA\unhbox\z@\global\Cd@tA\lastpenalty\unpenalty
+\global\Cd@uA\lastpenalty\unpenalty}\Cd@pA-\Cd@tA\Cd@qA\Cd@uA\Cd@eJ\fi}\def
+\Cd@sF{\unhbox\z@\setbox\z@\lastbox\Cd@pA\lastpenalty\unpenalty\advance\Cd@pA
+\Cd@gA\Cd@qA\Cd@SB\advance\Cd@qA-\lastpenalty\unpenalty\dimen1\lastkern
+\unkern\setbox3\lastbox\dimen0\lastkern\unkern\setbox0=\hbox to\z@{\dimen7%
+\Cd@nB\advance\dimen7-\wd\Cd@pA\ifdim\dimen7<\z@\Cd@QH\multiply\dimen7\m@ne
+\else\Cd@PH\fi\ifnum\Cd@qA>\Cd@IB\dimen6\Cd@oB\advance\dimen6-\ht\Cd@qA\else
+\dimen6\z@\fi\Cd@mI\ifPositiveGradient\dimen6\z@\else\Cd@gG-\Cd@gG\kern-%
+\dimen7 \fi\global\Cd@EG\raise\dimen6\hbox{\Cd@OD{\the\Cd@KC\space\the\Cd@gG
+\space bturn}\box0 \Cd@KJ{eturn}}\hss}\ht0\z@\dp0\z@\Cd@wG{\z@}{\box\z@}{\z@}%
+{\axisheight}}\def\Cd@OD#1{\expandafter\Cd@KJ{#1}}\Cd@VA\Cd@GJ{output is
+PostScript dependent}\def\Cd@JC{\Cd@KJ{/bturn {gsave currentpoint currentpoint
+translate 4 2 roll neg exch atan rotate neg exch neg exch translate } def /%
+eturn {currentpoint grestore moveto} def}}\def\Cd@UI#1{\count@#1\relax
+\multiply\count@7\advance\count@16577\divide\count@33154 }\def\Cd@PD#1{%
+\expandafter\special{#1}} \def\Cd@@J#1{\setbox#1=\hbox{\dimen0\dimen#1\Cd@AG{%
+\dimen0}\Cd@UI{\dimen0}\setbox0=\null\ifPositiveGradient\count@-\count@\ht0%
+\dimen0 \else\dp0\dimen0 \fi\box0 \Cd@pA\count@\Cd@UI\Cd@qE\Cd@PD{pn \the
+\count@}\Cd@PD{pa 0 0}\Cd@UI{\dimen#1}\Cd@PD{pa \the\count@\space\the\Cd@pA}%
+\Cd@PD{fp}\kern\dimen#1}}\def\Cd@XH{\Cd@SI\begingroup\ifdim\dimen7<\dimen6
+\dimen2=\dimen6 \dimen6=\dimen7 \dimen7=\dimen2 \count@\Cd@gG\Cd@gG\Cd@KC
+\Cd@KC\count@\else\dimen2=\dimen7 \fi\ifdim\dimen6>.01\p@\Cd@YH\global\Cd@MA
+\dimen0 \else\global\Cd@MA\dimen7 \fi\endgroup\dimen2\Cd@MA}\def\Cd@YH{\Cd@kI
+\ifdim\dimen7>1.73\dimen6 \divide\dimen2 4 \multiply\Cd@KC2 \else\dimen2=0.%
+353553\dimen2 \advance\Cd@gG-\Cd@KC\multiply\Cd@KC4 \fi\dimen0=4\dimen2 \Cd@xF
+4\Cd@xF{-2}\Cd@xF2\Cd@xF{-2.5}}\def\Cd@OH{\begingroup\count@\dimen0 \dimen2 45%
+pt \divide\count@\dimen2 \ifdim\dimen0<\z@\advance\count@\m@ne\fi\ifodd
+\count@\advance\count@1\Cd@w\else\Cd@u\fi\advance\dimen0-\count@\dimen2 \Cd@ME
+\multiply\dimen0\m@ne\fi\ifnum\count@<0 \multiply\count@-7 \fi\dimen3\dimen1
+\dimen6\dimen0 \dimen7 3754936sp \ifdim\dimen0<6\p@\def\Cd@pF{4000}\fi\Cd@SI
+\dimen2\dimen3\Cd@AG{\dimen2}\Cd@kI\multiply\Cd@KC-6 \dimen0\dimen2 \Cd@xF1%
+\Cd@xF{0.3}\dimen1\dimen0 \dimen2\dimen3 \dimen0\dimen3 \Cd@xF3\Cd@xF{1.5}%
+\Cd@xF{0.3}\divide\count@2 \Cd@ME\multiply\dimen1\m@ne\fi\ifodd\count@\dimen2%
+\dimen1\dimen1\dimen0\dimen0-\dimen2 \fi\divide\count@2 \ifodd\count@
+\multiply\dimen0\m@ne\multiply\dimen1\m@ne\fi\global\Cd@MA\dimen0\global
+\Cd@NA\dimen1\endgroup\dimen6\Cd@MA\dimen7\Cd@NA}\def\Cd@pF{255}\def\Cd@SI{%
+\begingroup\ifdim\dimen7<\dimen6 \dimen9\dimen7\dimen7\dimen6\dimen6\dimen9%
+\Cd@w\else\Cd@u\fi\dimen2\z@\dimen3\Cd@sG\dimen4\Cd@sG\dimen0\z@\dimen8=%
+\Cd@pF\Cd@sG\Cd@bC\global\Cd@tA\dimen\Cd@ME0\else3\fi\global\Cd@uA\dimen
+\Cd@ME3\else0\fi\endgroup\Cd@gG\Cd@tA\Cd@KC\Cd@uA}\def\Cd@bC{\count@\dimen6
+\divide\count@\dimen7 \advance\dimen6-\count@\dimen7 \dimen9\dimen4 \advance
+\dimen9\count@\dimen0 \ifdim\dimen9>\dimen8 \Cd@uB\else\Cd@vB\ifdim\dimen6>%
+\z@\dimen9\dimen6 \dimen6\dimen7 \dimen7\dimen9 \expandafter\expandafter
+\expandafter\Cd@bC\fi\fi}\def\Cd@uB{\ifdim\dimen0=\z@\ifdim\dimen9<2\dimen8
+\dimen0\dimen8 \fi\else\advance\dimen8-\dimen4 \divide\dimen8\dimen0 \ifdim
+\count@\Cd@sG<2\dimen8 \count@\dimen8 \dimen9\dimen4 \advance\dimen9\count@
+\dimen0 \Cd@vB\fi\fi}\def\Cd@vB{\dimen4\dimen0 \dimen0\dimen9 \advance\dimen2%
+\count@\dimen3 \dimen9\dimen2 \dimen2\dimen3 \dimen3\dimen9 }\def\Cd@xF#1{%
+\Cd@AG{\dimen2}\advance\dimen0 #1\dimen2 }\def\Cd@AG#1{\divide#1\Cd@KC
+\multiply#1\Cd@gG}\def\Cd@ZC#1{\divide#1\Cd@gG\multiply#1\Cd@KC}\def\Cd@kI{%
+\dimen6\Cd@gG\Cd@sG\multiply\dimen6\Cd@gG\dimen7\Cd@KC\Cd@sG\multiply\dimen7%
+\Cd@KC\Cd@SI}\ifx\errorcontextlines\undefined\Cd@wI\let\Cd@cG\relax\else\def
+\Cd@cG{\errorcontextlines\m@ne}\fi\ifnum\inputlineno<0 \let\Cd@pC\empty\let
+\Cd@T\empty\let\Cd@XD\relax\let\Cd@FI\relax\let\Cd@GI\relax\let\Cd@ZF\relax
+\message{! Why not upgrade to TeX version 3? (available since 1990)}\else\def
+\Cd@T{ at line \number\inputlineno}\def\Cd@XD{ - first occurred}\def\Cd@FI{%
+\edef\Cd@e{\the\inputlineno}}\def\Cd@e{9999}\def\Cd@GI{\edef\Cd@eB{\the
+\inputlineno}}\def\Cd@eB{\Cd@e}\def\Cd@ZF{\ifnum\Cd@e<\inputlineno\edef\Cd@pC
+{\space at lines \Cd@e--\the\inputlineno}\else\edef\Cd@pC{\Cd@T}\fi}\fi\let
+\Cd@pC\empty\def\Cd@UA#1#2{\Cd@cG\errhelp=#2\expandafter\errmessage{\Cd@oA: #%
+1}}\def\Cd@FB#1{{\expandafter\message{! \Cd@oA: #1\Cd@pC}}}\def\Cd@bB#1{{%
+\expandafter\message{\Cd@oA\space Warning: #1\Cd@T}}}\def\Cd@yA#1#2{\Cd@bB{#1
+\string#2 is obsolete\Cd@XD}}\def\Cd@wA#1{\Cd@yA{Dimension}{#1}\Cd@oD#1\Cd@xA
+\Cd@xA}\def\Cd@xA{\Cd@KA=}\def\Cd@vA#1{\Cd@yA{Count}{#1}\Cd@oD#1\Cd@jG\Cd@jG}%
+\def\Cd@jG{\count@=}\def\HorizontalMapLength{\Cd@wA\HorizontalMapLength}\def
+\VerticalMapHeight{\Cd@wA\VerticalMapHeight}\def\VerticalMapDepth{\Cd@wA
+\VerticalMapDepth}\def\VerticalMapExtraHeight{\Cd@wA\VerticalMapExtraHeight}%
+\def\VerticalMapExtraDepth{\Cd@wA\VerticalMapExtraDepth}\def
+\DiagonalLineSegments{\Cd@vA\DiagonalLineSegments}\ifx\tenln\nullfont\Cd@VA
+\Cd@fG{\Cd@IF\space diagonal line and arrow font not available}\else\let
+\Cd@fG\relax\fi\def\Cd@yF#1#2<#3:#4:#5#6{\begingroup\Cd@LA#3\relax\advance
+\Cd@LA-#2\relax\ifdim.1em<\Cd@LA\Cd@pA#5\relax\Cd@qA#6\relax\ifnum\Cd@pA<%
+\Cd@qA\count@\Cd@qA\advance\count@-\Cd@pA\Cd@FB{#4 by \the\Cd@LA}\if#1v\let
+\Cd@ZG\Cd@LJ\else\advance\count@\count@\if#1l\advance\count@-\Cd@A\else\if#1r%
+\advance\count@\Cd@A\fi\fi\advance\Cd@LA\Cd@LA\let\Cd@ZG\Cd@IE\fi\divide
+\Cd@LA\count@\ifdim\Cd@ZG<\Cd@LA\global\Cd@ZG\Cd@LA\fi\fi\fi\endgroup}\Cd@PG
+\Cd@dE\Cd@wC\Cd@vC\Cd@NG\Cd@II{See the message above.}\Cd@NG\Cd@DH{Perhaps you%
+'ve forgotten to end the diagram before resuming the text, in\Cd@QG which case
+some garbage may be added to the diagram, but we should be ok now.\Cd@QG
+Alternatively you've left a blank line in the middle - TeX will now complain%
+\Cd@QG that the remaining \Cd@P s are misplaced - so please use comments for
+layout.}\Cd@NG\Cd@RD{You have already closed too many brace pairs or
+environments; an \Cd@uC\Cd@QG command was (over)due.}\Cd@NG\Cd@@H{\Cd@UC
+\space and \Cd@uC\space commands must match.}\def\Cd@AH{\ifnum\inputlineno=0
+\else\expandafter\Cd@BH\fi}\def\Cd@BH{\Cd@xC\Cd@tC\crcr\Cd@UA{missing \Cd@uC
+\space inserted before \Cd@CH- type "h"}\Cd@DH\enddiagram\Cd@bF\Cd@CH\par}%
+\def\Cd@bF#1{\edef\enddiagram{\noexpand\Cd@cD{#1\Cd@T}}}\def\Cd@cD#1{\Cd@UA{%
+\Cd@uC\space(anticipated by #1) ignored}\Cd@II\let\enddiagram\Cd@rF}\def
+\Cd@rF{\Cd@UA{misplaced \Cd@uC\space ignored}\Cd@@H}\def\Cd@cC{\Cd@UA{missing
+\Cd@uC\space inserted.}\Cd@RD\Cd@bF{closing group}}\ifx\DeclareOption
+\undefined\else\ifx\DeclareOption\@notprerr\else\DeclareOption*{\expandafter
+\Cd@EH\CurrentOption,\Cd@eC}\Cd@QJ\ProcessOptions\relax\Cd@lE\Cd@b\fi\fi\fi
+%%======================================================================%
+%%                                                                      %
+%%      (21) AUXILLARY MACROS FOR ADJUSTMENT OF COMPONENTS              %
+%%                                                                      %
+%%======================================================================%
+
+%% NOTE: The recommended way of defining arrow commands is now
+%%      \newarrow{Name}{tail}{filler}{middle}{filler}{head}
+%% which defines \rName, \lName, \dName and \uName using arrow parts which
+%% have themselves previously been defined using the commands
+%% \newarrowtail, \newarrowfiller, \newarrowmiddle and \newarrowhead.
+
+%% The components \rhvee etc have been retained for the time being, as an
+%% intermediate stage and to continue to support the old \HorizontalMap and
+%% \VerticalMap commands, but you should not rely on the continued existence
+%% of these macros.
+
+%% The various components usually need some correction
+%% - longitudinally, ie to prevent gaps and overprints with the shaft,
+%% - transversally,  ie to prevent "steps" in the junction with the shaft.
+%% The former can be done safely ad hoc, eg with \mkern1mu.
+%% The latter are now done with the macros \scriptaxis, \boldscriptaxis,
+%% \shifthook and \raisehook, which include pixel corrections.
+
+%% Please note that these and the other auxillary macros which follow are
+%% interim. When it becomes clear exactly what kinds of adjustments are
+%% needed for characters, this job will be done by a suitable extension
+%% to the language of \newarrowhead, etc. If you have any other ideas for
+%% transformations of general use please tell me.
+
+%% By all means experiment with other characters for arrowheads, but
+%% please, in your own interests, do not rely on macros like \rhvee,
+%% send me a copy of your definitions for distribution to other users
+%% in this file, and keep track of where your efforts get copied so
+%% that they can be replaced with the "official" version when it is
+%% incorporated.
+
+%% ***** DONT use macros with mangled names like \Cd@gH. *****
+
+\catcode\lq\$=3 %% make sure that $ means maths-shift
+\def\vboxtoz{\vbox to\z@}%% \z@ is in plain TeX and means 0pt
+
+%% print #1 in \scriptstyle, adjusting for the maths axis height
+\def\scriptaxis#1{\@scriptaxis{$\scriptstyle#1$}}%%
+\def\ssaxis#1{\@ssaxis{$\scriptscriptstyle#1$}}%%
+\def\@scriptaxis#1{\dimen0\axisheight\advance\dimen0-\ss@axisheight\raise
+\dimen0\hbox{#1}}\def\@ssaxis#1{\dimen0\axisheight\advance\dimen0-%
+\ss@axisheight\raise\dimen0\hbox{#1}}
+
+%% Some of the characters would look better in bold since they're
+%% taken from sub/superscript fonts; we use LaTeX's \boldmath to
+%% do this, defining this to do nothing if it doesn't exist.
+%% With the old LaTeX font selection at other than 10pt you may still
+%% get nothing happenning.  Also, PK fonts may be missing.
+%% If you have problems, DONT use boldhook or boldlittlevee.
+\ifx\boldmath\undefined%%
+\let\boldscriptaxis\scriptaxis%%
+\def\boldscript#1{\hbox{$\scriptstyle#1$}}%%
+\def\boldscriptscript#1{\hbox{$\scriptscriptstyle#1$}}%%
+\else\def\boldscriptaxis#1{\@scriptaxis{\boldmath$\scriptstyle#1$}}%%
+\def\boldscript#1{\hbox{\boldmath$\scriptstyle#1$}}%%
+\def\boldscriptscript#1{\hbox{\boldmath$\scriptscriptstyle#1$}}%%
+\fi
+
+%%  #1= {} or \boldmath; #2= + or -; #3=\subset or \supset
+\def\raisehook#1#2#3{\hbox{\setbox3=\hbox{#1$\scriptscriptstyle#3$}%
+%% the character to use
+\dimen0\ss@axisheight%% \scriptscriptstyle axis height
+\dimen1\axisheight\advance\dimen1-\dimen0%% difference in axis heights
+\dimen2\ht3\advance\dimen2-\dimen0%
+%%  height of char above axis (half spread)
+\advance\dimen1 #2\dimen2%% shift = axis_difference +/- half_spread
+\raise\dimen1\box3}}%% print the character
+
+%% Mark Dawson suggested using the width
+\def\shifthook#1#2#3{\setbox0=\hbox{#1$\scriptscriptstyle#3$}\dimen0\wd0%
+\divide\dimen0 12\Cd@MH{\dimen0}%%  "u"
+\dimen1\wd0\advance\dimen1-2\dimen0\advance\dimen1-\Cd@@I\Cd@MH{\dimen1}\kern
+#2\dimen1\box0}%% print
+
+%% use the extension font (cmex) for double vertical arrows
+\def\@cmex{\mathchar"03}%%ascii double quote
+
+%%      ************* P U L L B A C K S ************
+
+%% These will probably be replaced by something less ad hoc
+%% in a future version.
+
+\def\make@pbk#1{\setbox\tw@\hbox to\z@{#1}\ht\tw@\z@\dp\tw@\z@\box\tw@}\def
+\Cd@kJ#1{\overprint{\hbox to\z@{#1}}}
+
+\def\SEpbk{\make@pbk{\kern0.1em \vrule depth 2.67ex height -2.55ex width 0.9%
+em \vrule height -0.46ex depth 2.67ex width .05em \hss}}
+
+\def\SWpbk{\make@pbk{\hss\vrule height -0.46ex depth 2.67ex width .05em \vrule
+depth 2.67ex height -2.55ex width .9em \kern0.1em }}
+
+\def\NEpbk{\make@pbk{\kern0.1em \vrule depth -3.48ex height 3.67ex width 0.95%
+em \vrule height 3.67ex depth -1.39ex width .05em \hss}}
+
+\def\NWpbk{\make@pbk{\hss\vrule height 3.6ex depth -1.39ex width .05em \vrule
+depth -3.48ex height 3.67ex width .95em \kern0.1em }}
+
+%%  Freyd & Scedrov puncture symbol for non-commuting polygon
+\def\puncture{{\setbox0\hbox{A}\vrule height.53\ht0 depth-.47\ht0 width.35\ht
+0 \kern.12\ht0 \vrule height\ht0 depth-.65\ht0 width.06\ht0 \kern-.06\ht0
+\vrule height.35\ht0 depth0pt width.06\ht0 \kern.12\ht0 \vrule height.53\ht0
+depth-.47\ht0 width.35\ht0 }}
+
+%%======================================================================%
+%%                                                                      %
+%%      (22) BITS OF ARROWS                                             %
+%%                                                                      %
+%%======================================================================%
+
+%%       **********  H E A D S ***********
+
+%% \diagramstyle[heads=xxx] defines {>} as {xxx} where xxx
+%% has been defined by \newarrowhead{xxx} and \newarrowtail{xxx}
+
+%% vee head
+\def\rhvee{\mkern-10mu\greaterthan}%%
+\def\lhvee{\lessthan\mkern-10mu}%%
+\def\dhvee{\vboxtoz{\vss\hbox{$\vee$}\kern0pt}}%%
+\def\uhvee{\vboxtoz{\hbox{$\wedge$}\vss}}%%
+\newarrowhead{vee}\rhvee\lhvee\dhvee\uhvee
+
+%% little vee head
+\def\dhlvee{\vboxtoz{\vss\hbox{$\scriptstyle\vee$}\kern0pt}}%%
+\def\uhlvee{\vboxtoz{\hbox{$\scriptstyle\wedge$}\vss}}%%
+\newarrowhead{littlevee}{\mkern1mu\scriptaxis\rhvee}{\scriptaxis\lhvee}%
+\dhlvee\uhlvee\ifx\boldmath\undefined%%
+\newarrowhead{boldlittlevee}{\mkern1mu\scriptaxis\rhvee}{\scriptaxis\lhvee}%
+\dhlvee\uhlvee\else%%
+\def\dhblvee{\vboxtoz{\vss\boldscript\vee\kern0pt}}%%
+\def\uhblvee{\vboxtoz{\boldscript\wedge\vss}}%%
+\newarrowhead{boldlittlevee}{\mkern1mu\boldscriptaxis\rhvee}{\boldscriptaxis
+\lhvee}\dhblvee\uhblvee%%
+\fi
+
+%% curly vee head (uses AMS symbols fonts)
+\def\rhcvee{\mkern-10mu\succ}%%
+\def\lhcvee{\prec\mkern-10mu}%%
+\def\dhcvee{\vboxtoz{\vss\hbox{$\curlyvee$}\kern0pt}}%%
+\def\uhcvee{\vboxtoz{\hbox{$\curlywedge$}\vss}}%%
+\newarrowhead{curlyvee}\rhcvee\lhcvee\dhcvee\uhcvee
+
+%% double vee head %% will probably be withdrawn later
+\def\rhvvee{\mkern-13mu\gg}%% 24.8.92 changed 10mu to 13mu
+\def\lhvvee{\ll\mkern-13mu}%% to make rule go through
+\def\dhvvee{\vboxtoz{\vss\hbox{$\vee$}\kern-.6ex\hbox{$\vee$}\kern0pt}}%%
+\def\uhvvee{\vboxtoz{\hbox{$\wedge$}\kern-.6ex \hbox{$\wedge$}\vss}}%%
+\newarrowhead{doublevee}\rhvvee\lhvvee\dhvvee\uhvvee
+
+%% open and closed triangles (uses AMS symbols fonts)
+\def\triangleup{{\scriptscriptstyle\bigtriangleup}}%%
+\def\littletriangledown{{\scriptscriptstyle\triangledown}}%% AMS
+\def\rhtriangle{\triangleright\mkern1.2mu}%% 29.1.93
+\def\lhtriangle{\triangleleft\mkern1mu}%%
+\def\uhtriangle{\vbox{\kern-.2ex \hbox{$\scriptscriptstyle\bigtriangleup$}%
+\kern-.25ex}}%%
+%% Changed \scriptstyle\triangledown to \scriptscriptstyle\bigtriangledown
+%% at the suggestion of Martin Hofmann (25.11.92) to avoid using AMS symbols
+%% and also for compatibility with upward arrow.
+\def\dhtriangle{\vbox{\kern-.4ex \hbox{$\scriptscriptstyle\bigtriangledown$}%
+\kern-.1ex}}%% 15.1.93 from -.25ex
+\def\dhblack{\vbox{\kern-.25ex\nointerlineskip\hbox{$\blacktriangledown$}}}%
+%% AMS
+\def\uhblack{\vbox{\kern-.25ex\nointerlineskip\hbox{$\blacktriangle$}}}%
+%% AMS
+\def\dhlblack{\vbox{\kern-.25ex\nointerlineskip\hbox{$\scriptstyle
+\blacktriangledown$}}}%% AMS
+\def\uhlblack{\vbox{\kern-.25ex\nointerlineskip\hbox{$\scriptstyle
+\blacktriangle$}}}%% AMS
+\newarrowhead{triangle}\rhtriangle\lhtriangle\dhtriangle\uhtriangle
+\newarrowhead{blacktriangle}{\mkern-1mu\blacktriangleright\mkern.4mu}{%
+\blacktriangleleft}\dhblack\uhblack\newarrowhead{littleblack}{\mkern-1mu%
+\scriptaxis\blacktriangleright}{\scriptaxis\blacktriangleleft\mkern-2mu}%
+\dhlblack\uhlblack
+
+%% LaTeX arrowheads
+\def\rhla{\hbox{\setbox0=\lnchar55\dimen0=\wd0\kern-.6\dimen0\ht0\z@\raise
+\axisheight\box0\kern.1\dimen0}}%%
+\def\lhla{\hbox{\setbox0=\lnchar33\dimen0=\wd0\kern.05\dimen0\ht0\z@\raise
+\axisheight\box0\kern-.5\dimen0}}%%
+\def\dhla{\vboxtoz{\vss\rlap{\lnchar77}}}%%
+\def\uhla{\vboxtoz{\setbox0=\lnchar66 \wd0\z@\kern-.15\ht0\box0\vss}}%% 1/93
+\newarrowhead{LaTeX}\rhla\lhla\dhla\uhla
+
+%% double LaTeX arrowheads %% will probably be withdrawn later
+\def\lhlala{\lhla\kern.3em\lhla}%%
+\def\rhlala{\rhla\kern.3em\rhla}%%
+\def\uhlala{\hbox{\uhla\raise-.6ex\uhla}}%%
+\def\dhlala{\hbox{\dhla\lower-.6ex\dhla}}%%
+\newarrowhead{doubleLaTeX}\rhlala\lhlala\dhlala\uhlala
+
+%% circles % \rho is a Greek letter!
+\def\hhO{\scriptaxis\bigcirc\mkern.4mu} \def\hho{{\circ}\mkern1.2mu}%
+\newarrowhead{o}\hho\hho\circ\circ%%
+\newarrowhead{O}\hhO\hhO{\scriptstyle\bigcirc}{\scriptstyle\bigcirc}%%
+
+%% crosses
+\def\rhtimes{\mkern-5mu{\times}\mkern-.8mu}\def\lhtimes{\mkern-.8mu{\times}%
+\mkern-5mu}\def\uhtimes{\setbox0=\hbox{$\times$}\ht0\axisheight\dp0-\ht0%
+\lower\ht0\box0 }\def\dhtimes{\setbox0=\hbox{$\times$}\ht0\axisheight\box0 }%
+\newarrowhead{X}\rhtimes\lhtimes\dhtimes\uhtimes\newarrowhead+++++
+
+%% empty head {} is also available
+
+%% Y from stmaryrd (vertical ones still need large adjustment)
+\newarrowhead{Y}{\mkern-3mu\Yright}{\Yleft\mkern-3mu}\Yup\Ydown
+
+%%       **********  H E A D S  with  S H A F T S  ***********
+
+%% little arrow with shaft
+\newarrowhead{->}\rightarrow\leftarrow\downarrow\uparrow
+
+%% arrow with double shaft
+%%\newarrowhead{=>}\Rightarrow\Leftarrow\Downarrow\Uparrow
+\newarrowhead{=>}\Rightarrow\Leftarrow{\@cmex7F}{\@cmex7E}
+
+%% harpoon with shaft (trailing up/left can be changed to down/right)
+\newarrowhead{harpoon}\rightharpoonup\leftharpoonup\downharpoonleft
+\upharpoonleft
+
+%% little double-headed arrow with shaft (uses AMS symbols fonts)
+\def\twoheaddownarrow{\rlap{$\downarrow$}\raise-.5ex\hbox{$\downarrow$}}%%
+\def\twoheaduparrow{\rlap{$\uparrow$}\raise.5ex\hbox{$\uparrow$}}%%
+\newarrowhead{->>}\twoheadrightarrow\twoheadleftarrow\twoheaddownarrow
+\twoheaduparrow
+
+%%       **********  T A I L S ***********
+
+%% vee tail
+\def\rtvee{\greaterthan}%%
+\def\ltvee{\mkern-1mu{\lessthan}\mkern.4mu}%% \mkern added 15.1.93
+\def\dtvee{\vee}%%
+\def\utvee{\wedge}%%
+\newarrowtail{vee}\greaterthan\ltvee\vee\wedge
+
+%% little vee tail
+\newarrowtail{littlevee}{\scriptaxis\greaterthan}{\mkern-1mu\scriptaxis
+\lessthan}{\scriptstyle\vee}{\scriptstyle\wedge}\ifx\boldmath\undefined
+\newarrowtail{boldlittlevee}{\scriptaxis\greaterthan}{\mkern-1mu\scriptaxis
+\lessthan}{\scriptstyle\vee}{\scriptstyle\wedge}\else\newarrowtail{%
+boldlittlevee}{\boldscriptaxis\greaterthan}{\mkern-1mu\boldscriptaxis
+\lessthan}{\boldscript\vee}{\boldscript\wedge}\fi
+
+%% curly vee tail (uses AMS symbols fonts)
+\newarrowtail{curlyvee}\succ{\mkern-1mu{\prec}\mkern.4mu}\curlyvee\curlywedge
+
+%% open and closed triangle tails (uses AMS symbols fonts)
+\def\rttriangle{\mkern1.2mu\triangleright}%% 29.1.93
+\newarrowtail{triangle}\rttriangle\lhtriangle\dhtriangle\uhtriangle
+\newarrowtail{blacktriangle}\blacktriangleright{\mkern-1mu\blacktriangleleft
+\mkern.4mu}\dhblack\uhblack\newarrowtail{littleblack}{\scriptaxis
+\blacktriangleright\mkern-2mu}{\mkern-1mu\scriptaxis\blacktriangleleft}%
+\dhlblack\uhlblack
+
+%% LaTeX tails
+\def\rtla{\hbox{\setbox0=\lnchar55\dimen0=\wd0\kern-.5\dimen0\ht0\z@\raise
+\axisheight\box0\kern-.2\dimen0}}%%
+\def\ltla{\hbox{\setbox0=\lnchar33\dimen0=\wd0\kern-.15\dimen0\ht0\z@\raise
+\axisheight\box0\kern-.5\dimen0}}%%
+\def\dtla{\vbox{\setbox0=\rlap{\lnchar77}\dimen0=\ht0\kern-.7\dimen0\box0%
+\kern-.1\dimen0}}%% 15.1.93 from -.6
+\def\utla{\vbox{\setbox0=\rlap{\lnchar66}\dimen0=\ht0\kern-.1\dimen0\box0%
+\kern-.6\dimen0}}%%
+\newarrowtail{LaTeX}\rtla\ltla\dtla\utla
+
+%% double vee tail %% will probably be withdrawn later
+\def\rtvvee{\gg\mkern-3mu}%%
+\def\ltvvee{\mkern-3mu\ll}%%
+\def\dtvvee{\vbox{\hbox{$\vee$}\kern-.6ex \hbox{$\vee$}\vss}}%%
+\def\utvvee{\vbox{\vss\hbox{$\wedge$}\kern-.6ex \hbox{$\wedge$}\kern\z@}}%%
+\newarrowtail{doublevee}\rtvvee\ltvvee\dtvvee\utvvee
+
+%% double LaTeX tails %% will probably be withdrawn later
+\def\ltlala{\ltla\kern.3em\ltla}%%
+\def\rtlala{\rtla\kern.3em\rtla}%%
+\def\utlala{\hbox{\utla\raise-.6ex\utla}}%%
+\def\dtlala{\hbox{\dtla\lower-.6ex\dtla}}%%
+\newarrowtail{doubleLaTeX}\rtlala\ltlala\dtlala\utlala
+
+%% bar (as in \mapsto)
+\def\utbar{\vrule height 0.093ex depth0pt width 0.4em}%%
+\let\dtbar\utbar%%
+\def\rtbar{\mkern1.5mu\vrule height 1.1ex depth.06ex width .04em\mkern1.5mu}%
+%%
+\let\ltbar\rtbar%%
+\newarrowtail{mapsto}\rtbar\ltbar\dtbar\utbar%%
+\newarrowtail{|}\rtbar\ltbar\dtbar\utbar%%ascii vertical bar (|)
+
+%% hooks (as in \into): choice of after/above and before/below
+
+\def\rthooka{\raisehook{}+\subset\mkern-1mu}%%
+\def\lthooka{\mkern-1mu\raisehook{}+\supset}%%
+\def\rthookb{\raisehook{}-\subset\mkern-2mu}%%
+\def\lthookb{\mkern-1mu\raisehook{}-\supset}%%
+
+\def\dthooka{\shifthook{}+\cap}%%
+\def\dthookb{\shifthook{}-\cap}%%
+\def\uthooka{\shifthook{}+\cup}%%
+\def\uthookb{\shifthook{}-\cup}%%
+
+\newarrowtail{hooka}\rthooka\lthooka\dthooka\uthooka\newarrowtail{hookb}%
+\rthookb\lthookb\dthookb\uthookb
+
+\ifx\boldmath\undefined\newarrowtail{boldhooka}\rthooka\lthooka\dthooka
+\uthooka\newarrowtail{boldhookb}\rthookb\lthookb\dthookb\uthookb\newarrowtail
+{boldhook}\rthooka\lthookb\dthooka\uthooka\else\def\rtbhooka{\raisehook
+\boldmath+\subset\mkern-1mu}%%
+\def\ltbhooka{\mkern-1mu\raisehook\boldmath+\supset}%%
+\def\rtbhookb{\raisehook\boldmath-\subset\mkern-2mu}%%
+\def\ltbhookb{\mkern-1mu\raisehook\boldmath-\supset}%%
+\def\dtbhooka{\shifthook\boldmath+\cap}%%
+\def\dtbhookb{\shifthook\boldmath-\cap}%%
+\def\utbhooka{\shifthook\boldmath+\cup}%%
+\def\utbhookb{\shifthook\boldmath-\cup}%%
+\newarrowtail{boldhooka}\rtbhooka\ltbhooka\dtbhooka\utbhooka\newarrowtail{%
+boldhookb}\rtbhookb\ltbhookb\dtbhookb\utbhookb\newarrowtail{boldhook}%
+\rtbhooka\ltbhookb\dthbooka\utbhooka\fi
+
+%% the following seem the better choices at 10pt & 300dpi
+\newarrowtail{hook}\rthooka\lthookb\dthooka\uthooka\newarrowtail{C}\rthooka
+\lthookb\dthooka\uthooka
+
+%% circles
+\newarrowtail{o}\hho\hho\circ\circ%%
+\newarrowtail{O}\hhO\hhO{\scriptstyle\bigcirc}{\scriptstyle\bigcirc}%%
+
+%% crosses
+\newarrowtail{X}\lhtimes\rhtimes\uhtimes\dhtimes\newarrowtail+++++
+
+%% empty tail {} is also available
+
+%% Y from stmaryrd (vertical ones still need adjustment)
+\newarrowtail{Y}\Yright\Yleft\Yup\Ydown
+
+%%      **********  F I L L E R S ***********
+
+%% shortening is up to 0.15em=2.7mu horiz and 0.35ex vertically at each end.
+
+%% dot {.}, single rule {-} and empty {} fillers are also available
+
+%% double and triple lines
+%%\newarrowfiller{=}==\Vert\Vert%%
+\newarrowfiller{=}=={\@cmex77}{\@cmex77}%% 16.1.93
+\def\vfthree{\mid\!\!\!\mid\!\!\!\mid}%%ascii
+\newarrowfiller{3}\equiv\equiv\vfthree\vfthree
+
+%% dashed line
+\def\vfdashstrut{\vrule width0pt height1.3ex depth0.7ex}%%
+\def\vfthedash{\vrule width\Cd@qE height0.6ex depth 0pt}%%
+\def\hfthedash{\Cd@MI\vrule\horizhtdp width 0.26em}%%
+\def\hfdash{\mkern5.5mu\hfthedash\mkern5.5mu}%%
+\def\vfdash{\vfdashstrut\vfthedash}%%
+\newarrowfiller{dash}\hfdash\hfdash\vfdash\vfdash
+
+%%      ************* M I D D L E S ************
+
+%% plus
+\newarrowmiddle+++++
+
+%%      ************* D I A G O N A L S ************
+
+%% simple arrow heads
+%%\def\nwhTO{\nwarrow\mkern-1mu}%%
+%%\def\nehTO{\mkern-.1mu\nearrow}%%
+%%\def\sehTO{\searrow\mkern-.02mu}%%
+%%\def\swhTO{\mkern-.8mu\swarrow}%%
+
+%%======================================================================%
+%%                                                                      %
+%%      (22) ARROW COMMANDS                                             %
+%%                                                                      %
+%%======================================================================%
+
+%% change to \iftrue to get mixed heads
+\iffalse%%
+\newarrow{To}----{vee}%%
+\newarrow{Arr}----{LaTeX}%%
+\newarrow{Dotsto}....{vee}%%
+\newarrow{Dotsarr}....{LaTeX}%%
+\newarrow{Dashto}{}{dash}{}{dash}{vee}%%
+\newarrow{Dasharr}{}{dash}{}{dash}{LaTeX}%%
+\newarrow{Mapsto}{mapsto}---{vee}%%
+\newarrow{Mapsarr}{mapsto}---{LaTeX}%%
+\newarrow{IntoA}{hooka}---{vee}%%
+\newarrow{IntoB}{hookb}---{vee}%%
+\newarrow{Embed}{vee}---{vee}%%
+\newarrow{Emarr}{LaTeX}---{LaTeX}%%
+\newarrow{Onto}----{doublevee}%%
+\newarrow{Dotsonarr}....{doubleLaTeX}%%
+\newarrow{Dotsonto}....{doublevee}%%
+\newarrow{Dotsonarr}....{doubleLaTeX}%%
+\else%%
+\newarrow{To}---->%%
+\newarrow{Arr}---->%%
+\newarrow{Dotsto}....>%%
+\newarrow{Dotsarr}....>%%
+\newarrow{Dashto}{}{dash}{}{dash}>%%
+\newarrow{Dasharr}{}{dash}{}{dash}>%%
+\newarrow{Mapsto}{mapsto}--->%%
+\newarrow{Mapsarr}{mapsto}--->%%
+\newarrow{IntoA}{hooka}--->%%
+\newarrow{IntoB}{hookb}--->%%
+\newarrow{Embed}>--->%%
+\newarrow{Emarr}>--->%%
+\newarrow{Onto}----{>>}%%
+\newarrow{Dotsonarr}....{>>}%%
+\newarrow{Dotsonto}....{>>}%%
+\newarrow{Dotsonarr}....{>>}%%
+\fi%%
+
+\newarrow{Implies}===={=>}%% minimum cell height 9.5pt
+\newarrow{Project}----{triangle}%%
+\newarrow{Pto}----{harpoon}%%
+
+\newarrow{Eq}=====%%
+\newarrow{Line}-----%%
+\newarrow{Dots}.....%%
+\newarrow{Dashes}{}{dash}{}{dash}{}%%
+
+%% braces and parentheses
+%% \newarrow gives inappropriate directions, so we change the names
+%% the vertical filler is too far to the right; horizontal too high
+%% the vertical middles are too low with midvshaft
+%% maybe we'll add square brackets and the integral sign one day
+\newarrowhead{cmexbra}{\@cmex7B}{\@cmex7C}{\@cmex3B}{\@cmex38}%%
+\newarrowtail{cmexbra}{\@cmex7A}{\@cmex7D}{\@cmex39}{\@cmex3A}%%
+\newarrowmiddle{cmexbra}{\braceru\bracelu}{\bracerd\braceld}{\@cmex3D}{\@cmex
+3C}%%
+\newarrow{@brace}{cmexbra}-{cmexbra}-{cmexbra}%% braces
+\newarrow{@parenth}{cmexbra}---{cmexbra}%% straight parentheses
+\def\rightBrace{\d@brace[cmex,thick,midvshaft]}%%ASCII square brackets []
+\def\leftBrace{\u@brace[cmex,thick,midvshaft]}%%ASCII square brackets []
+\def\upperBrace{\r@brace[cmex,thick,midhshaft]}%%ASCII square brackets []
+\def\lowerBrace{\l@brace[cmex,thick,midhshaft]}%%ASCII square brackets []
+\def\rightParenth{\d@parenth[cmex,thick]}%%ASCII square brackets []
+\def\leftParenth{\u@parenth[cmex,thick]}%%ASCII square brackets []
+\def\upperParenth{\r@parenth[cmex,thick]}%%ASCII square brackets []
+\def\lowerParenth{\l@parenth[cmex,thick]}%%ASCII square brackets []
+
+%% synonyms for reverse compatibility
+
+\let\uFrom\uTo%%
+\let\lFrom\lTo%%
+\let\uDotsfrom\uDotsto%%
+\let\lDotsfrom\lDotsto%%
+\let\uDashfrom\uDashto%%
+\let\lDashfrom\lDashto%%
+\let\uImpliedby\uImplies%%
+\let\lImpliedby\lImplies%%
+\let\uMapsfrom\uMapsto%%
+\let\lMapsfrom\lMapsto%%
+\let\lOnfrom\lOnto%%
+\let\uOnfrom\uOnto%%
+\let\lPfrom\lPto%%
+\let\uPfrom\uPto%%
+
+\let\uInfromA\uIntoA%%
+\let\uInfromB\uIntoB%%
+\let\lInfromA\lIntoA%%
+\let\lInfromB\lIntoB%%
+\let\rInto\rIntoA%%
+\let\lInto\lIntoA%%
+\let\dInto\dIntoB%%
+\let\uInto\uIntoA%%
+\let\ruInto\ruIntoA%%
+\let\luInto\luIntoA%%
+\let\rdInto\rdIntoA%%
+\let\ldInto\ldIntoA%%
+%%
+\let\hEq\rEq%%
+\let\vEq\uEq%%
+\let\hLine\rLine%%
+\let\vLine\uLine%%
+\let\hDots\rDots%%
+\let\vDots\uDots%%
+\let\hDashes\rDashes%%
+\let\vDashes\uDashes%%
+
+%%=========================================================================%
+%% The following are included for reverse compatibility only.
+%%=========================================================================%
+\let\NW\luTo\let\NE\ruTo\let\SW\ldTo\let\SE\rdTo\def\nNW{\luTo(2,3)}\def\nNE{%
+\ruTo(2,3)}%%ascii
+\def\sSW{\ldTo(2,3)}\def\sSE{\rdTo(2,3)}%%ascii
+\def\wNW{\luTo(3,2)}\def\eNE{\ruTo(3,2)}%%ascii
+\def\wSW{\ldTo(3,2)}\def\eSE{\rdTo(3,2)}%%ascii
+\def\NNW{\luTo(2,4)}\def\NNE{\ruTo(2,4)}%%ascii
+\def\SSW{\ldTo(2,4)}\def\SSE{\rdTo(2,4)}%%ascii
+\def\WNW{\luTo(4,2)}\def\ENE{\ruTo(4,2)}%%ascii
+\def\WSW{\ldTo(4,2)}\def\ESE{\rdTo(4,2)}%%ascii
+\def\NNNW{\luTo(2,6)}\def\NNNE{\ruTo(2,6)}%%ascii
+\def\SSSW{\ldTo(2,6)}\def\SSSE{\rdTo(2,6)}%%ascii
+\def\WWNW{\luTo(6,2)}\def\EENE{\ruTo(6,2)}%%ascii
+\def\WWSW{\ldTo(6,2)}\def\EESE{\rdTo(6,2)}%%ascii
+
+\let\NWd\luDotsto\let\NEd\ruDotsto\let\SWd\ldDotsto\let\SEd\rdDotsto\def\nNWd
+{\luDotsto(2,3)}\def\nNEd{\ruDotsto(2,3)}%%ascii
+\def\sSWd{\ldDotsto(2,3)}\def\sSEd{\rdDotsto(2,3)}%%ascii
+\def\wNWd{\luDotsto(3,2)}\def\eNEd{\ruDotsto(3,2)}%%ascii
+\def\wSWd{\ldDotsto(3,2)}\def\eSEd{\rdDotsto(3,2)}%%ascii
+\def\NNWd{\luDotsto(2,4)}\def\NNEd{\ruDotsto(2,4)}%%ascii
+\def\SSWd{\ldDotsto(2,4)}\def\SSEd{\rdDotsto(2,4)}%%ascii
+\def\WNWd{\luDotsto(4,2)}\def\ENEd{\ruDotsto(4,2)}%%ascii
+\def\WSWd{\ldDotsto(4,2)}\def\ESEd{\rdDotsto(4,2)}%%ascii
+\def\NNNWd{\luDotsto(2,6)}\def\NNNEd{\ruDotsto(2,6)}%%ascii
+\def\SSSWd{\ldDotsto(2,6)}\def\SSSEd{\rdDotsto(2,6)}%%ascii
+\def\WWNWd{\luDotsto(6,2)}\def\EENEd{\ruDotsto(6,2)}%%ascii
+\def\WWSWd{\ldDotsto(6,2)}\def\EESEd{\rdDotsto(6,2)}%%ascii
+
+\let\NWl\luLine\let\NEl\ruLine\let\SWl\ldLine\let\SEl\rdLine\def\nNWl{\luLine
+(2,3)}\def\nNEl{\ruLine(2,3)}%%ascii
+\def\sSWl{\ldLine(2,3)}\def\sSEl{\rdLine(2,3)}%%ascii
+\def\wNWl{\luLine(3,2)}\def\eNEl{\ruLine(3,2)}%%ascii
+\def\wSWl{\ldLine(3,2)}\def\eSEl{\rdLine(3,2)}%%ascii
+\def\NNWl{\luLine(2,4)}\def\NNEl{\ruLine(2,4)}%%ascii
+\def\SSWl{\ldLine(2,4)}\def\SSEl{\rdLine(2,4)}%%ascii
+\def\WNWl{\luLine(4,2)}\def\ENEl{\ruLine(4,2)}%%ascii
+\def\WSWl{\ldLine(4,2)}\def\ESEl{\rdLine(4,2)}%%ascii
+\def\NNNWl{\luLine(2,6)}\def\NNNEl{\ruLine(2,6)}%%ascii
+\def\SSSWl{\ldLine(2,6)}\def\SSSEl{\rdLine(2,6)}%%ascii
+\def\WWNWl{\luLine(6,2)}\def\EENEl{\ruLine(6,2)}%%ascii
+\def\WWSWl{\ldLine(6,2)}\def\EESEl{\rdLine(6,2)}%%ascii
+
+\let\NWld\luDots\let\NEld\ruDots\let\SWld\ldDots\let\SEld\rdDots\def\nNWld{%
+\luDots(2,3)}\def\nNEld{\ruDots(2,3)}%%ascii
+\def\sSWld{\ldDots(2,3)}\def\sSEld{\rdDots(2,3)}%%ascii
+\def\wNWld{\luDots(3,2)}\def\eNEld{\ruDots(3,2)}%%ascii
+\def\wSWld{\ldDots(3,2)}\def\eSEld{\rdDots(3,2)}%%ascii
+\def\NNWld{\luDots(2,4)}\def\NNEld{\ruDots(2,4)}%%ascii
+\def\SSWld{\ldDots(2,4)}\def\SSEld{\rdDots(2,4)}%%ascii
+\def\WNWld{\luDots(4,2)}\def\ENEld{\ruDots(4,2)}%%ascii
+\def\WSWld{\ldDots(4,2)}\def\ESEld{\rdDots(4,2)}%%ascii
+\def\NNNWld{\luDots(2,6)}\def\NNNEld{\ruDots(2,6)}%%ascii
+\def\SSSWld{\ldDots(2,6)}\def\SSSEld{\rdDots(2,6)}%%ascii
+\def\WWNWld{\luDots(6,2)}\def\EENEld{\ruDots(6,2)}%%ascii
+\def\WWSWld{\ldDots(6,2)}\def\EESEld{\rdDots(6,2)}%%ascii
+
+\let\NWe\luEmbed\let\NEe\ruEmbed\let\SWe\ldEmbed\let\SEe\rdEmbed\def\nNWe{%
+\luEmbed(2,3)}\def\nNEe{\ruEmbed(2,3)}%%ascii
+\def\sSWe{\ldEmbed(2,3)}\def\sSEe{\rdEmbed(2,3)}%%ascii
+\def\wNWe{\luEmbed(3,2)}\def\eNEe{\ruEmbed(3,2)}%%ascii
+\def\wSWe{\ldEmbed(3,2)}\def\eSEe{\rdEmbed(3,2)}%%ascii
+\def\NNWe{\luEmbed(2,4)}\def\NNEe{\ruEmbed(2,4)}%%ascii
+\def\SSWe{\ldEmbed(2,4)}\def\SSEe{\rdEmbed(2,4)}%%ascii
+\def\WNWe{\luEmbed(4,2)}\def\ENEe{\ruEmbed(4,2)}%%ascii
+\def\WSWe{\ldEmbed(4,2)}\def\ESEe{\rdEmbed(4,2)}%%ascii
+\def\NNNWe{\luEmbed(2,6)}\def\NNNEe{\ruEmbed(2,6)}%%ascii
+\def\SSSWe{\ldEmbed(2,6)}\def\SSSEe{\rdEmbed(2,6)}%%ascii
+\def\WWNWe{\luEmbed(6,2)}\def\EENEe{\ruEmbed(6,2)}%%ascii
+\def\WWSWe{\ldEmbed(6,2)}\def\EESEe{\rdEmbed(6,2)}%%ascii
+
+\let\NWo\luOnto\let\NEo\ruOnto\let\SWo\ldOnto\let\SEo\rdOnto\def\nNWo{\luOnto
+(2,3)}\def\nNEo{\ruOnto(2,3)}%%ascii
+\def\sSWo{\ldOnto(2,3)}\def\sSEo{\rdOnto(2,3)}%%ascii
+\def\wNWo{\luOnto(3,2)}\def\eNEo{\ruOnto(3,2)}%%ascii
+\def\wSWo{\ldOnto(3,2)}\def\eSEo{\rdOnto(3,2)}%%ascii
+\def\NNWo{\luOnto(2,4)}\def\NNEo{\ruOnto(2,4)}%%ascii
+\def\SSWo{\ldOnto(2,4)}\def\SSEo{\rdOnto(2,4)}%%ascii
+\def\WNWo{\luOnto(4,2)}\def\ENEo{\ruOnto(4,2)}%%ascii
+\def\WSWo{\ldOnto(4,2)}\def\ESEo{\rdOnto(4,2)}%%ascii
+\def\NNNWo{\luOnto(2,6)}\def\NNNEo{\ruOnto(2,6)}%%ascii
+\def\SSSWo{\ldOnto(2,6)}\def\SSSEo{\rdOnto(2,6)}%%ascii
+\def\WWNWo{\luOnto(6,2)}\def\EENEo{\ruOnto(6,2)}%%ascii
+\def\WWSWo{\ldOnto(6,2)}\def\EESEo{\rdOnto(6,2)}%%ascii
+
+\let\NWod\luDotsonto\let\NEod\ruDotsonto\let\SWod\ldDotsonto\let\SEod
+\rdDotsonto\def\nNWod{\luDotsonto(2,3)}\def\nNEod{\ruDotsonto(2,3)}%%ascii
+\def\sSWod{\ldDotsonto(2,3)}\def\sSEod{\rdDotsonto(2,3)}%%ascii
+\def\wNWod{\luDotsonto(3,2)}\def\eNEod{\ruDotsonto(3,2)}%%ascii
+\def\wSWod{\ldDotsonto(3,2)}\def\eSEod{\rdDotsonto(3,2)}%%ascii
+\def\NNWod{\luDotsonto(2,4)}\def\NNEod{\ruDotsonto(2,4)}%%ascii
+\def\SSWod{\ldDotsonto(2,4)}\def\SSEod{\rdDotsonto(2,4)}%%ascii
+\def\WNWod{\luDotsonto(4,2)}\def\ENEod{\ruDotsonto(4,2)}%%ascii
+\def\WSWod{\ldDotsonto(4,2)}\def\ESEod{\rdDotsonto(4,2)}%%ascii
+\def\NNNWod{\luDotsonto(2,6)}\def\NNNEod{\ruDotsonto(2,6)}%%ascii
+\def\SSSWod{\ldDotsonto(2,6)}\def\SSSEod{\rdDotsonto(2,6)}%%ascii
+\def\WWNWod{\luDotsonto(6,2)}\def\EENEod{\ruDotsonto(6,2)}%%ascii
+\def\WWSWod{\ldDotsonto(6,2)}\def\EESEod{\rdDotsonto(6,2)}%%ascii
+
+%%======================================================================%
+%%                                                                      %
+%%      (23) MISCELLANEOUS                                              %
+%%                                                                      %
+%%======================================================================%
+
+\def\labelstyle{%%
+\ifincommdiag%%
+\textstyle%%
+\else%%
+\scriptstyle%%
+\fi}%%
+\let\objectstyle\displaystyle
+
+\newdiagramgrid{pentagon}{0.618034,0.618034,1,1,1,1,0.618034,0.618034}{1.%
+17557,1.17557,1.902113,1.902113}
+
+\newdiagramgrid{perspective}{0.75,0.75,1.1,1.1,0.9,0.9,0.95,0.95,0.75,0.75}{0%
+.75,0.75,1.1,1.1,0.9,0.9}
+
+\diagramstyle[%%ascii open square bracket
+dpi=300,%%              office laserwriters are usually 300 dots per inch
+vmiddle,nobalance,%%    vertical and horizontal positioning
+loose,%%                allow rows and columns to stretch
+thin,%%                 line10 arrows; default rule thickness (TeXbook p447)
+pilespacing=10pt,%
+%%     parallel vertical separation (horizontals: half this)
+shortfall=4pt,%%        distance between arrowheads and their targets
+l>=20pt%%               minimum length of horizontal arrow shafts
+%% size=3em             defaulted on entry to the diagram itself
+%% heads=LaTeX          also defaulted
+]%%ascii close square bracket
+
+\cdrestoreat%% restore old category code for @ etc
+%%============================== THE END ==============================
+
+\dimen0 200pt \dimen1 210pt \dimen2 220pt \dimen3 230pt \dimen4 240pt \dimen5
+250pt \dimen6 260pt \dimen7 270pt \dimen8 280pt \dimen9 290pt
+
+%%
+

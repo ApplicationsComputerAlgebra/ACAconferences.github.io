@@ -1,0 +1,33 @@
+A Computer Algebra Application to Determination of Lie Symmetries of Partial
+Differential Equations
+
+Vladimir Pulov
+Department of Physics, Technical University-Varna, Varna, Bulgaria
+
+Eddy Chacarov
+Department of Mathematics, Varna Free University, Varna, Bulgaria
+
+Ivan Uzunov
+Department of Physics, Technical University, Sofia, Bulgaria
+
+Although the procedure of establishing the Lie symmetry transformations leaving
+a system of partial differential equations invariant is straightforward, it
+often seems formidable to be followed.  This is primarily due to the
+difficulties brought about by the great number of symbolic calculations that
+must be performed in order to create and solve the so called defining system.
+The operation are routine but very tedious to be done by hand even when the
+symmetries admitted by a single partial differential equation with the fewest
+number of variables are being sought.  The computational problems can be
+overcome by using some computer system
+
+for doing symbolic calculations, such as Reduce, MATHEMATICA, Maple, etc.  The
+aim of this paper is to present an algorithm of a computer implementation of
+the Lie method, showing how the most general Lie group of symmetry point
+transformations, admitted by a given system of partial differential equations,
+can be obtained in a more advantageous way by utilizing the automatic symbolic
+computations of MATHEMATICA.  The algorithm described here, is designed to
+create and solve the defining system of an arbitrary number of simultaneous
+partial differential equations without any restrictions on the number of the
+independent and the dependent variables, as well as on the highest order of the
+derivatives that may be involved.  Some results of the package application to
+partial differential equations from nonlinear fiber optics are given.

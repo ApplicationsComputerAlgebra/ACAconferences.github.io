@@ -1,0 +1,34 @@
+\begin{center}
+\LARGE
+hermodyanmics with Maple
+
+
+\end{center}
+
+\begin{center}
+\Large
+Ross Taylor
+\end{center}
+
+\noindent
+Date:  July 18th (Thursday)\\
+Time:  16:50-17:15\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+Computer algebra systems (of which Maple is but one example) have enormous potential, not just
+in thermodynamics, but in all areas of science and engineering. However, to be useful in
+thermodynamics a computer algebra system needs: 
+
+\begin{enumerate}
+
+\item
+
+\item
+
+\item
+
+\end{enumerate}

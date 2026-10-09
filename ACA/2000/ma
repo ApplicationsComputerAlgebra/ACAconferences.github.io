@@ -1,0 +1,21 @@
+
+  
+ Abstract for session 
+"Computational Commutative Algebra"
+
+Session Organizers:
+
+ Alkiviadis Akritas,
+ Gennadi Malaschonok
+
+
+ The topics to be covered in this session are:
+
+ - Constructive methods in Commutative Algebra
+ - Effective methods and complexity issues in commutative algebra
+ (Computation of Gboebner basis, computation of GCD, PRS, determinant,
+ characteristic polynomials, solution of equations, and system of equations
+ etc.)
+ - Theory and practice of computation
+ (application of this method in the Computer Algebra Systems)
+

@@ -1,0 +1,17 @@
+Transmission of Solitons through Random Media
+
+Robert Knapp
+rknapp@wri.com
+
+The one-dimensional nonlinear Schr\"odinger (NLS) equation with a random
+potential function is used to model pulses in very long low dispersion
+optical fiber with random fluctuations.  When the initial pulse is a
+soliton solution of the unperturbed NLS equation, we show that an
+approximate theory can be developed for the effects of the
+fluctuations by using an equivalent particle method.  Results of
+direct numerical simulations are presented.  Comparisons of
+the approximate theory and the direct numerical solutions indicate that
+the theory is accurate enough to use for finding statistics about the
+transmission of the soliton-like pulses through the fluctuations.
+Computations provide evidence for the existence of nonlinear
+localization, though with a large localization length.

@@ -1,0 +1,12 @@
+Bernhard Kutzler* (Austria), b.kutzler@eunet.at
+
+Indispensable Manual Calculation Skills in a CAS Math Teaching Environment
+
+What manual calculation skills are still needed when students use
+graphic/symbolic calculators or computers with computer algebra systems (CAS)?
+What should students be able to do manually, i.e. just using paper and pencil?
+In this lecture the outcome of a two day discussion on these questions, held by
+W Herget, H Heugl, E Lehmann, and the author, will be presented.  Our answers
+and proposals are meant to be a challenge, aiming at sparking off a broad
+discussion about what manual calculation skills we still need to teach and
+assess.

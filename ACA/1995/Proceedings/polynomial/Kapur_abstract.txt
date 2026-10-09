@@ -1,0 +1,32 @@
+ "Resurrecting Dixon Resultants"
+  Deepak Kapur and Tushar Saxena
+  kapur@cs.albany.edu
+
+Deepak Kapur and Tushar Saxena
+Department of Computer Science
+State University of New York
+Albany, NY 12222
+
+In the early 1900's, Dixon generalized Cayley's formulation of
+Euler-Bezout-Sylvester's resultant for eliminating a single
+variable to simultaneously eliminate two variables. Subsequently,
+Dixon showed how this technique could be generalized to eliminate
+arbitrarily many variables for a subclass of multivariate
+polynomials.  For most algebraic and geometry problems, however,
+Dixon's method does not give any useful information about common
+zeros.  Dixon's work also got overshadowed by Macaulay's
+multivariate resultant system which works in general.
+
+In this talk, Dixon's resultants are reviewed. It will be shown
+how Dixon's method can be modified to work on a large class of
+problems for simultaneously eliminating arbitrarily many
+variables.  Examples of problems done easily using this
+generalization will be discussed.  Dixon's formulation can solve
+most of these examples in a much smaller time than other
+techniques.  Dixon's resultants will be compared with Macaulay
+resultants as well as sparse resultants based on recent
+experimental results.  New results relating the computation of
+Dixon's resultants to the Newton polytopes of the input
+polynomials will be reviewed, thus establishing that the Dixon
+formulation implicitly exploits the sparsity of the input
+polynomials.

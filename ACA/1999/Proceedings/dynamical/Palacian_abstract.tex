@@ -1,0 +1,235 @@
+\documentstyle[12pt]{article}
+\oddsidemargin 0.1in
+\evensidemargin -0.8in
+\topmargin -0.75in
+\textheight 24cm
+\textwidth 16cm
+
+
+\def\Vec#1{\mbox{$\bf#1$}}
+\newcommand{\Sum}{\displaystyle\sum}
+\newcommand{\Eqref}[1]{(\ref{#1})}
+\newcommand{\Frac}[2]{\mbox{$\displaystyle\frac{#1}{#2}$}}
+
+
+\title{\bf Analytical Approach for Simplifying\\
+           Dynamical Systems of Polynomial Type}
+
+ \author{
+{\small
+ \begin{tabular}{c}
+    J. Palaci\'an and P. Yanguas
+ \end{tabular}} \\[2ex]
+{\footnotesize
+ \begin{tabular}{c}
+               {\it Departamento de Matem\'atica e Inform\'atica,}\\
+               {\it Universidad P\'ublica de Navarra, 31006 Pamplona, Spain}
+   \end{tabular}}}
+\date{}
+
+
+
+\begin{document}
+\maketitle
+
+Many dynamical systems are modelled by a system of ordinary differential
+equations which is formed by the sum of a linear part plus a small
+perturbation.
+Moreover, the perturbation is a finite sum of nonlinear vector fields which
+begins
+with quadratic polynomials. In other words, we study systems of the type
+\begin{equation}
+\Frac{d\,\Vec{x}(t)}{d\,t}\,=\,A\,\Vec{x}(t)+
+   \Sum_{n=1}^L\Frac{\varepsilon^n}{n!}\Vec{F}_n(\Vec{x}(t)),\label{sys}
+\end{equation}
+where $A$ is an $m\times m$--matrix with constant coefficients with physical
+dimensions [time$^{-1}$], $\varepsilon$ stands for a dimensionless small
+parameter
+and the vector field $\Vec{F}_n$ has $m$ components and each component
+is a polynomial of degree $n+1$.
+
+Analytical methods to deal with systems of the type~\Eqref{sys} are based
+on the
+fact  that these differential equations can be understood as perturbations
+of the principal part, $A\,\Vec{x}(t)$. In such circumstances, one can think of
+reducing the problem to a simpler one by means of adequate changes of
+variables.
+
+These equations appear in many situations of Dynamical Systems Theory, such as
+stability and bifurcation analysis of equilibrium points and periodic orbits or
+singularity theories. Besides, applications are encountered in several
+fields such
+as Engineering (van der Pol--like and Duffing--like equations, see~[1]) or
+Astrodynamics
+(potential functions modelling elliptical galaxies, see~[7]).
+
+The first step in the analysis of Equation~(\ref{sys}) was given by
+Poincar\'e in~[6]. He considered the problem of reducing it to a system of
+linear equations
+$$\Frac{d\,\Vec{y}(t)}{d\,t}\,=\,A\,\Vec{y}(t),$$
+by defining the formal change of variables
+$\Vec{y}(t)=\Vec{\varphi}(\Vec{x}(t);\varepsilon)=\Vec{x}(t)+\ldots$.
+Concretely, he
+found a solution in the case where $A$ were diagonalizable and its eigenvalues
+$\lambda_1,\ldots,\lambda_m$ satisfied the resonant condition, that is,
+$\lambda_j\neq\Sum
+k_i\,\lambda_i$ for
+$j=1,\ldots,m$ and all integer vectors $k=(k_1,\ldots,k_m)$ with $k_i\ge0$ and
+$|k|=k_1+\ldots+k_m\ge 2$. He also proved that, if in addition to
+the above, the eigenvalues of $A$, considered in the complex plane, lie
+strictly to one side
+of a line through the origin of the plane, then the formal series  which
+gives the change of variables converges (for a proof see reference~[7]).
+
+When these conditions for the eigenvalues are not satisfied, one tries to
+find the
+normal form of~\Eqref{sys}, that is, to reduce this system to an
+``equivalent" one
+\begin{equation}
+\Frac{d\,\Vec{y}(t)}{d\,t}\,=\,A\,\Vec{y}(t)+
+   \Sum_{n=1}^M\Frac{\varepsilon^n}{n!}\Vec{G}_n(\Vec{y}(t))+{\cal
+O}(\varepsilon^{M+1}),\label{sys2}
+\end{equation}
+where $M\ge L$ and $\Vec{G}_n$ are ``simpler" than $\Vec{F}_n$ for
+$n=1,\ldots,L$.
+
+Meyer~[3] has generalized Poincar\'e's results by giving the Normal Form
+Theorem, based on Lie
+transformations. See reference~[2] for the method applied to Hamiltonian
+systems and
+reference~[4] for the generalization to differential equations and tensor
+fields. We summarize THE
+theorem briefly. Let $A=A_S+A_N$ be the Jordan decomposition of a square
+matrix into its semisimple
+and nilpotent parts, respectively. Let $A^t$ be the transpose matrix of $A$
+(which is, indeed, the
+adjoint matrix for the standard inner product
+in ${\bf R}^m$). Denote by $[\,\cdot\,,\,\cdot\,]$ the Lie bracket of two
+vector fields, that is,
+$[\,\Vec{g}_1\,,\,\Vec{g}_2\,]=(\partial{\Vec{g}_1}/\partial{\Vec{x}})\,\Vec{g}_
+2
+-(\partial{\Vec{g}_2}/\partial{\Vec{x}})\,\Vec{g}_1$
+and by
+${\cal L}_A$ the linear operator associated to $A$, such that, for any
+vector field
+$\Vec{g}$ defined in a domain of
+${\bf R}^m$,
+${\cal L}_A(\Vec{g})=[\,\Vec{g}\,,\,A\,\Vec{x}\,]$. The theorem states that
+there exists a formal transformation
+$\Vec{y}(t)=\Vec{\varphi}(\Vec{x}(t);\varepsilon)=\Vec{x}(t)+\ldots$ which
+transforms~\Eqref{sys} into~\Eqref{sys2}, where each term $\Vec{G}_n$, $n=1,
+\ldots,M$  belongs to the kernel of the operator ${\cal L}_{A^t}$, that is,
+\begin{equation}\label{theo}
+[\,\Vec{G}_n\,,\,A^t\,\Vec{x}\,]=0, \quad n=1,\ldots,M.\end{equation}
+
+Note that the transformation is analytic since we truncate the change of
+variables at an order $M$. Moreover, by virtue
+of~(\ref{theo}), it is not difficult to see that,
+$[\,A\,\Vec{x}\,,\,A_S\,\Vec{x}\,]=0$ and $[\,\Vec{G}_n\,,\,A_S\,\Vec{x}\,]=0$,
+$n=1,\ldots, M$, since $\mbox{ker}\,{\cal L}_{A^t}\subset\mbox{ker}\,{\cal
+L}_{A_S}$.
+
+However, if $A_S=0$, the consequence of applying the Normal Form Theorem is
+not so drastic.
+Then, the strategy to reduce the system must be different. Moreover, even
+if $A_S\neq0$, the
+above result does not permit to further simplify the initial
+system. Therefore, one can think of generalizing the calculation of normal
+forms by Lie transformations to simplify  systems of the type~(\ref{sys})
+even more.
+
+Let $T$ be a square $m\times m$--matrix with Jordan decomposition $T=T_S+T_N$,
+that is, $T_S$ semisimple and $T_N$ nilpotent. In each step of the process of
+a Lie transformation ($n=1,\ldots,M$) one has to solve the homology equation
+$${\cal L}_A(\Vec{W}_n)+\Vec{G}_n\,=\,\widetilde{\Vec{F}}_n,$$
+where $\Vec{W}_n$ is related to the $n$--th order of the generating
+function whereas
+$\widetilde{\Vec{F}}_n$ denotes the vectors computed in the previous steps.
+Then, we try to find $\Vec{G}_n$ such that $[\,\Vec{G}_n\,,\,T\,\Vec{x}\,]=0$.
+For that,
+we split
+$\widetilde{\Vec{F}}_n=\widetilde{\Vec{F}}^{\#}_n+\widetilde{\Vec{F}}^{\&}_n$ wh
+ere
+$\widetilde{\Vec{F}}^{\#}_n\in
+\mbox{ker}\,({\cal L}_T)$, i.e., ${\cal
+L}_T(\widetilde{\Vec{F}}^{\#}_n)=[\,\widetilde{\Vec{F}}^{\#}_n\,,\,T\,\Vec{x}\,]
+=0$, identify
+$\Vec{G}_n=\widetilde{\Vec{F}}^{\#}_n$ and
+$\widetilde{\Vec{F}}^{\&}_n=\widetilde{\Vec{F}}_n-\widetilde{\Vec{F}}^{\#}_n$. T
+he vector
+$\Vec{W}_n$ must be a solution of the system of partial differential equations
+${\cal
+L}_A(\Vec{W}_n)=\widetilde{\Vec{F}}^{\&}_n.$
+
+If, in addition to the above,  $T$ has been chosen so that it commutes with
+$A$, then
+$[\,A\,\Vec{x}\,,\,T\,\Vec{x}\,]=0$ and one reduces the original system.
+Note that this
+approach enlarges the Normal Form Theorem and generalizes it since one does not
+need to take $A^t$ but any other matrix $T$.
+
+One can prove that if $T$ satisfies: i) it is semisimple, that is, $T_N=0$;
+ii) $A\,T=T\,A$  and
+iii) $\mbox{ker}\,({\cal L}_A)\cap\mbox{im}\,({\cal L}_T)=\{0\}$, then the
+decomposition of
+$\widetilde{\Vec{F}}_n$ is performed straightforwardly. Moreover the
+ system of partial differential  equations is solvable and $\Vec{W}_n$ are
+polynomial
+vector fields, for details see~[6]. In this ``optimal"  case one can reduce the
+initial system to an equivalent one, applying several  Lie transformations.
+Now, the final reduced
+system can be studied more easily and the reconstruction of the original
+equations is performed by
+making use of the inverse Lie transformation up to a certain order
+$M$.
+
+If some condition of the latter paragraph does not hold, one must
+apply the Lie transformations carefully. Now, the process can terminates
+before,
+either because it is not possible to find out more semisimple matrices,
+$T$, or, because
+in any Lie transformation, one can compute $\Vec{W}_n$ only up to a certain
+order
+$M$ so that the generating functions are polynomials.
+
+We illustrate the technique with some examples of differential systems
+putting special emphasis in the implementation of the method with the
+algebraic
+processor {\sc Mathematica}.
+
+
+
+ {\small
+\begin{thebibliography}{}
+
+\item[1.]~T.~de Zeeuw, Motion in the Core of a Triaxial Potential, {\sl
+Monthly
+Notices of the Royal Astronomical Society\/}
+{\bf 215}, 731--760 (1985).
+
+\item[2.]~A.~Deprit, Canonical Transformations Depending on a Small Parameter,
+{\sl Celestial Mechanics\/} {\bf 1}, 12--30
+(1969).
+
+\item[3.]~K.~Meyer, Normal Forms for the General Equilibrium,
+{\sl Funkcialaj Ekvacioj\/} {\bf 27}, 261--271 (1984).
+
+\item[4.]~K.~Meyer, A Lie Transform Tutorial~II,
+in {\sl Computer Aided Proofs in Analysis}, eds. K.~Meyer and
+D.~S.~Schmidt,  The IMA Volumes in Mathematics and its Applications {\bf 28},
+Springer--Verlag, New York, 190--210 (1991).
+
+\item[5.]~J.~Palaci\'an and P.~Yanguas, Reduction of Polynomial Differential
+Equations by Constructing Formal Integrals, in preparation.
+
+\item[6.]~H.~Poincar\'e, Memoire sur les Courbes Definie por une Equation
+Differentialle IV, {\sl J. Math. Pures Appl.\/} {\bf 1}, 167--244 (1885).
+
+\item[7.]~J.~A.~Sanders and F.~Verhulst, {\sl Averaging Methods in Nonlinear
+Dynamical Systems}, Applied Mathematical Sciences {\bf 59},
+Springer--Verlag, New
+York (1985).
+\end{thebibliography}}
+
+\end{document}
+

@@ -1,0 +1,17 @@
+yril Tintarev* (Sweden), kyril@math.uu.se 
+
+MINOS SE - A New Symbolic Computation Package with Intuitive ("Natural Syntax")
+Interface
+
+MINOS SE (Mathematical Interface with Natural Object Syntax - School Edition)
+uses the same icon-folder metaphor as modern file system shells to represent
+mathematical objects.  The emphasis in the interface moves therefore from a
+linear log to a pane populated with metaphorical objects.  Algebraic operations
+are performed by click or drag, exploiting the ease of visual memorization in
+comparison to memorization of string syntax.  MINOS SE is built upon a modest
+symbolic omputations kernel and enjoys an integrated object structure from
+forms to icons in panes all the way down to expression trees.  The program
+supports most of algebra and calculus curriculum fot high school and the first
+year of college.  Testing of MINOS SE in the live classroom instruction in
+several high schools in Sweden showed that it takes about 10 minutes for
+students to master the program and the use it without looking up a manual.

@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Commercial vs Free Computer Algebra Systems
+</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Zimmermann">Paul Zimmermann</A><br>
+</h3>
+
+Date: July 20th (Saturday) <br>
+Time: 11:22.5<br>
+
+<center>
+Abstract
+</center>
+
+ Today, the two or three leading computer algebra systems are commercial.
+    However, in some other fields, some leading products are free systems, for example gcc for
+    compilers, gnu-emacs for editors, TeX for (scientific) text processing. In this talk, we will
+    try to figure out the reasons (if any) why the situation is different for computer algebra
+    systems, and try to guess what the future market of symbolic computation will be. 
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Wester.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

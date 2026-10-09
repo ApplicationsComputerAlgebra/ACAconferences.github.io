@@ -1,0 +1,21 @@
+Non commutative generating series, in control theory and special functions
+
+Gerard Jacob (Univ.Lille I, France)
+
+The noncommutative power series appear as a combinatorial tool that is useful
+in control theory - where they play the rule of the transfer functions, in a
+non linear setting - as well as in the domain of the special functions.  In
+these two fields, we introduce them by encoding iterated integrals on some
+differential forms, as defined by K. T. Chen.  We use them jointly with free
+Lie algebras, Poincarre-Birkhoff-Witt theorem, and Hopf algebras.  Recently, we
+obtained new results by use of the noncommutative rational series.  We get so a
+good combinatorial preparation for writing down some specific packages in
+Computer Algebra Systems.
+
+First we give a short presentation of their use in an identification algorithm
+for an input/output  system given as a blackbox behaviour.  Further, we sketch
+the results we have obtained in the theory of polylogarithm functions:
+monodromy, functional relations, Euler-Zagier sums (or "Multiple Zeta Values"),
+Drinfeld associator, renormalization, (and coloured versions by adjonction of
+roots of unity), Hurwitz polylogarithm functions, and computation of the table
+of the MZV's.

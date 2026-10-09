@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Our Neural Network Algorithm</TITLE>
+<META NAME="description" CONTENT="Our Neural Network Algorithm">
+<META NAME="keywords" CONTENT="sever">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sever.css">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html87"
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html85"
+ HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html81"
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html88"
+ HREF="node8.html">Automata Network Algorithm</A>
+<B> Up:</B> <A NAME="tex2html86"
+ HREF="node4.html">Neural Network Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html82"
+ HREF="node6.html">Stark's Neural Network Algorithm</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00043000000000000000">&#160;</A>
+<A NAME="sec:ONNA">&#160;</A>
+<BR>
+Our Neural Network Algorithm
+</H2>
+
+<P>
+The main idea of our algorithm [<A
+ HREF="node13.html#Severyanov">8</A>] is based on the known
+feature of affine transformations: transformation of a given rectangle
+is completely conditioned  by transformation of three of its corner
+points.
+
+<P>
+As previously, we work inside a unit square <I>S</I><SUP><I>u</I></SUP> of pixels for which
+we select three corner points 
+<!-- MATH: $(s_0, s_t, s_r)$ -->
+(<I>s</I><SUB>0</SUB>, <I>s</I><SUB><I>t</I></SUB>, <I>s</I><SUB><I>r</I></SUB>), <I>s</I><SUB>0</SUB> being left
+lower corner, <I>s</I><SUB><I>t</I></SUB>&nbsp;left top corner, <I>s</I><SUB><I>r</I></SUB>&nbsp;right lower corner. For
+every <IMG
+ WIDTH="55" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$f_k \in F$">
+(
+<!-- MATH: $k = 1, \dots, |F|$ -->
+<IMG
+ WIDTH="104" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$k = 1, \dots, \vert F\vert$">)
+we only compute images of
+these three corner points, 
+<!-- MATH: $(s_0^\prime=f_k(s_0),
+s_t^\prime=f_k(s_t), s_r^\prime=f_k(s_r))$ -->
+<IMG
+ WIDTH="275" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$(s_0^\prime=f_k(s_0),
+s_t^\prime=f_k(s_t), s_r^\prime=f_k(s_r))$">.
+Then we define offsets
+
+<!-- MATH: $\Delta_x^t$ -->
+<IMG
+ WIDTH="28" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.gif"
+ ALT="$\Delta_x^t$">
+= 
+<!-- MATH: $x(s_t^\prime)-x(s_0^\prime)$ -->
+<IMG
+ WIDTH="99" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.gif"
+ ALT="$x(s_t^\prime)-x(s_0^\prime)$">,
+
+<!-- MATH: $\Delta_y^t$ -->
+<IMG
+ WIDTH="27" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\Delta_y^t$">
+=
+
+<!-- MATH: $y(s_t^\prime)-y(s_0^\prime)$ -->
+<IMG
+ WIDTH="98" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$y(s_t^\prime)-y(s_0^\prime)$">,
+
+<!-- MATH: $\Delta_x^r$ -->
+<IMG
+ WIDTH="28" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.gif"
+ ALT="$\Delta_x^r$">
+=
+
+<!-- MATH: $x(s_r^\prime)-x(s_0^\prime)$ -->
+<IMG
+ WIDTH="101" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$x(s_r^\prime)-x(s_0^\prime)$">,
+and 
+<!-- MATH: $\Delta_y^r$ -->
+<IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.gif"
+ ALT="$\Delta_y^r$">
+=
+
+<!-- MATH: $y(s_r^\prime)-y(s_0^\prime)$ -->
+<IMG
+ WIDTH="99" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.gif"
+ ALT="$y(s_r^\prime)-y(s_0^\prime)$">
+and use them in computing 
+<!-- MATH: $\tan
+\alpha$ -->
+<IMG
+ WIDTH="43" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.gif"
+ ALT="$\tan
+\alpha$">
+and 
+<!-- MATH: $\tan \beta$ -->
+<IMG
+ WIDTH="42" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.gif"
+ ALT="$\tan \beta$">,
+where <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.gif"
+ ALT="$\alpha$">
+- the angle with <I>x</I> axis
+and <IMG
+ WIDTH="16" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.gif"
+ ALT="$\beta$">
+- the angle with <I>y</I> axis. This computation gives us
+the set 
+<!-- MATH: $f_k^{-1}(s^{\prime\prime})$ -->
+<IMG
+ WIDTH="62" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.gif"
+ ALT="$f_k^{-1}(s^{\prime\prime})$">
+of points which are
+transformed by <I>f</I><SUB><I>k</I></SUB> onto 
+<!-- MATH: $s^{\prime\prime}$ -->
+<IMG
+ WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img51.gif"
+ ALT="$s^{\prime\prime}$">
+and, therefore, the
+synaptic weights 
+<!-- MATH: $w_{s^{\prime\prime}s}=1$ -->
+<IMG
+ WIDTH="69" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.gif"
+ ALT="$w_{s^{\prime\prime}s}=1$">.
+Horizontal size
+
+<!-- MATH: $h(f_k^{-1}(s^{\prime\prime}))$ -->
+<IMG
+ WIDTH="85" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$h(f_k^{-1}(s^{\prime\prime}))$">
+and vertical size
+
+<!-- MATH: $v(f_k^{-1}(s^{\prime\prime}))$ -->
+<IMG
+ WIDTH="84" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$v(f_k^{-1}(s^{\prime\prime}))$">
+of the rectangle
+
+<!-- MATH: $f_k^{-1}(s^{\prime\prime})$ -->
+<IMG
+ WIDTH="62" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.gif"
+ ALT="$f_k^{-1}(s^{\prime\prime})$">
+are determined by the contraction
+factors of <I>f</I><SUB><I>k</I></SUB> on <I>x</I> and <I>y</I> axes and calculated only once for
+each <I>f</I><SUB><I>k</I></SUB>. The inclination of each side of the rectangle
+
+<!-- MATH: $f_k^{-1}(s^{\prime\prime})$ -->
+<IMG
+ WIDTH="62" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.gif"
+ ALT="$f_k^{-1}(s^{\prime\prime})$">
+is taken into account by 
+<!-- MATH: $\tan \alpha$ -->
+<IMG
+ WIDTH="43" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.gif"
+ ALT="$\tan
+\alpha$">and 
+<!-- MATH: $\tan \beta$ -->
+<IMG
+ WIDTH="42" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.gif"
+ ALT="$\tan \beta$">,
+respectively.
+
+<P>
+The dynamics of the neural network is the same as in the Stark's
+algorithm.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html87"
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html85"
+ HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html81"
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html88"
+ HREF="node8.html">Automata Network Algorithm</A>
+<B> Up:</B> <A NAME="tex2html86"
+ HREF="node4.html">Neural Network Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html82"
+ HREF="node6.html">Stark's Neural Network Algorithm</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

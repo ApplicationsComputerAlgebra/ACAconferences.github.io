@@ -1,0 +1,13 @@
+Generalized power expansions in cosmology
+
+Alejandro S. Jakubi
+Department of Physics, F.C.E.N., University of Buenos Aires
+Pabellon I, Ciudad Universitaria, 1428 Buenos Aires, Argentina
+jakubi@df.uba.ar
+http://www.df.uba.ar/~jakubi
+
+An advance report is given on a recently introduced algorithm to obtain
+generalized power asymptotic expansions of cosmological solutions of the
+Einstein equations.  An implementation in Maple with improved tools for sorting
+exponents is described.  Also it is shown how to apply the algorithm when the
+evolution is determined by a system of nonlinear differential equations.

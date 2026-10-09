@@ -1,0 +1,103 @@
+A Problem Solving Environment for Numerical Partial Differential Equations
+
+Stanly Steinberg
+
+Extended Abstract
+
+I am interested in developing general methods for solving modeling problems of
+the type that appear in engineering and science.  The current methods of
+solving such problems range from simple analytic and numerical models to
+numerical codes that consume a major portion of the computing cycles on the
+largest computers.  A most important characteristic of such problems is that
+their effective solution requires a wide range of analytic and numerical
+techniques, so wide that an individual cannot be an expert in all the required
+areas.  I am interested in how well and how much of such expertise can be
+"effectively" captured in a problem solving environment.  The problem solving
+environment must be capable of using a computer algebra system to do analytic
+calculations and of using high-speed large-scale floating-point computation.
+In addition, the problem solving environment needs a user interface that allows
+an easy description of the problem and a comprehensible presentation of any
+results, either analytic or numeric.  Knowledge engineering techniques are used
+to capture the known solution technology.
+
+I will describe the SciNapse system which is an example of such a problem
+solving environment on which I have worked for over three years.  Recently, a
+product, SciFinance, which is based on SciNapse and is used to model financial
+derivative, has been marketed by SciComp, Inc.
+
+In my opinion, within a few years, most users will interact with computers
+using problem solving environments, which should strongly impact how scientific
+computing will be taught at universities.  Engineers and Scientists should find
+SciNapse interesting because this system gives a glimpse of what the future
+will probably look like, while mathematicians should find SciNapse interesting
+because problem solving environments will become repositories for large volumes
+of mathematical knowledge, including theoretical results, and their
+construction will employ a large number of mathematicians.
+
+		      SciNapse
+
+SciNapse is a problem solving environment for numerically solving partial
+differential equations.  The main interface to the system is the ``problem
+specification language.''  This language allows an initial-boundary value
+problem for a system of partial differential equations to be specified in terms
+of invariant differential operators or in a particular coordinate system.  The
+region in which the differential equations hold is specified in terms of a
+union of rectangles in some coordinate system.  This allows rather general
+regions appropriate for discretization using grids with the same structure as
+rectangular grids.  The methods for discretizing the differential equations and
+the boundary conditions can be specified by giving keywords for common methods
+or by giving detailed mathematical replacement rules, or some combination of
+both.  In the case of finite-difference discretizations, simple ways exist for
+specifying grid staggering and the placement of the boundaries in the staggered
+grid.
+
+The SciNapse system includes a template language for specifying algorithms.
+One typical use for templates is to specify the over-all time evolution in
+terms of a general method for taking individual time steps.  Then the
+particular method for taking a time step can be chosen from a library of
+templates, e.g. Runge-Kutta-Fehlberg or Dormand-Prince integrators, or a new
+template may be written.  If the method is implicit, then a solver may also be
+chosen from a library of solvers, e.g. preconditioned conjugate gradient or
+quasi-minimal residual, or a new solver template can be written.  SciNapse has
+heuristics for choosing solvers, and many other features of the solution
+algorithm.  The SciNapse system is implemented in Mathematica and the templates
+are executable Mathematica code, so they can easily be tested for correctness
+in Mathematica.
+
+SciNapse is a knowledge-based program synthesis system implemented with
+objects, transformation rules, and a reasoning system.  A great deal of
+knowledge engineering has gone into providing the system with extensive
+information about how to solve initial boundary value problems in an
+intelligent manner.  The system starts with an abstract notion of what is
+needed to write a program recorded in its objects and starts filling in the
+details based on rules associated with the objects.  Information may be given
+to SciNapse in files written by the user, from a simple terminal interface, or
+in a graphical user interface.  When SciNapse realizes that it doesn't have a
+piece of information that it needs to specify a problem, it will ask the user
+for that information, typically by giving a menu of alternatives.  Users can
+have the system use its own knowledge whenever possible or can request that
+they be asked to confirm system choices.  If some information has already been
+given to SciNapse, then the reasoning system uses this to eliminate
+alternatives.  Using constraints (hard and fast rules about legal options and
+combinations), heuristic rules of thumb for making decisions, and defaults,
+SciNapse can take much of the burden of writing a program off the user.
+
+Collaborators: R.L. Akers, E. Kant, C. Randall, R.L. Young,
+
+Stanly Steinberg, Professor of Mathematics
+Department of Mathematics and Statistics
+University of New Mexico
+Albuquerque NM 87131-1141 USA
+stanly@math.unm.edu
+http://math.unm.edu/~stanly/
+Phone: 505-277-5323, FAX 505-277-5505
+Office: Humanities 436
+
+Consultant
+SciComp Inc.
+5806 Mesa Drive, Suite 250
+Austin, TX 78731
+phone: 512-451-1050
+fax:   512-451-1622
+stanly@scicomp.com
+http://www.scicomp.com/  

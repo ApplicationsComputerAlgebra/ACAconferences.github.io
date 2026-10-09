@@ -1,0 +1,35 @@
+                 Joining IMACS or IMACS-TCSC
+
+                            IMACS
+
+One can join IMACS by contacting one of the Secretariats and requesting an
+application.  Dues are $30 US a year.  This does not include subscriptions to
+any of the IMACS journals, which can be obtained at greatly reduced prices
+with a membership. In addition, members pay reduced registration fees at IMACS
+sponsored meetings.  For more information,
+        email: imacs@cs.rutgers.edu
+
+          TECHNICAL COMMITTEE on SYMBOLIC COMPUTING
+
+One can join the IMACS Technical Committee on Symbolic Computing by using
+WWW (mosaic) to fill out a membership form accessible from the ACA URL:
+        http://math.unm.edu/aca.html
+
+The main activity of this group is to organize the Applications of Computer
+Algebra meetings.  Dr. Michael Wester will be in charge of this technical
+committee, with Prof. Stanly Steinberg assisting, until the group has its
+first formal meeting at the 1995 Applied Computer Algebra Meeting in
+Albuquerque.
+
+###########################################################################
+
+IMACS Secretariats:
+
+American Pacific region:         European region:
+  IMACS Secretariat                IMACS Secreteriat
+  Department of Computer Science   Faculte des Sciences Appliquees
+  Rutgers University               Universite Libre de Bruxelles
+  Piscataway, NJ 08855             50 Avenue F.D. Roosevelt
+  United States                    B-1050 Bruxelles
+                                   Belgium
+

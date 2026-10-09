@@ -1,0 +1,155 @@
+<HTML>
+<HEAD>
+<TITLE>Mathematical Implementations</TITLE>
+</HEAD>
+<BODY>
+<H1>Mathematical Implementations</H1>
+at <A HREF="http://www.scl.csd.uwo.ca/~ilias/aca2002.html">ACA'2002</A>
+to be held June 25-28, 2002 in Volos, Greece
+<P>
+<EM>Organizer:</EM>
+<P>
+Michael Wester (<A HREF="mailto:wester@math.unm.edu">wester@math.unm.edu</A>)
+<P>
+<EM>Abstract</EM>:
+<P>
+This session will consider both proposed and actual implementations of
+mathematical algorithms/heuristics in computer algebra systems.
+<P>
+<EM>Talks</EM>:
+<P>
+<OL>
+<LI><A HREF="#Jeffrey">The Multi-Valued Nature of Inverse Functions</A><BR>
+    (David J. Jeffrey)</LI>
+<LI><A HREF="#Strzebonski">Solving Systems of Equations and Inequalities over
+    Specified Domains</A><BR>
+    (Adam Strzebonski)</LI>
+<LI><A HREF="#Gachkov">Same Optimal Linear Codes of Small Length and Constant
+    Weight Codes: Control and Correction of Results with MATHEMATICA</A><BR>
+    (Igor Gachkov)</LI>
+</OL>
+<P>
+<UL>
+<LI>
+<A NAME="Jeffrey"><STRONG>The Multi-Valued Nature of Inverse
+   Functions</STRONG></A>
+<P>
+David J. Jeffrey<BR>
+Department of Applied Mathematics<BR>
+University of Western Ontario<BR>
+London, Ontario, Canada
+<P>
+A new treatment is given of the elementary inverse functions.  The new approach
+addresses the difference between the single-valued inverse function defined by
+computer systems and the multi-valued function which represents the multiple
+solutions of the defining equation.  The approach takes an idea from complex
+analysis, namely the <EM>branch</EM> of an inverse function, and defines an
+index for each branch.  The branch index then becomes an additional argument to
+the (new) function.  A benefit of the new approach is that it helps with the
+general problem of correctly simplifying expressions containing inverse func
+tions, which has always been difficult both for humans and for computer algebra
+systems.  The new approach also can be extended to non-elementary inverse
+functions such a s the Lambert W function, which otherwise cannot be handled.
+The difference between this approach and that of Riemann surfaces lies in the
+fa ct that Riemann surfaces distinguish between branches by dividing the
+<EM>domain</EM> of the function into sheets, whereas here the range of the
+function is indexed.
+</LI>
+<P>
+<LI>
+<A NAME="Strzebonski"><STRONG>Solving Systems of Equations and Inequalities
+   over Specified Domains</STRONG></A>
+<P>
+Adam Strzebonski<BR>
+Wolfram Research, Inc.<BR>
+Champaign, Illinois, USA
+<P>
+I will present a function for solving (possibly quantified) systems of
+equations and inequalities with domain restrictions on the variables.  I will
+show some examples, discuss what we can and what we can't solve, and what
+algorithms we use.
+<P>
+The domains currently supported are Complexes, Reals, Algebraics, Rationals,
+Integers, and Primes.  The classes of systems that we can solve in full
+generality include quantified systems of polynomial equations and inequations
+in complex variables (using Groebner bases), quantified systems of polynomial
+equations and inequalities with real or complex variables (using cylindrical
+algebraic decomposition), and systems of linear equations and inequalities in
+integer, real, or complex variables (using several algorithms depending on the
+domain of variables and on whether inequalities are present).  With certain
+restrictions, we can also solve quantified real or complex systems containing
+algebraic functions.  We can also solve several classes of transcendental
+systems, using various heuristics in order to reduce the problem to solving
+algebraic systems and simple transcendental equations and inequalities.
+<P>
+Polynomial systems in integer variables are not solvable in general (by
+Matiyasevich's solution of Hilbert's 10th problem), however we have implemented
+algorithms for solving certain classes of such systems, including systems of
+linear or univariate Diophantine equations and inequalities, binary quadratic
+Diophantine equations (with some inequality restrictions allowed), Thue
+equations, and systems for which the set of real solutions is bounded.  We have
+also implemented several heursitics allowing to solve various other classes of
+Diophantine systems.
+<P>
+The function has been implemented as a part of a development version of
+Mathematica.
+</LI>
+<P>
+<LI>
+<A NAME="Gachkov"><STRONG>Same Optimal Linear Codes of Small Length and
+   Constant Weight Codes: Control and Correction of Results with
+   MATHEMATICA</STRONG></A>
+<P>
+Igor Gachkov<BR>
+Sweden<BR>
+Igor.Gachkov@kau.se
+<P>
+Under almost 30 years long history of continuous efforts to describe optimal
+codes of small length as well as codes of fixed weight, theoretical research
+has been integrated in practice.  As early as 1966 T. J. Wagner suggested an
+algorithm of finding quasi-perfect codes, which was implemented on computer.
+The results were summarised in a table of quasi-perfect codes correcting two
+errors [1].  Successful application of computers is proved by a whole list of
+codes obtained 1974 by A. A. Hashim and A. G. Constantinides [2].  A great
+development and improvement of computational techniques increased opportunities
+of finding new codes.  1987 a group of Finish mathematicians obtained a number
+of codes of constant weight [3].  The results of code searching's used to be
+put in tables of optimal codes.  One of the examples of such work is [4].  At
+the same time, the research was not limited to just binary codes.  There is a
+number of codes on field GF(3) and consequently tables of corresponding optimal
+codes [5].  However, there was no opportunity of checking and correcting the
+results, because there was no appropriate softwares, which in turn did not
+allow full application of the information about optimal codes.  Under a period
+of time the author used MATHEMATICA in the theory of error correcting codes.
+The results presented simple descriptions of already known codes.  The research
+showed some falsifications, for instance in [2] the code with parameters
+[71,58,5] has the parameters [71,58,4].  Weight polynomial of the codes were
+obtained as well.  In other words, simple description of codes with constant
+weight (for example, A[23,8,8], A[23,8,7], A[22,8,8]) were found.  The package
+enclosed by the author allows to check and correct most of the results in the
+tables in [4], [5].  This work was performed in co-operation with V. M.
+Sidelnikov and supported by Swedish Royal Science Academy.
+<P>
+References
+<P>
+<OL>
+<LI>T. J. Wagner.  A Search technique for Quasi-Perfect Codes.  Information and
+    Control 9, 94-99 (1966)</LI>
+<LI>A. A. Hashim and A. G. Constantinides.  Same new results on binary linear
+    block codes.  Electronics letters v.10, No.3 (1974)</LI>
+<LI>I. Honkala, H. Hamalaonen, M. Kaikkonen.  Some lower boundes for constant
+    weight codes.  Discrete Applied Mathematics 18, 95-98 (1987)</LI>
+<LI>E. E.Brouwer, J. B. Shearer, N. J. A. Sloen,...  A new table of Constant
+    weight codes.  IEEE Transactions on information theory, v36, no 6
+    (1990)</LI>
+<LI>Marlin van Eupen. Classification of some optimal ternary linear codes of
+    small length.  Desingns Codes and Cryptograph 10, 63-84 (1997)</LI>
+</LI>
+</UL>
+<P>
+Go to:
+<A HREF="http://www.scl.csd.uwo.ca/~ilias/aca2002.html">ACA'2002</A> main page,
+<A HREF="http://math.unm.edu/aca.html">Conferences on Applications of Computer
+   Algebra</A> main page.
+</BODY>
+</HTML>

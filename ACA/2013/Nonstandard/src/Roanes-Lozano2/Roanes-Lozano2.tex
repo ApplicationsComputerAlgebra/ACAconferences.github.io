@@ -1,0 +1,181 @@
+
+\documentclass[a4paper]{article} %
+\usepackage{graphicx,amssymb} %
+
+\usepackage{color}
+
+\textwidth=15cm \hoffset=-1.2cm %
+\textheight=25cm \voffset=-2cm %
+
+\pagestyle{empty} %
+
+\date{} %
+
+\def\keywords#1{\begin{center}{\bf Keywords}\\{#1}\end{center}} %
+
+\def\titulo#1{\title{#1}} %
+\def\autores#1{\author{#1}} %
+
+% Please, do not change any of the above lines
+
+
+\begin{document}
+
+% Type down your paper title
+\titulo{Population--based anamorphosis maps\\ for railway radial networks}
+
+% Authors
+\autores{Eugenio Roanes--Lozano \\ %
+         Instituto de Matem\'atica Interdisciplinar (IMI),\\
+         Algebra Dept., Universidad Complutense de Madrid, Spain\\ \\ % Affiliation 1
+         Alberto Garc\'{\i}a--\'Alvarez \\ %
+         Deputy Director for Renfe (Spanish Railways) Passengers Services, Spain \\ \\ % Affiliation 2
+         Jos\'e Luis Gal\'an--Garc\'{\i}a \\ %
+         Applied Mathematics Dept., Universidad de M\'alaga, Spain \\ \\ % Affiliation 3
+         Luis Mesa \\ %
+         Spanish Railways Foundation, Spain\\ \\ % Affiliation 4
+         \tt{eroanes@mat.ucm.es} % Only one corresponding e-mail
+       }%
+
+
+\maketitle
+
+\thispagestyle{empty}
+
+
+
+% The abstract
+
+\begin{abstract}
+The Spanish railway network is radial but very complex to
+operate, because two different track gauges, five signalling
+systems and two electrification systems coexist. Therefore, how
+to go on developing the high speed network and which are the best
+routes for trains are complicated questions. We are developing,
+in cooperation with the Spanish Railway Foundation, software
+packages that can be aids to decision making in these two issues.
+Yet one more step in this direction is presented here.
+\end{abstract}
+
+\keywords{Radial railway networks, Anamorphosis maps, Isochrone
+circle maps, Computer algebra systems}
+% Write down at least 3 Keywords
+
+\section{Introduction}
+
+The Spanish railway network is radial but very complex to
+operate, because:
+\begin{itemize}
+\item two different track gauges coexist: the so
+      called \textit{Iberian} gauge ($1667 mm$) and the
+      \textit{international gauge} ($1435 mm$) (used in the high speed
+      network),
+\item two electrification systems have been used (3000 V DC,
+      25000 V AC) and, finally,
+\item there are different signalling systems
+      (ASFA, ASFA 200, LZB, EBICAB, ERTMS).
+\end{itemize}
+The shape of the network is not due to a katabasis or anabasis of
+the whole Spanish society, but to the location of Madrid (the
+biggest city and capital) in the centre of the country and the
+location of the rest of big cities in the periphery. In 2013 the
+fares have been lowered and different discounts (for instance in
+low demand periods) are offered in order to attract more
+travelers and to increase the fraction of population using the
+high-speed trains.
+
+Regarding the two gauges, there are gauge changeovers at several
+points, so that both subnetworks are connected. A subset of the
+rolling stock is dual gauge. Regarding electrification and
+signalling systems, many locomotives and multiple units can read
+different signalling systems, are multi-voltage. Even hybrid
+rolling stock has been developed (730 series).
+
+The high speed network has grown very quickly, and only China has
+nowadays a longer high speed railway network. All new lines have
+been built with double track and top technologies ($\geq 300
+km/h$ track design, \textit{ERTMS} traffic management system,
+$25000 KV$ AC electrification, etc.). The growth of the network
+has been supported by the different governments and has only been
+slowed down due to the economical crisis.
+
+Nevertheless, how to go on developing the high speed network and
+which are the best routes for trains are complicated questions.
+We are developing, in cooperation with the \textit{Spanish
+Railway Foundation}, software packages that can be aids to
+decision making in these two issues. We have followed two lines:
+\begin{itemize}
+\item We have developed (within the frame of two research projects signed between the \textit{Spanish
+      Railways Foundation} and the \textit{Universidad Complutense de Madrid} and the \textit{Universidad
+      Polit\'ecnica de Madrid}) a computer package that is able to calculate precise timings, consumptions,
+      costs, emissions, best routes, etc., for each piece of \textit{Renfe}'s (main railway operator)
+      rolling stock running on \textit{Adif}'s (infrastructure company) lines [1].
+\item We have also developed what we have called \textit{isochrone circle graphs} and a
+      \textit{geometric index} for radial railway networks improvement estimation [2].
+      \textit{Isochrone circle graphs} were inspired
+      by pie charts (also known as circle graphs), polar area diagrams (similar to usual pie charts, but
+      sectors are equal angles and their area is adjusted changing their radii instead of their amplitude)
+      and anamorphosis maps (also known as central point cartograms or distance cartograms;
+      where the geometry of the country or region is distorted according to the time that it takes
+      to travel to different peripheral destinations from a central origin). An \textit{isochrone circle
+      graph} corresponding to Spain in 2013 (centred at Madrid) can be found in the figure below.
+
+%***************** FIGURA **************
+\begin{figure}[htb]
+\begin{center}
+\scalebox{.65}{
+\includegraphics%[width=\textwidth]
+{Fig8.jpg}
+} %
+%\caption{\textit{Isochrone circle graph}, reflecting 2013\newline
+%         population and timings in the Spanish railway network.}
+\end{center}
+\end{figure}
+%***************************************
+
+      We have followed two approaches to compute and draw \textit{isochrone circle graphs}:
+      \begin{itemize}
+      \item The first approach [2] was illustrated with a sketch constructed with a Dynamic Geometry System and
+            used sliders to change the input parameters (timing to each peripheral destination and population
+            of these destinations). It was very comfortable to use, but the number of destinations
+            considered was somehow fixed (changing it required to construct a complete new sketch).
+      \item In the second approach we designed and implemented a complete new package in the CAS \textit{Maple}
+            that takes as input the lists of destinations, best timings and populations and builds the
+            corresponding \textit{isochrone circle graphs} and performs all the corresponding calculations [3].
+            This approach has yet another advantage: symbolic computations can be performed, and therefore
+            parameters can be introduced in the computations.
+       \end{itemize}
+\end{itemize}
+
+An improved version of [3] will be presented here. It has to be
+emphasized that now a population--based version of an
+anamorphosis map can be drawn or superimposed to the
+\textit{isochrone circle graph}.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+\bibitem{CiSE}
+A. Hernando, E. Roanes--Lozano, A. Garc\'{\i}a--\'Alvarez, L. Mesa, I. Gonz\'alez--Franco:
+Optimal Route Finding and Rolling--Stock Selection for the Spanish Railways.
+\textit{Comp. in Sci. \& Eng.} 14/4 (2012) 82--89.
+DOI: http://dx.doi.org/10.1109/MCSE.2012.80.
+
+\bibitem{RACSAM}
+E. Roanes--Lozano, A. Garc\'{\i}a--\'Alvarez, A. Hernando:
+A geometric approach to the estimation of radial railway network improvement.
+\textit{Rev. R. Acad. Cienc. Exactas F\'is. Nat., Ser. A Mat. RACSAM}
+106/1 (2012) 35--46.
+DOI: http://dx.doi.org/10.1007/s13398-011-0050-6.
+
+\bibitem{FEMTEC}
+E. Roanes--Lozano, A. Garc\'{\i}a--\'Alvarez, J. L. Gal\'an--Garc\'{\i}a, L. Mesa:
+Estimating radial railway network improvement with a CAS.
+To be presented at:
+\textit{FEMTEC'2013 (4th International Congress on Computational Engineering and
+         Sciences)}, Las Vegas, May 19--24, 2013.
+
+\end{thebibliography}
+
+
+\end{document}

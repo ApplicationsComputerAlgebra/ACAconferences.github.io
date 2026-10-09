@@ -1,0 +1,73 @@
+          Construction and Applications of Normal Forms 
+   in the Theory of Nonlinear ODEs and Transfer Map Techniques
+
+                The Chairperson: Alexander Bruno, 
+             Inst. Appl. Math. of Russian Acad. Sci.
+                    <bruno@applmat.msk.su> 
+         The Organizer of the session:  Victor Edneral 
+                      Moscow University
+                 <edneral@theory.npi.msu.su>
+
+
+    A normal form method is based on a transformation of a system 
+of  nonlinear ODEs to a simpler set called the normal  form.  The 
+importance  of  this method for a local analysis of ODEs  near  a 
+stationary  point  has  been recognized for  a  long  time  since 
+Poincare's papers but real usage of this method was restricted by 
+a huge volume of necessary algebraic transformations.
+
+    The  normal form method is applied to a creation of  analytic 
+approximations of periodic and quasiperiodic orbits,  at a search 
+of  ODE's integrals,  in an investigation  of  stability  of ODEs 
+at non-crude cases and at a bifurcation analysis. Closely to these  
+applications it is a usage of the normal form method in a transfer 
+maps approach widely used in light and magnetic optics.
+
+    There  are  a  number  of well  developed  algorithms  for  a 
+construction of different types of normal forms based on a modern 
+mathematical theory and realizations of some of these algorithms. 
+The  goal  of  discussed session is to meet  people  who  develop 
+algorithms for the method, who create corresponding C.A. software 
+and who apply the normal form method in practice.
+
+A tentative list of participants to be invited:
+
+    A. Bazzani      <bazzani@vxcern.cern.ch> or
+                    <bazzani@bologna.infn.it>
+    H. Broer        <H.W.Broer@math.rug.nl>
+    A. Bruno        <bruno@applmat.msk.su>
+    H. Caprasse     <caprasse@vm1.ulg.ac.be>
+    R. Cushman      <cushman@math.ruu.nl>
+    J. Della Dora   <dellado@alpe.imag.fr>
+    A. Deprit       <deprit@enh.nist.gov>
+    V. Edneral      <edneral@thp.npi.msu.su> or
+                    <edneral@theory.npi.msu.su>
+    J. Gathen       <gathen@uni-paderborn.de>
+    A. Giorgilli    <antonio@milano.infn.it>
+    I. Gjaja        <ivan@goshawk.lanl.gov>
+    F. Graziani     <graziani@risccics.ing.uniroma1.it>
+    J. Henrard      <jhenrard@math.fundp.ac.be>
+    P. Jost         <a11301@frccsc21.bitnet>
+    J. Laskar       <laskar@cosme.polytechnique.fr>
+    A. Maciejewski  <maciejka@mat.torun.edu.pl>
+    A. Markeyev     <mrkv@ipm.msk.su> or
+                    <karpov@ipm.msk.su> (for A. Markeyev)
+    K. Meyer        <meyer@ucunix.san.uc.edu>
+    S. Sadov        <sadovs@applmat.msk.su>
+    J. Sanders      <jansa@cs.vu.nl>
+    G. Servizi      <servizi@bologna.infn.it> or
+                    <graziano@bologna.infn.it>
+    I. Shevchenko   <iis@ita.spb.su> or
+                    <iis@iipah.spb.su>
+    W. Sit          <wyscc@cunyvm.cuny.edu>
+    A. Sokolsky     <sokolsky@ita.spb.su>
+    S. Steinberg    <stanly@math.unm.edu>
+    L. Stolovitch   [If somebody knows his e-mail, inform me, please]
+    P. Teofilatto   <graziani@risccics.ing.uniroma1.it> for P. Teofilatto
+    E. Todesco      <etodesco@vxcern.cern.ch> or
+                    <etodesco@bologna.infn.it>
+    G. Turchetti    <turchetti@bologna.infn.it> or
+                    <turch@cernvm.bitnet>
+    L. Vallier      <lvallier@imag.fr>
+    N. Vassiliev    <vasiliev@ita.spb.su>
+    S. Walcher      <swalcher@NMSU.Edu>

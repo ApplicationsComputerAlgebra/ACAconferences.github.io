@@ -1,0 +1,28 @@
+# PCTeX Project File, Version 1.1
+	name: ACA2013parapublicar(1)
+	texformat: latex
+	typesetmode: DVI
+	spellwordlist: american
+ACA2013parapublicar(1).tex
+	wndpos: 1 -1 -1 -8 -30 0 0 1100 473
+	zorder: 1
+	edit: 6185
+ACA2013parapublicar(1).log
+ACA2013parapublicar(1).aux
+converted_graphics\fig4.eps
+fig4.pdf
+converted_graphics\fig5.eps
+fig5.pdf
+converted_graphics\fig1.eps
+fig1.pdf
+converted_graphics\fig2.eps
+fig2.pdf
+converted_graphics\fig3.eps
+fig3.pdf
+converted_graphics\fig6.eps
+fig6.pdf
+ACA2013parapublicar(1).DVI
+	wndpos: 3 -1 -1 -8 -30 75 399 1154 527
+	zorder: 0
+	view: 4 -2
+C:/Users/Usuario/Desktop/CORBACHO_ACA2013/ACA2013parapublicar(1).pdf

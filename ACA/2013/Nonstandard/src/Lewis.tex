@@ -1,0 +1,133 @@
+
+\documentclass[a4paper]{article} %
+\usepackage{graphicx,amssymb} %
+
+\textwidth=15cm \hoffset=-1.2cm %
+\textheight=25cm \voffset=-2cm %
+
+\pagestyle{empty} %
+
+\date{} %
+
+\def\keywords#1{\begin{center}{\bf Keywords}\\{#1}\end{center}} %
+
+\def\titulo#1{\title{#1}} %
+\def\autores#1{\author{#1}} %
+
+% Please, do not change any of the above lines
+
+
+
+
+
+
+
+
+\begin{document}
+
+% Type down your paper title
+\titulo{Flexibility of Structures via Computer Algebra}
+
+% Authors
+\autores{Robert H. Lewis  \\ % Affiliation 1
+       Fordham University (U.S.A.) \\  \\
+       Evangelos Coutsias \\
+        University of New Mexico (U.S.A.) \\ % Affiliation 2 (if needed)
+       % New author \\
+       % New affiliation \\
+       % Add authors and affiliation as needed
+       \tt{rlewis@fordham.edu} % Only one corresponding e-mail
+       }%
+
+
+\maketitle
+
+\thispagestyle{empty}
+
+
+
+% The abstract
+
+\begin{abstract}
+ We solve systems of multivariate polynomial equations in order to
+understand flexibility of objects in two or three dimensions, including protein-like molecules.
+
+    Protein flexibility is a major research topic in
+computational
+chemistry. In general, a molecule can be modeled as 
+a polygonal structure whose edges and angles are fixed while some of the
+dihedral angles can vary freely.  One needs to determine mathematically if such a structure is flexible. This can be reduced to the analysis of a system of polynomial equations.  Resultant methods have been applied successfully to this 
+problem \cite{ cout2}.
+
+In this work we focus on non-generically flexible structures (picture a geodesic dome)
+that are rigid but become continuously movable under certain relations. The subject has a long history: 
+Cauchy (1812) \cite{cauch}, Bricard (1896) \cite{bric}, Connelly (1978).
+
+In our previous works \cite{LC, aca9} we began
+a new approach to understanding flexibility, using not numeric but symbolic computation.
+We describe the geometry of the object with a set of
+multivariate polynomial equations, which we solve with resultants. Resultants were pioneered by
+Bezout, Sylvester, Dixon,
+and others.  Given the resultant, we described 
+an algorithm $Solve$ that examines it and determines relations for the structure to be
+flexible.  We discovered in this way conditions for flexibility
+of an  arrangement of quadrilaterals in Bricard \cite{bric} which models molecules and is directly applicable to cyclohexane. 
+In previous works \cite{aca9}, we have shown that the algorithm can be significantly extended to other molecular structures.
+
+ In spite of that success, key questions remained.  Bricard asserted that there are three ways the configuration of quadrilaterals can be flexible, though there are gaps in his proof.   Until recently, our computer programs found only two of them.  By the spring of 2012, the revised and streamlined programs found an example of the third case, but not the most general third case.   The program now finds that case.  Furthermore,  we now have a computer-assisted mathematical proof that all cases have been found, thereby completing Bricard's argument.  This appears to be the first fully algebraic approach for flexibility.  
+ 
+   This has great significance, as we now have confidence that the software is capable of fully analyzing more complex structures, such as cyclooctane.  
+
+
+
+\begin{thebibliography}{15}
+
+
+\bibitem {bric}
+Bricard, Raoul, 
+M\'emoire sur la th\'eorie de l'octa\`edre articul\'e,
+J. Math. Pures Appl. 3 (1897), p. 113 - 150 \\
+(English translation: http://www.math.unm.edu/$\sim$vageli/papers/bricard.pdf).
+
+
+\bibitem {cauch}
+Cauchy, A.\ L. Sur les polygones et les polyhedres. Second Memoire. Journal
+de l'\'Ecole Polytechn. {\bf 9} (1813), pp. 8.
+
+
+\bibitem {cout2}
+Coutsias, E.\ A., C. Seok, M.\ J. Wester and K.\ A. Dill, Resultants and loop
+closure,
+Int. J. Quantum Chem. 106 (2005), no. (1), p. 176 -
+189.
+
+
+\bibitem {LC}
+Lewis, R.\ H. and E.\ A. Coutsias, Algorithmic Search for Flexibility
+Using Resultants of Polynomial Systems; in Automated Deduction in Geometry, 6th International Workshop, ADG 2006.
+Springer-Verlag. LNCS {\bf 4869} p. 68 - 79 (2007).
+
+
+\bibitem {aca9}
+Lewis, Robert H. {\it Determining Flexibility of Molecules Using Resultants of Polynomial Systems}, ACA Conference, Montreal, Canada, June 25 -- 29, 2009.
+
+
+\end{thebibliography}
+
+\end{abstract}
+
+\keywords{polynomial systems, resultants, flexibility, protein folding} % Write down at least 3 Keywords
+
+
+
+
+
+
+% \section{Introduction}
+
+
+
+
+
+
+\end{document}

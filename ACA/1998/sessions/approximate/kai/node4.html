@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Accuracy of HRFA</TITLE>
+<META NAME="description" CONTENT="Accuracy of HRFA">
+<META NAME="keywords" CONTENT="kai">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="kai.css">
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="kai.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html50"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html48"
+ HREF="kai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html42"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html51"
+ HREF="node5.html">An Example of HRFA</A>
+<B> Up:</B> <A NAME="tex2html49"
+ HREF="kai.html">Accuracy Analysis of Hybrid</A>
+<B> Previous:</B> <A NAME="tex2html43"
+ HREF="node3.html">Approximate-GCD by Hribernig and</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00040000000000000000">
+Accuracy of HRFA</A>
+</H1>
+
+<P>
+By definition <A HREF="node3.html#def:alpha-GCD">3.1</A> and the algorithm <A HREF="node3.html#alg:a-gcd">3.1</A>,
+the hybrid rational function, <I>p</I>(<I>x</I>)/<I>q</I>(<I>x</I>), with the accuracy level
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\alpha$">
+is obtained. We consider, here, the error between <I>p</I>(<I>x</I>)/<I>q</I>(<I>x</I>)and the interpolated rational function, <I>P</I>(<I>x</I>)/<I>Q</I>(<I>x</I>). The following
+theorem is established.
+
+<P>
+<P>
+<DIV><B>Theorem  4.1</B> &nbsp; 
+Let <I>P</I>(<I>x</I>) and <I>Q</I>(<I>x</I>) be polynomials in <I>C</I>[<I>x</I>] and let <I>p</I>(<I>x</I>) and
+ <I>q</I>(<I>x</I>) be polynomials
+satisfying 
+
+<!-- MATH: $\Vert \delta P(x)\Vert\leq\alpha<1$ -->
+<IMG
+ WIDTH="129" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.gif"
+ ALT="$\Vert \delta P(x)\Vert\leq\alpha<1$">
+and
+
+<!-- MATH: $\Vert \delta Q(x)\Vert\leq\alpha<1$ -->
+<IMG
+ WIDTH="129" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.gif"
+ ALT="$\Vert \delta Q(x)\Vert\leq\alpha<1$">in (<A HREF="node3.html#eqn:input_pol_our">8</A>). Then
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\left|\frac{P(z)}{Q(z)}-\frac{p(z)}{q(z)}\right|\leq\left(1+\left|\frac{P(z)}{Q(z)}\right|\right)\cdot\frac{\alpha}{1-\alpha},
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eqn:theo">&#160;</A><IMG
+ WIDTH="286" HEIGHT="48"
+ SRC="img52.gif"
+ ALT="\begin{displaymath}\left\vert\frac{P(z)}{Q(z)}-\frac{p(z)}{q(z)}\right\vert\leq\...
+...rac{P(z)}{Q(z)}\right\vert\right)\cdot\frac{\alpha}{1-\alpha},
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(9)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+for 
+<!-- MATH: $z\in[-1,1]$ -->
+<IMG
+ WIDTH="80" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$z\in[-1,1]$">
+s.t. 
+<!-- MATH: $|Q(z)|\geq1$ -->
+<IMG
+ WIDTH="80" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$\vert Q(z)\vert\geq1$">.
+<A NAME="theo:accuracy">&#160;</A></DIV><P></P>
+<B>proof</B>
+<BR>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="eqn:proof">&#160;</A>
+<!-- MATH: \begin{eqnarray}
+\left|\frac{P(z)}{Q(z)}-\frac{p(z)}{q(z)}\right|
+&=&\left|\frac{\delta P(z)}{Q(z)}-\frac{P(z)}{Q(z)}\cdot
+\frac{\delta Q(z)}{Q(z)}\right|\cdot\frac{1}{1-\frac{\delta Q(z)}{Q(z)}}.
+\end{eqnarray} -->
+
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="109" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\displaystyle \left\vert\frac{P(z)}{Q(z)}-\frac{p(z)}{q(z)}\right\vert$"></TD>
+<TD ALIGN="CENTER" NOWRAP>=</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="267" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="$\displaystyle \left\vert\frac{\delta P(z)}{Q(z)}-\frac{P(z)}{Q(z)}\cdot
+\frac{\delta Q(z)}{Q(z)}\right\vert\cdot\frac{1}{1-\frac{\delta Q(z)}{Q(z)}}.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The relaxed termination 
+
+<!-- MATH: $\Vert \delta P(z)\Vert\leq\alpha<1$ -->
+<IMG
+ WIDTH="128" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$\Vert \delta P(z)\Vert\leq\alpha<1$">
+and 
+<!-- MATH: $\Vert \delta Q(z)\Vert\leq\alpha<1$ -->
+<IMG
+ WIDTH="128" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\Vert \delta Q(z)\Vert\leq\alpha<1$">
+implies 
+
+<!-- MATH: $\max_{-1\leq z\leq 1}|\delta P(z)|\leq\alpha<1$ -->
+<IMG
+ WIDTH="206" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$\max_{-1\leq z\leq 1}\vert\delta P(z)\vert\leq\alpha<1$">
+and
+
+<!-- MATH: $\max_{-1\leq z\leq 1}|\delta Q(z)|\leq\alpha<1$ -->
+<IMG
+ WIDTH="206" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\max_{-1\leq z\leq 1}\vert\delta Q(z)\vert\leq\alpha<1$">
+respectively.
+Thus, rhs of (<A HREF="node4.html#eqn:proof">10</A>) is estimated by (<A HREF="node4.html#eqn:theo">9</A>),
+for 
+<!-- MATH: $z\in[-1,1]$ -->
+<IMG
+ WIDTH="80" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$z\in[-1,1]$">
+s.t. 
+<!-- MATH: $|Q(z)|\geq1$ -->
+<IMG
+ WIDTH="80" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$\vert Q(z)\vert\geq1$">.
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img61.gif"
+ ALT="$\Box$">
+<BR>
+
+<P>
+This theorem <A HREF="node4.html#theo:accuracy">4.1</A> gives the error of HRFA and is the main 
+result of this paper.  To show how apparent the error is,
+we rewrite HRFA algorithm, Algorithm <A HREF="node2.html#alg:hrfa.sn">2.1</A>,
+as follows:
+
+<P>
+<P>
+<DIV><B>Algorithm  4.1</B> (HRFA by near-GCD)  &nbsp; 
+ <BR>
+<B>Input:</B> data set <I>D</I> s.t. 
+<!-- MATH: $x_i\in [-1,1]$ -->
+<IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$x_i\in [-1,1]$">
+and parameter <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\alpha$">
+<BR>
+<B>Output:</B> numerical rational interpolation <I>p</I>(<I>x</I>)/<I>q</I>(<I>x</I>)
+<BR>
+<B>Method:</B> 
+<DL COMPACT>
+<DT>1.
+<DD>Compute rational interpolation <I>P</I>(<I>x</I>)/<I>Q</I>(<I>x</I>) to interpolate <I>D</I>.
+<DT>2.
+<DD>Let 
+<!-- MATH: $f_1=P(x),f_2=Q(x)$ -->
+<I>f</I><SUB>1</SUB>=<I>P</I>(<I>x</I>),<I>f</I><SUB>2</SUB>=<I>Q</I>(<I>x</I>) input polynomials of algorithm <A HREF="node3.html#alg:a-gcd">3.1</A>. Compute
+
+<!-- MATH: $\alpha-GCD(f_1,f_2)$ -->
+<IMG
+ WIDTH="128" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.gif"
+ ALT="$\alpha-GCD(f_1,f_2)$">
+and obtain 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+p(x)/q(x)=s^{(1)}_j/s^{(2)}_j.
+\end{displaymath} -->
+
+<I>p</I>(<I>x</I>)/<I>q</I>(<I>x</I>)=<I>s</I><SUP>(1)</SUP><SUB><I>j</I></SUB>/<I>s</I><SUP>(2)</SUP><SUB><I>j</I></SUB>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P></DL><A NAME="alg:hrfa">&#160;</A></DIV><P></P>
+
+<P>
+After the computation of the procedure <I>1.</I> of 
+the algorithm <A HREF="node4.html#alg:hrfa">4.1</A>,
+accuracy of numerical rational interpolation <I>p</I>(<I>x</I>)/<I>q</I>(<I>x</I>) of the data set
+<I>D</I> is estimated by Theorem <A HREF="node4.html#theo:accuracy">4.1</A> as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+|f(x_i)-p(x_i)/q_(x_i)|\leq (1+|f(x_i)|)\cdot\frac{c\alpha}{1-c\alpha},
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eqn:mainresult">&#160;</A><IMG
+ WIDTH="322" HEIGHT="39"
+ SRC="img64.gif"
+ ALT="\begin{displaymath}\vert f(x_i)-p(x_i)/q_(x_i)\vert\leq (1+\vert f(x_i)\vert)\cdot\frac{c\alpha}{1-c\alpha},
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where positive constant <I>c</I> satisfies the condition 
+
+<!-- MATH: $c\cdot |Q(x_i)|\geq 1$ -->
+<IMG
+ WIDTH="105" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.gif"
+ ALT="$c\cdot \vert Q(x_i)\vert\geq 1$">
+for 
+<!-- MATH: $i=0,\cdots,m+n$ -->
+<IMG
+ WIDTH="123" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.gif"
+ ALT="$i=0,\cdots,m+n$">.
+
+<P>
+The result (<A HREF="node4.html#eqn:mainresult">11</A>) shows that our a posteriori error estimate 
+is dominated by the parameter, the accuracy level, <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\alpha$">.
+Similar results may obtained by using other approximate-GCDs
+ but with different accuracy level parameters.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html50"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html48"
+ HREF="kai.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html42"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html51"
+ HREF="node5.html">An Example of HRFA</A>
+<B> Up:</B> <A NAME="tex2html49"
+ HREF="kai.html">Accuracy Analysis of Hybrid</A>
+<B> Previous:</B> <A NAME="tex2html43"
+ HREF="node3.html">Approximate-GCD by Hribernig and</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

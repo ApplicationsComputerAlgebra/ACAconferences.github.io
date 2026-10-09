@@ -1,0 +1,14 @@
+"Computer Algebra and Education. Examples of exercices with the help of MAPLE"
+    
+Frederique Barkats 
+Laboratoire de Mathematiques J.A Dieudonne 
+Universite de Nice-Sophia Antipolis.
+
+
+We are going to conduct some exercises with the help of MAPLE computer 
+algebra software. This session illustrate the notion of euclidian ring 
+and is intented for 2nd year students of the Deug and third year of Math. 
+The goal is to make students discover, first of all in an experimental 
+way, the different notions useful to them (problems of divisibility, 
+zero dividers, inversible elements, factorability...) and then to place 
+a "tool box" of educational programs.

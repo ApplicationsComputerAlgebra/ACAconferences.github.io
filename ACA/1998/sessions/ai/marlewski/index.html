@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A CAS aid in the elaboration of the expert system supporting the
+managing the monolithic construction process</TITLE>
+<META NAME="description" CONTENT="A CAS aid in the elaboration of the expert system supporting the
+managing the monolithic construction process">
+<META NAME="keywords" CONTENT="marlewski">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="marlewski.css">
+</HEAD>
+<BODY bgcolor=white>
+
+<P>
+<H1 ALIGN="CENTER">
+A CAS aid in the elaboration of the expert system
+<BR>
+supporting the
+managing the monolithic construction process</H1>
+<P ALIGN="CENTER"><STRONG>Magdalena Hajdasz
+<BR> 
+<EM>Institute of Building Constructions,
+<BR> 
+<EM>University of Technology, Poznan, Poland
+<BR>
+Adam Marlewski
+<BR>
+<EM>Institute of Mathematics,
+<BR>
+<EM>Poznan University of Technology, Poland
+</EM></EM></EM></EM></STRONG></P>
+<P ALIGN="CENTER"></P>
+<P ALIGN="LEFT"></P>
+
+<P>
+<B>Extended abstract</B>
+
+<P>
+Obviously, no expert system can correctly work if its knowledge base
+and the inference machine are too poor. On the other hand, a very
+wide base and too many rules make the system slower produces result
+even if clever heuristics are implemented.
+This statement has to be taken into account when we intend to
+construct an intelligent program which can be helpful for the manager
+who works on a site where a silo is under construction.
+Since the very beginnig of the erecting process the manager has to
+determine the technology and organisation of the actions concerning
+the realization of this very complex process. It means
+that he has to take into account all the components involved in this
+process: concrete mixers, buckets, slip, cranes, working staff,
+atmospherical conditions, perturbations (caused by various failures
+of the equipment). There can be arranged various technological
+systems and each one of these systems can be evaluated with respect to
+different criteria (e.g. maximum efficency, minimal cost of
+realisation, minimum losses, maximum balancing).
+Naturally, the final result depends on the art of design, the
+machinery park and human staff being on disposal. In the considered
+case a crane is, in general, the most expensive machine and it makes
+that it places on a crucial position in the technological process.
+That's why the parts of knowledge and data bases concerning cranes
+should be prepared with a special care. Unfortunately, the complexity
+of the cranes themselves causes that the data on them are not
+supplied in the form which can automatically adapted for the
+requirements of a computer program. It concerns, for example, the
+behaviour of the crane arm. A knowledge engineer has to know which
+is the way followed by the crane arm and how the loading capacity
+changes as the operational altitude and horizontal distance vary. The
+data on these features are supplied in the form of tables and drafts,
+so in the form which is not preferable for computers. Here is the
+moment where we see that computer algebra systems can be applied. In
+particular, we think here of <EM>DERIVE</EM> (from Soft Warehouse Inc.,
+Hawaii) which is relatively easy to be dominated also by persons
+having small experence with computers. In the presentation we want to
+show the characteristics of some types of cranes (producing in
+Poland, Germany and United Kingdom) and to how to obtain the
+equations of curves describing the movement of crane arm and its
+loading capacity. In general, the problem reduces to the
+determination of the best fitting, so one has to decide in which
+approximation class it should be done. Considered cases reveal that
+there is no simple advice how to choose this class. Moreover, in some
+cases the standard techniques (e.g. the use of the <EM>DERIVE</EM> built-in
+function <I>FIT</I>) comes to unsatisfactory approximations and then a
+special approach has to be applied (in our example it is the rational
+collocation; we supply it as the function <IMG
+ WIDTH="122" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$PADE\_KOL$">).
+The schema of the passing from the traditional data to the form
+accepted by a computer is shown in the attached figure. Authors'
+intention was to elaborate the expert system which produces the
+outcome in the user-friendly form which does not stray away from the
+traditional one (see Box 8 in Figure).
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,36 @@
+        Computer Algebra and Automated Theorem Proving
+                       Dongming Wang
+
+	    "wang@lifia.imag.fr (Dongming Wang)"
+
+
+Abstract:
+Among the most powerful methods developed for automated theorem 
+proving are methods based on computer algebra.  Typical examples are 
+algebraic methods for proving theorems in geometry, which require
+complex and heavy polynomial operations and are mostly implemented 
+in computer algebra systems.  Well-known methods include those based
+on characteristic sets, Gr\"obner bases, quantifier elimination, 
+bracket algebra, area/vector operation, sum manipulation, and for 
+proving theorems in geometry, algebra, analysis, number theory, 
+combinatorics and mechanics. 
+
+This special session is organized to exchange new ideas and  
+latest developments on the application of computer algebraic 
+methods and software systems to automated theorem proving, the 
+interaction and cooperation of computer algebra and automated 
+theorem proving (systems) in research and education, and to 
+stimulate further developments of computer algebra based methods 
+for theorem proving in various (mathematical) domains. 
+
+Tentative list of speakers to be invited:
+D. S. Arnon,
+G. Carra Ferro,
+S.-C. Chou and/or X.-S. Gao, 
+M. Kalkbrener and/or S. Stifter, 
+D. Kapur, 
+A. Miola, 
+J. Richter-Gebert,
+D. Scott and/or E. Clarke,
+D. Wang,
+W.-T. Wu

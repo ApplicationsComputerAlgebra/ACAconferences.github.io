@@ -1,0 +1,27 @@
+# Created by rsalamon@crocus on Wed Jul  3 18:21:50 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Boulier.html
+Path=0/conference/IMACS96/skeletons/Gerdt/Boulier.html
+
+Name=Carra.html
+Path=0/conference/IMACS96/skeletons/Gerdt/Carra.html
+
+Name=Carra.ps
+Path=9/conference/IMACS96/skeletons/Gerdt/Carra.ps
+
+Name=Meleshko.html
+Path=0/conference/IMACS96/skeletons/Gerdt/Meleshko.html
+
+Name=Morrison.html
+Path=0/conference/IMACS96/skeletons/Gerdt/Morrison.html
+
+Name=Reid.html
+Path=0/conference/IMACS96/skeletons/Gerdt/Reid.html
+
+Name=Seiler.html
+Path=0/conference/IMACS96/skeletons/Gerdt/Seiler.html
+
+Name=Gerdt.html
+Path=0/conference/IMACS96/skeletons/Gerdt/Gerdt.html
+

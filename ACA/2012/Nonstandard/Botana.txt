@@ -1,0 +1,38 @@
+Title: A symbolic-numeric environment for computing equidistant curves
+
+Authors: Francisco Botana
+           (Univ. de Vigo, Spain)
+
+           Miguel Á. Abánades
+           (Univ. Complutense de Madrid, Spain)
+
+Extended Abstract:
+
+The bisector of two geometrical elements (points, curves, surfaces, etc.)
+is the locus set of points equidistant to them. While the
+concept of a bisector is simple, its effective computation is usually
+not trivial, involving a non algebraic approach in an essential way.
+In this talk we will show a web-based system that completely
+determines bisectors of points and algebraic curves (provided as graph
+of functions, by implicit functions, or as the conic through five
+points, for instance).
+
+The algorithms behind the bisector computations use on one hand
+Groebner-based elimination to determine an algebraic variety
+containing the bisector and on the other hand a numeric approach to
+provide the graph of the semi-algebraic subset corresponding to the
+true bisector. The system mainly consists of an interactive drawing
+canvas where the algebraic and true bisectors are displayed together
+with the point and curve determined by the user. Moreover, the
+equation of the algebraic bisector is provided in text form.
+
+An important feature of the system is that it is solely based on open
+source software. It uses the dynamic geometry system GeoGebra and the
+computer algebra system Sage. More concretely, the algebraic knowledge
+introduced through GeoGebra is remotely processed by Sage and its
+Singular component by means of its efficient elimination algorithms.
+Moreover, the recent GroebnerCover algorithm is used for the exact
+determination of segment endpoints in the case of true bisectors.
+
+Partially supported by grants MTM2008-04699-C03-03/MTM and
+MTM2011-25816-C02-02  from the Spanish MINECO.

@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Gearbox layout problem</TITLE>
+<META NAME="description" CONTENT="Gearbox layout problem">
+<META NAME="keywords" CONTENT="sawada">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sawada.css">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html150"
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html148"
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html144"
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html151"
+ HREF="node13.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html149"
+ HREF="node10.html">Example</A>
+<B> Previous:</B> <A NAME="tex2html145"
+ HREF="node11.html">Linear-armed robot design problem</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00032000000000000000">&#160;</A>
+<A NAME="subsec:gearbox">&#160;</A>
+<BR>
+Gearbox layout problem
+</H2>
+Figure&nbsp;<A HREF="node12.html#fig:gearbox">8</A> shows a three-axes gearbox. This section shows an example of the gear axes layout problem to determine the positions of gear axes for given gear diameters and size of the box. 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig:gearbox">&#160;</A><A NAME="656">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 8:</STRONG>
+Three-axes gearbox</CAPTION>
+<TR><TD><IMG
+ WIDTH="348" HEIGHT="140"
+ SRC="img73.gif"
+ ALT="\begin{figure}
+\begin{center}
+\ \epsfbox{sawada-8.eps}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+Each variable in Figure&nbsp;<A HREF="node12.html#fig:gearbox">8</A> shows:
+<UL>
+<LI>
+<!-- MATH: $(x_{j},y_{j})\;(j=1,2,3)$ -->
+<IMG
+ WIDTH="144" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.gif"
+ ALT="$(x_{j},y_{j})\;(j=1,2,3)$">:
+position of the <B><I>j</I></B>th axis
+<LI>
+<!-- MATH: $d_{ji},d_{jo}\;(j=1,2,3)$ -->
+<IMG
+ WIDTH="142" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.gif"
+ ALT="$d_{ji},d_{jo}\;(j=1,2,3)$">:
+diameter of the input and output gear of the <B><I>j</I></B>th axis
+<LI><B><I>w</I>,<I>h</I></B>: width and height of the gearbox
+</UL>The constraints holding the problem are given as below.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\begin{array}{l}
+(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}=((d_{1o}+d_{2i})/2)^{2},\\
+(x_{3}-x_{2})^{2}+(y_{3}-y_{2})^{2}=((d_{2o}+d_{3i})/2)^{2},\\
+(x_{1}-x_{3})^{2}+(y_{1}-y_{3})^{2}\geq ((d_{1o}+d_{3i})/2)^{2},\\
+d_{1o}/2 \leq x_{1} \leq w-d_{1o}/2,\;
+d_{1o}/2 \leq y_{1} \leq h-d_{1o}/2,\\
+d_{2i}/2 \leq x_{2} \leq w-d_{2i}/2,\;
+d_{2o}/2 \leq x_{2} \leq w-d_{2o}/2,\\
+d_{2i}/2 \leq y_{2} \leq h-d_{2i}/2,\;
+d_{2o}/2 \leq y_{2} \leq h-d_{2o}/2,\\
+d_{3i}/2 \leq x_{3} \leq w-d_{3i}/2,\;
+d_{3i}/2 \leq y_{3} \leq h-d_{3i}/2.
+\end{array}
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:gearbox">&#160;</A><IMG
+ WIDTH="356" HEIGHT="148"
+ SRC="img76.gif"
+ ALT="\begin{displaymath}
+\begin{array}{l}
+(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}=((d_{1o...
+... w-d_{3i}/2,\;
+d_{3i}/2 \leq y_{3} \leq h-d_{3i}/2.
+\end{array}\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+In Eq.&nbsp;(<A HREF="node12.html#eq:gearbox">10</A>), the first equation shows meshing between the first axis and the second axis gear. The second equation shows meshing between the second axis and the third axis gear. The third shows no meshing between the first axis and the third axis gear. The rest of Eq.&nbsp;(<A HREF="node12.html#eq:gearbox">10</A>) is the condition that all the gears are in the gearbox. 
+
+<P>
+Let Eq.&nbsp;(<A HREF="node12.html#eq:diameter">11</A>) be the given gear diameters.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+d_{1o}=42\mbox{[mm]},d_{2i}=86\mbox{[mm]},d_{2o}=70\mbox{[mm]},d_{3i}=110\mbox{[mm]}.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:diameter">&#160;</A><IMG
+ WIDTH="423" HEIGHT="31"
+ SRC="img77.gif"
+ ALT="\begin{displaymath}
+d_{1o}=42\mbox{[mm]},d_{2i}=86\mbox{[mm]},d_{2o}=70\mbox{[mm]},d_{3i}=110\mbox{[mm]}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+Suppose the following gearboxes are given.
+<DL COMPACT>
+<DT>1.
+<DD>
+<!-- MATH: $w=180\mbox{[mm]},h=180\mbox{[mm]}.$ -->
+<IMG
+ WIDTH="207" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.gif"
+ ALT="$w=180\mbox{[mm]},h=180\mbox{[mm]}.$">
+<P>
+The constraint set is firstly received by the symbolic part and inconsistency is not found. After removing redundant constraints, numerical solutions are computed by the numeric part. The following example solution is obtained. 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(x_{1},y_{1},x_{2},y_{2},x_{3},y_{3}) = (97.4,54.2,43,87.9,125,125)
+\end{displaymath} -->
+
+<B>(<I>x</I><SUB>1</SUB>,<I>y</I><SUB>1</SUB>,<I>x</I><SUB>2</SUB>,<I>y</I><SUB>2</SUB>,<I>x</I><SUB>3</SUB>,<I>y</I><SUB>3</SUB>) = (97.4,54.2,43,87.9,125,125)</B>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<DT>2.
+<DD>
+<!-- MATH: $w=160\mbox{[mm]},h=160\mbox{[mm]}.$ -->
+<IMG
+ WIDTH="207" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.gif"
+ ALT="$w=160\mbox{[mm]},h=160\mbox{[mm]}.$">
+<P>
+The constraint set is firstly received by the symbolic part and inconsistency is not found. After removing redundant constraints, numerical solutions are computed by the numeric part. However, no numerical solution is obtained and it concluded that there exists no solution which satisfies the given constraints.
+</DL>
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html150"
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html148"
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html144"
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html151"
+ HREF="node13.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html149"
+ HREF="node10.html">Example</A>
+<B> Previous:</B> <A NAME="tex2html145"
+ HREF="node11.html">Linear-armed robot design problem</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

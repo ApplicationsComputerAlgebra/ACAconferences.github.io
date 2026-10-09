@@ -1,0 +1,16 @@
+Some Reflections on Knowledge Based System Modeling - Mathematical Aspects:
+Applications to Symbolic (and Geometric) Modeling of Robot Arms
+
+Jochen Pfalzgraf
+Computer Science Institute
+University of Salzburg
+Salzburg, Austria
+
+In this contribution we would like to embed  the topic of the special session
+"ACA in Robotics" in a larger framework as indicated in the title.  First we
+present some thoughts about knowledge based systemmodeling (``almost
+everything'' is knowledge based modeling ...) from a mathematical perspective
+(general aspect: looking for ``the right'' language to formulate a given
+problem and try to solve it).  Then we focus on modeling robot arms as
+kinematic chains and discuss mathematical and symbolic computation aspects
+which arise naturally in that field.

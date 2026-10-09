@@ -1,0 +1,14 @@
+A Comparison of Two Methods to Calculate Conservation Laws of PDE systems
+
+Thomas Wolf
+Queen Mary and Westfield College, London
+email:  tw@maths.qmw.ac.uk
+
+The methods of calculating conservation laws either directly or through the
+calculation of their characteristic function are compared concerning the the
+invariance of the result they provide and their complexity.  Two corresponding
+computer algebra programs are compared concerning the range of problems they
+are applicable to and their efficiency.  Applications are given including a
+conservation law of an evolutionary system of equations known from plasma
+physics with a conserved density depending explicitly on the independent
+variables.

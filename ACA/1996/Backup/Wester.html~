@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA 1996</TITLE>
+</HEAD>
+
+<BODY TEXT="#302859" ALINK="#403050" VLINK="#704855" BGCOLOR="#f9c0a0">
+
+<H1 ALIGN="center">Comparative CAS Reviews and Philosophy</H1>
+
+<H3>Organizer</H3>
+<P>
+<A HREF="http://math.unm.edu/~wester/">Michael Wester</A>
+(<A HREF="mailto:wester@math.unm.edu">wester@math.unm.edu</A>)<BR>
+1801 Quincy, SE<BR>
+Albuquerque, New Mexico<BR>
+USA   87108-4427<BR>
+Tel: 1-(505) 243-2800
+<P>
+
+<H3>Description</H3>
+Right now, a large number of computer algebra systems, both general purpose and
+special purpose, are available.  Some of these systems are commercial while
+many others are partially or fully in the public domain.  As more and more
+systems become available, it becomes important to have some idea about the
+strengths and weaknesses provided by each system, both mathematically and
+inherent in the system's philosophy of use.  The point of view of the user will
+vary depending on the application, and so a statistician may have different
+considerations than say a physicist which may in turn be different from that of
+a mathematician or an educator.  Each type of user has certain goals and wants
+to know how a particular system will aid in his or her quest to achieve them.
+<P>
+
+<H3>Talks</H3>
+Date: July 20th (Saturday) 
+<dl>
+  <dt> 8:30
+  <dd>
+      <A HREF="http:../participants.html#Robidoux">Nicolas Robidoux</A><br>
+      <B>User Friendly Reviews of Computer Algebra Systems</B><BR>
+      <a href="Wester/Robidoux.html"><em>Abstract</em></a>
+
+  <dt> 8:52.5
+  <dd> 
+      <A HREF="http:../participants.html#Bernardin">Laurent Bernardin</A><br>
+      <B>A Review of Symbolic Solvers</B><BR>
+       <a href="Wester/Bernardin.html"><em>Abstract</em></a>
+
+  <dt> 9:15
+  <dd>
+       <A HREF="http:../participants.html#Graebe">Hans-Gert Gr&auml;be</A><br>
+      <B>Factorized Gr&ouml;bner Bases and Polynomial Systems</B><BR>
+       <a href="Wester/Graebe.html"><em>Abstract</em></a>
+  <dt> 9:37.5
+  <dd>
+      <A HREF="http:../participants.html#Postel">Frank Postel</A>,
+      <A HREF="http:../participants.html#Zimmermann">Paul Zimmermann</A><br>
+      <B>A review of the ODE solvers of Axiom, Derive, Macsyma, Maple,
+      Mathematica, MuPAD and Reduce</B><BR>
+      <a href="Wester/Postel.html"><em>Abstract</em></a>
+
+  <dt> <hr>
+      <p>
+  <dt> 10:00
+  <dd>
+      Coffee Break
+      <p>
+        <dt> <hr>
+
+  <dt> 10:15 
+  <dd>
+      <A HREF="http:../participants.html#Aslaksen">Helmer Aslaksen</A><br>
+      <B>Multiple-valued Complex Functions and Computer Algebra</B><BR>
+      <a href="Wester/Aslaksen.html"><em>Abstract</em></a>
+
+  <dt> 10:37.5
+  <dd> 
+      <A HREF="http:../participants.html#Wester">Michael Wester</A><br>
+      <B>Computer Algebra Systems: Pitfalls, Pratfalls and also Elegance</B><BR>
+      <a href="Wester/Wester.html"><em>Abstract</em></a>
+  <dt> 11:00
+  <dd>
+      <A HREF="http:../participants.html#Steinberg">Stanly Steinberg</A><br>
+      <B>Computer Algebra and Problem Solving Environments</B><BR>
+      <a href="Wester/Steinberg.html"><em>Abstract</em></a>
+
+  <dt>  11:22.5
+  <dd>
+      <A HREF="http:../participants.html#Zimmermann">Paul Zimmermann</A><br>
+      <B>Commercial vs Free Computer Algebra Systems</B><BR>
+      <a href="Wester/Zimmermann.html"><em>Abstract</em></a>
+
+  <dt> 11:45  
+  <dd>
+      All<BR>
+      <B>Discussion of Issues Raised and Not Raised</B><BR>
+</dl>
+
+<P><IMG SRC="../line-risc.gif" ALIGN=middle
+        ALT="________________________________________________________"><P>
+
+<A HREF=
+   "../program-plan.html">
+<IMG SRC="../up-button.gif" ALT="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<IMG ALT="RISC", SRC="../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<IMG ALT="SWP", SRC="../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<IMG ALT="Linz", SRC="../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<IMG ALT="Austria", SRC="../austria-button.gif">
+</A>
+</BODY>
+</HTML>

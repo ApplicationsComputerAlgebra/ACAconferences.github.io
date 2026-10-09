@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction.</TITLE>
+<META NAME="description" CONTENT="Introduction.">
+<META NAME="keywords" CONTENT="vega">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="vega.css">
+</HEAD>
+<BODY bgcolor=white>
+
+<H1><A NAME="SECTION00010000000000000000">
+Introduction.</A>
+</H1>  
+  
+Many practical problems can be easily solved if we are able to find  
+the solution of an algebraic system of equations with parametric   
+coefficients for any (or for many) values of the parameters. In these  
+problems the use of Gr&#246;bner Bases techniques to rewrite the given  
+equations in easier ways (for example, in triangular form) have to be  
+completed with other techniques to determine which are the values of the  
+parameters that preserve the good properties  of the Gr&#246;bner bases  
+computations. In this paper we   address this question, for the case of
+homogeneous polynomial systems, by focusing our attention to the using of the
+already available tools inside the FRISCO framework [<A
+ HREF="node15.html#frisco">5</A>] such as the
+PoSSoLib. As a final result it is obtained an efficient implementation 
+dealing with the   problem of solving a homogeneous polynomial system of
+equations containing parameters when using Gr&#246;bner Bases as the main
+tool.    
+  
+Let 
+<!-- MATH: $\underline{T}$ -->
+<IMG
+ WIDTH="17" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\underline{T}$">
+be the parameters 
+<!-- MATH: $(T_1,\ldots,T_s)$ -->
+<IMG
+ WIDTH="89" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$(T_1,\ldots,T_s)$">
+and  
+
+<!-- MATH: $\underline{X}=(X_1,\ldots,X_n)$ -->
+<IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\underline{X}=(X_1,\ldots,X_n)$">
+the unknowns. The problem to solve is the  
+determination (whatever it means and to be clarified later) of the solution  
+set of the polynomial system of equations:  
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\matrix{F_1(\underline{T},X_1,\ldots,X_n)&\!\!\!\!=0\cr
+F_2(\underline{T},X_1,\ldots,X_n)&\!\!\!\!=0\cr  
+        \vdots&\!\!\!\!\hfill\vdots\;\cr  
+        F_m(\underline{T},X_1,\ldots,X_n)&\!\!\!\!=0\cr}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="166" HEIGHT="96"
+ SRC="img10.gif"
+ ALT="\begin{displaymath}\matrix{F_1(\underline{T},X_1,\ldots,X_n)&\!\!\!\!=0\cr
+F_2...
+...l\vdots\;\cr
+F_m(\underline{T},X_1,\ldots,X_n)&\!\!\!\!=0\cr}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where the <I>F</I><SUB><I>i</I></SUB>'s are homogeneous polynomials in the variables
+
+<!-- MATH: $\underline{X}$ -->
+<IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\underline{X}$">.
+Two different questions arise naturally in
+this context: first, to get the   conditions the parameters must verify in
+order the considered homogeneous system has a solution and, second, to
+describe, in some way, the solutions, i.e., the   dependency between every
+unknown and the parameters.
+
+Different methods can be found in the Computer Algebra literature addressing  
+this problem in general (not only for the homogeneous case). Mainly:  
+<UL>
+<LI>To use Comprehensive Gr&#246;bner Bases (see [<A
+ HREF="node15.html#Weisp4">14</A>]).  
+<UL>
+<LI>The notion of Comprehensive Gr&#246;bner Bases (see [<A
+ HREF="node15.html#Weisp4">14</A>]) is   
+exactly, if it is easy to compute, what we want to obtain: an explicit  
+partition of the parameter space together with a Gr&#246;bner Basis of the  
+considered ideal, already specialized, for every subset in such  
+partition.  The main problem with this approach is that, in its general  
+version, is highly inefficient due mainly to the big number of sets  
+appearing in such partition.  
+</UL>
+<LI>To use the Dynamic Evaluation Method (see [<A
+ HREF="node15.html#Duv95">4</A>]).  
+<UL>
+<LI>By using only ``well parametrized" gcd computations and a ``case by  
+case" methodology, a complete description of the solution set is obtained in  
+terms of conditions on the parameters.  
+</UL>
+<LI>To use multivariate resultants (see [<A
+ HREF="node15.html#Waerden">13</A>]).  
+<UL>
+<LI>The usual techniques based upon resultants work only when the numbers of  
+equations and unknowns are equal, they require the computation of  
+determinants of matrices with a very big size and polynomial entries and,
+initially, they only provide the conditions on the parameter space in order
+the considered   system has a solution.  
+</UL>
+<LI>To use triangular sets (see [<A
+ HREF="node15.html#MM97">8</A>]and the references contained
+there) .
+<UL>
+<LI>It is close in spirit to the Dynamic Evaluation Method before mentioned   
+but stronger algebraic techniques are used in order  to remove multiplicities  
+from the different solution sets which helps to improve the efficiency of the  
+method.  
+</UL>
+<LI>To use specific Linear Algebra tools for parametric linear systems (see
+[<A
+ HREF="node15.html#Sit92">11</A>]).
+<UL>
+<LI>An ad-hoc using of Cramer's rule together with a parameter dependent
+rank computation of matrices with polynomial entries provide a specific
+solution for this case.
+</UL></UL>  
+  
+In this paper our goal is to show how, with a not very expensive cost, the  
+using of Gr&#246;bner Bases can help to get answers when trying to describe the  
+solution set of the considered homogeneous system in terms of the parameters.
+Since the tool chosen to be used is the computation of Gr&#246;bner Bases, the
+first section   presents, in an unified way, the behaviour of Gr&#246;bner Bases
+under   specialization. Two strategies can be initially adopted:  
+<UL>
+<LI>To compute a Gr&#246;bner Basis of the ideal generated by the  
+polynomials   
+<!-- MATH: $F_1,\ldots,F_m$ -->
+<IMG
+ WIDTH="84" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$F_1,\ldots,F_m$">
+in 
+<!-- MATH: ${\mathchoice {\setbox  0=\hbox{$\displaystyle\rm Q$ }\hbox {\raise
+0.15\ht0\hbox to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\textstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptscriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}}(\underline{T})[X_1,\ldots,X_n]$ -->
+<IMG
+ WIDTH="139" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="${\mathchoice {\setbox 0=\hbox{$\displaystyle\rm Q$ }\hbox {\raise
+0.15\ht0\hbo...
+...pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}}(\underline{T})[X_1,\ldots,X_n]$">
+(with
+respect to  any   monomial ordering) together with the ``good" specialization
+conditions on  
+
+<!-- MATH: $\underline{T}$ -->
+<IMG
+ WIDTH="17" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\underline{T}$">
+(see [<A
+ HREF="node15.html#DCJLDOS91">3</A>]).
+<LI>To compute a Gr&#246;bner Basis of the ideal generated by the  
+polynomials 
+<!-- MATH: $F_1,\ldots,F_m$ -->
+<IMG
+ WIDTH="84" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$F_1,\ldots,F_m$">
+in 
+<!-- MATH: ${\mathchoice {\setbox  0=\hbox{$\displaystyle\rm Q$ }\hbox {\raise
+0.15\ht0\hbox to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\textstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptscriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}}[\underline{T},X_1,\ldots,X_n]$ -->
+<IMG
+ WIDTH="133" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="${\mathchoice {\setbox 0=\hbox{$\displaystyle\rm Q$ }\hbox {\raise
+0.15\ht0\hbo...
+...0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}}[\underline{T},X_1,\ldots,X_n]$">
+(with  
+respect to any monomial ordering) together with the ``good" specialization  
+conditions on 
+<!-- MATH: $\underline{T}$ -->
+<IMG
+ WIDTH="17" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\underline{T}$">.
+Anyway, the new system is always equivalent to  
+the first one, even if it is not a Gr&#246;bner Basis (see [<A
+ HREF="node15.html#PG87">7</A>] or  
+[<A
+ HREF="node15.html#MK97">9</A>]).  
+</UL>  
+and their analysis is done is the first section. This section shows also how  
+to adapt the strategy in [<A
+ HREF="node15.html#GPT88">6</A>] to avoid the  
+growing the coefficients in the Gr&#246;bner Basis in order to get a list of  
+open conditions on the parameter space where a Gr&#246;bner Basis is available
+after specialization.  
+  
+The second section contains the main result of this paper: it is shown, when  
+working in 
+<!-- MATH: ${\mathchoice {\setbox  0=\hbox{$\displaystyle\rm Q$ }\hbox {\raise
+0.15\ht0\hbox to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\textstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.8\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}  
+{\setbox  0=\hbox{$\scriptscriptstyle\rm Q$ }\hbox{\raise 0.15\ht0\hbox  
+to0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}}[\underline{T},X_1,\ldots,X_n]$ -->
+<IMG
+ WIDTH="133" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="${\mathchoice {\setbox 0=\hbox{$\displaystyle\rm Q$ }\hbox {\raise
+0.15\ht0\hbo...
+...0pt{\kern0.4\wd0\vrule height0.7\ht0\hss}\box0}}}[\underline{T},X_1,\ldots,X_n]$">,
+how to use the Hilbert  
+Function in order to obtain a set of conditions on the parameters providing  
+that the specialization of a ``generic" Gr&#246;bner Basis in such polynomial  
+ring is again a Gr&#246;bner Basis of the specialized homogeneous polynomial
+system. Last two sections are devoted, first, to indicate to
+use these techniques to deal with polynomial system solving involving
+parameters and homogeneous polynomials and, second, to present the
+implementation of these algorithms in the PoSSoLib.   
+  
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

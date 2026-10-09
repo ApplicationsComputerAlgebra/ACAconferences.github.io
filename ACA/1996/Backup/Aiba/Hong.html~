@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Determining the Relationship Among Sets</H1>
+
+<h3 align="center">
+<A HREF="../../participants.html#Hong">Hoon Hong</A>,
+      <A HREF="../../participants.html#Ratschan">Stefan Ratschan</A><br>
+</h3>
+
+Date: July 19th (Friday)<br>
+Time: ??.??<br>
+
+<center>
+Abstract
+</center>
+
+Checking the entailment/disentailment of sets is an important
+operation in constraint programming. We will generalize this problem to the
+problem of answering queries about sets using a certain query language.
+Furthermore we will present an efficient algorithm solving this problem for
+arbitrary non-linear polynomials.
+
+
+<P><img src="../../line-risc.gif" align=middle alt="______________
+__________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/skeletons/Aiba.html"><img src="../../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

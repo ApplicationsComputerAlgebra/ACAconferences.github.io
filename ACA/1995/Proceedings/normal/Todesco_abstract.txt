@@ -1,0 +1,18 @@
+         Phase space structure of 4D symplectic mappings
+                 and applications to beam optics
+                          Ezio Todesco
+
+                     University of Bologna,
+                    INFN Sezione di Bologna,
+                              Italy
+                e-mail: ETODESCO@bologna.infn.it
+
+    The  analytical  tools  of resonant  normal  forms  for  four 
+dimensional symplectic mappings are outlined. The analysis of the 
+perturbative  series allows one to determine a classification  of 
+the  resonant  structures in  phase  space.  In  particular,  the 
+existence   and  the  stability  of  fixed  points  for   generic 
+resonances and mappings is worked out. The analytical tools prove 
+to  be  useful for the optimization of  a  magnetic  lattice.  An 
+application  to the sorting of the magnetic random errors of  the 
+LHC is outlined.

@@ -1,0 +1,305 @@
+<html>
+<head>
+<title>Proposition</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link href="../Cstyle_ACA2009.css" rel="stylesheet" type="text/css">
+</head>
+<script>
+function isChecked(formname,checkname)
+ {
+    var el_collection=eval("document.forms[0]."+checkname)
+               for (c=0;c<el_collection.length;c++)
+                     if(el_collection[c].checked)
+                           return true;
+	return false;
+}
+function check_field(fieldValue, fieldSizeMin, fieldFormat, fieldName)
+{
+  var msg=""
+
+	  if(fieldFormat =="TXT" && fieldValue.length < fieldSizeMin)
+      msg = "Field '"+fieldName+"' must be at least "+fieldSizeMin+" characters long.";
+
+ <!-- if(msg=="" && fieldFormat == "CHECK" && !(isChecked("Inscription",fieldValue))) -->
+    <!--  msg = "Field '"+fieldName+"' must have one option selected"; -->
+
+  if(msg=="" && (fieldFormat == "NUM" || fieldFormat == "MONTH" || fieldFormat == "YEAR" || fieldFormat == "DAY") 
+			 && forceNum(fieldValue,"") == 0)
+      msg = "Field '"+fieldName+"' must be numeric.";
+
+  if(msg=="" && fieldFormat == "MONTH" && (fieldValue < 1 || fieldValue > 12))
+      msg = "Le champs '"+fieldName+"' doit être entre 1 et 12.";
+
+  if(msg=="" && fieldFormat == "YEAR" && (fieldValue < 2000))
+      msg = "Le champs '"+fieldName+"' doit être plus grand que 2002.";
+
+  if(msg=="" && fieldFormat == "DAY" && (fieldValue < 1 || fieldValue > 31))
+      msg = "Le champs '"+fieldName+"' doit être entre 1 et 31.";
+
+  if(msg!="")
+    alert(msg);
+
+  return (msg=="");
+}
+
+function validate()
+{
+  var form = document.forms[0];
+  if(!check_field("Conference", 2, "CHECK", "Conference Strand")) return;
+  if(!check_field("TypeConference", 2, "CHECK", "Type of Conference")) return;
+  if(!check_field(form.AutPrincNom.value, 2, "TXT", "Main presenter's Last Name")) return;
+  if(!check_field(form.AutPrincPrenom.value, 2, "TXT", "Main presenter's First Name")) return;
+
+  form.submit();
+}
+</SCRIPT>
+
+<BODY BGCOLOR="#f9fbf1" TEXT="#000000" LINK="#000000" VLINK="#993300" ALINK="#993300">
+<form name="Inscription" action="ValidePropose.asp" method="post">
+<table width="90%" border="0">
+<input type="hidden" name="langue" value="EN">
+<tr><td colspan="6"><h2><b><i>ACA2009,  sessions acceptées:</i></b></h2></td></tr>
+<tr><td colspan="6"></td></tr>
+<tr><td colspan="6">
+1. Computer Algebra in Education (Pineau, Wester, Akritas, Caron, Jarvis, Kutzler, Pletsch)<br>
+2. Interaction Between Computer Algebra and Interval Computations (Kraemer, Neher, Popova)<br>
+3. Applications and Libraries development in Derive (Galán García, Rodríguez Cielos, Aguilera Venegas, Böhm))<br>
+4. Elimination Theory and Applications (Minimair, Lewis)<br>
+5. Chemistry and Computer Algebra (Scarlete, Minimair, Lewis)<br>
+6. Applications of Math Software to Mathematical Research (Lichtblau)<br>
+7. Computer Algebra for Dynamical Systems and Celestial Mechanics (Edneral, Myllari, Vassiliev)<br>
+8. Analogy in Reasoning and Construction (Barnett)<br>
+9. Symbolic and Numeric Computation (Akritas, Kai, Janovitz-Freireich, Stefanescu)<br>
+10. Algebraic and Algorithmic Aspects of Differential and Integral Operators (Rosenkranz, Regensburger)<br>
+11. High-Performance Computer Algebra (Johnson, Moreno Maza)<br>
+12. Nonstandard Applications of Computer Algebra (Roanes-Lozano, Wester, Steinberg)<br>
+</td></tr>
+<tr><td colspan="6"></td></tr>
+<tr><td colspan="6"></td></tr>
+    <tr>
+    <td><B>Choix de session:</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<select name="Conference">
+	<option selected>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+	<option>9</option>
+	<option>10</option>
+	<option>11</option>
+	<option>12</option>
+	<option>13</option>
+	<option>14</option>
+	</select></td>
+	<td>&nbsp;</td>
+    <td>Durée&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30 minutes&nbsp; 
+	<input name="TypeConference" type="radio" value="30" checked> <!-- &nbsp;&nbsp;&nbsp;
+	60 minutes <input name="TypeConference" type="radio" value="60"> --></td>
+    <td colspan="3">Dans la variable LocalNumber<br>Prop. number: <input type="text" name="LocalNumber" size="10"></td>
+
+</tr>
+   <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+	<td>&nbsp;</td>
+  </tr>
+<tr>
+<td colspan="6" align="center" class="Titre2"><b><i>Proposal form</i></b></td>
+</tr>
+  <tr>
+      <td colspan="3" align="center" class="Titre3">Main presenter</td>
+
+      <td colspan="3" align="center" class="Titre3">Co-presenter(s)</td>
+  </tr>
+  <tr>
+      <td>Title:</td>
+	      <td>&nbsp;</td>
+    <td>
+<input name="txtAutPrincTitre" type="text" size="4" maxlength="4"></td>
+    <td>&nbsp;</td>
+      <td>Title:</td>
+      <td><input name="CoAuteur1Titre" type="text" size="4" maxlength="4"></td>
+  </tr>
+  <tr>
+      <td>Last Name:<BR>(Surname)</td>
+      <td><font color="#FF0000">*</font></td><td><input name="AutPrincNom" type="text" size="40" maxlength="40"></td>
+    <td>&nbsp;</td>
+      <td>Last Name:</td>
+      <td><input name="CoAuteur1Nom" type="text" size="40" maxlength="40"></td>
+  </tr>
+  <tr>
+      <td>First name:</td>
+      <td><font color="#FF0000">*</font></td><td><input name="AutPrincPrenom" type="text" size="40" maxlength="40"></td>
+    <td>&nbsp;</td>
+      <td>First Name:</td>
+      <td><input name="CoAuteur1Prenom" type="text" size="40" maxlength="40"></td>
+  </tr>
+  <tr>
+      <td>E-mail:</td>
+      <td><font color="#FF0000">*</font></td><td><input name="AutPrincCourriel" type="text" size="40" maxlength="100"></td>
+    <td>&nbsp;</td>
+      <td>E-mail</td>
+      <td><input type="text" name="CoAuteur1Courriel" size="40" maxlength="100"></td>
+  </tr>
+  <tr>
+      <td>Institution or<br>
+        Company:</td>
+      <td>&nbsp;</td><td><input name="AutPrincCie" type="text" size="40" maxlength="100"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+      <td>Department:</td>
+      <td><!-- <font class="EtoileRouge">*</font> -->&nbsp;</td><td><input name="AutPrincDept" type="text" size="40" maxlength="100"></td>
+    <td>&nbsp;</td>
+      <td>Title:</td>
+      <td><input type="text" name="CoAuteur2Titre" size="4" maxlength="4"></td>
+  </tr>
+  <tr>
+      <td>Address:</td>
+      <td>&nbsp;</td><td>
+        <input name="AutPrincAdr" type="text" size="40" maxlength="40">
+       </td>
+    <td>&nbsp;</td>
+      <td>Last Name:</td>
+      <td><input type="text" name="CoAuteur2Nom" size="40" maxlength="40"></td>
+  </tr>
+  <tr>
+      <td>City:</td>
+      <td>&nbsp;</td><td>
+        <input name="AutPrincVille" type="text" size="40" maxlength="40">
+       </td>
+    <td>&nbsp;</td>
+      <td>First name:</td>
+      <td><input type="text" name="CoAuteur2Prenom" size="40" maxlength="40"></td>
+  </tr>
+  <tr>
+      <td>State/Province:</td>
+      <td>&nbsp;</td>
+      <td>
+        <input name="AutPrincProv" type="text" size="40" maxlength="40">
+      </td>
+    <td>&nbsp;</td>
+      <td>E-mail:</td>
+      <td><input type="text" name="CoAuteur2Courriel" size="40" maxlength="100"></td>
+  </tr>
+  <tr>
+      <td>Country:</td>
+      <td>&nbsp;</td><td>
+        <input name="AutPrincPays" type="text" size="40" maxlength="40">
+       </td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+      <td>Zip or Postal Code</td>
+      <td>&nbsp;</td>
+	  <td><input name="AutPrincZip" type="text" size="20" maxlength="20"></td>
+    <td>&nbsp;</td>
+      <td>Title:</td>
+      <td><input type="text" name="CoAuteur3Titre" size="4" maxlength="4"></td>
+  </tr>
+    <tr> 
+      <td>Tel:</td>
+      <td>&nbsp;</td>
+	  <td><input name="AutPrincTel" type="text" size="20" maxlength="20"></td>
+    <td>&nbsp;</td>
+      <td>Last Name:</td>
+      <td><input type="text" name="CoAuteur3Nom" size="40" maxlength="40"></td>
+  </tr>
+  <tr>
+    <td>Fax:</td>
+    <td>&nbsp;</td>
+	<td><input name="AutPrincFax" type="text" size="20" maxlength="20"></td>
+	  <td>&nbsp;</td>
+      <td>First name:</td>
+      <td><input type="text" name="CoAuteur3Prenom" size="40" maxlength="40"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+	    <td>&nbsp;</td>
+      <td>E-mail</td>
+      <td><input type="text" name="CoAuteur3Courriel" size="40" maxlength="100"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+	    <td>&nbsp;</td>
+  </tr>
+  <tr>
+      <td colspan="6"><B>Title of the presentation: </B>
+  <input name="Proposition" type="text" size="80" maxlength="120"></td></tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+	    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="6"><B>Abstract for the proposal</B> (10-20 lines)</td>
+
+  </tr>
+  <tr>
+    <td colspan="6"><textarea name="ResumeProposition" cols="80" rows="20"></textarea></td>
+
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+	    <td>&nbsp;</td>
+  </tr>
+  <tr>
+      <td colspan="6">Related website (if necessary):&nbsp; 
+      <input name="SiteWeb" type="text" size="70" maxlength="70"></td>
+
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+	    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="6">See the "<a href="http://aca2009.etsmtl.ca/format.html" TARGET="_top">Format</a>" page for a list of standard hardware and software available for presentations. For any other equipment, use the following field to indicate your requirements:</td>
+    
+  </tr>
+  <tr><td colspan="6"><textarea name="NoteSpeciale" cols="80" rows="5"></textarea></td></tr>
+    <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+	<td>&nbsp;</td>
+  </tr>
+  <tr><td colspan="6" align="center">
+<input name="Soumettre" type="button" onclick=validate() value="Submit">&nbsp;
+  
+  <input name="Effacer" type="reset" id="Effacer" value="Clear"></td></tr>
+  <tr><td colspan="6">For any technical questions, contact <B><A HREF="mailto:gilles.picard@etsmtl.ca?subject=ACA2009, technical questions">Gilles Picard</A></B>.</td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

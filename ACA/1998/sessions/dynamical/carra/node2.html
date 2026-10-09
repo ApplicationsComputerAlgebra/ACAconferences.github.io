@@ -1,0 +1,350 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differential Algebra Preliminaries</TITLE>
+<META NAME="description" CONTENT="Differential Algebra Preliminaries">
+<META NAME="keywords" CONTENT="carra">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="carra.css">
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="carra.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html32"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html30"
+ HREF="carra.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html24"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html33"
+ HREF="node3.html">Nonalgebraic Ordinary Differential Equations</A>
+<B> Up:</B> <A NAME="tex2html31"
+ HREF="carra.html">Systems of Nonlinear and</A>
+<B> Previous:</B> <A NAME="tex2html25"
+ HREF="node1.html">Introduction</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00020000000000000000">
+Differential Algebra Preliminaries</A>
+</H1>
+We assume that everything, which is undefined, is as in [<A
+ HREF="node9.html#RT1"><I>Ritt (1950</I></A>] and
+in [<A
+ HREF="node9.html#KO1"><I>Kolchin (1973)</I></A>].
+Let <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\delta$">
+be a derivation operator and let <I>R</I> be a differential 
+ring, i.e. a commutative ring with unit and a derivation <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\delta$">
+acting 
+on it, such that the field of rational numbers <IMG
+ WIDTH="23" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="${\bf Q}$">
+is contained in <I>R</I>.
+
+<P>
+A differential field <I>F</I> is a field, which is also a differential ring. 
+Let <I>C</I><SUB><I>R</I></SUB>={<IMG
+ WIDTH="55" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$a \in R$">:
+
+<!-- MATH: $\delta(a)=0$ -->
+<IMG
+ WIDTH="77" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\delta(a)=0$">} be the 
+ring of constants of <I>R</I> and let 
+<!-- MATH: ${\bf N}_{0}=\{0, 1, \ldots, n, \ldots\}$ -->
+<IMG
+ WIDTH="193" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="${\bf N}_{0}=\{0, 1, \ldots, n, \ldots\}$">.
+
+<P>
+<P>
+<DIV><B>REMARK  1</B> &nbsp; 
+
+<!-- MATH: ${\bf Q} \subseteq C_{R}$ -->
+<IMG
+ WIDTH="75" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="${\bf Q} \subseteq C_{R}$">
+because 
+<!-- MATH: ${\bf Q} \subseteq R$ -->
+<IMG
+ WIDTH="64" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="${\bf Q} \subseteq R$">.
+</DIV><P></P>
+
+<P>
+<P>
+<DIV><B>EXAMPLE  1</B> &nbsp; 
+<I>R</I>=
+<!-- MATH: $C^{\infty}({\bf R})$ -->
+<IMG
+ WIDTH="68" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$C^{\infty}({\bf R})$">,
+<I>R</I>=
+<!-- MATH: ${\bf Q}(t)$ -->
+<IMG
+ WIDTH="45" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="${\bf Q}(t)$">,
+<I>R</I>=
+<!-- MATH: ${\bf R}(t)$ -->
+<IMG
+ WIDTH="45" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="${\bf R}(t)$">
+and
+<I>R</I>=field of the meromorphic functions on a domain of <IMG
+ WIDTH="22" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img29.gif"
+ ALT="${\bf C}$">
+with
+the usual derivation <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\delta$">=
+<!-- MATH: $\frac{\partial}{\partial t}$ -->
+<IMG
+ WIDTH="23" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\frac{\partial}{\partial t}$">
+are
+differential rings.
+<I>R</I>=
+<!-- MATH: $C^{m}({\bf R})$ -->
+<IMG
+ WIDTH="66" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$C^{m}({\bf R})$">
+for all 
+<!-- MATH: $m \in {\bf N}_{0}$ -->
+<IMG
+ WIDTH="73" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$m\in {\bf N}_{0}$">
+is not a differential ring.</DIV><P></P>
+
+<P>
+If 
+<!-- MATH: $a \in {\bf N}_{0}$ -->
+<IMG
+ WIDTH="66" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$a \in {\bf N}_{0}$">,
+then <I>order</I> of 
+<!-- MATH: $\delta^{a}$ -->
+<IMG
+ WIDTH="24" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\delta^{a}$">
+is ord(
+<!-- MATH: $\delta^{a}$ -->
+<IMG
+ WIDTH="24" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\delta^{a}$">)=<I>a</I>.
+
+<P>
+<P>
+<DIV><B>DEFINITION  1</B> &nbsp; 
+<I>S</I>=
+<!-- MATH: $R\{ y_{1}, \ldots, y_{m} \}$ -->
+<IMG
+ WIDTH="125" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$R\{ y_{1}, \ldots, y_{m} \}$">=<I>R</I>[
+<!-- MATH: $\delta^{n}y_{i}$ -->
+<IMG
+ WIDTH="40" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.gif"
+ ALT="$\delta^{n}y_{i}$">:
+
+<!-- MATH: $i=1, \ldots, m$ -->
+<IMG
+ WIDTH="109" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$i=1, \ldots, m$">
+and 
+<!-- MATH: $n \in {\bf N}_{0}$ -->
+<IMG
+ WIDTH="67" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$n \in {\bf N}_{0}$">]
+is the
+differential ring of the differential polynomials in the differential
+indeterminates 
+<!-- MATH: $y_{1}, \ldots, y_{m}$ -->
+<IMG
+ WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.gif"
+ ALT="$y_{1}, \ldots, y_{m}$">
+with coefficients in the 
+differential ring <I>R</I>. </DIV><P></P>
+
+<P>
+If <IMG
+ WIDTH="55" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.gif"
+ ALT="$f \in S$">,
+then <I>order</I> of <I>f</I> is ord(<I>f</I>)=max{ 
+<!-- MATH: $n \in {\bf N}_{0}$ -->
+<IMG
+ WIDTH="67" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$n \in {\bf N}_{0}$">:
+<I>f</I> contains a power product in
+
+<!-- MATH: $y_{1},\ldots,y_{m},\delta y_{1},\ldots,\delta y_{m},\ldots,
+\delta^{n}y_{1},\ldots,\delta^{n}y_{m}$ -->
+<IMG
+ WIDTH="366" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$y_{1},\ldots,y_{m},\delta y_{1},\ldots,\delta y_{m},\ldots,
+\delta^{n}y_{1},\ldots,\delta^{n}y_{m}$">
+with
+nonzero coefficient }.
+
+<P>
+<P>
+<DIV><B>DEFINITION  2</B> &nbsp; 
+An ideal <I>I</I> of <I>S</I> is a differential ideal iff 
+
+<!-- MATH: $\delta^{n}(s) \in I$ -->
+<IMG
+ WIDTH="84" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$\delta^{n}(s) \in I$">
+for all 
+<!-- MATH: $n \in {\bf N}_{0}$ -->
+<IMG
+ WIDTH="67" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$n \in {\bf N}_{0}$">
+and all <IMG
+ WIDTH="50" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.gif"
+ ALT="$s \in I$">.
+If 
+<!-- MATH: $A \subseteq S$ -->
+<IMG
+ WIDTH="60" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$A \subseteq S$">,
+then [<I>A</I>]=( 
+<!-- MATH: $\delta^{n}(s)$ -->
+<IMG
+ WIDTH="49" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.gif"
+ ALT="$\delta^{n}(s)$">:
+<IMG
+ WIDTH="54" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.gif"
+ ALT="$s \in A$">,
+
+<!-- MATH: $n \in {\bf N}_{0}$ -->
+<IMG
+ WIDTH="67" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$n \in {\bf N}_{0}$">
+) denotes the smallest
+differential ideal containing <I>A</I>.</DIV><P></P>
+
+<P>
+Let <I>R</I> be a differential ring of functions in the independent variable <I>t</I>,
+let <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\delta$">=
+<!-- MATH: $\frac{\partial}{\partial t}$ -->
+<IMG
+ WIDTH="23" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\frac{\partial}{\partial t}$">
+and let <I>y</I>=<I>y</I>(<I>t</I>) be a differential
+indeterminate. <I>y</I><SUP>(<I>n</I>)</SUP>=
+<!-- MATH: $\delta^{n}y$ -->
+<IMG
+ WIDTH="35" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.gif"
+ ALT="$\delta^{n}y$">
+is the derivative of order <I>n</I> of <I>y</I>with respect to <I>t</I> for all positive integers <I>n</I>, while
+<I>y</I><SUP>(0)</SUP>=
+<!-- MATH: $\delta^{0}y$ -->
+<IMG
+ WIDTH="33" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.gif"
+ ALT="$\delta^{0}y$">=<I>y</I>.
+
+<P>
+So an ordinary algebraic differential equation in <I>m</I> dependent variables
+
+<!-- MATH: $y_{1}, \ldots, y_{m}$ -->
+<IMG
+ WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.gif"
+ ALT="$y_{1}, \ldots, y_{m}$">
+with coefficients in <I>R</I> is nothing else than 
+the equality <IMG
+ WIDTH="74" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.gif"
+ ALT="$\{ f=0 \}$">
+for some differential polynomial <I>f</I> in <I>S</I>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html32"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html30"
+ HREF="carra.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html24"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html33"
+ HREF="node3.html">Nonalgebraic Ordinary Differential Equations</A>
+<B> Up:</B> <A NAME="tex2html31"
+ HREF="carra.html">Systems of Nonlinear and</A>
+<B> Previous:</B> <A NAME="tex2html25"
+ HREF="node1.html">Introduction</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

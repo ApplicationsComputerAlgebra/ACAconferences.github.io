@@ -1,0 +1,953 @@
+\documentstyle{article}
+\topmargin -0.75in
+\headheight 0in
+\headsep 0in
+\oddsidemargin -0.75in
+\textheight 10.5in
+\textwidth 8in
+\parindent=0pt
+\pretolerance=9000
+\pagestyle{empty}
+\begin{document}
+\begin{small}
+%
+\begin{center}
+{\large Program for the 5th International IMACS Conference on Applications of Computer Algebra}
+\vskip .25in
+{\renewcommand{\arraystretch}{1.25}
+\doublerulesep=0.25pt
+\begin{tabular}{|r||l|l|l|l|l|}
+\hline
+\multicolumn{6}{|c|}{\bf June 25, 1999 (Friday)} \\
+\hline\hline\hline\hline\hline
+SESSION & \parbox[t]{1.3in}{
+{\sc Computer Algebra meets Education I} \\
+{\em Bernhard Kutzler} \\
+\centerline{\bf A}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Approximate Algebraic Computation: towards Symbolic-Numeric Algorithms} \\
+{\em Tateaki Sasaki Matu-Tarow Noda Bernard Mourrain \& Robert Corless} \\
+\centerline{\bf B}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Combinatorial and Computational Methods in Algebraic Geometry} \\
+{\em Jie-Tai Yu \& Vladimir Shpilrain} \\
+\centerline{\bf C}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Computer Algebra for Dynamical Systems and Mechanics I} \\
+{\em Victor Edneral Ilias Kotsireas \& Nikolay Vasiliev} \\
+\centerline{\bf D}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Applications of Computer Algebra to Signal Processing} \\
+{\em Jeremy Johnson \& Markus Pueschel} \\
+\centerline{\bf E}
+\vskip .025in}
+\\
+\hline\hline\hline\hline\hline
+9:00 am
+& \parbox[t]{1.3in}{
+Setting the Tone: CAS as pedagogical tools \\
+\em Bernhard Kutzler
+\vskip .025in}
+& \parbox[t]{1.3in}{
+New results on the Table Maker's Dilemma \\
+\em Jean-Michel Muller \& Vincent Lefevre*
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Explicit computations for polynomial maps \\
+\em Pierrette Casson-Nogus
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Computer Algebraic Approximations---Creation of Approximated Solutions of Scientific and Engineering Problems in Symbolic Form \\
+\em Victor Edneral
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Minimal Syzygies and Multidimensional Filter Design \\
+\em Hyungju Park
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{6-6}
+9:30 am
+& \parbox[t]{1.3in}{
+Basic Skills versus Technology---not a Contradiction but a Completion \\
+\em Josef Boehm
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Polynomial Algebra with Coefficients of Limited Accuracy \\
+\em Hans Stetter
+\vskip .025in}
+& \parbox[t]{1.3in}{
+The Parameterization Problem for Algebraic Surfaces \\
+\em Josef Schicho
+\vskip .025in}
+&
+& \parbox[t]{1.3in}{
+Group Representations and Automatic Derivation of Fast Signal Transforms \\
+\em Markus Pueschel
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+10:00 am
+& \parbox[t]{1.3in}{
+The Use of Mathematics Specific Technology in Capstone Mathematics Teacher Preparation Courses \\
+\em Gary A. Harris
+\vskip .025in}
+& \parbox[t]{1.3in}{
+A System of Automatic Algorithm Stabilization \\
+\em Hiroshi Sekigawa
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Computing subfields in pure trascendental extensions \\
+\em Jaime Gutierrez \& Rosario Rubio
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Solving the problem of stabilization of a gyroscopic system with the help of Computer Algebra \\
+\em A. V. Banshchikov, L. A. Bourlakova \& V. D. Irtegov
+\vskip .025in}
+& \parbox[t]{1.3in}{
+A Wreath Product Approach to Signal and Image Processing \\
+\em Dan Rockmore
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+10:30 am
+& \parbox[t]{1.3in}{
+Some Reflections About the Impact of Computer Algebra Systems in the Ordering of the Curricula of Mathematics \\
+\em Justo Cabezas \& Eugenio Roanes-Lozano*
+\vskip .025in}
+& \parbox[t]{1.3in}{
+To Be Announced \\
+\em Hiroshi Kai
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Again $x + x^2 y + z^2 + t^3$ = 0 \\
+\em Lenny Makar-Limanov
+\vskip .025in}
+& \parbox[t]{1.3in}{
+About investigation of systems with first integrals \\
+\em L. A. Bourlakova \& V. D. Irtegov
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Groebner Bases and Wavelet Design \\
+\em Ivan Selesnick
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+11:00 am & \multicolumn{5}{|c|}{\bf BREAK} \\
+\hline
+11:30 am
+& \parbox[t]{1.3in}{
+A Computer Classroom Lecture: Asymptotic Convergence of Rational Functions \\
+\em Bill Pletsch
+\vskip .025in}
+& \parbox[t]{1.3in}{
+To Be Announced \\
+\em Victor Y. Pan
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Invariants of algebraic varieties \\
+\em Vladimir Shpilrain
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Analytical Approach for Simplifying Dynamical Systems of Polynomial Type \\
+\em J. Palacián \& P.  Yanguas
+\vskip .025in}
+& \parbox[t]{1.3in}{
+To Be Announced \\
+\em Jean-Charles Faugere \& Fabrice Rouillier
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+12:00 pm
+& \parbox[t]{1.3in}{
+Exam questions when using CAS for school mathematics teaching \\
+\em Vlasta Kokol-Voljc
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Mechanism of Cancellation Errors in Multivariate Hensel Construction with Floating-point Numbers \\
+\em Tateaki Sasaki
+\vskip .025in}
+&
+& \parbox[t]{1.3in}{
+Communications of the Poisson Series Processors PSPC with General Scientific Software \\
+\em A. Abad, A. Gavin \& J. F. San-Juan
+\vskip .025in}
+& \parbox[t]{1.3in}{
+To Be Announced \\
+\em Jeremy Johnson
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+12:30 pm
+& \parbox[t]{1.3in}{
+Using the TI-92Plus:  Examples \\
+\em Michel Beaudin
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Exacts predicates for arrangement of arcs of circle \\
+\em A. Fronville
+\vskip .025in}
+&
+& \parbox[t]{1.3in}{
+Parallelisation of Perturbation Analysis: the method of Multiple Scales applied to vibration problems \\
+\em Raya Khanin \& Matthew Cartmell
+\vskip .025in}
+&
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+1:00 pm
+& \parbox[t]{1.3in}{
+Why use CAS with TI89 in mathematical education? Classrooms experiments. \\
+\em Bengt Ahlander
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Approximate p-adic GCD computation \\
+\em D. Rupprecht
+\vskip .025in}
+&
+& \parbox[t]{1.3in}{
+Some computational experiments in Celestial Mechanics \\
+\em Jean-Charles Faugere
+\vskip .025in}
+&
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+1:30 pm & \multicolumn{5}{|c|}{\bf LUNCH} \\
+\hline\hline\hline\hline\hline
+\end{tabular} }
+%
+{\renewcommand{\arraystretch}{1.25}
+\doublerulesep=0.25pt
+\begin{tabular}{|r||l|l|l|l|l|}
+\hline
+\multicolumn{6}{|c|}{\bf June 25, 1999 (Friday)} \\
+\hline\hline\hline\hline\hline
+SESSION & \parbox[t]{1.3in}{
+{\sc Computer Algebra meets Education I} \\
+{\em Bernhard Kutzler} \\
+\centerline{\bf A}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Approximate Algebraic Computation: towards Symbolic-Numeric Algorithms} \\
+{\em Tateaki Sasaki Matu-Tarow Noda Bernard Mourrain \& Robert Corless} \\
+\centerline{\bf B}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Toric Ideals and Integer Programming} \\
+{\em Lorenzo Robbiano} \\
+\centerline{\bf C}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Computer Algebra for Dynamical Systems and Mechanics I} \\
+{\em Victor Edneral Ilias Kotsireas \& Nikolay Vasiliev} \\
+\centerline{\bf D}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Computer Algebra in the Spanish Educational System} \\
+{\em Lola Rodriguez} \\
+\centerline{\bf E}
+\vskip .025in}
+\\
+\hline\hline\hline\hline\hline
+3:30 pm
+& \parbox[t]{1.3in}{
+Using Logo as a Scaffolding to Develop Algebraic Thinking in a Virtual Classroom \\
+\em Garry Clark* \& Edward Redden
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Towards numerical stability in normal form algorithms \\
+\em B. Mourrain
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Computing Toric Ideals \\
+\em Lorenzo Robbiano
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Some remarks on differential Hilbert polynomials in two variables \\
+\em G. Carra Ferro
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Aparicion de nuevos contenidos curriculares en matematicas mediante la aplicacion de nuevas tecnologias \\
+\em Justo Cabezas Corchero
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{5-5}\cline{6-6}
+4:00 pm
+& \parbox[t]{1.3in}{
+Discovery Experiences in Synthetic Geometry with DERIVE \\
+\em Miguel de Guzman
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Hybrid Rational Function Approximation and its Applications \\
+\em Matu T. Noda
+\vskip .025in}
+&
+& \parbox[t]{1.3in}{
+Extended Characteristic Sets of Finitely Generated Differential Ideals \\
+\em G. Carra Ferro \& Vladimir Gerdt
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Las herramientas euclideas y el ordenador \\
+\em Tomas Recio
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+4:30 pm
+& \parbox[t]{1.3in}{
+About how to implement Geometric Transformations on a CAS \\
+\em E. Roanes-Macias \& E. Roanes-Lozano*
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Approximate polynomial decomposition \\
+\em M. Giesbrecht
+\vskip .025in}
+& \parbox[t]{1.3in}{
+New algorithms for Computing Toric Ideals \\
+\em Anna Bigatti
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Enumeration of intersections of Newton's polyhedrons \\
+\em Alexander Aranson
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Matematicas en Pantalla \\
+\em Rafael Perez Gomez \& Miguel Posadas
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+5:00 pm & \multicolumn{5}{|c|}{\bf BREAK} \\
+\hline
+5:30 pm
+& \parbox[t]{1.3in}{
+A number-based approach to introductory algebra: A study with 11-12 year olds using graphic calculators \\
+\em Tenoch E. Cedillo A.
+\vskip .025in}
+& \parbox[t]{1.3in}{
+On approximate ideals \\
+\em B. Trager or P. Gianni
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Decomposing Graver Test Sets in Stochastic Programming \\
+\em Raymond Hemmecke
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Symbolic Computation of Formal Solutions for 2 and 3 Dimensional  Dynamical Systems \\
+\em G. Eichenmueller
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Diferentes opciones para la resolucion de problemas con calculadoras graficas \\
+\em Agustin Carrillo
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+6:00 pm
+& \parbox[t]{1.3in}{
+Instrumentation processes underlying the use of TI92 at high school level \\
+\em Badr Defouad
+\vskip .025in}
+&
+& \parbox[t]{1.3in}{
+Initial Ideals of Toric Ideals and Group Relaxations in Integer Programming \\
+\em Serkan Hosten
+\vskip .025in}
+& \parbox[t]{1.3in}{
+A new classification of planar homogeneous quadratic systems \\
+\em Driss Boularas
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Cambios curriculares en la ense\~nanza del Algebra \\
+\em Lola Rodriguez Soalleiro
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+6:30 pm
+& \parbox[t]{1.3in}{
+A didactical laboratory: image filtering \\
+\em A. Cavallone*, C. D'Apice*, M. Marsella \& S. Salerno
+\vskip .025in}
+&
+&
+& \parbox[t]{1.3in}{
+Computation of Normal Forms of Hamiltonian Systems in the Presence of Poisson Commuting integrals (Liouville-Integrability and Birkhoff Normal Forms) \\
+\em J. Mikram \& F. Zinoun
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Busqueda automatica de lugares geometricos \\
+\em Eugenio Roanes Macias \& Eugenio Roanes Lozano
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+\end{tabular} }
+\end{center}
+\clearpage
+%
+\begin{center}
+{\large Program for the 5th International IMACS Conference on Applications of Computer Algebra}
+\vskip .25in
+{\renewcommand{\arraystretch}{1.25}
+\doublerulesep=0.25pt
+\begin{tabular}{|r||l|l|l|l|l|}
+\hline
+\multicolumn{6}{|c|}{\bf June 26, 1999 (Saturday)} \\
+\hline\hline\hline\hline\hline
+SESSION & \parbox[t]{1.3in}{
+{\sc Computer Algebra meets Education II} \\
+{\em Bernhard Kutzler} \\
+\centerline{\bf A}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Computer Aided Geometric Design and Computer Algebra} \\
+{\em L. Gonzalez-Vega \& J. R. Sendra} \\
+\centerline{\bf B}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Symbolic-Numeric Interface and Problem Solving Environments} \\
+{\em Richard Liska Stanly Steinberg \& Robert van Engelen} \\
+\centerline{\bf C}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Computer Algebra for Dynamical Systems and Mechanics II} \\
+{\em Victor Edneral Ilias Kotsireas \& Nikolay Vasiliev} \\
+\centerline{\bf D}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Computations in Pure Mathematics (Algebra, Analysis, Geometry, ...)} \\
+{\em Maria-Emilia Alonso Francisco Castro \& Laureano Gonzalez-Vega} \\
+\centerline{\bf E}
+\vskip .025in}
+\\
+\hline\hline\hline\hline\hline
+9:00 am
+& \parbox[t]{1.3in}{
+A Tutorial Mathematical System for Elementary Schools \\
+\em Frank Postel* \& Ralf Hillebrand
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Missing points and branches of real parametric curves \\
+\em Tomas Recio
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Finite Difference Numerical Modelling Supported by Computer Algebra \\
+\em Richard Liska
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Some properties of the symplectic Lie algebra \\
+\em Rodney Coleman
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Steenrod reduced powers and computability \\
+\em Rocio Gonzalez-Diaz \& Pedro Real
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{5-5}\cline{6-6}
+9:30 am
+& \parbox[t]{1.3in}{
+High-Powered Technology in a Low-Level Mathematics Course \\
+\em Jim Schultz
+\vskip .025in}
+&
+&
+& \parbox[t]{1.3in}{
+Computational aspects of the N-body problem \\
+\em Ilias Kotsireas
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Analyzing the transference of the coalgebra structure on the homology of CDGAs \\
+\em M. J. Jimenez, P. Real \& B. Silva
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+10:00 am
+& \parbox[t]{1.3in}{
+A Scheme for Conservative Use of Computer Algebra \\
+\em Rein Prank
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Applying general-purpose symbolic and numerical computation programs for Computer Graphics and CAGD. Some applications to industry \\
+\em Andres Iglesias \& Akemi Galvez
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Ctadel: A Computer Algebra System for  the Generation of Efficient Numerical Codes for PDEs \\
+\em Robert van Engelen
+\vskip .025in}
+& \parbox[t]{1.3in}{
+The study by symbolic computation of the sign of the riemannian curvature in the configuration space of the 3-body problem and applications \\
+\em B. Elmabsout \& M. Barbosu
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Homology of semidirect product of groups \\
+\em V. Alvarez, J. A. Armario \& P. Real
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+10:30 am
+& \parbox[t]{1.3in}{
+Mathematica and didactical innovation: a quadric use case \\
+\em G. Albano*, A. Cavallone, C. D'Apice* \& G. Gargiulo
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Proper Parametrization of Real Algebraic Surfaces \\
+\em Josef Schicho
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Invariant Variational Principles and Associated Numerical Schemes for Regularization of Ill-Posed Problems \\
+\em Ravi Venkatesan
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Oscillators in Resonance \\
+\em Antonio Elipe \& André Deprit
+\vskip .025in}
+& \parbox[t]{1.3in}{
+The use of Mathematica for the classification of some nilpotent Lie algebras \\
+\em L. M. Camacho, J. R. Gomez \& R. M. Navarro
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+11:00 am & \multicolumn{5}{|c|}{\bf BREAK} \\
+\hline
+11:30 am
+& \parbox[t]{1.3in}{
+Computer Aided Instruction for Business Calculus in an International Liberal Arts College \\
+\em A. Kehagias \& P. N. Vlachos*
+\vskip .025in}
+& \parbox[t]{1.3in}{
+An algorithm for approximate conversion of rational B-spline curves/surfaces to integral B-spline curves/surfaces and its implementation \\
+\em Jesus Espinola, Laureano Gonzalez-Vega \& Ioana Necula
+\vskip .025in}
+& \parbox[t]{1.3in}{
+A Symbolic Numeric Environment for  Analyzing Measurement Data in Multi-Model Settings \\
+\em Christoph Richard \& Andreas Weber*
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Construction of Invariants of Simplectic Mapping \\
+\em Nikolay Vasiliev
+\vskip .025in}
+& \parbox[t]{1.3in}{
+New ways of defining filiform Lie algebras \\
+\em J. C. Benjumea, F. J. Echarte, D. Fernandez, M. C. Marquez, J.  Nu\~nez \& F. Ramirez
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+12:00 pm
+& \parbox[t]{1.3in}{
+Flexible Mathematical GUI Controls for Mathematical Electronical Documents \\
+\em Ralf Hillebrand* \& Frank Postel
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Groebner Bases and Statistics \\
+\em Lorenzo Robbiano
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Group Invariant Finite-Difference Schemes for Advection Equation \\
+\em Ravi C. Venkatesan
+\vskip .025in}
+&
+& \parbox[t]{1.3in}{
+About an algorithm of T. Oaku \\
+\em Maribel Hartillo
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{4-4}\cline{5-5}\cline{6-6}
+12:30 pm
+& \parbox[t]{1.3in}{
+Mathematica in Undergraduate Mathematics Courses---A Teaching or Learning Aid? \\
+\em May C. Abboud
+\vskip .025in}
+&
+& \parbox[t]{1.3in}{
+Usefulness of computer algebra methods  in numerical simulations \\
+\em Michel Fournie
+\vskip .025in}
+&
+& \parbox[t]{1.3in}{
+Slopes in submodules of a free module \\
+\em Jose Maria Ucha
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+1:00 pm
+& \parbox[t]{1.3in}{
+Searching roots for three degree polynomials with the help of Mathematica \\
+\em Marilo Lopez Gonzalez \& Javier Rodrigo Hitos*
+\vskip .025in}
+&
+& \parbox[t]{1.3in}{
+Prototyping Symbolic-Numeric Algorithms  using Naglink \\
+\em Brian J. Dupee* \& James H. Davenport
+\vskip .025in}
+&
+& \parbox[t]{1.3in}{
+Computing Toric First Syzygies \\
+\em P. Pison-Casares \& A. Vigneron-Tenorio
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+1:30 pm & \multicolumn{5}{|c|}{\bf LUNCH} \\
+\hline\hline\hline\hline\hline
+\end{tabular} }
+%
+{\renewcommand{\arraystretch}{1.25}
+\doublerulesep=0.25pt
+\begin{tabular}{|r||l|l|l|l|l|}
+\hline
+\multicolumn{6}{|c|}{\bf June 26, 1999 (Saturday)} \\
+\hline\hline\hline\hline\hline
+SESSION & \parbox[t]{1.3in}{
+{\sc Computer Algebra meets Education II} \\
+{\em Bernhard Kutzler} \\
+\centerline{\bf A}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Demos of Computer Algebra Systems} \\
+{\em Michael Wester \& Winfried Neun} \\
+\centerline{\bf B}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Symbolic-Numeric Interface and Problem Solving Environments} \\
+{\em Richard Liska Stanly Steinberg \& Robert van Engelen} \\
+\centerline{\bf C}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Applications of Computer Algebra to Robotics} \\
+{\em Peter Kovacs} \\
+\centerline{\bf D}
+\vskip .025in}
+& \parbox[t]{1.3in}{
+{\sc Computations in Pure Mathematics (Algebra, Analysis, Geometry, ...)} \\
+{\em Maria-Emilia Alonso Francisco Castro \& Laureano Gonzalez-Vega} \\
+\centerline{\bf E}
+\vskip .025in}
+\\
+\hline\hline\hline\hline\hline
+3:30 pm
+& \parbox[t]{1.3in}{
+Derivations and Visualizations for the Hydrogen Atom \\
+\em Joseph D. Myers*, Kelley B. Mohrmann \& Terry T. Crow
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Some Noteworthy Issues \\
+\em Michael Wester
+\vskip .025in}
+& \parbox[t]{1.3in}{
+A symbolic-numerical package for linear stability analysis of numerical methods for ODEs \\
+\em Massimo Cafaro \& Beatrice Paternoster*
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Forward kinematics of parallel robots \\
+\em Jean-Pierre Merlet
+\vskip .025in}
+& \parbox[t]{1.3in}{
+The ideal generation conjecture for s general rational curves \\
+\em F. Orecchia
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+4:00 pm
+& \parbox[t]{1.3in}{
+CONVODE: A Reduce package for solving differential equations \\
+\em Alain Moussiaux
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Solving a RLC Circuit using Convolution with DERIVE for Windows \\
+\em Michel Beaudin
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Extraction of Low Order Boolean Rules from Trained Neural Networks using a Computer Algebra System \\
+\em Terence Etchells
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Using Computer algebra tools for off-line studies of parallel manipulators \\
+\em Jean-Charles Faugere, Luc Rolland \& Fabrice Rouillier*
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Basic Algorithms for Specialization in Groebner Bases \\
+\em A. Montes
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+4:30 pm
+& \parbox[t]{1.3in}{
+Exploring sequences with DERIVE \\
+\em Paolo Boieri
+\vskip .025in}
+& \parbox[t]{1.3in}{
+The Computer Algebra System CoCoA \\
+\em Lorenzo Robbiano
+\vskip .025in}
+& \parbox[t]{1.3in}{
+. \\
+\em  
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Self-Motions of Griffis-Duffy Type Parallel Manipulators \\
+\em Manfred Husty \& Adolf Karger
+\vskip .025in}
+& \parbox[t]{1.3in}{
+The Generation of Polya Polynomials using Macsyma, with Applications \\
+\em Bill Pletsch
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+5:00 pm & \multicolumn{5}{|c|}{\bf BREAK} \\
+\hline
+SESSION & \parbox[t]{1.3in}{
+{\sc Teaching of Efficient Mathematics} \\
+{\em A. Akritas \& Gennadi Malaschonok} \
+\vskip .01in}
+& & \parbox[t]{1.3in}{
+{\sc Interaction on Physics, Number Theory \& Computer Science I} \\
+{\em Hoang Ngoc Minh} \
+\vskip .01in}
+& & \\
+\cline{1-1}\cline{2-2}\cline{4-4}
+5:30 pm
+& \parbox[t]{1.3in}{
+A project of Computer Aided Learning: A course of Computer Algebra in the web \\
+\em Rafael J. Villanueva Mico \& A. Hervas
+\vskip .025in}
+& \parbox[t]{1.3in}{
+The REDLOG Package---Tools and Applications \\
+\em Volker Weispfenning
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Colored multiple zeta values relations table \\
+\em M. Bigotte
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Functional Ideal Decomposition---a  Tool for Kinematics \\
+\em Peter Kovacs
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Duality in Effective Algebraic Geometry \\
+\em Bernard Mourrain
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+6:00 pm
+& \parbox[t]{1.3in}{
+A study of particular methods for the approximate construction of some regular polygons by using Mathematica 3.0 \\
+\em Juan A. Aledo, Juan C. Cortes \& Fernando L. Pelayo
+\vskip .025in}
+& \parbox[t]{1.3in}{
+MuPAD---An Open Computer Algebra System and its Approach of Software Integration \\
+\em Ralf Hillebrand \& Frank Postel
+\vskip .025in}
+& \parbox[t]{1.3in}{
+Nested Sums and Iterated Integrals \\
+\em D. Bradley
+\vskip .025in}
+&
+& \parbox[t]{1.3in}{
+A Fast Computation of Hook Schur Functions \\
+\em F. Gaeta
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+6:30 pm
+&
+& \parbox[t]{1.3in}{
+Computer Algebra Applied to Mathematical Cartography \\
+\em Carlos Enriguez Turi\~no
+\vskip .025in}
+&
+&
+&
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}\cline{6-6}
+\hline\hline\hline\hline\hline
+evening & \multicolumn{5}{|c|}{7:00pm - 8:00pm: Business Session in A} \\
+\hline\hline\hline\hline\hline
+\end{tabular} }
+\end{center}
+\clearpage
+%
+\begin{center}
+{\large Program for the 5th International IMACS Conference on Applications of Computer Algebra}
+\vskip .25in
+{\renewcommand{\arraystretch}{1.25}
+\doublerulesep=0.25pt
+\begin{tabular}{|r||l|l|l|l|}
+\hline
+\multicolumn{5}{|c|}{\bf June 27, 1999 (Sunday)} \\
+\hline\hline\hline\hline\hline
+SESSION & \parbox[t]{1.625in}{
+{\sc Teaching of Efficient Mathematics} \\
+{\em A. Akritas \& Gennadi Malaschonok} \\
+\centerline{\bf A}
+\vskip .025in}
+& \parbox[t]{1.625in}{
+{\sc Mathematics on the Internet} \\
+{\em Angel Diaz \& Erich Kaltofen} \\
+\centerline{\bf B}
+\vskip .025in}
+& \parbox[t]{1.625in}{
+{\sc Applications of Quantifier Elimination} \\
+{\em Volker Weispfenning \& Hoon Hong} \\
+\centerline{\bf C}
+\vskip .025in}
+& \parbox[t]{1.625in}{
+{\sc Interaction on Physics, Number Theory \& Computer Science II} \\
+{\em Hoang Ngoc Minh} \\
+\centerline{\bf D}
+\vskip .025in}
+\\
+\hline\hline\hline\hline\hline
+9:00 am
+& \parbox[t]{1.625in}{
+A comparative study between two general methods for the approximate construction of regular polygons by using Mathematica 3.0 \\
+\em Juan A. Aledo, Juan C. Cortes \& Fernando L. Pelayo
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Interfacing Proof Checkers With OpenMath \\
+\em Olga Caprotti
+\vskip .025in}
+& \parbox[t]{1.625in}{
+A Robust Control System Design by a Special Quantifier Elimination Method using a Sturm-Habicht Sequence \\
+\em Hirokazu Anai \& Shinji Hara
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Functional Equations on Polylogarithms with Axiom \\
+\em Hoang Ngoc Minh
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}
+9:30 am
+& \parbox[t]{1.625in}{
+Possibilities for Alternative Uses of the "Calculus and Mathematica" Approach \\
+\em Alkiviadis Akritas, Stelios Kapranidis \& Athina Katalifou
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Plug and Play Mathematical Components \\
+\em Mike Dewar
+\vskip .025in}
+& \parbox[t]{1.625in}{
+A Special Quantifier Elimination Algorithm for Pham Systems \\
+\em Laureano Gonzalez-Vega \& Neila Gonzalez-Campos
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Algebraic Structures on the Set of Multiple Zeta Values \\
+\em Mike Hoffman
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}
+10:00 am
+& \parbox[t]{1.625in}{
+Classical Mathematics with Mathematica \\
+\em Alkiviadis Akritas \& Zamir Bavel
+\vskip .025in}
+& \parbox[t]{1.625in}{
+To Be Announced \\
+\em Angel L. Diaz
+\vskip .025in}
+& \parbox[t]{1.625in}{
+A new solution of the quartic problem: with application to integration \\
+\em David J. Jeffrey
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Computer aided Knot Theory using Mathematica and MathLink \\
+\em N. Imafuji
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}
+10:30 am
+& \parbox[t]{1.625in}{
+Calculus  and the Race Track Principle \\
+\em Alkiviadis Akritas \& Zamir Bavel
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Mathematics on the Web---Past, Present and Future \\
+\em Dave Raggett
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Reach Set Computation for Linear Vector Fields using Quantifier Elimination \\
+\em Gerardo Lafferriere, George J. Pappas \& Sergio Yovine
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Combinatorics on Algebraic Identification \\
+\em G. Jacob
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}
+11:00 am & \multicolumn{4}{|c|}{\bf BREAK} \\
+\hline
+11:30 am
+& \parbox[t]{1.625in}{
+Some elementary mathematics revisited and revised \\
+\em David J. Jeffrey
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Unicode Encoding of Mathematics \\
+\em Murray Sargent
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Quantifier Elimination for Trigonometric Polynomials by Cylindrical Trigonometric Decomposition \\
+\em Petru Pau \& Josef Schicho
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Computational Construction of representation matrices for parallel version polynomial invariants \\
+\em M. Ochiai
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}
+12:00 pm
+& \parbox[t]{1.625in}{
+Teaching Error-Correcting Codes, Discrete Mathematics and Modern Algebra with Computer Algebra \\
+\em Igor Gachkov \& Kenneth Hulth
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Stylesheets for Mathematical Web Pages \\
+\em Stephen Watt
+\vskip .025in}
+& \parbox[t]{1.625in}{
+The Study of Stability using Computer Algebra \\
+\em Stanly Steinberg
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Computational Decomposition of homeomorphisms into canonical Dehn's twists \\
+\em Y. Sakata
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{5-5}
+12:30 pm
+& \parbox[t]{1.625in}{
+Teaching of efficient mathematics \\
+\em Gennadi Malaschonok \& Natalia Malaschonok
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Accessing Quantifier Elimination Packages Over the Internet  Out of General Purpose Systems \\
+\em Andreas Weber
+\vskip .025in}
+&
+& \parbox[t]{1.625in}{
+On l-adic iterated integral \\
+\em Z. Wojtkowiak
+\vskip .025in}
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}
+1:00 pm
+& \parbox[t]{1.625in}{
+Efficient methods of mathematical analysis \\
+\em Gennadi Malaschonok
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Concluding Discussion of the Issues Addressed in the Talks  (Moderator with Audience Participation) \\
+\em Erich Kaltofen
+\vskip .025in}
+& \parbox[t]{1.625in}{
+Semilinear motion planning in REDLOG \\
+\em Volker Weispfenning
+\vskip .025in}
+&
+\\
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}
+1:30 pm & \multicolumn{4}{|c|}{\bf LUNCH} \\
+\hline\hline\hline\hline\hline
+\end{tabular} }
+\end{center}
+\clearpage
+%
+\end{small}
+\end{document}

@@ -1,0 +1,47 @@
+Title of the talk: An Topology-Independent Accelerated Time Simulation
+                   of Passengers' Flux in Airport Terminals
+
+Authors:           Eugenio Roanes-Lozano (1), Eugenio Roanes-Macias (1),
+                   Luis M. Laita (2)
+
+Affiliation:       (1) Dept. Algebra, Universidad Complutense de Madrid,
+                       Spain
+                   (2) Dept. Artificial Intelligence, Universidad
+                       Politecnica de Madrid, Spain
+
+Abstract:
+
+The authors were commissioned to develop this work by the airport authority of
+one of the main Spanish airports.  It should be able to simulate in advance the
+different possible designs of the new terminal, now in project, with a
+``accelerated time simulation''.  This package, currently under development,
+will consider departures, arrivals and luggage managing.
+
+For instance, regarding departures, it considers the input flux, given by
+``arrival curves''.  Passengers are assigned a ``check-in time'', according to
+the characteristics of the passengers (class) and of the flight:
+  - airline
+  - company that takes care of the check-in
+  - kind of flight (regular/charter)
+  - size of plane (A,B,C,D,E)
+  - type of destination (domestic, Schengen-country, others).
+They are also distributed in the different desks (to check-in) according to the
+previous data.  Then they have to pass through security controls and (possibly)
+customs controls (each with variable time assigning) before reaching the gates
+(at different distances and therefore times).
+
+As a resume, it is a program that manages ``weighted'' queues using lists.  The
+situation in the model is updated minute by minute.  Unlike other general
+commercial scheduling packages, it emphasizes the detailed data of each
+passenger, instead of the presentation of the results.
+
+The program can show:
+  - Detailed numerical data about any queue in the terminal at any minute
+  - Representations in curves, animations... of the evolution of any queue
+  - Maximum, media... of waiting time at any queue and of length of any queue
+  - ...
+Therefore it enables both to test different designs of the topology of the
+terminal and to manage problems like check-in desk assigning.
+
+The program, to be developed in a very tight schedule is being implemented in
+Maple.

@@ -1,0 +1,237 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA 1996</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Quantifier Elimination</H1>
+
+<strong>Organizers</strong><br>
+<A HREF="http://www.risc.uni-linz.ac.at/people/hhong">H. Hong</A>,
+R. Liska,
+<A HREF="http://math.unm.edu/~stanly/">S. Steinberg</A>
+
+<p>
+
+<strong>Description</strong><br>
+
+Recently, quantifier elimination algorithms have seen many applications,
+and there have been new development in quantifier elimination algorithms
+for special classes of problems.
+
+<p>
+<strong>Titles</strong>
+<OL>
+<LI><A HREF="#global"Global projection operators for the
+		Cylindrical Algebraic Decomposition algorithm<br></A>
+<LI><A HREF="#truth">
+	Simple Solution Formula Construction from Truth Invariant CADs<br></A>
+<LI><A HREF="#redlog">
+        REDLOG -- Computer Algebra Meets Computer Logic<br></A>
+<LI><A HREF="#approximate">
+	Approximate Quantifier Elimination</A>
+<LI><A HREF="#scheduling">
+        Quantifier Elimination Applied in Simulation and Scheduling<br></A>
+<LI><A HREF="#control">
+	Some Applications of Quantifier Elimination in Nonlinear
+		Control Theory<br></A>
+<LI><A HREF="#strong">
+	On the Determination of the Strong Stabilizability
+	of an n-Dimensional Linear System<br></A>
+<LI><A HREF="#bcs">
+       The Stability of Boundary Conditions<br></A>
+<LI><A HREF="#overview">
+	Discussion and Comments by the Organizers and Participants</A>
+</OL>
+
+<strong>Speakers</strong>
+<PRE>
+   1. Christopher W. Brown         cbrown@jade.risc.uni-linz.ac.at
+   2. George Collins               George.Collins@risc.uni-linz.ac.at
+   3. Emma-Neila Gonzalez-Campos   gcampos@matsun1.unican.es
+   4. Andreas Dolzmann             Andreas.Dolzmann@fmi.uni-passau.de
+   5. Hoon Hong                    hhong@risc.uni-linz.ac.at
+   6. Mats Jirstrand               matsj@isy.liu.se
+   7. Ying Jiangqian               ying@ikd.info.gifu-u.ac.jp
+   8. Richard Liska                liska@siduri.fjfi.cvut.cz
+   9. Andreas Neubacher            aneubach@risc.uni-linz.ac.at
+  10. Stanly Steinberg             stanly@math.unm.edu
+  11. Thomas Sturm                 sturm@fmi.uni-passau.de
+  12. Lalo Gonzales Vega           gvega@matsun1.unican.es
+  13. Volker Weispfenning          weispfen@alice.fmi.uni-passau.de
+</PRE>
+
+<strong>Talks</strong>
+
+<ul>
+  <li> <A NAME="redlog">
+        REDLOG -- Computer Algebra Meets Computer Logic<br>
+        Andreas Dolzmann and Thomas Sturm<br>
+       <em>Abstract</A></em>
+REDLOG is a package that extends the computer algebra system
+reduce to a  computer logic system, i.e., a system that
+provides algorithms for the symbolic manipulation of first-order
+formulas over some temporarily fixed language and theory. In contrast
+to theorem provers, the methods applied know about the underlying
+algebraic theory and make use of it. Though the focus is on
+simplification, parametric linear optimization, and quantifier
+elimination,  REDLOG is designed as a general-purpose system. It
+has been applied successfully for solving non-academic problems,
+mainly for the simulation of networks. We describe the functionality
+of REDLOG as it appears to the user, and explain the design
+issues and implementation techniques.
+<p>
+</ul>
+
+<ul>
+  <li> <A NAME="scheduling">
+	Quantifier Elimination Applied in Simulation and Scheduling<br>
+	Volker Weispfenning<br>
+       <em><A HREF="Volker.PS">Abstract</A></em>
+<p>
+</ul>
+
+<ul>
+  <li> <A NAME="control">
+	Global projection operators for the Cylindrical
+		Algebraic Decomposition algorithm <br>
+	<A HREF="http://matsun1.unican.es/CAG/people/gcampos">
+	Emma-Neila Gonzalez-Campos</A> and
+	<A HREF="http://matsun1.unican.es/CAG/people/gvega">
+	Laureano Gonzalez-Vega</A><br>
+       <em>Abstract:</em>
+The projection phase in the CAD algorithm proceeds by eliminating one
+variable on a given set of polynomials X via the computation of the
+principal subresultant coefficients of a well precised set of polynomials
+pairs on X (including their derivatives and their reductums). Since the
+size, at least in number, of this new set of polynomials is usually very
+big, any improvement in the projection phase would convey to dramatically
+speed up the efficiency of the CAD algorithm.
+
+The purpose of this talk is to present two approaches allowing, in some
+cases, to simplify the projection phase in the CAD algorithm:
+<br>
+ -. The first one tries to avoid the consideration of all the different pairs
+    of polynomials and their reductums by parametrizing the rank of a well
+    precised matrix with polynomial entries.
+<br>
+ -. The second one tries to perform an improved projection phase through the
+    elimination of blocks of variables instead of the usual one by one
+    variable elimination.
+<br>
+The theoretical tools to be used include Barnett's Theorem characterizing
+the degree of the gcd of a finite set of polynomials through the rank of a
+well-precised matrix and the parametrization of Hermite's Method for
+counting the number of real solutions of a polynomial system of equations.
+<p>
+</ul>
+
+<ul>
+  <li> <A NAME="truth">
+	Simple Solution Formula Construction from Truth Invariant CADs<br>
+	Chris Brown and George Collins<br>
+       <em><A HREF="Collins.PS">Abstract</A></em>
+<p>
+</ul>
+
+<ul>
+  <li> <A NAME="control">
+	Some Applications of Quantifier Elimination in Nonlinear
+		Control Theory<br>
+	<A HREF="http://www.control.isy.liu.se/~matsj">
+		Mats Jirstrand</A><br>
+       <em>Abstract:</em>
+Many problems in control theory can be formulated as formulas in the first
+order theory of real closed fields. In this talk we investigate some of the
+expressive power of this theory. We consider dynamical systems described by
+polynomial differential equations subjected to constraints on control and
+system variables and show how to formulate questions in the above framework
+which can be answered by quantifier elimination. The treated problems regards
+stationarity, stability, and tracking of a polynomially parameterized curve.
+The software package QEPCAD has been used to perform quantifier elimination
+in a number of examples.
+<p>
+</ul>
+
+<ul>
+  <li> <A NAME="strong">
+	On the Determination of the Strong Stabilizability
+	of an n-Dimensional Linear System<br>
+	Ying Jiangqian<br>
+                Dept. Electronics and Computer Engineering<br>
+                Gifu University, Yanagido, Gifu, 501, Japan<br>
+       <EM>Abstract:</EM>
+An n-dimensional linear system described by a rational transfer function is
+stable by definition if the function is free from 0 on the n-D polydisc in the
+complex space. A system is said to be strongly stabilizable if there exists a
+stable compensator that makes the system stable. A topological condition was
+recently derived by Shiva Shankar[1] to determine whether a system can can be
+strongly stabilized or not. In this talk we show that in certain restricted
+case this topological condition can be reduced to a geometrical one and can be
+solved based the cylindrical algebraic decomposition of complex algebraic
+variety.<br>
+
+[1] Shiva Shankar, An Obstruction to the Simultaneous Stabilization
+of Two n-D plants, Acta Applicandae Mathematicae 36:289-301,1994
+<p>
+</ul>
+
+<ul>
+  <li> <A NAME="overview">
+       Approximate Quantifier Elimination<br>
+       H. Hong and  A. Neubacher<br>
+       <em>Abstract</em>
+To be supplied.
+<p>
+</ul>
+
+<ul>
+  <li> <A NAME="bcs">
+       The Stability of Boundary Conditions<br>
+       R. Liska and S. Steinberg<br>
+       <em>Abstract:</em>
+The question of whether boundary conditions in an initial-boundary value
+problem for a partial differential equation or for a finite-difference
+equation are <EM>stable</EM> or not can be reduced to a quantifier elimination
+problem with many equalities. This talk will show how to do the reduction
+and explore some techniques for solving such problems.
+<p>
+Such stability problems are critical part of developing stable boundary
+conditions for higher-order discretizations of partial differential equations.
+<p>
+</ul>
+
+<ul>
+  <li> <A NAME="overview">
+       Discussion and Comments by the Organizers and Participants <br>
+       H. Hong,  R. Liska,  S. Steinberg<br>
+       <EM>Abstract:</EM>
+The organizers will make some summary comments and then begin a discussion
+session.
+<p>
+</ul>
+
+
+<P><img src="http://math.unm.edu/ACA/1996/line-risc.gif"
+align=middle alt="________________________________________________________"> <P>
+
+<A HREF="http://math.unm.edu/ACA/1996/program-plan.html"><img src="http://math.unm.edu/ACA/1996/up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="http://math.unm.edu/ACA/1996/risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="http://math.unm.edu/ACA/1996/swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="http://math.unm.edu/ACA/1996/burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="http://math.unm.edu/ACA/1996/austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

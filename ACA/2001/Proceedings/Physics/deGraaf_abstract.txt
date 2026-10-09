@@ -1,0 +1,7 @@
+Constructing highest-weight modules of quantized enveloping algebras
+
+Willem de Graaf (Univ. Utrecht, The Netherlands)
+
+In this talk I will sketch an algorithm for computing with PBW-type bases in
+quantized enveloping algebras.  This leads to an algorithm for constructing
+highest-weight modules, and corresponding R-matrices.

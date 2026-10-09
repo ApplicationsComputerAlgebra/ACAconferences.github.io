@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <link href="styles/master.css" type="text/css" rel="stylesheet" media="all"/>
+   <title>ACA 2008 Applications of Computer Algebra</title>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tbody>
+      <tr>
+        <td class="headerLeft"><a href="/"><img src="./_images/header/schloss21s.jpg" /></a></td>
+        <td width="20px"></td>
+        <td>
+        <table width="100%">
+        <tbody>
+        <tr><td class="headerTitle">Applications of Computer Algebra</td></tr>
+        <tr><td class="headerSub"><a href="/">RISC, Castle of Hagenberg, Austria.</a></td></tr>
+        <tr><td class="headerSub">July 27-30, 2008.</td></tr>
+      	</tbody>
+      	</table>
+        </td>
+      </tr>
+   </tbody>
+ </table>
+
+
+
+<table cellspacing="0" cellpadding="0" width="100%" class="infobar">
+	<tbody><tr><td height=20px>
+	<marquee scrollamount="2" scrolldelay="1" behavior=slide loop=1>
+	<b><a href="?content=pictures">NEWS: ACA 2008 is over, pictures are available ... </a></b>
+	</marquee>
+</td></tr></tbody></table>
+
+
+<div class="class1">
+	
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspace">
+<tbody>
+<tr>
+<td>
+	
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+
+<td style="width:12px;"></td>          
+<td class="unselected">
+	<div><a href="?content=news">News</a></div>
+</td>
+<td class="selected">
+	<div>General</div>
+</td>	
+
+<td class="unselected">
+	<div><a href="?content=sessions">Sessions</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=submission">Submission</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=registration">Registration</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=program">Program</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=pictures">Pictures</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=location">Location</a></div>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspaceSub">
+<tbody>
+<tr>
+<td>
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+<td style='width:150px;'></td>
+<td class="unselectedSub">
+	<a href="?content=general&amp;sub=scope">Scope</a>
+</td>
+<td class="unselectedSub">
+	<a href="?content=general&amp;sub=dates">Dates</a>
+</td>
+<td class="selectedSub">
+	Committees</td>	
+
+<td class="unselectedSub">
+	<a href="?content=general&amp;sub=related">Related</a>
+</td>
+
+</tr>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table><div id="content">
+<div id="column">
+<table class="class2" cellspacing="0" cellpadding="0" style="padding-top:5px">
+<tbody>
+<tr>
+<td class="leftColumn">
+<img width="200" src="_images/photos/2006-09-22_14-19-20.jpg" alt="Castle-sky"/>
+<img width="200" style="padding-top:7px;" src="_images/photos/castle-fishview.jpg" alt="Castle-fishview"/>
+<img width="200" style="padding-top:7px;" src="_images/photos/2006-09-22_14-10-55.jpg" alt="Castle"/>
+
+</td>
+<td class="centerColumnGen">
+
+
+
+<h4>Conference Coordination</h4>
+<ul>
+<li><a href="http://www.risc.uni-linz.ac.at/people/buchberg">Bruno Buchberger</a></li>
+</ul>
+
+<h4>Conference Chairs</h4><a name="chairs"></a>
+<ul>
+<li><a href="http://compalg.jinr.ru/CAGroup/Gerdt/">Vladimir Gerdt</a> (<a href="mailto:gerdt@jinr.ru">email</a>)</li>
+<li><a href="http://www.risc.uni-linz.ac.at/people/wwindste">Wolfgang Windsteiger</a> (<a href="mailto:Wolfgang.Windsteiger@risc.uni-linz.ac.at">email</a>)</li>
+</ul>
+
+<h4>Local Organization</h4><a name="local"></a>
+<ul>
+<li>Local Chair: Betina Curtis (<a href="mailto:betina.curtis@isi-hagenberg.at">email</a>)</li>
+<li>Webmaster: Alexander Zapletal (<a href="mailto:Alexander.Zapletal@risc.uni-linz.ac.at">email</a>)</li></ul>
+
+
+<h4>ACA Board</h4><a name="board"></a>
+
+<UL>
+<LI><A HREF="mailto:akritas@uth.gr">Alkiviadis Akritas</A></LI>
+<LI><A HREF="mailto:michel.beaudin@etsmtl.ca">Michel Beaudin</A></LI>
+<LI><A HREF="mailto:Bruno.Buchberger@risc.uni-linz.ac.at">Bruno Buchberger</A></LI>
+<LI><A HREF="mailto:calmet@ira.uka.de">Jacques Calmet</A></LI>
+<LI><A HREF="mailto:edneral@theory.sinp.msu.ru">Victor Edneral</A></LI>
+
+<LI><A HREF="mailto:ganzha@in.tum.de">Victor Ganzha</A></LI>
+<LI><A HREF="mailto:gerdt@jinr.ru">Vladimir Gerdt</A></LI>
+<LI><A HREF="mailto:mwg@uwaterloo.ca">Mark Giesbrecht </A></LI>
+<LI><A HREF="mailto:hong@math.ncsu.edu">Hoon Hong</A></LI>
+<LI><A HREF="mailto:djeffrey@uwo.ca">David Jeffrey</A></LI>
+<LI><A HREF="mailto:kaltofen@math.ncsu.edu">Erich Kaltofen</A></LI>
+<LI><A HREF="mailto:ikotsire@wlu.ca">Ilias Kotsireas</A></LI>
+<LI><A HREF="mailto:b.kutzler@aon.at">Bernhard Kutzler</A></LI>
+<LI><A HREF="mailto:liska@siduri.fjfi.cvut.cz">Richard Liska</A></LI>
+
+<LI><A HREF="mailto:noda@cite.ehime-u.ac.jp">Matu-Tarow Noda</A></LI>
+<LI><A HREF="mailto:bpletsch@cnm.edu">Bill Pletsch</A></LI>
+<LI><A HREF="mailto:eroanes@mat.ucm.es">Eugenio Roanes-Lozano</A> (Chair)</LI>
+<LI><A HREF="mailto:sasaki@math.tsukuba.ac.jp">Tateaki Sasaki</A></LI>
+<LI><A HREF="mailto:ysato@rs.kagu.tus.ac.jp">Yosuke Sato</A></LI>
+<LI><A HREF="mailto:shaska@oakland.edu">Tony Shaska</A></LI>
+<LI><A HREF="mailto:mspirid@math.bas.bg">Margarita Spiridonova</A></LI>
+<LI><A HREF="mailto:stanly@wendouree.org">Stanly Steinberg</A></LI>
+
+<LI><A HREF="mailto:aszanto@ncsu.edu">Agnes Szanto</A></LI>
+<LI><A HREF="mailto:quoc-nam.tran@rice.edu">Quoc-Nam Tran</A></LI>
+<LI><A HREF="mailto:vasiliev@pdmi.ras.ru">Nikolay Vasiliev</A></LI>
+<LI><A HREF="mailto:watt@uwo.ca">Stephen Watt</A></LI>
+<LI><A HREF="mailto:wester@math.unm.edu">Michael Wester</A></LI>
+</UL>
+The Applications of Computer Algebra Working Group (ACAWG) is responsible for
+organizing the Applications of Computer Algebra (ACA) activities.  In
+particular, the ACAWG will choose the place for future ACA meetings and will
+review all scientific activities at the ACA meetings.
+
+</td>
+<td class="rightColumnGen">
+<img width="135" src="_images/photos/schloss01.JPG" alt="Castle"/>
+<img width="135" style="padding-top:7px;" src="_images/photos/schloss31.jpg" alt="Schloss"/>
+</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+
+</body>
+</html>

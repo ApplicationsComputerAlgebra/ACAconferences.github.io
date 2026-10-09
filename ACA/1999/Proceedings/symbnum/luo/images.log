@@ -1,0 +1,51 @@
+This is TeX, Version 3.14159 (Web2c 7.0) (format=cslatex.ini 97.10.23)  8 APR 1999 17:22
+**./images.tex
+(./images.tex
+LaTeX2e <1996/12/01> patch level 1
+Loading CZ hyphenation patterns: Pavel Sevecek, v3, 1995
+Loading SK hyphenation patterns: Jana Chlebikova, 1992
+(/usr/local/texmf/tex/latex/input/article.cls
+Document Class: article 1996/10/31 v1.3u Standard LaTeX document class
+(/usr/local/texmf/tex/latex/input/size12.clo
+File: size12.clo 1996/10/31 v1.3u Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/local/texmf/tex/latex/site-latex/texinputs/ldump.sty
+Package: ldump 1997/10/02 v1.3 LaTeX environment dumps
+) (/usr/local/texmf/tex/latex/site-latex/from_tetex-0.4pl8/cite/cite.sty
+Package: cite 1996/05/23  v 3.6
+)
+
+! LaTeX Error: File `equation.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.7 \input
+          {epsf.tex}^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 248 strings out of 10788
+ 2583 string characters out of 71521
+ 47036 words of memory out of 263001
+ 3341 multiletter control sequences out of 10000+0
+ 3938 words of font info for 15 fonts, out of 100000 for 500
+ 19 hyphenation exceptions out of 1000
+ 22i,0n,21p,132b,40s stack positions out of 300i,100n,500p,3000b,4000s
+No pages of output.

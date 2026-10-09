@@ -1,0 +1,27 @@
+Obtaining Automatically Railway Maps from a Set of Historical Events
+
+Eugenio Roanes-Lozano
+Angelica Martinez-Zarzuelo
+Alberto Garcia Alvarez
+Michael J. Wester
+Eugenio Roanes-Macias
+
+We have developed what, as far as we know, is a real novelty: a computer
+package that can automatically generate railway maps of a certain network at
+any (past) date requested.  It uses different colors to show the kind of line
+and uses as input: (i) a set of historical events, (ii) the graph of the
+railway network at its maximum extension and (iii) a list of geographical
+coordinates of stations, junctions, loading bays... (that are the nodes of the
+graph).  The package firstly processes the set of historical events (affecting
+whole lines or parts of lines), and assigns a list of dates to each edge of the
+graph.  Then, when a date is given to the system, it computes the right
+coloring for each edge at that given date and constructs and plots an accurate
+map of the railway network at that given date according to the geographic
+coordinates of the nodes of the graph.  This piece of software can be really
+useful for geographers, historians and engineers.  What is normally available
+are maps of certain dates, and they don't always use the same scale, the same
+level of detail, the same symbols and colors... or are restricted to a certain
+railway company.  The research has been carried out in cooperation with the
+``Spanish Railway Foundation''.  The data of the Spanish broad gauge railway
+network at a region of Spain (Extremadura) has already been typed as
+illustration.

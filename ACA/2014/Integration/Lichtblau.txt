@@ -1,0 +1,9 @@
+The Hazards of Symbolic Definite Integration (a Continuing Saga)
+
+Daniel Lichtblau <danl@wolfram.com>
+
+This talk is an update to ongoing work to improve symbolic definite
+integration.  Various sticky points we will cover include convergence testing,
+checking a path for singularities, and more.  In the event that we reach
+infinity during this talk I will provide a guided tour of the things that can
+go wrong there, and possibly also a light snack.

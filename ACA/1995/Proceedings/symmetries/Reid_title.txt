@@ -1,0 +1,4 @@
+Algorithmic Determination of the Cartan Structure of Infinite Lie Symmetry
+Groups of PDE's
+
+Greg Reid

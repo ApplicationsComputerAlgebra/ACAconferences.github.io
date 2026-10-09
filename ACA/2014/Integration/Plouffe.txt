@@ -1,0 +1,23 @@
+Simon Plouffe
+
+I present the Inverter 2014, a large set of mathematical tables aimed at
+finding what a number is made of.  There are 3 large sets.  The first one is a
+table of real numbers at 64 digits of precision and with 10.4 billion entries
+all categorized into 26 types.
+
+That large database is accompanied with a super-sized version of the OEIS
+(On-Line Encyclopedia of Integer Sequences) with 105 billion entries.  The 3rd
+set is the first 100 billion zeros of the Zeta function.  I will present the
+standard tools such as the plouffe_inverter program which uses, GFUN (a maple
+package for generating functions) and about 8000 lines of code using the
+so-called PSLQ program, generalized expansions of real numbers and such.
+
+I will also present a new tool that uses specialized filters to do some data
+mining in search of coincidences among numbers.  This tool is flexible and fast
+enough to measure a distance, a notion of closeness with numbers.  For example,
+using the recurrence Z(n+1) -> Z(n)^2 + c, and starting with a rational complex
+number will usually lead to a simple algebraic number.  The filters can detect
+that kind of pattern easily.
+
+The last tool that will be presented (if times permit) uses properties of the
+human eye to see patterns.  Some examples will be presented.

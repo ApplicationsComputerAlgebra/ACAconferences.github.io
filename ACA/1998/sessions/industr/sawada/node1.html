@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction</TITLE>
+<META NAME="description" CONTENT="Introduction">
+<META NAME="keywords" CONTENT="sawada">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sawada.css">
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="sawada.html">
+<LINK REL="up" HREF="sawada.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html35"
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html33"
+ HREF="sawada.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html27"
+ HREF="sawada.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html36"
+ HREF="node2.html">Algebraic under constraint solver</A>
+<B> Up:</B> <A NAME="tex2html34"
+ HREF="sawada.html">The Algebraic Under Constraint</A>
+<B> Previous:</B> <A NAME="tex2html28"
+ HREF="sawada.html">The Algebraic Under Constraint</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00010000000000000000">&#160;</A>
+<A NAME="sec:introduction">&#160;</A>
+<BR>
+Introduction
+</H1>
+It is well known that a design problem can be regarded as a constraint satisfaction problem. Usually, it is formulated as an under constrained problem.
+
+<P>
+In general, constraints are classified into two groups: one is a group of constraints which can decrease the number of unknown variables, the other is a group of constraints which cannot. For example, an equation belongs to the former group and an inequality belongs to the latter. Usually, when the number of unknown variables is equal to that of constraints of the former group, solutions are uniquely determined, then, the obtained solutions are evaluated by using the constraints of the latter group. An under constrained problem is defined as a problem in which solutions cannot be uniquely obtained because there are not enough constraints which can decrease the number of unknown variables. 
+
+<P>
+Conventionally, a constraint which cannot decrease the number of unknown variables is not used until all the variables are assigned concrete values. In the case of an under constrained problem, those concrete values are often determined by trial and error. That is, by assigning some concrete value to some variable based on human designer's intuition or experience, unknown variables are decreased one by one, then all the variables are finally assigned concrete values. Such a method, however, has an intrinsic defect. There are possibilities of looking over existing solutions and wasting time to search a solution which does not actually exist in the case that any solution cannot be allowed by the constraints which cannot decrease the number of unknown variables. 
+
+<P>
+For the purpose of supporting a designer to solve a design problem, this paper proposes new methods which overcome the difficulty in under constraint problem solving by making use of constraints which cannot decrease the number of unknown variables, and realizes them as an algebraic under constraint solver. Section&nbsp;<A HREF="node2.html#sec:solver">2</A> describes facilities, architecture and algorithms of the algebraic under constraint solver. Then, in Section&nbsp;<A HREF="node10.html#sec:example">3</A>, examples of its application to design problems are shown. In this paper, it is assumed that all the constraints are given in an algebraic form. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html35"
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html33"
+ HREF="sawada.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html27"
+ HREF="sawada.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html36"
+ HREF="node2.html">Algebraic under constraint solver</A>
+<B> Up:</B> <A NAME="tex2html34"
+ HREF="sawada.html">The Algebraic Under Constraint</A>
+<B> Previous:</B> <A NAME="tex2html28"
+ HREF="sawada.html">The Algebraic Under Constraint</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

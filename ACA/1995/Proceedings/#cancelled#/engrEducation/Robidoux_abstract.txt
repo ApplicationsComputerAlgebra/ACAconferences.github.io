@@ -1,0 +1,16 @@
+Session: Engineering education
+
+Title: Computer Algebra and Interpolation: a Lesson Plan
+
+Abstract:
+
+Polynomial interpolation and related numerical analysis questions can
+be used to take users of computer algebra systems from issuing
+one-liners to writing more complex programs. An alternate use of the
+outlined lessons is to introduce students to interpolation and
+acquaint them with splines and numerical differentiation. Constructive
+symbolic derivations of formulas for polynomial interpolants are
+presented. Numerical differentiation formulas can easily be derived
+from them. The examples and assignments can be done using any general
+purpose symbolic manipulator. Solution codes using the computer
+algebra system AXIOM will be outlined.

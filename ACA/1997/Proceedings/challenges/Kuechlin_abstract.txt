@@ -1,0 +1,28 @@
+----------------------------------------------------------------------------
+                    Grand Challenges in Computer Algebra
+----------------------------------------------------------------------------
+
+                Parallel Symbolic Computation on the Desk-Top
+
+     The efficient parallelization of common software still poses a
+     considerable challenge in Computer Science. Symbolic software is
+     particularly demanding with highly data-dependent and irregular
+     parallel loads. However, parallelism may be the only area which offers
+     much needed hardware support to symbolic computation, such as 10--100
+     times larger memories and greater processing power. Software which can
+     effectively utilize modern parallel and networked workstations will be
+     significantly faster in everyday use. In this talk we give an overview
+     of the parallel system environment and some parallel algorithms in the
+     PARSAC Computer Algebra library. In particular we cover shared memory
+     multi-threading, high-level distributed memory computation and parallel
+     Gröbner Basis completion techniques.
+
+     Wolfgang Küchlin
+     Universität Tübingen, Germany
+     kuechlin@informatik.uni-tuebingen.de
+
+Back to the session homepage
+
+----------------------------------------------------------------------------
+Last update: May 29, 1997
+----------------------------------------------------------------------------

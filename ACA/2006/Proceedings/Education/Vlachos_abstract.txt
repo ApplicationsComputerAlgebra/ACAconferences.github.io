@@ -1,0 +1,27 @@
+The Interaction of Computer Algebra Systems and Course Management Systems in
+Teaching Business Calculus at the American College of Thessaloniki
+
+Panos Vlachos, Ph.D Chair, Division of Technology & Science,
+American College of Thessaloniki
+
+Emmanuel Maou, Associate Professor,  Division of Technology & Science,
+American College of Thessaloniki
+
+
+In this talk we present the advantages of the joint use of computer algebra
+systems and course management systems in teaching Business Calculus at the
+American College of Thessaloniki.  This is part of a project funded by the
+Andrew Mellon foundation whose aim is to implement these technologies in the
+educational process.
+
+The talk presents our classroom experience and focuses on:
+
+The use of the Computer Algebra system (MathCAD) in applying the Harvard
+Calculus Reform approach.
+
+The use of the Course Management System (Blackboard) in the organization of the
+course, the delivery of instructional material, student formal assessment and
+student's self-assessment.
+
+The integration of the two technologies to improve student learning and mastery
+of the course material.

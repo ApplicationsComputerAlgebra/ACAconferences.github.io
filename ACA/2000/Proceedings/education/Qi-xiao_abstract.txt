@@ -1,0 +1,19 @@
+Ye Qi-xiao* (China), wuye@email.msn.com 
+
+Using Math Software Packages and Mathematical Contest in Modelling (MCM) in
+China
+
+In early 1980s, a few professors began to involve in the research of math
+software packages,such as MuMath, DERIVE etc, and to introduce to some
+universities and research institutions.  Since 1989 some university teachers
+and students began to use math software packages for their participating in the
+US Mathematical Contest in Modeling.  We organized three workshops for learning
+and testing Mathematica from 1990 to 1992.  In 1996 we organized a big
+conference focused on learning Mathematica, Maple, Matlab etc, there were more
+than 180 participants from about more than 100 universities and colleges.  Now,
+more than 6,000 students from about 460 universities and colleges participate
+in our own MCM, so at these institutions we have teachers they know these math
+software packages quite well and can teach students to use them.  Some
+universities now offer a course "Mathematical Experimentation", in that course
+students mainly use Matlab, Mathematica and Maple to do a variety of
+experiments.  Some universities hav

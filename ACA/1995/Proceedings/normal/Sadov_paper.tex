@@ -1,0 +1,572 @@
+%Keywords: Systems of ordinary differential equations, normal form,
+%singular point, satellite motion.
+
+\documentstyle[12pt]{article}
+\title{Computation of coefficients of the normal form
+     in a singular case}
+\author{SADOV, Sergey Yu.\\
+{\it Institute of Applied Mathematics,
+Moscow, Russia }
+}
+\date{}
+\def\eps{\varepsilon}
+\def\oM{\mathop{\bf M}\nolimits}
+\def\oL{\mathop{\bf L}\nolimits}
+\def\gp{\gamma_+}   \def\gm{\gamma_-}  \def\gpm{\gamma_{\pm}}
+\def\dst{\displaystyle}
+\newtheorem{prp}{Proposition}
+\renewcommand{\theprp}{}
+\newtheorem{cnj}{Conjecture}
+\renewcommand{\thecnj}{}
+\newtheorem{tm}{Theorem}
+%
+\begin{document}
+\maketitle
+
+\noindent
+{\bf Keywords:} Systems of ordinary differential equations, normal form,
+singular point, satellite motion.
+
+\noindent
+{\bf 1.\quad} Consider a  system of ordinary differential equations
+\begin{equation}
+\label{sys}
+\frac{dX}{dt}= \eps F(X,t), \quad X=(x_1,\dots,x_n),
+\end{equation}
+where $\eps$ is a small parameter, and the
+vector-function $F=(f_1,\dots,f_n)$
+is analytic in $X$ in some region $\cal O$
+and $2\pi$-periodic in $t$.
+Its normal form is an autonomous system
+\begin{equation}
+\label{nf}
+\dot Y =\sum_{k=1}^{\infty}\eps^k G_{k}(Y) \equiv G(Y,\eps).
+\end{equation}
+Variables $X$ in (\ref{sys}) and $Y$ in (\ref{nf})
+are connected by the normalizing trans\-for\-mation
+\begin{equation}
+\label{ntr}
+X=Y+\sum_{k=1}^{\infty} \eps^k H_{k}(Y,t).
+\end{equation}
+The vector-functions $H_k(Y,t)$ and $G_k(Y)$
+are analytic in $Y\in\cal O$, but the series in
+(\ref{nf}) and (\ref{ntr}) diverge, as a rule.
+The functions $H_k$ are $2\pi$-periodic in $t$.
+
+A computation of the coefficients $H_k$ and $G_k$
+represents the well-known recurrent procedure of averaging.
+For example,
+$$%\begin{equation}
+%\label{Hs}
+\begin{array}{ll}
+G_1=\oM[F],& H_1=\oL[F],\\[0.5ex]
+\dst G_2=\oM\left[\frac{\partial F}{\partial Y}\cdot H_1 -
+            \frac{\partial H_1}{\partial Y}\cdot G_1\right],\quad
+&\dst H_2=\oL[\,\mbox{the same}\,],
+\end{array}
+$$%\end{equation}
+where the operators $\oM$ and $\oL$ are given by
+\begin{eqnarray}
+\label{oM}
+&& \oM\,[f]\,= f_0\,=\frac{1}{2\pi}\,\int\limits_{-\pi}^{\pi}\,f(t)\,dt\\
+\label{oL}
+&& (\oL\,[f]\,)(t)=\sum\limits_{j\neq 0}\, \frac{f_j}{ij}\exp(ijt)
+\end{eqnarray}
+for a $2\pi$-periodic function
+$$
+f(t)=\sum\limits_{j=-\infty}^{\infty}\, f_j\exp(ijt).
+$$
+Hence, a numerical computation of the normal form coefficients
+amounts to recursive quadratures.
+
+\bigskip
+\noindent{\bf 2.\quad}
+We consider a system of the form (\ref{sys}) depending
+on an additional parameter $e$. We have $n=2$ and
+right-hand sides in (\ref{sys})
+\begin{equation}
+\label{rhs}
+f_1(X,t)=x_2,\qquad
+f_2(X,t)=-\left(\frac{1+e\cos\nu(t,e)}{1-e^2}\right)^3\,
+\sin(mt-2\nu(t,e)+x_1),
+\end{equation}
+where $\nu(\cdot,e)$ is the inverse function
+for
+$$%\begin{equation}
+%\label{tthrunu}
+t(\nu,e)=(1-e^2)^{3/2}\,\int\limits_{0}^{\nu}\,(1
++e\cos\nu)^{-2}\,d\nu.
+$$%\end{equation}
+
+The system under consideration arises from
+the equation
+\begin{equation}
+\label{sput}
+(1+e\cos\nu)\frac{d^2\delta}{d\nu^2}-2e\,\sin\nu\frac{d\delta
+}{d\nu} + \mu\,sin\delta=4e\,\sin\nu
+\end{equation}
+that describes
+a satellite motion about its center of mass in the
+plane of its elliptic orbit \cite{bel}.
+Here  $e$ is the orbit's
+eccentricity, $\mu$ the inertial parameter
+which is small for the satellite being
+almost dynamically symmetric. The independent
+variable $\nu$ is the so called true anomaly,
+and the dependent variable $\delta$
+represents the doubled angle of the satellite's
+rotation with respect to the radius-vector.
+
+The system (\ref{sys}), (\ref{rhs}) follows
+>from (\ref{sput}) by the change of variables
+\cite{ch}
+$$
+\mu=\eps^2,\qquad\nu=\nu(t,e),\qquad
+\delta=mt-2\nu+x_1, \qquad x_2=\eps^{-1}\,dx_1/dt,
+$$
+$m$ being an auxiliary integer parameter.
+
+A numerical study of the equation (\ref{sput})
+for $e$ close to $1$
+is very difficult (see, e.g. \cite{sar}),
+because the equation is singular at the point
+    $e=1$, $\nu=\pi$.
+Also the straight computation
+of the normal form coefficients meets with a
+precision loss because of singularities
+of the integrands. We propose a regularization
+of the computational procedure. For
+the coefficients, which are bounded as $e\to 1$,
+it enables us to compute them numerically without
+the precision loss, and for the unbounded
+coefficients it gives their asymptotics.
+
+Our method is
+based on integrating by a path in the complex plane and
+factorizing integrands into functions
+with close but diverse poles. Apart from the poles
+we have a regular expression, which one can calculate
+numerically.
+
+It is convenient to use a parameter
+$$
+\eta=\sqrt{1-e^2}
+$$
+instead of (or together with) $e$ as $e$ close to one.
+
+\bigskip\noindent{\bf 3.\quad}
+Before further discussions, we introduce some notations.
+
+\noindent (a).
+We define functions $\gpm(t;\,e,m)$  by
+\begin{equation}
+\label{gpm}
+\gpm(t;\,e,m)=
+     \eta^{-6}(1+e\cos\,\nu(t,e))^3) \,
+     \exp\left\{\pm i(mt-2\nu(t,e))\right\}.
+\end{equation}
+
+\noindent
+(b) Let $\{a_{\pm},\dots,z_{\pm}\}$ be
+two sets of nonnegative integer indices,
+one of them possible empty.
+Let $\,\tilde{\gamma}(t,e,m)\,$ be the product
+of functions
+$\,\oL^{a_+}\gp\dots\oL^{z_+}\gp\,$ and
+$\,\oL^{a_-}\gm\dots\oL^{z_-}\gm$
+(with the operator $\oL$ defined by (\ref{oL})).
+We set
+\begin{equation}
+\label{Xi}
+\Xi^{a_+,\dots, z_+}_{a_-,\dots, z_-}(e,m) = \oM(\tilde{\gamma}).
+\end{equation}
+For example, $\oM\gp=\Xi^0,\;\;\oM\gm=\Xi_0$.
+%
+\begin{prp}
+The expressions {\rm(\ref{Xi})} with the even sum
+of indices
+are invariant under the permutation of the lower and upper
+sets of indices.
+\end{prp}
+%
+Formulas for some coefficients $G_j$
+of the normal form (\ref{nf}) in our case
+are written out in \cite[Ch.~V]{Bru}.
+It appears that
+$$%\begin{equation}
+%\label{nfsp}
+G(y_1,y_2,\eps,e,m)\,=\, (\eps y_2,\;\eps \sin y_1
+\sum_j \eps^j p_j(y_1;e,m)+
+y_2 q(y_1,y_2,\eps,e,m) )^{\dag},
+$$%\end{equation}
+and $p_{2l+1}\equiv0$.
+Formulas from \cite{Bru} for the first
+three nonzero $p_k\,$'s take
+the following form in our notations.
+\begin{tm} We have
+$$%\begin{equation}
+\begin{array}{l}
+p_0=-\Xi_0 =-\Xi^0,               \\
+p_2=-\Xi_{1,1}\cdot\cos y_1 \,=\,-\Xi^{1,1}\cdot\cos y_1, \\[0.3ex]
+\dst
+p_4=-\frac14 \Xi_{1,1}^2+
+     \left(\frac38-\frac32\cos^2 y_1\right)\Xi_{2,2}^0
+     +\Xi_0\cdot\left(-\frac54 \Xi_2^2+
+    \left(\frac{11}8-3\cos^2 y_1\right)\Xi_{2,2}\right).
+\end{array}
+$$%\end{equation}
+\end{tm}
+%
+We introduce a complex variable
+$$
+\zeta=\frac{\exp(i\nu)+\zeta_-}{1+\zeta_-\exp(i\nu)}
+     =\frac{1+\zeta_+\exp(i\nu)}{\exp(i\nu)+\zeta_+},
+$$
+where
+$$
+\zeta_-=\frac{1-\eta}{e},\qquad
+\zeta_+=\frac{1+\eta}{e}=1/\zeta_-.
+$$
+%
+Functions (\ref{gpm}) have the explicit expressions
+in terms of $\zeta$:
+$$
+\gpm(\zeta,e,m)=\left(\frac{2\zeta}{1\mp\eta}\right)^{3}
+     (\zeta-\zeta_{\pm})^{-5}(1-\zeta_{\pm}\zeta)^{-1}
+     \zeta^{\pm m}\exp\left\{\pm\frac{em}{2}(\zeta^{-1}-
+     \zeta)\right\}.
+$$
+Now we replace the integration over $[-\pi,\pi]$ in (\ref{Xi})
+by the integration over the unit circle $|\zeta|=1$
+with the weight function
+$$\rho(\zeta,e)=\frac{dt}{d\zeta}=\frac{e(\zeta-
+     \zeta_-)(\zeta-\zeta_+)}{2i\zeta^2}.
+$$
+
+Analytic functions
+$\rho\gp$ and  $\oL^k\gp$    ($k\geq1$) have no
+singularities outside the unit circle, and
+the functions $\rho\gm$ and $\oL^k\gm$ ($k\geq1$)
+are regular inside the unit circle except of
+the point $\zeta=0$.
+This fact allows us to
+compute the expressions $Xi_{\dots}$ (or $Xi^{\dots}$)
+as integrals over circles not close to
+the singular  points   of   integrands   $\zeta=\zeta_+$   (or
+$\zeta=\zeta_-$).
+% in the r.h.s of (\ref{Xi}).
+A Turbo-Pascal program  (see Appendix) is designed for
+computing $p_0(m,e)$ and $p_1(m,e)$.
+This program gives results that are compatible with analytical
+asymptotics (e.g. (\ref{Phim}) below);
+on the other hand, the old numerical results
+by Lutze and Abbit \cite{lutze}
+proved to be incorrect as $m\leq3$ and
+$e\ge0.8$.
+
+For $\Xi\,$'s with both upper and lower indices
+the above regularization failes
+because the original path of integration
+lies between the singular points $\zeta_+$
+and $\zeta_-$ of an integrand, and one
+cannot move it aside these points without
+crusial change of the value of the integral.
+However, in this case we can explicitly
+write out singular terms of the integrands.
+The formula (\ref{c3}) below is derived in
+this way.
+
+So, we formulate the main analytical results.
+\begin{tm}
+{\rm (a)} For a fixed integer $m$ and $e\to1$ the
+functions
+$\,\Xi_{0}(e,m)$, $\Xi_{1,1}(e,m)$, $\Xi_{2,2}^{0}(e,m)$,
+$\Xi_2^2(e,m)\,$ and $\,\Xi_{2,2}^{0}(e,m)\, $ have
+finite limits, and the asymptotics\- of the function
+$\,\Xi_{1,1}^{2}\,$ as $e\to 1$ is the following:
+\begin{equation}
+\label{c3}
+\Xi_{1,1}^2(e,m)=\frac{1}{162}\eta^{-3}-\frac{7}{54}\eta^{-1}-
+\frac{32}{9}m\ln^2\eta+O(\ln\eta).
+\end{equation}
+{\rm (b)} The limit value of  $\Xi_0(e,m)$ is
+\begin{equation}
+\label{Phim}
+\Xi_0(1,m)=\frac{m}{3}\left(
+-1+J_0(m)+\int_0^m
+J_0(x)\,dx-2\sum_{k=0}^{m-1}J_k(m)-J_{m-1}(m)\right),
+\end{equation}
+$J_k$ being the Bessel functions. In particular,
+$
+\;\Xi_0(1,2)=-1.018863\dots\,.
+$
+\end{tm}
+
+It is interesting that for $m=0$ one can obtain
+expressions for the quantities $\Xi$ in terms
+of elementary functions due to rationality
+of the functions $\gpm(\zeta)$.
+\begin{tm}
+For  $m=0$ we have
+\begin{eqnarray}
+\nonumber
+    & \Xi_0(e,0)=\Xi_{1,1}(e,0)=\Xi_{2,2}^{0}(e,0)\equiv 0,\\
+\nonumber
+    &\dst \Xi_{1,1}^2(e,0)=
+ -\frac{e^{-6}}{27}\left(
+     \frac{(1-\eta)(3\eta^3+23\eta^2-\eta-1)}{8\eta^3}
+     + 8\log\left(\frac{2\eta}{1+\eta}\right)\,
+     \right).
+\end{eqnarray}
+\end{tm}
+These results are proven in \cite{pr84, pr27}.
+
+\bigskip\noindent{\bf 4.\quad}
+The motivation of this work and our goal consists
+in describing periodic solutions of (\ref{sput})
+for the parameters $\mu\ll1$ and $e\to1$.
+Periodic solutions of (\ref{sput}) are
+the periodic solutions of (\ref{sys}), (ref{rhs})
+with $m=2$.
+By Bruno's theorem about analytical integral sets
+\cite[Ch.~III,\S\,3]{Bru}, the periodic solutions
+lie at the analytical set $\cal A$, given by the
+following equations in the normal form coordinates $Y$:
+$$
+{\cal A}=\{Y,\eps,e\,|\quad G(Y,\eps,e)=0\}.
+$$
+There is always a branch of the set $\cal A$
+of the form $\sin y_1=0$. Other branches,
+if they exist, correspond to so called critical periodic
+solutions.
+Such solutions in the region $\mu\ll1$, $e\to1$ were
+recently
+discovered numerically by Bruno and Petrovich \cite{bpmid}.
+Our analysis doesn't give a rigorous description of
+this branch because our results concern only
+a few beginning terms of the normal form, but
+if we suppose that the following terms are minor,
+we come to the following
+\begin{cnj}
+A branch of the set $\cal A$, which corresponds
+to critical periodic solutions, exists for
+parameters $e\to1$, $\mu\to0$, in the neighbourhood
+of the curve
+\begin{equation}
+\label{as}
+\mu=\pm 36\cdot 2^{1/4}\cdot\left(-\Xi_0(1,2)\right)^{1/2}\cdot
+(1-e)^{3/4} +O((1-e)^{5/4}.
+\end{equation}
+\end{cnj}
+
+For $0.9999\leq e\leq 0.99999$ the curve (\ref{as})
+differs from the numerically computed curve \cite{bpmid}
+by less than 5\%.
+\begin{thebibliography}{4}
+%
+\bibitem{bel}
+V.V.\ Beletskii.
+Motion of an Artificial Satellite about Its Center of Mass,
+NASA TT F-429,
+pp. 257--261.
+%
+\bibitem{sar}
+V.A.\ Sarychev.
+Topics in satellite orientation.
+Itogi nauki i tehniki, ser. "Issledovanije kosmicheskogo
+prostranstva", Vol. 11. Moscow: VINITI, 1978.
+(Russian)
+%
+\bibitem{ch}
+F.L.\ Chernous'ko.
+Resonance Phenomena in the Motion of
+a Satellite Relative to Its Mass Center.
+USSR Computational Mathematics and Mathematical Phys., 3 (1964),
+699--713.
+%
+\bibitem{Bru}
+A.D.\ Bruno.
+Local Methods in Nonlinear Differential Equations.
+Springer-Verlag: Berlin-Heidelberg-New York-London-Paris-Tokyo,
+1989.
+%
+\bibitem{lutze} F.H.~Lutze, Jr., M.W.~Abbit, Jr. Rotational locks
+     for near-symmetric sattelites. Selest.\ Mech. 1:1 (1969),
+      31--35.
+\bibitem{pr84} S.Yu\ Sadov. Analysis of a function that
+defines rotational stability of almost symmetric satellite.
+     Preprint of the Keldysh Institute of Applied Mathematics
+of Rus.\ Ac.\ Sci., Moscow, 1994, N\ 84 (Russian).
+\bibitem{pr27} S.Yu.\ Sadov.
+    Coefficients of an averaged equation of satellite
+     oscillations.
+     Preprint of the Keldysh Institute of Applied Mathematics
+of Rus.\ Ac.\ Sci., Moscow, 1995, N\ 27 (Russian).
+\bibitem{bpmid} A.D.~Bruno and V.Yu.~Petrovich.
+     Regularization of satellite's oscillations on a very
+     stretched orbit.
+     Preprint of the Keldysh Institute of Applied Mathematics
+of Rus.\ Ac.\ Sci., Moscow, 1994, N\ 4. (Russian)
+\end{thebibliography}
+
+%\clearpage
+\vskip 4ex
+\centerline{\bf APPENDIX. }
+\centerline{\bf A program for computing $\Xi_0(m,e)$ and $\Xi_{1,1}(m,e)$.}
+
+\medskip
+(In this program there are notations $\phi(m,e)$ and
+  $-s(m,e)$ instead of $\Xi_0(m,e)$ and $\Xi_{1,1}$
+     respectively. References relate to the prepint
+     \cite{pr27}.)
+
+\begin{verbatim}
+Program Coefficients;
+
+{ @  S.Yu. Sadov, 1995.              }
+{    In: Coefficients of an averaged equation of satellite
+     oscillations. Preprint Inst.Appl.Math., Rus.Ac.Sci.,
+     1995, N 27                      }
+{    e-mail: sadovs@applmat.msk.su   }
+
+Uses Complex_Ariphmetics ;
+ (*  In the Unit Complex_Ariphmetics there are defined:
+    type cmpl=record Re,Im:real end;
+    procedure cAdd(a,b:cmpl; var c:cmpl); {c:=a+b}
+    procedure cSub(a,b:cmpl; var c:cmpl); {c:=a-b}
+    procedure cMul(a,b:cmpl; var c:cmpl); {c:=a*b}
+    procedure cSqr(var c:cmpl); {c:=c^2}
+    procedure cInv(var c:cmpl); {c:=1/c}
+    procedure cExp(theta:real; var c:cmpl); {c:=exp(i*theta) }
+  *)
+
+Const         {manually defined constants}
+      m=2   ; {parameter m }
+      e_start=0; e_end=1;
+      delta_e=0.1; {step of a table}
+      N=512; {Number of integration points}
+      Z=0.5;  {radius of integration contour}
+
+Const         {automatically defined constants}
+      pi2=6.283185307179586477;
+      cPi2:cmpl=(Re:pi2; Im:0.0);
+      circ_step=pi2/N;
+      Zinv=1/Z;
+      eps=delta_e/2;
+
+Type  fun=array[0..N-1] of cmpl;
+
+Var  e, eta: real;
+     rho, gamma_minus: fun;
+
+Procedure Calculation_Rho;
+   {here theta is the eccentric anomaly, rho=1/N * dt/d(theta),
+    calculated on the contour |zeta|=Z }
+     var     i: integer;   theta: real;
+     begin
+        for i:=0 to (N-1) do begin
+           theta:=i*circ_step;
+           rho[i].Re:=(1-cos(theta)*(Z+Zinv)*(e/2))/N;
+           rho[i].Im:=(sin(theta)*(Zinv-Z)*e/2)/N
+        end
+     end;
+
+Procedure Calculation_Gamma_minus; {see (32)}
+     var   theta : real;
+       Procedure exp_imt (var expimt:cmpl);
+           {expimt:=exp(-imt(zeta)) }
+         var  c1,c2 : cmpl;
+             arg, zm : real;
+                   i : integer;
+         begin  {exp_imt}
+            c1.Re:=(Z-Zinv)*cos(theta)* m *e/2;
+            c1.Im:=(Z+Zinv)*sin(theta)* m *e/2;
+            arg:=-theta*m + c1.Im;
+            cExp(arg, c2);
+            zm:=1;  {we want now to compute zm=1/Z^m}
+            if m>0 then for i:=1 to m do zm:=zm*Zinv
+                else for i:=1 to (-m) do zm:=zm*Z;
+            expimt.Re:=c2.Re*exp(c1.Re)*zm;
+            expimt.Im:=c2.Im*exp(c1.Re)*zm;
+         end;  {exp_imt}
+
+     var c1,c2, expimt : cmpl;
+                i      : integer;
+     begin {Calculation_Gamma_minus}
+        for i:=0 to (N-1) do begin
+           theta:=circ_step*i;
+           c1.Re:=((1-eta)*Z+(1+eta)*Zinv)*cos(theta)/2-e;
+           c1.Im:=((1-eta)*Z-(1+eta)*Zinv)*sin(theta)/2;
+           cSqr(c1);
+           c2.Re:=-(Z+Zinv)*cos(theta)*e/2+1;
+           c2.Im:=(Zinv-Z)*sin(theta)*e/2;
+           cMul(c1,c2,c1);
+           cInv(c1);
+           exp_imt(expimt);
+           cMul(expimt,c1,gamma_minus[i]);
+        end
+     end; {Calculation_Gamma_minus}
+
+Procedure op_M(var f:fun; var  Mf:cmpl); {see(39)}
+     var i: integer;
+         c: cmpl;
+     begin
+        Mf.Re:=0; Mf.Im:=0;
+        for i:=0 to (N-1) do begin
+          {computation of an integral by
+             the method of rectangles}
+          cMul(f[i],rho[i],c);  cAdd(Mf,c,Mf);
+        end;
+        {Mf.Re:=Mf.Re/pi2;  Mf.Im:=Mf.Im/pi2}
+     end;  { M }
+Procedure L(var f:fun; var Lf:fun); {see(41),(42)}
+     var  c1,c2,Mf: cmpl;   i: integer;
+     begin
+        op_M(f,Mf);
+        Lf[0].Re:=0; Lf[0].Im:=0;
+        cSub(f[0],Mf,c1);
+        cMul(c1,rho[0],c1);
+        for i:=1 to (N-1) do begin
+          {integration by the method of triangles}
+          c2:=c1;
+          cSub(f[i],Mf,c1);
+          cMul(c1,rho[i],c1);
+          Lf[i].Re:=Lf[i-1].Re+(c1.Re+c2.Re)/2;
+          Lf[i].Im:=Lf[i-1].Im+(c1.Im+c2.Im)/2;
+        end; {Now array Lf corresponds to funct.(41)}
+        op_M(Lf,Mf);
+        for i:=0 to (N-1) do begin
+           cSub(Lf[i],Mf,Lf[i]);
+           cMul(cPi2,Lf[i],Lf[i])
+        end
+     end;  { L }
+
+Function phi: real;  {see (14)}
+      var c: cmpl;
+      begin
+         op_M(gamma_minus, c);
+         phi:=c.Re
+      end;  {phi}
+
+Function s: real;    {see (15)}
+      var c: cmpl; Lf: fun; i:integer;
+      begin
+         L(gamma_minus,Lf);
+         for i:=0 to (N-1) do cSqr(Lf[i]);
+         op_M(Lf,c);
+         s:=-c.Re
+      end; {s}
+
+BEGIN {main}
+      e:=e_start;
+      Repeat
+         eta:=sqrt(1.0-sqr(e)); {see(25)}
+         Calculation_rho;
+         Calculation_Gamma_minus;
+         writeln('phi(',m,' ,',e:5:2,')=',phi);
+(* or:    writeln('s(',m,' ,',e:5:2,')=',s); *)
+         e:=e+delta_e;
+       Until (e>e_end+eps)
+END.
+\end{verbatim}
+\end{document}

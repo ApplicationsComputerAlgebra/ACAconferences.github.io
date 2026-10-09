@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\addtolength{\textwidth}{4cm}
+\addtolength{\textheight}{5cm}
+\addtolength{\oddsidemargin}{-2cm}
+\addtolength{\evensidemargin}{-4cm}
+\addtolength{\topmargin}{-2cm}
+
+%\setcounter{tocdepth}{2}
+%\renewcommand{\baselinestretch}{2}
+
+\begin{document}
+
+Computer algebra tools have been used since a long time
+for theoretical studies of parallel manipulators like computing
+the maximum number of solutions for the direct kinematic problem.
+Recent progress in algorithms for computing Gr\"oebner basis
+and for the exact study of real roots have enhanced the computational
+capabilities of dedicated computer algebra systems for the study
+of the direct kinematics problem, so that now we can start using such
+tools in practice for studying real and industrial situations.
+
+The first part will be devoted to the description of
+new algorithms and software solutions for the study of the direct
+kinematics problem .
+We will show how we can simplify efficiently the related systems of
+algebraic equations and then isolate all their real roots in an exact
+way. The first step is equivalent to eliminate variables of the
+ the algebraic system that modelises any direct kinematics problem
+ $\{h_1(X_1,\ldots , X_9)=,\cdots =h_9(X_1,\ldots , X_9)=0\}$.
+
+
+\begin{itemize}
+\item the {\bf elimination phase} produces an equivalent system
+(Rational Univariate Representation) in the form :
+$$
+\left \{
+\begin{array}{l}
+f(T)=0 \\
+X_1=g_1(T)/g(T)\\
+\vdots \\
+X_9=g_9(T)/g(T)
+\end{array}
+\right .
+$$
+
+\item the {\bf isolation phase} takes the result of the elimination
+phase , isolates the real roots (with multi-precision rational bounds)
+of the first polynomial ($f$) and computes isolation intervals for all
+the coordinates $X_1,\ldots,X_9$, providing in addition an algorithm
+for refining as precisely as we want the solutions.
+\end{itemize}
+
+These algorithms are implemented in FGb/RS software and it takes few
+seconds to compute all the real roots for practical examples.
+
+The second part will describe an extension of such a computation to path
+planning. In particular we will demonstrate how the elimination phase
+of the computation can be used safely for choosing the right path (among
+the 40 possibilities) given a parametric description of any trajectory
+and an initial position.
+
+The third part will be devoted to the description of an industrial example
+
+on which such a algorithms have been applied, providing at the end a kind
+of
+classification of the capabilities of the given parallel manipulator
+depending on the available hardware and real-time numerical methods.
+
+\end{document}

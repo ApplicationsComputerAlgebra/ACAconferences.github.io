@@ -1,0 +1,8 @@
+Partial solution of a path finding problem using the CAD method
+
+Scott McCallum
+
+Abstract:
+    This paper reports my attempt to solve partially a simple path finding
+    problem in the plane using the cylindrical algebraic decomposition
+    method.

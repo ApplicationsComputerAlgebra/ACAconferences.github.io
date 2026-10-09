@@ -1,0 +1,39 @@
+"Generation of the adjoint code of the meteorological model Meso-NH"
+
+Isabelle Charpentier 
+Projet IDOPT, INRIA
+ZIRST - 655 Avenue de l'Europe,
+38330 Montbonnot Saint-Martin, 
+FRANCE. 
+
+From a meteorological point of view, sensitivity analysis, calibration
+of a model, or variational data assimilation are often performed after
+the differentiation of the numerical code representing the model.
+Until now, it does not yet exist an unified tool designed to construct
+the operational adjoint code of a given code.  For most of the codes,
+the derived codes constructed by an automatic tool are often time and
+memory consuming.  In the particular case of Odyssee, the software we
+deal with, the additional memory induced by local computation of a
+trajectory for the evaluation of the adjoint code, is too extensive to
+enable a direct use of the differentiated codes of the large code.  Of
+course these codes may be improved via the implementation of
+algorithms such as the Griewank's checkpoint method and its
+logarithmic behavior in term of memory consumption. Other alternatives
+exist and the user's abilities are often essential in order to improve
+the code: identification of linear parts that do not require
+differentiation, arbitration between time and memory
+consumptions. This problem becomes especially important for a
+meteorological model such as Meso-NH that may be used in an
+operational (real time) manner weather prediction.  The idea is
+therefore to use an automatic differentiator for the tedious task of
+differentiation, and to add a semi-automatic post-proccessing step
+(with storage on files) that optimizes the codes as an user would do
+it. Combined to checkpoints algorithms, the differentiated codes of
+Meso-NH are efficient.
+
+
+
+
+
+
+

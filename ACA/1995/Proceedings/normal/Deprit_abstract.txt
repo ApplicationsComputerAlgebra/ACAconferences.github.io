@@ -1,0 +1,39 @@
+              SAP, a symbolic algebraic processor.
+                          Andre Deprit
+
+      U.S. National Institute of Standards and Technology,
+               Gaithersburg, MD 20899--0001, U.S.A.
+
+                              and
+                   Grupo de Mecanica Espacial,
+                    Universidad de Zaragoza,
+                     50009 Zaragoza, Spain
+
+                  Phone and Fax: 34 76 35 70 11
+                   e-mail: deprit@enh.nist.gov
+
+    Various  algebraic  structures  like  vectors,   quaternions, 
+polynomials, algebras of trigonometric functions or vector fields 
+may  be represented in MATHEMATICA as  programming  objects.  The 
+context mechanism of MATHEMATICA, however crude, is sufficient to 
+define  inheritance  among structures.  Each package of  code  is 
+accompanied  by an extensive section of checks and  illustrations 
+designed  to  provide rapid signals whenever  modifications  have 
+been  made in the package itself or anywhere in the line  of  its 
+ascendants.  Special effort is made for protecting users  against 
+calls to procedures outside the conditions imposed by SAP.
+    On  the  whole,  SAP aims at  implementing  the  perturbation 
+techniques originating from the theory of Lie transformations  in 
+non linear dynamics,  especially in celestial dynamics and in the 
+semi classical schemes of molecular physics. Its friendliness and 
+flexibility   are  continuously  checked  in  the  most   diverse 
+circumstances  from  refereeing  papers  to  keeping  in  running 
+condition  the calculations substantiating  manuscripts  prepared 
+for publication. It has made possible, for instance, to revise in
+depth  the literature of the past ten years about drag  force  in 
+Point   Dynamics,   to  reframe  Stiefel's  theory  of   the   KS 
+transformation within the theory of quaternions.
+    All the formulas in the Tables of Elliptic Integrals by  Byrd 
+and  Freedman  can now been obtained  aumotacially.  Work  is  in 
+progress   for  the  construction  of  analytical  theories   for 
+artificial satellites.

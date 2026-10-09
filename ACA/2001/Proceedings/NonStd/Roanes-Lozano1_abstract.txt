@@ -1,0 +1,103 @@
+Title of the talk: ``Parametric Geometry'' Package for Maple: Sketching,
+                   Automatic Theorem Proving and Cooperation with ``The
+                   Geometer's Sketchpad'' Made Easy
+
+Author:            Eugenio Roanes-Lozano
+
+Affiliation:       Dept. Algebra, Universidad Complutense de Madrid, Spain
+
+Abstract:
+
+Maple 6 already incorporates an excellent Euclidean Geometry package (named
+``Geometry'').  Unfortunately (and surprisingly), this package can't handle
+parameter equations (only numerical data).  For example, the line through
+points C=(0,0) and D=(2,3) can be defined, but the line through points
+A=(a1,a2) and B=(b1,b2) results in an error (unless numerical values are
+previously assigned to a1,a2,b1,b2).
+
+This lack is a serious restriction.  For instance it is not possible to
+reproduce a step-by-step construction of the circumscribed circumference of a
+general triangle using the package.
+
+Therefore, a ``Parametric Geometry'' Maple ad-hoc package has been developed by
+the author.  It is almost a re-creation of the standard ``Geometry'' package,
+allowing parameters.  The procedures implemented are:
+ - Declarative procedures: point, line, segment, circumference by center and
+   point (circumCP), circumference by center and radius (circumCR)
+ - Constructive procedures: midpoint, parallel line, perpendicular line,
+   intersection of two set of points (meet)
+ - Boolean procedure: set membership (isIn)
+ - Auxiliary procedure: distance (dist).
+
+The implementations are clearly simple from the mathematical point of view but
+tricky to program: for instance assignings are done to variable-names,
+themselves stored in variables.  Also some, like ``meet'' have different cases
+that had to be studied carefully (the equations involved can be non-linear).
+
+As a resume, applications of the package would be:
+ - Directly sketching in the CAS geometric constructions (as mention above
+   for the circumscribed circumference).
+ - Automatic Th. proving and discovery in Geometry.
+
+Algebra is the language for Geometry.  But Computer Algebra Systems (CASs) and
+Dynamic Geometry Systems (DGSs) cannot communicate with each other.  For
+instance to draw a geometric configuration with the mouse in the DGS, and to
+obtain the equations of the drawn configuration is not possible with nowadays
+CASs (only ``numeric'' equations are offered to the user).  An overview of the
+possibilities of the CASs most advanced from this point of view: Lugares
+(beta), The Geometer's Sketchpad 4 (beta) and The Algebraic Geometer (not
+commercialized?), will be given.
+
+So, there is another important application for the package: the cooperation
+with a DGS: sketching with the mouse and obtaining equations for the CAS (that
+can be manipulated afterwards).  We shall refer hereafter to Maple and the
+Geometer's Sketchpad, but the approach could be implemented for different (and
+crossed) DGSs and CASs.
+
+``The Geometer's Sketchpad'' can save both ``dead'' figures, ``denoted
+sketches'', and ``geometric algorithms'', denoted ``scripts'' (for instance
+Cinderella's ``Construction Texts'' are very similar to The Geometer's
+Sketchpad's `Scripts'').  An example would be (dots have been included for
+the sake of brevity):
+
+Given:
+   Point A
+   ...
+---------------
+Steps:
+   1. Let [j] = Segment between Point A and Point B.
+   ...
+   4. Let [D] = Midpoint of segment [l].
+   ...
+   7. Let [m] = Perpendicular to Segment [j] through Midpoint [F].
+   ...
+   10. Let [G] = Intersection of Line [o] and Line [n].
+   11. Let [c1] = Circle with center at Point [G] passing through Point A.
+
+what looks pretty close to mathematical standard language.  Now it should be
+translated (by hand or using an ad-hoc translator) into Maple's package own
+syntax:
+
+#Given:
+point(A, , );
+...
+#---------------
+#Steps:
+segment(j,A,B);
+...
+segment(l,C,A);
+...
+perpendicular(m,j,F);
+...
+meet(G,o,n);
+circumference(G,A);
+
+(the coordinates of the ``Given'' object should be filled by hand).  These
+makes possible to fill the gap between CASs and DGSs and to treat the whole
+mathematical process of discovery:
+
+       Investigating -> Guessing -> Checking -> Proving.
+
+This opens a new world of possibilities for DGSs.  In fact, future releases of
+``The Geometer's Sketchpad'' and ``Lugares'' will include the possibility to
+return the output proposed here.

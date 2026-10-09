@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Models of computing</TITLE>
+<META NAME="description" CONTENT="Models of computing">
+<META NAME="keywords" CONTENT="pan">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL="STYLESHEET" HREF="pan.css">
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="pan.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html31"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html29"
+ HREF="pan.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html23"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html32"
+ HREF="node3.html">Polynomial rootfinding</A>
+<B> Up:</B> <A NAME="tex2html30"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html24"
+ HREF="node1.html">Introduction</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00020000000000000000">&#160;</A><A NAME="sec2">&#160;</A>
+<BR>
+Models of computing
+</H1>
+
+<P>
+Stating our computational complexity estimates, we  will
+assume the customary computational  models of
+arithmetic and Boolean
+Random Access Machines  (RAM   modeles)
+and  their  parallel  modifications 
+(PRAM models)
+ [<A
+ HREF="node7.html#AHU74">AHU74</A>],   
+[<A
+ HREF="node7.html#KR90">KR90</A>],  [<A
+ HREF="node7.html#Qui94">Qui94</A>].
+The estimates can be  restated immediately in  terms of the model of [<A
+ HREF="node7.html#BSS89">BSS89</A>] 
+as well as the arithmetic and Boolean circuits  [<A
+ HREF="node7.html#Gat86">Gat86</A>].   Moreover,
+to large extent,
+our results on computational complexity 
+are model independent. 
+They are reduced to invocation of
+a few fundamental 
+operations  such as the computation of the 
+inner products  and convolutions of 
+vector pairs and discrete Fourier transform, for
+which effective algorithms are available under
+all the above  models as well as under some 
+more realistic models of parallel computing
+[<A
+ HREF="node7.html#Lei92">Lei92</A>].
+
+<P>
+We will write <IMG
+ WIDTH="82" HEIGHT="37"
+ SRC="img1.gif"
+ ALT="$O_A(t(N))$">and <IMG
+ WIDTH="90" HEIGHT="37"
+ SRC="img2.gif"
+ ALT="$O_B(T(N))$">
+to denote the sequential arithmetic and Boolean time  
+bounds  <I>O</I>(<I>t</I>(<I>N</I>)) and <I>O</I>(<I>T</I>(<I>N</I>)) , respectively, for the input size <I>N</I> .  Under parallel  
+models of computing, we will write <IMG
+ WIDTH="130" HEIGHT="37"
+ SRC="img3.gif"
+ ALT="$O_A(t(N), p(N))$">or <IMG
+ WIDTH="136" HEIGHT="37"
+ SRC="img4.gif"
+ ALT="$O_B(t(N), P(N))$">
+to denote the simultaneous time and arithmetic 
+or Boolean processor bounds <I>O</I>(<I>t</I>(<I>N</I>)) and <I>O</I>(<I>p</I>(<I>N</I>)) ,
+respectively. We will assume Brent's scheduling  principle, according to 
+ which a simple processor needs time <I>O</I>(<I>pt</I>) to simulate the work of <I>p</I> processors performed in time <I>t</I> . In other words, the parallel cost
+bounds <IMG
+ WIDTH="69" HEIGHT="37"
+ SRC="img5.gif"
+ ALT="$O_A(t, p)$">or <IMG
+ WIDTH="70" HEIGHT="37"
+ SRC="img6.gif"
+ ALT="$O_B(t, p)$">imply the sequential cost bounds
+<IMG
+ WIDTH="61" HEIGHT="37"
+ SRC="img7.gif"
+ ALT="$O_A(pt)$">or 
+<IMG
+ WIDTH="62" HEIGHT="37"
+ SRC="img8.gif"
+ ALT="$O_B(pt)$">,
+respectively.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html31"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html29"
+ HREF="pan.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html23"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html32"
+ HREF="node3.html">Polynomial rootfinding</A>
+<B> Up:</B> <A NAME="tex2html30"
+ HREF="pan.html">Some Recent Algebraic/Numerical Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html24"
+ HREF="node1.html">Introduction</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

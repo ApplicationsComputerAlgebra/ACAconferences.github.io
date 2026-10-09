@@ -1,0 +1,27 @@
+# Created by rsalamon@yucca on Thu Jul  4 13:37:25 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Aslaksen.html
+Path=0//Aslaksen.html
+
+Name=Bernardin.html
+Path=0//Bernardin.html
+
+Name=Graebe.html
+Path=0//Graebe.html
+
+Name=Postel.html
+Path=0//Postel.html
+
+Name=Robidoux.html
+Path=0//Robidoux.html
+
+Name=Steinberg.html
+Path=0//Steinberg.html
+
+Name=Wester.html
+Path=0//Wester.html
+
+Name=Zimmermann.html
+Path=0//Zimmermann.html
+

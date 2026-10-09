@@ -1,0 +1,7 @@
+Constructing Fast Algorithms: The Computational Approach
+
+Laurent Bernardin
+ETH Zurich
+CH-8092 Zurich
+Switzerland
+E-mail:Laurent.Bernardin@inf.ethz.ch

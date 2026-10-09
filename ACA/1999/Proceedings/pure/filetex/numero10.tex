@@ -1,0 +1,356 @@
+\title{\Large \bf Analyzing  the transference of the coalgebra
+structure on the homology of CDGAs}
+\author{\normalsize M.J. Jim\'{e}nez, P. Real and B. Silva\\
+\normalsize Dpto. Matem\'{a}tica Aplicada I (Universidad de Sevilla)\\
+\normalsize Avda. Reina Mercedes, s/n. CP: 41012 Sevilla (Spain)\\
+\normalsize  e-mail: majiro@euler.fie.us.es, real@cica.es,
+silva@cica.es}
+\documentstyle[emlines2,bezier,11pt]{article}
+\textheight=615pt
+\textwidth=425pt
+\oddsidemargin=0pt
+\headheight=0pt
+\headsep=7pt
+\hoffset=0pt
+\voffset=0pt
+\topmargin=10pt
+\marginparsep=10pt
+\marginparwidth=30pt
+\footheight=10pt
+\footskip=40pt
+\parskip=.5cm
+\setlength{\baselineskip}{8ex}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\scst}{\scriptscriptstyle}
+\newcommand{\ot}{\otimes}
+\newcommand{\Z}{\Bbb Z}
+\newcommand{\pa}{\partial}
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newtheorem{prp}{Proposition}[section]
+\newtheorem{lmm}[prp]{Lemma}
+\newtheorem{thr}[prp]{Theorem}
+\newtheorem{dfn}[prp]{Definition}
+\newtheorem{rmr}[prp]{Remark}
+\newtheorem{crl}[prp]{Corollary}
+\newtheorem{ejemplo}[prp]{Example}
+\newtheorem{notacion}[prp]{Notation}
+\hyphenation{pro-duc-to}
+\begin{document}
+\bibliographystyle{alpha}
+\sloppy
+\maketitle
+\vspace{0.5cm}
+
+\begin{abstract}
+
+    Our motivation here is to analyze the $A_{\infty}$-coalgebra structure
+ $(\Delta_2, \Delta_3, \ldots)$
+of the small homological model $H$ obtained in \cite{Moscu}, for any commutative differential
+graded algebra (or briefly CDGA) $A$. More precisely, making use
+of the facts that $H$ is a CDGA and
+that the morphism $\Delta_2: H \rightarrow
+H\ot H$ satisfies a compatibility condition with regard to the product
+on $H$, we design an  algorithm testing
+the coassociativity of
+ $\Delta_2$. Considerations concerning the complexity of this
+ algorithm are given.
+
+\end{abstract}
+
+\section{Extended Abstract}
+
+
+
+The description of efficient algorithms for homological computation
+can be considered as a very important question in Homological
+Algebra, in order to use those processes mainly in the resolution
+of problems on Algebraic Topology. We are interested in
+obtaining the $A_{\infty}$-coalgebra structures of small
+homological models of Eilenberg-MacLane spaces. These spaces are a
+kind of prime spaces in homotopy theory and its homology and
+cohomology are essential in order to compute homotopy invariants
+of spaces and cohomology operations. In order to progress in this
+way, a first step is the analysis of the transference of the
+coalgebra structure in the homology of CDGAs.
+
+  Our main technique is the use of Homological Perturbation
+  Theory which
+ is often used to replace given chain
+complexes by homotopic, smaller and more readily computable
+chain complexes (\cite{Gug72}, \cite{GL89},\cite{GLS91}). The Basic
+Perturbation Lemma (BPL) states
+that given a contraction
+\begin{equation}
+(f,g,\phi):(N,d_{\scst N})\Rightarrow (M,d_{\scst M})
+\label{contraction} \end{equation} of chain complexes (with
+$fg=1_{\scst M}$ and $1_{\scst N}-gf = d_{\scst N}\phi + \phi
+d_{\scst N}$) and a perturbation $\delta$ of $d_{\scst N}$ (that
+is, $(d_{\scst N}+\delta)^{2}=0$), under suitable conditions there
+exists a perturbation $d_{\delta}$ of $d_{\scst M}$ such that
+$H_{*}(M,d_{\scst M}+d_{\delta})=H_* (N,d_{\scst N}+ \delta)$.
+
+
+ Perturbation results about preservation of
+structures (DG-algebras, DG-coalgebras, Lie algebras, \ldots) have
+been largely considered (\cite{GLS91} and \cite{HK}). The technique for obtaining these
+results is to determine under what
+conditions the BPL allows the
+preservation of the data structures.
+
+ In the case of algebra contractions, the study of the preservation
+ of the multiplicative structure of the first algebra via the
+  contraction
+leads to the definition of a special type of contractions:
+{\em semi-full algebra contractions}.
+The semi-fullness is an hereditary
+property under composition, tensor product and perturbation of
+contractions (which are new contractions).
+
+Apart from the intrinsic interest of the transference
+problem, when we deal with DG-algebras or DG-coalgebras,
+these kind of results
+allow us to determine and
+construct essential algebra or coalgebra structures
+on various chain complexes which have been constructed via
+perturbation. For example, the
+homology theory of commutative DGA-algebras is entirely examined in
+terms of semifull algebra contractions in \cite{Moscu},
+and  ``small''  $p$-local homological models of
+ reduced bar constructions  of
+twisted tensor product of Cartan's elementary complexes are
+obtained in \cite{NY}, due to the fact that all the contractions
+appearing there, are of this type. These examples will be our
+starting point in this paper, being the transference  of the
+coalgebra structure in  the previous
+contractions our main objective.
+
+
+  Let us begin by explaining the algorithm for computing small
+  homological models of CDGAs.
+
+It is commonly known that every commutative DGA  $A$ ``factors''
+up to homotopy equivalence into a twisted
+tensor product of exterior and polynomial
+algebras endowed with a
+differential-derivation (see, for example, \cite{MCL}); in
+the sense that there exists an homomorphism
+connecting both structures, which induces an isomorphism in
+homology. This last TTP is called a {\em free model} for $A$.
+
+ In fact, the object we start from is the free model of a
+finite (as an algebra) CDGA
+$A$.
+
+The principal
+goal that arises is to obtain a ``chain'' of contractions
+starting at the
+reduced bar construction $\bar{B}(A)$ and ending up at a
+commutative
+DGA-algebra that is free and of finite type as graded module.
+
+Three {\it almost-full algebra contractions} (i.e., semifull algebra
+contractions endowed with multiplicative projections) are  used in
+order to find the structure of graded module of a homological model for the
+DGA-algebra $A$:
+\begin{itemize}
+\item The contraction defined in \cite{EM54} from $\bar{B}(A\ot A')$ to
+$\bar{B}(A)\ot \bar{B}(A')$, where $A$ and $A'$ are two commutative
+augmented DGAs; which is briefly denoted by $C_{\scst \bar{B}\ot}$.
+
+Though Eilenberg and Mac Lane only set explicit formulae for the projection
+and inclusion morphisms, an explicit formula of the recursive definition of
+the homotopy operator given by Eilenberg and Mac Lane in \cite{EM53} is
+established in \cite{RUBIO} (see also \cite{Rea96a} for a proof).
+
+
+
+Given a tensor product $\ot _{i\in I}A_i$ of augmented CDGA-algebras, a
+contraction from $\bar{B}(\ot_{i\in I}A_i)$ to $\ot_{i\in I}\bar{B}(A_i)$ is
+easily determined, by applying $C_{\scst \bar{B}\ot}$ several times in
+a suitable way. This new contraction is also denoted by $C_{\scst
+\bar{B}\ot}$.
+
+
+
+\item The isomorphism of DGA (hence, a contraction) $C_{\scst
+\bar{B}E}$ from $\bar{B}(E(u, 2n+1))$ to $\Gamma (\sigma (u), 2n+2)$, also
+described in \cite{EM54}. Note that the generator $v$ of the previous
+divided power algebra is denoted by $\sigma (u)$ where $\sigma$ is the Cartan's suspension
+operator.
+
+Last isomorphism might be considered as a {\it full algebra contraction}
+(that is, an almost-full algebra contraction endowed with an algebra
+homotopy operator), in an obvious way.
+
+\item The contraction $C_{\scst \bar{B}P}$ from $\bar{B}(P(y,2n))$ to
+$E(\sigma (y),2n)$ (see \cite{EM54}). The generator of the exterior algebra is
+denoted by $\sigma (y)$ since both elements correspond  to each other
+by the projection and inclusion of the contraction.
+\end{itemize}
+
+All the previous contractions have already been described for
+decades, so we will not explain them further.
+
+
+Thanks to these three contractions, it is possible to establish, by
+composition, the following semifull algebra contraction $C_0 =(f,
+g, \phi)$:
+$$\bar{B}(\ot_{i\in I} A_i) \; \Rightarrow \; \ot_{i\in I} \bar{B}(A_i) \;
+\Rightarrow \; \ot_{i\in I} HBA_i,$$
+where $HBA_i$ represents an exterior or a divided polynomial algebra,
+depending on the fact that $A_i$ is a polynomial or an exterior algebra.
+Obviously, the product on $\ot_{i \in I} HBA_i$ is the natural one.
+
+
+The next step is perturbing $C_0$, in order to obtain an homological model
+of the initial TTP $\tilde{\ot}^{\rho}_{i\in I} A_i$. The morphism $\rho$
+adds a perturbation-derivation $\delta$ onto the tensor
+differential of $\bar{B}(\ot_{i \in I} A_i)$.
+
+Therefore, a new semifull algebra
+contraction $(f_{\delta},g_{\delta},\phi_{\delta})$ is obtained:
+$$\bar{B}(\tilde{\ot}^{\rho}_{i\in
+I} A_i) \stackrel{(C_0)_{\delta}} {\Rightarrow} (\ot_{i \in I}
+HBA_i,d_{\delta}),$$
+where the differential $d_{\delta}$ is determined by the perturbation
+process. That means that $HBA=\ot_{i \in I} (HBA_i, d_{\delta})$ is a
+{\bf homological model} of $A=\tilde{\ot}_{i \in I} A_i$.
+
+We deal with the transference of the coalgebra
+structure from the reduced bar construction of a CDGA
+(which has a canonical coalgebra structure) to the
+homological model described above.
+
+   Let us consider the homological model $HBA$ for a CDGA
+$A$. That means that we have an algebra contraction:
+
+$$(f,g,\phi):\bar{B}(A) \stackrel{C} {\Rightarrow}
+HBA$$
+
+Let $\Delta$ be the natural coproduct on $\bar{B}(A)$:
+$$\Delta([a_1|\cdots|a_n])=
+\sum_{i=0}^{n}[a_1|\cdots|a_i]\ot[a_{i+1}|\cdots|a_n]$$
+
+This coproduct induces, in a natural way, a morphism on the
+homological model of $A$, that is,
+
+\begin{equation}
+\label{e1}
+\Delta_2=(f\ot f)\Delta g:HBA \rightarrow HBA\ot HBA
+\end{equation}
+
+We treat the problem of determining if $\Delta_2$
+is a real coproduct on the homological
+model. That means that we analyze whether $\Delta_2$ is coassociative
+or not.
+
+     At first, it would be  necessary to evaluate $\Delta_2$ over all the
+module generators of $HBA$. Nevertheless, since the
+projection $f$ is a morphism of CDGAs (see \cite{HCDGA}), it is
+easy to prove that $\Delta_2$ satisfies the following condition:
+
+$$ \Delta_2 \circ \mu = (\mu \ot \mu)(1\ot T\ot 1) (\Delta_2 \ot \Delta_2),$$
+where $\mu: HBA\ot HBA \rightarrow HBA$ is the product of the CDGA
+$HBA$ and $T:HBA \ot HBA \rightarrow HBA\ot HBA$ is the morphism
+that interchanges the factors. In particular, that relation means that for
+determining the morphism $\Delta_2$, we
+only need to evaluate it over the generators of $HBA$ as an
+algebra (a finite number of elements!). Moreover, we attack the
+problem of
+the complexity of the associated algorithm to the explicit
+formula of $\Delta_2$ and we considerably reduce the amount of
+elementary operations (comparing it to the naive algorithm derived for
+the initial formulation (\ref{e1})) that are necessary in order to
+compute this
+morphism over an algebra generator.
+
+
+
+    Finally, we prove that if $\Delta_2$ is coassociative for the
+    algebra generators of $HBA$, then $\Delta_2$ is coassociative
+    for any element of $HBA$. This gives us the possibility to
+    design an algorithm testing the coassociativity of this
+    morphism. Several examples ``tracing''
+    the previous algorithms in
+    concrete cases are given.
+
+\begin{thebibliography}{99}
+
+\bibitem{casc98}V. \'{A}lvarez, A. Armario, R. Gonz\'{a}lez-D\'{\i}az and
+P.Real. {\it Algorithms in Algebraic Topology and Homological
+Algebra: the problem of the complexity}.
+Workshop on Computer Algebra in Scientific Computing, CASC'98.
+Saint Petersburg (April 1998).
+
+\bibitem{Moscu} V. \'{A}lvarez, A. Armario, P. Real and B. Silva.
+{\it Homological Perturbation Theory and computability of
+Hochschild and cyclic homologies of CDGAs}. The international
+Conference on Secondary Calculus and Cohomological Physics. EMIS
+Electronic Proceedings. http://www.emis.de/proceedings/SCCP97
+
+\bibitem{HCDGA}V. \'{A}lvarez, A. Armario, P. Real and B. Silva.
+{\it Computability of the algebra homology of CDGAs}. In
+preparation.
+
+
+\bibitem{NY} A. Armario, P. Real and B. Silva. {\it On $p$-minimal
+homological models of TTPs of elementary complexes at a prime}.
+Contemporary Mathematics, {\bf vol. 227} (1999), 303-314.
+
+\bibitem{EM53} S.  Eilenberg   and S. Mac
+Lane. {\em On the groups $H(\pi,n)$, I}. Annals of Math., \mbox{\bf v.
+ 58} (1953), 55-106 .
+
+\bibitem{EM54} S. Eilenberg and S. Mac Lane. {\em On the groups
+$H(\pi,n)$, II}. Annals of Math., \mbox{\bf v. 60 } (1954), 49-139.
+
+
+
+\bibitem{Gug72} V. K. A. M. Gugenheim. {\it On the cahin complex of a
+fibration}. Illinois J. Math. {\bf 3} (1972) 398-414.
+
+\bibitem{GL89} V. K. A. M. Gugenheim and L. Lambe. {\it Perturbation
+theory in Differential Homological Algebra, I}. Illinois J. Math
+{\bf 33} (1989) 56-582.
+
+\bibitem{GLS91} V. K. A. M. Gugenheim, L. Lambe and J. Stasheff.
+{\it Perturbation theory in Differential Homological Algebra, II}.
+Illinois J. Math. {\bf 35} n. 3 (1991) 357-373.
+
+\bibitem{HK} J. Huebschmann and T. Kadeishvili. {\em Small models for
+chain algebras}. Math. Zeit. {\bf v. 207}, pp. 245-280 (1991).
+
+
+\bibitem{Lam92} L. Lambe. {\em Homological perturbation theory,
+Hochschild homology and formal group}.
+Deformation theory and quantum groups with applications to
+mathematical physics (Amherst, MA, 1990), Contemp. Math.
+{\bf v. 134}, 183-218. Amer. Math. Soc., Providence, RI, 1992.
+
+
+\bibitem{MCL} S. Mac Lane. {\em Homology}. Classics in
+Mathematics. Springer-Verlag, Berlin (1995). Reprint of the 1975
+edition.
+
+
+\bibitem{Rea96a} P. Real. {\em Homological Perturbation Theory and
+associativity}. Preprint del Dpto. de Mat. Apl. I.
+
+
+\bibitem{RUBIO} J. Rubio. {\em Homologie effective des espaces de
+lacets it\'{e}r\'{e}s: un logiciel}. PhD. thesis, Universit\'{e} Joseph
+Fourier, Grenoble (1991).
+
+\bibitem{Wei94} C. A. Weibel. {\em An introduction to homological
+algebra.} Cambridge studies in advanced mathematics, {\bf 38},
+Cambridge University Press (1994).
+
+
+
+
+
+\end{thebibliography}
+\end{document}
+

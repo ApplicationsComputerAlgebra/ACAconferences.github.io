@@ -1,0 +1,18 @@
+"Parallel poly-pushdown automatic groups"
+
+G.Baumslag
+City College of CUNY
+Math Department, NAC, Convent Avenue at 138th Street
+New York, NY 10031
+USA
+E-mail:gilbert@groups.sci.ccny.cuny.edu
+
+
+
+Abstract: Parallel poly-pushdown automatic groups are
+generalisations of automatic groups, designed to capture
+some aspects of computations that can be carried out in 
+parallel. This allows for computations with groups which
+are not necessarily finitely presented. The notion is
+the result of joint work of the speaker with Hamish Short and Michael
+Shapiro.

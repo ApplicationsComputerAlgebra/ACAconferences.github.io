@@ -1,0 +1,842 @@
+\title{\LARGE \bf Homolog\'{\i}a de productos semidirectos de grupos.}
+\author{\small V. \'{A}lvarez, J.A. Armario y P. Real\\
+\small Dpto. Matem\'{a}tica Aplicada I (Universidad de Sevilla)\\
+\small Avda. Reina Mercedes, s/n, 41012 Sevilla \\
+\small  {\em E-mails:} valvarez@cica.es, armario@cica.es, real@cica.es}
+\documentstyle[emlines2,bezier,espanol,12pt]{article}
+\date{}
+\textheight=615pt
+\textwidth=425pt
+\oddsidemargin=0pt
+\headheight=0pt
+\headsep=7pt
+\hoffset=0pt
+\voffset=0pt
+\topmargin=10pt
+\marginparsep=10pt
+\marginparwidth=30pt
+\footheight=10pt
+\footskip=40pt
+\parskip=.5cm
+\setlength{\baselineskip}{8ex}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\scst}{\scriptscriptstyle}
+\newcommand{\ot}{\otimes}
+\newcommand{\Z}{{\Bbb Z}}
+\newcommand{\Zp}{{\Bbb Z}_p}
+\newcommand{\pa}{\partial}
+\newcommand{\Fp}{{\Bbb F}_p}
+\newcommand{\Fr}{{\Bbb F}_2}
+\newcommand{\n}{{\tilde{\mbox{n}}}}
+\newtheorem{prp}{Proposici\'{o}n}[section]
+\newtheorem{lmm}[prp]{Lema}
+\newtheorem{thr}[prp]{Teorema}
+\newtheorem{dfn}[prp]{Definici\'{o}n}
+\newtheorem{rmk}[prp]{Nota}
+\newtheorem{crl}[prp]{Corolario}
+\newtheorem{ejemplo}[prp]{Ejemplo}
+\newtheorem{notacion}[prp]{Notaci\'{o}n}
+\hyphenation{pro-duc-to}
+\begin{document}
+\bibliographystyle{alpha}
+\sloppy
+\maketitle
+\vspace{0.5cm}
+
+\hyphenation{pro-duc-to}
+
+\begin{abstract}
+Tomando como base el estudio sobre la homolog\'{\i}a de fibrados realizado en \cite{LS87}
+y la l\'{\i}nea expuesta en \cite{AAR98},
+dise$\n$amos aqu\'{\i} un algoritmo para el c\'{a}lculo de la homolog\'{\i}a de ciertos
+productos semidirectos de grupos, que comprende tanto grupos discretos como simpliciales.
+Completa el trabajo una valoraci\'{o}n de la complejidad que engloba
+todo el proceso, anotando circunstancias y condiciones bajo las cuales se
+simplificar\'{\i}an los c\'{a}lculos. Como caso particular, analizamos la
+homolog\'{\i}a de los grupos dih\'{e}dricos desde esta nueva
+perspectiva. Se tiene prevista la implementaci\'{o}n del algoritmo en
+el paquete de c\'{a}lculo que provee el {\em Mathematica 3.0}.
+\end{abstract}
+
+\begin{center}
+{\bf Resumen extendido}
+\end{center}
+
+Perseguimos resolver aqu\'{\i} el problema del
+c\'{a}lculo de la homolog\'{\i}a de ciertos productos semidirectos
+de grupos. Dise$\n$aremos un algoritmo para el c\'{a}lculo de la
+homolog\'{\i}a de productos semidirectos $A \rtimes G$ con $G$
+abeliano finito y $A$ abeliano no necesariamente finito.
+
+El proceder general se basa en el establecimiento de un isomorfismo que
+traslade el problema al \'{a}mbito m\'{a}s combinatorio de la topolog\'{\i}a
+simplicial, recurso al que nos vemos con frecuencia abocados los top\'{o}logos
+algebraicos: no pasa desapercibido que las contracciones de tipo
+Eilenberg-Mac Lane est\'{a}n \'{\i}ntimamente ligadas al c\'{a}lculo
+homol\'{o}gico de grupos y provienen del campo simplicial.
+
+Nosotros seguiremos un discurrir an\'{a}logo al descrito en \cite{LS87}. Primero, a partir de
+un producto semidirecto de grupos finitos $A \rtimes G$, descompondremos
+el grupo simplicial $\bar{W}(A \rtimes G)$ como un producto
+cartesiano torcido de la forma
+$\bar{W}(A)\times_{\tau}\bar{W}(G)$. A partir de aqu\'{\i},
+utilizando t\'{e}cnicas de perturbaci\'{o}n similares a las empleadas
+en la referencia anterior, es factible definir una resoluci\'{o}n peque$\n$a
+libre para el producto semidirecto de partida. La dificultad que
+esconde este en apariencia sencillo resultado estriba en encontrar
+la filtraci\'{o}n adecuada que permite que los procesos de
+perturbaci\'{o}n utilizados en el transcurso de su demostraci\'{o}n
+sean finitos: la filtraci\'{o}n que definimos nosotros difiere
+sustancialmente de la utilizada en \cite{LS87}; dado que la
+validez de esta \'{u}ltima depend\'{\i}a de unas condiciones
+adicionales a verificar por la funci\'{o}n de torsi\'{o}n $\tau$, que
+no se dan en el caso particular que nos lleva, del producto
+semidirecto de grupos finitos.
+
+Preliminares esenciales en esta trabajo ser\'{a}n los teoremas de
+Brown (\cite{Bro59,Bro64}), Eilenberg-Zilber y Eilenberg-Zilber
+torcido (\cite{EM54,EZ59}), en la versi\'{o}n que demostrara Shih en
+\cite{Shi61}.
+
+\section{Modelos homol\'{o}gicos de productos semidirectos.}
+
+En esta secci\'{o}n nos preocupamos por encontrar un ``modelo
+homol\'{o}gico'' para un producto semidirecto de grupos $A \rtimes
+G$.
+
+El camino a seguir es el siguiente: primero, concretaremos qu\'{e}
+entendemos por modelo homol\'{o}gico de un grupo; en segundo
+lugar, definiremos el {\em espacio clasificante geom\'{e}trico},
+por medio del cual se traduce la b\'{u}squeda de
+estos modelos homol\'{o}gicos a un contexto m\'{a}s adecuado.
+Particularizando el estudio para el caso de ciertos productos
+semidirectos de grupos, podremos hacer uso de una bater\'{\i}a de
+resultados que permitir\'{a}n reducir el problema a un proceso de
+perturbaci\'{o}n homol\'{o}gica, del que garantizaremos la parada.
+
+La {\em homolog\'{\i}a} de un grupo suele definirse por medio de
+su {\em espacio clasificante}, tambi\'{e}n conocido como {\em
+clasificante geom\'{e}trico}. Veamos en qu\'{e} consiste esta
+construcci\'{o}n (ver \cite{May67}).
+
+Dado un grupo simplicial $(G,+)$, el {\em espacio clasificante}
+$\bar{W}^g(G)$ consiste en el conjunto simplicial definido de la
+siguiente manera:
+\begin{eqnarray*}
+\bar{W}^g_0(G) & = & \{ [ \, ] \} ; \\ \bar{W}^g_n(G) & = &
+G_{n-1} \times \cdots \times G_0, \quad n>0; \\ s_0[ \, ] & = &
+[e_0]; \\
+\partial _i [g_0] & = & [ \, ], \quad i=0,1; \\
+\partial _0[g_n, \ldots ,g_0] & = & [g_{n-1}, \ldots ,g_0], \\
+\partial _{i+1}[g_n, \ldots ,g_0] & = & [\partial _i g_n, \ldots , \partial
+_1 g_{n-i+1},g_{n-i-1} +\partial _0 g_{n-i},g_{n-i-2}, \ldots
+,g_0], \\ s_0[g_{n-1}, \ldots ,g_0] & = & [e_n,g_{n-1}, \ldots
+,g_0], \\ s_{i+1}[g_n, \ldots ,g_0] & = & [s_i g_n, \ldots ,s_0
+g_{n-i},e_{n-i}, g_{n-i-1}, \ldots ,g_0];
+\end{eqnarray*}
+donde $[\,]$ denota el \'{u}nico elemento de $\bar{W}^g_0(G)$, $e_n$
+denota el elemento identidad de $G_n$ y $[g_{n-1}, \ldots , g_0]$
+denota un elemento gen\'{e}rico de $\bar{W}^g_n(G)$, para $n>0$.
+
+Por abuso de notaci\'{o}n, se habla del clasificante asociado a un
+grupo discreto $G$ como el clasificante $\bar{W}^g(^sG)$ del grupo
+simplicial $^sG$ can\'{o}nicamente asociado a $G$, que consiste en
+aquel con $^sG_n=G$ para todo $n \geq 0$ y operadores simpliciales
+(ambos de cara y de degeneraci\'{o}n) el homomorfismo identidad.
+
+La homolog\'{\i}a de un grupo $G$, ya sea discreto o simplicial,
+se puede definir entonces como la homolog\'{\i}a del objeto
+$\bar{W}^g(G)$ (ver \cite{Bro82}): es decir, la correspondiente
+del complejo de cadenas $C_*(\bar{W}^g(G))$.
+
+La utilizaci\'{o}n de los clasificantes algebraico (\cite{GM74MAMS}) y
+geom\'{e}trico (\cite{May67}) y la contracci\'{o}n semicompleta
+$C_{\scst \bar{W}-\bar{B}}$ relacionando
+clasificante algebraico de un \'{a}lgebra simplicial y construcci\'{o}n Bar
+del \'{a}lgebra diferencial graduada correspondiente
+(\cite{Rea95,RS94,AAR99}), permiten el dise$\n$o de una maquinaria de
+c\'{a}lculo de la homolog\'{\i}a de ciertos grupos, por medio de la
+Teor\'{\i}a de Perturbaci\'{o}n Homol\'{o}gica (\cite{GL89,GLS90,
+GLS91,Shi61,Bro64,Gug60}).
+
+De hecho, dado un grupo simplicial reducido $G$, el procedimiento
+consiste en los siguientes pasos:
+\begin{enumerate}
+\item Mediante el isomorfismo dado en \cite{GM74MAMS} se
+pasa de $C_*(\bar{W}^g(G))$ a $\bar{W}(C_*(G))$.
+\item Se aplica la contracci\'{o}n que liga $\bar{W}(C_*(G))$ con
+$\bar{B}(C_*(G))$.
+\item Se busca alg\'{u}n ``modelo homol\'{o}gico'' del \'{a}lgebra $C_*(G)$
+para calcular de la manera m\'{a}s sencilla posible la
+homolog\'{\i}a de $\bar{B}C_*(G))$.
+\end{enumerate}
+
+En el caso particular de los grupos discretos, el proceder es
+sustancialmente distinto, en tanto en cuanto los grupos
+simpliciales asociados no son reducidos. Ahora bien, el an\'{a}lisis
+detenido de la construcci\'{o}n de la equivalencia de homotop\'{\i}a
+$C_{\scst \bar{W}-\bar{B}}$ muestra que en grado simplicial 1 los
+morfismos de la contracci\'{o}n se comportan como isomorfismos, en
+realidad; luego en el caso de un grupo discreto $G$, resulta que
+$C_*(\bar{W}^g(G))$ es can\'{o}nicamente isomorfo a
+$\bar{B}(C_*(G))$, por lo que el procedimiento a seguir se reduce
+al paso 3 anterior.
+
+Este es el camino que vamos a seguir para establecer la
+homolog\'{\i}a de los productos semidirectos de grupos.
+
+La noci\'{o}n de ``modelo homol\'{o}gico'' que consideramos aqu\'{\i}
+es una versi\'{o}n m\'{a}s d\'{e}bil de la que definieran Lambe y
+Stasheff en \cite{LS87}.
+
+\begin{dfn}
+{\em Un {\em modelo homol\'{o}gico} de un grupo (simplicial o
+discreto) $G$ es un par $(c,hG)$, donde $c$ es una contracci\'{o}n
+que liga $C_*(\bar{W}(G))$ con un DG-m\'{o}dulo $hG$ libre de tipo
+finito.}
+\end{dfn}
+
+N\'{o}tese que cualesquiera par de modelos son homol\'{o}gicamente
+equivalentes, por medio de un puente de homotop\'{\i}a, de base la
+construcci\'{o}n bar del complejo de cadenas asociado al grupo en
+cuesti\'{o}n. El sentido de calcular un modelo homol\'{o}gico es
+precisamente el obtener un complejo que presente una cantidad
+peque$\n$a de generadores para as\'{\i} simplificar el proceso
+final del c\'{a}lculo de su homolog\'{\i}a.
+
+Todo modelo homol\'{o}gico cuya diferencial sea nula se denomina
+{\em modelo minimal}. Claramente, todo modelo minimal es isomorfo
+al m\'{o}dulo de homolog\'{\i}a del grupo de partida, de donde la
+legitimidad del t\'{e}rmino ``minimal''. De mismo, que se hable de
+{\em el modelo minimal}.
+
+Con asiduidad, utilizaremos simplemente el DG-m\'{o}dulo $hG$ para
+referirnos a un modelo homol\'{o}gico $(c,hG)$. Otras veces,
+adem\'{a}s, consideraremos el complejo $\bar{B}(\Z[G])$ en lugar de
+$C_*(\bar{W}(G))$, dado que ambos son isomorfos (\cite{EM53}).
+
+Veamos un modelo homol\'{o}gico para grupos discretos conmutativos,
+que ser\'{a} de utilidad a la hora de encontrar un modelo para
+productos semidirectos de grupos discretos.
+
+Dado que todo grupo discreto conmutativo factorizar\'{a} como
+producto de una ``parte libre'' (cierta potencia $\Z^n$ de $\Z$) y
+otra ``de torsi\'{o}n'' (del tipo $\Z_{p_1^{r_1}} \times \cdots
+\times \Z_{p_t^{r_t}}$, con cada $p_i$ primo y $r_i \geq 1$),
+vamos a centrar nuestro inter\'{e}s en la determinaci\'{o}n de modelos
+homol\'{o}gicos para $\bar{B}(\Z [\Z])$ y $\bar{B}(\Z [\Z _{p^r}])$.
+A tal efecto, adaptamos a nuestra terminolog\'{\i}a dos resultados
+demostrados por Eilenberg y Mac Lane en \cite{EM54}.
+
+Consideremos la colecci\'{o}n de datos $$C_{\scst {\Z}}:\{ \bar{B}
+(\Z[{\Z}]),\,\mbox{$E(u,1), \, f_{\scst {\Z}}, \, g_{\scst {\Z}},
+\, \phi_{\scst {\Z}}$}\},$$ donde, por extensi\'{o}n lineal, se
+define la ``proyecci\'{o}n'' como $$f_{\scst {\Z}}(c_q) = \left\{
+\begin{array}{ll} nu, & \mbox{si $q=0$, con $c_0=[n] \in
+s( {\Z} )= \bar{B}_0(\Z[\Z]);$}\\ 0, & \mbox{si $q>0$, con $c_q \in
+\bar{B}_q(\Z[\Z])$;} \end{array} \right.$$ la ``inyecci\'{o}n'' por
+$$g_{\scst {\Z}}(u)=[1];$$ y el ``operador de homotop\'{\i}a''
+como $$\phi_{\scst {\Z}}([n_1 \vert \ldots \vert n_k]) = \left\{
+\begin{array}{ll} -\sum_{i=1}^{n_1 -1} [1\vert i \vert n_2 \vert
+\ldots \vert n_k], & \mbox{ si $n_1
+>1$;} \\ 0, & \mbox{ si $n_1 = 1$;} \\ \sum_{i=1}^{\vert n_1
+\vert} [1 \vert -i \vert n_2 \vert \ldots \vert n_k], & \mbox{ si
+$n_1 < 1$;}
+\end{array} \right.$$
+
+Este conjunto de datos define en realidad una contracci\'{o}n. A\'{u}n
+m\'{a}s, se verifica el siguiente resultado.
+
+\begin{thr} (\cite{EM54}) \label{5-teorema-bz}
+El par $(C_{\scst {\Z}}, E(u,1))$ define un modelo homol\'{o}gico
+(de hecho, el minimal), del grupo $\Z$ de los enteros. M\'{a}s
+a\'{u}n, la proyecci\'{o}n es un morfismo de DGA-\'{a}lgebras y la
+inyecci\'{o}n es un morfismo de DGA-\'{a}lgebras de Hopf (i.e., en
+ambos los niveles de \'{a}lgebra y co\'{a}lgebra).
+\end{thr}
+
+Ahora queremos hacer lo propio con el complejo $\bar{B}(\Z [\Z
+_{p^r}])$. Aunque podr\'{\i}amos considerar como propio modelo
+homol\'{o}gico al mismo objeto $\bar{B}(\Z [\Z _{p^r}])$ (se trata
+de un DG-m\'{o}dulo libre de tipo finito, a diferencia del caso
+anterior, que era libre pero no finitamente generado en cada
+grado), se conoce un modelo de magnitud inferior, en el sentido de
+que simplifica la complejidad de los procesos computacionales
+inmersos en el c\'{a}lculo de su homolog\'{\i}a.
+
+Fijemos un n\'{u}mero primo $p$ y un natural $r$, y tomemos el
+conjunto $$C_{\scst {\Z}_{p^r}} : \{ \bar{B}_N ({\Z}[{\Z}_{p^r}])
+, \;\; (E(u,1) {\ot} \Gamma(v,2), d_{p^r}), \; f_{\scst
+{\Z}_{p^r}}, \; g_{\scst {\Z}_{p^r}}, \; \phi_{\scst
+{\Z}_{p^r}}\}.$$ Por extensi\'{o}n lineal, se definen los morfismos
+de la siguiente manera: la ``proyecci\'{o}n'', como
+$$\begin{array}{rcl} f_{\scst {\Z}_{p^r}}[x_1 \vert y_1 \vert
+\ldots \vert x_m \vert y_m] & = & [ \prod_{i=1}^{m}s^2(x_i,y_i)]
+\gamma_m(v), \mbox{ }\\ f_{\scst {\Z}_{p^r}}[x_1 \vert y_1 \vert
+\ldots \vert x_m \vert y_m \vert z] & = & [ s^1 (z) \prod_{i
+=1}^{m} s^2(x_i, y_i)] u \gamma_m (v),
+\end{array}$$
+donde $s^2: {\Z}_{p^r} \times {\Z}_{p^r} \ra {\Z}$ y
+$s^1:{\Z}_{p^r} \ra {\Z}$ son las aplicaciones
+\[ s^2(i,j) = \left\{ \begin{array}{ll} 0, & \mbox{  si }\,i+j < p^r; \\
+                                        1, & \mbox{  si }\,i+j \geq p^r;\end{array}
+\right. \]
+\[s^1(i) = i , \;\;\; 0 \leq i<p^r. \]
+La ``inyecci\'{o}n'', por $$\begin{array}{lll} \mbox{     } g_{\scst
+{\Z}_{p^r}}(u) & = & [1], \mbox{ }\\ g_{\scst {\Z}_{p^r}}(\gamma_k
+(v)) & = & \sum_{x_1, \ldots, x_k \in \mbox{\small {\Z}}_{p^r}} [1
+\vert x_1 \vert \ldots \vert 1 \vert x_k ],  \\ g_{\scst
+{\Z}_{p^r}}(u\gamma_k (v)) & = & \sum_{x_1, \ldots, x_k \in
+\mbox{\small {\Z}}_{p^r}}[1 \vert x_1 \vert \ldots \vert 1 \vert
+x_k \vert 1 ].
+\end{array} $$
+Y el ``operador de homotop\'{\i}a'' $$\begin{array}{l} \phi_{\scst
+{\Z}_{p^r}} 1 = 0, \;\; \phi_{\scst {\Z}_{p^r}}[x] = -C(x), \;\;
+\phi_{\scst {\Z}_{p^r}}[x|y] = -[C(x)|y],
+\\ \phi_{\scst {\Z}_{p^r}} [x\vert y \vert \sigma] = -[C(x) \vert y
+\vert \sigma] - s^2(x,y) [\sum_{\scst l \in \mbox{\small {\bf
+Z}}_{p^r}} [1 \vert l] \vert \phi_{\scst {\Z}_{p^r}}\sigma];
+\end{array}$$
+donde
+\[ C(x) = \sum_{i=1}^{x-1} [1 \vert i]. \]
+
+En estas circunstancias, se verifica este otro teorema.
+
+\begin{thr}(\cite{EM54}) \label{mhp}
+El par $(C_{\scst {\Z}_{p^r}},\,(E(u,1) {\ot} \Gamma(v,2),
+d_{p^r})) $ es un modelo homol\'{o}gico del grupo c\'{\i}clico
+finito ${\Z}_{p^r}$ de orden $p^r$. M\'{a}s a\'{u}n, ambas la
+proyecci\'{o}n y la inyecci\'{o}n de la contracci\'{o}n $C_{\scst
+{\Z}_{p^r}}$ son morfismos de DGA-\'{a}lgebras.
+\end{thr}
+
+La diferencial $d_{p^r}$ es la usual, que act\'{u}a sobre los
+generadores $u$ y $v$ en la forma $d_{p^r}(u)=0$ y $d_{p^r}(v)=\pm
+p^r u$.
+
+A partir de los resultados anteriores, es inmediato establecer un
+modelo homol\'{o}gico de cualquier grupo discreto conmutativo.
+
+De hecho, dado un tal grupo $G$, basta tomar su factorizaci\'{o}n en
+producto de su parte libre y su parte de torsi\'{o}n (i.e, $\Z^n
+\times \Z_{p_1^{r_1}} \times \cdots \times \Z_{p_t^{r_t}}$, con
+cada $p_i$ primo y $r_i \geq 1$, para cada $1 \leq i \leq r$), y
+combinar los teoremas anteriores de manera apropiada:
+$$\bar{B}(\Z[G]) \Rightarrow \bar{B}(\Z[\Z] \otimes
+\stackrel{n}{\cdots} \otimes \Z[\Z] \otimes \Z[\Z_{p_1^{r_1}}]
+\otimes \cdots \otimes \Z[\Z_{p_t^{r_t}}]) \Rightarrow$$
+$$\Rightarrow \bar{B}(\Z[\Z]) \stackrel{n}{\cdots} \bar{B}(\Z[\Z])
+\otimes \bar{B}(\Z[\Z_{p_1^{r_1}}]) \otimes \cdots \otimes
+\bar{B}(\Z[\Z_{p_t^{r_t}}]) \Rightarrow$$ $$\Rightarrow (E(u_1,1) \otimes
+\cdots \otimes E(u_n,1) \otimes E(w_1,1) \otimes \Gamma (v_1,2)
+\otimes \cdots \otimes E(w_t,1) \otimes \Gamma (v_t,2), \;d),$$
+donde $d=d_{p_1^{r_1}} \otimes \cdots \otimes d_{p_t^{r_t}}).$
+
+Originalmente, en \cite{EM53} y \cite{EM54}, este proceso se
+realizaba mediante la utilizaci\'{o}n del clasificante geom\'{e}trico,
+que notaremos en adelante simplemente por $\bar{W}$:
+a partir del producto cartesiano $G \times G'$ de dos grupos
+abelianos finitamente generados $G$ y $G'$, se establec\'{\i}a un
+isomorfismo simplicial trivial entre $\bar{W}(G \times G')$ y
+$\bar{W}(G) \times \bar{W}(G')$, que desembocaba en el resultado
+obtenido anteriormente a partir de los modelos de los factores.
+
+Nosotros pretendemos seguir un proceso similar en el caso de los
+productos semidirectos de grupos.
+
+Recordemos que, dados dos grupos $(A,+)$ y $(G,\cdot)$ y una acci\'{o}n
+$\chi :G \times A \rightarrow A$ de $G$ en $A$ (esto es, una aplicaci\'{o}n de
+modo que $\chi (e,a)=a$ y $\chi (g'g,a)= \chi (g',(\chi (g,a))$), el {\em
+producto semidirecto} $A \times _\chi G$ de $A$ y $G$ consiste en el grupo
+resultante de considerar en $A \times G$ la operaci\'{o}n producto
+definida por la regla: $$(a,g) \cdot (a',g')=(a+ \chi
+(g,a'),gg').$$ La acci\'{o}n $\chi$ se denomina {\em acci\'{o}n de grupos}
+cuando verifica que $$\chi (g,a+a')= \chi (g,a) + \chi (g,a') \qquad
+\forall \, g \in G, \; a,a' \in A;$$ es decir, para cada $g \in G$ fijo,
+la aplicaci\'{o}n $\chi (g,-)$ resulta ser un homomorfismo de grupos.
+
+Para simplificar la lectura
+en lo que sigue, notaremos $\chi (g,a)$ simplemente por $ga$.
+
+Un ejemplo cl\'{a}sico de producto semidirecto de grupos lo conforma
+el {\em grupo dih\'{e}drico} $D_{2m}= \Z _m \times _\chi \Z _2$, para
+$m \geq 2$, con acci\'{o}n determinada por $\chi (n,-1)=-n$.
+
+La noci\'{o}n de producto semidirecto admite una generalizaci\'{o}n al
+contexto de los grupos simpliciales de forma natural, considerando
+acciones de grupos en el sentido simplicial.
+
+Es m\'{a}s, teniendo en cuenta la versi\'{o}n simplicial can\'{o}nica
+$^sG$ asociada a todo grupo discreto $G$ (constituida por el
+propio grupo $G$ en cada grado y el homomorfismo identidad como
+\'{u}nico operador de cara y de degeneraci\'{o}n), podemos aglutinar
+toda la informaci\'{o}n homol\'{o}gica de un producto semidirecto de
+grupos $A \times _\chi G$ en su versi\'{o}n simplicial $^s(A \times
+_\chi G)=\,^sA \times _{^s \chi} \, ^sG$, donde $^s \chi$ denota la
+acci\'{o}n simplicial de $^sG$ en $^sA$ inducida por $\chi$. El problema
+reside, pues, en encontrar un modelo homol\'{o}gico de $\bar{W}(^s(A \times
+_\chi G))$.
+
+Nos vamos a reducir, en principio, al estudio de los productos
+semidirectos de grupos $A \times _\chi G$, con $A$ y $G$ grupos
+simpliciales y $\chi$ acci\'{o}n de grupos.
+
+Consideremos el producto cartesiano torcido $\bar{W}(A) \times _
+\tau \bar{W}(G)$ definido por la funci\'{o}n de torsi\'{o}n $\tau_*$,
+$$\tau _n: \bar{W}_n(G) \rightarrow G_{n-1}, \qquad [g_{n-1},
+\ldots ,g_0] \stackrel{\tau _n}{\mapsto} g_{n-1};$$ con grupo
+estructural $G$ de acci\'{o}n $\kappa$ determinada por
+$$\begin{array}{ccc} \kappa\,:\,G\times \bar{W}(A) &
+\longrightarrow & \bar{W}(A) \\ (g_n,[a_{n-1},\ldots,a_0]) &
+\longrightarrow & [\partial _0g_n \cdot a_{n-1},\ldots, \partial _0^ng_n
+\cdot a_0].
+\end{array}$$
+
+En estas circunstancias, podemos enunciar el siguiente teorema.
+
+\begin{thr}\label{tic}
+Existe un isomorfismo simplicial $$f:\bar{W}(A\times_\chi
+G)\longrightarrow \bar{W}(A)\times_\tau\bar{W}(G),$$
+definido por las aplicaciones\\
+
+%\vspace*{.5cm}
+\noindent $f_n[(a_{n-1},g_{n-1}),\ldots,(a_0,g_0)]  = $\\ $\quad
+([g^{-1}_{n-1} a_{n-1},\ldots,
+\partial^{i-1}_0g^{-1}_{n-1}\cdots \partial_0g^{-1}_{n-i+1}
+g^{-1}_{n-i} a_{n-i},\ldots,
+ \partial^{n-1}_0g^{-1}_{n-1}\cdots \partial_0g^{-1}_1
+g^{-1}_0a_0],$\\ \hspace*{8cm}{$\qquad \qquad \qquad
+[g_{n-1},\ldots,g_0]);$}
+
+\vspace*{.25cm}
+\noindent y
+
+\vspace*{.25cm}
+\noindent
+$f^{-1}_n([a_{n-1},\ldots,a_0],\,[g_{n-1},\ldots,g_0]) = $\\
+$\qquad \quad [(g_{n-1}a_{n-1},g_{n-1}),\ldots,
+(g_{n-i}\partial_0g_{n-i+1}\cdots\partial_0^{n-i+1}g_{n-1}a_{n-i},
+g_{n-i}),$\\ \hspace*{5cm}$\qquad \qquad \qquad \ldots, (g_0\partial_0g_1\cdots
+\partial_0^{n-1}g_{n-1} a_0, g_0)].$
+\end{thr}
+
+Este resultado t\'{e}cnico es la llave que permite conectar con los
+estudios realizados a finales de la d\'{e}cada pasada por Lambe y
+Stasheff sobre la homolog\'{\i}a de fibrados iterados en
+\cite{LS87}.
+
+Aunque el PCT $\bar{W}(A)\times_\tau\bar{W}(G)$ que define un
+producto semidirecto de grupos simpliciales $A \times _\chi G$ no
+es principal (la acci\'{o}n se efect\'{u}a a trav\'{e}s del grupo $G$ y
+no de $\bar{W}(G)$), la demostraci\'{o}n del Teorema 3.5 de
+\cite{LS87} se ajusta a nuestras circunstancias, de modo que es
+posible establecer un modelo homol\'{o}gico para ciertos productos
+semidirectos de grupos.
+
+\begin{thr} Sea $A \times _\chi G$ un producto semidirecto de grupos
+simpliciales de modo que la cocadena de torsi\'{o}n $t$ en
+$\bar{B}(A)\otimes_t \bar{B}(G)$ inducida por $\tau$ seg\'{u}n el
+teorema de Eilenberg-Zilber torcido se anule actuando sobre
+elementos de grado 1. En estas circunstancias, $A \times _\chi G$
+tiene un modelo homol\'{o}gico, en funci\'{o}n de sendos modelos
+homol\'{o}gicos de los factores $A$ y $G$.
+\end{thr}
+
+\begin{rmk} {\em La condici\'{o}n sobre la cocadena $t$ fue
+considerada ya por May en \cite{May67}, quien apunt\'{o} que grupos
+simpliciales como los reducidos se encuentran entre aquellos que
+verifican tal premisa.}
+\end{rmk}
+
+Esto resuelve la cuesti\'{o}n para aquellos productos semidirectos
+de grupos simpliciales verificando la condici\'{o}n sobre la
+cocadena $t$. El problema que se presenta ahora es que los
+grupos simpliciales inducidos por los grupos discretos no
+verifican tal condici\'{o}n, al estar concentrados en grado cero.
+
+Nosotros proponemos aqu\'{\i} un camino alternativo, que facilita la
+Teor\'{\i}a de Perturbaci\'{o}n Homol\'{o}gica utilizando los modelos
+homol\'{o}gicos de $\Z$ y $\Z _{p^r}$ anteriormente expuestos, as\'{\i} como
+el isomorfismo del Teorema \ref{tic}. El teorema principal de este
+art\'{\i}culo recoge dicho resultado.
+
+\begin{thr} \label{mhps} Sean $G$ abeliano finito, $A$ un grupo discreto con
+modelo homol\'{o}gico $hA$ y $\chi :G \times A \rightarrow A$ una acci\'{o}n
+de grupos. Entonces, el grupo $A \times _\chi G$ tiene un modelo
+homol\'{o}gico.
+\end{thr}
+
+Aun m\'{a}s, demostraremos que la diferencial sobre el modelo anterior obtenida
+por perturbaci\'{o}n se
+simplifica en parte al considerar lo particular de la cocadena de
+Brown generada por la funci\'{o}n de torsi\'{o}n $\tau (\chi)$,
+y la propia acci\'{o}n $\chi$.
+
+En el caso particular de que la acci\'{o}n, adem\'{a}s, act\'{u}e por
+componentes (en el sentido de que $\chi (g,[1,0, \ldots , 0])=[*,0, \ldots ,0]$
+y as\'{\i} sucesivamente), la diferencial admitir\'{a} una expresi\'{o}n
+notablemente m\'{a}s simple. Veremos que \'{e}ste es el caso de los
+grupos dih\'{e}dricos, de los que calcularemos la homolog\'{\i}a.
+Esto permitir\'{a} establecer una comparaci\'{o}n de nuestro m\'{e}todo
+con el ya cl\'{a}sico de la sucesi\'{o}n espectral de Lindon-Hochschild-Serre (ver
+\cite{Wei}).
+
+\section{Cuestiones relacionadas.}
+
+En este apartado nos interesaremos por resoluciones libres
+asociadas al modelo anterior y por la eventual estructura de
+producto tensorial torcido \'{o} $\gamma$-producto tensorial torcido
+que pueda presentar.
+
+De hecho, los resultados anteriores se pueden prolongar hasta
+conectar con $A_{\infty}$-estructuras
+(\cite{Sta63a,Sta63b,Sta70,Kad80,Pro84,GS86,GL89,GLS91,JL96}) y
+resoluciones (\cite{Lam91,Lam92,Lam93}), de modo que podemos
+establecer peque$\n$as resoluciones libres para el caso de
+productos semidirectos de grupos finitos.
+
+La obtenci\'{o}n de resoluciones libres ``econ\'{o}micas'' de grupos abelianos
+(econ\'{o}micas en el sentido de que los c\'{a}lculos homol\'{o}gicos que
+requieran puedan ser efectuados ciertamente en la pr\'{a}ctica), es un
+problema que ha sido tratado de forma intensa en las \'{u}ltimas d\'{e}cadas
+(\cite{Eil49,EM54,Car56,CE56,Tat57,Moo76,Hue91e}. Con la aparici\'{o}n de la
+Teor\'{\i}a de Perturbaci\'{o}n Homol\'{o}gica
+(\cite{Shi61,Bro64,Gug72,GL89,GLS91,HK91}), otros grupos discretos
+comenzaron a ser tratados. En \cite{LS87}, Lambe y Stasheff describen
+un m\'{e}todo para calcular la homolog\'{\i}a de extensiones centrales de
+grupos. Este m\'{e}todo ya ha sido ampliado para el caso de grupos nilpotentes
+libres de torsi\'{o}n finitamente generados (\cite{LS87,Lam89,Lam91}) y
+$p$-grupos finitos (\cite{Lam92,Lam,EGL97}). Utilizando un proceso de
+perturbaci\'{o}n paralelo, en \cite{Hue89} y \cite{Hue91t} Huebschmann se
+interesa, respectivamente, por el problema del c\'{a}lculo de la
+homolog\'{\i}a de grupos nilpotentes finitamente generados de dos pasos y
+grupos metac\'{\i}clicos.
+
+M\'{a}s concretamente, en \cite{LS87} se factoriza un modelo simplicial
+$\bar{W}(E)$ del espacio clasificante de una extensi\'{o}n central de grupos
+$E$ en forma de {\em producto cartesiano torcido}. La aplicaci\'{o}n del
+Teorema de Eilenberg-Zilber Torcido, algunas propiedades de anulaci\'{o}n de
+la cocadena de torsi\'{o}n asociada y la existencia de un {\em modelo
+homol\'{o}gico} del grupo de enteros $\Z$ permiten finalmente construir una
+resoluci\'{o}n peque$\n$a libre para grupos nilpotentes libres de torsi\'{o}n
+finitamente generados. Nuestra aproximaci\'{o}n es similar, tomando
+como punto de partida el modelo homol\'{o}gico hallado en la
+secci\'{o}n anterior.
+
+\begin{thr} \cite{AAR99b}
+Sea $A$ una DGA-\'{a}lgebra, $C$ una DGA-co\'{a}lgebra conexa,
+$t:C \rightarrow A$ una cocadena de torsi\'{o}n y
+$c:\{C,H,f,g,\phi \}$ una contracci\'{o}n que induce en $H$ una
+estructura de $A_{\infty}$-co\'{a}lgebra, de modo que $t \phi =0$ y
+la composici\'{o}n $(t \cap )(1 \otimes \phi)$ es puntualmente
+nilpotente.
+
+Entonces, existe una contracci\'{o}n de $A \otimes _t C$ en el
+$\gamma$-producto tensorial torcido $A \otimes _{t'} H$, donde
+$t'=tg:H \rightarrow A$ es la $\gamma$-cocadena inducida por $c$ y
+$t$.
+\end{thr}
+
+\begin{rmk} {\em Conviene hacer las siguientes puntualizaciones:
+\begin{itemize}
+\item La hip\'{o}tesis de conexi\'{o}n sobre $C$ se puede reducir
+a exigir simplemente que $C$ est\'{e} aumentada, de modo que tenga
+sentido el contemplar el DG-m\'{o}dulo $\bar{C}=\mbox{Ker }(\chi
+_{\scst C})$. En el caso particular de que $C$ sea conexo, entonces
+$\bar{C}_0=0$ y $\bar{C}_i=C_i$ para $i>0$.
+
+\item Una condici\'{o}n suficiente para que $c$ induzca
+sobre $H$ una estructura de $A_{\infty}$-co\'{a}lgebra es que $C$
+sea simplemente conexo (ver \cite{GS86}).
+
+\item Por otro lado, una condici\'{o}n suficiente para que la
+composici\'{o}n $t \cap (1 \otimes \phi )$ sea puntualmente
+nilpotente es que $t$ se anule sobre $C_1$ (ver \cite{May67},
+\cite{LS87}). Este es el caso, obviamente, cuando $C$ es
+simplemente conexo.
+
+\item La hip\'{o}tesis de que la composici\'{o}n $t \phi$ es cero
+resulta una pieza clave en la demostraci\'{o}n final, no s\'{o}lo ya
+por la simplificaci\'{o}n en las f\'{o}rmulas que aparecen. Estamos
+convencidos de que en otro caso la tesis del resultado anterior
+ser\'{\i}a falsa, aunque no disponemos de contraejemplo alguno.
+\end{itemize}}
+\end{rmk}
+
+A nosotros nos interesa particularmente el estudio del caso $C=
+\bar{B}(A)$ y $t= \theta$, cocadena universal, a fin de obtener
+una resoluci\'{o}n del producto semidirecto de un par de grupos
+discretos.
+
+\begin{thr}
+Sea $A$ una DGA-\'{a}lgebra y $c: \{ \bar{B}(A), H, f, g ,\phi\}$
+una contracci\'{o}n que induce en $H$ una estructura de
+$A_{\infty}$-co\'{a}lgebra, de modo que $\phi$ incrementa el grado
+simplicial de $\bar{B}(A)$ en uno y la composici\'{o}n $(\theta
+\cap) (1 \otimes \phi)$ es puntualmente nilpotente.
+
+Entonces, existe una contracci\'{o}n expl\'{\i}cita de la
+resoluci\'{o}n bar $B(A)$ en el $\gamma$-producto tensorial
+torcido $A \otimes _{\theta '} H$, donde $\theta ':H \rightarrow
+A$ es la $\gamma$-cocadena definida como $\theta '=\theta g$.
+\end{thr}
+
+En estas circunstancias, podemos deducir la existencia de
+resoluciones asociadas a ciertos productos semidirectos de grupos.
+
+\begin{thr}
+Sean $A$ y $G$ dos grupos discretos abelianos finitos y $\chi :G
+\times A \rightarrow A$ una acci\'{o}n distributiva. Entonces,
+existe un $\gamma$-producto tensorial torcido $\Z [A \times _\chi
+G] \otimes _r H$ que escinde de la contracci\'{o}n bar
+est\'{a}ndar, de modo que $H$ es un modelo homol\'{o}gico de $A
+\times _\chi G$ (dotado con la estructura de
+$A_\infty$-co\'{a}lgebra inducida correspondiente) y $r:H
+\rightarrow \Z[A \times _\chi G]$ es una $\gamma$-cocadena de
+torsi\'{o}n.
+\end{thr}
+
+\begin{rmk} {\em Dos comentarios a tener en cuenta:
+\begin{itemize}
+\item Consideremos dos grupos discretos $A$ y $G$ con modelos
+homol\'{o}gicos conocidos $hA$ y $hG$, respectivamente, y una
+acci\'{o}n distributiva $\chi$ de $G$ en $A$ de modo que $A \times
+_\chi G$ admita un modelo homol\'{o}gico en funci\'{o}n de los de los
+factores en la forma del Teorema \ref{mhps}. La demostraci\'{o}n
+realizada anteriormente indica que en estas circunstancias el
+modelo homol\'{o}gico en cuesti\'{o}n tambi\'{e}n viene dotado de una
+estructura de $A_\infty$-co\'{a}lgebra inducida por la contracci\'{o}n
+que da dicho modelo homol\'{o}gico.
+\item No ocurre otro tanto con respecto a la existencia de una
+resoluci\'{o}n que escinda de la resoluci\'{o}n bar est\'{a}ndar. Por
+regla general, falla que en el \'{u}ltimo paso sea puntualmente
+nilpotente la composici\'{o}n $(1 \otimes 1 \otimes \phi _{\scst G}+
+1 \otimes \phi _{\scst A} \otimes g_{\scst G}f_{\scst G})d_{\scst
+d_{\theta \cap}}$. Este es el caso cuando $A$ \'{o} $G$ presentan
+parte libre no trivial (el operador de homotop\'{\i}a $\phi
+_{\scst \Z}$ llega a aumentar el grado de filtraci\'{o}n en 1).
+\end{itemize}}
+\end{rmk}
+
+A partir de aqu\'{\i}, es l\'{\i}cito preguntarse acerca de la
+estructura de PTT \'{o} $\gamma$-PTT que pudiera subyacer
+eventualmente en el modelo homol\'{o}gico hallado previamente.
+
+De hecho, remont\'{a}ndonos una vez m\'{a}s al art\'{\i}culo que
+inspirara el que nos lleva, es posible determinar una tal
+estructura en modelos
+homol\'{o}gicos de extensiones centrales de grupos descritos en
+\cite{LS87}.
+
+Dada una extensi\'{o}n central de grupos $A \times _f G$, donde $f$
+es el 2-cociclo de la extensi\'{o}n, se puede calcular un modelo
+homol\'{o}gico suyo estableciendo, paso a paso, la siguiente cadena
+de contracciones, conocidos sendos modelos homol\'{o}gicos $hA$ y
+$hG$ de $A$ y $G$, respectivamente:
+\begin{itemize}
+\item $C_*(\bar{W}(A\times_f G))\Rightarrow C_*(\bar{W}(A)\times_\tau
+\bar{W}(G))$.
+\item $C_*(\bar{W}(A)\times_\tau \bar{W}(G))\Rightarrow
+C_*(\bar{W}(A))\otimes_{t(\tau)}C_*(\bar{W}(G)) $.
+\item $C_*(\bar{W}(A))\ot_{t(\tau)}C_*(\bar{W}(G))\Rightarrow (hA\ot hG, \;d^\ot+
+d_{\scst t(\tau)\cap})$.
+\end{itemize}
+
+Demostramos que bajo ciertas
+hip\'{o}tesis sobre los factores de una extensi\'{o}n central de
+grupos, un modelo homol\'{o}gico de tal objeto es en realidad un
+producto tensorial torcido.
+
+\begin{thr}
+Sean $A$ y $G$ dos grupos abelianos finitamente generados, $G$
+libre de torsi\'{o}n, y $f$ un 2-cociclo que define una extensi\'{o}n
+de $G$ por $A$. Entonces, el complejo $(hA\ot hG, \;d^\ot+
+d_{\scst t(\tau)\cap})$ tiene estructura de producto tensorial
+torcido.
+\end{thr}
+
+\'{E}ste no es el caso, en general, del modelo homol\'{o}gico de productos
+semidirectos de grupos discretos finitos que describimos en el ep\'{\i}grafe
+anterior.
+
+Sin embargo, s\'{\i} es posible determinar ciertas estructuras de
+$\gamma$-producto tensorial torcido asociadas, en un sentido que
+precisaremos en la versi\'{o}n final del art\'{\i}culo.
+
+\begin{thebibliography}{99}
+
+\bibitem{AAR98} \'{A}lvarez V., Armario J.A. y Real P.: {\em On the
+homology of semidirect product of groups}, Colloquium on Topology,
+Gyula (Hungr\'{\i}a) (1998).
+
+\bibitem{AAR99} \'{A}lvarez V., Armario J.A. y Real P.: {\em
+Estructuras algebraicas en Topolog\'{\i}a Algebraica y \'{A}lgebra
+Homol\'{o}gica}. En preparaci\'{o}n.
+
+\bibitem{AAR99b} \'{A}lvarez V., Armario J.A. y Real P.: {\em On
+resolutions which split off of the Bar construction}. En
+preparaci\'{o}n.
+
+\bibitem{Bro82} Brown K.S.: {\em Cohomology of Groups}, Springer,
+Berlin (1982).
+
+\bibitem{Bro59} Brown E.H.: {\em Twisted tensor products I},
+Annals of Math., {\bf 69}, pp. 223-246 (1959).
+
+\bibitem{Bro64} Brown R.: {\em The twisted Eilenberg-Zilber theorem},
+Celebrazioni Achimedee del secolo XX, Simposio di topologia
+(Messina, 1964). Ed. Oderisi, Gubbio, pp. 33-37 (1965).
+
+\bibitem{Car56} Cartan H.: {\em Alg\`ebres d'Eilenberg-Mac Lane},
+S\'{e}minaire H. Cartan 1954/55, (expos\'{e} 2 \`a 11), Ecole Normale
+Superi\`ere, Paris (1956).
+
+\bibitem{CE56} Cartan H. y Eilenberg S.: {\em Homological Algebra},
+Princeton University Press, Princeton (1956).
+
+\bibitem{Eil49} Eilenberg S.: {\em Topological methods in abstract
+algebra}, Bull. Amer. Math. Soc., {\bf 55}. pp. 3-27 (1949).
+
+\bibitem{EM53} Eilenberg S. y Mac Lane S.: {\em On the groups
+$H(\pi, n)$, I}, Annals of Math., {\bf 58}, pp. 55-106 (1953).
+
+\bibitem{EM54} Eilenberg S. y Mac Lane S.: {\em On the groups
+$H(\pi, n)$, II}, Annals of Math., {\bf 66}, pp. 49-139 (1954).
+
+\bibitem{EZ59} Eilenberg S. y Zilber J.A.: {\em On the products
+of complexes}, Am. J. Math., {\bf 75}, pp. 200-204 (1959).
+
+\bibitem{EGL97} Ekedahl T., Grabmeier J. y Lambe L.: {\em Algorithms
+for algebraic computations with applications to the cohomology of
+finite $p$-groups}, Preprint of Department of Math. and Center
+for Innovative Computation, University of Wales (1997).
+
+\bibitem{Gug60} Gugenheim V.K.A.M.: {\em On a theorem of E.H.
+Brown}, IL. J. Math., {\bf 4}, pp. 292-311 (1960).
+
+\bibitem{Gug72} Gugenheim V.K.A.M.: {\em On a the chain complex of a
+fibration}, Illinois J. Math., {\bf 3}, pp.398-414 (1972).
+
+\bibitem{GL89} Gugenheim V.K.A.M. y Lambe L.: {\em Perturbation theory
+in Di\-ffe\-ren\-tial Homological Algebra, I}, Illinois J. Math., {\bf
+33}, pp. 556-582 (1989).
+
+\bibitem{GLS90} Gugenheim V.K.A.M., Lambe L. y Stasheff J.: {\em
+Algebraic aspects of Chen's twisting cochain}, Illinois J. Math.,
+{\bf 34}, pp. 485-502 (1990).
+
+\bibitem{GLS91} V.K.A.M. Gugenheim, L. Lambe and
+J. Stasheff, Perturbation theory in Di\-ffe\-rential Homological
+Algebra  II, {\em Illinois J. Math. \/} {\bf 35}
+n. 3 (1991) 357--373.
+
+\bibitem{GM74MAMS} Gugenheim V.K.A.M. y May J.P.: {\em On the theory
+and application of differential torsion products}, Memo. Amer. Math. Soc.,
+{\bf 142} (1974).
+
+\bibitem{GS86} Gugenheim V.K.A.M. y Stasheff J.: {\em On
+perturbations and $A_{\infty}$ structures}, Bull. Soc. Math.
+de Belg., {\bf 38}, pp. 237-246 (1986).
+
+\bibitem{Hue89} Huebschmann J.: {\em Cohomology of nilpotent groups of
+class 2}, J. Alg., {\bf 126}, pp. 400-450 (1989).
+
+\bibitem{Hue91e} Huebschmann J.: {\em Cohomology of finitely
+generated abelian groups}, L'Enseignement Math\'{e}matique {\bf 37},
+pp. 61-71 (1991).
+
+\bibitem{Hue91t} Huebschmann J.: {\em Cohomology of metacyclic groups},
+Transactions of the American Mathematical Society, {\bf  328}, {\bf n. 1},
+pp. 1-72 (1991).
+
+\bibitem{HK91} Huesbschmann J. y Kadeishvili T.K.: {\em Small models
+for chain algebras}, Math. Z., {\bf 207}, pp. 245-280 (1991).
+
+\bibitem{JL96} Johansson L. y Lambe L.: {\em Transferring algebra
+structures up to homology equivalence}, Math. Scand (1996).
+
+\bibitem{Kad80} Kadeishvili T.K.: {\em On the homology theory of
+fibre spaces}, Russian Math. Surveys, {\bf 35}, pp. 231-238
+(1980).
+
+\bibitem{Lam89} Lambe L.: {\em Algorithms for the homology of
+nilpotent groups}, Conf. on applications of computers to Geom.
+and Top., Lecture Notes in Pure and Applied Math.,
+Marcel Dekker Inc., N.Y., {\bf 114} (1989).
+
+\bibitem{Lam91} Lambe L.: {\em Resolutions via homological
+perturbation}, J. Symbolic Comp., {\bf 12}, pp. 71-87 (1991).
+
+\bibitem{Lam92} Lambe L.: {\em Homological perturbation theory,
+Hochschild homology and formal groups}, Proc. Conference on Deformation
+Theory and Quantization with Applications to Physics, Amherst, MA, June
+1990, Cont. Math., {\bf 134} A.M.S, pp. 183-218 (1992).
+
+\bibitem{Lam93} Lambe L.: {\em
+Resolutions which split off of the bar
+construction}, Journal of Pure and Applied Algebra, {\bf 84}, pp.
+311-329 (1993).
+
+\bibitem{Lam} Lambe L.: {\em An algorithm for calculating cocycles},
+Preprint of Department of Mathematics and Center for
+Innovative Computation, University of Wales (1997).
+
+\bibitem{LS87} Lambe  L. y Stasheff J.: {\em Applications of
+perturbation theory to iterated fibrations}, Manuscripta Math.,
+{\bf 58}, pp. 367--376 (1987).
+
+\bibitem{Mac95} Mac Lane S.: {\em Homology}, Classics in
+Mathematics, Springer-Verlag, Berlin (1995). Reedici\'{o}n del original
+de 1975.
+
+\bibitem{May67} May J.P.: {\em Simplicial objects in Algebraic Topology},
+Chicago Lectures in Mathematics, The University of Chicago
+Press, Chicago and London (1992).
+
+\bibitem{Moo76} Moore J.C.: {\em Cartan's constructions}, Colloque
+analyse et topologie, en l'honneur de H. Cartan, Ast\'{e}risque,
+{\bf 32-33}, pp. 173--221 (1976).
+
+\bibitem{Pro84} Proute A.: {\em
+Alg\'{e}bres defferentielles fortement homotopiquement associatives},
+ Th\`{e}se de Mathematiques, Universit\'{e} Paris VII (1984).
+
+\bibitem{Rea95} Real P.: {\em Algoritmos de c\'{a}lculo de
+homolog\'{\i}a efectiva de los espacios clasificantes}, Tesis,
+Universidad de Sevilla (1993).
+
+\bibitem{Rea96} Real P.: {\em Homological Perturbation
+Theory and Associativity}, Preprint del Dpto. de Matem\'{a}tica
+Aplicada I de la Universidad de Sevilla (1996). Enviado a Journal
+of Pure and Applied Algebra.
+
+\bibitem{RS94} Real P. y Sergeraert F.: {\em A conjecture of
+Eilenberg-Mac Lane}, Preprint de l'Institute Fourier, Grenoble
+(1995).
+
+\bibitem{Shi61} Shih W.: {\em Homologie des espaces fibr\'{e}s}, Inst.
+Hautes Etudes Sci., {\bf 13}, pp. 293-312 (1962).
+
+\bibitem{Sta63a} Stasheff J.: {\em Homotopy associativity of a $H$-space
+I}, Trans. Amer. Math. Soc., {\bf 108}, pp. 275-292 (1963).
+
+\bibitem{Sta63b} Stasheff J.: {\em Homotopy associativity of a
+$H$-space II}, Trans. Amer. Math. Soc., {\bf 108}, pp. 293-312
+(1963).
+
+\bibitem{Sta70} Stasheff J.: {\em $H$-spaces from a homotopy point of
+view}, Lecture Notes in Math., {\bf 161}, Springer, N.Y., (1970).
+
+\bibitem{Tat57} Tate J.: {\em Homology of Noetherian and local rings},
+Illinois J. of Math., {\bf 1}, pp. 14-27 (1957).
+
+\bibitem{Wei} Weibel C.A.: {\em An introduction to homological
+algebra}, Cambridge studies in advanced mathematics {\bf 38}, Cambridge
+University Press (1994).
+
+\end{thebibliography}
+
+
+\end{document}
+

@@ -1,0 +1,51 @@
+\begin{center}
+\LARGE
+Building abelian groups and commutative rings into
+                 first-order theorem proving
+\end{center}
+
+\begin{center}
+\Large
+J\"urgen Stuber
+\end{center}
+
+\noindent
+Date:  July 17th (Wednesday)\\
+Time:  14:00-14:25\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+For many theories from algebra there exist convergent term rewriting
+systems, possibly modulo some equational theory. We present a
+technique to build such a theory into ordering-restricted first-order
+clausal theorem proving. In this way one obtains a refutationally
+complete inference system which creates a smaller search space than by
+directly applying a more general prover to the axioms of the theory.
+
+Specifically, on the ground level equational literals are simplified,
+until they are in a {\it sufficiently} {\it simplified} form. For each of these
+forms one derives a {\it symmetrization}, that is a set of rules such that
+critical pairs with the theory converge. One then considers overlaps
+between symmetrizations.  Since their structure is know, one can
+exploit this by showing that only a few critical pairs need to be
+tested to obtain convergence.
+
+To lift this to the non-ground level, each step of the simplification
+becomes an inference. These are either carefully controlled
+superpositions with theory axioms or derived inferences like
+cancellation. Then, for inferences between sufficiently simplified
+non-theory clauses, one distinguished between overlaps of two extended
+rules and overlaps where at least one rule is not extended. The former
+correspond to the critical pairs obtained above; the latter are
+similar to superposition inferences, except that they take the
+extended rules in the symmetrization into account.
+
+The technique is quite general, but it seems most useful for theories
+which have abelian groups as a subtheory. In that case a single term
+of a sum can be isolated on the left-hand side. The inference systems
+obtained are extensions of the corresponding Gröbner base
+algorithms.
+

@@ -1,0 +1,106 @@
+%==============
+\begin{center}
+{\LARGE \bf Comparative CAS Reviews and Philosophy
+}
+\end{center}
+%==============
+\bigskip
+
+{\bf Organizer}
+\medskip
+
+Michael Wester (wester@math.unm.edu)
+
+\bigskip
+
+{\bf Description}
+\medskip
+
+Right now, a large number of computer algebra systems, both general purpose and special purpose,
+are available. Some of these systems are commercial while many others are partially or fully in the
+public domain. As more and more systems become available, it becomes important to have some
+idea about the strengths and weaknesses provided by each system, both mathematically and
+inherent in the system's philosophy of use. The point of view of the user will vary depending on
+the application, and so a statistician may have different considerations than say a physicist which
+may in turn be different from that of a mathematician or an educator. Each type of user has certain
+goals and wants to know how a particular system will aid in his or her quest to achieve them. 
+
+\bigskip
+{\bf Talks}
+\medskip
+
+Date: July 20th (Saturday) 
+
+\begin{description}
+\item[8:30-08:52.5] \ \\
+  Nicolas Robidoux\\
+  {\bf User Friendly Reviews of Computer Algebra Systems.} 
+\item[08:52.5-09:15] \ \\
+  Laurent Bernardin\\
+  {\bf A Review of Symbolic Solvers.} 
+\item[09:15-09:37.5] \ \\
+  Hans-Gert Gräbe\\
+  {\bf Factorized Gröbner Bases and Polynomial Systems.} 
+\item[9:37.5-10:00] \ \\
+  Frank Postel, Paul Zimmermann\\
+  {\bf A review of the ODE solvers of Axiom, Derive, Macsyma, Maple, Mathematica,
+    MuPAD and Reduce.} 
+\item[10:00-10:15 ] \ \\
+  \\
+  {\bf Coffee Break} 
+\item[10:15-10:37.5] \ \\
+  Helmer Aslaksen\\
+  {\bf Multiple-valued Complex Functions and Computer Algebra.} 
+\item[0:37.5-11:00] \ \\
+  Michael Wester\\
+  {\bf Computer Algebra Systems: Pitfalls, Pratfalls and also Elegance.} 
+\item[11:00-11:22.5] \ \\
+  Stanly Steinberg\\
+  {\bf Computer Algebra and Problem Solving Environments.} 
+\item[11:22.5-11:45] \ \\
+  Paul Zimmermann\\
+  {\bf Commercial vs Free Computer Algebra Systems.} 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\item[] \ \\
+  \\
+  {\bf } 
+\end{description}
+

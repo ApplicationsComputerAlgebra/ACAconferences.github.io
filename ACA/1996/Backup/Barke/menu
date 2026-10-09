@@ -1,0 +1,18 @@
+# Created by rsalamon@crocus on Tue Jul  2 14:26:40 MDT 1996
+# with the command:  /usr/local/bin/mkmenus 
+
+Name=Borchers.html
+Path=0/conference/IMACS96/skeletons/Barke/Borchers.html
+
+Name=Mathis.html
+Path=0/conference/IMACS96/skeletons/Barke/Mathis.html
+
+Name=Mourrain.html
+Path=0/conference/IMACS96/skeletons/Barke/Mourrain.html
+
+Name=Sommer.html
+Path=0/conference/IMACS96/skeletons/Barke/Sommer.html
+
+Name=Trajkovic.html
+Path=0/conference/IMACS96/skeletons/Barke/Trajkovic.html
+

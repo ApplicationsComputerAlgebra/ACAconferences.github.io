@@ -1,0 +1,54 @@
+% This file should be rename with the speaker's last name. (e.g : smith)
+
+% Write the author names in the order you wish them to appear
+% and underline the one who will give the talk.
+
+% Only the speaker's email address is required.
+
+\begin{abstract_online}{Parametric integrals, combinatorial identities and applications}{%
+        \underline{Thierry Dana-Picard}$^{1}$, David G. Zeitoun$^{2}$}{[ndp@jct.ac.il]
+        }{%
+        $^1$ Department of Mathematics, Jerusalem College of Technology, Jerusalem, Israel \newline{}$^2$ Orot Israel College, Elkana, Israel \newline{}}
+
+We propose a survey of parametric integrals (aka sequences of definite integrals) studied by undergraduates in an engineering school and pre-service teachers, in a technology-rich environment.  The papers in reference provide a few examples only. Parametric integrals are interesting both for their mathematical properties, and the numerous applicable methods, and for their importance in applied science; see [1].
+
+Let be given an either definite or improper integral of the so-called second type $I_n=\int_a^b f_n)(t) \; dt$, where $a,b \in \mathbb{R}$ and $n \in \mathbb{N}$ are given. The study of the family of integrals $I_n$ can yield the following results:
+\begin{enumerate}
+\item An induction formula for the sequence $(I_n)$, such as $I_{n+1}=R(n)I_n$ or $I_{n+1}=u_n+R(n)I_n$, etc., where $R(n)$ is a function of the parameter $n$; see [2,3,4,5,6].
+\item A closed formula for $I_n$ as a function of the parameter $n$, often using telescoping methods which lead to factorial expressions. This is the case if $R(n)$ is a rational function. In some cases, induction connects $I_{n+2}$ and $I_n$, and the usage of double factorials may yield more compact formulas. Otherwise, the study of the convergence of a series is necessary.
+\item Combinatorial identities, in the case where more than one integration method can be applied.
+\item New integral presentations of classical combinatorial numbers; see [3,4,5] 
+\end{enumerate}
+
+Technology contributes to the study in various ways.
+\begin{enumerate}
+\item A Computer Algebra System provides often an interactive tutor for integration methods. Its usage for small values of the parameter helps to find a general way to compute $I_n$ as a function of $I_{n-1}, I_{n-2},...$. With this, closed formulas can be looked for.
+\item The Online Encyclopedia of Integer Sequences (\url{oeis.org}). Experiments with the CAS provide the first terms of the sequences of integrals. Using the database, candidates to describe the sequence $(I_n)$ are obtained. Determination of a closed formula is made easier.
+\end{enumerate}
+
+Specific situations may appear:
+ \begin{itemize}
+ \item The computation of the integral for general parameter may be performed directly by the CAS. This has been the case for $I_n=\int_0^{\pi /2 } \frac {dt}{1+tan^n(t)}$ with DERIVE (it returns immediately $\pi / 4$, an answer independent of the value of the parameter!). Other CAS had hard time with this integral. The reason is that a specific theorem is implemented there; this theorem does not appear in most textbooks and is explained in [1].
+ \item If the answer is readable immediately, we are done. The answer may involve special functions. For example, if $I_n=\int_0^{\pi / 2} \sin^n t \; dt$, Maple's command returns immediately $I_n=\frac{\sqrt{\pi} \; \Gamma (\frac 12 + \frac n2)}{2 \; \Gamma (1+ \frac n2}$, providing an incitement to learn something new, the Gamma function, as an extension of the curriculum. An example is described in [5].
+ \end{itemize}
+
+We illustrate the different cases with new examples of integrals of rational functions, trigonometric functions, etc., and examples of applications in science and engineering.
+
+
+
+
+\textbf{Keywords} \newline{} Parametric integrals, combinatorics, applications
+
+\textbf{References} \newline{}
+[1] \textsc{G. Boros and V. Moll}, \emph{Irresistible Integrals: Symbolics, Analysis And Experiments In The Evaluation Of Integrals}, Cambridge University Press (2004).\newline{}
+[2] \textsc{Th. Dana-Picard}, Parametric integrals and symmetries of functions, \emph{Mathematics and Computer Education}, 5-12 (2005).\newline{}
+[3] \textsc{Th. Dana-Picard}, Integral presentations of Catalan numbers and Wallis formula, \emph{International Journal of Mathematical Education in Science and Technology} \textbf{42} (1), 122-128 (2011). \newline{}
+[4] \textsc{Th. Dana-Picard and D.G. Zeitoun}, Sequences of definite integrals, infinite series and Stirling numbers, \emph{International Journal of Mathematical Education in Science and Technology} \textbf{43} (2), 219-230 (2012). \newline{}
+[5] \textsc{Th. Dana-Picard and D.G. Zeitoun}, Parametric integrals, Wallis formula and Catalan numbers, \emph{International Journal of Mathematical Education in Science and Technology} \textbf{43} (4), 515-520 (2012).\newline{}
+[6] \textsc{Th. Dana-Picard and D.G. Zeitoun}, Exploration of Parametric Integrals related to a Question of Soil Mechanics, \emph{International Journal of Mathematical Education in Science and Technology} \textbf{48} (4), 617-630 (2017).\newline{}
+[7] \textsc{P. Glaister}, Factorial sums, \emph{International Journal of Mathematical Education in Science and Technology} \textbf{34} (2), 250-257 (2003).
+\end{abstract_online}
+
+
+
+

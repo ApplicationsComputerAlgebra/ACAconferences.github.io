@@ -1,0 +1,9 @@
+Computation of Erdos-Woods Numbers
+
+Nik Lygeros
+
+Erdos-Woods Numbers are defined as the length of an interval of consecutive
+integers whose every element is not coprime with its extremeties.  Woods was
+the first to find such numbers, Dowe proved there exists an infinity and
+Cagielski, Heroult and Richard that their set is recursive.  Our aim is to
+study the arithmetical proprieties of those numbers.

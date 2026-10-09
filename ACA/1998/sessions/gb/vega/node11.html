@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Simplification of the set of conditions.</TITLE>
+<META NAME="description" CONTENT="Simplification of the set of conditions.">
+<META NAME="keywords" CONTENT="vega">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="vega.css">
+</HEAD>
+<BODY bgcolor=white>
+
+<H2><A NAME="SECTION00032000000000000000">
+Simplification of the set of conditions.</A>
+</H2>  
+  
+As described in the previous section, we have obtained a set of good
+specialization  conditions. Each condition different from the first one, ie
+that corresponding to the list 
+<!-- MATH: $[0,\ldots,0]$ -->
+<IMG
+ WIDTH="68" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.gif"
+ ALT="$[0,\ldots,0]$">,
+is presented in the following
+way:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+p_1(\underline{T})=0,\ldots,p_k(\underline{T})=0,
+q_1(\underline{T})\neq 0,\ldots,q_m(\underline{T})\neq 0
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="case1">&#160;</A><IMG
+ WIDTH="369" HEIGHT="31"
+ SRC="img133.gif"
+ ALT="\begin{displaymath}
+p_1(\underline{T})=0,\ldots,p_k(\underline{T})=0,
+q_1(\underline{T})\neq 0,\ldots,q_m(\underline{T})\neq 0\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where <IMG
+ WIDTH="45" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img134.gif"
+ ALT="$k\geq 1$">,
+<IMG
+ WIDTH="50" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img135.gif"
+ ALT="$m\geq 1$">
+and the <I>p</I><SUB><I>i</I></SUB>'s and the <I>q</I><SUB><I>i</I></SUB>'s are polynomials in
+
+<!-- MATH: ${\mathchoice {\hbox{$\textstyle {\rm Z\!\!Z}$ }} {\hbox{$\textstyle
+{\rm Z\!\!Z}$ }} {\hbox{$\scriptstyle {\rm Z\!\!Z}$ }}  
+{\hbox{$\scriptscriptstyle {\rm Z\!\!Z}$ }}}[\underline{T}]$ -->
+<IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img136.gif"
+ ALT="${\mathchoice {\hbox{$\textstyle {\rm Z\!\!Z}$ }} {\hbox{$\textstyle
+{\rm Z\!\!...
+...e {\rm Z\!\!Z}$ }}
+{\hbox{$\scriptscriptstyle {\rm Z\!\!Z}$ }}}[\underline{T}]$">
+non constant. In what follows it is showed how the
+description of every condition can  be simplified.
+
+<P>
+In the case of one parameter, 
+<!-- MATH: $\underline{T}=t$ -->
+<IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img137.gif"
+ ALT="$\underline{T}=t$">,
+if 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+p(t)=\gcd(p_1(t),\ldots,p_k(t))
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="192" HEIGHT="31"
+ SRC="img138.gif"
+ ALT="\begin{displaymath}p(t)=\gcd(p_1(t),\ldots,p_k(t))\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+the considered condition (<A HREF="node11.html#case1">3</A>), with 
+<!-- MATH: $\underline{T}=t$ -->
+<IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img137.gif"
+ ALT="$\underline{T}=t$">,
+is equivalent
+to
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+p(t)=0,  q_1(t)\neq 0,\ldots,q_m(t)\neq 0
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="case2">&#160;</A><IMG
+ WIDTH="235" HEIGHT="31"
+ SRC="img139.gif"
+ ALT="\begin{displaymath}
+p(t)=0, q_1(t)\neq 0,\ldots,q_m(t)\neq 0\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+If <I>p</I>(<I>t</I>)=1, ie the <I>p</I><SUB><I>i</I></SUB>'s are coprime, then this condition is directly
+discarded since it would be never verified. If 
+<!-- MATH: $\deg(p(t))\geq 1$ -->
+<IMG
+ WIDTH="101" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img140.gif"
+ ALT="$\deg(p(t))\geq 1$">
+then by
+defining iteratively 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+Q_{0}(t)=p(t),\qquad
+Q_{i+1}(t)=\frac{Q_i(t)}{\gcd(Q_i(t),q_i(t))},\quad\hbox{if} \;\; i\geq 0
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="402" HEIGHT="48"
+ SRC="img141.gif"
+ ALT="\begin{displaymath}Q_{0}(t)=p(t),\qquad
+Q_{i+1}(t)=\frac{Q_i(t)}{\gcd(Q_i(t),q_i(t))},\quad\hbox{if} \;\; i\geq 0\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+it is
+easy to verify that the condition (<A HREF="node11.html#case2">4</A>) is equivalent to 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+Q_{m+1}(t)=0
+\end{equation} -->
+<A NAME="case3">&#160;</A>
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+<I>Q</I><SUB><I>m</I>+1</SUB>(<I>t</I>)=0
+</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+In the case of several parameters, it is clear that the same approach can not
+be further followed but several heuristics can be adopted in order to
+simplify the output:
+<UL>
+<LI>To check for emptyness with respect to the equalities: if the Grobner
+Basis of 
+<!-- MATH: $p_1(\underline{T}),\ldots,p_k(\underline{T})$ -->
+<IMG
+ WIDTH="124" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img142.gif"
+ ALT="$p_1(\underline{T}),\ldots,p_k(\underline{T})$">
+with respect to any
+monomial ordering is equal to 1 then the corresponding condition is
+discarded.
+<LI>To apply a ``lazy factorization" approach as in the GPT strategy (see
+[<A
+ HREF="node15.html#GPT88">6</A>] or subsection <A HREF="node7.html#GPT">1.4</A>).
+</UL>
+<P>
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

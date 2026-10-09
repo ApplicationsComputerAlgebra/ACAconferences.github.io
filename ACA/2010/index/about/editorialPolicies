@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Editorial Policies</title>
+	<meta name="description" content="Applicatios of Computer Algebra, University of Vlora June 24-27, 2010" />
+	<meta name="keywords" content="computer algebra; vlora" />
+	<meta name="generator" content="Open Conference Systems 2.1.1.2" />
+	
+
+	<link rel="stylesheet" href="http://aca2010.info/styles/common.css" type="text/css" />
+
+	
+	
+	<link rel="stylesheet" href="http://aca2010.info/styles/sidebar.css" type="text/css" />	<link rel="stylesheet" href="http://aca2010.info/styles/leftSidebar.css" type="text/css" />	<link rel="stylesheet" href="http://aca2010.info/styles/rightSidebar.css" type="text/css" />	<link rel="stylesheet" href="http://aca2010.info/styles/bothSidebars.css" type="text/css" />
+			<link rel="stylesheet" href="http://aca2010.info/plugins/themes/classicNavy/classicNavy.css" type="text/css" />
+	
+	<script type="text/javascript" src="http://aca2010.info/js/general.js"></script>
+	
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript" src="http://aca2010.info/js/sizer.js" ></script>
+
+	<!-- Add stylesheets for the font sizer -->
+	<link rel="alternate stylesheet" title="Small" href="http://aca2010.info/styles/fontSmall.css" type="text/css" />
+	<link rel="stylesheet" title="Medium" href="http://aca2010.info/styles/fontMedium.css" type="text/css" />
+	<link rel="alternate stylesheet" title="Large" href="http://aca2010.info/styles/fontLarge.css" type="text/css" />
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+<div id="headerTitle">
+<h1>
+	<img src="http://aca2010.info/public/conferences/1/pageHeaderLogoImage_en_US.jpg" width="186" height="186" alt="UV logo" />
+	ACA 2010, Vlora, Albania,  June 24-27, 2010
+</h1>
+</div>
+</div>
+
+<div id="body">
+
+	<div id="sidebar">
+					<div id="leftSidebar">
+				<div class="block" id="sidebarInformation">
+	<span class="blockTitle">Information</span>
+	<ul>
+		<li><a href="../information/readers">For Readers</a></li>		<li><a href="../information/presenters">For Authors</a></li>	</ul>
+</div>
+<div class="block" id="sidebarUser">
+	<span class="blockTitle">User</span>
+		<form method="post" action="http://aca2010.info/index.php/aca2010/index/login/signIn">
+	<table>
+	<tr>
+		<td><label for="sidebar-username">Username</label></td>
+		<td><input type="text" id="sidebar-username" name="username" value="" size="12" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr>
+		<td><label for="sidebar-password">Password</label></td>
+		<td><input type="password" id="sidebar-password" name="password" value="" size="12" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">Remember me</label></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit" value="Log In" class="button" /></td>
+	</tr>
+	</table>
+	</form>
+	</div>	<div class="block" id="sidebarNavigation">
+		<span class="blockTitle">Conference Content</span>
+		
+		<span class="blockSubtitle">Search</span>
+		<form method="post" action="http://aca2010.info/index.php/aca2010/index/search/results">
+		<table>
+		<tr>
+			<td><input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /></td>
+		</tr>
+		<tr>
+			<td><select name="searchField" size="1" class="selectMenu">
+				<option label="All" value="">All</option>
+<option label="Authors" value="1">Authors</option>
+<option label="Title" value="2">Title</option>
+<option label="Abstract" value="4">Abstract</option>
+<option label="Index terms" value="120">Index terms</option>
+<option label="Full Text" value="128">Full Text</option>
+
+			</select></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Search" class="button" /></td>
+		</tr>
+		</table>
+		</form>
+		
+		<br />
+	
+	
+				<span class="blockSubtitle">Browse</span>
+		<ul>
+			<li><a href="../search/schedConfs">By Conference</a></li>
+			<li><a href="../search/presenters">By Author</a></li>
+			<li><a href="../search/titles">By Title</a></li>
+					</ul>
+			</div>
+<div class="block" id="sidebarFontSize">
+	<span class="blockTitle">Font Size</span>
+	<a href="editorialPolicies#" onclick="setFontSize('Small');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_small.gif" width="16" height="14" border="0" alt="Small" /></a>&nbsp;
+	<a href="editorialPolicies#" onclick="setFontSize('Medium');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_medium.gif" width="16" height="14" border="0" alt="Medium" /></a>&nbsp;
+	<a href="editorialPolicies#" onclick="setFontSize('Large');" class="icon"><img src="http://aca2010.info/templates/images/icons/font_large.gif" width="16" height="14" border="0" alt="Large" /></a>
+</div>
+			</div>
+							<div id="rightSidebar">
+				<div class="block" id="sidebarDevelopedBy">
+	<a class="blockTitle" href="http://pkp.sfu.ca/ocs/" id="developedBy">Open Conference Systems</a>
+</div>	<div class="block" id="sidebarHelp">
+	<a class="blockTitle" href="javascript:openHelp('http://aca2010.info/index.php/aca2010/index/help')">Conference Help</a>
+</div>
+			</div>
+			</div>
+
+<div id="main">
+<div id="navbar">
+	<ul class="menu">
+		<li><a href="http://aca2010.info/index.php/index/index">Home</a></li>
+		<li><a href="../about">About</a></li>
+					<li><a href="../login">Log In</a></li>
+			<li><a href="../user/account">Account</a></li>
+				<li><a href="../search.1">Search</a></li>
+								<li><a href="../schedConfs/archive">Archive</a></li>							<li><a href="../announcement">Announcements</a></li>
+						
+							<li><a href="http://univlora.edu.al">University of Vlora</a></li>
+					<li><a href="http://aca2010.info/index.php/aca2010/aca2010/schedConf/trackPolicies">Special Sessions</a></li>
+					<li><a href="https://sites.google.com/a/univlora.edu.al/aca-schedule/home/schedule">Schedule</a></li>
+			</ul>
+</div>
+
+<div id="breadcrumb">
+	<a href="http://aca2010.info/index.php/index/index/index">Home</a> &gt;
+			<a href="../../aca2010.1" class="hierarchyLink">ACA 2010, Applications of Computer Algebra, June 24-27,  Vlora, Albania</a> &gt;
+			<a href="../about" class="hierarchyLink">About the Conference</a> &gt;
+		<a href="editorialPolicies" class="current">Editorial Policies</a>
+</div>
+
+<h2>Editorial Policies</h2>
+
+<div id="content">
+<ul class="plain">
+												<li>&#187; <a href="editorialPolicies#custom0">Special Sessions</a></li>
+								<li>&#187; <a href="editorialPolicies#custom1">Talks</a></li>
+								<li>&#187; <a href="editorialPolicies#custom2">Schedule</a></li>
+			</ul>
+
+
+
+
+
+
+
+			<a name="custom0"></a><h3>Special Sessions</h3>
+		<p>This conference is structured as a series of Special Sessions (see <a href="http://aca2009.etsmtl.ca/format.html" target="_self">Format</a> for more details). If you wish to organize a Special Session at ACA 2010, send your proposal to the Program Chairs. Be sure to include:  <ul type="circle"><li>the title of the Special Session,</li><li>the contact information of the organizers,</li><li>a short abstract stating the purpose of the Session.</li></ul> You should receive a quick response to your Session proposal once it has been evaluated by the Program Chairs (in collaboration with the ACAWG). Accepted Special Sessions are listed below. Organizers of Special Sessions are expected to maintain a website and are responsible for soliciting talks and contributions to their Session. (To submit an abstract, consult the link to the session that addresses your interests below.) Sessions are expected to contain at least 4 talks. The scientific quality of a Special Session is the sole responsibility of the session organizers. <p>Deadline for Session Proposals: May 15<sup>th</sup> 2010.</p></p>
+		<div class="separator">&nbsp;</div>				<a name="custom1"></a><h3>Talks</h3>
+		<p>All participants who would like to give talks must contact the chairs of the special sessions who are responsible for the scientific content of the sessions.<br />
+<br />
+You must register as an "author" in order to submit the abstract of the talk. Only talks submitted through the website will be accepted.</p>
+		<div class="separator">&nbsp;</div>				<a name="custom2"></a><h3>Schedule</h3>
+		<p>https://sites.google.com/a/univlora.edu.al/aca-schedule/home/schedule</p>
+			
+<br /><br />
+<h3 dir="ltr"><span id="sites-page-title">Sponsors</span></h3><div style="margin: 5px 10px 0pt 0pt; display: inline; float: left;"><br /><br /><br /></div><div style="margin: 5px 10px 0pt 0pt; display: inline; float: left;"><a href="https://sites.google.com/a/univlora.edu.al/conferences-at-uv/aca/UV_Logo.png?attredirects=0"><img src="https://sites.google.com/a/univlora.edu.al/conferences-at-uv/_/rsrc/1263144519874/aca/UV_Logo.png?height=200&width=0" border="0" alt="" width="0" height="200" /></a></div><ul><li><strong>College of Technical Sciences, <a rel="nofollow" href="http://www.univlora.edu.al/">University of Vlora</a></strong></li></ul><ul><li><em><span style="text-decoration: underline;"><a href="http://sites.google.com/site/aulonnapress/" target="_blank"><strong>Aulona Press</strong></a></span></em><br /></li></ul><ul><li><a href="https://sites.google.com/a/univlora.edu.al/albanian-math-society/" target="_blank"><span style="text-decoration: underline;"><strong>Albanian Mathematical Society</strong></span></a></li></ul>
+
+
+
+</div><!-- content -->
+</div><!-- main -->
+</div><!-- body -->
+
+
+
+</div><!-- container -->
+</body>
+</html>

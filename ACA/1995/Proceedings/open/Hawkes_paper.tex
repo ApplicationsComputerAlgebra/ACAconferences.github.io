@@ -1,0 +1,656 @@
+% Update with minor corrections 22 May 1995
+
+% G.Keady's paper for ELECTRONIC PROCEEDINGS *ONLY* of IMACS-ACA95.
+% Self-contained LaTeX file. You might want to change settings
+% for page setup for US letter or whatever you use.
+% 
+% I have tried to avoid saying things that have already
+% appeared in print, so it is a bit light on details of how it
+% works, but they are all in the references and software.
+% wc abstract.tex
+%     659    3671   24456 GrantKeady.tex
+%
+%
+% I have set up the files related to running the software
+% as reported in this paper to be available by anon ftp from 
+% 130.95.16.1
+% The  files are in directory /pub/keadyPapers/95imacsACA.
+% This is also mentioned in the paper.
+% AXIOM )spool output and Matlab diary-file output is also there.
+%madvax{keady}231: pwd
+%/var1/ftp/pub/keadyPapers/95imacsACA
+%madvax{keady}232: ls
+%AXIOMd/			genmexD/		keadyIMACSaca.tex
+%
+%
+% From stanly@math.unm.edu Thu Apr 20 05:13:09 1995
+%Subject: Proceedings
+%It is now important for the presenters to submit their papers for the
+%proceedings.  A paper is preferred, but an extended abstract is also ok.
+%If the papers are not ready, then the title, authors, and affiliations
+%should be submitted as this will be used to build the program for the
+%meeting.
+
+% Apr 95 version
+% Initial author of this document
+% keady@maths.uwa.edu.au
+% 
+
+\documentstyle{article}
+\textwidth=15.1cm
+\textheight=23.0cm
+% Was 21cm.         Vertical dimensions increased
+%\headheight=0cm   % to get a bit more on A4 page
+\topmargin=-1.0cm
+\headsep=0cm
+\oddsidemargin=0.3cm
+\evensidemargin=\oddsidemargin
+\parskip 2pt plus 1pt
+% with twoside style
+%\oddsidemargin=0.46cm
+%\evensidemargin=0.16cm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Two more links to NAG numerics involving CA systems}
+%
+\author{Evatt Hawkes and Grant Keady,\\
+Mathematics Department, University of Western Australia,\\
+Nedlands, 6907, AUSTRALIA.\\ 
+e-mail: \verb$keady@maths.uwa.edu.au$\\}
+
+
+\date{Electronic Proceedings, IMACS Applied Computer Algebra Conference,\\
+University of New Mexico, USA, 16-19 May 1995}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+The `more' in the title is because this paper is a sequel to 
+papers with Kevin Broughan, \cite{BKRRD,BK}.
+For some years GK has had interests in 
+(i) interactive front-ends to numeric computation, such as NAG/IMSL
+library computation, and
+(ii) Fortran code generation for Argument SubPrograms (ASPs), 
+such as those needed by some NAG/IMSL routines.
+Demonstrations of three links to the NAG library
+are described in \cite{BKRRD}.
+A description of a link to NAG from Macsyma which was mentioned,
+but not in a sufficiently advanced state to demonstrate
+in early 1991, is given in \cite{BK}.
+The situation at the end of 1991 was that there were links to NAG
+involving each of Macsyma, REDUCE and Mathematica.
+The links are called
+Naglink, IRENA and InterCall, respectively.
+The principal author of Naglink is Kevin Broughan, 
+and of InterCall is Terry Robb:
+the principal authors of IRENA are Mike Dewar and Mike Richardson.
+InterCall is not specific to the NAG library:
+indeed InterCall is used with calls to IMSL and to elsewhere
+at the conference venue, the University of New Mexico.
+
+The two further links to NAG library treated in this paper
+are AXIOM2.0 and genmex/ESC, genmex allowing
+calls to NAG from Matlab.
+genmex can be regarded as similar to InterCall:
+genmex uses Matlab's mex files in a similar way
+to InterCall's use of Mathematica's MathLink.
+Again genmex is not specific to the NAG library.
+Mike Dewar is an author both of IRENA and
+the AXIOM2.0 link to the NAG library:
+see \cite{D} for discussion of the differences between
+the IRENA project and the AXIOM-NAG link project.
+
+All these links are, we think, primarily intended for users
+of the CA packages and/or Matlab, who have needs for 
+numeric routines available in NAG.
+In this connection we remark that it has been our observation
+that the uptake of genmex usage has been much faster than
+any of the other links. 
+Our sample is small, and the observation might just be because 
+Matlab happens to be popular amongst applied mathematicians and
+engineers at UWA, and there are not many CA enthusiasts.
+A deeper cause, which might explain the more rapid uptake,
+is that it may be due to the
+fact that Matlab users are more likely to be interested in
+numeric computation of the kind provided in NAG library
+than are most present-day CA users.
+We have also observed that, even at a site with the NAG library,
+genmex is used more frequently with
+routines not in the NAG library than with NAG.
+For Matlab users, genmex really is a worthwhile tool.
+Similarly, for AXIOM users needing numerics, the link to 
+the NAG library is worthwhile.
+
+In this paper,
+as in \cite{BKRRD,BK,KN,KR,KL},
+we choose to exemplify
+the links using NAG routines which require jacobian codes.
+In this paper we solve nonlinear two-point boundary-value
+problems, and use NAG's {\tt d02raf} routine.
+We have a system of $n$ o.d.e.s to be solved in interval $(a,b)$:
+$$ y_i^{\prime} = f_i(x,y_1,y_2,\ldots,y_n) \ , \qquad i=1,2,\ldots,n ,$$
+and $n$ nonlinear boundary conditions
+$$g_i(y(a),y(b)) = 0 \ , \qquad i=1,2,\ldots,n . $$
+The NAG routine {\tt d02raf} requires ASPs specifying
+$f$, $g$ and (optionally) various jacobians.
+\goodbreak
+
+The test example for {\tt d02raf}
+treated in the NAG documentation
+has $n=3$, $(a,b)=(0,10)$.
+% and is the case
+%$\epsilon=1$ of the following.
+%\begin{eqnarray*}
+%y_1^\prime
+%&=& y_2  , \\
+%y_2^\prime
+%&=&  y_3 ,\\
+%y_3^\prime
+%&=& -y_1 y_3 - 2 \epsilon (1 -y_2^2) ,
+%\end{eqnarray*}
+%with boundary conditions $y_1(a)=0$, $y_2(a)=0$,
+%$y_2(b)=1$.
+Two boundary conditions (b.c.s) are specified at the left end-point $a$,
+and one at the right end-point $b$, and, of course,
+there are then no mixed b.c.s.
+%$y_2(b)=1$.
+%(The equation is the Falkner-Skan equation for boundary-layer
+%flow past a wedge. The case $\epsilon=0$ is a flat plate.)
+
+The intention of this genre of software -
+links to NAG - is that it should be useful.
+An engineering company in Perth, Australia, builds `packers'.
+Packers are made from steel-reinforced thick rubber and are
+long `balloons' which are inflated in,
+for example, oil-well bore holes when it is desired
+to block off flow. 
+A project is in progress to model these:
+part of the project requires the determination
+of the properties of the rubber used.
+One method for determining rubber properties involves the
+inflation of a thin, flat, circular rubber membrane.
+By measurements of the strain, curvature and inflating pressure,
+it is possible to obtain an estimate of the parameters
+defining the strain energy function of the rubber.
+There is radial symmetry.
+In order to check the determined parameters, it is useful to
+develop a full solution to the
+two-point boundary-value problem describing the inflation.
+This solution may then be compared with experimentally obtained
+profiles to check that the model and its parameters are
+indeed representative.
+The model involves a system of four coupled first-order d.e.s,
+$n=4$. The interval $(a,b)$ corresponds physically to
+$r=x$ varying from the centre of the disk to its perimeter.
+The problem involves, at early stages, some messy algebra,
+and CA is used to set up the d.e.s.
+Three boundary conditions (b.c.s) are specified at the left end-point $a$,
+and one at the right end-point $b$, and, of course,
+there are then no mixed b.c.s.
+NAG's d02raf is appropriate and works well in practice.
+
+The plan for the presentation is:
+\begin{itemize}
+\item{} genmex, and  NAG's test example (see update to \cite{KL});
+\item{} AXIOM2.0, and NAG's test example (see AXIOM distribution);
+\item{} AXIOM2.0, and the rubber-disk-inflation example;
+\item{} genmex, and the rubber-disk-inflation example.
+\end{itemize}
+Unfortunately, as is probably typical of many real engineering
+problems, the rubber-disk-inflation example is messy,
+too messy to be printed in this paper.
+Full details, and all the code, is available in \cite{H}, 
+and references.
+These are available by anonymous ftp:
+see the end of this paper.
+Here we describe the use of d02raf
+only in general terms.
+The case for presenting the NAG test example in the talk
+is that it is easy, yet the real problem involving
+rubber-disk-inflation just amounts to changing the
+functions $f$ defining the d.e., $g$ defining the b.c.s,
+and the initial guess.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{genmex, and ESC}
+
+genmex was written, and is maintained, by Marko Laine
+at the University of Helsinki.
+Neither authors of this paper have contributed to genmex. 
+In late 1990 GK did suggest to the people in Helsinki that
+InterCall was very much worth investigating, and is
+pleased to see InterCall influences on genmex.
+GK assembled some printed documentation, \cite{KL}.
+
+There is a commercial alternative to genmex, sold by NAG.
+See \cite{HHN} and NAG's WWW site.
+The commercial product has better documentation,
+far fewer bugs (none?), and you buy support.
+NAG's product is more Fortran based and,
+at 1993 at any rate, only covered the NAG Foundation Library,
+which is only about a quarter of the NAG library.
+genmex covers the full library.
+Our impression is that somewhere around
+95\% of the NAG routines work fine and
+correctly from genmex
+(compared to about 98\% correct from InterCall).
+However there can be `problems' with some of the harder ones,
+and d02raf was one of these.
+The failures are `not running': we haven't yet seen any
+wrong numbers.
+So far all
+the problems we have encountered have been ones where a user,
+with some knowledge of Matlab, can solve readily.
+genmex, written in C, is definitely appropriate for universities.
+It is neat, not too large, and free.
+Students wishing to learn how it all works
+and to improve it, can experiment and offer ideas
+for its development.
+\goodbreak
+
+Details of how to get genmex are given at the end of this article.
+genmex is part of a larger project, called `ESC',
+abbreviating `Environments for Scientific Computation'.
+ESC involves several people in Helsinki.
+Different scientists and engineers
+are likely to have different choices of several items of software.
+The idea in ESC is to provide tools to help the
+different parts work together.
+The ESC idea has each scientist choosing 
+a matrix language (e.g. APL or Matlab), 
+a numeric library (e.g. NAG, IMSL or other),
+a CA package (Maple, Mathematica, AXIOM or whatever).
+The tools provided in ESC distributions concerning CA
+involve Fortran code generation, to help the CA
+provide argument subprograms (ASPs) for the numeric library.
+For example, the genmex distribution comes with aspfor,
+a Maple package for generating Fortran ASPs, and also
+examples of aspfor being used in tandem with genmex. 
+(We do have some criticisms of how the total package fits
+together, especially whether, if a Fortran ASP is provided,
+the current use of this in genmex is as neat as it might be.
+However, if one has some familiarity with C, Fortran and mex files,
+one can manually modify genmex produced code to make the final
+mex files produced accord to how one likes them.)
+
+With that reference to CA, we now concentrate on
+genmex itself.
+genmex {\it gen}erates {\it mex} files from a simple
+database descriptions of a Fortran function or subroutine.
+genmex's database for the NAG library was substantially
+obtained by processing the corresponding InterCall database
+(and every so often one discovers less than perfect
+decisions made the same in both databases).
+We had to alter the database entry for d02raf a little:
+see description in an April 95 update to \cite{KL}.
+(genmex takes the database description, e.g. for d02raf,
+writes an m file, d02raf.m, and
+a C function d02raf\_.c and compiles the latter,
+linking with the relevant NAG routine, to build the mex 
+file. Details are in \cite{L}.)
+
+The easiest way to use genmex is to provide the ASPs as
+Matlab m functions.
+Suppose one has done that, with the function for the
+rhs of the d.e. in d02ra2f.m and that describing the b.c.s in
+d02ra2g.m. Suppose also that the initial
+np, x and y are defined in script file initial2xy.m.
+After this, the following Matlab script 
+solved the disk-inflation example.
+\begin{verbatim}
+% Generate the mex file ...
+genmex d02raf
+% Now do some initialization ...
+n=4;        % number of equations
+numbeg=3;   % number of left-hand b.c.s
+nummix=0;   % number of mixed b.c.s
+% The initial np, x mesh, y guess at solution, are read from
+% a script file
+initial2xy
+% ... and now calculate the solutions...
+[npo,xo,yo]=d02raf(n,np,numbeg,nummix,x,y,'d02ra2f','d02ra2g');
+%
+% Now we have the solution mesh xo,yo and are ready to plot it
+\end{verbatim}
+See \cite{H} and the April 95 update to \cite{KL} for the full code,
+and the Postscript from the plots.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{AXIOM}
+
+AXIOM is a truly marvellous combination of object-oriented programming
+style with AlgebraicStructure.
+See \cite{JS} and the documentation with its distribution.
+These aspects make it GK's `favorite' package.
+GK is less confident that coercion of AXIOM objects to Fortran
+ASPs and other aspects of Fortran/C numerics will, during 
+his lifetime, get to look beautiful.
+
+One of the items new in AXIOM2.0 is a link to the
+(Foundation Library subset of the) NAG library.
+The details of how the link works are given in
+the documentation with its distribution and in \cite{D}.
+GK helped, in 1992-93 with its Fortran code generation tools,
+and also wrote its MultiVariableCalculusFunctions Package,
+used for calculating jacobians and similar things.
+\goodbreak
+
+GK came to work on the AXIOM code generation because of
+some shared background with Mike Dewar.
+The Fortran code generation described in \cite{BK,K92}
+and used in IRENA is from GENTRANs.
+The first GENTRAN was for Macsyma and written by Paul Wang
+over a decade ago.
+REDUCE's GENTRAN is now maintained by Mike Dewar, who was
+the principal designer and author of the link 
+to the NAG library in AXIOM2.0.
+The Fortran code generation tools in AXIOM2.0 are like
+GENTRAN in that both use an intermediate level language
+which the CAS can manipulate. 
+The contributions of GK are in various ASP domains and
+related items, and some written account of them is in \cite{KN}.
+
+There are many ways to use the link. It is available from
+the HyperDoc system.
+Here one just alters the template on the relevant HyperDoc
+page.
+Our own feeling is that this is likely to be more useful
+for simple problems. Problems of the difficulty of d02raf
+are much much easier just treated in AXIOM code.
+
+\subsection*{The rubber-disk-inflation engineering example}
+
+We want to be able to vary parameters, and in the code which
+follows arrange that a parameter C2 can be changed in just
+one file.
+The messy specifics of the problem are in files deliberately
+not given in the paper, dskeul.input and initial2xy.input.
+
+\begin{verbatim}
+)set fortran precision double
+)spool solnC2.00
+-- dskeul.input sets up equations and bcs in FidiskC2 and Gdisk
+)re dskeul
+-- Now give C2 a numeric value
+c2is(u:EXPR(INT)):EXPR(INT) == eval(subst(u,C2=0))
+Fidisk:List(EI) := map(c2is,FidiskC2)
+Fdisk:List(EXPR(Float)):= Fidisk
+-- solve with d02raf
+)re d02rah.input
+)spool
+\end{verbatim}
+
+The file d02rah.input below is just a lightly edited
+form of the example d02raf.input, solving the NAG test example.
+d02raf.input comes with the AXIOM distribution.
+\begin{verbatim}
+--file d02rah.input
+showArrayValues true; showScalarValues true
+-- Fdisk and Gdisk for d.e.s and b.c.s resp. are from
+--)re dskeul
+-- Now define some scalar input parameters to d02raf
+n:= 4;  -- #(Fdisk)   -- 4 here
+iy:=n;       mnp:=100
+numbeg:=3;   nummix:=0;
+tol:=1.0e-4; init:=1;     ijac:=1;
+lwork:=mnp*(3*n*n+6*n+2) +4*n*n + 3*n; liwork:=mnp*(2*n+1)+n
+np:=33
+-- np and mnp must accord with data in initial guess
+vef:Vector(Expression(Float)):= Fdisk;
+fcn:Asp41(FCN,JACOBF,JACEPS):= retract vef
+-- outputAsFortran(fcn)  -- to see the Fortran
+-- prepare to set up initial guess
+x:Matrix(SF):=new(1,mnp,0.0);
+y:Matrix(SF):=new(iy,mnp,0.0);
+-- read in the initial guess
+)re initial2xy
+-- set remaining scalar parameters
+deleps:=0.0;     ifail:=11
+g:Asp42(G,JACOBG,JACGEP):=retract Gdisk -- remaining ASPs
+ans:= d02raf(n,mnp,numbeg,nummix,tol,init,iy,ijac,_
+             lwork,liwork,np,x,y,deleps,ifail,fcn,g)
+\end{verbatim}
+
+
+We note that in this version of the link, there is less
+`defaulting' of variables than in some of the other links,
+e.g. genmex and InterCall.
+
+People who used AXIOM's graphics reasonably regularly
+(and unfortunately other demands on the authors' time mean
+that they aren't such people) would then progress
+to use AXIOM's graphics to plot out the solutions.
+
+\subsection*{A criticism of the initial AXIOM2.0 NAG link}
+
+In engineering applications, such as the rubber-disk-inflation
+example, it is typical for the numerical solution to be required at
+various different values of parameters.
+Specifying such parameters, e.g. the C2 mentioned above,
+as global variables in Matlab, makes the exercise of
+re-running the d02raf mex file trivial.
+No further compilation is needed.
+However, in the present AXIOM-NAG link, there seems
+to be no obvious way around having to re-generate
+the ASPs, re-compile them, and link and run:
+thus, just changing parameters takes one right back to
+the beginning of the exercise.
+
+
+\section*{Rubber-disk-inflation example from genmex}
+
+A small variation, used in the genmex version
+given in \cite{H}, is that a reasonably good starting guess
+is generated by a process where by the user suggests
+numeric inputs to an initial-value problem solver,
+d02bbf, stopping when something which looks reasonable is
+reached.
+The m functions for both d02bbf and d02raf were generated by CA 
+(Maple originally)
+writing Fortran and then this Fortran was edited into an
+m function.
+(In a larger-scale problem, a Fortran ASP would be prefered.)
+
+An interesting point as far as an Applied Computer Algebra
+conference is concerned is that the input of mathematical
+descriptions of engineering problems into CA packages is
+easier than describing them in the code of the more numerically 
+oriented packages and languages.
+Presumably Matlab's Symbolic Toolbox (Maple) will address this
+for Matlab users.
+There is room for evolution of Maple, e.g. so that as well
+as the production of C and Fortran, it can write Matlab
+code.
+There is room for evolution of the Symbolic Toolbox in that it
+should be able to write acceptable Matlab code.
+This could be used in problems like
+the rubber-disk-inflation example,
+but also for many more, e.g. in tandem with 
+Matlab's Optimization Toolbox.
+
+\section*{Conclusion}
+
+The links to Fortran numerics from interactive packages
+have reached a level of reliability where engineers, etc.
+needing to use them can use them.
+People with an established preference for an interactive
+package should not need to change.
+Some spirit of adventure is still needed, as
+perfection has yet to be attained.
+
+% FILE genRef.tex
+
+\section*{Items on the Internet}
+
+Several items
+are available by anonymous ftp from 130.95.16.1.
+Full code for items mentioned in this paper is
+in directory \verb$ /pub/keadyPapers$.
+It is in subdirectory \verb$ 95imacsACA$,
+as is the genmex student project application, \cite{H}.
+The papers \cite{BKRRD,BK,K92,KN,KR} %,CK93 
+are also in \verb$ /pub/keadyPapers$.
+The genmex documentation \cite{KL}
+is in  \verb$ /pub/keady$.
+
+\par\noindent
+genmex and aspfor are available by anonymous ftp from\\
+sophie.helsinki.fi:/pub/math/esc
+
+\par\noindent
+Items on AXIOM, NAG, IRENA and MAGNum are at\\
+http://www.nag.co.uk:70/
+
+\par\noindent
+Items on InterCall are available from\\
+http://lovelace.maths.monash.edu.au:8333/WWW/welcome.html
+
+
+%\section*{Notes on the references}
+
+%Several practical references 
+%for running genmex, and indicating where it and the larger project
+%ESC is developing
+%are in documents edited by Apiola et al.,
+%\cite{ALV91,ALV93,ALP95}.
+%Of these the paper by Laine \cite{L} in \cite{ALV93} and \cite{ALP95}
+%are the most relevant.
+
+%AXIOM is very well documented.
+%See \cite{JS} for an overview and the documentation
+%with the package for the AXIOM-NAG link.
+%For further AXIOM references, see NAG's WWW site, address above.
+
+\begin{thebibliography}{99999}
+
+\bibitem[ALP93]{ALP93} H. Apiola, M. Laine and P. Peltola,
+     {\it Unix ESC Introductory Guide,
+      APL version}.
+     Guide number 19 of the Computing Centre of Helsinki University.
+
+\bibitem[ALP95]{ALP95} H. Apiola, M. Laine and P. Peltola,
+     {\it Unix ESC Introductory Guide,
+      Matlab version}.
+      In preparation.
+     Guide number ? of the Computing Centre of Helsinki University.
+
+\bibitem[ALV91]{ALV91} H. Apiola, M. Laine and E. Valkeila (eds),
+     {\it Proceedings of the
+     Workshop on Symbolic and Numeric Computation,
+     Helsinki, May 1991.} (Ed. H. Apiola, M. Laine and E. Valkeila).
+     Research Report series, Computing Centre of Helsinki University.
+
+\bibitem[ALV93]{ALV93} H. Apiola, M. Laine and E. Valkeila (eds),
+     {\it Proceedings of the
+     Workshop on Symbolic and Numeric Computation,
+     Helsinki, May 1993.} (Ed. H. Apiola, M. Laine and E. Valkeila).
+     Rolf Nevanlinna Research Report series, B10.
+
+\bibitem[BKRRD]{BKRRD} K.Broughan, G.Keady, T.Robb, M.Richardson and
+M.Dewar,
+     Some symbolic computing links to the NAG numeric library.
+     {\it SIGSAM Bulletin}, {\bf 25} (July 1991), 28-37.
+%     (This is a report on part of the ``Workshop on
+%     Symbolic Computing in Applied Maths",
+%     Canterbury University, Christchurch, Feb 91.)
+
+\bibitem[BK]{BK} K. Broughan and G. Keady, Numlink and Naglink:
+     links to the NAG library from SENAC and Macsyma.
+     Pp 19-34 in [ALV91].
+%     {\it Proceedings of the
+%     Workshop on Symbolic and Numeric Computation,
+%     Helsinki 1991.} (Ed. H. Apiola, M. Laine and E. Valkeila).
+%     Research Report series, Computing Centre of Helsinki University.
+
+\bibitem[D]{D} M.C. Dewar,
+     Manipulating Fortran code in AXIOM and the AXIOM-NAG link.
+     Pp 1-12 in [ALV93].
+
+\bibitem[H]{H} 
+E. Hawkes,
+Inflation of a rubber disk:
+an attempt to determine rubber properties: 
+for application in packer design.
+Student project, University of Western Australia.
+
+\bibitem[HHN]{HHN} 
+S. Hemstock, I. Hounam, M. Nadjm,
+The NAGWare Gateway Generator and MAGNum gateways.
+Pp 89-94 in [ALV93].
+
+\bibitem[JS]{JS}
+R. Jenks and R. Sutor,
+{\it AXIOM}
+(Springer: 1992).
+
+\bibitem[K92]{K92} FORTRAN subroutines produced
+     from Computer Algebra systems:
+     using GENTRANs from REDUCE and from Macsyma.
+     Pp 265-272 in {\it Proceedings CTAC-91.
+     Computational Techniques and Applications Conference, Adelaide,
+     July 1991,} ed. J. Noye, B. Benjamin and L. Colgan.
+
+\bibitem[KL]{KL} G. Keady and M. Laine,
+     Using genmex -- examples of calls to NAG.
+     (First version was Jan. 1995.)
+     Documentation available by anonymous ftp from
+     130.95.16.1 in directory /pub/keady
+
+\bibitem[KN]{KN} G. Keady and G. Nolan,
+     Production of Argument SubPrograms in the AXIOM-NAG link:
+     examples involving nonlinear systems.
+     Pp 13-32 in [ALV93].
+%     {\it Proceedings of the
+%     Workshop on Symbolic and Numeric Computation,
+%     Helsinki, May 1993.} (Ed. H. Apiola, M. Laine and E. Valkeila).
+%     Rolf Nevanlinna Research Report series, B10.
+
+\bibitem[KR]{KR} G. Keady and M.G. Richardson,
+     An application of IRENA to systems of nonlinear
+     equations arising in equilibrium flows in networks.
+     Pp 311-320 in {\it Proceedings ISSAC-93,
+     International Symposium on Symbolic and Algebraic
+     Computation, ISSAC93}. (Ed. M. Bronstein). ACM, 1993.
+
+\bibitem[L]{L} 
+M. Laine, Combining Matlab with NAG and Maple.
+Pp 61-68 in [ALV93].
+
+%\bibitem[P]{P} 
+%P. Peltola,
+%Generating FORTRAN argument subprograms with ASPFOR --
+%a collection of Maple functions.
+%Pp 33-41 in [ALV93].
+
+%\bibitem[P2]{P2} 
+%P. Peltola,
+%Solving systems of nonlinear equations with Unix ESC.
+%Pp 101-114 in [ALV93].
+
+%\bibitem[M]{M} 
+%MATLAB,
+%{\it MATLAB External Interface Guide:
+%for Unix workstations.}
+%(The MathWorks).
+
+%\bibitem[R]{R} 
+%T. Robb,
+%InterCall --
+%Linking Mathematica with the IMSL and NAG libraries.
+%Aug. 92, MathSource. (See WWW ref., in immediately preceding
+%section.)
+
+
+\end{thebibliography}
+
+\vfill
+\eject
+
+
+
+\end{document}
+\end

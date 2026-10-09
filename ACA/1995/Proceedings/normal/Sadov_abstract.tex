@@ -1,0 +1,79 @@
+\documentstyle{article}
+\pagestyle{empty}
+\begin{document}
+\section*{
+Computation of coefficients of the normal form in a singular case
+}
+\centerline{\bf
+S. Yu. Sadov,}
+\vskip 2ex
+%
+\centerline{\bf
+Institute of Applied Mathematics,}
+\centerline{\bf
+Moscow, Russia
+}
+\vskip 3ex
+%
+Satellite motion about its center of mass in the
+plane of its elliptic orbit is described by the second
+order ordinary quasilinear equation containing two
+parameters, the eccentrity of orbit $e$, and the inertial
+parameter $\mu$, which is small for the satellite being
+almost dynamically symmetric [1].
+We are interested in finding periodic solutions.
+As $\mu=0$, the equation is explicitly integrable.
+As $e=1$, it is singular.
+A numerical study of the equation for $e$ close to $1$
+is very difficult (see, e.g. [2]).
+
+In the case of small $\mu$ the analysis of periodic
+orbits is possible by applying the method of averaging,
+or in the other words, computing the normal form
+of the equation in the neigbourhood of periodic solutions
+of the equation with $\mu=0$.
+This approach has been proposed in [3] and developed
+in [4]. Coefficients of the normal form are to be
+found numerically as some integrals.
+
+As $e\to 1$, there arises a problem in computing the
+coefficients, because the straight algorithms of
+computation are not regular in this case.
+We propose a regular method of the computation,
+based on integrating by a path in the complex plane and
+factorizing integrands into functions
+with close but diverse poles. Apart from the poles
+we have a regular expression, which one can calculate
+numerically.
+Near the poles we use analytic regularization methods.
+
+\begin{thebibliography}{4}
+%
+\bibitem{1}
+V.V. Beletskii.
+Motion of an Artificial Satellite about Its Center of Mass,
+NASA TT F-429,
+pp. 257--261.
+%
+\bibitem{2}
+V.A. Sarychev.
+Topics in satellite orientation.
+Itogi nauki i tehniki, ser. "Issledovanije kosmicheskogo
+prostranstva", Vol. 11. Moscow\-: VINITI\-, 1978.
+(Russian)
+%
+\bibitem{3}
+F.L. Chernous'ko.
+Resonance Phenomena in the Motion of
+a Satellite Relative to Its Mass Center.
+USSR Computational Mathematics and Mathematical Phys., 3 (1964),
+699-713.
+%
+\bibitem{4}
+A.D. Bruno.
+Local Methods in Nonlinear Differential Equations.
+Springer-Verlag: Berlin-Heidelberg-New York-London-Paris-Tokyo,1989.
+(Chapter~V).
+%
+\end{thebibliography}
+\end{document}

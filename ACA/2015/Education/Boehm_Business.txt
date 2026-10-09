@@ -1,0 +1,34 @@
+GINI-Coefficient, GOZINTO-Graph and Option Prices
+Josef Bohm, ACDCA & DERIVE User Group, nojo.boehm@pgv.at
+
+GINI-Coefficient together with LORENZ-curve and GOZINTO-Graphs are economic
+applications of secondary school mathematics.  They are part of the curriculum
+in Austria's Colleges for Business Administration (= Handelsakademie).  Basic
+knowledge about stocks and options became important during the last years.
+Treating these issues are easy using technology.
+
+The GOZINTO-Graph or GOZINTO-Chart is a pictorial representation that shows how
+the elements required to build a product fit together.  This is often the first
+step for several planning functions especially for material requirements
+planning, for time and manpower resources planning, for production cost, etc.
+
+This chart gives the input for building the production matrix.  Easy to
+understand, and supported by technology, easy to perform matrix calculations,
+lead to the results.
+
+Students can easily be inspired to design own tasks.  Examples of students'
+works will be presented.
+
+The GINI-Coefficient is a means for measuring the income distribution - and
+other distributions - of a nation's population.  It is commonly used as a
+measure of inequality of income or wealth.
+
+This sounds a little bit complicated but in fact it is an easy to perform
+application of integration based on the modelling of the so called
+LORENZ-Curve.  We should be happy to find an application of definite integral
+which is not only calculation of the area between two curves.
+
+Calculation of option prices is based on stock data (average rate of return,
+volatility, and other statistics - all well known in school). We will
+demonstrate the binomial model and the extend to the famous Black-Scholes
+formula.

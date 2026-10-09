@@ -1,0 +1,35 @@
+ "The Kapur-Saxena-Yang Dixon Resultant with Maple and Mathematica"
+  Janet McShane, George Nakos and Robert M. Williams
+  gcn@sma.usna.navy.mil
+
+Prof. George Nakos                   
+Mathematics Department, M/S 9E 
+U.S. Naval Academy             
+Annapolis, MD  21402-5002 USA
+gcn@sma.usna.navy.mil
+
+Dr. Robert M. Williams
+Code 505A
+Naval Air Warfare Center
+Warminster, PA 18974--5000 USA
+bobw@nadc.navy.mil
+
+Prof. Janet McShane
+Northern Arizona University
+Department of Mathematics
+Box 5717
+Flagstaff, AZ 86011-5717 USA
+mcshane@odin.math.nau.edu
+
+
+The Dixon resultant is primarily an elimination method that can be also
+used to solve systems of polynomial equations. Dixon proved that the
+vanishing of his resultant is a necessary condition for a system of n+1
+equations with n unknowns, to have an solution.  Unfortunately, when the
+Dixon resultant vanishes identically (which is not uncommon) there is no
+information on the roots of the system. This question was addressed by
+Kapur, Saxena and Yang.  By adding a technical condition they succeed in
+offering an necessary condition on the existence of common roots even
+when the Dixon resultant is identically zero. In this talk we discuss our
+implementation in Maple and Mathematica of the Kapur, Saxena and Yang
+variant of the Dixon resultant.

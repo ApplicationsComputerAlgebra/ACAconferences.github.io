@@ -1,0 +1,117 @@
+cd('/Users/takatoosetsuo/ACAtakmc/fig');
+Ketlib=lib('/Applications/ketcindy/ketlib/ketpicsciL5');
+Ketinit();
+disp('KETpic '+ThisVersion())
+Fnametex='s305incanddec.tex';
+Fnamesci='s305incanddec.sce';
+Fnamescibody='s305incanddecbody.sce';
+Fnameout='s305incanddec.txt';
+pi=%pi; i=%i;
+arccos=acos; arcsin=asin; arctan=atan;
+
+Setwindow([-0,11.41], [1,12]);
+Assignadd('pi',%pi);
+Assignadd('XMIN',Xmin());
+Assignadd('XMAX',Xmax());
+Assignadd('YMIN',Ymin());
+Assignadd('YMAX',Ymax());
+C0=[0,12]; Assignrep('C0',[0,12]);
+C1=[1.5,12]; Assignrep('C1',[1.5,12]);
+C2=[3,12]; Assignrep('C2',[3,12]);
+C3=[4.79161,12]; Assignrep('C3',[4.79161,12]);
+C4=[6.28899,12]; Assignrep('C4',[6.28899,12]);
+C5=[8.08585,12]; Assignrep('C5',[8.08585,12]);
+C6=[9.60818,12]; Assignrep('C6',[9.60818,12]);
+C7=[11.40504,12]; Assignrep('C7',[11.40504,12]);
+R0=[0,12]; Assignrep('R0',[0,12]);
+R1=[0,11]; Assignrep('R1',[0,11]);
+R2=[0,10]; Assignrep('R2',[0,10]);
+R3=[0,9]; Assignrep('R3',[0,9]);
+R4=[0,8]; Assignrep('R4',[0,8]);
+R5=[0,1]; Assignrep('R5',[0,1]);
+Setunitlen("5mm");
+sgc0r0r5=Listplot([[0,12],[0,1]]);
+sgc1r0r5=Listplot([[1.5,12],[1.5,1]]);
+sgc2r0r5=Listplot([[3,12],[3,1]]);
+sgc3r0r5=Listplot([[4.79,12],[4.79,1]]);
+sgc4r0r5=Listplot([[6.29,12],[6.29,1]]);
+sgc5r0r5=Listplot([[8.09,12],[8.09,1]]);
+sgc6r0r5=Listplot([[9.61,12],[9.61,1]]);
+sgc7r0r5=Listplot([[11.41,12],[11.41,1]]);
+sgr0c0c7=Listplot([[0,12],[11.41,12]]);
+sgr1c0c7=Listplot([[0,11],[11.41,11]]);
+sgr2c0c7=Listplot([[0,10],[11.41,10]]);
+sgr3c0c7=Listplot([[0,9],[11.41,9]]);
+sgr4c0c7=Listplot([[0,8],[11.41,8]]);
+sgr5c0c7=Listplot([[0,1],[11.41,1]]);
+sgc1r0r4=Listplot([[1.5,12],[1.5,8]]);
+sgc2r0r4=Listplot([[3,12],[3,8]]);
+sgc3r0r4=Listplot([[4.79,12],[4.79,8]]);
+sgc4r0r4=Listplot([[6.29,12],[6.29,8]]);
+sgc5r0r4=Listplot([[8.09,12],[8.09,8]]);
+sgc6r0r4=Listplot([[9.61,12],[9.61,8]]);
+sgc1r1c2r4=Listplot([[1.5,11],[3,8]]);
+sgc2r1c1r4=Listplot([[3,11],[1.5,8]]);
+PtL=list(C0,C1,C2,C3,C4,C5,C6,C7,R0,R1,R2,R3,R4,R5);
+GrL=list();
+//if length(fileinfo(Fnamescibody))>0
+//  Gbdy=ReadfromCindy(Fnamescibody);
+//  execstr(Gbdy)
+//end;
+
+//Windisp(GrL,'c');
+
+if 1==1 then
+
+Openfile(Fnametex,'5mm');
+  Drwline(sgc0r0r5);
+  Drwline(sgc7r0r5);
+  Drwline(sgr0c0c7);
+  Drwline(sgr1c0c7);
+  Drwline(sgr2c0c7);
+  Drwline(sgr3c0c7);
+  Drwline(sgr4c0c7);
+  Drwline(sgr5c0c7);
+  Drwline(sgc1r0r4);
+  Drwline(sgc2r0r4);
+  Drwline(sgc3r0r4);
+  Drwline(sgc4r0r4);
+  Drwline(sgc5r0r4);
+  Drwline(sgc6r0r4);
+  Drwline(sgc1r1c2r4);
+  Drwline(sgc2r1c1r4);
+  Fontsize('ss');
+  Letter([0.75,11.5],"c","$x$");
+  Letter([2.25,11.5],"c","$0$");
+  Letter([3.895,11.5],"c","$\cdots$");
+  Letter([5.54,11.5],"c","$e$");
+  Letter([7.19,11.5],"c","$\cdots$");
+  Letter([8.85,11.5],"c","$e\sqrt{e}$");
+  Letter([10.51,11.5],"c","$\cdots$");
+  Letter([0.75,10.5],"c",Assign('$y`$'));
+  Letter([2.25,10.5],"c","$$");
+  Letter([3.895,10.5],"c","$+$");
+  Letter([5.54,10.5],"c","$0$");
+  Letter([7.19,10.5],"c","$-$");
+  Letter([8.85,10.5],"c","$-$");
+  Letter([10.51,10.5],"c","$-$");
+  Letter([0.75,9.5],"c",Assign('$y``$'));
+  Letter([2.25,9.5],"c","$$");
+  Letter([3.895,9.5],"c","$-$");
+  Letter([5.54,9.5],"c","$-$");
+  Letter([7.19,9.5],"c","$-$");
+  Letter([8.85,9.5],"c","$0$");
+  Letter([10.51,9.5],"c","$+$");
+  Letter([0.75,8.5],"c","$y$");
+  Letter([2.25,8.5],"c","$$");
+  Letter([3.895,8.5],"c","$$");
+  Letter([5.54,8.5],"c","$\frac{10}{e}$");
+  Letter([7.19,8.5],"c","$$");
+  Letter([8.85,8.5],"c","$\frac{15}{e\sqrt{e}}$");
+  Letter([10.51,8.5],"c","$$");
+  Letter([5.705,4.5],"c","\input{/Users/takatoosetsuo/ACAtakmc/fig/s304graphforincanddec}");
+Closefile('0');
+
+end;
+
+quit();

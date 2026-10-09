@@ -1,0 +1,34 @@
+/*
+(function($) {
+    function updateMosaicFlowSpacer() {
+        var target = $('.fl-mosaicflow');
+        if(target.length <= 0) {
+            return;
+        }
+
+        $.each(target, function() {
+            var $target = $(this);
+            var def_spacer = $('div[style*="visibility: hidden"]', $target);
+
+            if(def_spacer) {
+                def_spacer.remove(); // we really don't care about it.
+            };
+
+            var single_img_width = $('.fl-photo-content:first', $(this)).width(),
+                columns = $('.fl-mosaicflow-col', $target).length,
+                wrapper_width = $target.outerWidth(),
+                margings = 10 * columns,
+                images_width = single_img_width * columns,
+                spacer_width = (wrapper_width - images_width - margings) / 2;
+
+            $target.css({
+                'padding-left': spacer_width,
+                'padding-right': spacer_width
+            });
+        });
+    }
+    $(window).on('resize', updateMosaicFlowSpacer);
+    $(document).one('filled', updateMosaicFlowSpacer);
+
+}(jQuery));
+*/

@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <link href="styles/master.css" type="text/css" rel="stylesheet" media="all"/>
+   <title>ACA 2008 Applications of Computer Algebra</title>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tbody>
+      <tr>
+        <td class="headerLeft"><a href="/"><img src="./_images/header/schloss21s.jpg" /></a></td>
+        <td width="20px"></td>
+        <td>
+        <table width="100%">
+        <tbody>
+        <tr><td class="headerTitle">Applications of Computer Algebra</td></tr>
+        <tr><td class="headerSub"><a href="/">RISC, Castle of Hagenberg, Austria.</a></td></tr>
+        <tr><td class="headerSub">July 27-30, 2008.</td></tr>
+      	</tbody>
+      	</table>
+        </td>
+      </tr>
+   </tbody>
+ </table>
+
+
+
+<table cellspacing="0" cellpadding="0" class="infobar">
+<tbody><tr><td height=20px></td></tr></tbody></table>
+
+
+<div class="class1">
+	
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspace">
+<tbody>
+<tr>
+<td>
+	
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+
+<td style="width:12px;"></td>          
+<td class="unselected">
+	<div><a href="?content=news">News</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=general">General</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=sessions">Sessions</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=submission">Submission</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=registration">Registration</a></div>
+</td>
+<td class="selected">
+	<div>Program</div>
+</td>	
+
+<td class="unselected">
+	<div><a href="?content=pictures">Pictures</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=location">Location</a></div>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspaceSub">
+<tbody>
+<tr>
+<td>
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+
+</tr>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table><div id="content">
+<div id="column">
+
+<div class="class2" style="padding-top:10px; padding-bottom:0px; text-indent:0px">
+
+<h4>Participants</h4>
+
+ACA 2008 had <b>192</b> registered participants. Find <a href="ACA_Participants_Final.html">here</a> the <a href="ACA_Participants_Final.html">list of participants</a>. 
+
+<a name="schedule"></a>
+<h4>Session Schedule</h4>
+
+Find <a href="Schedule.html">here</a> the <a href="Schedule.html">session schedule</a>. 
+
+<h4> Session Programs</h4>
+
+Find here an <a href="Program.pdf">overview over the entire program of ACA 2008</a>, including speakers and titles of the talks.<p>
+
+Find the programs of individual sessions below.
+
+<ol>
+<li>Symbolic and Algebraic Computation for Optimization Tasks in Science and Engineering (Chibisov, Ganzha, Mayr): <a href="http://wwwmayr.in.tum.de/konferenzen/ACA2008/ACA2008.html">Program</a></li>
+<li>Symbolic Symmetry Analysis and Its Applications (Bila, Kogan): <a href="http://faculty.uncfsu.edu/nbila/WebPage%20FSU/data/ACA08/Schedule.htm">Program</a></li>
+<li>Computer Algebra and Coding Theory (Mart&iacute;nez-Moro, Ruano, Hernando): <a href="http://www.math.arq.uva.es/~edgar/CACT/">Program</a></li>
+<li>Nonstandard Applications of Computer Algebra (Roanes-Lozano, Wester, Steinberg): <a href="http://math.unm.edu/~aca/ACA/2008/nonstandard.html">Program</a></li>
+<li>Computer Algebra in Education (Akritas, Wester, Kutzler, Pletsch): <a href="http://math.unm.edu/~aca/ACA/2008/education.html">Program</a></li>
+<li>Computer Algebra for Dynamical Systems, and Celestial Mechanics (Edneral, Myllari, Vassiliev): <a href="http://theory.sinp.msu.ru/~edneral/ACA2008/DS&CM_Program3.html">Program</a></li>
+<li>Compact Computer Algebra (Smirnova, Watt): <a href="http://www.orcca.on.ca/conferences/cca2008/#programm">Program</a></li>
+<li>Algebraic and Algorithmic Aspects of Differential and Integral Operators (Regensburger, Rosenkranz, Tsarev): <a href="http://www.ricam.oeaw.ac.at/people/page/rosenkranz/aca08/aadios.html">Program</a></li>
+<li>Gr&ouml;bner Bases and their Applications (Arnold, Kotsireas, Rosenkranz): <a href="http://www.wlu.ca/science/physcomp/kotsireas/ACA2008GB.html">Program</a></li>
+<li>Interaction Between Computer Algebra and Interval Computations (Kr&auml;mer, Popova): <a href="http://www.math.bas.bg/~epopova/ACA2008/">Program</a></li>
+<li>Symbolic Computation and Deduction 
+                   in System Design and Verification (Anai, Kanno, Sofronie-Stokkermans, Sturm): <a href="http://www.mpi-inf.mpg.de/~sofronie/aca08-prelim-program.html">Program</a></li>
+<li>Symbolic Computation and Quantum Field Theory (Kauers, Schneider): <a href="http://www.risc.uni-linz.ac.at/about/conferences/aca2008/sessions/scqft/">Program</a></li>
+<li>Symbolic and Numeric Computation (Akritas, Kai, Sasaki, Shirayanagi, Stefanescu): <a href="http://www.hpc.cs.ehime-u.ac.jp/~kai/SNC2008/schedule.html">Program</a></li>
+<li>Parallel Computer Algebra (Malaschonok): <a href="http://malaschonok.googlepages.com/ACA2008_ParCA.html">Program</a></li>
+<li>Computer Algebra in Group Theory and Representation Theory (Cohen, Vavilov, Wilson): <a href="session15.html">Program</a></li>
+</ol>
+<p>
+
+
+<h4>Lecture Halls</h4>
+The ACA sessions will be held in parallel sessions. We have 4 lecture halls in the castle of Hagenberg (the home of RISC), all of them equipped with a beamer and a presentation laptop. Additional equipment (overhead, whiteboard, etc.) is available on demand, this can be organized on the fly.
+
+<a name="banquet"></a>
+<h4> Banquet</h4>
+The Conference banquet will be held on Tuesday June 29th evening at 20:00 in the city center of Linz. Bus transfer from the conference to the banquet and back to Hagenberg will be provided.
+
+<h4>Lunches</h4>
+Lunch is iuncluded in the registration fee. There is the choice between two meals each day, one of them vegetarian (vegetarian in the sense that it has no meat, it does not necessarily meet further restrictions, like e.g. "vegan"; if you have special needs we can arrange this of course).
+<p>
+The choice between the two meals is to be done when registering on site. We will list the choices here soon so that you can already make up your minds ...
+
+<table border=1 cellspacing=10>
+<tr><th colspan="2" align="center">Sunday July 27</th></tr>
+<tr><th align="center">Menu 1</th><th align="center">Menu 2 (vegetarian)</th></tr>
+<tr>
+<td>
+Soup: Soup from beef with dumpling <br>
+Main: Grilled Chickenrolls with italian vegetables and potatoes
+</td>
+<td>
+Soup: Vegetable soup with dumpling<br>
+Main: Gratinated Mexican Tortillas filled with vegetables
+</td>
+</tr>
+
+<tr><th colspan="2" align="center">Monday July 28</th></tr>
+<tr><th align="center">Menu 1</th><th align="center">Menu 2 (vegetarian)</th></tr>
+<tr>
+<td>
+Main: Ragout from Beef with mushroom sauce and dumpling<br>
+Dessert: Home-made Joghurt-cake
+</td>
+<td>
+Main: Crepes filled with zucchini and mushroom sauce<br>
+Dessert: Home-made Joghurt-cake
+</td>
+</tr>
+
+<tr><th colspan="2" align="center">Tuesday July 29</th></tr>
+<tr><th align="center">Menu 1</th><th align="center">Menu 2 (vegetarian)</th></tr>
+<tr>
+<td>
+Soup: Mushroom soup<br>
+Main: Lasagne Bolognese al forno
+</td>
+<td>
+Soup: Mushroom soup<br>
+Main: Vegetable Lasagne
+</td>
+</tr>
+
+<tr><th colspan="2" align="center">Wednesday July 30</th></tr>
+<tr><th align="center">Menu 1</th><th align="center">Menu 2 (vegetarian)</th></tr>
+<tr>
+<td>
+Main: Baked Turkey-Cheese spit with salad and potatoes<br>
+Dessert: Apple pie
+</td>
+<td>
+Main: Vegetable cakes/dumplings with salad, herb cream and potatoes<br>
+Dessert: Apple pie
+</td>
+</tr>
+
+</table>
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

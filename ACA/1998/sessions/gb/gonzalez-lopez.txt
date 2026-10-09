@@ -1,0 +1,27 @@
+    "Polynomial System Solving with parameters: Gr\"obner Bases
+     Specialization through Hilbert Functions"
+
+    M.--J. Gonzalez--Lopez, L. Gonzalez--Vega*, C. Traverso and A. Zanoni**
+
+    *Universidad de Cantabria
+    Dpto. Matematicas, Facultad de Ciencias, Avda. Los Castros S/N
+    Santander 39005, Cantabria
+    Spain
+    E-mail:gvega@matesco.unican.es
+    
+    **Universita' degli Studi di Pisa
+    via Buonarroti 2
+    Pisa, I - 56127
+    Italy
+    E-mail:zanoni@posso.dm.unipi.it
+	
+
+In this paper it is shown how to deal with polynomial system solving
+involving
+parameters by using the Hilbert function in order to check that the
+specialization of a ``generic" Gr\"obner Basis of the parametric polynomial
+system (computed in a polynomial ring containing the parameters and the
+unknowns as variables) is a Gr\"obner Basis of the specialized polynomial
+system. A preliminary implementation of these algorithms into the PoSSoLib is
+also reported.
+

@@ -1,0 +1,21 @@
+"Polynomial arithmetic mod p using DERIVE"
+
+J.Wiesenbauer
+Technischen Universitaet Wien
+
+
+Abstract:
+
+In contrast to other CAS like e.g. Mathematica there are no built-in
+functions for polynomial arithmetic mod p in DERIVE. In particular, the mod
+p versions of REMAINDER, QUOTIENT and POLY_GCD are missing. In my lecture,
+implementations of these functions will be given along with many others
+like POLYMOD for the reduction of the coefficients of polynomials mod p or
+POLYPOWER for computing powers of polynomials based on the well-known
+"Square and Multiply"-algorithm.
+
+In addition, a number of examples are given that show these functions at
+work, in particular, when it comes to computations in finite fields, Galois
+rings and rings of cyclotomic integers. Furthermore, they are used to
+implement the standard algorithms for the factorization of polynomials over
+residue class rings mod p and the ring Z of integers.

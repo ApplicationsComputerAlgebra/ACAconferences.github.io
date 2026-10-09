@@ -1,0 +1,14 @@
+              Parallel Computer Algebra
+
+"kaltofen@cs.rpi.edu (Eric Kaltofen)"
+"gvillard@mistral.imag.fr (Gilles Villard)"
+
+Speakers to be invited.
+	Paul Wang
+	Bruce Char
+	Dave Saunders
+	Wolfgang Kuechlin
+	Hoon Hong
+	Evelyn Tournier
+	Benno Fuchssteiner
+	Kaltofen Group

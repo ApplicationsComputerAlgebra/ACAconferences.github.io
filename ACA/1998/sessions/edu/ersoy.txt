@@ -1,0 +1,25 @@
+"Introducing and implementing CAS into 
+ pre- and in-service education and training"
+
+Yasar Ersoy
+Middle East Technical University (METU)
+Dept SSME, Middle East Technical Uni.
+06531 Ankara
+Turkey
+E-mail:yersoy@tutor.fedu.metu.edu.tr
+
+
+Much attention has been directed at reforming school mathematics. Some 
+projects in various countries are working on the integration and 
+implementation of information technologies, namely computers and 
+calculators, into school mathematics curricula and undergraduate 
+courses in universities. The central theme of these projects is the 
+use of technologies to enhance the learning of mathematics. Because, 
+computer software tools such as computer algebra system (CAS) and 
+graphical packages provide an ideal environment for student 
+exploration of multiple representations, i.e. the connections between 
+the visual/graphical representation and the analytical/algebraic one. 
+In the present paper, we summarize our experiences in and issues on 
+introducing and implementing information technologies, namely 
+computers, CAS and TI-92 in the pre-service and in-service education 
+and training of mathematics teachers in Turkey.

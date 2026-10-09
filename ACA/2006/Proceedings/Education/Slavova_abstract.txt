@@ -1,0 +1,24 @@
+Another Look at Teaching Mathematics with Maple
+
+
+                       Slavka Slavova, Grosio Stanilov
+
+            Pedagogical College  Dobrich at University in Shumen
+
+
+In this article we present the use  of  Maple  in  teaching  across  several
+mathematical   disciplines   and   discuss   some   Maple-related   teaching
+methodology in university education. We do see Maple  playing  an  important
+role in mathematics education. The computer  program  Maple  is  a  powerful
+tool which can help students solve a wide range  of  mathematical  problems:
+it can  differentiate,  integrate,  and  otherwise  manipulate  mathematical
+formulas, perform arithmetic calculation, plot curves and  surfaces  in  two
+and  three  dimensions,  solve  differential  equations  and  other   useful
+mathematical operation. The new Student Calculus Package in Maple  8,  which
+can show the steps of differentiation and integration, is excellent in  this
+respect when used as supplementary teaching material. The  visualization  of
+mathematical theories and concepts helps  students  understand  mathematics.
+We see Maple as a tool to help students  think  about  mathematics,  helping
+them develop new ideas and leading them to discoveries, but we do  not  want
+to give students  the  impression  that  with  Maple  they  need  not  study
+mathematics.

@@ -1,0 +1,83 @@
+\begin{center}
+\LARGE
+``NORT'' Package for Treating Multivariate Power Series
+                        and Applications
+
+\end{center}
+
+\begin{center}
+\Large
+Victor Edneral
+
+\end{center}
+
+\noindent
+Date:  July 19th (Friday)\\
+Time:  14:25-14:45\\
+
+\begin{center}
+\large
+Abstract
+\end{center}
+
+In the report discussed applications of the NORT package for problems of creation multivariate
+power series which approximate periodic solutions of nonlinear autonomous ODEs
+(Edneral,1993), trajectories of periodic orbits of such systems, Lyapunov's values for small limit
+circles of a cubic plane system of general type and for solving of systems of equation over
+truncated formal power series (Edneral,1995), (Vasiliev,Edneral,1995). 
+
+Originally the NORT package was created for building Poincare -- Dulac normal forms
+(Edneral,Khrustalev,1985,1992) till fixed order. It is written in Standard LISP and contains
+procedures for treating truncated multivariate power series of an arbitrary dimension. Besides of
+procedures for arithmetic operations with such series there are special procedures for the creation
+of normal forms and procedures for substitutions, calculations of roots, for differentiating, for
+printing and for inverting multivariate power series. The package can be used as a separate unit
+under a Standard Lisp environment or as a REDUCE package. 
+
+Complex numerical coefficients of the truncated power series may be evaluated in three different
+arithmetics: precision rational, floating point and approximate rational (Rodionov A.Ya,in
+progress), in according to the user's choice. Separately user may choose a representation of
+numbers (in a floating point or in a rational form) for output. This output has a REDUCE
+acceptable form, but REDUCE's internal procedures are not used by the NORT. 
+
+The program uses a recurrent polynomial representation separated in each order of the stored
+series. There is a compact enough use of memory. So for 8 - dimensional problem we managed to
+treat pieces of series with 150000 elements on computer with 64 Mbyte of RAM. 
+
+\bigskip
+\noindent 
+{\bf References}
+\begin{enumerate}
+
+\item
+Edneral, V.F., Khrustalev, O.A. (1985) The Normalizing Transformation for Nonlinear Systems of
+ODE. The Realization of the Algorithm; Proceedings of the International Conference on Computer
+Algebra and its Application in Theoretical Physics (USSR, Dubna, September 1985). Dubna: JINR
+publ., 219--224. In Russian. 
+
+
+\item
+Edneral, V.F., Khrustalev, O.A. (1992) Program for Recasting ODE Systems in the Normal Form;
+``Programmirovanie'' (Sov. J. of Programming), \# 5, 73--80. In Russian. 
+
+
+\item
+Edneral, V.F. (1993) Computer Generation of Normalizing Transformation for Systems of
+Nonlinear ODE; Proceedings of the 1993 International Symposium on Symbolic and Algebraic
+Computation (Kiev, Ukraine, July 6-8, 1993). N.Y., ACM Press, edited by M.Bronstein, pp. 14--
+19. 
+
+
+\item
+Vasiliev N.N., Edneral V.F., (1995) About Constructing Canonical Basis for the Ring of Formal
+Power Series; The Abstracts of the conference ``Computer Methods of Celestial Mechanics
+(S.-Petersburg, Russia, October 17--20, 1995)'', pp. 72--73. In Russian. 
+
+
+\item
+Edneral V.F., (1995) To the Question of Multidimensional Power Series Solving; The Abstracts of
+the PoSSo-95 ``PoSSo Open Workshop on Applications of PoSSo and Real Solving, (Iraklio,
+Greece, June 7--10, 1995)'', p. 34. 
+
+
+\end{enumerate}

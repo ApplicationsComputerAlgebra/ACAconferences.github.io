@@ -1,0 +1,58 @@
+\documentstyle {article}
+
+
+
+\title{
+A flexible tool to experiment with distributed symbolic computation
+}
+
+\author{
+        St\'ephane Dalmas and Marc Ga\"etano
+        \thanks{also I3S, CNRS URA 1376,Universit\'e 
+                          de Nice Sophia--Antipolis}\\
+        {\small INRIA Sophia Antipolis, projet SAFIR} \\
+        {\small 2004 route des lucioles }
+         {\small BP 93} \\
+         {\small 06902 Sophia-Antipolis {\sc CEDEX}} \\
+         {\small France } \\
+         {\small 
+          \begin{tabular} {ll}
+            E-mail:& stephane.dalmas@sophia.inria.fr\\
+                   & marc.gaetano@sophia.inria.fr
+          \end{tabular} 
+         }
+}
+
+
+
+\begin{document} 
+
+\maketitle
+
+\begin{abstract}
+In this paper we describe the {\em Central Control\/} and how it can be
+applied to easily make various experiments in distributed computation. 
+The {\em Central Control\/} is a software component that has been designed to
+be the kernel of  environments for scientific computations. 
+Such an environment can offer a common and concurrent access to many tools
+needed by the scientist and the engineer: general purpose and specialized
+computer algebra systems, visualization tools, links with numerical libraries
+and tools to manipulate numerical programs {\sl etc}.
+
+The current version of the {\em Central Control\/} is a {\em Scheme\/}
+interpreter extended with new primitive types and procedures. 
+To insure flexibility and to ease experimentations, there are only a few new
+essential procedures to provide the basic facilities (starting or connecting
+to servers, sending and receiving computations) together with a {\em Scheme}
+library that implements higher-level operations.
+
+We will first describe the main features of the {\em Central Control\/}. We
+will then give examples of how it can be applied to problems that need or can
+benefit from distribution by showing examples of simple {\em Scheme}
+functions.  
+
+\end{abstract} 
+
+
+
+\end{document} 

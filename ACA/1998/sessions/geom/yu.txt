@@ -1,0 +1,17 @@
+"Determining coordinates for polynomial algebras"
+
+Jie-Tai Yu
+The University of Hong Kong, Hong Kong.
+e-mail: yujt@hkusua.hku.hk
+
+
+Abstract:
+
+p\in K[x1,..,xn] is called a coordinate if p is an automorphic image
+of x1, or, equivalently, there exisit p2,...,pn in K[x1,...,xn] such
+that K[x1,..,xn]=K[p,p2,...,pn].
+
+In this talk, we will consider the problem how to determine whether
+p\in K[x1,..xn] is a coordinate and relevant topics.  In particular,
+when n=2, we are able to solve this problem completely by two
+different methods.

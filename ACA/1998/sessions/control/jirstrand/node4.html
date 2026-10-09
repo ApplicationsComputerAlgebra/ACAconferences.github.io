@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1-f (May 31, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>3 Stabilizing Polynomial Systems by Switching Controllers</TITLE>
+<META NAME="description" CONTENT="3 Stabilizing Polynomial Systems by Switching Controllers">
+<META NAME="keywords" CONTENT="jirstrand">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="jirstrand.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html53" HREF="node5.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://www.control.isy.liu.se/icons/next_motif.gif"></A> <A NAME="tex2html51" HREF="jirstrand.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://www.control.isy.liu.se/icons/up_motif.gif"></A> <A NAME="tex2html45" HREF="node3.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://www.control.isy.liu.se/icons/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html54" HREF="node5.html">4 Exact Output Tracking</A>
+<B>Up:</B> <A NAME="tex2html52" HREF="jirstrand.html">On Switched Polynomial Systems </A>
+<B> Previous:</B> <A NAME="tex2html46" HREF="node3.html">Nonsmooth Systems</A>
+<BR> <P>
+<H1><A NAME="SECTION00030000000000000000">3 Stabilizing Polynomial Systems by Switching Controllers</A></H1>
+<P>
+<A NAME="secstabswitch">&#160;</A>
+First, we present a general approach to the design of stabilizing
+switched controllers for systems&nbsp;(<A HREF="node2.html#eqsys">1</A>) which are based on the
+basic controllers&nbsp;(<A HREF="node2.html#eqbctrl">2</A>). It turns out that if we always can
+choose a basic controller such that a positive definite function
+decreases along trajectories then the system can be stabilized by
+switching basic controllers.
+<P>
+To be able to formulate the problem of stabilizing a system by
+switching basic controllers in a way suitable for quantifier
+elimination, we will use the following theorem. In the sequel we let
+ <IMG WIDTH=144 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline1295" SRC="img31.gif"  >  denote the gradient of <I>V</I> w.r.t.&nbsp;<I>x</I>.
+<P><A NAME="eqlyapder">&#160;</A><A NAME="thstabsw">&#160;</A> <IMG WIDTH=412 HEIGHT=107 ALIGN=BOTTOM ALT="theorem173" SRC="img32.gif"  > <P>
+<b>Proof</b>Introduce the sets
+  <P> <IMG WIDTH=397 HEIGHT=15 ALIGN=BOTTOM ALT="displaymath1287" SRC="img33.gif"  > <P>
+  Since  <IMG WIDTH=87 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1313" SRC="img34.gif"  >  is continuous, these sets are open. Let
+   <IMG WIDTH=32 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1315" SRC="img35.gif"  >  and consider  <IMG WIDTH=60 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1317" SRC="img36.gif"  > . According to the assumptions, any  <IMG WIDTH=86 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1319" SRC="img37.gif"  >  belongs to some  <IMG WIDTH=10 HEIGHT=19 ALIGN=MIDDLE ALT="tex2html_wrap_inline1321" SRC="img38.gif"  > .
+  Since  <IMG WIDTH=10 HEIGHT=19 ALIGN=MIDDLE ALT="tex2html_wrap_inline1321" SRC="img38.gif"  >  is open, there is an  <IMG WIDTH=75 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1325" SRC="img39.gif"  >  and
+   <IMG WIDTH=27 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1327" SRC="img40.gif"  >  such that  <IMG WIDTH=61 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1329" SRC="img41.gif"  > . The collection
+   <IMG WIDTH=118 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1331" SRC="img42.gif"  >  forms an open cover of  <IMG WIDTH=60 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1317" SRC="img36.gif"  > . Since  <IMG WIDTH=60 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1317" SRC="img36.gif"  >  is compact, there exists a finite subcover
+   <IMG WIDTH=169 HEIGHT=21 ALIGN=MIDDLE ALT="tex2html_wrap_inline1337" SRC="img43.gif"  > . The collection
+   <IMG WIDTH=71 HEIGHT=21 ALIGN=MIDDLE ALT="tex2html_wrap_inline1339" SRC="img44.gif"  >  is also a cover.  Now,
+  in each  <IMG WIDTH=44 HEIGHT=20 ALIGN=MIDDLE ALT="tex2html_wrap_inline1341" SRC="img45.gif"  >  we have  <IMG WIDTH=110 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1343" SRC="img46.gif"  >  for at least one of the functions, which also attains
+  its maximum in this set. Hence
+  <P> <IMG WIDTH=358 HEIGHT=26 ALIGN=BOTTOM ALT="displaymath1288" SRC="img47.gif"  > <P>
+  where  <IMG WIDTH=32 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1345" SRC="img48.gif"  > . We conclude that for any  <IMG WIDTH=32 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1315" SRC="img35.gif"  >  there
+  exists  <IMG WIDTH=32 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1345" SRC="img48.gif"  >  such that for any  <IMG WIDTH=81 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1351" SRC="img49.gif"  >  there is an  <IMG WIDTH=75 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1325" SRC="img39.gif"  >  such
+  that
+  <P><A NAME="eqvdotbound">&#160;</A> <IMG WIDTH=500 HEIGHT=12 ALIGN=BOTTOM ALT="equation204" SRC="img50.gif"  > <P>
+<P>
+  Let  <IMG WIDTH=37 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1355" SRC="img51.gif"  >  denote a solution starting at  <IMG WIDTH=86 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1357" SRC="img52.gif"  >  at time 0 of the
+  system&nbsp;(<A HREF="node2.html#eqsys">1</A>) controlled by switching basic controllers such
+  that&nbsp;(<A HREF="node4.html#eqlyapder">7</A>) is satisfied. Furthermore, let  <IMG WIDTH=56 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1361" SRC="img53.gif"  >  denote the time derivative of <I>V</I>(<I>x</I>) along a solution.
+  According to&nbsp;(<A HREF="node4.html#eqvdotbound">8</A>) we have  <IMG WIDTH=114 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1365" SRC="img54.gif"  >  for all points on the trajectory in  <IMG WIDTH=60 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1317" SRC="img36.gif"  > . Integrating this inequality from 0
+  to <I>t</I> gives
+  <P><A NAME="eqintvdotbound">&#160;</A> <IMG WIDTH=500 HEIGHT=12 ALIGN=BOTTOM ALT="equation212" SRC="img55.gif"  > <P>
+  This shows that  <IMG WIDTH=37 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1355" SRC="img51.gif"  >  can only stay in  <IMG WIDTH=60 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1317" SRC="img36.gif"  >  for a finite time, since <I>V</I> is bounded from
+  below. Since  <IMG WIDTH=15 HEIGHT=19 ALIGN=MIDDLE ALT="tex2html_wrap_inline1379" SRC="img56.gif"  >  is invariant (<I>V</I> is decreasing along
+  solutions) the trajectory has to enter  <IMG WIDTH=33 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1383" SRC="img57.gif"  > . Hence,
+   <IMG WIDTH=101 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1385" SRC="img58.gif"  >  since  <IMG WIDTH=32 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1315" SRC="img35.gif"  >  was
+  arbitrary, i.e.,&nbsp;the origin is attractive.
+<P>
+  To prove stability we observe that  <IMG WIDTH=64 HEIGHT=19 ALIGN=MIDDLE ALT="tex2html_wrap_inline1389" SRC="img59.gif"  >  is invariant. Moreover, there exists  <IMG WIDTH=56 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1391" SRC="img60.gif"  >  and 
+   <IMG WIDTH=56 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1393" SRC="img61.gif"  >  such that  <IMG WIDTH=126 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1395" SRC="img62.gif"  > , since <I>V</I> is
+  positive definite, see for example&nbsp;[<A HREF="node8.html#Khalil96">8</A>].
+<P>
+  We conclude that the origin is an asymptotically stable solution and
+   <IMG WIDTH=15 HEIGHT=19 ALIGN=MIDDLE ALT="tex2html_wrap_inline1379" SRC="img56.gif"  >  is a region of attraction of the system&nbsp;(<A HREF="node2.html#eqsys">1</A>).
+ <IMG WIDTH=9 HEIGHT=8 ALIGN=BOTTOM ALT="tex2html_wrap_inline1401" SRC="img63.gif"  >  The assumptions in the theorem implies that the domains of definition
+of the control laws cover  <IMG WIDTH=15 HEIGHT=19 ALIGN=MIDDLE ALT="tex2html_wrap_inline1379" SRC="img56.gif"  > , i.e.,&nbsp; <IMG WIDTH=55 HEIGHT=19 ALIGN=MIDDLE ALT="tex2html_wrap_inline1405" SRC="img64.gif"  > .
+<P>
+Notice that each of the basic controllers may yield an unstable closed
+loop system but there may still exist a switched stabilizing strategy.
+The following corollary follows easily from the proof of
+Theorem&nbsp;<A HREF="node4.html#thstabsw">1</A> since all sublevel sets of a function, which is
+radially unbounded, are compact.
+<P>
+<P><A NAME="coglobstabsw">&#160;</A> <IMG WIDTH=411 HEIGHT=38 ALIGN=BOTTOM ALT="corollary228" SRC="img65.gif"  > <P>
+<P>
+If the assumptions in Theorem&nbsp;<A HREF="node4.html#thstabsw">1</A> or
+Corollary&nbsp;<A HREF="node4.html#coglobstabsw">1</A> are satisfied then the following
+controller can be used to stabilize the system
+<P><A NAME="eqargminctrl">&#160;</A> <IMG WIDTH=500 HEIGHT=40 ALIGN=BOTTOM ALT="equation234" SRC="img66.gif"  > <P>
+With this choice we get  <IMG WIDTH=167 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline1409" SRC="img67.gif"  >  for
+all  <IMG WIDTH=65 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1411" SRC="img68.gif"  > . Observe that the switching
+function <I>I</I> might be multiple valued since the minimum
+in&nbsp;(<A HREF="node4.html#eqargminctrl">10</A>) might be obtained by several controllers
+simultaneously. This is the case along switching surfaces. For states
+corresponding to multiple values the behavior of the controller has to
+be further specified. Either techniques from sliding mode
+control&nbsp;[<A HREF="node8.html#Utkin77">16</A>] can be used or a slight variation of
+controller&nbsp;(<A HREF="node4.html#eqargminctrl">10</A>) where hysteresis is introduced. Due
+to the fact that the sets  <IMG WIDTH=10 HEIGHT=19 ALIGN=MIDDLE ALT="tex2html_wrap_inline1321" SRC="img38.gif"  >  (introduced in the proof of
+Theorem&nbsp;<A HREF="node4.html#thstabsw">1</A>) are open, the switching surfaces of
+controller&nbsp;(<A HREF="node4.html#eqargminctrl">10</A>) can be substituted by hysteresis
+zones. This will prevent sliding modes but chattering solutions may
+appear instead depending on the direction of the vector fields along
+the switching surface, see Example&nbsp;<A HREF="node6.html#exswstab">3</A>.
+<P>
+The conditions in Theorem&nbsp;<A HREF="node4.html#thstabsw">1</A> and
+Corollary&nbsp;<A HREF="node4.html#coglobstabsw">1</A> can be checked by quantifier elimination
+if the functions that appear in the theorems can be described by
+semialgebraic sets. This means that we are able to handle feedback
+control laws which are implicitly defined as solutions to multivariate
+polynomial equations. In connection to stabilization of the zero
+dynamics of a nonlinear system, which is not affine in the control,
+this turns out to be very useful, see
+Section&nbsp;<A HREF="node5.html#secoutputtracking">4</A>.
+<P>
+The decision problem that has to be solved to verify the
+conditions of Theorem&nbsp;<A HREF="node4.html#thstabsw">1</A> is
+<P><A NAME="eqqestabsw">&#160;</A> <IMG WIDTH=500 HEIGHT=22 ALIGN=BOTTOM ALT="equation253" SRC="img69.gif"  > <P>
+and for Corollary&nbsp;<A HREF="node4.html#coglobstabsw">1</A> we get
+<P><A NAME="eqqeglobstabsw">&#160;</A> <IMG WIDTH=500 HEIGHT=22 ALIGN=BOTTOM ALT="equation259" SRC="img70.gif"  > <P>
+If  <IMG WIDTH=13 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1417" SRC="img71.gif"  >  is an algebraic function of <I>x</I>, i.e.,&nbsp;if the relation between
+ <IMG WIDTH=10 HEIGHT=12 ALIGN=MIDDLE ALT="tex2html_wrap_inline1421" SRC="img72.gif"  >  and <I>x</I> is a polynomial equation  <IMG WIDTH=64 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1425" SRC="img73.gif"  >  and  <IMG WIDTH=10 HEIGHT=12 ALIGN=MIDDLE ALT="tex2html_wrap_inline1421" SRC="img72.gif"  >  is one
+of the roots, the above formulas have to be modified. We have to
+quantify <I>u</I> and  <IMG WIDTH=49 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1431" SRC="img74.gif"  >  is changed to  <IMG WIDTH=176 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1433" SRC="img75.gif"  > , see Example&nbsp;<A HREF="node6.html#exdomdef">4</A>.
+<P>
+Furthermore, given a family of parameterized positive definite
+functions  <IMG WIDTH=35 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1435" SRC="img76.gif"  >  we can use quantifier elimination to
+determine if there exists a function in this family such that it
+satisfies the conditions in Theorem&nbsp;<A HREF="node4.html#thstabsw">1</A> or
+Corollary&nbsp;<A HREF="node4.html#coglobstabsw">1</A>. For instance, in order to check global
+stabilizability using the family of quadratic positive definite
+functions,  <IMG WIDTH=75 HEIGHT=21 ALIGN=MIDDLE ALT="tex2html_wrap_inline1437" SRC="img77.gif"  > , we consider the following decision
+problem
+<P><A NAME="eqqeglobstabswpd">&#160;</A> <IMG WIDTH=374 HEIGHT=48 ALIGN=BOTTOM ALT="multline269" SRC="img78.gif"  > <P>
+where <I>P</I> is a matrix variable and  <IMG WIDTH=78 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1441" SRC="img79.gif"  > 
+denotes a set of inequalities which guarantee that <I>P</I> is positive
+definite, e.g.,&nbsp;the positiveness of the principal diagonal minors of <I>P</I>.
+<P>
+This procedure is much more general than when we just use one fixed
+function <I>V</I>(<I>x</I>). The main drawback of this approach is the large
+number of variables in the formula. The number of variables is equal
+to the sum of the number of states, <I>n</I>, and the number of parameters
+we need to describe <I>V</I>(<I>x</I>). In the quadratic case we get
+<I>n</I>+<I>n</I>(<I>n</I>+1)/2-1 variables.
+<P>
+To reduce the required computations, we can search for a quadratic
+Lyapunov function for the linearized switched dynamics and then use
+this in the decision problem&nbsp;(<A HREF="node4.html#eqqestabsw">11</A>). The following
+results from&nbsp;[<A HREF="node8.html#NesicSME97">11</A>, <A HREF="node8.html#SkafidasPES98">14</A>] are then useful.
+<P><A NAME="eqlinbasic">&#160;</A><A NAME="eqlinstabsys">&#160;</A><A NAME="lemmalinstab">&#160;</A> <IMG WIDTH=411 HEIGHT=207 ALIGN=BOTTOM ALT="lemma280" SRC="img80.gif"  > <P>
+<b>Proof</b>See&nbsp;[<A HREF="node8.html#SkafidasPES98">14</A>, <A HREF="node8.html#NesicSME98">10</A>].
+ <IMG WIDTH=9 HEIGHT=8 ALIGN=BOTTOM ALT="tex2html_wrap_inline1401" SRC="img63.gif"  >  <P><A NAME="eqconiccomb">&#160;</A><A NAME="eqlz">&#160;</A><A NAME="lemmalinstab2">&#160;</A> <IMG WIDTH=412 HEIGHT=245 ALIGN=BOTTOM ALT="lemma297" SRC="img81.gif"  > <P>
+<b>Proof</b>See&nbsp;[<A HREF="node8.html#NesicSME97">11</A>].
+ <IMG WIDTH=9 HEIGHT=8 ALIGN=BOTTOM ALT="tex2html_wrap_inline1401" SRC="img63.gif"  >  The results above and in particular the linearization result of
+Lemma&nbsp;<A HREF="node4.html#lemmalinstab2">2</A> can be used to considerably reduce the
+required computations of the stabilizability test. Indeed, in order to
+test stabilizability it is easier if one uses linearizations but the
+design of a stabilizing controller and the estimation of the domain of
+attraction can be done directly by using quantifier elimination. We
+propose the following procedure:
+<OL>
+<LI> Rewrite system&nbsp;(<A HREF="node2.html#eqsys">1</A>) in the form&nbsp;(<A HREF="node4.html#eqlz">16</A>) for
+  different basic controllers (<A HREF="node2.html#eqbctrl">2</A>). Consider the matrix
+  (<A HREF="node4.html#eqconiccomb">17</A>). Find the set of inequalities which follow from
+  the well known Routh-Hurwitz criterion. Computationally more
+  feasible inequalities can be obtained from the
+  Lienard-Chipart criterion, see&nbsp;[<A HREF="node8.html#Gantmacher71">6</A>]. The resulting
+  polynomial inequalities in  <IMG WIDTH=8 HEIGHT=11 ALIGN=MIDDLE ALT="tex2html_wrap_inline1465" SRC="img82.gif"  >  are denoted
+   <IMG WIDTH=162 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1467" SRC="img83.gif"  > . Check
+  whether the following decision problem is TRUE
+  <P><A NAME="eqqelinstab2">&#160;</A> <IMG WIDTH=386 HEIGHT=48 ALIGN=BOTTOM ALT="multline331" SRC="img84.gif"  > <P>
+  Note that the problem can be normalized by fixing one of the
+   <IMG WIDTH=8 HEIGHT=11 ALIGN=MIDDLE ALT="tex2html_wrap_inline1465" SRC="img82.gif"  >  to 1, which reduces the number of variables.
+<LI> If the above formula is TRUE, the system (<A HREF="node2.html#eqsys">1</A>) is
+  stabilizable by switching the basic controllers (<A HREF="node2.html#eqbctrl">2</A>). A
+  numerical instantiation of  <IMG WIDTH=6 HEIGHT=5 ALIGN=BOTTOM ALT="tex2html_wrap_inline1473" SRC="img85.gif"  >  can be extracted from the
+  quantifier elimination procedure. Take any such solution  <IMG WIDTH=6 HEIGHT=5 ALIGN=BOTTOM ALT="tex2html_wrap_inline1473" SRC="img85.gif"  > .
+  Since the matrix  <IMG WIDTH=38 HEIGHT=19 ALIGN=MIDDLE ALT="tex2html_wrap_inline1477" SRC="img86.gif"  >  is Hurwitz, it satisfies the
+  Lyapunov matrix equation. Given any symmetric and positive definite
+  matrix  <IMG WIDTH=79 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline1479" SRC="img87.gif"  > , there exists a unique solution <I>P</I> to
+  <P><A NAME="eqlyapeq">&#160;</A> <IMG WIDTH=500 HEIGHT=25 ALIGN=BOTTOM ALT="equation338" SRC="img88.gif"  > <P>
+  which is symmetric and positive definite. Fix the matrix <I>Q</I> and
+  compute <I>P</I>.
+<LI> With the computed <I>P</I> consider the quantifier elimination
+  problem
+  <P><A NAME="eqqestabswinst">&#160;</A> <IMG WIDTH=386 HEIGHT=48 ALIGN=BOTTOM ALT="multline341" SRC="img89.gif"  > <P>
+  Performing quantifier elimination gives an estimate of the domain of
+  attraction, since the resulting constraints on <I>r</I> correspond to
+  invariant ellipsoids such that all trajectories starting in such an
+  ellipsoid converge to the origin.
+</OL>
+The numbers  <IMG WIDTH=8 HEIGHT=11 ALIGN=MIDDLE ALT="tex2html_wrap_inline1465" SRC="img82.gif"  >  and the matrix <I>Q</I> in the above procedure are
+design parameters which can be chosen differently in order to obtain
+other estimates of the domain of attraction. The method proposed above
+cannot be used if the linearization matrices  <IMG WIDTH=11 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline1495" SRC="img90.gif"  >  do not satisfy the
+conditions of Lemma <A HREF="node4.html#lemmalinstab2">2</A>.
+<P>
+<P><A NAME="exqestabsw">&#160;</A> <IMG WIDTH=63 HEIGHT=12 ALIGN=BOTTOM ALT="example346" SRC="img91.gif"  > <P>
+  Consider the two nonlinear systems  <IMG WIDTH=93 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1497" SRC="img92.gif"  >  where
+  <P> <IMG WIDTH=500 HEIGHT=29 ALIGN=BOTTOM ALT="equation349" SRC="img93.gif"  > <P>
+  The linearization matrices are
+  <P> <IMG WIDTH=500 HEIGHT=29 ALIGN=BOTTOM ALT="equation359" SRC="img94.gif"  > <P>
+  which both are unstable. However,  <IMG WIDTH=42 HEIGHT=19 ALIGN=MIDDLE ALT="tex2html_wrap_inline1499" SRC="img95.gif"  >  is Hurwitz and we can
+  switch between the two systems to stabilize the system locally
+  according to Lemma&nbsp;<A HREF="node4.html#lemmalinstab2">2</A>. It is easy to see that
+  <I>P</I>=<I>I</I> solves the Lyapunov equation&nbsp;(<A HREF="node4.html#eqlyapeq">19</A>). To estimate
+  the domain of attraction we utilize formula&nbsp;(<A HREF="node4.html#eqqestabswinst">20</A>)
+  and get 0 &lt; <I>r</I> &lt; 1.0552. Hence, within a circle of radius at least
+  1.055 we can control the state to the origin.
+<P>
+Lemma&nbsp;<A HREF="node4.html#lemmalinstab2">2</A> may only be used in situations when the
+linearizations of the continuous dynamics contain enough structure.
+However, these conditions are not satisfied in general and quantifier
+elimination is the only tool, which we are aware of, that can handle
+these cases.
+<P><A NAME="exnolinpart">&#160;</A> <IMG WIDTH=63 HEIGHT=12 ALIGN=BOTTOM ALT="example373" SRC="img96.gif"  > <P>
+  Lemma&nbsp;<A HREF="node4.html#lemmalinstab2">2</A> cannot be used for the system  <IMG WIDTH=93 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline1497" SRC="img92.gif"  >  where
+  <P> <IMG WIDTH=500 HEIGHT=29 ALIGN=BOTTOM ALT="equation377" SRC="img97.gif"  > <P>
+  since the linearizations do not contain enough information about the
+  system behavior near the origin. We have to use
+  Theorem&nbsp;<A HREF="node4.html#thstabsw">1</A> or Corollary&nbsp;<A HREF="node4.html#coglobstabsw">1</A> directly
+  instead. We try with the Lyapunov candidate function
+   <IMG WIDTH=79 HEIGHT=20 ALIGN=MIDDLE ALT="tex2html_wrap_inline1509" SRC="img98.gif"  > .  Performing quantifier elimination in
+  formula&nbsp;(<A HREF="node4.html#eqqeglobstabsw">12</A>) gives TRUE, which shows that the
+  system is globally stabilizable by switching basic controllers.
+<P>
+  In Figure&nbsp;<A HREF="node4.html#fignolinpart">1</A> we illustrate the regions where  <IMG WIDTH=50 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1511" SRC="img99.gif"  >  and  <IMG WIDTH=50 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1513" SRC="img100.gif"  > . The union of the gray-shaded regions
+  covers the whole state space.
+<P>
+  <P><A NAME="392">&#160;</A><A NAME="fignolinpart">&#160;</A> <IMG WIDTH=484 HEIGHT=220 ALIGN=BOTTOM ALT="figure387" SRC="img101.gif"  > <BR>
+<STRONG>Figure 2:</STRONG> The regions (gray) where  <IMG WIDTH=50 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1511" SRC="img99.gif"  >  (left) and
+         <IMG WIDTH=50 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline1513" SRC="img100.gif"  >  (right).<BR>
+<P>
+<P>
+  The curve  <IMG WIDTH=78 HEIGHT=20 ALIGN=MIDDLE ALT="tex2html_wrap_inline1519" SRC="img102.gif"  >  can be shown to lie in the interior of
+  the overlap of the regions in Figure&nbsp;<A HREF="node4.html#fignolinpart">1</A> and can
+  hence be used to switch between the systems to obtain global
+  asymptotical stability.
+<P>
+<HR><A NAME="tex2html53" HREF="node5.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://www.control.isy.liu.se/icons/next_motif.gif"></A> <A NAME="tex2html51" HREF="jirstrand.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://www.control.isy.liu.se/icons/up_motif.gif"></A> <A NAME="tex2html45" HREF="node3.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://www.control.isy.liu.se/icons/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html54" HREF="node5.html">4 Exact Output Tracking</A>
+<B>Up:</B> <A NAME="tex2html52" HREF="jirstrand.html">On Switched Polynomial Systems </A>
+<B> Previous:</B> <A NAME="tex2html46" HREF="node3.html">Nonsmooth Systems</A>
+<P><ADDRESS>
+<I>Mats Jirstrand <BR>
+Mon Nov 30 23:37:24 MET 1998</I>
+</ADDRESS>
+</BODY>
+</HTML>

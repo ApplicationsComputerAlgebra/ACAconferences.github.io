@@ -1,0 +1,19 @@
+  Session Title:
+Teaching of Efficient Mathematics
+
+  Organizers: 
+Alkiviadis G. Akritas   akritas@uth.gr
+Gennadi Malaschonok     malaschonok@math-iu.tambov.su
+
+The title of this session indicates that we are welcoming everybody
+who is doing constructive mathematics with the help of computer
+algebra systems.  Among the topics covered by this session are:
+
+1.  Reports on successful classroom experiences using mathematical software
+    systems.
+2.  Impact of mathematical software systems on mathematical thinking and
+    problem solving.
+3.  Impact of new technologies on mathematics teaching and learning.
+4.  New algorithms, (network) software for organising new forms of math
+    teaching and studying, computer-based math texts, lectures and teaching
+    units.

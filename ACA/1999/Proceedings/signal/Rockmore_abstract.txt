@@ -1,0 +1,19 @@
+Speaker:      Dan Rockmore
+Title:        A Wreath Product Approach to Signal and Image Processing
+Affiliation:  Mathematics and Computer Science
+              Dartmouth
+              Hannover, NH USA
+URL:          http://www.cs.dartmouth.edu/~rockmore/
+Email:        rockmore@cs.dartmouth.edu
+
+Abstract
+
+We propose the use of spectral analysis for wreath product groups in digital
+image processing. Within this large class of groups our approach recovers the
+DFT, Haar wavelet transform, various multichannel pyramid filter banks and
+other aspects of multiresolution analysis as special cases of a more general
+phenomenon. In addition the group structure provides a rich algebraic structure
+(eg. convolution and correlation) which can be exploited for the analysis and
+manipulation of signals.  Numerical and experimental results are included. This
+is joint work with R. Foote (UVM), G. Mirchandani (UVM), D. Healy (Dartmouth)
+and T. Olson (UF).

@@ -1,0 +1,94 @@
+\batchmode
+\documentstyle{article}
+\makeatletter
+
+\makeatother
+\newenvironment{tex2html_wrap}{}{}
+\newwrite\lthtmlwrite
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newbox\sizebox
+\begin{document}
+\pagestyle{empty}
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\{ \delta_{1},\ldots,\delta_{n} \}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline39: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$R_{\Delta}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline41: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\theta$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline43: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$D_{j}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline49: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sum_{\mid aj \mid \leq d_{j}} c_{ja} \theta^{aj}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline51: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$d_{j}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline53: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$j=1,\ldots,s$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline57: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$s \geq n+1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline59: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$d_{1} \geq d_{2} \geq \ldots \geq d_{n+1}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline61: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$d=1+\sum_{i=1,\ldots,n+1}(d_{i}-1)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline63: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline65: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$S_{n}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline67: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$D_{j}(x)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline75: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$(\sum_{j=1,\ldots,s}L_{j}, L)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline79: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$L_{j}={d_{j}+n \choose n}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline81: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$L={d+n \choose n}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline83: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+\stepcounter{section}
+
+\end{document}

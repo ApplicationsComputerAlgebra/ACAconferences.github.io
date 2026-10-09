@@ -1,0 +1,20 @@
+COMPUTER ALGEBRA APPLIED TO MATHEMATICAL CARTOGRAPHY
+Carlos Enríquez Turiño
+
+ABSTRACT
+It's a well-known fact that the conformal Gauss-Kr=FCger projection, and
+its variant the UTM, are not strictly conformal because of the
+truncation of the terms and then none of the Cauchy-Riemann conditions
+are satisfied. This work is divided in three parts. First, we prove this
+fact . Second, we evaluate the angular distorsion for the Hayford
+ellipsoid, proving that the projection is practically conformal. In
+order to evaluate the maximum angular distorsion we use the semiaxes of
+the Tissot indicatrix ellipse. The third part of this work, which is
+under construction, is a package with useful functions for the UTM
+projection, including:
+
+	Direct and Inverse transformation.
+	Grid Convergence.
+	Local scale-factor.
+	Correct to a line of finite length.
+	The chord to arc correction.

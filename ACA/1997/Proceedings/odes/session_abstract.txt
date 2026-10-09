@@ -1,0 +1,42 @@
+Title: Computer Algebra Methods in Integration and Analysis of ODEs
+
+Session topics:
+
+      o Symbolic integration of ODEs
+      o Construction of Liouvillian solutions for homogeneous linear ODEs
+        and differential Galois theory
+      o Factorization of linear differential operators
+      o Stability and bifurcation analysis of ODEs
+      o Computation of first integrals for dynamical systems
+      o Symplectic integration of hamiltonian systems
+      o Construction of approximate solutions
+      o Lie symmetry methods
+      o Solving boundary problems
+      o Implementation aspects for algorithms designed for the analysis
+        and solution of ODEs
+      o Applications to science and engineering
+
+The session is considered to be a forum for the discussion of the constructive
+theory of ODEs, different algorithmic methods for their analysis and
+integration, efficient implementation and application to science and industry.
+
+This conference will follow ISSAC '97 and PASCO '97 at the same location,
+providing a good opportunity for the interaction of theory, computer algebra
+algorithms and software, and applications to science, engineering and industry.
+
+It is expected that the topics of the conference will be refereed and published
+in a high-quality journal.  Indeed, we place special emphasis on the
+presentation of new work.  The session organizers will be taking care of this
+aspect.
+
+Unfortunately funds are not available for travel and accommodation costs of
+invited speakers as it is in the usual IMACS format.
+
+Session organizers:
+
+Vladimir Gerdt                       Fritz Schwarz
+LCTA, JINR                           GMD-SCAI
+141980 Dubna, Russia                 D-53754 St. Augustin, Germany
+phone: (+7) 09621 63437              phone: (+49) 2241 14 2782
+fax :  (+7) 09621 65145              fax:   (+49) 2241 14 2889
+email: gerdt@jinr.dubna.su           e-mail: fritz.schwarz@gmd.de

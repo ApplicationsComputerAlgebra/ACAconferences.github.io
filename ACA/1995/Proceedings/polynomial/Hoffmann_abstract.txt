@@ -1,0 +1,30 @@
+ "Geometric Constraint Solving (II) Algebraic Issues"
+  Christoph M. Hoffmann
+  cmh@cs.purdue.edu
+
+   In the simplest case, a graph-directed solver discovers that the
+constraint problem can be solved by a sequence of construction steps in
+which, at each step, a single geometric element is placed with respect to
+the geometric elements already so constructed.  Algebraically, this
+situation corresponds to a block-triangular system of equations, where each
+block has a simple structure, consisting usually of two quadratic
+equations.  Such constraint problems can be solved in linear time.
+
+   In the more general situation, there are three clusters of geometric
+elements that must be combined.  Each cluster consists of three or more
+geometric elements that are already placed correctly with respect to each
+other, but whose position and orientation as rigid body in the plane is not
+yet known.  To place them, in the simplest situation, a subset of three
+geometric elements is identified and constraints between them are derived
+from the partial solution.  Then, the subset of elements is constructed in
+the usual way, and from the result the required rigid-body motion derived
+that places the three clusters into correct position relative to each
+other.
+
+This curious operation of merging clusters based on derived constraints is
+a key component of the solver.  It can be thought of as instance
+elimination of variables, not in the symbolic algebraic sense, but in the
+specific sense of the partial solution known at that time.  This operation
+should be examined closely from an algebraic perspective and properly
+generalized, for it could play an important role in speeding up solvers for
+systems of polynomial equations.

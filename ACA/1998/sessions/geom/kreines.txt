@@ -1,0 +1,20 @@
+"Matrix  mappings  preserving  Diedonne  determinant  and  their
+ algorithmic constructions"
+
+Elena Kreines
+Department of Mechanics and Mathematics, Moscow State University.
+
+
+
+     ABSTRACT.
+
+     In this paper the following problem is considered: let  $D$
+be a skew-field, $M_n(D)$ be a matrix algebra  over  its  center
+$K$. A classification of  one-to-one  $K$-linear  mappings  from
+$M_n(D)$ to $M_n(D)$ which  preserves  Diedonne  determinant  is
+obtained. Namely,  $T(A)=P(A^s)Q$  for  all  matrices  $A$  from
+$M_n(D)$ or $T(A)=P( (A^s)^t  )Q$  for  all  matrices  $A$  from
+$M_n(D)$, here  $s$  denotes  $K$-linear  authomorphism  of  the
+skew-field $D$, and $t$ denotes transpose matrix.
+     Computational algorithms for constracting matrices  $P$  and
+$Q$ are proposed.

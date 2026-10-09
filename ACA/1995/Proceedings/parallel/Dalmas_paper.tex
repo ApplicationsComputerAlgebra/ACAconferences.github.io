@@ -1,0 +1,907 @@
+%\documentstyle [a4]{article}
+\documentclass {article}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 8.9in
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 6.5in
+
+
+\title{The Central Control: A flexible tool to experiment with distributed
+symbolic computation} 
+
+\author{
+        St\'ephane Dalmas and Marc Ga\"etano
+        \thanks{also I3S, CNRS URA 1376,Universit\'e 
+                          de Nice Sophia--Antipolis}\\
+        {\small INRIA Sophia Antipolis, projet SAFIR} \\
+        {\small 2004 route des lucioles }
+         {\small BP 93} \\
+         {\small 06902 Sophia-Antipolis {\sc CEDEX}} \\
+         {\small France } \\
+         {\small 
+          \begin{tabular} {ll}
+            E-mail:& stephane.dalmas@sophia.inria.fr\\
+                   & marc.gaetano@sophia.inria.fr
+          \end{tabular} 
+         }
+}
+
+\begin{document} 
+
+\maketitle
+
+\begin{abstract}
+In this paper, we present the new version of the {\em Central Control\/}, 
+a software component that has been designed to be the
+kernel of  environments for scientific computations. Such an environment
+can offer a common
+and concurrent access to many tools needed by the scientist and the
+engineer: general purpose and specialized computer algebra systems,
+visualization tools, links with numerical libraries and tools to manipulate
+numerical programs {\sl etc}.
+It can be easily applied to make various experiments in distributed
+computation.  
+The Central Control is the kernel of the Comprehensive Solver that provides
+a common access to all the programs developed within 
+the PoSSo {\sc esprit/bra} project.
+The new version of the Central Control is an extension of a {\sl Scheme}
+interpreter.
+We show how the Central Control can be a useful tool for solving many
+problems dealing with computer algebra and communication and why the new 
+implementation provides more flexibility.
+\end{abstract} 
+
+\section{ Introduction }
+
+Architectures which support the solution of mathematical problems
+by linking specialized components are central to the future growth
+of Computer Algebra and related fields.
+The Central Control is a software component 
+that has been designed to be the kernel of environments for scientific
+computations which can offer a common and concurrent access to many tools
+needed by the scientist and the engineer. 
+Lots of people have implemented particular solutions to communicate with or
+from a computer algebra system.
+% (GB, {\sc cas/pi}, MicMac\ldots).
+The aim of the Central Control is also to become a useful tool to help such
+people to spend less efforts on implementing and managing the communications.
+
+Since there is a wide variety of  mathematical objects and associated
+representations, 
+our approach is to avoid any predefined meanings on the objects and
+requests that are exchanged. 
+Writing a server that can interact with the Central Control
+(often abbreviated as CC in the sequel)
+should be as easy as possible,
+requiring as less knowledge as possible. 
+When implementing  a new server, the programmer does not need to cope with  
+any conventions. 
+He is free to decide what requests and data the server will handle and what
+its responses will look like. 
+It is the job and responsibility of
+the Central Control to provide the necessary mechanisms for servers to
+interoperate and exchange data.
+
+%Our motto : we cannot usefully standardize !
+%We closely examine the coupling between the cooperating processes\ldots
+
+In the next section, we present some typical situations where there is a
+clear need to make several tools cooperate. Then, we describe the Central
+Control and its most salient features and how it can be used to
+solve some of the previous problems. 
+
+\section{ Some needs }
+
+In this section, we will try to briefly cover the various communication
+needs related to computer algebra.
+
+\subsection*{ The need for a specialized system}
+
+It is often the case that a general purpose symbolic computation system cannot
+compete with specialized packages. 
+Often the difference in performance can be
+tremendous. One typical case is the computation of Gr\"obner basis for which
+very specialized and efficient systems exist, like {\sc gb}, 
+{\sl Singular} or the PoSSo Gr\"obner Solver.
+{\sl Ad hoc} solutions have been  found for calling these programs from
+general purpose systems and retrieving their results, using intermediate
+files as a simple support of the communication 
+(as any system can at least read and write files and run external programs). 
+One such example is the {\sl Micmac} package that enables the transparent use
+of {\sl Macaulay} from {\sl Maple}.
+>From a performance point of view, this is not as bad as it seems. The time
+spent in file system operations is usually negligible compared to the time
+spent in the computation itself (especially with Gr\"obner basis\ldots).
+
+\subsection*{ Mixing symbolic and numerical computing}
+
+Most general purpose symbolic computation systems include some purely
+numerical algorithms (for linear algebra or {\sc ode} solving for example)
+sometimes both for machine precision floating-point data  and arbitrary
+precision ``big floats'' for efficiency reasons. 
+The communication with a specialized numerical server providing the support
+for native floating-point computations can be a very interesting alternative.
+All the necessary algorithms exist in several libraries (some of them being
+freeware and high-quality), that can be used as bases for building such a
+server (most non commercial numerical {\sl Matlab}-like systems like {\sl
+Octave} or $\Psi$lab use such libraries).
+Alternatively, we can also imagine other servers that provide arbitrary
+precision floating-point computations.
+
+%\ldots Maple and
+%Matlab\ldots 
+%Another approach that has been used is to dynamically link numerical code in
+%the  symbolic system.
+
+As in the previous example, the efficiency of the communication is not a
+central problem. The computation time dominates the communication overhead.
+
+The main benefit in the approach of physically separating a program in two
+parts is for the designer of the system. 
+>From a software engineering point of view, 
+it certainly enhances the maintainability and ease of development, by
+enforcing a logical separation and thus avoiding unnecessary or accidental
+dependencies. The different parts of the program can be developed, tested and
+debugged concurrently provided that the interfaces are defined. 
+%New versions of the numerical server can be
+%produced and installed without having to recompute the whole system.
+%From a user point of view, this solution has the advantage to induce some
+%kind of load sharing (as described below).
+
+Generating {\sc c} or {\sc fortran} numerical code is another very important
+issue when optimal performance is needed (eliminating the interpretative
+overhead of the previous approach). 
+Several packages have been written for that purpose, for example 
+{\sc macrofort} or {\sc macroc} (\cite{MacroC}) for {\sl Maple} or 
+{\sc gentran} for {\sl Reduce}. 
+This can also be implemented through special servers. The new version of 
+{\sl Axiom} uses a {\tt nagd} server (the NAGLink daemon) for providing a
+link with the {\sc nag} numerical library.
+
+\subsection*{ Distributing computations}
+
+Many experiments have been conducted in the last few years in 
+parallel or distributed computing in the field of computer algebra.
+%, like  {\sc dsc}, or linking the {\sc pvm}
+%library and {\sl Reduce}\ldots Many complex algorithms could benefit from
+Of practical interest  for most users are
+facilities for distributing computations that can be done in parallel over
+machines on a local area network (as this is a much more common situation
+than availability of parallel computers). 
+Many algorithms can profitably operate at this level of parallelism.
+For this kind of applications the efficiency of communications can be very
+important. Yet there are many algorithms for which this is not crucial.
+
+Distributing computation on several machines can also be interesting even 
+without true parallelism.
+Symbolic computation systems need a lot of resources (time as well as memory)
+and it can be very desirable to have load sharing facilities. For example, in
+the case of a system where the numerical operations have been physically
+separated, the process that implement them can run on another computer. Even
+if it is not a clear win in term of computation time, an interesting amount of
+memory could be saved and thus paging activities and the associated
+performance penalty can be reduced.
+
+\subsection*{ Graphical interfaces }
+
+The interest to separate the interface from a computing kernel is
+recognized for quite a long time (\cite{kn:camino}) and realized in major
+commercial systems like {\sl Maple} (\cite{kn:iris}) and {\sl Mathematica}.
+Unfortunately, we are not at the point where a common interface can be used
+with several systems or a new interface can be easily build for a commercial
+system. 
+
+\subsection*{ Symbolic computation as a tool}
+
+There are many applications where symbolic computation is no more central.
+The greatest spread and acceptance of symbolic computation makes it a natural
+tool in several areas like constraints solving (\cite{RMPASCO94}) or {\sc cad}.
+A growing number of industrial products include symbolic computation
+facilities that are written from scratch, 
+for example in packages for simulations of multi-body systems
+or control theory. There is an example of a product for the control
+and simulation of systems, written in Smalltalk that implements some
+non-trivial algorithms like polynomial factorization. 
+
+There are some rare examples of commercial products that transparently use a
+commercial symbolic computation system like \cite{kn:TMcLH94} that uses 
+{\sl Maple}. But it seems to be a concern for major vendors of computer
+algebra: {\sl Maple} distributes a special {\sc c}-callable version (and
+is interested in the OpenMath initiative \cite{OpenMath.htmp})
+and {\sl Mathematica} can be accessed through the {\sl MathLink} protocol.
+
+\section{ The Central Control }
+
+%Experience with the OpenMath initiative shows that semantics will never be
+%standardized at a convenient level. So there is a need for a semantics
+%repository\ldots
+
+The Central Control has been designed with several aims:
+\begin{itemize} 
+\item being the kernel of architectures for scientific computation which
+can offer a common and concurrent access to many tools:
+general purpose and specialized computer algebra
+systems, visualization tools, links with numerical libraries and tools to
+manipulate numerical programs {\sl etc}.
+\item being a base for easy experiments involving the cooperation with one
+or more symbolic computation systems, for distributing computations as well
+as to allow the easy use of computer algebra from another application.
+\item to be a useful tool for people that want to implement a new specialized
+system 
+%by providing an interface and facilities to 
+\item to replace {\sl ad hoc} solutions for cooperation between a specialized
+and a general purpose system
+\end{itemize} 
+
+Our first prototype of the Central Control was written entirely in Standard 
+{\sc ml} ({\sc sml}), with the exception of a special small process, the {\sl
+connection manager} dealing with a limitation of the underlying {\sc sml}
+runtime that we used.  
+It uses its own particular programming language. Our
+approach for the design of this language was to concentrate on what was
+really important (managing servers, promises and translations) and avoid
+features that were not strictly necessary. The only computation mechanism was
+through conditional rewrite rules (see  \cite{kn:CC94} for more details). 
+After validating our design with the first prototype it became clear that this
+approach was not the best in our context. Potential users are not willing
+to learn a completely new (and quite exotic) language just for managing their
+communications. So we took the decision to implement the features of the CC
+in an existing interpreter for a well-known programming language.
+Another advantage of this is that we can rely on good existing materials for
+learning the language.
+
+The Central Control is now a Scheme interpreter extended with a set of new
+primitive operations. The operations include:
+\begin{itemize} 
+\item launching or connecting to a server
+\item sending a computation request and receiving the answer
+\item dealing with exceptional conditions: interrupting a ser\-ver or
+asynchronously requesting information (like  memory size or
+{\sc cpu} time already spent in the current computation)
+\item translating requests and answers to insure the faithful transmission 
+(exchange) of data between servers (this is almost entirely
+implemented in {\sl Scheme})
+\end{itemize} 
+
+We can illustrate some of the previous items with a short CC session. 
+Here is how to create a {\sc pari} server, running on the machine {\tt kama}. 
+{\tt pari1} is bound to a new kind of Scheme object, of type {\tt server}. 
+\begin{verbatim} 
+> (define pari1 (server-create-remote "pari" "kama" 
+                      "/net/safir/bin/pariserver"))
+#<unspecified>
+> pari1
+#<server service : pari>
+\end{verbatim} 
+This server belongs to the {\tt pari} service. A service is an abstraction
+common to several servers. Services are used for translating requests and
+results of computations (this mechanism is described below).
+%, for example, all instances of {\sc pari}
+%will be 
+We can now send a computation request to our newly created server and get the
+result back. 
+\begin{verbatim} 
+> (server-compute pari1 '(primes 30))
+(result "pari" ("seq" 2 3 5 7 11 13 17 19 23 
+29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 
+97 101 103 107 109 113))
+> 
+\end{verbatim} 
+The {\sc pari} server interprets the term {\tt (primes 30)} as a request to
+compute the thirty first prime numbers. 
+The result is a sequence of prime numbers.
+
+{\tt server-batch} is a function similar to {\tt server-compute} except that
+is returns immediately a {\sl promise} after transmitting the request without
+waiting for the computation to end in the server. 
+This function allows the user to run a long computation while doing some
+other activities in the Central Control and actually implements parallel
+processing.
+
+For example, the function {\tt compute-immediately} sends a computation
+request to a pool of {\sl Maple} servers. The request is sent to the first
+available server in the pool (not currently computing, this is tested with the 
+{\tt server-ready?} function). 
+If the pool is empty, or if all the servers are busy, a new server is created
+and added to the pool to handle the request.
+\begin{verbatim} 
+(define compute-immediately
+  (let ((s-pool ()) (s "Maple") (m "kama"))
+    (lambda (t)
+      (let ((s-list
+             (do ((s-list s-pool (cdr s-list)))
+                 ((or (null? s-list)
+                      (not (server-busy?
+                             (car s-list))))
+                  s-list)))
+            (newserv ()))
+        (cond ((null? s-list)
+               (set! newserv 
+                     (new-server s m))
+               (set! s-pool 
+                     (append s-pool (list newserv)))
+               (server-batch newserv t))
+              (else
+               (server-batch (car s-list) t)))))))
+\end{verbatim} 
+A more sophisticated (and useful) version of this function could try to
+create the {\sl Maple} servers on different computers.
+
+\subsection{ Promises }
+
+%A promise represents a potential result that is being computed somewhere.
+A promise is a mutable Scheme object associated with a computation in
+progress in a given server. There are primitive functions acting on
+promises, to retrieve the associated server, to check if the computation is
+done or to get its result when available. When the value of a promise is
+available we say that the promise is {\sl realized}. 
+The function {\tt promise-ready?} can be used to test if a promise is
+realized. 
+
+The Scheme function {\tt first-one} sends the same request {\tt req} to two
+different servers {\tt s1} and {\tt s2} concurrently. 
+As soon as one server terminates the other is interrupted and the result is
+returned.
+\begin{verbatim} 
+(define (first-one s1 s2 req)
+  (let* ((p1 (server-batch s1 req))
+         (p2 (server-batch s2 req))
+         (pr (wait-for p1 p2)))
+    (server-interrupt s2) 
+    (server-interrupt s1)
+    (promise-value pr)))
+\end{verbatim} 
+The primitive {\tt server-interrupt} interrupts a server and {\tt
+promise-value} extracts the value of a promise.
+{\tt wait-for} takes promises as arguments and returns the first that is 
+realized. 
+
+If we include a promise in a computation request, in the argument to 
+{\tt server-compute}, the CC blocks until the promise is realized. If we
+include a promise in a {\tt server-batch} call, the function returns
+immediately another promise and the request is put on a queue to be sent when
+the promise is available.
+
+Our promise and {\tt server-batch} mechanisms are similar to the {\sl future}
+construct of Multilisp (\cite{MULTILISP}) and to the promises of 
+\cite{PROMISES}. We were unfortunately unaware of these works when we first
+designed the Central Control.
+
+\subsection{ Lazy communication }
+
+As the results of the computations can be huge, it is desirable to avoid
+systematically transmitting them to the CC. 
+The CC can therefore associate a {\sl handle} to a result that is stored in
+a server.
+Only the request of specific operations on this handle should cause the
+effective transmission of the associated result. 
+In some cases, we can even avoid transmitting the data associated with the
+handle, for example when a subsequent computation  is addressed to the
+server that owns the value of the handle.
+This notion of lazy communication can reduce the time of communication,
+computation (for transformation of the mathematical objects to the 
+representation used by the interprocess communication protocol) and the space
+used (in the CC). This implies only a few  constraints on the server
+(essentially being able to name and store its results) that are, of course, not
+mandatory (the CC can transparently work with servers that do not have the
+support for handles). 
+
+A difficulty for implementing handles in the Central Control is how to deal
+with the termination of servers. When the termination is accidental (due to a
+fault in the server), we cannot do much (every attempt to access the data
+will result in an error).
+When the termination is normal (through the {\tt server-terminate} function),
+we choose the simplest solution which is  to effectively terminate the server
+only when all the needed handles have been retrieved (we rely on some
+mechanism in the garbage collector for the actual implementation).
+Another troublesome point is that we cannot access any handles in a server
+that is currently computing. The current implementation returns an error in
+this situation. In our practice, this has never been a problem. But it should
+be interesting to find a better solution.
+
+\subsection{ Translating requests and results}
+
+As we don't enforce a standard for encoding all mathematical objects, we need
+a mechanism to translate from the representation used by one server to another.
+This does not mean that given $n$ services we need to specify $n (n - 1)$
+translations. The Central Control can choose its own common representation
+and thus only $n$ translations are really necessary.
+
+For example, the Central Control ``understands'' several representations of
+arbitrary precision integers (different bases, and byte and figure
+orderings) in the sense that we have implemented functions to translate from
+all representations to a string in base 10 (at least to be able to print
+them) and to directly translate to and from the most common representations.
+
+The translations are performed for each {\tt server-compute} or
+{\tt server-batch} call, based on the service of the server that the request
+is submitted to. It is possible to set translations for requests as well as
+for results. Nevertheless, we normally use a lazy translation of results 
+(they are ``tagged'' with the name of the service).
+
+Translations are specified with a set of functions manipulating the 
+{\sl translation tables} of a server. A little pattern-matching facility (as
+well as using general Scheme functions) is used. For example, here is the
+rules to translate {\tt factor} and {\tt negate} operators.
+\begin{verbatim} 
+  `(("factor" x) (if (integer? x)
+                     `("ifactor" ,x)
+                     `("factor" ,x)))
+  `(("negate"    (,integer? x)) (- x))
+\end{verbatim} 
+The translations depend on whether the arguments are integer.
+
+Rules can be gathered in sets with inheritance as in the following example
+that defines two rule sets with {\tt sum-rules} included in {\tt simp-rules}.
+\begin{verbatim} 
+  (define sum-rules
+     (make-rule-set '( (("+" x 0) x)
+                       (("+" 0 x) x) )))
+
+  (define simp-rules
+     (make-rule-set '( (("-" x x) 0) )
+                     sum-rules))
+\end{verbatim} 
+
+Rules can be applied explicitly with the \verb+apply-rule-set+ function or
+implicitly when bound to a service.
+
+%How to know if a server understands a request?\ldots
+
+\subsection{ Virtual servers }
+
+We can also create servers that are not associated to a real process. These 
+{\sl virtual servers} are created with the {\tt server-create-virtual}
+function. The following is an example of how to create a virtual server that
+creates a {\sl Maple} server the first time it received a computation request
+and uses this true server for all its subsequent computations.
+\begin{verbatim} 
+(define maple-trans
+  (let ((maple ()))
+    (lambda (r)
+      (if (not (server? maple)) 
+          (set! maple
+                (new-server "Maple" "kama")))
+      (server-compute maple r))))
+
+(define maple-server 
+   (server-create-virtual maple-trans))
+\end{verbatim} 
+An expression like {\tt (server-compute maple-server} {\em r} {\tt )} is
+evaluated as a call of the {\tt maple-trans} function called with {\em r}
+as an argument.
+
+The interest of virtual servers lies in the fact that they are manipulated as
+true servers. Every piece of code written to work with real servers can be
+reused with virtual servers.
+
+Note that using the {\tt server-batch} function with a virtual server will
+not cause the associated Scheme function to be executed asynchronously. The 
+{\tt server-batch} call will only return after the function is executed (if
+the function itself does not return a promise, a realized promise is returned
+anyway). 
+
+\subsection{ Control in the Central Control }
+
+The Central Control is not multi-threaded (contrary to {\sl Glish},
+\cite{kn:GLISH}). 
+We can think of situations where a more complicated control could be
+interesting. 
+For example, we can imagine that a server could ask the CC for
+some computations (of course to be forwarded  to another server). Nothing
+prevents this in the current implementation (through the mechanism for
+translating results). The problem is that if the server was called through 
+{\tt server-batch} the request will basically only be honored when a 
+{\tt promise-ready?} call will be issued. 
+%the CC can made busy by a server and for a {\tt server-batch} call, the
+
+The implementation of a multi-threaded, preemptive version of the Central
+Control would certainly be a rather tricky task (although the 
+{\sl continuation} mechanism of Scheme can be of some help). 
+We have investigated this possibility and found that it should not be our
+priority and that it is wiser to try first a simpler approach. Moreover, more
+flexibility can bring more subtle problems (dealing with exclusion, deadlocks
+and data protection). 
+
+\subsection{ Our communication protocol }
+
+We use the {\sc asap} protocol (\cite{kn:ASAP}) to communicate between a
+server and the Central Control.
+The basic objects exchanged are terms or more precisely attributed terms.
+The main properties of {\sc asap} are
+\begin{itemize} 
+\item {\sc asap} do not try to enforce any predefined meanings for
+operators. Only certain attributes are predefined, for tasks such as
+requesting interruption of termination, or subterm sharing.
+\item the length or size of all entities (binary data, arity of an operator
+or the number of attributes) are always know prior to their reading so as to
+avoid managing intermediate storage and unnecessary copying. There is a
+limit to the length of an operator or attribute name. It is still possible,
+through a special predefined attribute to send a sequence of terms on the
+fly. 
+\end{itemize} 
+{\sc asap} supports transmission of binary data that can be used to provide
+more efficient specialized encodings.
+
+{\sc asap} uses (stream) sockets as the basic communication mechanism. 
+Each {\sc asap} connection uses in fact two sockets, the second one for
+communicating exceptional conditions (like requests for interruption).
+
+ For the moment, the CC only understands the {\sc asap} protocol.
+Nevertheless, there is no restriction in the design of the CC that will
+prevent the use of several protocols (a particular protocol can be attached
+to each service). It would be fairly easy, for instance, to use the
+OpenMath standard as soon as this new protocol will be defined and accepted by
+the community.
+
+\section{ Using the Central Control }
+
+We can now return to  the needs that we reviewed and show how the Central
+Control can address them. Basically, its design is well adapted to become the
+kernel of an architecture for scientific computation with servers arranged in
+a ``star-like'' fashion. 
+It can provide access to specialized systems as well as links between
+numerical and symbolic systems and provide symbolic computation facilities to
+any program. 
+Its flexibility enables the programming and configuration of a network of
+servers and the transparent use of different servers (through the virtual
+server mechanism).
+
+We provide a convenient interface to the Central Control, using classical
+input and two dimensional output of mathematical expressions.
+Through this 
+interface the user feels like he is interacting with a single true symbolic
+computation system although its computations are transparently done by the
+various servers that we have implemented, running on different machines.
+
+This simple interface constitutes an interesting base for someone wanting to
+develop a specialized package. He can concentrate his work on the essential
+features of his program to make it a server for the Central Control that
+provides the interface and links with other programs for free.
+
+More generally, we plan to provide a complete library of Scheme
+functions. 
+For example, we have implemented a few set of utilities to obtain interesting
+information like average load and memory usage of the machines on the
+network. They have been used to write some simple functions to provide
+transparent load sharing on our local area network.
+
+The Central Control can be used to combine the power of a general purpose
+system with the efficiency of a specialized package.
+It is in fact possible to use the Central Control directly from a general 
+purpose system. This has been done for {\sl Maple}. This is a
+necessary feature for the acceptance of the CC as many users want to stay
+with a user interface they know and are used to. This provides an easy access
+to specialized packages, replacing ad-hoc solutions (some experiments have
+been done with {\sl Maple} and {\sc gb}). 
+
+%From a software engineering point of view it is important to be able to 
+%clearly separate a computer algebra system in independent parts.
+%Another important issue is the reusability of servers and the replacement of
+%one server by another.
+
+The CC can be a very useful tool for applications that need some computer
+algebra. Such applications can use it as a generic computation server (it can
+be accessed either through the {\sc asap} protocol or through a textual
+interface with a special output) and thus removing the dependency on a
+particular computer algebra system. 
+The programmer of the application can program its own virtual
+server to provide all the needed operations.
+% in such a way that the operations
+%could be provided by different systems. 
+The application can be distributed with a configuration file that
+enables the use of different real servers to provide the needed services,
+depending on which systems are available to the end user.
+
+The previous situation is basically the one of a generic graphical user
+interface. 
+The CC can be used as an intermediate agent to enable a single graphical
+interface to communicate with several systems. We are building such an
+interface (based on a powerful customizable equation editor).
+
+The Central Control is used by a PhD student in our group to investigate
+methods for performing primary ideal decompositions. This application makes
+use of non trivial programming at the Scheme level as the idea is to mix
+different methods with a complicated ``heuristic'' control (for example,
+stopping a process when too much time has elapsed and trying something else). 
+The Central Control enables him to exploit some very useful concurrency in
+his algorithms as well as to use the most efficient server for each sub-task.
+
+\subsection*{Some problems with the Central Control}
+
+The Central Control is certainly not useful for cases where the communication
+is really intensive or when efficiency is the main concern. Its centralized
+communication model is certainly restrictive but it is also very simple to
+manage and understand.
+The major criticisms that we have faced from our first users were about
+the lack of a generic help mechanism and the use of general purpose computer
+algebra systems from the Central Control. 
+
+Providing a useful help facility for all the operations in each
+available server is not that easy (accessing on-line help requires at
+least to have the server running, and the format is likely to be very
+different for each server). We plan to implement a help server that could use
+its own database of help messages (perhaps automatically constructed from
+on-line help messages of the various servers)  and 
+that can map between the operations available in the Central Control and
+the operations available in the servers.
+% and that can transparently translates .  
+
+Using general purpose systems from the Central Control can be frustrating for
+two reasons: accessing the programming language of the system and knowing how
+much of the semantics of the system is supported by the Central Control.
+
+Of course, it is possible to load files written in the language of the system
+in such servers (by means of a generic {\tt load} operator that is translated
+to the correct function for each server) but we cannot naturally write
+programs from the Central Control. Although it could be possible to map every
+constructs of the language of the system in the Central Control (by providing
+some translations at the level of the abstract syntax), we think that the
+languages of computer algebra systems have too many peculiarities for this to
+be manageable.% (nevertheless, we plan to make some experiments). 
+
+One of the goals of the Central Control is to enable the exchange of data
+between various servers. For that task, it needs to perform translations.
+A general purpose computer algebra system has several hundreds of symbols
+with special meanings but the Central Control is likely to know only part of
+these. So we face a possible semantic gap: it is possible that a symbol with
+a special meaning to one server cannot be translated to another one. 
+This is, of course, unavoidable.
+But it is, nevertheless, a safe situation. The translation mechanism can
+ensure that a symbol with no special meaning for the Central Control will not
+be interpreted by the server it is sent to. 
+This prevents unintended
+computations (one example would be sending {\tt W(x)} as a formal
+expression to {\sl Maple}, without knowing that {\tt W} as a special meaning
+for this system).
+ 
+
+%Even if
+%parallel processing is indeed possible in the Central Control (and can be
+%really useful), we don't aim at replacing 
+
+%It doesn't aim to replace like 
+
+\section{ Implementation }
+
+The Central Control is implemented on top of the {\sc scm} Sche\-me
+interpreter. 
+This interpreter has been ported to a great number of computers (and 
+incidentally seems to have been chosen to be the base of the {\sc gnu}
+extension language). 
+We plan to port our primitives and Scheme code to at least another Scheme
+interpreter to demonstrate that our design is not dependent on a particular
+implementation. Our current implementation is around 1200 lines of {\sc c}
+code and 600 lines of Scheme code. The process occupies approximately 700K
+(including 400K of sharable code) on a SparcStation at startup (the size of a
+{\sl Maple} 5.3 kernel).
+
+We have successfully used some parts of the {\sc Jacal} program
+(a symbolic mathematics system which runs under Scheme language
+implementations, written by Aubrey Jaffer, the author of {\sc scm}) to
+create the interface to the CC with classical input and two
+dimensional output of mathematical expressions.
+
+\section{ Joining the Central Control }
+
+We have developed several tools to ease the building of servers. 
+These include {\sc c} program templates, libraries of utility functions and a
+compiler of  {\sc asap} specifications that generates a {\sc c} function from
+patterns of terms and associated actions.
+
+The amount of work required to obtain a
+sufficiently robust server (starting from a program that was not designed to
+act as a server) can be estimated from the experience we have now gained 
+(after more than a year of experiments). 
+If the parts of the program that manage inputs and outputs are sufficiently
+structured the job seems fairly easy: a week for {\sc pari}, done by
+one of the author of this paper with no prior knowledge of this program,
+including the understanding of the internal of {\sc pari} (the most
+time consuming part),  
+three days for {\sl Singular} by one of the author of this package, visiting
+us and  using some preliminary versions of our tools. The amount of extra
+code is 
+rather small: something like 160 lines for sending results and 200 lines for 
+handling communication in the case of the {\sc pari} server.
+The main problem is to keep track of the evolution/versions. But usually
+there should not be too much problems and some authors are willing to
+incorporate our modifications.
+
+The task can be more difficult in the case of a commercial system that is not
+accessible at the source level, for example {\sl Maple} or {\sl Mathematica}.
+Two options are possible that involve using an intermediate process to make a
+translation. Both {\sl Maple} and {\sl Mathematica} can offer a
+non-interactive access through a dedicated communication protocol. 
+{\sl Mathematica} has the {\sl MathLink} protocol.
+{\sl Maple} has a so called {\sc c}-callable version but unfortunately it
+does not seem to be delivered with every distribution. Hence, we had to
+resort to a more adventurous method: encapsulating {\sl Maple} with a process
+that emulates a real terminal and parses its output.
+It can be difficult to obtain a robust server with this approach as our
+experience shows. The output format is not specified at the limits
+(especially how long tokens are dealt with) and error detection and
+recovery is problematic\ldots Extensive testing is needed and debugging is
+not easy.
+
+\section{ Existing works and approaches }
+
+
+Distributed computation and distributed software architectures are certainly 
+hot topics nowadays. Many tools have been proposed and there are even some
+emerging standards ({\sl Tooltalk}, {\sl Sophtalk}, {\sc corba}, {\sc hp}
+{\sl softbench} to name but a few).
+%around the notion of a software bus.
+%{\sc pvm}, Software buses like Purtillo's work (\cite{kn:purtillo}),
+%Tooltalk, {\sc corba}. 
+{\sc cas/pi} (\cite{CASPI}) and {\sc sui} (\cite{kn:doleh}) are two examples
+of software architectures designed for symbolic computation.
+None of these are really programmable in the way the Central Control is.
+{\sc sui} seems to focus on the interface and is not programmable at the user
+level. 
+Purtillo  explicitly addressed the issue of communication
+between numerical and symbolic programs with {\sl Polylith} in
+\cite{kn:purtillo1}. But his software bus approach (similar to the one of 
+{\sc cas/pi}) renders the addition of new facilities (or access to new
+operations inside servers) more difficult and not as dynamic as in the
+Central Control (where you can add a new type of server on 
+the fly and change any interface dynamically).
+
+{\sl Glish} is an interpreted language for building distributed systems from 
+event-oriented programs with an array-oriented programming language
+(\cite{kn:GLISH}). 
+It is similar to the Central Control as it uses a centralized communication
+model where all exchanged data passes through the {\sl Glish} interpreter
+(but it also support point-to-point links when more efficiency is needed).
+
+Even if most concepts such as central data repository, lazy communications or
+use of rules to translate expressions were already implemented in previous
+prototypes, the major advance of our work is probably to make all these
+concepts available within a compact and very flexible software component.
+
+\section{ Conclusion }
+
+The main advantage of the Central Control is certainly its flexibility. 
+We thus believe that the Central Control can be a useful tool for easily
+making various experiments as well as designing complete architectures.
+%constructing whole systems.
+Our approach seems promising for building a powerful scientific computation
+environment from specialized components, both from a software engineering
+and a pragmatic point of view. That is one of our aims.
+
+For now, we have successfully built servers for {\sc pari}, 
+{\sl Singular}, {\sl Maple}, {\sl Mathematica}, {\sl Macaulay}, {\sc gb} and
+the PoSSo Gr\"obner Solver, for computer algebra, 
+{\sl Octave} for numerical computations 
+and {\sl gnuplot} as a plotting engine. 
+We decided to try to make as many servers as possible for validating our work.
+Of course, not all of these servers are at the same level of robustness but
+most of them are perfectly usable (and used everyday by researchers in our
+group). 
+The prototype of a graphical user interface that directly communicates with
+the Central Control is currently under development.
+
+We hope to make the Central Control and most servers widely available at the
+end of the PoSSo project (at the end of 1995).
+
+We will be interested in developing a version of the CC that can be directly
+embedded  in an application (thus eliminating the overhead of one
+communication link and the burden of having the CC as a separate
+process). Although the gain in computation time is not clear, it can be more
+convenient for certain applications. 
+%The technology for embedded interpreter
+%is\ldots (with {\sc tcl} and citer Klone et libscheme ?). 
+We also plan to implement a special version of the CC that can operate as a
+kind of general scientific computation server or mathematical objects broker
+that could use some standard for tool integration.
+
+\section* {Acknowledgments} 
+
+This work is partially supported by the {\sc esprit} {\sc posso} project 
+(6846). The central control is used as the heart of the so-called {\em
+comprehensive solver\/} which  provides a common access to the various
+tools developed inside the project.
+
+We thank Alain Sausse for his work on the first version of the Central
+Control. 
+
+%===================== References ======================
+%\bibliographystyle{alpha}
+%\bibliography{ckbib}
+\begin{thebibliography}{ABMW88}
+
+\bibitem[ABMW88]{kn:camino}
+Dennis Arnon, Richard Beach, Kevin McIsaac, and Carl Waldspurger.
+\newblock Caminoreal: an interactive mathematical notebook.
+\newblock In {\em EP'88 International Conference on Electronic Publishing,
+  Document Manipulation and Typography}, Nice, France, April 1988. Cambridge
+  University Press.
+
+\bibitem[Cap93]{MacroC}
+Patrick Capolsini.
+\newblock Macro{C} : {C} code generation within {M}aple.
+\newblock {R}apport technique 151, INRIA-I3S, February 1993.
+
+\bibitem[DGS94a]{kn:ASAP}
+St\'ephane Dalmas, Marc Ga{\"e}tano, and Alain Sausse.
+\newblock {ASAP} : a protocol for symbolic computation systems.
+\newblock {R}apport Technique 162, INRIA, March 1994.
+
+\bibitem[DGS94b]{kn:CC94}
+St\'ephane Dalmas, Marc Ga\"etano, and Alain Sausse.
+\newblock Distributed computer algebra: the {C}entral {C}ontrol approach.
+\newblock In {\em PASCO'94}, pages 104--113, Linz, Austria, September 1994.
+  World Scientific.
+
+\bibitem[DW90]{kn:doleh}
+Y.~Doleh and P.S. Wang.
+\newblock {SUI} : A system independant user interface for an integrated
+  scientific computing environment.
+\newblock In {\em ISSAC'90}, pages 88--94, August 1990.
+
+\bibitem[Hal85]{MULTILISP}
+Robert~H. Halstead.
+\newblock Multilisp: A language for concurrent symbolic computation.
+\newblock {\em ACM Transactions on Programming Languages and Systems}, pages
+  501--538, October 1985.
+
+\bibitem[Kaj92]{CASPI}
+Norbert Kajler.
+\newblock {CAS/PI: a Portable and Extensible Interface for Computer Algebra
+  Systems}.
+\newblock In {\em {Proc. of ISSAC'92}}, pages 376--386, Berkeley, USA, July
+  1992. {ACM Press}.
+
+\bibitem[Leo86]{kn:iris}
+B.L. Leong.
+\newblock Iris: Design of a user interface program for symbolic algebra.
+\newblock In {\em Proceedings of the 1986 Symposium on Symbolic and Algebraic
+  Computation}, pages 1--6, July 1986.
+
+\bibitem[MR94]{RMPASCO94}
+Philippe Marti and Michel Rueher.
+\newblock A cooperative scheme for solving constraints over the reals.
+\newblock In {\em PASCO'94}, pages 284--293, Linz, Austria, September 1994.
+  World Scientific.
+
+\bibitem[Ope]{OpenMath.htmp}
+Draft {OpenMath} home page on the world wide web.
+\newblock {\tt http://www.rrz.uni-koeln.de/themen/} {\tt
+  Computeralgebra/OpenMath/}.
+
+\bibitem[Pax93]{kn:GLISH}
+Vern Paxon.
+\newblock Glish : A software bus for high-level control.
+\newblock Paper submitted to ICALEPCS '93, 1993.
+
+\bibitem[Pur86]{kn:purtillo1}
+James~M. Purtillo.
+\newblock Applications of a software interconnection system in mathematical
+  problem solving environments.
+\newblock In {\em Proceedings of the 1986 ACM-SIGSAM Symposium on Symbolic and
+  Algebraic Computation}, pages 16--23, July 1986.
+
+\bibitem[TMH76]{PROMISES}
+Philip~H. Todd, Robin~J. McLeod, and Marcia Harris.
+\newblock The impact of applicative programming on multiprocessing.
+\newblock In {\em Proc. of the 1976 International Conference on Parallel
+  Processing}, pages 269--272, August 1976.
+
+\bibitem[TMH94]{kn:TMcLH94}
+Philip~H. Todd, Robin~J. McLeod, and Marcia Harris.
+\newblock A system for the symbolic analysis of problems in engineering
+  mechanics.
+\newblock In {\em Proc. of ISSAC'94}, pages 84--89. ACM Press, July 1994.
+
+\end{thebibliography}
+
+\end{document} 
+
+\end{document} 

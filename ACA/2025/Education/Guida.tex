@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{sigsam, amsmath}
+\newtheorem{theorem}{Theorem}
+
+% leave as is
+\issue{TBA}
+\articlehead{TBA}
+\titlehead{Title of your paper}
+\authorhead{Author's Name}
+\setcounter{page}{1}
+
+\begin{document}
+
+\title{An educational proposal to interpret linear systems}
+
+\author{Margherita  Guida\\
+Dipartimento di Matematica e Applicazioni \lq\lq R. Caccioppoli\rq\rq \\
+Universit\`a degli Studi di Napoli Federico II\\
+Napoli, Italy, 80126 \\
+\url{maguida@unina.it}}
+
+\date{}
+
+\maketitle
+
+%\begin{abstract}
+%short description of the paper
+%\end{abstract}
+
+%\section{Introduction}
+During the process of learning mathematics in secondary education, some students encounter difficulties with various algebraic and geometrical concepts, for example they have problems to interpret and to solve linear systems. Different studies indicate that the student's comprehension of these knowledges is mainly technical, rote-based and non-meaningful. In this talk I suggest the design and the implementation of an educational proposal focused on improving student's comprehension of these arguments. In particular, I intend to present Cimmino's reflection algorithm for the numerical solution of linear systems.
+This method is striking because of its simplicity and elegance. Unlike so many other algorithms for solving linear equations, it is based on a geometrical construction rather than on algebraic manipulations.  Moreover, a probabilistic argument is also devised to improve the Cimmino's algorithm. This subject is an opportunity to show students how linear algebra can interact fruitfully not only with algebra, geometry, and numerical analysis, but also with probability theory and methods.
+
+At the time it was conceived, the greatest attraction of the method was probably the fact that the method is always convergent. For a long time (several decades) Cimmino's method, in spite of its virtues, did not see much use. Since the early 1980s, though, an increasing number of authors have returned to Cimmino's method. In fact, it has been shown that this algorithm works well in parallel computing, in particular for applications in the area of image reconstruction via X-ray tomography. Over the years, it  was applied in different areas, for example: convex mathematical programming, fast adaptation of radiation therapy planning, filtering in signal processing, solution of \lq\lq inverse problems\rq\rq  in medical physics.
+
+\begin{thebibliography}{99}
+
+\bibitem{Benzi}
+M. Benzi. \newblock  Gianfranco Cimmino's Contributions to Numerical Mathematics, \newblock {\em Rend. Acc. Sc. Fis. Mat. Napoli}, (4) 89 (2022), pp.73-98.
+
+\bibitem{Cim86}
+G. Cimmino. \newblock  An unusual way of solving linear systems, \newblock{\em Atti Accad. Naz. Lincei. Math.}, Ser. VIII, LXXX, N. 1-2, (1986), pp.~6--7.
+
+\bibitem{GS}
+M. Guida and C. Sbordone. \newblock  The reflection method for the numerical solution of linear systems, \newblock{\em SIAM  REVIEW - Section: Education},  Vol. 65, No. 4, (2023), pp.1137-1151.
+
+\end{thebibliography}
+
+\end{document}

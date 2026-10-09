@@ -1,0 +1,248 @@
+\documentstyle []{article}
+\oddsidemargin -7mm
+\evensidemargin -7mm
+\topmargin -05mm
+\headheight 0pt
+\headsep 0pt
+\textheight 235mm
+\textwidth 174mm
+\pagestyle{empty}
+
+\begin{document}
+
+\title{Issues in Symbolic Parametrization \\
+       of Algebraic Curves 
+\footnote{Supported by 
+{\it \"Osterr. Fonds zur F\"orderung der wissenschaftlichen
+Forschung}, Proj. POSSO, Nr. P9181-TEC. (ESPRIT BRA No. 6846).}  }
+
+\author{Franz  Winkler \\
+        Institut f\"ur Mathematik and RISC-LINZ \\
+        Johannes Kepler Universit\"at \\
+        A-4040 Linz, Austria \\
+        e-mail: {\tt winkler@risc.uni-linz.ac.at}}
+
+\date{ }
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{5 mm}
+
+\noindent \underbar{A symbolic parametrization algorithm}
+
+\vspace{5 mm}
+
+The problem of rational parametrization of plane algebraic curves is best
+explained by an example. 
+Suppose we consider the curve ${\cal C}_1$ in the complex plane, whose
+points are the zeros of the polynomial
+$$f_1(x,y) = (x^2+4y+y^2)^2 - 16(x^2+y^2).$$
+${\cal C}_1$ has a double point at the origin $(0,0)$ as the 
+only affine singularity. But if we move to the associated projective
+curve ${\cal C}_1^*$ defined by the homogeneous polynomial 
+$$f_1^*(x,y,z)= (x^2+4yz+y^2)^2-16(x^2+y^2)z^2,$$
+we see that the singularities of ${\cal C}_1^*$ are
+$$O=(0:0:1), \quad P_{1,2}= (1:\pm i:0).$$
+$P_{1,2}$ is a family of conjugate algebraic points on ${\cal C}_1^*$.
+All of these singularities have multiplicity 2, so the genus of
+${\cal C}_1^*$ is 0, i.e. it can be parametrized.
+This also means that the affine curve ${\cal C}_1$ is parametrizable.
+
+In order to achieve a parametrization, we need a simple point on
+${\cal C}_1^*$.
+Intersecting ${\cal C}_1^*$ by the line $y+{40\over 9}x=0$, we get of
+course the origin as a double intersection point. The other two
+intersection points are also rational, namely
+$$Q_1=(-36 : 160 : 1681), \quad Q_2=(2916:-12960:1681).$$
+So now we construct the linear system $L^2$ of curves of degree 2, having
+$O, P_{1,2}$ and $Q_1$ as base points of multiplicity 1.
+
+The affine version $L_a^2$ of $L^2$ is defined by
+$$h_a(x,y,t)= t x^2 + t y^2 + x  + (-{1\over 10}t + {9\over 40})y. $$
+
+Now we determine the free intersection point of $L_a^2$ and ${\cal C}_1$.
+The non--constant factors of ${\rm res}_x(f_2(x,y),h_a(x,y,t))$ are
+\begin{eqnarray*}
+   & y^2, \\
+   & 1681y-160, \\
+   & (430336t^4-94464t^3+58976t^2-5904t+1681)y + \\
+   & \qquad (-40960t^4+184320t^3-204800t^2-11520t+12960).
+\end{eqnarray*}
+The first two factors correspond to the affine base points of the 
+linear system $L^2$, and the third one determines the 
+$y$--coordinate of the free intersection
+point depending rationally on $t$.
+
+Similarly, the non--constant factors of ${\rm res}_y(f_1(x,y),h_a(x,y,t))$ are
+\begin{eqnarray*}
+   & x^2, \\
+   & 1681x+ 36, \\
+   & (430336t^4-94464t^3+58976t^2-5904t+1681)x + \\
+   & \qquad (-9216t^4+62464t^3-141696t^2+108864t-2916).
+\end{eqnarray*}
+The first two factors correspond to the affine base points of the 
+linear system $L^2$, and the third one determines the 
+$x$--coordinate of the  free intersection
+point depending rationally on $t$.
+
+So we have found a rational parametrization of ${\cal C}_1$, namely
+\begin{eqnarray*}
+  & x(t) =
+          { 9216t^4-62464t^3+141696t^2-108864t+2916 \over
+           430336t^4-94464t^3+58976t^2-5904t+1681        }\ , \\
+  & y(t) =
+          { 40960t^4-184320t^3+204800t^2+11520t-12960 \over
+           430336t^4-94464t^3+58976t^2-5904t+1681        }\ .
+\end{eqnarray*}
+
+
+\vspace{2 mm}
+
+\noindent {\bf Definition 1:}
+In general we say that
+a curve $\cal C$ has a {\it rational parametrization}, iff there are 
+(nontrivial)
+rational functions $x(t),y(t)$ such that the defining polynomial $f$ of
+$\cal C$ vanishes on them,
+$$f(x(t),y(t))=0. \eqno \bullet $$ 
+
+\vspace{2 mm}
+
+The parametrizable curves are exactly the irreducible curves of
+genus 0, i.e. they achieve the upper bound on the number of 
+singularities.
+If such a parametrization exists, then it
+is by no means unique, even if we require that the degrees of the
+rational functions involved are minimal. In fact, one of the main 
+problems is to determine a minimal extension of the field of definition,
+in which a parametrization can be expressed.
+
+For this purpose we assume that $K$ is a computable field of
+characteristic 0, we call it the {\it field of definition}.
+$\overline K$ denotes the algebraic closure of $K$.
+The defining polynomial of the curve $\cal C$ that we want to
+parametrize has coefficients in $K$.
+The curve $\cal C$ itself, however, is considered to be a curve
+over $\overline K$.
+In the parametrization process  we might have to
+extend $K$ algebraically. We will ultimately construct a
+parametrization (if one exists) over some field 
+$K(\gamma) \subseteq \overline K$, where $\gamma$ is algebraic
+over $K$.
+Of course, we want to keep  the degree of $\gamma$ as low as possible.
+
+We call a point, or a curve, or a system of curves {\it rational},
+if they involve only coefficients from the field of definition $K$.
+
+
+Points on algebraic curves occur only in full conjugacy  classes.
+If we choose all the points in such a conjugacy class as 
+base points of a linear system, then the coefficients of  the
+system will still be rational.
+
+\vspace{2 mm}
+
+\noindent {\bf Lemma 1:} {\sl Let $f(x,y,z)$ be a homogeneous
+polynomial in $K[x,y,z]$ defining an algebraic curve $\cal C$
+in ${\bf    P}^2(\overline K)$.
+Let $(a_1(\alpha):a_2(\alpha):a_3(\alpha))$ be a point of
+multiplicity $r$ on $\cal C$, $\alpha$ algebraic over $K$ with
+minimal polynomial $p(t)$, and $a_1,a_2,a_3 \in K[t]$.
+Then for every conjugate $\beta$ of $\alpha$, also the point
+$(a_1(\beta):a_2(\beta):a_3(\beta))$ is a point of
+$\cal C$.} \hfill$\bullet$
+
+\vspace{2 mm}
+
+
+\noindent {\bf Definition 2:}
+If $p(t)\in K[t]$ is irreducible and $a_1,a_2,a_3 \in K[t]$ with
+$p \not \hskip 0.1cm \mid   \gcd(a_1,a_2,a_3)$, then we call
+$$\bigl\{\, (a_1(\alpha):a_2(\alpha):a_3(\alpha))\, |\,
+                            p(\alpha)=0 \,\bigr\}$$
+a {\it family of conjugate algebraic points}. 
+\hfill$\bullet$
+
+\vspace{2 mm}
+
+\noindent {\bf Lemma 2:} {\sl Let $L$ be a rational linear system of
+curves of degree $d$.
+Let $P_\alpha = \{(a_1(\alpha):a_2(\alpha):a_3(\alpha) | p(\alpha)
+            =0\}$ be a family of conjugate algebraic points.
+Then also the subsystem $\hat L$ of $L$, having all the points
+in $P_\alpha$ as base points of multiplicity $r$, is a rational
+linear system of curves. } \hfill$\bullet$
+
+\vspace{2 mm}
+
+So we can proceed as in the introductory example. 
+An algorithm along these lines is presented in  \cite{SeW91}.
+The only
+step which might force us to extend the field of definition is
+the determination of simple points on the curve $\cal C$.
+
+
+
+From the work of N\"other \cite{Noe}   and
+Hilbert and Hurwitz \cite{HiH}      we
+know that it is possible to parametrize any curve $\cal C$ of genus 0
+over the field of definition $K$, if $\deg({\cal C})$ is odd,
+and over some quadratic extension of $K$, if $\deg({\cal C})$ is even.
+An algorithm which actually achieves this optimal field of 
+parametrization is presented in \cite{SeW94}.
+Moreover, if the field of definition is the field of rational
+numbers, we can also
+decide if the curve can be parametrized over the reals.
+
+% \vspace {5 mm}
+\newpage
+
+\noindent \underbar{Complexity}
+
+\vspace{5mm}
+
+The resulting parametrization algorithm is of polynomial bit complexity
+if we assume that the curve $\cal C$ defined over the rational numbers
+has only ordinary singularities
+\cite{MSW}.
+If we allow curves with also non--ordinary singularities, then
+the bit complexity 
+becomes exponential in the worst case.
+In fact, in  \cite{MSW}    a family of curces $\{{\cal C}_k\}$ (cusps) is
+exhibited, for which the graph of neighboring singular points has
+depth proportional to $\deg({\cal C}_k)$. This implies that we need
+to introduce so many algebraic numbers, leading to the exponential
+behavior of the algorithm when we have to deal with non--ordinary
+singularities.
+
+
+
+\vspace{5 mm}
+
+
+\begin{thebibliography}{20}
+
+\bibitem{HiH}      D. Hilbert, A. Hurwitz, ``\"Uber die Diophantischen
+Gleichungen vom Geschlecht Null'', {\it Acta math.} {\bf 14},
+217--224 (1890)
+
+\bibitem{MSW}    M. M\v nuk, J.R. Sendra, F. Winkler, ``On the 
+Complexity of Parametrizing Curves'', manuscript (1994)
+
+\bibitem{Noe}     M. N\"other, ``Rationale Ausf\"uhrung der Operationen
+in der Theorie der algebraischen Functionen'', {\it Math. Annalen}
+{\bf 23}, 311--358 (1884)
+
+\bibitem{SeW91} J.R. Sendra, F. Winkler, ``Symbolic Parametrization of
+Curves'', {\it J. Symbolic Comp.} {\bf 12}, 607--631 (1991)
+
+\bibitem{SeW94} J.R. Sendra, F. Winkler, ``Optimal Parametrization of
+Algebraic Curves'', RISC-Report 94-65,
+J. Kepler Univ. Linz, Austria (1994)
+
+\end{thebibliography}
+
+
+\end{document}

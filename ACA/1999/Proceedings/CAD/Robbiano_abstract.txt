@@ -1,0 +1,10 @@
+Groebner Bases and Statistics
+Lorenzo Robbiano
+
+The talk describes how to use methods of Algebraic Geometry and Commutative
+Algebra to study some problems arising in Design of Experiments (DoE), a branch
+of  Statistics.  In the history of DoE algebraic methods are not rare, so this
+kind of interaction falls into the  category of natural events. Furthermore, it
+is now clear how strong is the influence of Computer Algebra methods in
+Commutative Algebra and Algebraic Geometry.  From now on we can safely say that
+this influence extends into the realm of DoE.

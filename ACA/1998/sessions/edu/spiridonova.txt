@@ -1,0 +1,23 @@
+"Use of Formulae Bases in Teaching and Learning Mathematics"
+
+Margarita Spiridonova*
+Institute of Mathematics and Informatics, Bulgarian Academy of Sciences
+Acad. G. Bonchev Street, B. 8
+Sofia 1113
+Bulgaria
+E-mail:mspirid@math.bas.bg
+
+
+   A Formulae Base (FB) is considered as a structured set of 
+formulae. A simple query language provides convenient access 
+to each formula. 
+   The main features of an experimental FB implemented using 
+the computer algebra system Mathematica are described. The use
+of this FB is illustrated with formulae from plane geometry 
+and from trigonometry. 
+   How to present and how to select the formulae in a FB; 
+how to use a FB in the environment of a computer algebra 
+system like Mathematica; how to create problem oriented and 
+domain oriented sub-bases and how to use them in mathematics 
+education - some answers to these questions are suggested.
+

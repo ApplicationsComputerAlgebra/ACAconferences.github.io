@@ -1,0 +1,22 @@
+
+
+Dynamic Computer Illustrations and Didactic Considerations in the Learning and Teaching of Mathematics 
+Michal Fraenkel
+Center for Educational Technology, Israel 
+
+Years ago, as a math teacher, I used to dream of a dynamic way to show my students mathematical concepts and situations, such as rotating graphs around a rotation axis, graphs of functions changing according to the change of parameters, the range of different situations meeting a certain set of data, etc.  
+This is no longer a dream ? the tools are already here: We have dynamic software that opens for us thousands of new ways to show our students this fascinating world called "mathematics" ? alongside which arise thousands of new questions. 
+How does the use of dynamic computer illustrations affect users' way of thinking? How does it affect the way teachers think? The way students think? If using dynamic illustrations has any disadvantages, what may they be?
+In my talk, I will show various Geogebra illustrations developed for high-school students. 
+I'll discuss different aspects of using them and offer possible considerations concerning questions such as:
+* When should we use a dynamic illustration, and when should we avoid it?
+* Should the students' age and level of the class be taken into account when considering the use of dynamic computer illustrations?
+* What other considerations may help a teacher decide whether or not to use a dynamic computer illustration?
+* Once a teacher decides to use a dynamic computer illustration, what considerations should he or she take into account while actually using it in their classroom?
+* What considerations should be taken into account while developing dynamic computer illustrations?
+ 
+
+
+
+
+

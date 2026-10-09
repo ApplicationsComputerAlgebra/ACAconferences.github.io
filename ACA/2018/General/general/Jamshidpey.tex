@@ -1,0 +1,176 @@
+% Abstrat of your communication to the
+% ACA2018 Conference (Santiago de Compostela, 2018).
+% You must use LaTeX format.
+
+
+%====================================================
+% IMPORTANT: DO NOT MODIFY THE FOLLOWING LINES
+%====================================================
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsthm,amsmath, amsfonts, latexsym}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{times}
+
+\setlength{\oddsidemargin}{1.46cm}
+\setlength{\textwidth}{13cm}
+\setlength{\topmargin}{0.0cm}
+\setlength{\textheight}{20.5cm}
+
+\makeatletter
+\newcommand{\TITLE}[2][]{
+  \begin{center} \Large \bfseries #2%
+  \def\@temp{#1}\ifx\@temp\@empty\relax\else\footnote{#1}\fi\end{center}}
+
+\newcommand{\AUTHOR}[2][]{\textbf{#2}%
+  \def\@temp{#1}\ifx\@temp\@empty\relax\else\textsuperscript{#1}\fi}
+
+\newcommand{\ADDRESS}[2]{\noindent
+  \textsuperscript{#1}\parbox[t]{0.9\textwidth}{#2} \vspace{6pt}}
+
+\makeatother
+
+\newcommand{\KEYWORDS}[1]{\paragraph{Keywords:} #1}
+%\newcommand{\MSCLASSIFICATION}[1]{\paragraph{Mathematics Subject Classification 2010:} #1}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{0}
+\pagestyle{empty}
+
+\newcommand{\HEADING}{
+{\noindent \small Applications of Computer Algebra -- ACA2018 \\
+Santiago de Compostela, June 18--22, 2018} \vspace{10pt}}
+
+%===============================================
+% DO NOT MODIFY THE ABOVE LINES
+%===============================================
+
+\begin{document}
+
+\HEADING
+
+
+\TITLE{Randomized Algorithms for Normal Basis in Characteristic Zero}
+
+% If you need to thank someone next to the title, please use the next line (and delete the previous one)
+
+% \TITLE[thanks]{Title of talk}
+
+% Write the author names in the order you wish them to appear
+% and underline the one who will give the talk.
+% Identify each one of them with a number
+% in order to give their own affiliations later on. 
+
+\begin{center}
+ \AUTHOR[1]{Mark Giesbrecht},
+ \AUTHOR[1]{\underline{Armin Jamshidpey}}, % the author who will give the talk
+ \AUTHOR[1]{\'Eric Schost}
+% IF two or more authors have the same affiliation, associate to them the same number.
+% For instance, if there are three authors and the first a the second ones have the same affiliation,
+% write as follows:
+% \AUTHOR[1]{Third Author}
+\end{center}
+
+
+% Write now the abstract of your communication. 
+
+For a finite Galois extension $K/F$ with $G = \mathrm{Gal}(K/F)$, there exists an element $\alpha \in K$ such that
+its conjugates form an $F$-basis of $K$ (as a vector space)\cite[Theorem 6.13.1]{Lang}. Having such a basis, which is known as normal basis, is useful for certain computational purposes.
+
+There are efficient algorithms for constructing a normal basis in positive characteristics. For a deterministic algorithm see 
+\cite{Augot} and for randomized algorithms see \cite{Giesbrecht} and \cite{Subquadratic}. In characteristic zero, deterministic algorithms are introduced in \cite{Girstmair} and \cite{Poli}(for abelian extensions).
+
+Our aim is to introduce randomized algorithms for constructing a normal basis in characteristic zero. We will present an 
+algorithm for cyclic extensions and more generally abelian extensions. We also give a solution for Galois extensions with
+ dihedral group as Galois group.
+
+% Write the keywords separated by commas
+
+\KEYWORDS {Normal Basis, Cyclic Extension, Abelian Extension}
+
+% Write the MSC2010 codes corresponding to your communication
+
+%\MSCLASSIFICATION{68W30, 11S20}
+
+
+
+% Next include the references you need. 
+% If your abstract includes no references at all, please delete all the lines
+% from \begin{thebibliography} to \end{thebibliography}.
+
+% Please, do not use more than 9 references.
+
+
+\begin{thebibliography}{9}
+
+\bibitem{Augot}
+\textsc{Daniel Augot; Paul Camion},
+\newblock \emph{Forme de {F}robenius et vecteurs cycliques}.
+\newblock {\em C. R. Acad. Sci. Paris S\'er. I Math.}, 318(2):183--188, 1994.
+
+\bibitem{Girstmair}
+\textsc{Kurt Girstmair},
+\newblock \emph{An algorithm for the construction of a normal basis}.
+\newblock {\em J. Number Theory}, 78(1):36--45, 1999.
+
+\bibitem{Subquadratic}
+\textsc{Erich Kaltofen; Victor Shoup}.
+\newblock \emph{Subquadratic-time factoring of polynomials over finite fields}.
+\newblock {\em Math. Comp.}, 67(223):1179--1197, 1998.
+
+\bibitem{Lang}
+\textsc{Serge Lang},
+\newblock {\em Algebra}, volume 211 of {\em Graduate Texts in Mathematics}.
+\newblock Springer-Verlag, New York, third edition, 2002.
+
+\bibitem{Poli}
+\textsc{Alain Poli},
+\newblock \emph{A deterministic construction for normal bases of abelian extensions}.
+\newblock {\em Comm. Algebra}, 22(12):4751--4757, 1994.
+
+\bibitem{Giesbrecht}
+\textsc{Joachim von~zur Gathen; Mark Giesbrecht},
+\newblock \emph{Constructing normal bases in finite fields}.
+\newblock {\em J. Symbolic Comput.}, 10(6):547--570, 1990.
+
+\end{thebibliography}
+
+%\begin{thebibliography}{9}
+%
+%  % Model for references to books.
+%  \bibitem{label1} \textsc{A. Uthor1; A. Uthor2}, \emph{Title}.
+%    Editorial, City, year of publication.
+%
+% %  Model for references to articles
+%  \bibitem{label2} \textsc{A. Uthor}, Title.
+%  \emph{Journal} \textbf{volumen}(number), first page--last page  (year of publication).
+%
+%  %  Model for references to proceedings. 
+%  \bibitem{label3} \textsc{A. Uthor}, Title.
+%  In \emph{Title of the proccedings}, names of the editors (eds.),
+%   first page--last page. Editorial, City, year of publication.
+%
+%\end{thebibliography}
+
+\vspace{1cm}
+
+% Full Affiliation of all authors
+\ADDRESS{1}{
+David R. Cheriton School of Computer Science  \\University of Waterloo \\
+200 University Avenue West
+Waterloo, ON, Canada  N2L 3G1
+ \\
+\texttt{mwg@uwaterloo.ca}
+\\
+\texttt{armin.jamshidpey@uwaterloo.ca}
+\\
+\texttt{eschost@uwaterloo.ca}
+
+}
+
+
+\end{document}

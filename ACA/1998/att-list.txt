@@ -1,0 +1,1577 @@
+List of attendees
+=================
+IMACS ACA'98, Hotel Krystal, Prague, Czech Republic, August 9-11, 1998
+
+Summary according to countries:
+-------------------------------
+Australia	 2
+Austria		13
+Belarus		 1
+Bulgaria	 2
+Canada		 4
+Czech Republic	10
+Denmark		 1
+Estonia		 1
+France		14
+Germany		18
+Ireland		 1
+Israel		 4
+Italy		 3
+Japan		 9
+Morocco		 1
+Norway		 3
+Poland		 1
+Russia		21
+Spain		 8
+Sweden		15
+Switzerland	 1
+The Netherlands	 3
+Turkey		 1
+Ukraine		 1
+United Kingdom	 3
+USA		30
+------------------	
+Total	       171
+
+
+Name list:
+---------
+
+Chaouki Abdallah
+The University of New Mexico
+EECE Department
+Albuquerque, NM 87131
+USA
+Tel:505-277-0298
+Fax:505-277-1439
+
+
+Dhiya Al-Jumeily
+Liverpool John Moores University
+School of Computing and mathematical sciences, Byron street
+Liverpool JM University, L3 3AF
+United Kingdom
+Tel:0151-2312128
+Fax:
+
+
+Gustav Amberg
+Royal Institute of Technology
+Mechanics, KTH
+S-100 44 Stockholm
+Sweden
+Tel:+46 8 790 7534
+Fax:+46 8 796 9850
+
+
+Hirokazu Anai
+High Performance Computing Research Center, Fujitsu Laboratories ltd.
+4-1-1 Kamikodanaka, Nakahara-ku
+Kawasaki, 211-8588
+Japan
+Tel:+81-44-754-2670
+Fax:+81-44-754-2666
+
+
+Serge N. Andrianov
+Department of Applied Mathematics-Control Processes, St. Petersburg State University
+Biblotechnaja pl. 2
+St.Petersburg, 198904
+Russia
+Tel:+7 812 1749589
+Fax:+7 812 4287489
+
+
+Alexander B. Aranson
+Keldysh Institute of Applied Mathematics, Russian Academy of Science
+Miusskaja Square, 4
+Moscow, 125047
+Russia
+Tel:(+7-095) 250-7884
+Fax:(+7-095) 972-0737
+
+
+Olaf Bachmann
+Department of Mathematics, University of Kaiserslautern
+Erwin Schroedinger Strasse
+67633 Kaiserslautern
+Germany
+Tel:49-361-205-2738
+Fax:49-361-205-3052 
+
+
+Frederique Barkats
+Universite de Nice Sophia Antipolis
+Parc Valrose, 26 avenue valrose
+06108 Nice Cedex France
+France
+Tel:04 92 07 62 15
+Fax:
+
+
+Ivan Barv\'{\i}k
+Institute of Physics of the Charles University
+Ke Karlovu 5
+Prague 2, 121 16
+Czech Republic
+Tel:2191 1342
+Fax:296 764
+
+
+Gilbert Baumslag
+City College of CUNY
+Math Department, NAC, Convent Avenue at 138th Street
+New York, NY 10031
+USA
+Tel:212 650 5167
+Fax:212 650 5381
+
+
+Johan Berglind
+Division of mathematics, College of applied engineering and maritime studies at Chalmers University of Technology
+Box 8873, Chalmers Lindholmen
+Göteborg, 40272
+Sweden
+Tel:+46 317725879
+Fax:+46 317725767
+
+
+Svante Bergö
+Division of mathematics, College of applied engineering and maritime studies at Chalmers University of Technology
+Box 8873, Chalmers Lindholmen
+Göteborg, 40272
+Sweden
+Tel:+46 317725878
+Fax:+46 317725767
+
+
+Gunnar Bergström
+Division of mathematics, College of applied engineering and maritime studies at Chalmers University of Technology
+Box 8873, Chalmers Lindholmen
+Göteborg, 40272
+Sweden
+Tel:+46 317725889
+Fax:+46 317725767
+
+
+Lev Berkovich
+Samara State University
+Acad. Pavlov, Str., 1
+Samara, 443011
+Russia
+Tel:(8462)345438
+Fax:(8462)345417
+
+
+Laurent Bernardin
+ETH Zurich
+
+CH-8092 Zurich
+Switzerland
+Tel:
+Fax:
+
+
+Matthias Berth
+University Ernst Moritz Arndt of Greifswald
+Department of Mathematics and Informatics
+
+Germany
+Tel:
+Fax:
+
+
+Haakan Blomqvist
+Division of mathematics, College of applied engineering and maritime studies at Chalmers University of Technology
+Box 8873, Chalmers Lindholmen
+Göteborg, 40272
+Sweden
+Tel:+46 317725881
+Fax:+46 317725767
+
+
+Gabor Bodnar
+Research Institute for Symbolic Computation Linz
+RISC-Linz, Joh. Kepler. Univ., A-4040 Linz
+Linz, Austria, A-4040
+Austria
+Tel:+43 732 2468 9960
+Fax:+43 732 2468 9930
+
+
+Larissa A. Bourlakova
+Institute of System Dynamics and Control Theory, Siberian Branch Russian Academy of Science
+Lermontov st. 134
+Irkutsk, 664033
+Russia
+Tel:+7 (3952) 511406
+Fax:+7 (3592) 462952, +7 (3952) 511616
+
+
+Laura Bracken
+Division of Natural Science and Mathematics, Lewis-Clark State College
+500 8th Avenue
+Lewiston, Idaho  83501
+USA
+Tel:208-799-2484
+Fax:208-799-2064
+
+
+Malgorzata Brothers
+Texas Instruments Incorporated
+1904 Switzerland Avenue
+Plano, Texas   75025
+USA
+Tel:(972) 917-1683
+Fax:(972) 917-7103
+
+
+Bruno Buchberger
+RISC - Research Institute for Symbolic Computation, Johannes Kepler
+Schloss Hagenberg
+A-4232 Hagenberg
+Austria
+Tel:++43/732/2468-9921
+Fax:++43/732/2468-9930
+
+
+\v{C}estm\'{\i}r Burd\'{\i}k
+Faculty of Nuclear Science and Physical Engineering, CTU, Prague
+Trojanova 13
+Prague 2 120 00
+Czech Republic
+Tel:420 2 296867
+Fax:
+
+
+John Cannon
+School of Mathematics, University of Sydney
+
+Sydney, NSW   2006
+Australia
+Tel:+61 2-9351-3338
+Fax:+61 2-9351-4534
+
+
+Giuseppa Carra' -Ferro
+Department  of Mathematics, University of Catania,  Italy
+Viale Andrea Doria 6
+Catania, 95125
+Italy
+Tel:0039-095-7313050
+Fax:0039-095-330094
+
+
+Alain Carriere
+French German Research Institute of Saint-Louis
+5, rue du Général-Cassagnou  BP34
+F68301 Saint-Louis France
+France
+Tel:0033 3 89 69 51 18
+Fax:0033 3 89 69 50 02
+
+
+Anton\'{\i}n \v{C}ejchan
+Fyzikalni ustav Akademie ved Ceske republiky
+Na Slovance 2, 180 40 Praha 8
+Praha, Ceska republika, CZ
+Czech Republic
+Tel:243 111 37
+Fax:312 31 84
+
+
+Isabelle Charpentier
+Laboratoire de Modelisation et de Calcul
+BP 53
+ F-38041 Grenoble
+France
+Tel:+33 4 76 63 57 14
+Fax:+33 4 76 63 12 63
+
+
+Arjeh M. Cohen
+Eindhoven University of Technology
+PO Box 513, 5600 MB Eindhoven
+
+The Netherlands
+Tel:+31 40-2474270
+Fax:+31 40-2435810
+
+
+Robert M. Corless
+University of Western Ontario
+Department of Applied Mathematics, Western Science Centre
+London, Ontario   N6A5B7
+Canada
+Tel:(519) 661-3649
+Fax:(519) 661-3523
+
+
+Baruch Cyzs
+Witcom Ltd.
+3 Fogelman St.
+Kiryat Motzkin   26418
+Israel
+Tel:972-4-8754629
+Fax:974-4-9592050
+
+
+Ulla Dahlbom
+Division of mathematics, College of applied engineering and maritime studies at Chalmers University of Technology
+Box 8873, Chalmers Lindholmen
+Göteborg, 40272
+Sweden
+Tel:+46 317725886
+Fax:+46 317725767
+
+
+Andre Deprit
+Departamento de Fisica Teorica, Universidad de Zaragoza
+P.O. Box 2537
+Montgomery Village, MD 20886
+USA
+Tel:001-301-963-2161
+Fax:001-301-963-2161
+
+
+Etienne Deprit
+Computer Science Division, University of California, Berkeley
+19119 Roman Way
+Montgomery Village, MD 20886
+USA
+Tel:001-301-963-2161
+Fax:001-301-963-2161
+
+
+Nils Dohrner
+Division of mathematics, College of applied engineering and maritime studies at Chalmers University of Technology
+Box 8873, Chalmers Lindholmen
+Göteborg, 40272
+Sweden
+Tel:+46 317725886
+Fax:+46 317725767
+
+
+Sam Dooley
+IBM Research
+P.O. Box 218
+Yorktown Heights, NY  10598
+USA
+Tel:+1-914-945-2060
+Fax:+1-914-945-3434_
+
+
+Peter Dorato
+University of New Mexico, Department of Electrical Engineering and Computer Engineering
+EECE Dept./UNM
+Albuquerque, New Mexico   87131-1356
+USA
+Tel:+1 (505) 277-0299
+Fax:+1 (505) 277-1439
+
+
+Ladislav Dr\v{s}ka
+Czech Technical University in Prague
+Fac. Nucl. Sci. & Phys. Eng., Brehova 7
+Prague 1, 115 19
+Czech Republic
+Tel:(420-2) 2191 2276
+Fax:(420-2) 688 4818
+
+
+Brian Dupee
+University of Bath
+Department of Mathematical Sciences, Claverton Down
+Bath,  BA2 7AY
+United Kingdom
+Tel:+44 1225 826007
+Fax:+44 1225 826492
+
+
+Moshe Dvir
+
+66 Hashomer St.
+Qiriat-Bialick   27237
+Israel
+Tel:972-4-9599647
+Fax:972-4-9592050
+
+
+Victor F. Edneral
+Institute for Nuclear Physics of Moscow State University
+Vorobievy Gory
+Moscow 119899
+Russia
+Tel:(+7-095) 953-9504
+Fax:(+7-095) 939-0397
+
+
+Georgy Efimov
+Keldysh Institute of Applied Mathematics
+Miusskaya squ. 4
+Moskow, 125047
+Russia
+Tel:(7095)2505615
+Fax:(7095)9720737
+
+
+Reimond Emanuelsson
+Division of mathematics, College of applied engineering and maritime studies at Chalmers University of Technology
+Box 8873, Chalmers Lindholmen
+Göteborg, 40272
+Sweden
+Tel:+46 317725888
+Fax:+46 317725767
+
+
+Robert Erra
+Ecole Supérieure Informatique Eelectronique Automatique (ESIEA)
+9, Rue Vésale
+Paris, 75005
+France
+Tel:
+Fax:
+
+
+Yasar Ersoy
+Middle East Technical University (METU)
+Dept SSME, Middle East Technical Uni.
+06531 Ankara
+Turkey
+Tel:+90.312.210 4052
+Fax:+90.312.210 1257
+
+
+Carlos Esebbag
+Departamento de Matematicas, Universidad de Alcala
+Apartado de Correos 20
+Alcala de Henares (Madrid)  28871
+Spain
+Tel:(34) 918854964
+Fax:(34) 918854951
+
+
+Serge Fantino
+Laboratoire J.-A. Dieudonné, Université de Nice - Sophia Antipolis
+Parc Valrose
+06108 Nice Cedex 02
+France
+Tel:+33 04 92 07 62 89
+Fax:+33  04 93 51 79 74
+
+
+Christele Faure
+Institut National de Recherche en Automatique et Informatique
+2004 Route des Lucioles
+BP 93 - 06902 Sophia Antipolis Cedex
+France
+Tel:33 4 92 38 79 08
+Fax:33 4 92 38 78 58
+
+
+Karin Gatermann
+Konrad-Zuse-Zentrum Berlin
+Takustr. 7
+D-14195 Berlin
+Germany
+Tel:+49 30 84185 217
+Fax:+49 30 84185125 
+
+
+Thierry Gautier
+Institut National de la Recherche en Informatique et Automatique (INRIA)
+Campus Universitaire, LMC/IMAG, Institut Fourier, BP 53X, 100 Rue des Mathematiques
+38041 GRENOBLE CEDEX 9
+France
+Tel:+33 4 76 51 46 68
+Fax:+33 4 76 51 48 46
+
+
+Keith O. Geddes
+University of Waterloo
+200 University Avenue West
+Waterloo  ON  N2L 3G1
+Canada
+Tel:519-888-4567 X.4668
+Fax:519-885-1208
+
+
+Eberhard H. A. Gerbracht
+Institut fuer Netzwerktheorie und Schaltungstechnik, Technische Universitaet Braunschweig
+Langer Kamp 19c
+D-38106 Braunschweig
+Germany
+Tel:(++49)391 3168
+Fax:(++49)391 8189
+
+
+Vladimir Gerdt
+Joint Institute for Nuclear Research
+Laboratory of Computing Techniques and Automation
+141980 Dubna
+Russia
+Tel:(7-09621) 63437
+Fax:(7-09621) 65145
+
+
+Nikolaj M. Glazunov
+Glushkov Institute of Cybernetics NASU
+Glushkov Prospect 40
+Kiev, 252650, GSP-650
+Ukraine
+Tel:38 044 266-9049
+Fax:131 272
+
+
+Jeffrey P. Golden
+Macsyma Inc.
+57 Alton Place - #2
+Brookline, MA 02146
+USA
+Tel:(617) 277-2699
+Fax:(781) 646-3161
+
+
+V. Ellen Golden
+Harlequin Inc.
+57 Alton Place - #2
+Brookline, MA 02146
+USA
+Tel:(617) 277-2699
+Fax:(617) 252-6505
+
+
+Oleg Goloubitsky
+Moscow State University
+Katukova 13-3-367
+Moscow   123181
+Russia
+Tel:(095) 944-47-66
+Fax:
+
+
+Rocío González-Díaz
+Universidad de Sevilla (University of Seville)
+Departamento de Matemática Aplicada, Facultad de Informática y~Estadística, Avenida Reina Mercedes
+Sevilla, 41012
+Spain
+Tel:34-954552794
+Fax:34-954557878
+
+
+Laureano Gonzalez-Vega
+Universidad de Cantabria
+Dpto. Matematicas, Facultad de Ciencias, Avda. Los Castros S/N
+Santander 39005, Cantabria
+Spain
+Tel:34 942201437
+Fax:34 942201402
+
+
+Alexander Gouterman
+The Moscow State University
+Golubinskay str., 7-2-751
+Moscow,  117574
+Russia
+Tel:07-(095)-421-58-87
+Fax: 07-(095)-239-36-46
+
+
+Vasiliy Govorukhin
+Rostov State University, Faculty of Mechanics and Mathematics, Dept. of Comput. Mathematics
+Zorge str. 5
+Rostov-on-Don, 344090
+Russia
+Tel:{7}(863-2)221312
+Fax:
+
+
+Hans-Gert Graebe
+Universitaet Leipzig, Institut f. Informatik
+Augustusplatz 10/11
+D-04109 Leipzig
+Germany
+Tel:+49-341-9732248
+Fax:
+
+
+Andreas Griewank
+Technical University Dresden
+Mommsenstr. 13
+Dresden, 01062
+Germany
+Tel:00 49 3514634187
+Fax:7096
+
+
+Marina Grosheva
+Institute of Mechanics Moscow State Lomonosov University
+
+Moscow, 119899
+Russia
+Tel:(07)(095)9395478
+Fax:(07)(095)0165
+
+
+Johannes Grotendorst
+Forschungszentrum Juelich
+Zentralinstitut fuer Angewandte Mathematik
+Juelich, Germany, D-52425
+Germany
+Tel:+49 2461 61 6585
+Fax:+49 2461 61 6585
+
+
+Nikolai I. Gurin
+Belorussian state technological university
+220630, Sverdlova,13a
+Minsk
+Belarus
+Tel:0172-27-43-76
+Fax:
+
+
+Jaime Gutierrez
+Universidad de Cantabria
+ Departamento de Matematicas, Estadistica y Computacion, Facultad de Ciencias, Avda. Los Castros s/n
+Santander, Cantabrria, 39005
+Spain
+Tel:+34-942-201523
+Fax:+34-942-201402
+
+
+Sergey Gutnik
+Institute for Computer Aided Design, Russian Academy of Sciences
+19/18 2-nd Brestskaya str.
+Moscow, 123056
+Russia
+Tel:7(095)737-3496 
+Fax:7(095)737-3497
+
+
+Valentin D. Irtegov
+Institute of System Dynamics and Control Theory, Siberian Branch Russian Academy of Science
+Lermontov st. 134
+Irkutsk   664033
+Russia
+Tel:+7 (3952) 511406
+Fax:+7 (3592) 462952, +7 (3952) 511616
+
+
+Claude-Pierre Jeannerod
+Laboratoire de Modelisation et Calcul
+LMC-IMAG, Tour IRMA, rue des Mathematiques
+BP53 F-38041 Grenoble Cedex 9
+France
+Tel:+33 4 76 63 58 96
+Fax:+33 4 76 63 12 63
+
+
+Tudor Jebelean
+Research Institute for Symbolic Computation, Linz (Institut RISC)
+Institut RISC
+A-4232 Hagenberg
+Austria
+Tel:+43 2468 9946
+Fax:+43 2468 9930
+
+
+David J. Jeffrey
+University of Western Ontario
+Western Science Centre, Room 173
+London, Ontario   N6A 5B7
+Canada
+Tel:(519) 679-2111 x8782
+Fax:(519) 661-3523
+
+
+Richard Jenks
+IBM Research
+P.O. Box 218
+Yorktown Heights, New York   10598
+USA
+Tel:(914) 945-1233
+Fax:(914) 945-3434
+
+
+Mats Jirstrand
+Department of Electrical Engineering, Linköping University
+
+Linköping, SE - 581 83
+Sweden
+Tel:+46 13 284042
+Fax:+46 13 282622
+
+
+Jan Johansson
+Division of mathematics, College of applied engineering and maritime studies at Chalmers University of Technology
+Box 8873, Chalmers Lindholmen
+Göteborg, 40272
+Sweden
+Tel:+46 317725882
+Fax:+46 317725767
+
+
+Jeremy Johnson
+Drexel University
+Dept. of Mathematics and Computer Science
+Philadelphia, PA, 19104
+USA
+Tel:+215-895-2893
+Fax:+215-895-1582
+
+
+Hiroshi Kai
+Department of Computer Science, Faculty of Engineering, Ehime~University
+Bunkyo-cho 3
+Matsuyama, Ehime, 790-8577
+Japan
+Tel:+81-89-927-9956
+Fax:+81-89-927-9973
+
+
+Erich Kaltofen
+North Carolina State University, Dept. Mathematics
+
+Raleigh, North Carolina 27511
+USA
+Tel:919 515 8785
+Fax:919 515 3798
+
+
+Tatsuji Kambayashi
+Tokyo Denki University
+Matsubara 4 - 24 - 14
+Setagaya-Ku, Tokyo, 156-0043
+Japan
+Tel:+81-3-3322-0811
+Fax:+81-3-3322-0801
+
+
+Thomas Kaminski
+Max-Planck-Institut fuer Meteorologie
+Bundesstrasse 55
+20146 Hamburg
+Germany
+Tel:+49 40 41173-102
+Fax:+49 40 41173-298
+
+
+Sergei Klioner
+Lohrmann Observatory, Dresden Technical University
+Mommsenstr. 13
+01062 Dresden
+Germany
+Tel:+49-351-463-2821
+Fax:+49-351-463-7019
+
+
+Ladislav Kocbach
+Fysisk institutt, Universitetet i Bergen
+Allegaten 55
+N-5007 Bergen, Norway
+Norway
+Tel:+47 55 58 28 70
+Fax:+47 55 58 94 40
+
+
+Ilias Kotsireas
+Universite Pierre et Marie Curie, Paris VI
+LIP6  BP 168
+4, place Jussieu, 75252 Paris cedex 05
+France
+Tel:+33+1 44 27 62 43
+Fax:+33+1 44 27 40 42
+
+
+Werner Krandick
+University of Paderborn
+FB 17, Uni Paderborn
+D-33098 Paderborn
+Germany
+Tel:+49-5251-60 3069
+Fax:+49-5251-60 3516
+
+
+Elena Kreines
+The Moscow State University
+Lomonosovskii-18-436
+Moscow,  117296
+Russia
+Tel:07-(095)-930-26-41
+Fax:07-(095)-239-36-46
+
+
+Wolfgang Kuechlin
+University of Tuebingen
+Sand 13
+Tuebingen, D-72076
+Germany
+Tel:07071-2977047
+Fax:07071-295060
+
+
+Bernhard Kutzler
+
+Kariglstrasse 5/6
+Leonding, A-4060
+Austria
+Tel:+43-7236-3297
+Fax:+43-7236-3297-71
+
+
+Imad Ladadwa
+University of Bergen, Physics Department, Norway
+Dep. of Physics, Univ. of Bergen, Allegt. 55
+N-5007 Bergen
+Norway
+Tel:47-55588325
+Fax:47-55589440
+
+
+Luis de Ledesma
+School of Computer Science, Technical University of Madrid, Spain
+Departamento de Inteligencia Artificial, Facultad de Informatica, Campus de Montegancedo
+Boadilla del Monte, 28660 Madrid
+Spain
+Tel:+34 91 336 7434
+Fax:+34 91 352 4819
+
+
+Alexander Levin
+The Catholic University of America, Department of Mathematics
+
+Washington, D. C., 20064
+USA
+Tel:(202)319-5221
+Fax:(202)319-5231
+
+
+Robert Lewis
+Fordham University
+441 East Fordham Road
+Bronx, NY  10458
+USA
+Tel:914-332-9793
+Fax:
+
+
+Daniel Lichtblau
+Wolfram Research, Incorporated
+100 Trade Centre Dr.
+Champaign, IL, 61820
+USA
+Tel:217 398 0700
+Fax:
+
+
+Ji\v{r}\'i Limpouch
+Faculty of Nuclear Science and Physical Engineering, CTU, Prague
+Brehova 7
+Prague, 115 19
+Czech Republic
+Tel:2191 2275
+Fax:
+
+
+Jonny Lindstroem
+Division of mathematics, College of applied engineering and maritime studies at Chalmers University of Technology
+Box 8873, Chalmers Lindholmen
+Göteborg, 40272
+Sweden
+Tel:+46 317725884
+Fax:+46 317725767
+
+
+Richard Liska
+Czech Technical University, Faculty of Nuclear Sciences and Physical Enginnering
+Brehova 7
+115 19 Prague 1
+Czech Republic
+Tel:+(420-2) 2191 2272
+Fax:+(420-2) 688 4818
+
+
+Nicolas Maillard
+Laboratoire de Modélisation et de Calcul
+Institut Fourier BP 53X, 100 rue des Mathématiques
+Grenoble, 38041
+France
+Tel:+33 4 76 51 45 74
+Fax:+33 4 76 51 48 46
+
+
+Marco Mancini
+University of Calabria
+
+Rende (CS) 87036
+Italy
+Tel:+39 984 494733
+Fax:+39 984 494713
+
+
+Adam Marlewski
+Institute of Mathematics, Poznan University of Technology
+ul. Piotrowo 3a
+60-295 Poznan
+Poland
+Tel:48 (61) 8782763
+Fax:
+
+
+Alexei Miasnikov
+The City University of New York
+Department of Mathematics, Convent Avenue at 138th Street
+New York, NY, 10031
+USA
+Tel:(212)-650-5151
+Fax:
+
+
+Alexander A. Mikhalev
+Department of Mechanics and Mathematics, Moscow State University
+Vorobjevy Gory
+Moscow, 119899
+Russia
+Tel:+(7-095) 441-90-80
+Fax:+(7-095)939-20-90
+
+
+Alexander V. Mikhalev
+Department of Mechanics and Mathematics, Moscow State University
+Vorobjevy Gory
+Moscow, 119899
+Russia
+Tel:+(7-095) 441-89-75
+Fax:+(7-095)939-20-90
+
+
+Edward Miller
+Lewis-Clark State College
+500 8th Avenue
+Lewiston, Idaho, 83501
+USA
+Tel:208-799-2810
+Fax:208-798-2064
+
+
+Shigekazu Nakagawa
+Kurashiki University of Science and the Arts
+Tsurajima-cho Nishinoura 2640
+Kurashiki-shi, Okayama Prefecture, 712-8001
+Japan
+Tel:+81-86-440-1072
+Fax:+81-86-440-1062
+
+
+Uwe Naumann
+Dresden University of Technology
+TU Dresden, Institut fuer Wissenschaftliches Rechnen
+Dresden, 01062
+Germany
+Tel:+49 351 463 5060
+Fax:+49 351 4637096
+
+
+Mirko Navara
+Center for Machine Perception, Faculty of Electrical Engineering, Czech Technical University
+Technicka 2
+166 27  Praha 6
+Czech Republic
+Tel:(+420 2) 2435 7388
+Fax:(+420 2) 2435 7385
+
+
+Alexander Nechaev
+Moscow Lomonosov State University, Center of New Information Technologies
+119899 Vorobjevy Gory, Moskow, Russia
+Moskow
+Russia
+Tel:(095) 939 13 03
+Fax:(095) 939 07 13
+
+
+Arnold Neumaier
+Institut fuer Mathematik, Universitaet Wiem
+Strudlhofgasse 4
+A-1090 Wien
+Austria
+Tel:
+Fax:
+
+
+Maria Nisheva-Pavlova
+Faculty of Mathematics and Informatics, "St.Kl.Ohridski" University of Sofia
+James Bourchier Blvd., 5
+Sofia 1164
+Bulgaria
+Tel:(0) 359-2-6256529
+Fax:
+
+
+Matu-Tarow Noda
+Department of Computer Science, Ehime University
+Bunkyo-cho 3
+Matsuyama, 790-8077
+Japan
+Tel:+81-899-927-9954
+Fax:+81-899-927-9973
+
+
+Patrik Nordbeck
+Department of Mathematics, Lund
+Box 118
+Lund, S-221 00
+Sweden
+Tel:+46 46 222 85 66
+Fax:+46 46 222 40
+
+
+Patrick O'Leary
+National University of Ireland, Galway
+
+Galway
+Ireland
+Tel:+353-91-524411(ext2493)
+Fax:+353-91-582153
+
+
+Victor Pan
+Lehman College, CUNY Lehman
+
+Bronx, NY 10468
+USA
+Tel:914  737 2637
+Fax:718 960 8969
+
+
+Franz Pauer
+Institut fuer Mathematik, Universitaet Innsbruck
+A-6020 Innsbruck, Technikerstr. 25/7, Austria
+Innsbruck,  A-6020
+ Austria
+Tel: 0043-512-507-6082
+Fax:0043-512-507-2920
+
+
+Justo Peralta Lopez
+University of Almeria
+Ctra Sacramento, S/N
+La Canada de San Urbano, Almeria
+Spain
+Tel:95 0215520
+Fax:95 0215480
+
+
+Richard Petti
+Macsyma Inc.
+20 Academy Street
+Arlington, Massachusetts   02174
+USA
+Tel:(781) 646-4550
+Fax:(781) 646-3161
+
+
+Jochen Pfalzgraf
+Department of Computer Science, University of Salzburg
+Jakob Haringer Str.2
+A-5020 Salzburg
+Austria
+Tel:+43 662 8044 6309
+Fax:+43 662 8044 611
+
+
+Guenter Pilz
+Institut fur Algebra, Univ. Linz
+
+Linz, A-4040
+Austria
+Tel:(0043-732) 2468-9152
+Fax:(0043-732) 2468-10
+
+
+Bill Pletsch
+Albuquerque Technical Vocational Institute
+Arts and Sciences Department 525 Buena Vista SE
+Albuquerque, New Mexico, 87106
+USA
+Tel:505-224-3672
+Fax:505-224-3700
+
+
+Tatjana Plotkin
+Department of Mathematics and Computer Science, Bar Ilan University
+
+Ramat Gan   52900
+Israel
+Tel:972 3-5318407
+Fax:972 3-5353325
+
+
+Alexander Podoplelov
+Research Institute for Symbolic Computation (RISC-Linz)
+A. Podoplelov, Loeschfeld 16, A-4232, Hagenberg, Austria
+Schloss Hagenberg, A-4232, Hagenberg
+Austria
+Tel:+43 732 2468 9962
+Fax:+43 732 2468 9930
+
+
+F. Leon Pritchard
+Rutgers University
+Department of Mathematics and Computer Science
+Newark, NJ
+USA
+Tel:(214) 473-0733
+Fax:
+
+
+Antonio R. Quesada
+The University of Akron
+146 Judson Rd.
+Kent, Ohio 44240
+USA
+Tel:(330)678-4506
+Fax:(330)374-8630
+
+
+Mohamed Rayes
+Texas Instruments Incorporated
+Post Office Box 650311, MS3908
+Dallas, Texas, 75265, USA
+USA
+Tel:972-917-2642
+Fax:
+
+
+Eugenio Roanes-Lozano
+Departamento de Algebra, Universidad Complutense de Madrid
+Dept. Algebra (Desp. 3517), Edif. La Almudena, Paseo Juan XXIII s/n
+28040-Madrid
+Spain
+Tel:+34 91 394 62 48
+Fax:
+
+
+Rosario Rubio San Miguel
+Universidad de Cantabria
+Departamento de Matematicas, Estadistica y Computacion, Facultad de Ciencias, Avda. Los Castros s/n
+Santander, Cantabrria, 39005
+Spain
+Tel:+34-942-201420
+Fax:+34-942-201402
+
+
+Peder Thusgaard Ruhoff
+The Maersk Mc-Kinney Moller Institute for Production Technology, Odense University
+MIP, Campusvej 55
+Odense, 5230 M
+Denmark
+Tel:(+45) 63 15 71 12
+Fax:(+45) 65 93 23 09
+
+
+David Rupprecht
+Laboratoire de Mathematiques J.A. Dieudonne - Universite de Nice-Sophia Antipolis
+Parc Valrose
+06108 NICE Cedex
+France
+Tel:(33) 04 92 07 62 37
+Fax:(33) 04 93 51 79 74
+
+
+Tateaki Sasaki
+Institute of Mathematics, University of Tsukuba
+
+Tsukuba-shi, Ibaraki 305-8571
+Japan
+Tel:+81 298-53-4291
+Fax:+81 298-53-6501
+
+
+Hiroyuki Sawada
+Mechanical Engineering Laboratory
+Namik 1-2
+Tsukuba, Ibaraki 305-8564
+Japan
+Tel:+81 298 58 7130
+Fax:+81 298 58 7091
+
+
+Josef Schicho
+Research Institute for Symbolic Computation Linz
+RISC-Linz, Joh. Kepler. Univ., A-4040 Linz
+Linz, Austria, A-4040
+Austria
+Tel:+43 732 2468 9961
+Fax:+43 732 2468 9930
+
+
+Hannes Schoenemann
+University of Kaiserslautern
+Department of Mathematics, PB 3049
+Kaiserslautern   67653
+Germany
+Tel: +49 631-205-2781
+Fax:+49 631-205-3052
+
+
+Peter Schofield
+Trinity & All Saints College
+Brownberrie Lane, Horsforth
+Leeds   LS18 5HD
+United Kingdom
+Tel:0044113 2837220
+Fax:0044113 2837200
+
+
+Vasily M. Severyanov
+Joint Institute for Nuclear Research
+LCTA, JINR, 141980 Dubna, Moscow region, Russia
+Dubna, Moscow region,141980
+Russia
+Tel:(096-21) 67183
+Fax:(096-21) 65145
+
+
+Kiyoshi Shirayanagi
+NTT Communication Science Laboratories
+2-4 Hikaridai, Seika-cho
+Soraku-gun, Kyoto 619-0237
+Japan
+Tel:+81 774 93 5251
+Fax:+81 774 93 5285
+
+
+Milan \v{S}i\v{n}or
+Czech Technical University in Prague, Faculty of Nuclear Sciences and Physical Enginnering
+Brehova 7
+115 19 Prague 1
+Czech Republic
+Tel:+(420-2) 2191 2287
+Fax:+(420-2) 688 4818
+
+
+William Sit
+The City College of The City University of New York
+Convent Ave at West 138th Street
+New York, NY 10031
+USA 
+Tel:1-212-650-5179
+Fax:1-212-862-0004
+
+
+Murray D. Smith
+Department of Econometrics, University of Sydney
+
+Sydney  NSW  2006
+Australia
+Tel:+61 2 9351-6584
+Fax:+61 2 9351-6409
+
+
+Andrey Sokolov
+Linkoping University,  Division of Automatic Control
+
+S - 581 83
+Sweden
+Tel:+46 13 28133
+Fax:+46 13 282 622
+
+
+Andreas Sorgatz
+Departement of Mathematics and Computer Science, University of Paderborn
+MuPAD, FB17 Mathematik, Uni-GH Paderborn, Warburger Str. 100
+Paderborn, NRW, 33095
+Germany
+Tel:+49+5251-60-3067
+Fax:+49+5251-60-3836
+
+
+Lubomír Soukup
+Institute of Information Theory and Automation, Academy of Sciences of the Czech Republic
+Pod vodárenskou v\v{e}\v{z}\' 4
+Praha 8,  182 08
+Czech Republic
+Tel:+ 42 2 6605 2551
+Fax:+ 42 2 688 4903
+
+
+Margarita Spiridonova
+Institute of Mathematics and Informatics, Bulgarian Academy of Sciences
+Acad. G. Bonchev Street, B. 8
+Sofia 1113
+Bulgaria
+Tel:(359 2) 713 28 37
+Fax:(359 2) 971 36 49
+
+
+Stanly Steinberg
+University of New Mexico
+Department of Mathematics and Statistics
+Albuquerque, NM, 97110
+USA
+Tel:505 277 5323
+Fax:505 277 5505
+
+
+Sabine Stifter
+RISC-Research Institute for Symbolic Computation, University Linz
+Hauptstr. 99
+A-4232 Hagenberg
+Austria
+Tel:
+Fax:
+
+
+Dagmar \v{S}varcov\'{a}
+Gymnasium Zborovsk\'{a}
+Zborovska 45
+150 00 Praha 5
+Czech Republic
+Tel:5732 0816
+Fax:53 85 95
+
+
+Mohamed Tadjouddine
+Institut National de Recherche en Informatique et en automatique
+2004, Route des Lucioles BP 93
+06902 Sophia Antipolis
+France
+Tel:33 4 92 38 78 72
+Fax:33 4 92 38 78 58
+
+
+Akira Terui
+Doctoral Program in Mathematics, University of Tsukuba
+
+Tsukuba-shi, Ibaraki 305-8571
+Japan
+Tel:+81 298-53-4509
+Fax:+81 298-53-6501
+
+
+Eno Tonisson
+University of Tartu
+Liivi 2-209
+Tartu EE2400
+Estonia
+Tel:37 27 375 445
+Fax:37 27 375 468
+
+
+Quoc-Nam Tran
+Wolfram Research Inc.
+100 Trade Centre Dr.
+Champaign, IL, 61820
+USA
+Tel:217 398 0700
+Fax:217 398 0747
+
+
+Edwin Julio Vargas Sanchez
+Institut fuer Theoretische Physik, Universitaet Karlsruhe
+Engesser Straße 7   Physikhochhaus (Gebäude 30.23) 12. OG
+76131 Karlsruhe
+Germany
+Tel:+49 721 608-2081
+Fax:+49 721 608-3582
+
+
+Nikolay Vassiliev
+St.Petersburg Branch of V.A.Steklov Mathematical Institute, of Russiam Academy of Science
+27, Naberezhnaya Fontanki, 191011, St.Petersburg, Russia
+St.Petersburg, 191011
+Russia
+Tel:(+7-812) 552-73-61
+Fax:(+7-812) 310-53-77
+
+
+Remco Veltkamp
+Utrecht University, Department of Computer Science
+Padualaan 14
+3584 CH Utrecht
+The Netherlands
+Tel:+31-30-2534091
+Fax:+31-30-2513791
+
+
+Sergey Vernov
+Institute of Nuclear Physics, Moscow State University
+NPI MSU, 119899, Vorobyevy Gory, Moscow, Russia
+Moscow, 119899
+Russia
+Tel:+7-(095)-939-239
+Fax:+7-(095)-939-0397
+
+
+Dominique Villard
+CECM -- Simon Fraser University
+8888 University Drive
+Burnaby B.C. V5A1S6
+Canada
+Tel:604-291-3665
+Fax:604-291-4947
+
+
+Gilles Villard
+IMAG / CNRS
+
+LMC BP53  - F38041 Grenoble Cedex 9
+France
+Tel:+33 4 76 51 46 05
+Fax:+33 4 76 63 12 63
+
+
+Emil J. Volcheck
+Department of Defense
+3120 Saint Paul St., Apt. B-205
+Baltimore MD  21218
+USA
+Tel:(301) 688-5364
+Fax:
+
+
+Vladimir Vyskocil
+Faculte des sciences de Nice - Sophia Antipolis
+Laboratoire J.A. Dieudonné, Parc Valrose, Université de Nice - Sophia Antipolis
+06108 NICE Cedex
+France
+Tel:+33 4 92 07 62 90
+Fax:+33 4 93 51 79 74
+
+
+Junbai Wang
+University of Bergen, Physics Department, Norway
+Dep. of Physics, Univ. of Bergen, Allegt. 55
+N-5007 Bergen
+Norway
+Tel:47-55582709
+Fax:47-55589440
+
+
+Andreas Weber
+Wilhelm-Schickard-Institut fur Informatik
+Universit"at T"ubingen, Auf dem Sand 13
+72072 T"ubingen
+Germany
+Tel:+49 (7071) 29-77365
+Fax:+49 (7071) 29-5060
+
+
+Stefan Wehmeier
+Universitaet-Gesamthochschule Paderborn, Fachbereich 17
+
+33095 Paderborn
+Germany
+Tel:(0049) 5251/60-2621
+Fax:0049 5251/60-4203
+
+
+A. Israel Weinzweig
+University of Illinois at Chicago
+9711 N. Kildare Ave.
+Skokie, Illinois, 60076
+USA
+Tel:(847) 677-9190
+Fax:(847) 677-9194
+
+
+Stefan Welke
+Beethoven-Gymnasium Bonn
+Stefan Welke, In der Wehrhecke 29, D-53125 Bonn
+D-53125 Bonn
+Germany
+Tel:0049 228250772
+Fax:0049 228250799
+
+
+Michael Wester
+Cotopaxi
+1801 Quincy, SE
+Albuquerque, New Mexico 
+USA
+Tel:+1 (505) 243-2800
+Fax:+1 (505) 277-5505
+
+
+Hans Westergren
+Division of mathematics, College of applied engineering and maritime studies at Chalmers University of Technology
+Box 8873, Chalmers Lindholmen
+Göteborg, 40272
+Sweden
+Tel:+46 317725885
+Fax:+46 317725767
+
+
+Lars Westerlund
+Division of mathematics, College of applied engineering and maritime studies at Chalmers University of Technology
+Box 8873, Chalmers Lindholmen
+Göteborg, 40272
+Sweden
+Tel:+46 317725883
+Fax:+46 317725767
+
+
+Johann Wiesenbauer
+Institut fuer Algebra und Diskrete Mathematik, Technische Universitaet Wien
+Wiedner Hauptstrasse 8-10
+Vienna, Austria, A-1040
+Austria
+Tel:+43 1 58801 5462
+Fax:+43 1 5815335
+
+
+Franz Winkler
+RISC-Linz, J. Kepler University
+Altenbergerstrasse 69
+A-4040 Linz
+Austria
+Tel:+43 732 2468 9943
+Fax:+43 732 2468 9930
+
+
+Lex Wolters
+Leiden Institute of Advanced Computer Science, Leiden University
+Niels Bohrweg 1
+2333 CA  Leiden
+The Netherlands
+Tel:+31 71 5277054
+Fax:+31 5276985
+
+
+Alberto Zanoni
+Universita' degli Studi di Pisa
+via Buonarroti 2
+Pisa, I - 56127
+Italy
+Tel:+ 39 050 844 283
+Fax:+ 39 050 844 224
+
+
+Nurit Zehavi
+Science Teaching Department, Weizmann Institute of Science
+
+Rehovot   76100
+Israel
+Tel:972-8-9343156
+Fax:972-8-9344115
+
+
+Fouad Zinoun
+Departement de Mathematiques et Imformatique, Faculte des Sciences de Rabat
+Avenue Ibn Battouta, B.P 1014, Rabat, Morocco
+
+Morocco
+Tel:+212 7 77 54 71
+Fax:+212 7 77 54 71
+
+
+Andrej A. Zolotykh
+Department of Mechanics and Mathematics, Moscow State University
+Vorobjevy Gory
+Moscow, 119899
+Russia
+Tel:
+Fax:+(7-095)939-20-90
+

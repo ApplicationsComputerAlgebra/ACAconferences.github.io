@@ -1,0 +1,26 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>Forgotten User Name or Password</title>
+<script>if (top != self) top.location.href=location.href;</script><link type="text/css" rel="StyleSheet" href="../css/cool.css?version=490" /><link type="image/jpeg" rel="icon" href="../images/chairEC.jpg" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div id='content' class='nomenu'><h2 id="title">Forgotten User Name or Password</h2><form action="https://www.easychair.org/account/forgot.cgi"><p>Please enter the words you see in the box, in order and
+                     separated by a space. Doing so helps prevent automated
+                     programs from abusing this service. If you are not sure
+                     what the words are, either enter your best guess or click
+                     the reload image <img src="https://www.google.com/recaptcha/api/img/red/refresh.gif"/> next to the distorted words.</p><script type="text/javascript">
+//<![CDATA[
+var RecaptchaOptions = {"theme":"red"};
+//]]>
+</script>
+<script src="https://www.google.com/recaptcha/api/challenge?k=6Ldu38MSAAAAAA6ciOoFSr6tXJVjgqlQxygXhCnJ" type="text/javascript"></script>
+<noscript><iframe frameborder="0" height="300" src="https://www.google.com/recaptcha/api/noscript?k=6Ldu38MSAAAAAA6ciOoFSr6tXJVjgqlQxygXhCnJ" width="500"></iframe><textarea cols="40" name="recaptcha_challenge_field" rows="3"></textarea><input name="recaptcha_response_field" type="hidden" value="manual_challenge" /></noscript>
+<p>Enter either your email address or your user name
+                (exactly as used in your EasyChair account) and your
+                login information will be sent to you by email.</p><input value="aca2011" name="conf" type="hidden"/><input value="1" name="send" type="hidden"/><table class="formtable"><tr><td class="right">Email:</td><td><input value="" name="email" type="text" size="50"/></td></tr><tr><td class="right">User name:</td><td><input value="" name="user" type="text" size="50"/></td></tr><tr><td colspan="2"><input value="Press this button to continue" name="Press this button to continue" type="submit"/></td></tr></table></form></div>
+</body>
+</html>

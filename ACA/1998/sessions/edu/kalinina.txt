@@ -1,0 +1,16 @@
+"Application of computer algebra systems in educational 
+process in Novosibirsk State University"
+
+Nina Kalinina
+
+
+Algebraic computation programs have alredy been applied 
+to a large number of different areas in science and engineering. 
+At use of systems of computer algebra it is possible to select 
+two directions, namely: first - application computer algebra system  
+at study of general mathematical courses and, second use computer 
+algebra system at preparation of the students,learning computer science. 
+In the report versions of application of systems of 
+computer algebra as in general mathematical courses, 
+and in special courses in Novosibirsk State University 
+are considered. 

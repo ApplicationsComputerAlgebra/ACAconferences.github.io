@@ -1,0 +1,46 @@
+    "Symmetries and Closed Form Solutions of Differential Equations"
+
+                           Fritz Schwarz, GMD
+                          fritz.schwarz@gmd.de
+
+
+Until now the symmetry analysis of differential equations is the most powerful
+algorithmic method for studying closed form solutions of nonlinear 
+differential equations. Because of the large amount of analytical 
+computations which is usually involved in its application, it has almost 
+completely been discarded for about a century after its establishment.
+This situation has changed dramatically with the advent of computer algebra.
+In the last decade the combination of these two fields has created a 
+tremendous amount of activity
+
+This session is devoted to all aspects involved in dealing with the
+symmetries of differential equations and their applications, including the
+algorithmic and computational aspects. A partial list of
+topics which are of particular interest is as follows.
+  
+  -- Determining various kinds of symmetry groups of ordinary and
+     partial differential equations, e.g. Lie- or point symmetries,
+     contact symmetries, higher or generalized symmetries, infinite
+     symmetry groups.
+
+  -- Applications of symmetries for finding closed form solutions of
+     ordinary and partial differential equations, e.g. similarity reductions
+     of partial differential equations.
+       
+  -- Algorithms for determining, analysing and applying symmetry groups
+     of differential equations, Groebner base calculations.
+
+  -- Demos of computer algebra software devoted to this field. If there
+     is sufficient interest, a special demo session is contemplated.
+
+
+Preliminary list of people to be invited to give a talk
+
+Bill Ames 		Clara Nucci
+Barbara Shrauner 	Peter Olver
+George Bluman 		Willy Hereman
+Nail Ibragimov 		Sukeyuki Kumei
+Peter Vafedes 		Thomas Wolf
+Wolfgang Lassner 	Peter Clarkson
+Elisabeth Mansfield 	Greg Reid
+Steve Coggeshall 	Peter Leach

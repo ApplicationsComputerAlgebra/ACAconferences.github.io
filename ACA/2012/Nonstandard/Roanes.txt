@@ -1,0 +1,51 @@
+Title:    A rule based expert system for hitting technique 
+          in amateur tennis competition
+
+Authors:  Eugenio Roanes-Lozano
+          (Univ. Complutense de Madrid, Madrid, Spain)
+
+          Eduardo A. Casella
+          (Club SportOcio Alcantara, Badajoz, Spain)
+
+          Fernando Sanchez
+          (Univ. de Extremadura, Badajoz, Spain) 
+          
+          Antonio Hernando
+          (Univ. Politecnica de Madrid, Madrid, Spain)
+
+Extended Abstract:
+
+There are many aspects in tennis teaching that have to be
+addressed (tactic, technique, physical training,...) and a coach
+is clearly needed for improving the player's level. For instance,
+the biomechanical of a stroke is only clear to the expert's eyes.
+But most amateur tennis players are not accompanied by a coach
+when playing championships, and sometimes a hint like "hit the
+ball at a higher point when you serve" can change a match. 
+
+We would like to address here just this aspect of the whole 
+process: finding out what's going wrong in a certain match with 
+respect to the player's usual technique. We have developed a rule 
+based expert system that applies inference to the answers of the 
+player to a set of questions regarding both the problem and the 
+player's usual technique. 
+
+It requires a certain knowledge of the technique from the player 
+(it is focused to amateur competition players, not to beginners). 
+Therefore, this is neither a system devoted to learn how to play 
+tennis, nor a substitute for a coach. It only tries to correct 
+mistakes in a stroke going wrong along one match and returning 
+the situation to the usual one. The article is illustrated with 
+the part of the system corresponding to the serve.
+
+The expert system is based on Boolean propositional logic and the
+inference engine makes use of Groebner bases and is implemented 
+in the computer algebra system Maple.
+
+The first and third authors of this paper are mathematicians and 
+also veteran tennis players. The first one is a tennis instructor 
+ranked nowadays among the 500 top players in Spain. The second 
+author is their tennis coach, an "ITF Level 2 Tennis Coach" with 
+a long experience in teaching tennis and coaching tennis players 
+both in Argentina and Spain. Finally, the fourth author is an 
+experienced expert systems developer.

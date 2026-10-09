@@ -1,0 +1,127 @@
+\documentstyle []{article}
+\oddsidemargin -7mm
+\evensidemargin -7mm
+\topmargin -05mm
+\headheight 0pt
+\headsep 0pt
+\textheight 235mm
+\textwidth 174mm
+\pagestyle{empty}
+
+\begin{document}
+
+\title{Issues in Symbolic Parametrization
+       of Algebraic Curves 
+\footnote{Supported by 
+{\it \"Osterr. Fonds zur F\"orderung der wissenschaftlichen
+Forschung}, Proj. POSSO, Nr. P9181-TEC. (ESPRIT BRA No. 6846).}  }
+
+\author{Franz  Winkler \\
+        Institut f\"ur Mathematik and RISC-LINZ \\
+        Johannes Kepler Universit\"at \\
+        A-4040 Linz, Austria \\
+        e-mail: {\tt winkler@risc.uni-linz.ac.at}}
+
+\date{ }
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{4 mm}
+
+\noindent{\bf Abstract}
+
+\vspace{5 mm}
+
+The problem of rational parametrization of plane algebraic curves is best
+explained by an example. 
+Suppose we consider the curve ${\cal C}_1$ in the complex plane, whose
+points are the zeros of the polynomial
+$$f_1(x,y) = (x^2+4y+y^2)^2 - 16(x^2+y^2).$$
+${\cal C}_1$ is a curve of genus 0, so it can be rationally 
+parametrized, e.g. as
+\begin{eqnarray*}
+  & x(t) =
+          { 9216t^4-62464t^3+141696t^2-108864t+2916 \over
+           430336t^4-94464t^3+58976t^2-5904t+1681        }\ , \\
+  & y(t) =
+          { 40960t^4-184320t^3+204800t^2+11520t-12960 \over
+           430336t^4-94464t^3+58976t^2-5904t+1681        }\ .
+\end{eqnarray*}
+
+
+\vspace{2 mm}
+
+In general we say that
+a curve $\cal C$ has a {\it rational parametrization}, iff there are 
+(nontrivial)
+rational functions $x(t),y(t)$ such that the defining polynomial $f$ of
+$\cal C$ vanishes on them,
+$$f(x(t),y(t))=0.               $$ 
+
+\vspace{2 mm}
+
+The parametrizable curves are exactly the irreducible curves of
+genus 0, i.e. they achieve the upper bound on the number of 
+singularities.
+If such a parametrization exists, then it
+is by no means unique, even if we require that the degrees of the
+rational functions involved are minimal. In fact, one of the main 
+problems is to determine a minimal extension of the field of definition,
+in which a parametrization can be expressed.
+
+For this purpose we assume that $K$ is a computable field of
+characteristic 0, we call it the {\it field of definition}.
+$\overline K$ denotes the algebraic closure of $K$.
+The defining polynomial of the curve $\cal C$ that we want to
+parametrize has coefficients in $K$.
+The curve $\cal C$ itself, however, is considered to be a curve
+over $\overline K$.
+In the parametrization process  we might have to
+extend $K$ algebraically. We will ultimately construct a
+parametrization (if one exists) over some field 
+$K(\gamma) \subseteq \overline K$, where $\gamma$ is algebraic
+over $K$.
+Of course, we want to keep  the degree of $\gamma$ as low as possible.
+
+\vspace{2 mm} 
+
+Singular points on algebraic curves occur only in full conjugacy  classes.
+Consequently they do not introduce algebraic numbers in the
+parametrization process. In general, however, we also need 
+a certain number of simple points on the curve. This might force us
+to extend the field of definition of the curve, in order to
+arrive a field over which we can give a parametrization.
+
+
+From the work of N\"other              and
+Hilbert and Hurwitz                 we
+know that it is possible to parametrize any curve $\cal C$ of genus 0
+over the field of definition $K$, if $\deg({\cal C})$ is odd,
+and over some quadratic extension of $K$, if $\deg({\cal C})$ is even.
+In a previous paper J.R. Sendra and the author have presented an 
+algorithm which actually achieves this optimal field of 
+parametrization.
+Moreover, if the field of definition is the field of rational
+numbers, we can also
+decide if the curve can be parametrized over the reals, and compute
+such a parametrization if it exists.
+
+\vspace {2 mm}
+
+Our parametrization algorithm is of polynomial bit complexity
+if we assume that the curve $\cal C$ defined over the rational numbers
+has only ordinary singularities.
+If we allow curves with also non--ordinary singularities, then
+the bit complexity 
+becomes exponential in the worst case.
+\vspace{2 mm}
+\newline
+{\bf Keywords:} parametrization of algebraic curves, rational points on 
+algebraic curves, complexity.
+
+
+
+
+\end{document}

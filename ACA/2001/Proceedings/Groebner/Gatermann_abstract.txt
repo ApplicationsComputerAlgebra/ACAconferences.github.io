@@ -1,0 +1,11 @@
+Karin Gatermann:  
+Application of SAGBI-bases to Dynamics
+
+SAGBI-bases are a tool for systematic computation with algebras.  They are a
+special basis such that membership etc. may be decided algorithmically.
+Typical examples of algebras are invariant rings which appear naturally in the
+context of dynamical systems such as Birkhoff normal form, Liapunov-Schmidt
+reduction and reduction onto center manifold with symmetry.  Everytime it is
+important to find a basis of invariant polynomials of a certain degree and/or
+to find a set of relevant coefficients which have to be computed.  We will show
+that SAGBI bases are a most suitable tool for these tasks.

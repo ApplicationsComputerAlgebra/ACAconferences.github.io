@@ -1,0 +1,21 @@
+"The Computer Classroom Lecture"
+
+Bill Pletsch*
+Albuquerque Technical Vocational Institute
+Arts and Sciences Department 525 Buena Vista SE
+Albuquerque, New Mexico, 87106
+USA
+E-mail:bpletsch@tvi.cc.nm.us
+
+
+Computer algebra systems have not yet lived up to their promise in the 
+field of mathematics education. In particular, in computer classroom 
+instruction (a class where the instructor and the student each have a 
+computer) progress is still slow. The promise remains. The reasons why 
+the promise has not been achieved and what needs to be done to rectify the 
+situation will be fully explored. 
+An analysis of the situation will show it is a question of capability of the 
+software and technique of the instructor. These themes will be discussed in depth 
+with examples. The relative merits of the top instructional computer 
+algebra systems used in colleges in the United States and how they are 
+currently being used will also be discussed.

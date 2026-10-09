@@ -1,0 +1,13 @@
+Alternative Ways of Solving Polynomial Systems
+
+Ilias Kotsireas
+
+We present some ways to solve polynomial systems using differential elimination
+algorithms (e.g. RIF) and the notion of normal set which arises in the
+interpretation of polynomial system solving as a matrix eigenproblem.  These
+ideas apply to zero-dimensional systems, as well as to systems with
+parameters.  These ideas are illustrated with two zero-dimensional polynomial
+systems that arise in the study of central configurations in the N-body problem
+of Celestial Mechanics and an inverse kinematics example from Robotics.  The
+computations have been performed in Maple 6.  This is joint work with Greg
+Reid. The normal set notion we use is borrowed from an article by Rob Corless.

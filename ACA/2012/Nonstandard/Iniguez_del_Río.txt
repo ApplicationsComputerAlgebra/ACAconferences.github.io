@@ -1,0 +1,47 @@
+Title: 		An algebraic approach for an efficient and sustainable driving model based on a propositional logic
+
+Authors:	Yovan Íñiguez del Río
+		
+		(Instituto Universitario de Investigación del Automóvil, Madrid, Spain)
+
+
+		Lourdes Cecilia Fernández-Conde
+		
+		(Instituto Universitario de Investigación del Automóvil, Madrid, Spain)
+
+
+		José Gabriel Zato Recellado
+		
+		(Instituto Universitario de Investigación del Automóvil, Madrid, Spain)
+
+
+
+Extended Abstract:
+
+One of the main goals in the field of intelligent transportation systems
+is to promote the principles of sustainable driving by presenting good
+practices or systematic prototypes. In this area, one of the less studied
+elements is the sustainability of Urban Freight Distribution in order
+to carry out actions oriented to converting the distribution into a more
+optimal and efficient one. The reduction of this gap is one of the most
+important aims of several projects involved in mobility technologies. In
+this area is very important the development of tools that improve the
+efficiency of this kind of urban transport but not from a mechanics,
+engine, fuel, or planning point of view, but by centering the work on
+the human driver, their behaviors and their reactions.
+
+This kind of tools can be thought as Knowledge Based Systems (KBS). By
+starting from several empirical data related with some measurable
+variables from the vehicles, it is possible to build a model based on
+a propositional logic.
+
+This way, this paper presents a mathematical approach that consists in a
+model based on a polynomial ideal representing the knowledge system based
+on propositional logic that obtains an assessment of the efficiency or
+the lack of it in the driving task. Implementations in computer algebra
+systems as CoCoA are included.
+
+This model can be used as a basis for the development of Advanced Driver
+Assistance Systems oriented to improving the efficiency, in real time,
+of the driving behavior of urban freight distribution vehicle drivers,
+while at the same time reducing emissions and fuel consumption.

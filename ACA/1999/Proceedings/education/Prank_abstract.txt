@@ -1,0 +1,14 @@
+Rein Prank* (Estonia), prank@cs.ut.ee
+A Scheme for Conservative Use of Computer Algebra
+
+In Tartu University we are using a Propositional Formula Manipulation Assistant
+where the instructor can fix Subformula Location Mode:
+a) LINEAR (shifting the ends of highlighted substring),
+b) TREE (usual mode of CA programs)
+and Subformula Replacing Mode:
+a) IMMEDIATE (input of replacing string),
+b) RULE (the student chooses the rule/procedure from menu),
+c) INPUTRULE (the student enters the rewrite rule).
+Such scheme does not change the traditional role of the student and allows to
+implement many tutoring strategies. We discuss the problems of didactic
+adequacy of the interface.

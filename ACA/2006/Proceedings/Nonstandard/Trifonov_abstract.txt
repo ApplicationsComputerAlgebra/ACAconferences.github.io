@@ -1,0 +1,31 @@
+MatLab Analysis of Acoustic Processes in Water Pipelines
+
+Tihomir Trifonov
+University of Veliko Tarnovo "St. St. Cyril and Methodius"
+Department of Algebra and Geometry
+2 T. Tarnovski Str.
+5003 Veliko Tarnovo, Bulgaria
+tihomirtrifonov@ieee.org
+Phone: +349 887 618 555
+
+Kamen Simeonov
+P.O. Box 341
+5000 Veliko Tarnovo, Bulgaria
+keyman@engineer.bg
+Phone: +349 888 851 466
+
+Ivan Simeonov
+Department of Communication and Information Systems
+National Military University "Vassil Levski"
+Veliko Tarnovo, Bulgaria
+ivan_simeon@is.nvu.bg
+
+In the report the mathematical bases of the theory of hydraulic shock are
+given.  Empirical data of acoustic processes, which take place in the certain
+situations, are assembled and analyzed.
+
+Short Time Fourier Transform (STFT) and Continuous Wavelet Transform (CWT) of
+signals, written down in characteristic points, are made in MatLab environment.
+
+On the basis of this analysis, the work of concrete water supply system is
+optimized.

@@ -1,0 +1,484 @@
+From edneral@theory.npi.msu.su Mon Jun  7 14:43 MDT 1999
+Received: from theory.npi.msu.su (theory.npi.msu.su [158.250.5.67])
+	by math.math.unm.edu (8.9.1a/8.9.1) with ESMTP id OAA05017
+	for <wester@math.unm.edu>; Mon, 7 Jun 1999 14:42:56 -0600 (MDT)
+Received: (from edneral@localhost)
+	by theory.npi.msu.su (8.8.7/8.8.7) id AAA28885
+	for wester@math.unm.edu; Tue, 8 Jun 1999 00:35:16 +0400
+Date: Tue, 8 Jun 1999 00:35:16 +0400
+From: Victor Edneral <edneral@theory.npi.msu.su>
+Message-Id: <199906072035.AAA28885@theory.npi.msu.su>
+To: wester@math.math.unm.edu
+Subject: Re: Sessions
+Content-Type: text
+Status: RO
+
+   Dear Michael,
+   We have had some zero approximation for the timetable,
+but now I would like to clarify it more. 
+   Preliminary version is:
+List of session and their abbreviation
+--------------------------------------
+
+1 Applications of Computer Algebra to Robotics			      Robot
+2 Applications of Computer Algebra to Signal Processing		      Signal
+3 Applications of Quantifier Elimination			      QE
+4 Approximate Algebraic Computation: tow. Symbolic-Numeric Algorithms Approx
+5 Combinatorial and Computational Methods in Algebraic Geometry	      Combin
+6 Computations in Pure Mathematics (Algebra, Analysis, Geometry,...)  Pure
+7 Computer Aided Geometric Design and Computer Algebra		      Geom
+8 Computer Algebra for Dynamical Systems and Mechanics		      Dynam
+9 Computer Algebra in the Spanish Educational System		      Spanish
+10 Computer Algebra meets Education				      EDU
+11 Demos of Computer Algebra Systems				      Demos
+12 Interaction on Physics, Number Theory & Computer Science	      Physics
+13 Mathematics on the Internet					      Internet
+14 Symbolic-Numeric Interface and Problem Solving Environments	      SNI&PSE
+15 Teaching of Efficient Mathematics				      Efficient
+16 Toric Ideals and Integer Programming				      Toric
+
+Number of talks in sessions
+---------------------------
+1 talk = 30 minutes, for 1 hour talks we count 2 units
+
+1   Robot		4
+2   Signal		6
+3   QE			8
+4   Approx		14
+5   Combin		7
+6   Pure		12
+7   Geom		7
+8   Dynam		19
+9   Spanish		7
+10  EDU			25
+11  Demos		6
+12  Physics		10
+13  Internet		8
+14  SNI&PSE		10
+15  Efficient		12
+16  Toric		5
+
+
+Groups of sessions which should not overlap
+-------------------------------------------
+similar topics -> probably same people would like to attend
+
+I.	Internet
+	Demos
+
+II.	Approx
+	Pure
+	Combin
+	Geom
+	Toric
+this group is too big, extracted subgroup: Combin, Toric
+
+III.    Physics
+	Signal
+
+IV.	EDU
+	Efficient
+	Spanish
+group is also too big and has many limitations -> extracted subgroup Spanish
+
+V.      SNI&PSE
+	QE
+
+VI.	Dynam
+	Robot
+
+Liminations on sessions scheduling
+----------------------------------
+
+1   Robot		should be on Sat
+2   Signal		
+3   QE			no Fri morning, no Sun afternoon
+4   Approx		
+5   Combin		
+6   Pure		
+7   Geom		no Fri (one speaker)
+8   Dynam		
+9   Spanish		no Fri (one speaker), no Sun morning
+10  EDU			no Sun afternoon
+11  Demos		
+12  Physics		
+13  Internet		
+14  SNI&PSE		no Fri (one speaker), no Sun afternoon
+15  Efficient		
+16  Toric		
+
+
+Time schedule
+-------------
+number of talks
+
+			Fri		Sat		Sun		Total
+ 9:00 - 11:00		4		4		4		12
+11:30 - 13:30		4		4		4		12
+15:30 - 17:00		3		3		3		9
+17:30 - 19:00		3		3				6
+Total			14		14		11		39
+
+5 parallel sessions -> max. total number of talks is 195
+
+Lecture rooms
+-------------
+maximum number of people
+
+A 100
+B 100
+C 60
+D 40
+E 40
+
+
+Sessions schedule
+-----------------
+1-st version prepared by Eugenio, Jaime, Richard and Victor at CASC'99
+Herrsching
+
+--------------------------------------------------------
+|Fri    A     |    B     |   C     |   D     |   E     |
+|------------------------------------------------------|
+|4|  EDU      | Approx   | Combin  | Dynam   | Signal  |
+| |  14       | 14       | 7       | 14      | 6       |
+|4|           |          |         |         |         |
+| |           |          |---------|         |---------|
+|3|           |          | SNI&PSE |         | Toric   |
+| |           |          | 4       |         | 5       |
+|3|           |          |         |         |         | 
+|------------------------------------------------------|
+|Sat          |          |         |         |         |
+|4|  EDU      | Internet | SNI&PSE | Dynam   | Pure    |
+| |  11       | 8        | 6       | 5       | 12      |
+|4|           |          |         |         |         |
+| |           |----------|---------|---------|         |
+|3|           | Demos    | Robot   | Spanish |         |
+| |-----------| 6        | 4       | 7       |         |
+|3|  Efficient|          |         |         |         |
+| |  2        |          |         |         |         |
+|------------------------------------------------------|
+|Sun          |          |         |         |         |
+|4|  Efficient| Geom     | QE      | Physics |         |
+| |  10       | 7        | 8       | 10      |         |
+|4|           |----------|---------|         |         |
+| |           |          |         |         |         |
+|3|           |          |         |         |         |
+--------------------------------------------------------
+
+   Best wishes,
+   Victor
+
+From liska@siduri.fjfi.cvut.cz Tue Jun 15 06:53 MDT 1999
+Received: from siduri.fjfi.cvut.cz (siduri.fjfi.cvut.cz [147.32.6.6])
+	by math.math.unm.edu (8.9.1a/8.9.1) with SMTP id GAA29041;
+	Tue, 15 Jun 1999 06:52:54 -0600 (MDT)
+Received: from localhost by siduri.fjfi.cvut.cz via ESMTP (951211.SGI.8.6.12.PATCH1502/951211.SGI)
+	 id OAA01339; Tue, 15 Jun 1999 14:52:46 +0200
+Date: Tue, 15 Jun 1999 14:52:46 +0200
+From: Richard Liska <liska@siduri.fjfi.cvut.cz>
+To: Eugenio Roanes Lozano <eroanes@eucmos.sim.ucm.es>
+cc: Stanly Steinberg <stanly@math.math.unm.edu>,
+        Michael Wester <wester@math.math.unm.edu>,
+        Victor Edneral <edneral@theory.npi.msu.su>,
+        Jaime Gutierrez <jaime@matesco.unican.es>,
+        Laureano Gonzalez Vega <gvega@matesco.unican.es>
+Subject: Re: VERY URGENT: Schedule of sessions
+In-Reply-To: <Pine.OSF.3.96.990615135703.9786B-100000@eucmos.sim.ucm.es>
+Message-ID: <Pine.SGI.4.05.9906151434560.5696-100000@siduri.fjfi.cvut.cz>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Content-Length: 3765
+Status: RO
+
+Eugenio,
+
+do not worry with this (based on your question I have thought that someone
+else is preparing the schedule). I believe all is going fine. Victor,
+Michael and myself are taking care of this. Victor has already send the
+1-st version to all session organizers a week ago. We have already got
+some replies. The policy is that the most actual list is in the file
+  http://math.unm.edu/ACA/1999/Proceedings/Sessions.html
+If anyone has some info not reflected in this file please inform Michael
+or me ASAP. During last week we reduced number of talks with
+non-registered speakers from 30% to about 20%, still 33 talks do not have
+registered speaker. This is the biggest obstacle when we do not want to
+have many talks cancellation, i.e. holes in the program. 
+
+Based on comments which arrived I suggest the 2-nd version
+of the schedule (Internet is exchanged with Geom only):
+--------------------------------------------------------
+|Fri    A     |    B     |   C     |   D     |   E     |
+|------------------------------------------------------|
+|4|  EDU      | Approx   | Combin  | Dynam   | Signal  |
+| |  14       | 14       | 6       | 14      | 6       |
+|4|           |          |         |         |         |
+| |           |          |---------|         |---------|
+|3|           |          | SNI&PSE |         | Toric   |
+| |           |          | 5       |         | 5       |
+|3|           |          |         |         |         | 
+|------------------------------------------------------|
+|Sat          |          |         |         |         |
+|4|  EDU      | Geom     | SNI&PSE | Dynam   | Pure    |
+| |  11       | 6        | 5       | 6       | 14      |
+|4|           |          |         |         |         |
+| |           |----------|---------|---------|         |
+|3|           | Demos    | Robot   | Spanish |         |
+| |-----------| 6        | 4       | 6       |         |
+|3|  Efficient|          |         |         |         |
+| |  2        |          |         |         |         |
+|------------------------------------------------------|
+|Sun          |          |         |         |         |
+|4|  Efficient| Internet | QE      | Physics |         |
+| |  8        | 8        | 8       | 10      |         |
+|4|           |----------|---------|         |         |
+| |           |          |         |         |         |
+|3|           |          |         |         |         |
+--------------------------------------------------------
+
+Comments??
+
+--Richard
+From liska@siduri.fjfi.cvut.cz Wed Jun 16 00:44 MDT 1999
+Received: from siduri.fjfi.cvut.cz (siduri.fjfi.cvut.cz [147.32.6.6])
+	by math.math.unm.edu (8.9.1a/8.9.1) with SMTP id AAA07185
+	for <wester@math.unm.edu>; Wed, 16 Jun 1999 00:44:17 -0600 (MDT)
+Received: from localhost by siduri.fjfi.cvut.cz via ESMTP (951211.SGI.8.6.12.PATCH1502/951211.SGI)
+	for <wester@math.unm.edu> id IAA03559; Wed, 16 Jun 1999 08:44:43 +0200
+Date: Wed, 16 Jun 1999 08:44:42 +0200
+From: Richard Liska <liska@siduri.fjfi.cvut.cz>
+To: Michael Wester <wester@math.math.unm.edu>
+Subject: Re: Your session
+In-Reply-To: <199906160355.VAA02141@hekla.math.unm.edu>
+Message-ID: <Pine.SGI.4.05.9906160839140.5696-100000@siduri.fjfi.cvut.cz>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Content-Length: 864
+Status: RO
+
+Surely, I meant that all sessions which are second for that day are
+starting after lunch, i.e. SNI&PSE and Toric on Fri, Demos, Robot, Spanish
+on Sat, Efficient should start after the afternoon coffee break on Sat.
+
+The problem with SNI&PSE is that one speaker is comming on Fri evening,
+then also Robot and Spanish cannot be on Fri. I prefer not to move SNI&PSE
+to Sun.
+
+--Richard
+
+On Tue, 15 Jun 1999, Michael Wester wrote:
+
+> The previous session now has 5 speakers and your has 10.  Do you really want to
+> split it?  And if so, I think it makes the most sense to start it after lunch.
+> In fact, many of these combined sessions would make more sense starting at an
+> even break (like after lunch) than immediately following one on top of another.
+> What do you think?  I'll be gone tomorrow, but back at work on the program on
+> Thursday.
+> 
+>    Michael
+> 
+
+
+From liska@siduri.fjfi.cvut.cz Fri Jun 18 06:10 MDT 1999
+Received: from siduri.fjfi.cvut.cz (siduri.fjfi.cvut.cz [147.32.6.6])
+	by math.math.unm.edu (8.9.1a/8.9.1) with SMTP id GAA06954
+	for <wester@math.unm.edu>; Fri, 18 Jun 1999 06:10:05 -0600 (MDT)
+Received: from localhost by siduri.fjfi.cvut.cz via ESMTP (951211.SGI.8.6.12.PATCH1502/951211.SGI)
+	 id NAA10117; Fri, 18 Jun 1999 13:58:05 +0200
+Date: Fri, 18 Jun 1999 13:58:05 +0200
+From: Richard Liska <liska@siduri.fjfi.cvut.cz>
+To: Victor Edneral <edneral@theory.npi.msu.su>
+cc: Michael Wester <wester@math.math.unm.edu>
+Subject: Re: Fresh Information
+In-Reply-To: <199906180902.NAA08657@theory.npi.msu.su>
+Message-ID: <Pine.SGI.4.05.9906181349270.5696-100000@siduri.fjfi.cvut.cz>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Content-Length: 2624
+Status: RO
+
+I have updated the Sessions file on the web.
+
+Seems that not too many problematic talks remain:
+
+						reg.no-reg.
+Combinatorial and Computational Methods in 	4    1    Casson-Nogus 
+9 Computer Algebra in the Spanish Educational 	5    1    Perez
+11 Demos of Computer Algebra Systems		5    1    Turino
+12 Interaction on Physics, Number Theory & Com	6    4    ADAMCHICK
+16 Toric Ideals and Integer Programming		4    1    Hosten
+
+15 Teaching of Efficient Mathematics
+A. Akritas & Gennadi Malaschonok 
+7 + 3 = 10
+2.        (Juan A. Aledo, Juan C. Cortes & Fernando L. Pelayo) 
+3.        (Juan A. Aledo, Juan C. Cortes & Fernando L. Pelayo) 
+8.        (Igor Gachkov & Kenneth Hulth)       
+
+I would suggest to move these talks to the end of the session if we would
+not hear of them soon.
+
+Current plan for schedule is:
+--------------------------------------------------------
+|Fri    A     |    B     |   C     |   D     |   E     |
+|------------------------------------------------------|
+|4|  EDU      | Approx   | Combin  | Dynam   | Signal  |
+| |  14       | 12       | 5-8?    | 14      | 6       |
+|4|           |          |         |         |         |
+| |           |          |---------|         |---------|
+|3|           |          | SNI&PSE |         | Toric   |
+| |           |          | 5       |         | 5       |
+|3|           |          |         |         |         | 
+|------------------------------------------------------|
+|Sat          |          |         |         |         |
+|4|  EDU      | Geom     | SNI&PSE | Dynam   | Pure    |
+| |  11       | 6        | 5       | 4       | 12      |
+|4|           |          |         |         |         |
+| |           |----------|---------|---------|         |
+|3|           | Demos    | Robot   | Spanish |         |
+| |-----------| 6        | 4       | 6       |         |
+|3|  Efficient|          |         |         |         |
+| |  2        |          |         |         |         |
+|------------------------------------------------------|
+|Sun          |          |         |         |         |
+|4|  Efficient| Internet | QE      | Physics |         |
+| |  8        | 8        | 8       | 10      |         |
+|4|           |          |         |         |         |
+| |-----------|----------|---------|         |         |
+|3|           |          |         |         |         |
+--------------------------------------------------------
+
+I do not know if we should try to modify it (there are quite big holes).
+One think with which I am not happy is that Internet and QE is going in
+the same time, but I do not know what to do with this.
+
+--Richard
+
+
+From liska@siduri.fjfi.cvut.cz Mon Jun 21 05:54 MDT 1999
+Received: from siduri.fjfi.cvut.cz (siduri.fjfi.cvut.cz [147.32.6.6])
+	by math.math.unm.edu (8.9.1a/8.9.1) with SMTP id FAA23270
+	for <wester@math.unm.edu>; Mon, 21 Jun 1999 05:54:24 -0600 (MDT)
+Received: from localhost by siduri.fjfi.cvut.cz via ESMTP (951211.SGI.8.6.12.PATCH1502/951211.SGI)
+	 id NAA19633; Mon, 21 Jun 1999 13:54:16 +0200
+Date: Mon, 21 Jun 1999 13:54:16 +0200
+From: Richard Liska <liska@siduri.fjfi.cvut.cz>
+To: Michael Wester <wester@math.math.unm.edu>
+cc: Victor Edneral <edneral@theory.npi.msu.su>,
+        Eugenio Roanes-Lozano <eroanes@eucmos.sim.ucm.es>,
+        Laureano Gonzalez-Vega <gvega@matesco.unican.es>,
+        Jaime Gutierrez <jaime@matesco.unican.es>,
+        Stanly Steinberg <stanly@math.math.unm.edu>
+Subject: Re: First pass program
+In-Reply-To: <199906190608.AAA06078@gauss.math.unm.edu>
+Message-ID: <Pine.SGI.4.05.9906211348560.5696-100000@siduri.fjfi.cvut.cz>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Content-Length: 2074
+Status: RO
+
+I have tried to fine tune the schedule and my proposal is below. I believe
+that there are no conflicts in it. It eliminates many holes on Saturday,
+leaves only 4 sessions for Friday morning and finishes by lunch on Sunday.
+There are not many changes, just shuffling which make the schedule more
+compact.
+
+--Richard
+
+3-rd version
+--------------------------------------------------------
+|Fri    A     |    B     |   C     |   D     |   E     |
+|------------------------------------------------------|
+|4|  EDU      | Approx   | Combin  | Dynam   |         |
+| |  14       | 12       | 5       | 14      |         |
+|4|           |          |         |         |         |
+| |           |          |---------|         |---------|lunch
+|3|           |          | Toric   |         | Signal  |
+| |           |          | 5       |         | 6       |
+|3|           |          |         |         |         | 
+|------------------------------------------------------|
+|Sat          |          |         |         |         |
+|4|  EDU      | Geom     | SNI&PSE | Dynam   | Pure    |
+| |  11       | 6        | 10      | 4       | 12      |
+| |           |          |         |---------|         |coffe b.
+|4|           |          |         | Robot   |         |
+| |           |          |         | 4       |         |
+| |           |----------|         |---------|         |lunch
+|3|           | Demos    |         | Spanish |         |
+| |-----------| 6        |---------| 6       |         |coffee b.
+|3|  Efficient|          | Physics |         |         |
+| |  2        |          | 2       |         |         |
+|------------------------------------------------------|
+|Sun          |          |         |         |         |
+|4|  Efficient| Internet | QE      | Physics |         |
+| |  8        | 8        | 8       | 8       |         |
+|4|           |          |         |         |         |
+| |-----------|----------|---------|---------|         |lunch
+|3|           |          |         |         |         |
+--------------------------------------------------------
+
+
+
+From liska@siduri.fjfi.cvut.cz Tue Jun 22 08:53 MDT 1999
+Received: from siduri.fjfi.cvut.cz (siduri.fjfi.cvut.cz [147.32.6.6])
+	by math.math.unm.edu (8.9.1a/8.9.1) with SMTP id IAA02430
+	for <wester@math.unm.edu>; Tue, 22 Jun 1999 08:53:26 -0600 (MDT)
+Received: from localhost by siduri.fjfi.cvut.cz via ESMTP (951211.SGI.8.6.12.PATCH1502/951211.SGI)
+	 id QAA23194; Tue, 22 Jun 1999 16:53:43 +0200
+Date: Tue, 22 Jun 1999 16:53:43 +0200
+From: Richard Liska <liska@siduri.fjfi.cvut.cz>
+To: Jaime Gutierrez <jaime@matesco.unican.es>
+cc: Michael Wester <wester@math.math.unm.edu>,
+        Victor Edneral <edneral@theory.npi.msu.su>,
+        Eugenio Roanes-Lozano <eroanes@eucmos.sim.ucm.es>,
+        Laureano Gonzalez-Vega <gvega@hall.matesco.unican.es>,
+        Stanly Steinberg <stanly@math.math.unm.edu>
+Subject: Re: First pass program
+In-Reply-To: <v01530503b39561f1f68e@[193.144.183.4]>
+Message-ID: <Pine.SGI.4.05.9906221650390.22028-100000@siduri.fjfi.cvut.cz>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Content-Length: 2037
+Status: RO
+
+> Yes, I also think that it much better to move the Spanish session to Saturday.
+> In fact, I do not know why we changed the  last version.
+Because Dynamical II on Saturday morning has now 5 talks, so it Saturday
+in room D does not fit. Now I have the version below.
+
+--Richard
+
+4-th version
+--------------------------------------------------------
+|Fri    A     |    B     |   C     |   D     |   E     |
+|------------------------------------------------------|
+|4|  EDU      | Approx   | Combin  | Dynam   |         |
+| |  14       | 12       | 4       | 14      |         |
+|4|           |          |         |         |         |
+| |           |          |---------|         |---------|lunch
+|3|           |          | Toric   |         | Signal  |
+| |           |          | 5       |         | 6       |
+|3|           |          |         |         |         | 
+|------------------------------------------------------|
+|Sat          |          |         |         |         |
+|4|  EDU      | Geom     | Robot   | Dynam   | Pure    |
+| |  11       | 6/1      | 4       | 5       | 12      |
+| |           |          |---------|---------|         |coffe b.
+|4|           |          | SNI&PSE | Physics |         |
+| |           |          | 10      | 2       |         |
+| |           |----------|         |---------|         |lunch
+|3|           | Demos    |         | Spanish |         |
+| |-----------| 6/1      |         | 6/1     |         |coffee b.
+|3|  Efficient|          |         |         |         |
+| |  2        |          |         |         |         |
+|------------------------------------------------------|
+|Sun          |          |         |         |         |
+|4|  Efficient| Internet | QE      | Physics |         |
+| |  7/3      | 8        | 8       | 7       |         |
+|4|           |          |         |         |         |
+| |-----------|----------|---------|---------|         |lunch
+|3|           |          |         |         |         |
+--------------------------------------------------------
+
+
+

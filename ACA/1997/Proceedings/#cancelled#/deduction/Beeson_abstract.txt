@@ -1,0 +1,23 @@
+   * Michael Beeson, Mathematics and Computer Science, San Jose State
+     University
+     Mathpert: A symbolic computation program designed for learning algebra,
+     trigonometry, and calculus.
+
+     Mathpert is a symbolic calculation and graphing program designed for
+     students and teachers. It allows users to produce, and can also produce
+     by itself, step-by-step solutions of problems in algebra, trigonometry,
+     and one-variable calculus. It adheres to the following principles:
+     correctness, transparency, cognitive fidelity. Correctness means strict
+     logical correctness: unlike other symbolic computation programs, there
+     is a powerful logical apparatus which guards against erroneous
+     applications of computational operations. Correctness also applies to
+     graphs: the singularities, jumps, and extrema are symbolically
+     calculated so that graphs are scrupulously correct.
+     Transparency, or the "glass-box" principle, means that you can see how
+     the program achieved its results. It produces step-by-step solutions
+     with comprehensible steps, not just a one-line answer. Cognitive
+     fidelity means that it produces solutions as an experienced human
+     would, using student-level algorithms rather than powerful but obscure
+     algorithms. The power of the closely interwoven symbolic and logical
+     machinery is made available to help students learn through an
+     innovative user interface.

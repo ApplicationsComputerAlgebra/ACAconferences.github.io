@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <link href="styles/master.css" type="text/css" rel="stylesheet" media="all"/>
+   <title>ACA 2008 Applications of Computer Algebra</title>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tbody>
+      <tr>
+        <td class="headerLeft"><a href="/"><img src="./_images/header/schloss21s.jpg" /></a></td>
+        <td width="20px"></td>
+        <td>
+        <table width="100%">
+        <tbody>
+        <tr><td class="headerTitle">Applications of Computer Algebra</td></tr>
+        <tr><td class="headerSub"><a href="/">RISC, Castle of Hagenberg, Austria.</a></td></tr>
+        <tr><td class="headerSub">July 27-30, 2008.</td></tr>
+      	</tbody>
+      	</table>
+        </td>
+      </tr>
+   </tbody>
+ </table>
+
+
+
+<table cellspacing="0" cellpadding="0" class="infobar">
+<tbody><tr><td height=20px></td></tr></tbody></table>
+
+
+<div class="class1">
+	
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspace">
+<tbody>
+<tr>
+<td>
+	
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+
+<td style="width:12px;"></td>          
+<td class="unselected">
+	<div><a href="?content=news">News</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=general">General</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=sessions">Sessions</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=submission">Submission</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=registration">Registration</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=program">Program</a></div>
+</td>
+<td class="unselected">
+	<div><a href="?content=pictures">Pictures</a></div>
+</td>
+<td class="selected">
+	<div>Location</div>
+</td>	
+
+
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="emptyspaceSub">
+<tbody>
+<tr>
+<td>
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+<td style='width:550px;'></td>
+<td class="unselectedSub">
+	<a href="?content=location&amp;sub=venue">Venue</a>
+</td>
+<td class="unselectedSub">
+	<a href="?content=location&amp;sub=directions">Directions</a>
+</td>
+<td class="selectedSub">
+	Accommodation</td>	
+
+
+</tr>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table><div id="content">
+<div id="column">
+
+<h4>Hagenberg</h4>
+<ul>
+<li>Hotel Sommerhaus in Hagenberg, 5 minutes walking distance from the conference venue, good quality rooms with Internet access. Booking from the <a href="?content=registration">registration</a> page. Costs approx. 30 Euro per person per night including breakfast. Note that there is also a Hotel Sommerhaus in Linz, see below.</li>
+</ul>
+
+<h4>Linz</h4>
+
+<ul>
+<li><a href="http://www.google.com/search?q=hotels+in+linz&start=0&ie=utf-8&oe=utf-8&client=firefox-a&rls=org.mozilla:en-US:official">Hotels in Linz</a>, 20 km from the conference venue.</li>
+<li>Hotel <a href="http://www.sommerhaus-hotel.at/en/">Sommerhaus</a> in Linz.</li>
+</ul>
+</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+            Computer-Aided Stochastic Calculus with
+                   Applications in Finance
+
+                    Dr. Colin P. Williams
+
+                      Visiting Scholar
+                Knowledge Systems Laboratory
+                    Stanford University
+
+                   Variable Systems, Inc.
+
+    Modern financial engineering allows the composition of a portfolio of
+investments to be tailored so that it meets the desired risk-return
+characteristics of an investor. Usually such portfolios include so-called
+"derivative securities". These are financial securities whose value is
+dependent upon some other, more fundamental, variable. Common examples
+include stock options, stock index options and futures contracts like those
+quoted in the Wall Street Journal every day.
+
+    Unfortunately derivative securities are notoriously difficult to intuit.
+The recent bankruptcy of Orange County and the demise of Barings PLC indicate
+the importance of assessing the true value of a derivative security and the
+risks to which an investor in such a security is exposed.
+
+    Fortunately, contrary to the media perception, derivatives can be placed
+on a solid theoretical foundation. However, until recently it has only been
+feasible to work with fairly small analytic models. With the advent of more
+sophisticated computer algebra tools, more complex models can be handled. In
+this talk I will show how computer algebra tools can assist in deriving
+valuation and risk formulae for derivative securities. I will begin by
+showing how a stochastic model for the behavior of stock prices and Ito's
+lemma can lead to a partial differential equation whose solution is the value
+of a stock option. I will then show how the techniques can be generalized to
+derive a partial differential equation for valuing any kind of derivative
+security.
+
+Keywords: derivative securities, options, Black-Scholes, risk-neutral
+valuation, risk, stochastic, Ito
+
+References
+
+[1] J. Cox & M. Rubinstein "Options Markets", Prentice-Hall, Inc. (1985)
+
+[2] C. W. Gardiner, "Handbook of Stochastic Methods", 2nd Edition,
+Springer-Verlag, (1985)
+
+[3] J. Hull "Introduction to Futures & Options Markets", Prentice Hall, Inc.
+(1991)

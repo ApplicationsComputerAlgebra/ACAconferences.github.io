@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>On the Computation of the Greatest Common Divisor of Multivariate Polynomials with Straight-Line Programs</TITLE>
+<META NAME="description" CONTENT="On the Computation of the Greatest Common Divisor of Multivariate Polynomials with Straight-Line Programs">
+<META NAME="keywords" CONTENT="martinez">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="martinez.css">
+</HEAD>
+<BODY >
+<H1 ALIGN="CENTER">On the Computation of the Greatest Common Divisor of Multivariate
+ Polynomials with Straight-Line Programs</H1>
+<P ALIGN="CENTER"><STRONG>R. Mart&#237;nez <BR>
+Polytechnical University, Madrid <BR>
+<FONT SIZE="-1">raquelm@etsii.upm.es</FONT>
+  - 
+J. Llovet,  B. Casta&#241;o
+<BR>
+University of Alcal&#225;, Madrid <BR>
+<FONT SIZE="-1">illovet@alcala.es,mtcastano@alcala.es</FONT>
+</STRONG></P>
+<P ALIGN="CENTER"></P>
+<P ALIGN="LEFT"></P>
+
+<P>
+In this paper we show the application of  a  new type  of abstract 
+data structure, the straight-line program (SLP), to the computation 
+of  the greatest  common divisor of multivariate polynomials. This data 
+structure allows an alternative treatment of algebraic objects 
+and algorithms.  The set of developed procedures appears as
+ a new way  to compute the system of orthogonal polynomials
+ associated with a linear recurring sequence (lrs).  When the  linear 
+recurring sequence is computed  from two multivariate
+ polynomials, the last polynomial of the system is closely 
+related to the greatest common divisor of the given
+ polynomials.
+<BR>
+<BR>
+
+<P>
+The objective of the SLP structure is to minimize the number of arithmetic 
+operations in parallel as well as the number of total operations. 
+&gt;From a theoretical point of view a Straight-Line Program <I>S</I>, 
+over <I>D</I> (integral domain), is a
+ computation sequence 
+<!-- MATH: $C =(v_{\lambda} \leftarrow
+v_{\lambda}^{\prime}\circ_{\lambda}
+ v_{\lambda}^{\prime\prime})_{\lambda=1,\ldots, L}$ -->
+<IMG
+ WIDTH="233" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$C =(v_{\lambda} \leftarrow
+v_{\lambda}^{\prime}\circ_{\lambda}
+v_{\lambda}^{\prime\prime})_{\lambda=1,\ldots, L}$">
+with
+
+<!-- MATH: $\circ_{\lambda} \in \{ +,-, \times, \div \}$ -->
+<IMG
+ WIDTH="157" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\circ_{\lambda} \in \{ +,-, \times, \div \}$">
+and 
+<!-- MATH: $v_{\lambda}
+\in D, \lambda=1,\ldots, L$ -->
+<IMG
+ WIDTH="179" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$v_{\lambda}
+\in D, \lambda=1,\ldots, L$">
+(<I>L</I> is the length of S). 
+This sequence <I>C</I> computes some results from a set of 
+input values 
+<!-- MATH: $X=\{ x_1, \ldots, x_n \} \subset D$ -->
+<IMG
+ WIDTH="196" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$X=\{ x_1, \ldots, x_n \} \subset D$">.
+The representation and formal treatment of straight-line 
+programs could be achieved by means of an abstract  
+data structure that is able to support the  inputs 
+ and the operations to obtain
+the elements of the computation sequence <I>C</I>. 
+An  arithmetic circuit, represented by a directed acyclic 
+graph, could be a valid structure to represent a SLP.
+<BR>
+<BR>
+In another aspect, we can define the bilinear form <IMG
+ WIDTH="17" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\phi$">
+over  Q(D)[z] 
+subordinate  by the linear recurring sequence <B>d</B>
+<!-- MATH: $=(d_1)_{i=1..2n-1}$ -->
+=(<I>d</I><SUB>1</SUB>)<SUB><I>i</I>=1..2<I>n</I>-1</SUB>,
+ with <IMG
+ WIDTH="63" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$d_i \in D$">.
+Through  the p-primary vectors X={
+<!-- MATH: ${\bf x}^{p_{1}},
+\ldots, {\bf x}^{p_{r}}$ -->
+<IMG
+ WIDTH="103" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="${\bf x}^{p_{1}},
+\ldots, {\bf x}^{p_{r}}$">} of the sequence <B>d</B> it is possible to construct
+a polynomial system Q={
+<!-- MATH: $q_{i}(z)\}_{i=1, \ldots,r}$ -->
+<IMG
+ WIDTH="105" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$q_{i}(z)\}_{i=1, \ldots,r}$">,
+that satisfies some
+ orthogonal properties respect to symmetric bilinear form over 
+ <I>Q</I>(<I>D</I>)[<I>z</I>] <IMG
+ WIDTH="17" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\phi$">,
+such that  
+<!-- MATH: $\phi(z^{i},z^{j})=<z^{i},z^{j}>=d_{i+j+1}
+\, \, \, \forall i,j \geq 0$ -->
+<IMG
+ WIDTH="332" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$ \phi(z^{i},z^{j})=<z^{i},z^{j}>=d_{i+j+1}
+\, \, \, \forall i,j \geq 0 $">.
+The polynomials 
+<!-- MATH: $q_{i}(z) \in Q(D)[z]$ -->
+<IMG
+ WIDTH="138" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$q_{i}(z) \in Q(D)[z]$">,
+for 
+ 
+<!-- MATH: $i=0, \ldots,r$ -->
+<IMG
+ WIDTH="102" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$i=0, \ldots,r$">,
+are computed as: 
+<!-- MATH: $q_{0}=1,   \, \, \,
+q_{i}(z)=z^{p_{i}}-x_{p_{i}p_{i}}z^{p_{i}-1}- \cdots -x_{p_{i}1}$ -->
+<IMG
+ WIDTH="371" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$q_{0}=1, \, \, \,
+q_{i}(z)=z^{p_{i}}-x_{p_{i}p_{i}}z^{p_{i}-1}- \cdots -x_{p_{i}1}$">.
+The greatest common divisor  is determined using division between 
+the last polynomial <I>q</I><SUB><I>r</I></SUB>(<I>z</I>) and one of the gree polynomial given(maximum degree).
+<BR>
+<BR>
+
+<P>
+The first stage  concerns representing the 2<I>n</I>-1 first entries of a lrs 
+by  a SLP implemented by an arithmetic circuit  with 2<I>n</I>-1 output nodes.
+In the second stage, we build a directed acyclic graph that codifies  the algorithm for 
+computing the primary vectors  associated  with the linear
+ recurring sequence <B>d</B>. The  input nodes of this circuit are 
+the 2<I>n</I>-1 output nodes of the   arithmetic circuit  built on the first stage.
+The complete data structure represents the set of primary vectors of the given linear 
+recurring sequence, and  considers every possible case   that could appear.
+If a specific linear recurring sequence is explicitly defined  then only  the 
+corresponding parts of the arithmetic circuit are evaluated.
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<A HREF=../../../index.html> IMACS ACA'98</A>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,1127 @@
+%\documentstyle[twocolumn,proc]{article}
+\documentstyle{article}
+%\pagestyle{empty}
+\pagestyle{plain}
+%\textheight=235mm
+%\textwidth=177.0mm
+%\columnsep=8.5mm
+%\oddsidemargin -0.71cm
+%\topmargin=-5mm
+\title{Symbolic-Numeric Stability Investigation of Difference Schemes for the
+Euler and Navier-Stokes Equations}
+\author{
+V.G. Ganzha(*) and E.V. Vorozhtsov\\
+\\
+            Institute of Theoretical and Applied Mechanics,\\
+           Russian Academy of Sciences, Novosibirsk 630090, Russia\\
+(*) At the moment the University of Kassel,\\
+Kassel D 34127, Germany}
+\date{}
+\begin{document}
+\maketitle
+%\thispagestyle{empty}
+%\renewcommand{\footnoterule}{\rule{3.5cm}{0.01cm}\vspace{10cm}}
+%\footnotetext{text}
+\pagenumbering{arabic}
+\begin{abstract}
+\hspace{6mm}
+            We present a number of the symbolic-numeric algorithms for the
+       stability investigation of difference schemes approximating the 2D
+       and 3D Euler and Navier-Stokes equations of the compressible fluids.
+       All the algorithms implement in different ways the von Neumann
+       stability analysis procedure. It is shown that the consideration of
+       the curvilinear grid within the framework of the Fourier stability
+       analysis method increases by a factor of 23/9 the number of
+       nondimensional variables in the domain of the variation of which the
+       stability region is then determined in comparison with the case of an
+       uniform rectangular spatial grid for the difference discretization of
+       the 3D thin-layer Navier-Stokes equations. The questions
+       of the compression of intermediate algebraic expressions are
+       discussed. A four-step stability analysis procedure for difference
+       schemes on curvilinear grids is proposed. The influence of turbulence
+       modeling on the sizes of the necessary stability region has been
+       investigated. Computational examples are presented.
+\end{abstract}
+\section{Introduction}
+\hspace{6mm}
+    The numerical modeling of various gas flows on the basis of the finite
+difference and finite volume discretizations of the Euler and compressible
+Navier-Stokes equations has now become a powerful tool of the solution of many
+real-life problems. The numerical stability of many current finite difference
+schemes has still not been investigated. An important reason is the complicated
+structure of the mathematical expressions that are required for an adequate
+formulation of such a stability investigation of difference schemes based on the
+Fourier method. In this connection, we have previously developed a number of the
+symbolic-numerical methods for the stability investigation of difference
+initial-value problems. These are:
+
+ 1$^o$. The method implementing the modified Routh algorithm for studying the
+location of the characteristic equation zeroes with respect to a unit disc in
+a complex plane [1].
+
+ 2$^o$. The method using the Routh-Hurwitz determinants [2].
+
+ 3$^o$. The method using the algebra of the resultants together with the
+Fourier method [3].
+
+ 4$^o$. The probabilistic method for the stability analysis of both linear and
+nonlinear difference schemes [4].
+
+ 5$^o$. The method based on a direct high-precision numerical solution of the
+characteristic equation [5].
+
+ 6$^o$. The method using the algebra of the resultants and the catastrophe
+theory to study the manifold of the characteristic equation zeroes [6].
+
+   Until now, only the methods $1^o,3^o$ and $6^o$ have been adjusted and used
+for the stability investigation of difference schemes approximating the 2D and
+3D Euler and Navier-Stokes equations. One of the purposes of the present
+paper is to discuss the problems, which arise at the symbolic and numerical
+stages of these methods, and to present the ways to circumwent these problems.
+Our second objective is to discuss those additional difficulties, which arise
+in the case of the stability investigation of difference schemes on arbitrary
+curvilinear grids of quadrilateral cells for the Euler and Navier-Stokes
+equations.
+
+\section{Scheme Checker}
+\hspace{6mm}
+
+   The finite-difference or finite-volume schemes for real-life problems are
+often characterized by very big lengths of the corresponding difference
+equations. In such cases there arises the problem of the check-up of the
+correctness of the difference schemes, which are input into the program for
+the symbolic/numeric stability investigation or for the local approximation
+study of the difference scheme.
+
+   We have developed a four-stage symbolic analysis module "SCHEME CHEC\-K\-ER"
+for this purpose. It is applicable to the finite-difference or finite-volume
+schemes approximating the Euler or Navier-Stokes equations of a compressible
+fluid. The scheme checker should be used before proceeding to the stability
+or approximation study and it prevents from making the occasional errors
+in the input difference equations.
+
+    The Euler equations for the
+two-dimensional nonstationary flow of an inviscid non-heat-conducting
+compressible fluid may be written as
+\begin{eqnarray}
+\partial{\bf u}/\partial t + \partial {\bf F}({\bf u})/\partial x +
+\partial {\bf G}({\bf u})/\partial y=0,
+\end{eqnarray}
+where
+\begin{eqnarray}
+{\bf u}=\left( \begin{array}{c}
+\rho \\
+\rho u\\
+\rho v\\
+\rho E
+\end{array} \right ),
+{\bf F}({\bf u})=\left( \begin{array}{c}
+\rho u\\
+p+\rho u^{2}\\
+\rho uv\\
+pu+\rho uE
+\end{array} \right ),
+{\bf G}({\bf u})=\left( \begin{array}{c}
+\rho v\\
+\rho uv\\
+p+\rho v^{2}\\
+pv+\rho vE
+\end{array} \right ).
+\end{eqnarray}
+Here $x$ and $y$ are the Cartesian spatial coordinates, $\rho $ is the fluid
+density, $u,v$ are the fluid velocity
+components along the  $x$- and $y$-axis, respectively;
+$E=\varepsilon+(u^{2}+v^{2})/2,~ \varepsilon$ is the specific
+internal energy, and $p$ is the pressure. The system (1), (2)
+is completed in the following by the ideal gas equation of state
+\begin{eqnarray}
+p=(\gamma-1)\rho\varepsilon,
+\end{eqnarray}
+where $\gamma$ is the ratio of the gas specific heats,
+usually $\gamma=const > 1$.
+
+   The proposed four stages of our scheme checker can be used optionally; the
+most complete check-up is performed when all the four stages are executed.
+
+{\bf Stage 1}. It is well known that the Euler equations (1)-(2) admit
+the solution
+${\bf u}(x, y, t)=const$. From the hydromechanical viewpoint such
+a solution describes an uniform (homogeneous) flow. Therefore, it is natural
+to require that a difference scheme approximating the system (1), (2) also
+possesses this property. The check-up of this property can easily be done with
+the aid of a symbolic computation. Let us indeed assume that
+${\bf u}_{ml}^{n}={\bf u}_{0}$ for any node $m,l$ of the scheme stencil.
+Then we substitute the constant components of the vector ${\bf u}_0$
+instead of the grid values ${\bf u}_{m,l}^n$ into the difference scheme to be
+analyzed. If we obtain that ${\bf u}_{j,k}^{n+1} = {\bf u}_0$, then the scheme
+under consideration possesses the needed property. For example, it is  easy to
+show that the MacCormack scheme [7] approximating the system (1)-(3)
+satisfies the conditions for the exact reproduction of a
+homogeneous flow when it is calculated  by this scheme.
+
+   The Navier-Stokes equations governing the flow of a compressible, viscous,
+heat conducting fluid may be written in the form
+\begin{eqnarray}
+\partial{\bf u}/\partial t + \partial {\bf F}({\bf u})/\partial x+
+\partial {\bf G}({\bf u})/\partial y=
+\partial {\bf F}_v({\bf u})/\partial x+
+\partial {\bf G}_v({\bf u})/\partial y,
+\end{eqnarray}
+where ${\bf F}_v({\bf u})$ and ${\bf G}_v({\bf u})$ are the vectors of the
+viscous fluxes, whose detailed expressions can be found in [8].
+It follows from (4) that the Navier-Stokes equations also allow
+the constant solution ${\bf u}(x,y,t)= {\bf u}_0$. Therefore, the
+corresponding difference equations can also be checked at Stage 1.
+
+     This stage can easily be implemented with the aid of the REDUCE computer
+algebra system [9]. Let us present the corresponding REDUCE program for the
+case of a check-up of the difference scheme
+\begin{eqnarray*}
+\frac{u_j^{n+1}-u_j^n}{\tau} + a\frac{u_{j+1}^n-u_{j-1}^n}{2h}=
+\nu\frac{u_{j+1}^n-2u_j^n+u_{j-1}^n}{h^2}
+\end{eqnarray*}
+approximating the advection-diffusion equation $\partial u/\partial t +
+a\partial u/\partial x=\nu\partial^2u/\partial x^2$, $a=const$, $\nu=const>0.$
+\begin{verbatim}
+operator u;
+% a difference scheme with an input error
+sc1:= (u(j,n+1) - u(j,n))/dt + a*(u(j+1,n) - u(j-1,n))/(2*h)
+      - nu*(u(j+1,n) - 2*u(j,n) - u(j-1,n))/(h**2);
+out res1;
+for all j, k let u(j,k) = uu0;
+ sc2:= sc1;
+if sc2 neq 0 then
+begin
+write "Difference equation does not";
+write "reproduce homogeneous flow";
+pause;
+end;
+   for all j,k clear u(j,k);
+sc1:= sc1;
+shut res1;
+end;
+\end{verbatim}
+In this case we obtain that
+\begin{verbatim}
+       2*NU*UU0
+SC2 := --------
+           2
+         H
+\end{verbatim}
+This means that {\tt SC2}$\neq 0$, therefore, the message
+\begin{verbatim}
+Difference equation does not
+reproduce homogeneous flow
+\end{verbatim}
+is printed out inside the file {\tt res1}. The REDUCE command {\tt pause}
+enables the user to interrupt or to continue the further symbolic processing
+of the difference equations.
+
+{\bf Stage 2}. In some cases it is possible to derive by hand the amplification matrix $G$
+as a function of the Jacobi matrices $A$ and $B$, where
+\begin{eqnarray}
+A = \partial {\bf F}({\bf u})/\partial {\bf u},\quad
+B = \partial {\bf G}({\bf u})/\partial {\bf u}.
+\end{eqnarray}
+Then we can compare the REDUCE - generated entries of $G$ with the exact
+expressions for the entries of $A$ and $B$. But the derivation of the analytic
+expression for the amplification matrix
+by hand for more complex difference schemes becomes very difficult and can
+naturally lead to errors. Thus this method has only a very limited
+scope of application.
+
+{\bf Stage 3}. If the amplification matrix $G$ is a function of the Jacobi
+matrices (5), then it is useful to perform the
+similarity transformation of the amplification matrix
+$G: G_0 = T_2 G T_2 ^{-1}$. The form of the nonsingular matrices $T_2$ and
+$T_2^{-1}$ can be found, for example, in [7].
+It is well known that the matrices $G$ and $G_0 $ have the same eigenvalues.
+But the matrix $G_0$ has a much simpler structure. Furthermore, it can be shown
+that the entries of $G_0 $ are nondimensional functions of the vector
+$\mbox{\boldmath $\kappa$\unboldmath}=(\kappa_1,\ldots,\kappa_M)$ and vector
+$\mbox{\boldmath $\xi$\unboldmath}=(\xi_1,\xi_2)$, where $M\geq 1$ and
+$\kappa_1,\ldots,\kappa_M$ are the nondimensional variables (for example, the
+Courant number) in the domain of the variation of which the stability region is
+to be determined; $\xi_j=k_jh_j,~j=1,2,$ $h_1$ and $h_2$ are the steps of an
+uniform grid along the $x$- and $y$-axes, respectively; $k_1$ and $k_2$ are
+the wavenumbers entering the Fourier harmonic
+\begin{equation}
+{\bf u}_{j,k}^n={\bf u}_0e^{i(jk_1h_1+kk_2h_2-\omega n\tau)},
+\end{equation}
+$\tau$ is the time step of a difference scheme, $\omega$ is the wave frequency.
+
+   If the matrix $G_0$ obtained as a result of the execution of Stage 3 does
+indeed not depend on $h_1,h_2$ and $\tau$, then the input difference equations
+are correct, and the matrix $G_0$ can be used for further symbolic-numeric
+computations instead of $G$.
+
+{\bf Stage 4}. Truncation error analysis of the input difference equations on
+a computer. For example, in the case of the MacCormack scheme [7] it is known
+that the approximation order is equal to two both in space and in time.
+Therefore, we can obtain symbolically the first differential approximation of
+scheme written as the input information for the REDUCE program and then compare the
+obtained approximation order with the order 2. Steinberg et al. [10] have
+used such an automated truncation error analysis for the symbolic testing of
+a FORTRAN code generated symbolically with the aid of the MACSYMA system.
+As it was noted in [10], the symbolic truncation error analysis, along with
+numerical tests, reduces the number of possible errors in the generated FORTRAN
+code, so that the probability of any remaining errors is very small.
+
+   It should be noted that the task of symbolic computation of a differential
+approximation, especially in the cases of difference schemes with intermediate
+steps, like the MacCormack scheme, may lead to laborious  computational work
+and to large memory and CPU time expenses. Therefore, it appears that Stage 4
+is generally realizable only on sufficiently powerful computers.
+
+\section{Symbolic Computation of the Amplification Matrix}
+\hspace{6mm}
+
+    Let us consider the difference scheme
+\begin{equation}
+C_1{\bf u}^{n+1} + C_2{\bf u}^n= 0,
+\end{equation}
+where $C_1$ and $C_2$ are the matrix difference operators. In the Fourier
+method of the stability analysis the solution of the form (6) is substituted
+into the difference scheme (7). As a result one obtains from (7) the system
+\begin{equation}
+H_1(\lambda,{\bf h},\tau,\mbox{\boldmath $\xi$\unboldmath}){\bf u}^{n+1}+
+H_2({\bf h},\tau,\mbox{\boldmath $\xi$\unboldmath}){\bf u}^{n} = 0
+\end{equation}
+with $\lambda=exp(-i\omega\tau)$, ${\bf h}=(H_1,\ldots,h_L)$, $L$ is the number
+of spatial variables, $1\leq L\leq 3$. If the matrix $H_1$ is nonsingular,
+equation (8) can be solved with respect to ${\bf u}^{n+1}$:
+\begin{equation}
+{\bf u}^{n+1}=G{\bf u}^n,
+\end{equation}
+where $G=-H_1^{-1}H_2$ is the amplification matrix of scheme (7). Now let
+$\lambda_1,\ldots,\lambda_m$ ($m=4$ in the case of the Euler equations (1),
+(2)) be the eigenvalues of $G$. The necessary von Neumann stability condition
+has the form [11]
+\begin{equation}
+|\lambda_j|\leq 1 + O(\tau),~j=1,\ldots,m.
+\end{equation}
+In the symbolic-numerical methods, which are described in the present paper,
+the amplification matrix $G$ is found with the aid of the symbolic
+computations. After that the characteristic polynomial
+\begin{equation}
+f(\lambda,\mbox{\boldmath $\kappa,\xi$\unboldmath})= det(G-\lambda I)
+=\sum_{j=0}^mc_j(\mbox{\boldmath $\kappa,\xi$\unboldmath})\lambda^{m-j}
+\end{equation}
+is computed also in a symbolic form. The estimates of the length of the expanded
+polynomial (11), which were presented in [12], show that the symbolic
+computation of (11) makes increased demands for the size of the computer
+memory. A method was presented in [12] for the solution of the problem of the
+memory exhaustion in the process of the computation of the coefficients of
+(11). In this method, the symbolic computation of the entries of the
+amplification matrix $G$ is at first optimized with the aid of the SCOPE
+package, which is now built in the REDUCE system. The coefficients of the
+characteristic equation (11) are then computed numerically with double
+precision by using the Newton identities. This method has enabled us to avoid
+the memory exhaustion even in the case of difference schemes for the 3D
+Navier-Stokes equations.
+
+   In the symbolic-numerical methods there exists a question: At what point to
+start the numerical computation? It appears that the method proposed in [12]
+gives a right answer to this question. In addition, the application of the
+SCOPE package reduces significantly the overall number of the arithmetic
+operations needed to compute the entries of the amplification matrix $G$. This
+is very important for the reduction of the roundoff errors accumulation at the
+numerical stages of the symbolic-numeric methods for the stability analysis.
+In this connection, the REDUCE system is preferable for the implementation of
+the above analysis methods. No other computer algebra system has an optimization
+program like SCOPE.
+
+\section{The modified Routh Algorithm}
+\hspace{6mm}
+
+   After we have obtained the characteristic equation coefficients we can
+investigate the stability of a difference scheme in different ways. One method,
+which was implemented in [1,2],reduces the von Neumann analysis to a
+generalized Routh-Hurwitz problem. Let
+\begin{equation}
+g(w,\mbox{\boldmath $\kappa,\xi$\unboldmath})= (w-1)^m f((w+1)/(w-1),
+\mbox{\boldmath $\kappa,\xi$\unboldmath})
+\end{equation}
+and let $w_j$, $j=1,\ldots,m$, be the zeros of the polynomial (12). Then the
+condition $Re w_j\leq 0$ corresponds to the condition $|\lambda_j|\leq 1,~
+j=1,\ldots,m.$ We have used in [1] for the numerical solution of the
+generalized Routh-Hurwitz problem for polynomial (12) the modified Routh
+algorithm. The modification reduces to a scaling of certain $2\times 2$
+matrices, which can be introduced within the framework of the Routh table. It
+turned out that this approach is much more accurate than the use of the
+double precision arithmetic. The latter is inapplicable in cases of complex
+difference schemes for 2D and especially for 3D fluid dynamics problems.
+
+    With the aid of the modified Routh algorithm the necessary stability
+condition (NSC) of scheme [7] was found in the form
+\begin{equation}
+|\kappa_2|+|\kappa_3|\kappa_4 +\kappa_1(1+\kappa_4^2)^{0.5}\leq 1,
+\end{equation}
+which coincides with the sufficient stability condition found in [13] with the
+aid of a number of test calculations by the MacCormack scheme. The
+nondimensional variables $\kappa_1,\ldots,\kappa_4$ entering formula (13)
+are defined as follows:
+\begin{eqnarray}
+\kappa_1=c\tau/h_1,~\kappa_2=u\tau/h_1,~\kappa_3=v\tau/h_1,~\kappa_4=h_1/h_2.
+\end{eqnarray}
+It should be noted that the variable $\kappa_5=\gamma$, where the constant
+$\gamma$ enters the gas equation of state (3), should also be included in a
+general case in the set of the variables $\kappa_1,\ldots,\kappa_M$. It is
+fortunate that $\gamma$ does not enter explicitly the NSC (13) of the
+MacCormack scheme. When we initiated the calculations for the purpose of
+determining the NSC for the scheme of [7] we have introduced $\gamma$ in the
+set $\kappa_1,\ldots,\kappa_5$. But the subsequent runs at different values of
+$\gamma$ showed that in the case of the MacCormack scheme the NSC does not
+depend on $\gamma$. This enabled us to reduce by one the dimension $M$ of the
+Euclidean space $E^M$ in which the points of the boundary of the necessary
+stability region were determined. We do not know whether the ratio of the
+specific heats $\gamma$ will always be absent in the necessary stability
+condition of any difference scheme approximating the Euler equations (1)-(3).
+
+   More complex difference schemes often contain some nondimensional weight
+parameters $\alpha_1,\ldots,\alpha_N$. These are, for example, the coefficients
+of the added artificial dissipation terms as in [14]. Then these parameters
+should generally be included in the set of the variables $\kappa_1,\ldots,
+\kappa_M$:
+\begin{eqnarray*}
+\kappa_1=c\tau/h_1,~\kappa_2=u\tau/h_1,~\kappa_3=v\tau/h_1,~\kappa_4=h_1/h_2,\\
+\kappa_{4+\nu}=\alpha_\nu,\quad \nu=1,\ldots,N.
+\end{eqnarray*}
+In such cases much more computational work is required to obtain the NSC in
+the space $E^{4+N}$.
+
+\section{The Use of the Resultants}
+\hspace{6mm}
+
+   It was proposed in [15] to use the algebra of the resultants together with
+the catastrophe theory methods for the stability investigation of difference
+initial-value problems. In the subsequent work [3] we have proposed a
+symbolic-numerical method based on the resultants only. Since $Re w_j\leq 0$,
+the polynomial (12) should have at least one purely imaginary zero on the
+boundary $\Gamma$ of the stability region. Let us set $w=i\sigma$, where
+$\sigma$ is a real number, and consider the polynomial
+$\varphi(\sigma,\mbox{\boldmath $\kappa,\xi$\unboldmath})= g(i\sigma,
+\mbox{\boldmath $\kappa,\xi$\unboldmath}).$ The necessary stability region
+boundary $\Gamma$ is determined by those values of
+$\mbox{\boldmath $\kappa$\unboldmath}$ and $\mbox{\boldmath $\xi$\unboldmath}$
+for which $\varphi(\sigma,\mbox{\boldmath $\kappa,\xi$\unboldmath})$
+has a real zero $\sigma$. These zeroes are determined by the system
+\begin{eqnarray}
+Re \varphi(\sigma,\mbox{\boldmath $\kappa,\xi$\unboldmath})=0,~
+Im \varphi(\sigma,\mbox{\boldmath $\kappa,\xi$\unboldmath})=0.
+\end{eqnarray}
+It is known that this system has the solution if and only if the resultant
+$R(\mbox{\boldmath $\kappa,\xi$\unboldmath})$ of the polynomials $Re \varphi$
+and $Im \varphi$ is equal to zero:
+\begin{equation}
+R(\mbox{\boldmath $\kappa,\xi$\unboldmath})=res(Re\varphi,Im\varphi)=0.
+\end{equation}
+Let
+\begin{eqnarray*}
+Re\, \varphi = b_{0}\sigma^{p_{1}}+b_{1}\sigma^{p_{1}-1}+\cdots+b_{p_{1}},\\
+Im\, \varphi = c_{0}\sigma^{p_{2}}+c_{1}\sigma^{p_{2}-1}+\cdots+c_{p_{2}},
+\end{eqnarray*}
+where $p_{1}\leq m,\, p_{2}\leq m$.
+The Sylvester matrix $S$ of these polynomials
+is a $(p_{1}+p_{2})\times (p_{1}+p_{2})$ - matrix of the form
+\begin{eqnarray}
+ S =
+\left( \begin{array}{cccccccc}
+b_{0} & b_{1} & \ldots & b_{p_{1}} & 0 & \ldots & \ldots & 0 \\
+0 & b_{0} & b_{1} & \ldots & b_{p_{1}} & \ldots & \ldots & 0 \\
+\ldots & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots &\ldots \\
+0 & 0 & \ldots & 0 & b_{0} & \ldots & \ldots & b_{p_{1}} \\
+c_{0} & c_{1} & \ldots & \ldots & c_{p_{2}} & 0 & \ldots & 0 \\
+0 & c_{0} & \ldots & \ldots & \ldots & c_{p_{2}} & \ldots & 0 \\
+\ldots & \ldots & \ldots & \ldots & \ldots &\ldots & \ldots & \ldots \\
+0 & \ldots & \ldots & \ldots & c_{0} & \ldots & \ldots & c_{p_{2}}
+\end{array} \right)
+\!\!\!\!\!\!\!\!\!\!\!\begin{array}{c}
+\left. \begin{array}[b]{c}
+ \\ \\  \end{array} \right \} \mbox{$p_2$ rows}
+\\~\\ \left.
+\begin{array}[t]{c}
+  \\  \\  \end{array} \right \} \mbox{$p_1$ rows} \end{array}
+\end{eqnarray}
+Then the resultant $R$ is the determinant of the matrix $S$: $R=det\,S$.
+The coefficients of polynomial (11) are usually periodic functions of the
+spectral variables $\xi_1,\ldots,\xi_L$ with periods $T_1,\ldots,T_L$ (for
+example, $T_1=2\pi$). Consider a parallelepiped
+\begin{equation}
+\Pi=\{0\leq\xi_l\leq T_l,~l=1,\ldots,L\}
+\end{equation}
+in an L-dimensional Euclidean space of the $\mbox{\boldmath
+$\xi$\unboldmath}$ points. Now we can construct as in [12] the following
+binary function to characterize the stability and instability points:
+\begin{eqnarray}
+b(\mbox{\boldmath$\kappa$\unboldmath})=\left \{ \begin{array}{ll}
+1,&sign\,R(\mbox{\boldmath$\kappa,\xi$\unboldmath})=const ~\forall
+\mbox{\boldmath$\xi$\unboldmath}\in \Pi\\
+0,&\mbox{otherwise}.
+\end{array} \right.
+\end{eqnarray}
+The $\mbox{\boldmath$\kappa$\unboldmath}$-points at which
+$b(\mbox{\boldmath$\kappa$\unboldmath})=1$ are the points where the difference
+scheme is stable in the sense of the satisfaction of the von Neumann
+conditions (10).
+
+   There are a number of the ways of using the resultant within the framework
+of some symbolic-numerical method. For example, it was proposed in [12] to use
+the SCOPE package only for the compression of the expressions for the entries
+of the matrix (17). The further computation of the determinant $R=det(S)$ was
+proposed in [12] to be carried out by some numerically stable library facility.
+
+   We have also tried another strategy, in which the analytic expression for
+the resultant $R$ was computed symbolically with the aid of the REDUCE system
+and SCOPE package. In the case of the three-dimensional MacCormack scheme [7]
+this has led to a very large generated FORTRAN subroutine containing more than
+2,500 lines. It is clear that a numerical computation by this subroutine would
+lead to an unacceptable level of the roundoff errors even in the case of using
+the double precision arithmetic.
+
+   We have also implemented the third algorithm, in which the analytic
+expressions for the entries of $S$ were compressed with the aid of SCOPE as in
+[12]. But the numerical value of the resultant $R$ was further computed with
+the aid of our own FORTRAN subroutine. The substantial part of this subroutine
+is the use of the program {\tt balanc} from [16] for the equilibration of the
+values of the entries of the Sylvester's matrix $S$. This enabled us to obtain
+the acceptable results on the determination of the boundary $\Gamma$ even
+without a recourse to the double precision arithmetic.
+\begin{center}
+{\bf Table 1}
+\end{center}
+\begin{center}
+\begin{tabular}{|rrrr|}
+\hline
+$\kappa_5$ & $\kappa_6$ & $\kappa_{1c}$ & $\kappa_{1e}$\\
+\hline
+1.0 & 1.0 & 0.5763 & 0.5774\\
+\hline
+2.0 & 1.0 & 0.4022 & 0.4082\\
+\hline
+2.0 & 2.0 & 0.3260 & 0.3333\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace*{5mm}
+
+   We applied this symbolic-numerical method to the stability analysis of the
+MacCormack scheme [7] for the three-dimensional Euler equations. The
+necessary stability condition for this scheme was found to have the form [12]
+\begin{equation}
+|\kappa_2|+|\kappa_3|\kappa_5+|\kappa_4|\kappa_6+\kappa_1(1+\kappa_5^2+
+\kappa_6^2)^{0.5}\leq 1,
+\end{equation}
+where
+\begin{eqnarray}
+\kappa_1=c\tau/h_1,~\kappa_2=u\tau/h_1,~\kappa_3=v\tau/h_1,~\kappa_4=w\tau/h_1,
+\nonumber\\
+\kappa_5=h_1/h_2,~\kappa_6=h_1/h_3, ~\kappa_7=\gamma,
+\end{eqnarray}
+and $u,v,w$ are the velocity components along the $x$- , $y$- and $z$-axes,
+respectively.
+
+   In Table 1 we present the values of the quantity $\kappa_1$ at $\kappa_2=
+\kappa_3=\kappa_4=0$ and at different values of the quantities $\kappa_5$
+and $\kappa_6$; $\kappa_{1e}=(1+\kappa_5^2+\kappa_6^2)^{-0.5}$ in Table 1 and
+the values $\kappa_{1c}$ have been obtained by the symbolic-numeric method. The
+data of Table 1 confirm the result (20). The overall length of the
+automatically generated FORTRAN subroutines for the computation of the entries
+of the amplification matrix $G$ amounted to 700 lines, with 60 symbols in each
+line.
+
+\section{Euler Equations and Curvilinear Grids}
+\hspace{6mm}
+
+    The major part of applied fluid dynamics problems are now solved
+numerically on curvilinear spatial grids. Therefore, it is important to have
+the methods for the stability analysis of difference schemes written down on
+such grids.
+
+   Let us write the nonstationary Euler equations in a fixed-in-time system
+of curvilinear coordinates $\xi,\eta$ and the time $t$:
+\begin{equation}
+\frac{\partial {\bf u}J}{\partial t} + \frac{\partial \tilde{F}}{\partial \xi}
++ \frac{\partial \tilde{G}}{\partial \eta}=0,
+\end{equation}
+where
+\begin{equation}
+\tilde{F}=J\xi_x{\bf F}({\bf u}) + J\xi_y{\bf G}({\bf u}),
+~\tilde{G}=J\eta_x{\bf F}({\bf u}) + J\eta_y{\bf G}({\bf u}),
+\end{equation}
+and the flux vectors ${\bf F}$ and ${\bf G}$ are defined by formulas (2). The
+Jacobian $J$ of the transformation
+\begin{equation}
+x=x(\xi,\eta),~y=y(\xi,\eta)
+\end{equation}
+is computed by the formula
+\begin{equation}
+J=x_\xi y_\eta-y_\xi x_\eta.
+\end{equation}
+
+   In order to understand the structure of the step operator of a difference
+scheme approximating the Euler system of equations (22) let us take a
+three-stage Runge-Kutta scheme of the form [14]
+\begin{eqnarray}
+\begin{array}{l}
+{\bf u}^{(0)}={\bf u}^n;\\
+{\bf u}^{(1)}={\bf u}^{(0)} - \alpha_1\tau P_h{\bf u}^{(0)};\\
+{\bf u}^{(2)}={\bf u}^{(0)} - \alpha_2\tau P_h{\bf u}^{(1)};\\
+{\bf u}^{(3)}={\bf u}^{(0)} - \tau P_h{\bf u}^{(2)};\\
+{\bf u}^{n+1}={\bf u}^{(3)},
+\end{array}
+\end{eqnarray}
+where $\alpha_1$ and $\alpha_2$ are the weight parameters, and $P_h{\bf u}$ is
+the difference operator approximating the spatial differential operator
+\begin{equation}
+P{\bf u}=\frac{1}{J}\Bigl(\frac{\partial \tilde{F}}{\partial \xi} +
+\frac{\partial \tilde{G}}{\partial \eta}\Bigr)
+\end{equation}
+with the aid of central differences. In accordance with [14], an efficient
+scheme of the form (26) is obtained at $\alpha_1=\alpha_2=0.6$. The scheme
+(26) with $\alpha_1=\alpha_2=0.6$ was used in [17] for the computation of
+turbulent gas flows with shock waves with the use of the finite volume method.
+
+   Let us carry out a Fourier stability analysis of the linearized scheme
+obtained from scheme (26). The linearized operator $\bar{P}{\bf u}$ has the
+form
+\begin{equation}
+\bar{P}_h{\bf u}_{j,k}=A_1({\bf u}_{j,k},\xi_j,\eta_k)\frac{{\bf u}_{j+1,k}-
+{\bf u}_{j-1,k}}{2} +
+A_2({\bf u}_{j,k},\xi_j,\eta_k)\frac{{\bf u}_{j,k+1}-
+{\bf u}_{j,k-1}}{2},
+\end{equation}
+where
+\begin{eqnarray}
+A_1=\frac{1}{J}\frac{\partial \tilde{F}}{\partial {\bf u}}=\xi_xA+\xi_yB,
+~A_2=\frac{1}{J}\frac{\partial \tilde{G}}{\partial {\bf u}}=\eta_xA+\eta_yB,
+\end{eqnarray}
+and the Jacobi matrices $A$ and $B$ are defined by formulas (5). At the
+frozen coefficients in (28), the scheme (26) becomes a linear difference
+scheme. Eliminating the intermediate values ${\bf u}^{(1)}$ and ${\bf u}^{(2)}$
+we obtain the following two-level difference scheme [18]:
+\begin{equation}
+{\bf u}^{n+1}=S(\xi,\eta,{\bf u}_0){\bf u}^n,
+\end{equation}
+where the step operator $S(\xi,\eta,{\bf u}_0)$ has the form
+\begin{equation}
+S(\xi,\eta,{\bf u}_0)= I - \tau P_h +\alpha_2(\tau P_h)^2 -\alpha_1\alpha_2
+(\tau P_h)^3.
+\end{equation}
+Let us denote by ${\cal F}(-\tau P)$ the Fourier symbol of the operator $P_h$,
+and let
+$$C={\cal F}(-\tau P).$$
+Then it is easy to compute with regard for (28) that
+\begin{equation}
+C=-i\tau(\sin \xi_1A_1 + \sin \xi_2 A_2).
+\end{equation}
+The amplification matrix $G$ of scheme (28) then has in accordance with (31)
+the form
+\begin{equation}
+G=I+C+\alpha_2C^2+\alpha_1\alpha_2C^3.
+\end{equation}
+Let $\mu_j,~j=1,2,3,4,$ be the eigenvalues of the matrix $C$. Then the
+eigenvalues $\lambda_j,~j=1,2,3,4,$ of the matrix $G$ (33) have the form
+\begin{eqnarray*}
+\lambda_j=1+\mu_j+\alpha_2\mu_j^2+\alpha_1\alpha_2\mu_j^3,~j=1,2,3,4.
+\end{eqnarray*}
+The matrix $C$ represents a linear combination of the Jacobi matrices $A$ and
+$B$:
+\begin{equation}
+C=d_1A+d_2B,
+\end{equation}
+where with regard for (29)
+\begin{eqnarray}
+d_1=-i\tau\xi_x\sin \xi_1 - i\tau\eta_x\sin \xi_2,
+~d_2=-i\tau\xi_y\sin \xi_1 - i\tau\eta_y\sin \xi_2.
+\end{eqnarray}
+The eigenvalues $\mu_j$ of the matrix (34) are known to have the form [19]
+\begin{eqnarray}
+\begin{array}{l}
+\mu_1=\mu_2=d_1u+d_2v,\\
+\mu_3=\mu_1+c(d_1^2+d_2^2)^{0.5},\\
+\mu_4=\mu_1-c(d_1^2+d_2^2)^{0.5},
+\end{array}
+\end{eqnarray}
+where $c$ is the sound velocity in the gas. It follows from (36) that all the
+eigenvalues $\mu_j,~j=1,\ldots,4,$ are purely imaginary. Let us set as in [18]
+$\mu_j=i\sigma_j,~j=1,\ldots,4,$ where $\sigma_j$ is a real number. Then the
+von Neumann stability condition $|\lambda_j|\leq 1$ implies
+$$\alpha_1^2\alpha_2^2\sigma^4 + \sigma^2(\alpha_2^2 - 2\alpha_1\alpha_2)+
+1-2\alpha_2\leq 0.$$
+With regard for (36) we can then obtain the necessary stability condition of
+scheme (26) in the form [18]
+\begin{eqnarray}
+|d_1u|+|d_2v|+c(|d_1|^2+|d_2|^2)^{0.5}\leq \nonumber\\
+\frac{1}{\alpha_1}\Bigl[\frac{2\alpha_1 -\alpha_2 +\sqrt{\alpha_2(\alpha_2
+-4\alpha_1+8\alpha_1^2)}}{2\alpha_2}\Bigr]^{0.5}.
+\end{eqnarray}
+
+    Basing on the formulas (36) and (37) we now want to determine the form and
+the number of the nondimensional variables $\kappa_1,\ldots,\kappa_M$ which
+enter the stability condition (37). It is easy to see from the expressions (35)
+and (36) that we can introduce the following nondimensional variables:
+\begin{eqnarray}
+\kappa_{1,1}=\tau\xi_x c,~\kappa_{1,2}=\tau\xi_y c,~\kappa_{1,3}=\tau\eta_x c,
+\kappa_{2,1}=\tau\xi_x u,
+\nonumber\\
+~\kappa_{2,2}=\tau\eta_x u,~\kappa_{3,1}=\tau\xi_y v,~
+\kappa_{3,2}=\tau\eta_y v,~\kappa_4=\eta_y/\xi_x.
+\end{eqnarray}
+We have 8 variables in the total. In terms of these variables, we can
+obtain from (37) the necessary stability condition of scheme (26) on a general
+curvilinear grid in the closed form:
+\begin{eqnarray*}
+|\kappa_{2,1}|+|\kappa_{2,2}|+|\kappa_{3,1}|+|\kappa_{3,2}|+
+c((|\kappa_{1,1}|+|\kappa_{1,3}|)^2+(|\kappa_{1,2}|+\\
+|\kappa_{1,1}\kappa_4|)^2)^{0.5}\leq \\
+\frac{1}{\alpha_1}\Bigl[\frac{2\alpha_1 -\alpha_2 +\sqrt{\alpha_2(\alpha_2
+-4\alpha_1+8\alpha_1^2)}}{2\alpha_2}\Bigr]^{0.5}.
+\end{eqnarray*}
+
+    For the subsequent analysis it is convenient to express the derivatives
+
+$\xi_x,~\xi_y,~\eta_x,~\eta_y$
+in terms of the derivatives $x_\xi,x_\eta,y_\xi,y_\eta$ [20]:
+\begin{eqnarray}
+\xi_x=\frac{1}{J}y_\eta,~\xi_y=-\frac{1}{J}x_\eta,
+~\eta_x=-\frac{1}{J}y_\xi,~\eta_y=\frac{1}{J}x_\xi.
+\end{eqnarray}
+The derivatives $x_\xi,x_\eta,y_\xi,y_\eta$ are usually approximated by central
+differences [20]:
+\begin{eqnarray}
+(x_\xi)_{j,k}=(x_{j+1,k}-x_{j-1,k})/2,~(y_\eta)_{j,k}=(y_{j,k+1}-y_{j,k-1})/2,
+\end{eqnarray}
+etc. A more explicit expression for $u\tau\xi_x,$ by using (25) and (39), reads
+\begin{equation}
+u\tau(\xi_x)_{j,k}=\frac{u\tau(y_\eta)_{j,k}}{(x_\xi y_\eta-x_\eta y_\xi)_{j,k}}.
+\end{equation}
+For the particular case of a uniform rectangular mesh in the $(x,y)$ plane, we
+have
+\begin{eqnarray}
+\begin{array}{lll}
+x_{j+1,k}=x_{j,k}+h_1, & x_{j,k+1}=x_{j,k}, & ~\\
+y_{j+1,k}=y_{j,k},     & y_{j,k+1}=y_{j,k}+h_2&\forall j,k.
+\end{array}
+\end{eqnarray}
+Substituting (40) into (41) and using (42), we obtain a simplified version of
+(41):
+\begin{equation}
+u\tau(\xi_x)_{j,k}=u\tau h_2/(h_1h_2)=u\tau/h_1.
+\end{equation}
+The expression in the right hand side of (43) coincides with the value of
+$\kappa_2$ in (14). By considering the remaining variables in the set (38) in
+a similar way we can see that (38), for the uniform rectangular grid of (42),
+reduces to:
+\begin{eqnarray}
+\kappa_{1,1}=c\tau/h_1,~\kappa_{1,2}=\kappa_{1,3}=0,~\kappa_{2,1}=u\tau/h_1,
+\nonumber\\
+\kappa_{2,2}=0,~\kappa_{3,1}=0,~\kappa_{3,2}=v\tau/h_2,~\kappa_4=h_1/h_2.
+\end{eqnarray}
+It is easy to see that the set of the variables (44) coincides with the four
+variables of (14), as was to be expected.
+
+   Thus, we can see that the number of the nondimensional variables $\kappa_1,
+\ldots,\kappa_M$ in the case of the consideration of a fixed curvilinear
+spatial grid has increased by a factor of 2 in comparison with the case of an
+uniform rectangular grid.
+
+   It follows from the above consideration that at least for some classes of
+difference schemes on curvilinear grids for the Euler equations the
+characteristic equation of a scheme can be written in the form (11), where
+$$\mbox{\boldmath$\kappa$\unboldmath}=(\kappa_{1,1},\kappa_{1,2},\kappa_{1,3},
+\kappa_{2,1},\kappa_{2,2},\kappa_{3,1},\kappa_{3,2},\kappa_4).$$
+
+\newpage
+\section{Navier-Stokes Equations \newline
+and Curvilinear Grids}
+\hspace{6mm}
+
+   Let us assume that the Navier-Stokes equations are to be solved in a
+physical domain $D$ with $(x,y,z)$ points. We further assume that
+there exist functions
+\begin{eqnarray}
+x=x(\xi,\eta,\zeta),\quad y=y(\xi,\eta,\zeta),\quad z=z(\xi,\eta,\zeta),
+\end{eqnarray}
+which enable us to uniquely map $D$ onto a domain in the space with
+points $(\xi,\eta,\zeta)$, where $O\xi \eta \zeta$ is a rectangular
+Cartesian coordinate system. Because of
+the memory/speed limitations of computers currently available,
+simplified versions of the full system of the compressible Navier-Stokes
+equations are used for the numerical
+simulation of flows with high Reynolds number. Following [21] let us
+assume that $\xi,~\eta,$ and $\zeta$ represent
+the streamwise, normal, and spanwise coordinates, respectively, for the
+flow around an aircraft wing. Since the dominant viscous effects for turbulent
+flows with high Reynolds number arise from viscous diffusion normal to the body
+surface, a thin-layer assumption may be employed by retaining only the
+viscous diffusion terms in the $\eta$-direction.
+Then the simplified 3D Navier-Stokes equations have the form
+\begin{equation}
+\frac{\partial \vec{u}}{\partial t} +
+\frac{\partial \vec{F}(\vec{u})}{
+\partial \xi} + \frac{\partial \vec{G}(\vec{u})}{\partial \eta} +
+\frac{\partial \vec{H}(\vec{u})}{\partial \zeta} =
+\frac{\partial \vec{G}_v(\vec{u})}{\partial \eta},
+\end{equation}
+where
+\begin{eqnarray*}
+\vec{u} = J \left[ \begin{array}{c}
+\rho\\
+\rho u\\
+\rho v\\
+\rho w\\
+\rho E\\
+\end{array} \right ],~\vec{F} = J \left[ \begin{array}{c}
+\rho U\\
+\rho uU + \xi_x p\\
+\rho vU + \xi_y p\\
+\rho wU + \xi_z p\\
+(\rho E + p)U\\
+\end{array} \right ],
+\end{eqnarray*}
+\begin{eqnarray}
+\vec{G} = J \left[ \begin{array}{c}
+\rho V\\
+\rho uV+\eta_x p\\
+\rho vV+\eta_y p\\
+\rho wV+\eta_z p\\
+(\rho E+p)V\\
+\end{array} \right ],~\vec{H} = J^{-1} \left[ \begin{array}{c}
+\rho W\\
+\rho uW + \zeta_x p\\
+\rho vW + \zeta_y p\\
+\rho wW + \zeta_z p\\
+(\rho E + p)W\\
+\end{array} \right ],
+\end{eqnarray}
+and
+\begin{eqnarray}
+U=\xi_x u+\xi_y v+\xi_z w,~V=\eta_x u+\eta_y v+\eta_z w,~W=\zeta_x u
++\zeta_y v +\zeta_z w,
+\end{eqnarray}
+$J$ is the Jacobian of the transformation (45),
+\begin{equation}
+J=x_{\xi}(y_{\eta}z_{\zeta} - y_{\zeta}z_{\eta})- y_{\xi}(x_{\eta}
+z_{\zeta} - x_{\zeta}z_{\eta}) + z_{\xi}(x_{\eta}y_{\zeta}-y_{\eta}x_{\zeta}).
+\end{equation}
+In Eqs. (46)-(48), $u,v$ and $w$ are the fluid velocity components along the
+$x$-,$y$- and $z$-axes, respectively. The expression for the viscous flux
+${\bf G}_v$ is as follows:
+\begin{eqnarray}
+\vec{G}_v = \sqrt{\gamma}\;\mu \bar{\varepsilon}J
+\frac{M_{\infty}}{Re_{\infty}}
+\left[ \begin{array}{c}
+0\\
+\phi_{1G} u_{\eta}+\eta_x \phi_{2G}\\
+\phi_{1G}v_{\eta}+\eta_y \phi_{2G}\\
+\phi_{1G} w_{\eta}+\eta_z \phi_{2G}\\
+\phi_{1G}\Bigl[\Bigl(\frac{q^2}{2}\Bigr)_{\eta} + \Bigl(\frac{\gamma}{\gamma-1}
+\Bigr)\frac{\tilde{\varepsilon}}{\sigma \bar{\varepsilon}}T_{\eta}\Bigr]
++ V\phi_{2G}\\
+\end{array} \right ],
+\end{eqnarray}
+where
+\begin{eqnarray*}
+q^2=u^2+v^2+w^2,~
+\phi_{1G} = \eta_x^2+\eta_y^2+\eta_z^2,
+\nonumber\\
+~\phi_{2G} =\frac{1}{3}(\eta_xu_{\eta}+\eta_yv_{\eta}+\eta_zw_{\eta}).
+\end{eqnarray*}
+$T$ is the fluid temperature, $M_{\infty}$ is the freestream Mach number,
+$Re_{\infty}$ is the freestream Reynolds number.
+The transformation formulas read as follows:
+\begin{eqnarray}
+\left. \begin{array}{ccc}
+\xi_x=(y_{\eta}z_{\zeta} - y_{\zeta}z_{\eta})/J&
+\eta_x=(y_{\zeta}z_{\xi} - y_{\xi}z_{\zeta})/J &
+\zeta_x=(y_{\xi}z_{\eta}-y_{\eta}z_{\xi})/J\\
+\xi_y=(x_{\zeta}z_{\eta} - x_{\eta}z_{\zeta})/J&
+\eta_y=(x_{\xi}z_{\zeta}-x_{\zeta}z_{\xi})/J   &
+\zeta_y=(x_{\eta}z_{\xi} - x_{\xi}z_{\eta})/J\\
+\xi_z=(x_{\eta}y_{\zeta} - x_{\zeta}y_{\eta})/J&
+\eta_z=(x_{\zeta}y_{\xi}-x_{\xi}y_{\zeta})/J   &
+\zeta_z=(x_{\xi}y_{\eta} - x_{\eta}y_{\xi})/J\\
+\end{array} \right.
+\end{eqnarray}
+   In the sets of equations (46)-(47), (50),
+distances have been put in a dimensionless form as in [21]. The
+turbulence modeling is here performed by using the algebraic
+turbulence model of Baldwin and Lomax [22].  This model is based on
+the concepts of an eddy viscosity and eddy conductivity. In the
+momentum equations, the molecular viscosity $\mu$ is replaced by the
+effective viscosity $\mu_e$, $\mu_e = \mu + \mu_t = \mu(1 +\mu_t/\mu)
+= \mu \bar{\varepsilon}$, where $\bar{\varepsilon}= 1 + \mu_t/\mu$ and
+$\mu_t$ denotes the turbulent viscosity. Similarly, in the energy
+equation, the molecular conductivity $k$ is replaced by the effective
+conductivity $k_e$,
+\begin{eqnarray*}
+k_e=k+k_t=\frac{c_p}{\sigma}\mu + \frac{c_p}{\sigma_t}\mu_t=
+\frac{c_p \mu}{\sigma}\Bigl(1+\frac{\sigma}{\sigma_t}\frac{\mu_t}{\mu}\Bigr)=
+\frac{c_p\mu}{\sigma}\tilde{\varepsilon} = k\tilde{\varepsilon},
+\end{eqnarray*}
+where $\tilde{\varepsilon}=1 + (\sigma\mu_t)/(\sigma_t\mu)$.
+Here $\sigma$ is the laminar Prandtl number and $\sigma_t$ the turbulent
+Prandtl number; $\sigma=0.72,~\sigma_t=0.9$.
+
+    It was shown in [5] that in the particular case of a Cartesian uniform
+rectangular grid, the necessary stability region should be determined in the
+nine-dimensional Euclidean space $E^9$ of the variables
+\begin{eqnarray}
+\kappa_1 = \frac{c\tau}{h_1},~\kappa_2 = \frac{u\tau}{h_1},
+~\kappa_3 = \frac{v\tau}{h_1},~\kappa_4 = \frac{w\tau}{h_1},
+~\kappa_5 = \frac{h_1}{h_2},\nonumber\\
+~\kappa_6 = \frac{h_1}{h_3},~\kappa_7 = \gamma,
+~\kappa_8 = \sqrt{\gamma}\,\frac{M_{\infty}}{Re_{\infty}}\,\frac{\tau\mu
+\bar{\varepsilon}}{h_1^2\rho},~\kappa_9 = \frac{\tilde{\varepsilon}}
+{\bar{\varepsilon}\sigma},
+\end{eqnarray}
+where $h_1,~h_2$ and $h_3$ are the steps of an uniform grid along the
+axes $x,~y$, and $z$, respectively; c is the sound speed.
+
+   In the case of the general curvilinear coordinates $\xi,\eta$ and $\zeta$
+it was shown in [23] that the coefficients of the characteristic polynomial
+(11) depend on the following dimensionless variables:
+\begin{eqnarray}
+\left. \begin{array}{llll}
+\kappa_{1,1} = \tau \xi_x c,&\kappa_{1,2} = \tau \xi_y c,&\kappa_{1,3} =
+\tau\xi_z c,&\kappa_{1,4} = \tau \eta_x c,\\
+\kappa_{1,5} = \tau \eta_y c,&\kappa_{1,6} =\tau\eta_z c,&
+\kappa_{1,7} = \tau \zeta_x c,&\kappa_{1,8} = \tau \zeta_y c,\\
+\kappa_{1,9} =\tau\zeta_z c,&
+\kappa_{2,1} = \tau \xi_x u,&\kappa_{2,2} = \tau \eta_x u,&\kappa_{2,3} =
+\tau\zeta_x u,\\
+\kappa_{3,1} = \tau \xi_y v,&\kappa_{3,2} = \tau \eta_y v,&\kappa_{3,3} =
+\tau\zeta_y v,&\kappa_{4,1} = \tau \xi_z w,\\
+\kappa_{4,2} = \tau \eta_z w,&\kappa_{4,3} =\tau\zeta_z w,&
+\kappa_5=\eta_y/\xi_x,&\kappa_6 = \zeta_z/\xi_x,\\
+\kappa_7=\gamma,&
+\kappa_8=\sqrt{\gamma}\frac{M_{\infty}}{Re_{\infty}}\frac{\tau \mu \bar
+{\varepsilon}}{\rho}(\xi_x)^2,&\kappa_9=\frac{\tilde{\varepsilon}}
+{\bar{\varepsilon}\sigma}.&~~~~\\
+\end{array} \right.
+\end{eqnarray}
+In the particular case of a uniform rectangular mesh in the $(x,y,z)$ space,
+we have
+\begin{eqnarray}
+\left. \begin{array}{c}
+x_{m+1,q,r}=x_{m,q,r} + h_1,~x_{m,q+1,r}=x_{m,q,r},~x_{m,q,r+1}=x_{m,q,r},\\
+y_{m+1,q,r}=y_{m,q,r},~y_{m,q+1,r}=y_{m,q,r}+h_2,~y_{m,q,r+1}=y_{m,q,r},\\
+z_{m+1,q,r}=z_{m,q,r},~z_{m,q+1,r}=z_{m,q,r},~z_{m,q,r+1}=z_{m,q,r}.\\
+\end{array} \right.
+\end{eqnarray}
+We can substitute into (53) the expressions (51) for the derivatives $\xi_x,
+\xi_y,\ldots,\zeta_z$. Then we can approximate the derivatives $x_\xi,x_\eta,
+\ldots,z_\zeta$ by the central differences similar to (40). Then it is easy
+to see with regard for (54) that in the particular case of an uniform
+rectangular grid the set (53) reduces to:
+\begin{eqnarray}
+\left. \begin{array}{lll}
+\kappa_{1,1} = c\tau/h_1,&\kappa_{1,2}=\kappa_{1,3}=\kappa_{1,4}=0,&
+\kappa_{1,6}=\kappa_{1,7}=\kappa_{1,8}=0,\\
+\kappa_{1,5}=c\tau/h_2,&\kappa_{1,9}=c\tau/h_3,&\kappa_{2,1}=u\tau/h_1,\\
+\kappa_{2,2}=\kappa_{2,3}=0,&\kappa_{3,1}=\kappa_{3,3}=0,&\kappa_{3,2}=
+v\tau/h_2,\\
+\kappa_{3,3}=\kappa_{4,1}=\kappa_{4,2}=0,&\kappa_{4,3}=w\tau/h_3,&\kappa_5=
+h_1/h_2,\\
+\kappa_6=h_2/h_3,~\kappa_7=\gamma,&
+\kappa_8=\sqrt{\gamma}\frac{M_{\infty}}{Re_{\infty}}\frac{\tau \mu \bar
+{\varepsilon}}{\rho h_1^2},&\kappa_9=\frac{\tilde{\varepsilon}}
+{\bar{\varepsilon}\sigma}.\\
+\end{array} \right.
+\end{eqnarray}
+Since $c\tau/h_3=(c\tau/h_1)(h_1/h_3)$, the set of the variables (55)
+indeed coincides with the nine variables of (52), as was to be
+expected. For a general curvilinear grid, the set (53) encompasses 23
+variables. A similar set (52) for the case of an uniform rectangular grid
+contains only 9 variables. Thus the consideration of a curvilinear grid
+increases by a factor of 23/9 the dimension of the Euclidean space $E^M$ in
+which the stability region boundary is to be determined.
+
+   It was shown in [23] that in the case of a four-stage Jameson's scheme
+approximating the system (46)-(50) the expanded characteristic polynomial (11)
+would require about $4\cdot 5!\times 6^{135}\approx 5.392\cdot 10^{107}$
+bytes of computer memory. Therefore, the use of a package for the compression
+of the expressions for the entries of the amplification matrix $G$ is
+necessary. The only such package is SCOPE, which is now available in the
+REDUCE library. After the entries of the matrix $G$ are obtained, the
+coefficients of the polynomial (11) can be computed numerically with the use
+of the Newton identities as in [5].
+
+   It is important that the analytic form of the coefficients
+$c_m(\mbox{\boldmath$\kappa,~\xi$\unboldmath})$ of(11) remains the same for
+any curvilinear grid. In this connection we can propose the following
+procedure for the stability analysis on a general curvilinear grid.
+
+   {\bf Step 1.} Stability analysis of a given difference scheme for a
+{\em uniform rectangular} spatial grid. This step is needed for the
+check-up of the necessary stability condition which is obtained on a
+general curvilinear grid. As shown above, the general necessary
+stability condition has to coincide with that obtained for a uniform
+rectangular grid, provided we substitute (54) into (53).
+
+  {\bf Step 2.} Symbolic computation of the analytic expressions for
+the coefficients of the characteristic polynomial (11), and the execution of
+the substitutions for introducing the dimensionless variables
+$\kappa_1,\ldots,\kappa_{23}$ in accordance with (55).
+
+  {\bf Step 3.} Computation of the coordinates $\kappa_1,\ldots,\kappa_{23}$ of
+the points of the necessary stability region
+boundary in the space of the 23 dimensionless variables (55).
+
+ {\bf Step 4.} Determination of the coefficients of analytic formulas
+which fit well the numerical data obtained in the third step. As a result we
+obtain the approximate necessary stability condition in the form of closed
+analytic expressions,
+\begin{eqnarray}
+g_{\nu}(\vec{\kappa})\geq 0,\quad \nu = 1,\ldots,N
+\end{eqnarray}
+$(N\geq 1)$ involving the 23 variables $\kappa_1,\ldots,\kappa_{23}$ from the
+set (53).
+
+   The numerical data are processed at Step 4 in the least-squares sense. As an
+example we have considered in [23] the numerical and analytical data obtained
+in [5] for a four-stage Jameson's scheme in the particular case of a uniform
+rectangular grid. The corresponding approximate necessary stability condition
+in the case of a viscous, heat conducting gas was obtained in [23] in the form
+\begin{eqnarray}
+\frac{(|\kappa_2| + |\kappa_3|\kappa_5 + |\kappa_4|\kappa_6 + (\kappa_1
+-0.58344 \kappa_9^{0.08517})
+\sqrt{1+\kappa_5^2 +\kappa_6^2})^2}{8} +\nonumber\\
+\Bigl(\frac{\kappa_5^2\kappa_8}{0.5222425}\Bigr)^2 \leq 1.
+\end{eqnarray}
+This formula can be used for the check-up of the general necessary stability
+condition (56) to be obtained at Step 4. It follows from (57) that the
+consideration of the turbulent viscosity ($\kappa_8>0$) can generally impose
+additional restriction on the time step, because the time step $\tau$ enters
+the numerator of the formula for $\kappa_8$ (see (52)). On the other hand, the
+consideration of the effective heat conductivity ($0<\kappa_9<1/\sigma\approx
+1.388889$) relaxes slightly the restriction on the time step $\tau$.
+
+\section{Concluding Remarks}
+\hspace{6mm}
+
+   Because of a large number of the variables $\kappa_1,\ldots,\kappa_{23}$ in
+the space of the variation of which the necessary stability region boundary is
+determined in the case of the Navier-Stokes equations solved on curvilinear
+grids it is clear that the main computational work is required at steps 3 and
+4 of the stability analysis procedure described in Section 7. In this
+connection it is reasonable to develop simpler procedures, which would give
+the accuracy of the stability predictions sufficient for engineering
+applications.
+
+   Another possible direction of the future research is the extension of the
+stability investigation method outlined in Section 7 for the case of moving
+curvilinear spatial grids. The motion of grids is calculated in the following
+situations: (i) when the solution-adaptive grids are used; (ii) when the grid
+lines are adjusted to the motion of some geometric boundaries (as, for
+example, in the wing flutter problems, or in the problems on the blood flow
+through blood vessels).
+
+\section*{References}
+\begin{description}
+\item[ 1.]
+V.G. Ganzha, E.V. Vorozhtsov, and R. Liska. Stability analysis of difference
+initial-value problems with the aid of the REDUCE system. In: {\em Computer
+Algebra and Its Applications to Mechanics. Novosibirsk, Aug. 28-31; Irkutsk,
+Sept. 1-3, 1990. Proc. Int. Seminar} / Eds. V.G.Ganzha, V.M.Rudenko and
+E.V. Vorozhtsov. Nova Science Publishers, New York, 1993, p. 31-41.
+\item[ 2.]
+V.G. Ganzha and E.V. Vorozhtsov. The stability analysis of difference schemes
+by numerical solution of the generalised Routh-Hurwitz problem. {\em Computer
+Physics Communications} {\bf 43}, 209-216, 1987.
+\item[ 3.]
+V.G. Ganzha, E.V. Vorozhtsov, and C. Zenger. {\em Stabilit\"{a}tsuntersuchung
+von Differenzenverfahren mit Hilfe der Resultantenalgebra unter Verwendung
+des REDUCE-Systems}. Preprint of the Institut f\"{u}r Informatik Technische
+Universit\"{a}t M\"{u}nchen Tum-I9120, Munich, 1991, p. 1-23.
+\item[ 4.]
+V.G. Ganzha and  E.V. Vorozhtsov. A probabilistic symbolic-numerical method for
+    the stability analysis of difference schemes for PDEs. {\em Proceedings
+    of the 1993 Internat. Sympos. on Symbolic and Algebraic Computation,
+    July 6-8, 1993, Kiev, Ukraine}/ Ed. M.Bronstein. ACM Press, New York,
+    9--13, 1993.
+\item[ 5.]
+V.G. Ganzha, E.V. Vorozhtsov, J. Boers, and J.A. van Hulzen. Symbolic-numeric
+stability investigations of Jameson's schemes for the thin-layer
+Navier-Stokes equations. -In: {\em Proc. ISSAC'94}, Oxford, July 20-22, 1994 /
+Eds. J.von zur Gathen and M.Giesbrecht. ACM Press, New York, 1994, p. 234-241.
+\item[ 6.]
+E.V. Vorozhtsov, B.Yu. Scobelev, and V.G. Ganzha.
+Symbolic-numerical method for the stability analysis of difference schemes on
+the basis of the catastrophe theory. {\em J. Comput. Phys.} {\bf 116},
+26-38(1995).
+\item[ 7.]
+R.W. MacCormack, {\em The effect of viscosity in hypervelocity impact
+cratering}, AIAA Paper, No. 354, 1969.
+\item[ 8.]
+R. Peyret and T.D. Taylor. {\em Computational Methods for Fluid Flow.}
+Spring\-er-Verlag, New York, Heidelberg, Berlin, 1983.
+\item[ 9.]
+A.C. Hearn. {\em REDUCE 3.5, User's Manual}. Rand Corporation, Santa Monica,
+Cal., 1993.
+\item[10.]
+S. Steinberg and P.J. Roache. Finite-difference algorithm design and
+automated code generation. {\em Computer
+Algebra and Its Applications to Mechanics (CAAM' 90), No\-vo\-si\-b\-irsk-Ir\-kutsk,
+August 28 - September 3, 1990. Proceedings of an International Seminar}/Eds
+V.G. Ganzha, V.M. Ruden\-ko and E.V. Vorozhtsov. Nova Science Publishers,
+Inc., New York, 15--29, 1993.
+\item[11.]
+R.D. Richtmyer and K.W. Morton. {\em Difference Methods for Initial-Value
+Problems}, Second Edition. Interscience Publishers, John Wiley and Sons,
+New York, 1967.
+\item[12.]
+V.G. Ganzha, E.V. Vorozhtsov, and J.A. van Hulzen. {\em A new symbolic-numeric
+approach to stability analysis of difference schemes}. - In: Proceedings
+ISSAC'92, July 27-29, 1992, Berkeley, California/ Ed. P.S. Wang. ACM Press,
+New York, 1992, p. 9-15.
+\item[13.]
+R.W. MacCormack. Numerical solution of the interaction of a shock wave
+with a laminar boundary layer. {\em Proceedings of the Second International
+Conference on Numerical Methods in Fluid Dynamics} /Ed. M. Holt. Lecture
+Notes in Physics,  vol. 8. Springer-Verlag, New York, 151--163, 1971.
+\item[14.]
+A. Jameson and W. Schmidt. Some recent developments in numerical methods for
+transonic flows.  {\em Computer Methods in Applied Mechanics and Engineering},
+{\bf  51}, 467-493, 1985.
+\item[15.]
+B.Yu. Scobelev and E.V. Vorozhtsov. Application of the catastrophe
+theory methods to the stability analysis of difference schemes. {\em
+The Second Japan-Soviet Union Joint Symp. on Computational Fluid Dynamics.
+Tsukuba, Aug. 27--31, 1990. Preprints}. Published by Japan Society of
+Computational Fluid Dynamics. The University of Tsukuba, Tsukuba, 53--60, 1990.
+\item[16.]
+J.H. Wilkinson and C. Reinsch. {\em Handbook for automatic computation.
+Linear algebra}. Springer-Verlag, Heidelberg, New York, Berlin, 1971.
+\item[17.]
+F. Grasso and C.G. Speziale. Supersonic flow computations by two-equati\-on
+turbulence modeling. In: {\em AIAA 9th Computational Fluid Dynamics
+Conference, June 13-15, 1989, Buffalo, N.Y. A Collection of Technical Papers.}
+Published by AIAA, Washington, DC 20024, 1989, p. 232-239.
+\item[18.]
+V.G. Ganzha and E.V. Vorozhtsov. On the stability of Jameson schem\-es. In:
+{\em Bridging Mind and Model: Papers in Applied Mathematics} / Ed. P.J. Costa.
+St. Thomas Technology Press, St. Paul, MN, USA, 1993, p. 231-300.
+\item[19.]
+R.F. Warming, R.M. Beam, and B.J. Hyett. Diagonalization and simultaneous
+symmetrization of the gas-dynamic matrices. {\em Mathematics of Computation}
+{\bf 29}, 1037--1045, 1975.
+\item[20.]
+J.F. Thompson, Z.U.A. Warsi, and C.W. Mastin. {\em Numerical Grid Generation.
+Foundations and Applications.} North-Holland, New York, 1985.
+\item[21.]
+V.N. Vatsa. Accurate numerical solutions for transonic viscous
+flow over finite wings. {\em J. Aircraft} {\bf 24}, No. 6, p. 377-385(1987).
+\item[22.]
+B. Baldwin and H. Lomax. {\it Thin layer approximation and algebraic model
+     for separated turbulent flows}, AIAA Paper No. 78-257, 1978.
+\item[23.]
+E.V. Vorozhtsov. Symbolic-numeric stability investigation of difference
+schemes for compressible 3D Navier-Stokes equations. In: {\em Proc. Internat.
+Workshop on Computer Algebra in Science and Engineering - Algorithms, Systems,
+Applications. Bielefeld, August 28-31, 1994} /Ed. F. Hehl. World Science
+Publishers, Singapore, 1995 (in press).
+\end{description}
+\end{document}

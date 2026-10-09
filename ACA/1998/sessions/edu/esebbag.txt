@@ -1,0 +1,23 @@
+"Computer Algebra in teaching chemistry: a package for balancing
+chemical equations."
+
+Juan Llovet, Carlos Esebbag* 
+Departamento de Matematicas 
+Universidad de Alcala 
+
+
+
+A package prototype designed to balance chemical equations automatically is 
+presented. The program, written in Maple V, is able to derive the charge 
+and mass balance equations, from a non balanced chemical reaction, and 
+solve them by means of the isolve command. As input the user introduces the 
+reactants and the products of the reaction written in a natural 
+chemical-like syntax. 
+The program checks the validity of the data to verify that the mass and 
+charge balances are possible, then it returns the balanced equation. 
+The two main applications of the package are: 
+- A helping tool in learning chemistry at basic level. 
+- To teach programming in a computer algebra system to students of chemistry. 
+In the second case, the fact that balancing of chemical equations is very 
+well known subject for chemistry students allows the usage of the package 
+to teach non-trivial programming techniques to this kind of students. 

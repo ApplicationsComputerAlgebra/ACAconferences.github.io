@@ -1,0 +1,356 @@
+\title{\LARGE \bf Steenrod reduced powers and computability}
+\author{\small R. Gonz\'{a}lez-D\'{\i}az and P. Real\\
+\small Dpto. Matem\'{a}tica Aplicada I (Universidad de Sevilla)\\
+\small Avda. Reina Mercedes, s/n. CP: 41012 Sevilla (Spain)\\
+\small  {\em E-mails:} rogodi@cica.es, real@cica.es}
+\documentstyle[emlines2,bezier,12pt]{article}
+\date{}
+\textheight=615pt
+\textwidth=425pt
+\oddsidemargin=0pt
+\headheight=0pt
+\headsep=7pt
+\hoffset=0pt
+\voffset=0pt
+\topmargin=10pt
+\marginparsep=10pt
+\marginparwidth=30pt
+\footheight=10pt
+\footskip=40pt
+\parskip=.5cm
+\setlength{\baselineskip}{8ex}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\scst}{\scriptscriptstyle}
+\newcommand{\ot}{\otimes}
+\newcommand{\Z}{\Bbb Z}
+\newcommand{\Zp}{{\Bbb Z}_p}
+\newcommand{\pa}{\partial}
+\newcommand{\Fp}{{\Bbb F}_p}
+\newcommand{\Fr}{{\Bbb F}_2}
+\newtheorem{prp}{Proposition}[section]
+\newtheorem{lmm}[prp]{Lemma}
+\newtheorem{thr}[prp]{Theorem}
+\newtheorem{dfn}[prp]{Definition}
+\newtheorem{rmr}[prp]{Remark}
+\newtheorem{crl}[prp]{Corollary}
+\newtheorem{ejemplo}[prp]{Example}
+\newtheorem{notacion}[prp]{Notation}
+\hyphenation{pro-duc-to}
+\begin{document}
+\bibliographystyle{alpha}
+\sloppy
+\maketitle
+\vspace{0.5cm}
+
+\begin{abstract}
+Steenrod cohomology operations are  algebraic tools for
+distinguishing non--homeomorphic topological spaces.
+In this paper, starting off from the general method developed
+in \cite{jpaa} for cup--$i$ products and
+Steenrod squares,
+we present an explicit combinatorial formulation for
+the particular Steenrod cohomology operation ${\got P}_1^{p}:
+H^{q}(X;\Fp) \rightarrow H^{ qp-1} (X;\Fp)$, where $p$ is an odd
+prime, $q$ a non--negative integer, $X$ a simplicial set and $\Fp$
+the finite field with $p$ elements.
+As an example, we design an algorithm for computing ${\got P}_1^{p}$
+on the cohomology of a simplicial complex and we determine its
+complexity.
+\end{abstract}
+
+\begin{center}
+{\bf Extended Abstract}
+\end{center}
+
+Algebraic Topology studies problems of purely qualitative nature
+making use of algebraic structures. An evident example of this
+``algebrization'' of Topology is the theory of algebraic invariants
+associated to topological spaces. The most intuitive algebraic
+invariant is the number of connected components of a topological
+space. Appropriate generalizations of this notion are  homology,
+cohomology and homotopy groups. Homology (or its dual,
+cohomology) groups are, in general, easier to compute than homotopy
+groups. Moreover, the cohomology of a topological space has an
+additional ring structure determined by the {\em cup product} of
+two cochains. In particular, this product allows us to distinguish
+topological spaces having isomorphic homology groups. A finer class
+of invariants are cohomology operations, that is, algebraic maps
+on the cohomology groups of spaces. Within these tools, an extremely
+important type are
+ {\em Steenrod squares and Steenrod
+reduced powers} \cite{SE62, Mil58}. The importance of these
+Steenrod cohomology operations is twofold: on the one hand, they have a
+deep geometrical meaning; on the other hand, they can be
+used in areas close to Homological Algebra: group cohomology,
+Hochschild cohomology of algebras, \ldots. These
+algebraic operations are extremely well--studied objects from
+a topological viewpoint (see \cite{Woo98} and \cite{Die89}
+   for a non--exhaustive account of results). The fact
+that Steenrod cohomology operations are completely determined by
+combinatorial data is also well--known (\cite{May67},\cite{DOLD},
+\cite{May70}, $\ldots$). However, the
+recursive algorithms derived from these studies
+are too slow for practical implementation.
+
+    Passing on now to other matters, the problem of computability in
+    Algebraic Topology is a ``delicate one'', as  George
+    Whitehead stated in 1983. With regard  to this question, we
+    limit ourselves to say that
+    it is necessary to distinguish the problem of recognizing
+    parts of classical Algebraic Topology as effective from that
+    of providing practical solutions for these parts. This
+      assertion is motivated by
+    the fact that the
+    majority of algorithms (spectral sequences, \ldots)  in this field
+    carry very high computational costs.
+
+In combinatorial design theory, there is a recent interest
+by cohomology as it is indicated in
+\cite{HL93}. Then the obtention of efficient algorithms for
+computing $n$--cocycles can be useful in that field. With
+regard to $2$--cocycles, several methods for
+       finding cocycles re\-pre\-senting $2$--dimensional
+       cohomology classes of finite groups have been designed
+       recently \cite{EGL97, HL93, Lam97}. Working within the framework of
+    Simplicial Topology \cite{May67}, an explicit description of
+    certain simplicial cocycles on simplicial sets (that is, a
+    combinatorial model of a topological space) is given in
+    \cite{jpaa}. To be more precise, in that paper,
+    an explicit
+       formulation for cup--$i$ products and Steenrod squares
+       is
+       presented. An
+        algorithm     for computing these
+       invariants is derived in a
+       natural way. For example,
+     the  data for computing Steenrod squares are
+    a simplicial set $X$,
+a non--negative integer $i$ and a
+$n$--cocycle $c$ of $X$, giving back as
+answer a $(n+i)$--cocycle $Sq^{i}(c)$.
+As an application, algorithms
+       for computing these
+       invariants in simplicial complexes are given in \cite{casc99}.
+
+
+        In this
+       paper, we analyze in detail the underlying combinatorial structure
+       of the
+       Steenrod reduced power ${\got P}_1^{p}: H^q (X; \Fp) \rightarrow
+       H^{qp-1} (X; \Fp)$,  $p$ being an odd prime, $q$ a positive
+       integer, $X$ a simplicial set and $\Fp$ the finite field
+       with $p$ elements. This study is based on the  results obtained in
+        \cite{jpaa} for Steenrod reduced powers. Regarding these
+        results, our motivation in the very near future
+        is to give an explicit combinatorial
+         picture of all Steenrod cohomology operations.
+
+
+   We now give some simplicial and algebraic preliminaries
+in order to
+  facilitate the understanding of the extended abstract. This
+  material
+ can be found, for example, in
+  \cite{May67}, \cite{MacL75} and \cite{Wei94}.
+
+
+ Let $R$ be a ring and $X$ a {\em simplicial set} (that is, a
+graded set, $X_0,X_1, \ldots,$ endowed with two kinds of operators:
+face operators $\partial_j:X_n\ra X_{n-1}$ and degeneracy operators
+$s_i:X_n\ra X_{n-1}$, $1\leq j\leq n$, verifying several
+``commutativity'' relations). Let us denote $C_*(X)$ by the chain
+complex $\{C_n(X),\, d_n\}$ in which $C_n(X)$ is the graded
+$R$-module generated by $X_n$ and $d_n: C_n(X)\ra C_{n-1}(X)$ is
+$\sum_{i=0}^n(-1)^i\partial_i$.
+Let $C_*^{\scst N}(X)$ be the {\em normalized
+chain complex} $\{C^{\scst N}_n(X),\, d_n\}$ where
+$C_n^{\scst N}(X)=C_n(X)/s(C_{n-1}(X))$ and $s(C_{n-1}(X))$
+is the graded $R$--module generated by all the non--degenerate simplices
+$y$ of $C_n(X)$ (that is,   $y=s_i(x)$
+for some simplex $x$ and degeneracy operator
+$s_i$).
+
+Now, the {\em cochain complex} associated to $C_*^{\scst N}(X)$, denoted
+by $C^*(X;R)$, is the free $R$--module generated by all the
+$R$-module maps from $C_n^{\scst N}(X)$ to $R$ together with a map
+$\delta$ defined by $\delta(c)(x)=c(d(x))$.
+In this way, we
+define the {\em cohomology} of $X$ with coefficients in $R$
+by $H^*(X)=$Ker $\delta_n/$Im $\delta_{n-1}$. Note that a
+cocycle $c$ (that is, $c\in C^*(X;R)$ such that $\delta(c)=0$)
+represents a class of cohomology.
+
+  We are able to enunciate the main result of this paper.
+
+
+\vspace{0.5cm}
+
+\begin{thr} Let $p$ be an odd prime. Let $\Fp$ be the ground
+ring and $X$ a simplicial set. If $c\in C^q(X;\Fp)$
+and $x\in C_{pq-1}^{\scst N}(X)$ then
+${\got P}_1^p:\, H^q(X;\Fp)\ra H^{qp-1}(X;\Fp)$ is defined
+by:
+
+\begin{eqnarray*}
+{\got P}_1^p(c)(x)=\sum_{0\leq j\leq p-1}\;\sum_{S(j)}&&
+(-1)^{i_{j-1}+(i_{j-1}+i_j)(i_j+m)}\\
+&&c(\pa_{i_0+1}\cdots\pa_mx)\\
+&&\bullet c(\pa_0\cdots\pa_{i_0-1}\pa_{i_1+1}\cdots\pa_mx)\\
+&&\vdots\\
+&&\bullet c(\pa_0\cdots\pa_{i_{j-3}-1}\pa_{i_{j-2}+1}\cdots\pa_mx)\\
+&&\bullet c(\pa_0\cdots\pa_{i_{j-2}-1}\pa_{i_{j-1}+1}\cdots\pa_{i_j-1}
+\pa_{i_{j+1}+1}\cdots\pa_mx)\\
+&&\bullet c(\pa_0\cdots\pa_{i_{j+1}-1}\pa_{i_{j+2}+1}\cdots\pa_mx)\\
+&&\vdots\\
+&&\bullet c(\pa_0\cdots\pa_{i_{p-2}-1}\pa_{i_{p-1}+1}\cdots\pa_mx)\\
+&&\bullet c(\pa_0\cdots\pa_{i_{p-1}-1}x)\\
+&&\bullet c(\pa_0\cdots\pa_{i_{j-1}-1}\pa_{i_j-1}\cdots \pa_mx)
+\end{eqnarray*}
+
+\noindent where $m=pq-1$, $\bullet$ is the natural product in ${\Bbb F}_p$ and
+$$S(j)=\{0\leq i_0\leq \cdots\leq i_{j-2}\leq i_{j-1}<i_j\leq
+i_{j+1}\leq\cdots \leq i_{p-1}\leq m\}.$$
+\end{thr}
+
+ The key of our combinatorial approach is the description given
+ in \cite{jpaa}
+ for Steenrod reduced powers in terms of
+the component morphisms of a given Eilenberg--Zilber
+contraction \cite{EZ59}. The proof of the previous theorem is
+a simplification of that combinatorial formulation based
+on the fact that any composition of face
+and degeneracy operators can be expressed in a unique form:
+$$s_{j_t}\cdots s_{j_1}\pa_{i_1}\cdots\pa_{i_s}$$
+where $j_t>\cdots>j_1\geq 0$ and $i_s>\cdots>i_1\geq 0$.
+
+
+Moreover, bearing in mind that $c$ is a $q$--cochain,  we only have to
+consider those summands with exactly $pq-q-1$ face operators in each factor.
+Then, we can simplify the formula even more.
+
+
+\begin{prp}\label{prop}
+Let $p$ be an odd prime. Let $\Fp$ be the ground ring
+and $X$ a simplicial set. If $c\in C^q(X;\Fp)$
+and $x\in C_{pq-1}^{\scst N}(X)$ then
+${\got P}_1^p:\, H^q(X;\Fp)\ra H^{qp-1}(X;\Fp)$ is defined
+by:
+
+\begin{eqnarray*}
+{\got P}_1^p(c)(x)=\sum_{1\leq j\leq p-1}\;\sum_{jq\leq i\leq (j+1)q-1}&&
+(-1)^{i(q+1)+q(m+1)}\\
+&&c(\pa_{q+1}\cdots\pa_{pq-1}x)\\
+&&\bullet c(\pa_0\cdots\pa_{q-1}\pa_{2q+1}\cdots\pa_{pq-1}x)\\
+&&\vdots\\
+&&\bullet c(\pa_0\cdots\pa_{(j-2)q-1}\pa_{(j-1)q+1}\cdots\pa_{pq-1}x)\\
+&&\bullet c(\pa_0\cdots\pa_{(j-1)q-1}\pa_{i-q+1}\cdots\pa_{i-1}
+\pa_{(j+1)q}\cdots\pa_{pq-1}x)\\
+&&\bullet c(\pa_0\cdots\pa_{(j+1)q-2}\pa_{(j+2)q}\cdots\pa_{pq-1}x)\\
+&&\vdots\\
+&&\bullet c(\pa_0\cdots\pa_{(p-2)q-2}\pa_{(p-1)q}\cdots\pa_{pq-1}x)\\
+&&\bullet c(\pa_0\cdots\pa_{(p-1)q-2}x)\\
+&&\bullet c(\pa_0\cdots\pa_{i-q-1}\pa_{i+1}\cdots\pa_{pq-1}x)
+\end{eqnarray*}
+where $\bullet$ is the natural product in $\Fp$.
+\end{prp}
+
+Assuming that face operators are evaluated in constant time, the following
+result gives us a first measure of the computational complexity of these
+formulae.
+
+\begin{prp}
+Let $p$ be an odd prime. Let $\Fp$ be the ground ring and $X$ a simplicial
+set. If $c\in H^q(X;\Fp)$, then the number of face
+operators taking part in the formula for ${\got P}_1^p(c)$ of the
+proposition above is
+$$p(p-1)q[(p-1)q-1].$$
+\end{prp}
+
+
+It is clear that at least in the case in which $X$ has a finite number of
+non--degenerate simplices in each degree, our method can be seen as an actual
+algorithm for calculating ${\got P}_1^p$ for an odd prime $p$. For example,
+if the number of non--degenerate simplices in each $X_{\ell}$ is
+$O(\ell)$ and each face operator of $X$ is evaluated in constant time,
+the complexity of our algorithm for calculating ${\got P}_1^p(c_q)$ is
+$O(p^4q^3)$. As an example, an
+ algorithm for computing ${\got P}_1^{p}$
+on the cohomology of a simplicial complex
+\cite{Mun84, Wei94}
+can be easily described and implemented. This example in particular shows that it is not
+difficult to integrate Computational Algebra tools in the
+framework of Algebraic Topology.
+
+\begin{thebibliography}{99}
+\bibitem{Die89} J. Dieudonn\'{e}. {\it A history
+of Algebraic and Differential Topology 1990-1960}.
+Birkh$\ddot{a}$user, Boston (1989).
+
+\bibitem{DOLD} A. Dold. {\em Uber die Steenrodschen
+Kohomologieoperationen.} Annals of Math., \mbox{\bf v. 73}
+(1961), 258-294.
+
+\bibitem{EMacL53} S.  Eilenberg   and S. Mac
+Lane. {\em On the groups $H(\pi,n)$, I}. Annals of Math., \mbox{\bf v.
+ 58} (1953), pp. 55-106 .
+
+\bibitem{EZ59} S. Eilenberg and J. A. Zilber, {\em On
+products of complexes}. Am. J. Math., \mbox{\bf v. 75} (1959), pp. 200-204.
+
+\bibitem{EGL97} T. Ekedahl , J. Grabmeier and L. Lambe.
+{\em Algorithms for algebraic computations with
+applications to the cohomology of finite $p$-groups}.
+Preprint of Department of
+Mathematics and Centre for Innovative Computation,
+University of Wales (1997).
+
+\bibitem{jpaa} R. Gonz\'{a}lez-D\'{\i}az and P. Real. {\it A combinatorial
+method for computing Steenrod Squares}. To appear in an special volume of the
+Journal of Pure and Applied Algebra (June 1999).
+
+\bibitem{casc99} R. Gonz\'{a}lez-D\'{\i}az and P. Real. {\it Computing
+cocycles on simplicial complexes}. Sent to the Second Workshop
+on Computer Algebra and Scientific Computing CASC'99.
+
+\bibitem{HL93} K. J. Horadam and W. De Launey. {\it Cocyclic
+development of designs.} J. Algebraic Combin., {\bf v. 2(3)} (1993), pp. 267-290.
+Erratum: {\bf v.1} (1994), page 129.
+
+\bibitem{Lam97} L. Lambe. {\em An algorithm for
+calculating cocycles}.
+Preprint of Department of
+Mathematics and Centre for Innovative Computation,
+University of Wales (1997).
+
+\bibitem{MacL75} S. Mac Lane. {\em Homology}. Classics in
+Mathematics. Springer-Verlag, Berlin (1995). Reprint of the 1975
+edition.
+
+\bibitem{May67} P. May. {\em Simplicial objects in
+Algebraic Topology}. Van Nostrand, Princeton (1967).
+
+\bibitem{May70} P. May. {\em A general algebraic
+approach to Steenrod operations}.
+Lect. Notes in Math., Springer, {\bf v.    156}
+(1970), 153-231.
+
+\bibitem{Mil58} J. Milnor. {\em The Steenrod algebra and its
+dual}. Ann. of Math. {\bf v. 67} (1958) pp 150-171.
+
+\bibitem{Mun84} J. R. Munkres. {\em Elements of Algebraic
+Topology}. Addison-Wesley Publishing Company (1984).
+
+\bibitem{SE62} N. E. Steenrod and D. B. A. Epstein. {\em
+Cohomology operations}. Ann. of Math. Studies {\bf v. 50},
+Princeton University Press (1962).
+
+\bibitem{Wei94} C. A. Weibel. {\em An introduction to Homological
+Algebra.} Cambridge studies in advanced mathematics, {\bf 38},
+Cambridge University Press (1994).
+
+\bibitem{Woo98} R. M. W. Wood. {\em Problems in the Steenrod
+algebra}. Bull. London Math. Soc., {\bf v. 30} (1998), pp. 449-517.
+\end{thebibliography}
+\end{document}
+

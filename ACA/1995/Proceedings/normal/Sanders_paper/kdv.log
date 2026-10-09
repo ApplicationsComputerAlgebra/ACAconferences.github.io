@@ -1,0 +1,225 @@
+This is TeX, C Version 3.14t3 (format=latex 95.6.30)  7 MAR 1996 15:16
+**&latex kdv
+(kdv.tex
+LaTeX2e <1995/06/01>
+(/usr/local/lib/tex/inputs/latex209.def
+File: latex209.def 1995/05/25 v0.45 Standard LaTeX file
+
+Entering LaTeX 2.09 compatibility mode.
+\footheight=\dimen102
+\@maxsep=\dimen103
+\@dblmaxsep=\dimen104
+(/usr/local/lib/tex/inputs/tracefnt.sty
+Package: tracefnt 1995/06/15 v3.0b Standard LaTeX package (font tracing)
+\tracingfonts=\count82
+LaTeX Info: Redefining \selectfont on input line 133.
+)
+\symbold=\mathgroup4
+\symsans=\mathgroup5
+\symtypewriter=\mathgroup6
+\symitalic=\mathgroup7
+\symsmallcaps=\mathgroup8
+\symslanted=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 272.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 273.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 274.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 280.
+LaTeX Info: Redefining \em on input line 290.
+
+(/usr/local/lib/tex/inputs/latexsym.sty
+Package: latexsym 1995/03/18 v2.2a Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 81.
+)
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 355.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 357.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 359.
+)
+(/usr/local/lib/tex/inputs/report.cls
+Document Class: report 1995/06/26 v1.3g Standard LaTeX document class
+(/usr/local/lib/tex/inputs/size10.clo
+File: size10.clo 1995/06/26 v1.3g Standard LaTeX file (size option)
+)
+\c@part=\count83
+\c@chapter=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
+\c@figure=\count90
+\c@table=\count91
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+Compatibility mode: definition of \rm ignored.
+Compatibility mode: definition of \sf ignored.
+Compatibility mode: definition of \tt ignored.
+Compatibility mode: definition of \bf ignored.
+Compatibility mode: definition of \it ignored.
+Compatibility mode: definition of \sl ignored.
+Compatibility mode: definition of \sc ignored.
+LaTeX Info: Redefining \cal on input line 551.
+LaTeX Info: Redefining \mit on input line 552.
+\bibindent=\dimen105
+)
+\@indexfile=\write3
+
+Writing index file kdv.idx
+(/usr/local/lib/tex/inputs/amssym.def
+\msafam=\mathgroup11
+\msbfam=\mathgroup12
+\eufmfam=\mathgroup13
+) (/usr/local/lib/tex/inputs/amssym.tex)
+(diagrams.tex <Paul Taylor's commutative diagrams, version 3.82, 20 July 1994>
+\Cd@pA=\count92
+\Cd@qA=\count93
+\Cd@rA=\count94
+\Cd@sA=\count95
+\Cd@KA=\dimen106
+\Cd@LA=\dimen107
+\Cd@NA=\dimen108
+\Cd@OA=\dimen109
+\Cd@tA=\count96
+\Cd@uA=\count97
+\Cd@MA=\dimen110
+\Cd@@A=\box26
+\Cd@gG=\count98
+\Cd@KC=\count99
+\Cd@sG=\dimen111
+\Cd@nC=\dimen112
+\Cd@NH=\dimen113
+\Cd@qE=\dimen114
+\Cd@@I=\dimen115
+\PileSpacing=\dimen116
+\Cd@hA=\dimen117
+\Cd@kA=\dimen118
+\Cd@TB=\dimen119
+\DiagramCellHeight=\dimen120
+\DiagramCellWidth=\dimen121
+\MapShortFall=\dimen122
+\Cd@cA=\dimen123
+\rh+:>=\box27
+\rt+:<=\box28
+\dh+:>=\box29
+\dt+:<=\box30
+\rt+:>=\box31
+\rh+:<=\box32
+\dt+:>=\box33
+\dh+:<=\box34
+\Cd@EE=\toks14
+\Cd@BE=\toks15
+\Cd@RA=\count100
+\Cd@wD=\toks16
+\Cd@GE=\toks17
+\Cd@AE=\toks18
+\Cd@CE=\toks19
+\Cd@@E=\toks20
+\Cd@FE=\toks21
+\Cd@yD=\toks22
+
+because this one expired in July 1995!)
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+! .
+ ...                                              
+                                                  
+l.28 \newfont{\eufm}{e
+                      ufm10}
+? 
+\c@Algorithm=\count101
+\c@Proposition=\count102
+\c@Remark=\count103
+(kdv.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+ [1
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 79.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 79.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 79.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 79.
+ (/usr/local/lib/tex/inputs/Ulasy.fd
+File: Ulasy.fd 1995/03/18 v2.2aLaTeX symbol font definitions
+) [0] (kdv.toc)
+\tf@toc=\write4
+ [1
+
+]
+\c@Definition=\count104
+
+Chapter 1.
+
+LaTeX Warning: Citation `SR94' on page 2 undefined on input line 86.
+
+[2
+
+]
+Chapter 2.
+
+LaTeX Warning: Citation `SR94' on page 3 undefined on input line 101.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 102.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 102.
+[3
+
+] [4] [5]
+Chapter 3.
+\c@Theorem=\count105
+
+LaTeX Warning: Citation `SR94' on page 6 undefined on input line 265.
+
+[6
+
+] [7]
+
+LaTeX Warning: Reference `SecCons' on page 8 undefined on input line 360.
+
+[8] [9]
+Chapter 4.
+
+! LaTeX Error: Environment diagram undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+! .
+ ...                                              
+                                                  
+l.442 \begin{diagram}
+                     
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.443 \Yp
+         \otimes (\bigwedge_{p-1}^{q-1} \cY_\infty)&\pile{\rTo^{d_h} \\
+? x
+ 
+Here is how much of TeX's memory you used:
+ 1232 strings out of 3462
+ 10741 string characters out of 49657
+ 55581 words of memory out of 262141
+ 4009 multiletter control sequences out of 9500
+ 22795 words of font info for 85 fonts, out of 72000 for 255
+ 14 hyphenation exceptions out of 607
+ 20i,8n,22p,258b,364s stack positions out of 300i,40n,60p,3000b,4000s
+Output written on kdv.dvi (11 pages, 23352 bytes).

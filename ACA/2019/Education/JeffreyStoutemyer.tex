@@ -1,0 +1,31 @@
+% This file should be rename with the speaker's last name. (e.g : smith)
+
+% Write the author names in the order you wish them to appear
+% and underline the one who will give the talk.
+
+% Only the speaker's email address is required.
+
+\begin{abstract_online}{The importance of being continuously continuous}{%
+        \underline{David Jeffrey}$^{1}$, \underline{David Stoutemyer}$^{2}$}{[djeffrey@uwo.ca; dstout@hawaii.edu]
+        }{%
+        $^1$ ORCCA, University of Western Ontario, London, Ontario, Canada\newline{}$^2$ Computer Science, University of Hawaii, Hawaii, USA}
+
+We discuss two forms of continuity in the context of integration.
+
+The fundamental theorem of calculus requires that the expression for the integral must be continuous on the interval of interest. Computer Algebra systems, however, do not always co-operate with this requirement. Given an integrand that is continuous on an interval, a computer algebra system may not return an expression that is also continuous on the interval. We show how this can happen, how it can be repaired [1], and speculate on why it has not been.
+
+The other type of continuity refers to continuity with respect to parameters. Consider calculus's most famous integral:
+
+\[ \int x^n\, dx = \frac{x^{n+1}}{n+1} \ .\]
+
+When n=-1, this expression breaks down, but a valid integral still exists, namely log(x). This can be regarded as a discontinuity in the parameter n. There are many similar integrals whose standard expressions contain parametric discontinuities. We show how such integrals can be made parametrically continuous [2], and demonstrate a program that does this.
+
+\textbf{Keywords} \newline{} Integration, Continuity, Kahanian
+
+\textbf{References} \newline{}
+% Model for references to books.
+[1] \textsc{D.J. Jeffrey}, The importance of being continuous. \emph{Mathematics magazine}, \textbf{67}, 294 - 300, 1994. \newline{}
+%  Model for references to articles
+[2] \textsc{W. Kahan}, Personal communication. \newline{}
+%  Model for references to proceedings.
+\end{abstract_online}

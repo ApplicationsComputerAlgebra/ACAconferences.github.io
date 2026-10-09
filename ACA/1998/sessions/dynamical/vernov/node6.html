@@ -1,0 +1,894 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The approximate solution of system&nbsp;(5)</TITLE>
+<META NAME="description" CONTENT="The approximate solution of system&nbsp;(5)">
+<META NAME="keywords" CONTENT="vernov">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="vernov.css">
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html82"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html80"
+ HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html74"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html83"
+ HREF="node7.html">The exact solution of</A>
+<B> Up:</B> <A NAME="tex2html81"
+ HREF="node3.html">The standing wave solutions</A>
+<B> Previous:</B> <A NAME="tex2html75"
+ HREF="node5.html">The condition of existence</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00033000000000000000">
+ The approximate solution of system&nbsp;(5)</A>
+</H2>
+
+<P>
+This system of equations is very difficult to solve. On the one hand, all
+<I>R</I><SUB><I>jj</I></SUB> are infinite series and the number of equations is infinite too.
+ On the other hand, each equation of this system is a nonlinear one. We
+ have restricted ourselves to finding a particular solution. To simplify
+ calculations we assume that the function 
+<!-- MATH: $\varphi_0^{\vphantom{+}}(x,\tilde
+t)$ -->
+<IMG
+ WIDTH="69" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\varphi_0^{\vphantom{+}}(x,\tilde t)$">
+contains only odd harmonics. Our goal is to find a
+real solution and we seek 
+<!-- MATH: $c_j^{\vphantom{+}}\in\hbox{\rm I\hskip-2pt\bf R}$ -->
+<IMG
+ WIDTH="66" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.gif"
+ ALT="$c_j^{\vphantom{+}}\in\hbox{\rm I\hskip-2pt\bf R}$">.
+
+<P>
+To find an approximate solution we apply the Galerkin method:
+cut off higher diagonal harmonics 
+<!-- MATH: $\forall j>N$ -->
+<IMG
+ WIDTH="70" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.gif"
+ ALT="$\forall j>N$">
+:
+
+<!-- MATH: $c_{2j-1}^{\vphantom{+}}=0$ -->
+<IMG
+ WIDTH="83" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.gif"
+ ALT="$c_{2j-1}^{\vphantom{+}}=0$">
+and seek an approximation for
+ 
+<!-- MATH: $\varphi_0^{\vphantom{+}}(x,\tilde t)$ -->
+<IMG
+ WIDTH="69" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\varphi_0^{\vphantom{+}}(x,\tilde t)$">
+in the following form
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\varphi_0^{\vphantom{+}}(x,\tilde t)=a_{1}^{\vphantom{+}}
+\left\{\sum_{j=1}^{N}
+c_{2j-1}^{\vphantom{+}}\sin((2j-1)x)\sin((2j-1)\tilde t)\right\}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="454" HEIGHT="69"
+ SRC="img52.gif"
+ ALT="\begin{displaymath}\varphi_0^{\vphantom{+}}(x,\tilde t)=a_{1}^{\vphantom{+}}
+\l...
+...2j-1}^{\vphantom{+}}\sin((2j-1)x)\sin((2j-1)\tilde t)\right\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+We have obtained the finite system of  nonlinear equations, with the
+number of equations three times as mush as that of the variables.
+We solve the first <I>N</I> equations and substitute the obtained values in the
+other equations. The system of the <I>N</I> leading nonlinear equations can be
+solved, using standard procedures of the computer algebra system <B>REDUCE</B>: the <B>SOLVE</B> operator and the Groebner basis package&nbsp;[<A
+ HREF="node11.html#123">15</A>,<A
+ HREF="node11.html#124">16</A>].
+The <B>SOLVE</B> operator (in "on rounded" mode) round off numbers with accuracy
+
+<!-- MATH: $\delta=10^{-11}$ -->
+<IMG
+ WIDTH="87" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img53.gif"
+ ALT="$\delta=10^{-11}$">
+(the system&nbsp;(5) is too difficult to be solved in "off
+rounded" mode).
+We admit that the
+system of the first <I>N</I> equations is solved if for all <IMG
+ WIDTH="59" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$j\leq N$">
+the
+inequalities 
+<!-- MATH: $|R_{jj}({\bf c})|< \delta$ -->
+<IMG
+ WIDTH="106" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\vert R_{jj}({\bf c})\vert< \delta$">
+are true. We also admit that
+ the value of <I>N</I> is sufficient to solve system&nbsp;(5) if for all  
+<!-- MATH: $j\in
+\hbox{\cal I\hskip-2pt\bf N}$ -->
+<IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$j \in
+\hbox{\cal I\hskip-2pt\bf N}$">
+the inequalities 
+<!-- MATH: $|R_{jj}({\bf c})|< \delta$ -->
+<IMG
+ WIDTH="106" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\vert R_{jj}({\bf c})\vert< \delta$">
+are true.
+
+<P>
+Using the <B>SOLVE</B> operator and computer with 128M bytes
+operating memory (RAM) we have solved the system&nbsp;(5) only for <I>N</I>&lt;5, but
+due to a short program (see Appendix) we have found a particular solution for
+any <I>N</I>&lt;50 and obtained that the minimal sufficient value of <I>N</I> for
+
+<!-- MATH: $\delta=10^{-11}$ -->
+<IMG
+ WIDTH="87" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img53.gif"
+ ALT="$\delta=10^{-11}$">
+is <I>N</I>=8 and that the value of the frequency is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\omega_1^{\vphantom{+}}=0.282680034541a_1^2.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="199" HEIGHT="36"
+ SRC="img56.gif"
+ ALT="\begin{displaymath}\omega_1^{\vphantom{+}}=0.282680034541a_1^2.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+We also have found
+numerical values of the fifteen leading Fourier coefficients of
+ 
+<!-- MATH: $\varphi_0^{\vphantom{+}}(x,\tilde t)$ -->
+<IMG
+ WIDTH="69" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\varphi_0^{\vphantom{+}}(x,\tilde t)$">.
+The obtained values of
+
+<!-- MATH: $c_j^{\vphantom{+}}$ -->
+<IMG
+ WIDTH="22" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$c_j^{\vphantom{+}}$">
+are very close to the values of the corresponding
+terms of the following finite sequence:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\bf d}=\{
+d_{2j-1}^{\vphantom{+}}=\frac{f_{2j-1}^{\vphantom{+}}}
+  {f_1^{\vphantom{+}}}\mbox{, \ where \  \  } { }
+f_{2j-1}^{\vphantom{+}}\equiv\frac{q^{j-1/2}}{1+q^{2j-1}}; {} \;\;{ }
+  d_{2j}^{\vphantom{+}}=0 ; { } \ \;{ } j<23 \},
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="569" HEIGHT="58"
+ SRC="img58.gif"
+ ALT="\begin{displaymath}{\bf d}=\{
+d_{2j-1}^{\vphantom{+}}=\frac{f_{2j-1}^{\vphantom...
+...}}; {} \;\;{ }
+d_{2j}^{\vphantom{+}}=0 ; { } \ \;{ } j<23 \},
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+with 
+<!-- MATH: $q=0.0142142623201$ -->
+<I>q</I>=0.0142142623201. It is easy to verify that substitution
+ of this finite sequence gives
+ <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\forall  j\in\hbox{\cal I\hskip-2pt\bf N}\mbox{ \ \ : \ \ }|R_{jj}({\bf d})|<10^{-12}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="256" HEIGHT="37"
+ SRC="img59.gif"
+ ALT="\begin{displaymath}\forall j\in\hbox{\cal I\hskip-2pt\bf N}\mbox{ \ \ : \ \ }\vert R_{jj}({\bf d})\vert<10^{-12}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+In other words, the finite sequence  <IMG
+ WIDTH="18" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.gif"
+ ALT="${\bf d}$">is an approximate solution of system&nbsp;(5).
+These numerical calculations help to find the analytical form of
+
+<!-- MATH: $\varphi_0^{\vphantom{+}}(x,\tilde t)$ -->
+<IMG
+ WIDTH="69" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\varphi_0^{\vphantom{+}}(x,\tilde t)$">.
+The following
+table illustrates this interesting result:
+
+<P>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER">
+<!-- MATH: $j^{\vphantom{+}}$ -->
+<IMG
+ WIDTH="16" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.gif"
+ ALT="$j^{\vphantom{+}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $c_{j_{\vphantom{j}}}^{\vphantom{+}}$ -->
+<IMG
+ WIDTH="22" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$c_{j_{\vphantom{j}}}^{\vphantom{+}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $R_{jj}({\bf c})$ -->
+<IMG
+ WIDTH="60" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.gif"
+ ALT="$R_{jj}({\bf c})$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $d_{j_{\vphantom{j}}}^{\vphantom{+}}$ -->
+<IMG
+ WIDTH="23" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$d_{j_{\vphantom{j}}}^{\vphantom{+}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $R_{jj}({\bf d})$ -->
+<IMG
+ WIDTH="62" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.gif"
+ ALT="$R_{jj}({\bf d})$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+1</TD>
+<TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1^{\vphantom{+}}$ -->
+<IMG
+ WIDTH="16" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.gif"
+ ALT="$1^{\vphantom{+}}$"></TD>
+<TD ALIGN="CENTER">0</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+3</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $\;1.44162661711\times 10^{-2^{\vphantom{+}}}\;$ -->
+<IMG
+ WIDTH="203" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="$\;1.44162661711\times 10^{-2^{\vphantom{+}}}\;$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $3.5\times
+10^{-12}$ -->
+<IMG
+ WIDTH="101" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$ 3.5\times
+10^{-12}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $\;1.44162661711\times 10^{-2^{\vphantom{+}}}\;$ -->
+<IMG
+ WIDTH="203" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="$\;1.44162661711\times 10^{-2^{\vphantom{+}}}\;$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $-
+8.0\times 10^{-14}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$ -
+8.0\times 10^{-14}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+5</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $2.04917177408\times 10^{-4^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="192" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.gif"
+ ALT="$2.04917177408\times 10^{-4^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $2.1\times 10^{-12}$ -->
+<IMG
+ WIDTH="101" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.gif"
+ ALT="$ 2.1\times 10^{-12}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $2.04917177419\times 10^{-4}$ -->
+<IMG
+ WIDTH="191" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.gif"
+ ALT="$2.04917177419\times 10^{-4}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 3.4\times 10^{-15}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="$ - 3.4\times 10^{-15}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+7</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $2.91274649724\times 10^{-6^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="192" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.gif"
+ ALT="$2.91274649724\times 10^{-6^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $7.8\times 10^{-12}$ -->
+<IMG
+ WIDTH="101" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.gif"
+ ALT="$ 7.8\times 10^{-12}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $2.91274651543\times 10^{-6}$ -->
+<IMG
+ WIDTH="191" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.gif"
+ ALT="$2.91274651543\times 10^{-6}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 9.7\times 10^{-17}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.gif"
+ ALT="$- 9.7\times 10^{-17}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+9</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $4.14025418115\times 10^{-8^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="192" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.gif"
+ ALT="$4.14025418115\times 10^{-8^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $8.3\times 10^{-13}$ -->
+<IMG
+ WIDTH="101" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.gif"
+ ALT="$ 8.3\times 10^{-13}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $4.14025430425\times 10^{-8}$ -->
+<IMG
+ WIDTH="191" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.gif"
+ ALT="$4.14025430425\times 10^{-8}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 2.3\times 10^{-18}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.gif"
+ ALT="$- 2.3\times 10^{-18}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+11</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $5.88506592014\times 10^{-10^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="199" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.gif"
+ ALT="$5.88506592014\times 10^{-10^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1.0\times
+10^{-14}$ -->
+<IMG
+ WIDTH="101" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.gif"
+ ALT="$ 1.0\times
+10^{-14}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $5.88506607528\times 10^{-10}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.gif"
+ ALT="$5.88506607528\times 10^{-10}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 4.9\times 10^{-20}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.gif"
+ ALT="$- 4.9\times 10^{-20}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+13</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $8.36488192079\times 10^{-12^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="199" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.gif"
+ ALT="$8.36488192079\times 10^{-12^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $4.6\times 10^{-13}$ -->
+<IMG
+ WIDTH="101" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$ 4.6\times 10^{-13}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $8.36518729655\times 10^{-12}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$8.36518729655\times 10^{-12}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 9.7\times 10^{-22}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.gif"
+ ALT="$- 9.7\times 10^{-22}$">
+<P></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+15</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1.18901919266\times 10^{-13^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="199" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.gif"
+ ALT="$1.18901919266\times 10^{-13^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $-7.8\times
+10^{-22}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img91.gif"
+ ALT="$-7.8\times
+10^{-22}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1.1890496659\times 10^{-13}$ -->
+<IMG
+ WIDTH="188" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="$1.1890496659\times 10^{-13}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 1.8\times 10^{-23}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$- 1.8\times 10^{-23}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+17</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $4.4\times 10^{-12^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="$4.4\times 10^{-12^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1.69014638629\times
+10^{-15}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.gif"
+ ALT="$1.69014638629\times
+10^{-15}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 3.4\times 10^{-25}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="$- 3.4\times 10^{-25}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+19</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $7.3\times 10^{-14^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.gif"
+ ALT="$7.3\times 10^{-14^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $2.40241840942\times
+10^{-17}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.gif"
+ ALT="$2.40241840942\times
+10^{-17}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 6.0\times 10^{-27}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.gif"
+ ALT="$- 6.0\times 10^{-27}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+21</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1.1\times 10^{-15^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.gif"
+ ALT="$1.1\times 10^{-15^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $3.41486054743\times
+10^{-19}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.gif"
+ ALT="$3.41486054743\times
+10^{-19}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 1.0\times 10^{-28}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.gif"
+ ALT="$ - 1.0\times 10^{-28}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+23</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1.7\times 10^{-17^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.gif"
+ ALT="$1.7\times 10^{-17^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $4.85397236079\times
+10^{-21}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.gif"
+ ALT="$4.85397236079\times
+10^{-21}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 1.8\times 10^{-30}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.gif"
+ ALT="$ - 1.8\times 10^{-30}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+25</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $2.4\times 10^{-19^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.gif"
+ ALT="$2.4\times 10^{-19^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $6.89956364312\times 10^{-23}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.gif"
+ ALT="$
+6.89956364312\times 10^{-23}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 3.0\times 10^{-32}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.gif"
+ ALT="$ - 3.0\times 10^{-32}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+27</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $3.3\times 10^{-21^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.gif"
+ ALT="$3.3\times 10^{-21^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $9.8072207518\times
+10^{-25}$ -->
+<IMG
+ WIDTH="188" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img110.gif"
+ ALT="$ 9.8072207518\times
+10^{-25}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 4.9\times 10^{-34}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.gif"
+ ALT="$ - 4.9\times 10^{-34}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+29</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $4.2\times 10^{-23^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.gif"
+ ALT="$4.2\times 10^{-23^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1.39402408398\times
+10^{-26}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.gif"
+ ALT="$ 1.39402408398\times
+10^{-26}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 8.1\times 10^{-36}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.gif"
+ ALT="$ - 8.1\times 10^{-36}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+31</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $5.2\times 10^{-25^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img115.gif"
+ ALT="$5.2\times 10^{-25^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1.98150240103\times 10^{-28}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img116.gif"
+ ALT="$
+1.98150240103\times 10^{-28}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 1.3\times 10^{-37}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img117.gif"
+ ALT="$- 1.3\times 10^{-37}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+33</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $5.7\times 10^{-27^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.gif"
+ ALT="$5.7\times 10^{-27^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $2.81655949163\times 10^{-30}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img119.gif"
+ ALT="$
+2.81655949163\times 10^{-30}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 2.1\times 10^{-39}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img120.gif"
+ ALT="$- 2.1\times 10^{-39}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+35</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $6.1\times 10^{-29^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$6.1\times 10^{-29^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $4.00353154544\times 10^{-32}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.gif"
+ ALT="$
+4.00353154544\times 10^{-32}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 3.4\times 10^{-41}$ -->
+<IMG
+ WIDTH="116" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.gif"
+ ALT="$- 3.4\times 10^{-41}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+37</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $6.2\times 10^{-31^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.gif"
+ ALT="$6.2\times 10^{-31^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $5.69072475939\times
+10^{-34}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img125.gif"
+ ALT="$5.69072475939\times
+10^{-34}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 5.4\times 10^{-43^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="117" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img126.gif"
+ ALT="$ - 5.4\times 10^{-43^{\vphantom{+}}}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+39</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $5.9\times 10^{-33}$ -->
+<IMG
+ WIDTH="101" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img127.gif"
+ ALT="$5.9\times 10^{-33}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $8.08894545219\times
+10^{-36}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img128.gif"
+ ALT="$8.08894545219\times
+10^{-36}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 8.5\times 10^{-45^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="117" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img129.gif"
+ ALT="$ - 8.5\times 10^{-45^{\vphantom{+}}}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+41</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $5.0\times 10^{-35}$ -->
+<IMG
+ WIDTH="101" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img130.gif"
+ ALT="$5.0\times 10^{-35}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1.14978392551\times 10^{-37}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img131.gif"
+ ALT="$ 1.14978392551\times 10^{-37}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 1.3\times 10^{-46^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="117" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.gif"
+ ALT="$- 1.3\times 10^{-46^{\vphantom{+}}}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+43</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $3.6\times 10^{-37}$ -->
+<IMG
+ WIDTH="101" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img133.gif"
+ ALT="$ 3.6\times 10^{-37}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1.63433303287\times
+10^{-39}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img134.gif"
+ ALT="$ 1.63433303287\times
+10^{-39}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 2.1\times 10^{-48^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="117" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img135.gif"
+ ALT="$ - 2.1\times 10^{-48^{\vphantom{+}}}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER"><P>
+45</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1.7\times 10^{-39^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img136.gif"
+ ALT="$ 1.7\times 10^{-39^{\vphantom{+}}}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $2.32308384477\times 10^{-41}$ -->
+<IMG
+ WIDTH="198" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img137.gif"
+ ALT="$
+2.32308384477\times 10^{-41}$"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $- 1.6\times 10^{-49^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="117" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img138.gif"
+ ALT="$- 1.6\times 10^{-49^{\vphantom{+}}}$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER">47</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $1.4\times 10^{-50^{\vphantom{+}}}$ -->
+<IMG
+ WIDTH="101" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img139.gif"
+ ALT="$1.4\times 10^{-50^{\vphantom{+}}}$"></TD>
+</TR>
+</TABLE></DIV>
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html82"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html80"
+ HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html74"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html83"
+ HREF="node7.html">The exact solution of</A>
+<B> Up:</B> <A NAME="tex2html81"
+ HREF="node3.html">The standing wave solutions</A>
+<B> Previous:</B> <A NAME="tex2html75"
+ HREF="node5.html">The condition of existence</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

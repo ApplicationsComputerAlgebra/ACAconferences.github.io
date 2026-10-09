@@ -1,0 +1,13 @@
+Title:  Solving a RLC Circuit using Convolution with DERIVE for Windows
+
+Michel Beaudin
+
+Abstract:  It is quite easy with a Computer Algebra System to use a "Dsolve"
+command in order to find, for example, the capacitor voltage in a RLC circuit:
+we only have to solve the corresponding differential equation.  We will present
+a method using convolution: this is important because understanding convolution
+of signals is a difficult concept for students.  We will consider an RLC
+circuit with zero initial conditions and with variable electromotive force
+(emf): this is a good example of a linear, time-invariant (LTI) system.  And,
+if the input emf is periodic, the steady-state output is also periodic: this
+could be used to introduce Fourier series!

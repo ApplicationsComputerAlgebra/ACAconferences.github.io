@@ -1,0 +1,135 @@
+.typography a {
+  /*color:#467aa7;*/
+  font-weight:bold;
+  text-decoration:none;
+  background-color:inherit;
+}
+.typography a:hover {
+  /*color:#2a5a8a;*/
+  text-decoration:none;
+  background-color:inherit;
+}
+.typography a img {
+  border:none;
+}
+.typography p {
+  padding:0 0 1.6em 0;
+}
+.typography p form {
+  margin-top:0;
+  margin-bottom:20px;
+}
+.typography #header h1 {
+  /*padding:35px 0 0 20px;*/
+  padding:20px 0 0 20px;
+  font-size:3em;
+  /*line-height:3em;*/
+  background-color:inherit;
+  color: black; /*#ffffff;*/
+  /*letter-spacing:-2px;*/
+  font-weight:bold;
+  font-family: serif;
+}
+.typography #header h2, .typography #header h3 {
+  /*margin:10px 0 0 20px;*/
+  margin:0 0 0 20px;
+  font-size:1.4em;
+  background-color:inherit;
+  color: black; /*#f0f2f4;*/
+  /*letter-spacing:-1px;*/
+  font-weight:normal;
+  font-family: serif;
+}
+.typography #navigation li a {
+  display:block;
+  padding:0 10px;
+  font-size:1.3em;
+  font-weight:normal;
+  text-transform:uppercase;
+  text-decoration:none;
+  background-color:inherit;
+  color: black; /*#ffffff;*/
+  /*text-shadow: #101010 2px 2px 3px;*/
+}
+* html #navigation a {
+  width:1%;
+}
+.typography #navigation li.current,
+.typography #navigation li.current a,
+.typography #navigation a:hover
+{
+  background: #4169E1; /*SandyBrown; /*#80b0da;*/
+  color:#ffffff;
+  text-decoration:none;
+}
+.typography #content h1 {
+  margin-bottom: 16px;
+  font-size:26px;
+  line-height: 30px;
+  letter-spacing:-1px;
+  /*text-shadow: #aaaaaa 2px 2px 3px;*/
+}
+.typography #content h2 {
+  display:block;
+  margin:20px 0 16px 0;
+  font-size:1.7em;
+  font-weight:bold;
+  letter-spacing:-1px;
+  color:#505050;
+  background-color:inherit;
+  /*text-shadow: #aaaaaa 2px 2px 3px;*/
+}
+.typography #content h2 a {
+  font-weight:normal;
+}
+.typography #content h3 {
+  margin:0 0 5px 0;
+  font-size:1.4em;
+  letter-spacing:-1px;
+}
+.typography #content a:hover, .typography #subcontent a:hover {
+  text-decoration:underline;
+}
+.typography #content ul, .typography #content ol {
+  margin:0 5px 16px 35px;
+}
+.typography #subcontent h2 {
+  display:block;
+  margin:0 0 15px 0;
+  font-size:1.6em;
+  font-weight:normal;
+  text-align:left;
+  letter-spacing:-1px;
+  color:#505050;
+  background-color:inherit;
+  /*text-shadow: #aaaaaa 2px 2px 3px;*/
+}
+.typography #subcontent p {
+  margin:0 0 16px 0;
+  font-size:0.9em;
+}
+.typography .menublock li a {
+  font-weight:bold;
+  text-decoration:none;
+}
+.typography .menublock li a:hover {
+  text-decoration:none;
+}
+.typography .menublock li ul a {
+  font-weight:normal;
+}
+.typography #footer p {
+  padding:0;
+  margin:0;
+  text-align:center;
+}
+.typography #footer a {
+  color:#f0f0f0;
+  background-color:inherit;
+  font-weight:bold;
+}
+.typography #footer a:hover {
+  color:#ffffff;
+  background-color:inherit;
+  text-decoration: underline;
+}

@@ -1,0 +1,29 @@
+@charset "iso-8859-1";
+
+BODY {	FONT-FAMILY: Verdana; 
+		FONT-SIZE: 13;
+		scrollbar-face-color: #A3ABBF; 
+		scrollbar-shadow-color: #2E5E97; 
+		scrollbar-highlight-color: #2E5E97; 
+		scrollbar-3dlight-color: #FFFFFF; 
+		scrollbar-darkshadow-color: #2E5E97; 
+		scrollbar-track-color: #FFFFFF; 
+		scrollbar-arrow-color: #2E5E97;}
+
+/* Les liens */
+A {
+	FONT-SIZE: 13;
+	font-weight: bold;
+}
+A:visited {color: #7A6051; text-decoration: none}
+A:hover {TEXT-DECORATION: underline; COLOR: #7A6051}
+A:link {TEXT-DECORATION: none; COLOR: #7A6051}
+
+/* Tableaux */
+TD {FONT-SIZE: 12; font-family: Verdana;}
+
+/* Titres */
+H1 {FONT-SIZE: 20; COLOR: #7A6051; FONT-FAMILY: Verdana; FONT-WEIGHT: Bold}
+H2 {FONT-SIZE: 18; COLOR: #7A6051; FONT-FAMILY: Verdana; FONT-WEIGHT: Bold}
+H3 {FONT-SIZE: 16; COLOR: #7A6051; FONT-FAMILY: Verdana; FONT-WEIGHT: Bold}
+H4 {FONT-SIZE: 13; COLOR: #7A6051; FONT-FAMILY: Verdana; FONT-WEIGHT: Bold}

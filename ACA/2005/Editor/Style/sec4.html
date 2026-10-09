@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+    "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+  <head>
+    <meta $Jssac: sec4.html,v 1.5 2007/01/15 05:41:23 saito Exp $>
+    <meta http-equiv="Content-Type" CONTENT="text/html;CHARSET=euc-jp">
+    <meta http-equiv="Content-Style-Type" CONTENT="text/css">
+    <link rel="stylesheet" href="/jssac.css" type="text/css">
+    <meta name="Author" content="Tomokatsu SAITO">
+    <title>Jssac style rules 1</title>
+  </head>
+  <body class="contri">
+  <hr>
+  <h2 style="text-align:center">
+    定理環境の利用法
+  </h2>
+  <hr>
+  利用法は，
+  <table align=center rule="none" class="src">
+    <td><code>\begin{環境名}<br>
+    定理等の本体<br>
+    \end{環境名}<br>
+    </code>
+  </table>
+  です．環境としては，
+  <center><table border="3" cellspacing="2" cellpadding="2">
+  <caption> <h2 align="center">定理環境の種類</h2></caption>
+  <tbody><tr>
+  <th>環境</th><th>環境名</th><th>出力される名称</th><th>英語の場合</th>
+  </tr>
+  <tr>
+  <td>定理</td><td>Th</td><td>定理</td><td>Theorem</td>
+  </tr>
+  <tr>
+  <td>命題</td><td>Pro</td><td>命題</td><td>Proposition</td>
+  </tr>
+  <tr>
+  <td>補題</td><td>Lem</td><td>補題</td><td>Lemma</td>
+  </tr>
+  <tr>
+  <td>系</td><td>Cor</td><td>系</td><td>Corllary</td>
+  </tr>
+  <tr>
+  <td>定義</td><td>Def</td><td>定義</td><td>Definition</td>
+  </tr>
+  <tr>
+  <td>仮定</td><td>Hyp</td><td>仮定</td><td>Hypothesis</td>
+  </tr>
+  <tr>
+  <td>記法</td><td>Nte</td><td>記法</td><td>Notation</td>
+  </tr>
+  <tr>
+  <td>注意</td><td>Rem</td><td>注意</td><td>Remark</td>
+  </tr>
+  <tr>
+  <td>問題</td><td>Prob</td><td>問題</td><td>Problem</td>
+  </tr>
+  <tr>
+  <td>例</td><td>Exp</td><td>例</td><td>Example</td>
+  </tr>
+  <tr>
+  <td>アルゴリズム</td><td>Alg</td><td>アルゴリズム</td><td>Algorithm</td>
+  </tr>
+  <tr>
+  <td>予想</td><td>Cnj</td><td>予想</td><td>Conjecture</td>
+  </tr>
+  </tbody></table></center>
+  <p>です．定理等の番号は，原稿の先頭からの一連番号になります．実例は
+  <p>
+  <table align=center class="src"><td><code>
+    \begin{Th}[E.Galois]<br>
+    素数次の既約方程式が累乗根で解けるための必要十分条件は，<br>
+    すべての根がそれらの中の任意の2つの有理式であることである．<br>
+    \end{Th} <br>
+  </code></td></table>
+  <p>
+  また証明を記載するために Proof 環境を同時に定義してあります．
+  使い方は，
+  <p>
+  <table align=center class="src"><td><code>
+    \begin{Proof}<br>
+      証明を書く<br>
+    \end{Proof}<br>
+  </code></td></table>
+  <p>
+  となります．証明と Proof は環境によって自動的に変更されます．
+  <p>
+  <hr width="60%">
+  <table align=center rules="none">
+    <tr><td align=center>
+      <a href="sec3.html">オプションの利用</a>&nbsp;
+    </td><td align=center>
+      <a href="sec5.html">グラフィックス環境</a>&nbsp;
+    </td><td align=center>
+      <a href="index.html">作成要項</a>&nbsp;
+    </td><td align=center>
+      <a href="/TopPage.html">JssacHome</a>
+    </td></tr>
+  </table>
+  <hr>
+  <address><a href="mailto:webmaster@jssac.org">webmaster@jssac.org</a>
+  </address>
+  <pre>
+  Last modified: $Jssac: sec4.html,v 1.5 2007/01/15 05:41:23 saito Exp $
+  </pre>
+  </body>
+</html>

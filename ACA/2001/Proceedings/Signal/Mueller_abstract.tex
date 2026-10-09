@@ -1,0 +1,153 @@
+\documentclass{llncs}
+
+\usepackage{makeidx}  % allows for indexgeneration
+\usepackage{epsfig}
+
+\def\T{{\mathcal T}}
+\def\F{{\mathcal F}}
+\def\D{{\mathcal D}}
+\def\Int{{\rm Int}}
+\def\deg{{\rm deg}}
+\def\mod{{\rm \,mod\,}}
+\def\DFT{{\mathrm{DFT}}}
+
+\def\Z{{\bbbz}}
+\def\Q{{\bbbq}}
+\def\C{{\bbbc}}
+\def\Irr{{\mathrm{Irr}}}
+\def\Irrep{{\mathrm{Irrep}}}
+\def\Trace{{\mathrm{Trace}}}
+\def\ind{{\uparrow}}
+\def\res{{\downarrow}}
+
+\newcommand{\NameCS}{SUGAR}
+
+\begin{document}
+
+\title{\NameCS\, - A Computer System for 
+	\underline{SU}persolvable \underline{G}roups and 
+	\underline{A}lgorithmic \underline{R}epresentation Theory} 
+
+\titlerunning{FFTs}  
+	
+\author{Meinard M\"uller \and Michael Clausen}
+
+\authorrunning{Michael Clausen et al.}   
+
+\institute{Universit\"at Bonn, Institut f\"ur Informatik V,\\
+	   R\"omerstr. 164, D-53117 Bonn, Germany\\ 
+	   \email{meinard@cs.uni-bonn.de, clausen@cs.uni-bonn.de}}
+
+\maketitle 
+
+
+%\begin{abstract}
+%\end{abstract}
+
+\section*{Extended Abstract}
+
+Let $G$ be a finite group of order $n$. By Wedderburn's Theorem, the 
+complex group algebra $\C G$ is isomorphic to an algebra of block 
+diagonal matrices:
+$\C G\simeq \oplus_{k=1}^h \C^{d_k\times d_k}$. 
+Every such isomorphism $D$, a so-called
+discrete Fourier transform of $\C G$, consists of a full set of pairwise 
+inequivalent irreducible  representations $D_k$ of $\C G$. 
+Concerning these generalized DFTs there are two fundamental
+computational problems: 
+\begin{itemize}
+\item [(1)] How can a DFT of $G$ be {\em generated efficiently}?
+\item [(2)] Is there a {\em suitable} DFT of $G$ which can be 
+    {\em performed efficiently}?
+\end{itemize}
+In the case of supersolvable groups given by 
+consistent power-commutator presentations (pc-presentations)
+Baum and Clausen have presented algorithms for both computational
+problems which are essentially optimal 
+(see \cite{Ba91},\cite{BaCl94},\cite{ClBa93},\cite{ClMu99}).
+
+This paper presents the computer system \NameCS\,
+- {\bf SU}persolvable {\bf G}roups and {\bf A}lgorithmic 
+{\bf R}epresentation theory -
+which realizes both algorithms, the fast generation of DFTs as well as the
+fast evaluations of DFTs (FFTs) for the class of 
+finite supersolvable groups. For the first time, this 
+class of generalized fast Fourier transforms is made 
+accessible  to applications in fields such as 
+digital signal processing.
+An overview of the overall system is presented in
+the Fig. \ref{fig_system}. The main features of this system
+are as follows:
+
+\begin{itemize}
+\item [$\bullet$] A library of several thousand consistent 
+	pc-presentations of 
+	finite supersolvable groups $G$ of different order $N=|G|$
+	has been constructed.    
+	These pc-presentations are the input data for the
+	DFT-generation algorithm. Every pc-presentation needs
+	$O(\log^3N)$ bytes of storage. 
+\item [$\bullet$] The DFT-generation algorithm constructs from a given 
+	pc-presentation a trans\-ver\-sal $\Irr(G,\T)$ of 
+	$\T$-adapted pairwise inequivalent irreducible 
+	representations of $G$. This can be done 
+	in time $O(N\log^2 N)$.
+	The DFT-data (matrices of the representations in $\Irr(G,\T)$) 
+	are stored in a compressed form (in a data format based on 
+	the character graph of $G$) which only needs $O(N)$ bytes of 
+	storage (even though the corresponding DFT-matrix is
+	of size $N\times N$). Furthermore, it turns out that all
+	operations can be done symbolically over the additive group 
+	$\Z_e$, where $e$ denotes the exponent of $G$.
+\item [$\bullet$] The evaluation of the DFT (FFT) on a complex signal $f\in \C^N$
+	as well as the reconstruction of the signal (inverse FFT, IFFT) 
+	from its spectral components can be done in $O(N\log N)$. 
+	These algorithms are implemented in an
+	iterative way, so that the memory requirements are 
+	at most $O(N)$ complex numbers at any time.
+\end{itemize}
+All algorithms have been implemented in the programming language
+C++. Numerous tests have shown that the actual running times
+reflect very well the theoretical complexity bounds. 
+In addition, based on this computer system, generalized Fourier
+transforms have been applied to digital signal processing. 
+Using thresholding methods, first experiments of 
+randomized signal compression have been conducted.
+
+\vspace{0.2cm}
+
+\begin{figure}[ht]
+   	\centerline{
+\epsfig{file=system.eps, width=12.5cm}}
+    	\caption{\label{fig_system} \NameCS\, - 
+    	{\bf SU}persolvable {\bf G}roups and {\bf A}lgorithmic 
+	{\bf R}epresentation theory. 
+	A computer system for efficient generation and
+	evaluation of generalized discrete Fourier transforms
+	for the class of finite supersolvable groups.}
+\end{figure}
+
+
+\begin{thebibliography}{}
+
+\bibitem{Ba91}
+Baum, U.: Existence and efficient construction of fast Fourier transforms for supersolvable groups.
+Computational Complexity, {\bf 1} (1991), 235--256.
+
+\bibitem{BaCl94}
+Baum, U., Clausen, M.:
+Computing irreducible representations of supersolvable groups.
+Mathematics of Computation, Volume {\bf 63}, Number 207
+(1994) 351--359.
+
+\bibitem{ClBa93}
+Clausen, M., Baum, U.: Fast Fourier Transforms. 
+BI-Wissenschaftsverlag, Mann\-heim, 1993.
+
+\bibitem{ClMu99}
+Clausen, M., M\"uller, M. (1999). 
+A fast program generator of FFTs.
+Proceedings AAECC-13, Honolulu, LNCS {\bf 1719}, 29--42.
+
+\end{thebibliography}
+\end{document}

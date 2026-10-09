@@ -1,0 +1,19 @@
+Title: "Applications of Computer Algebra to Robotics"
+Organizer:   Peter Kovács,      kovacs@cs.tu-berlin.de
+
+
+Abstract:
+The primary area of applications of CA-methods in robotics is mechanism
+kinematics. Its objective is to investigate the relationship between the
+joint(value)s of arbitrary mechanisms and the pose (position and
+orientation) of its bodies in space. Non-linear systems of equations
+containing trigonometric functions must be solved to calculate all sets of
+joint values that take the hand of a given robot to a desired pose in space
+or to determine the pose of flight-simulator-type platforms for given leg
+lengths. Industry needs symbolic solutions of these problems due to high
+speed requirements. The session concentrates on symbolic methods for
+solving complex mechanisms efficiently and on the specific algebraic
+problems encountered.
+
+If you wish to present a lecture in this session, please submit an abstract
+including title and authors to the organizer.

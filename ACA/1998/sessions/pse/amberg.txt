@@ -1,0 +1,52 @@
+
+
+"NUMERICAL SIMULATIONS BY SYMBOLIC COMPUTATIONS?"
+
+Gustav Amberg
+
+Department of Mechanics, KTH, 100 44 Stockholm, Sweden
+
+
+Many problems in science and engineering are formulated as systems of
+partial differential equations. Time dependent PDEs in two and three
+dimensions can describe for instance different kinds of fluid flow
+problems, heat transfer, deformable bodies, model equations for phase
+transformations, etc. To analyze a problem then requires some means to
+simulate the mathematical model. That requires some kind of coding, either
+of a completely new program for the particular application, or adaptation
+of existing commercial software. Both have drawbacks, in that many wheels
+have to be reinvented when a specialized code is written, and that it is
+hard to have the kind of control over the model and solution procedure that
+is often necessary, when using a commercial software.
+
+In our work on modelling of phase change, fluid flow and heat transfer in
+materials processes we need to have full control of the equations, boundary
+conditions etc. that make up our mathematical model. At the same time we
+must make the simulations reasonably efficient in order to reach to
+interesting applications. In answer to these demands, we have developed a
+toolbox, ('femLego') in Maple which can be used to generate complete Finite
+Element codes in 1, 2 or 3 dimensions, from a symbolic specification of the
+mathematical problem.
+
+The specification of the model, i.e. PDEs, boundary and initial conditions,
+is entered into Maple, and from this all problem dependent parts of a
+fortran FEM code are generated. The user may choose from different elements
+in one to three dimensions, different numerical linear algebra routines
+etc, to set up a solution algorithm. In its present state, the software is
+geared towards timedependent problems and uses unstructured grids. Adaptive
+remeshing can be added. The pre- and postprocessing, i.e. mesh generation
+and plotting, is done by interfacing to other applications, such as AVS
+(Express).
+
+We have used this toolbox to create codes for the study of thermocapillary
+convection, growth of dendritic crystals, flow of viscoelastic liquids and
+much more, and we have found that it can reduce the time from idea to a
+working simulation to a matter of hours, also for quite complicated
+problems. One advantage of working inside Maple is that the Maple worksheet
+automatically provides a readable and complete documentation. Also it
+invites you to do the derivations of your problem in Maple, which can then
+immediately be used as input to the code generation commands. For example,
+when setting up an optimal control problem, the adjoint problem for the
+control is derived symbolically from the original PDEs, and then directly
+fed to the code generation commands. This reduces bugs and mistakes to an
+absolute minimum and makes it possible to try out ideas quickly.

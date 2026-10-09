@@ -1,0 +1,27 @@
+Apollonius Meets Computer Algebra
+
+    The circles of Apollonius problem is a classic geometry problem dating from
+Greek antiquity.  Although there are various generalizations and special cases,
+the main problem was to find the circle(s) tangent to three given circles in
+the plane.  Here we are concerned with higher dimensional generalizations.
+First, to find equations for a sphere tangent to four given spheres in
+three-space.  Secondly, to similarly find equations for a hypersphere tangent
+to n+1 given hyperspheres in n-dimensional space.  Thirdly, to replace some of
+these spheres with ellipsoids.
+
+   The three-dimensional problem is motivated by work in trying to compute the
+medial axis or surface (a sort of skeleton) of the space around molecules, with
+eventual medical research applications.
+
+   We will discuss computer algebra solutions based on Groebner bases and on
+Dixon resultants.
+
+
+Robert H. Lewis
+Department of Mathematics
+Fordham University
+New York
+
+Stephen Bridgett
+Queen's University
+Belfast

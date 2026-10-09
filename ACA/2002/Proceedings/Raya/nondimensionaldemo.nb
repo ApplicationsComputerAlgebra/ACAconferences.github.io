@@ -1,0 +1,681 @@
+(***********************************************************************
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used on any computer system with Mathematica 3.0,
+MathReader 3.0, or any compatible application. The data for the notebook 
+starts with the line of stars above.
+
+To get the notebook into a Mathematica-compatible application, do one of 
+the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing the 
+word CacheID, otherwise Mathematica-compatible applications may try to 
+use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+***********************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[     14255,        497]*)
+(*NotebookOutlinePosition[     14891,        520]*)
+(*  CellTagsIndexPosition[     14847,        516]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell["SetDirectory[\"DimensionalAnalysis\"];", "Input"],
+
+Cell["\<\
+<<DimensionalAnalysisDemo`
+<<Miscellaneous`Units`\
+\>", "Input"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+x:=12  Meter
+y:=3 Hour
+x+y\
+\>", "Input"],
+
+Cell[BoxData[
+    \(3\ Hour + 12\ Meter\)], "Output"]
+}, Open  ]],
+
+Cell["\<\
+To prevent operations like the one above,  there is a need for a \
+package which would automatically check expressions for their dimensional \
+homogenuity. Such a package must also include functions which allow user to \
+perform dimensional analysis of equations .  Below there is a demonstration \
+on how to perform dimensional analysis (based on Pi theorem) of an unknown \
+function provided all parameters are listed. \
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["Example from hydrodynamics", "Section"],
+
+Cell[TextData[{
+  "Consider the drop of pressure ",
+  StyleBox["p",
+    FontSlant->"Italic"],
+  " occurring as a result of friction when a  homogenous fluid of constant \
+density \[Rho] flows under steady conditions along a  straight pipe of \
+constant, circular, cross-sectional area ",
+  StyleBox["d. ",
+    FontSlant->"Italic"],
+  " The independent relevant quantities and thier dimensions  are listed \
+below:"
+}], "Text"],
+
+Cell["\<\
+Here we are not going into details to discuss what  parameters (and \
+why)  are  considered to be important for a particular problem. Interested \
+reader is referred to Massey (1986). Let us first define some conventional \
+notations used in this problem:\
+\>", "Text"],
+
+Cell[TextData["Parameters:={p, u, \[Mu], \[Rho], l, d};"], "Input"],
+
+Cell[TextData[
+"dimension[p]:=dimension[pressure]; \ndimension[u]:=dimension[velocity]; \n\
+dimension[\[Mu]] := dimension[viscosity]; \n\
+dimension[\[Rho]]:=dimension[density]; \ndimension[l]:=dimension[length]; \n\
+dimension[d]:=dimension[length];\n"], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["dimensions:=dimension[#]&/@Parameters;dimensions", "Input"],
+
+Cell[BoxData[
+    \({M\/\(L\ T\^2\), L\/T, M\/\(L\ T\), M\/L\^3, L, L}\)], "Output"]
+}, Open  ]],
+
+Cell["\<\
+ The quantity of our primary interest is pressure, so we do not \
+want it to appear in the recurring set:\
+\>", "Text"],
+
+Cell["RestrictedSet:={p, d};", "Input"],
+
+Cell[TextData[
+"According to \[CapitalPi] theorem, we start forming a recurring set  by  \
+finding parameters which involve each of the reference magnitudes from \
+CurrentBasicUnits:"], "Text"],
+
+Cell["CommonBasicUnits:=MechanicalBasicUnits; ", "Input"],
+
+Cell["\<\
+For this problem there are many ways of formulating recurring sets:\
+\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+AllRecSets:=Evaluate[FindRecurringSet[Parameters]]; AllRecSets\
+\>",
+   "Input"],
+
+Cell[BoxData[
+    \({{\[Mu], l, u}, {\[Rho], l, u}, {\[Rho], \[Mu], u}, {\[Mu], \[Rho], 
+        u}, {\[Rho], l, \[Mu]}, {\[Rho], u, \[Mu]}}\)], "Output"]
+}, Open  ]],
+
+Cell[TextData[{
+  "We can, however, indicate that we want, say, ",
+  StyleBox["l ",
+    FontSlant->"Italic"],
+  "to be in the recurring set. This is done using an options \
+ParInRecSet->{l}"
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Options[FindRecurringSet]\)], "Input"],
+
+Cell[BoxData[
+    \({ParInRecSet \[Rule] {}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(?ParInRecSet\)\)], "Input"],
+
+Cell[BoxData[
+    \("Option in FindRecurringSet to set up any parameters that must be in \
+the .reccurring set"\)], "Print"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(AllRecSets := 
+      Evaluate[FindRecurringSet[Parameters, \ ParInRecSet -> {l}]]; \ 
+    AllRecSets\)], "Input"],
+
+Cell[BoxData[
+    \({{\[Mu], l, u}, {\[Rho], l, u}, {\[Rho], l, \[Mu]}}\)], "Output"]
+}, Open  ]],
+
+Cell["\<\
+Function NondimensionalRules[] returns rules to nondimensionalize \
+all parameters for each recurring set: \
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+AllNonDimRules:=Evaluate[NondimensionalRules[AllRecSets, \
+Parameters]]; 
+AllNonDimRules\
+\>", "Input"],
+
+Cell[BoxData[
+    \({{d \[Rule] d\/l, p \[Rule] \(l\ p\)\/\(u\ \[Mu]\), 
+        \[Rho] \[Rule] \(l\ u\ \[Rho]\)\/\[Mu]}, {d \[Rule] d\/l, 
+        p \[Rule] p\/\(u\^2\ \[Rho]\), 
+        \[Mu] \[Rule] \[Mu]\/\(l\ u\ \[Rho]\)}, {d \[Rule] d\/l, 
+        p \[Rule] \(l\^2\ p\ \[Rho]\)\/\[Mu]\^2, 
+        u \[Rule] \(l\ u\ \[Rho]\)\/\[Mu]}}\)], "Output"]
+}, Open  ]],
+
+Cell[TextData[{
+  "Nondimensionalization rules are now substituted into the (unknown) \
+function for ",
+  StyleBox["p",
+    FontSlant->"Italic"],
+  " which now only depends on 5-3=2 parameters (Partonondim): "
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Partonondim:=Complement[Parameters, #]&/@AllRecSets; \
+Partonondim\
+\>", "Input"],
+
+Cell[BoxData[
+    \({{d, p, \[Rho]}, {d, p, \[Mu]}, {d, p, u}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+newrules:=AllNonDimRules[[1]];
+Eqn1:=(p==psample[Sequence@@Complement[Partonondim[[1]], {p}]]) /. newrules; \
+Eqn1\
+\>", "Input"],
+
+Cell[BoxData[
+    \(\(l\ p\)\/\(u\ \[Mu]\) == psample[d\/l, \(l\ u\ \[Rho]\)\/\[Mu]]\)], 
+  "Output"]
+}, Open  ]],
+
+Cell["\<\
+The next step is usually to find out whether any known named \
+dimensionless parameters are encountered in the expression. The first step is \
+to go from notations to the descriptions of physical quantities using \
+$ToQuantity rules. The default values of these rule are\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \($ToQuantity\)], "Input"],
+
+Cell[BoxData[
+    TagBox[
+      RowBox[{"Dispatch", "[", 
+        RowBox[{
+        \({p \[Rule] pressure, l \[Rule] length, d \[Rule] length, 
+            \[Mu] \[Rule] viscosity, u \[Rule] velocity, 
+            \[Rho] \[Rule] density}\), ",", 
+          TagBox[
+            InterpretationBox[\(-DispatchTables - \),
+              1],
+            DisplayForm]}], "]"}],
+      Function[ BoxForm`arg, 
+        ReplacePart[ 
+          HoldComplete[ 
+            Dispatch[ ProgrammingDump`dumy]], 
+          HoldComplete[ BoxForm`arg], {1, 1}, {1, 1}], {HoldAllComplete}]]], 
+  "Output"]
+}, Open  ]],
+
+Cell["\<\
+can easily be changed by a user.  Then, a set of rules for changing \
+certain combinations of physical quantities into Named dimensionless \
+paramters ($ToNamedDimensionlessPara) is  applied. Here \
+NamedDimensionlessPara includes only Reynolds number, Re.\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(arglist := Complement[Partonondim[\([1]\)], \ {p}]\  /. \ newrules; 
+    arglist\)], "Input"],
+
+Cell[BoxData[
+    \({d\/l, \(l\ u\ \[Rho]\)\/\[Mu]}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(argrules := Evaluate[RulesToDimensionlessPara[arglist]]; \ argrules\)], 
+  "Input"],
+
+Cell[BoxData[
+    \({\(l\ u\ \[Rho]\)\/\[Mu] \[Rule] Re}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(newarglist := arglist\  /. \ argrules; \ newarglist\)], "Input"],
+
+Cell[BoxData[
+    \({d\/l, Re}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(eqn1 := \((p\  /. \ newrules)\) == psample[Sequence@@newarglist]; \ eqn1
+    \)], "Input"],
+
+Cell[BoxData[
+    \(\(l\ p\)\/\(u\ \[Mu]\) == psample[d\/l, Re]\)], "Output"]
+}, Open  ]],
+
+Cell["Similarly, for two other recurring sets:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+newrules:=AllNonDimRules[[2]]; 
+arglist:=Complement[Partonondim[[2]], {p}] /. newrules; 
+argrules:=Evaluate[RulesToDimensionlessPara[arglist]]; 
+newarglist:=arglist /. argrules; 
+Eqn2:=(p /. newrules) ==psample[Sequence@@newarglist]; Eqn2
+\
+\>", "Input"],
+
+Cell[BoxData[
+    \(p\/\(u\^2\ \[Rho]\) == psample[d\/l, 1\/Re]\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+newrules:=AllNonDimRules[[3]]; 
+arglist:=Complement[Partonondim[[3]], {p}] /. newrules; 
+argrules:=Evaluate[RulesToDimensionlessPara[arglist]]; 
+newarglist:=arglist /. argrules; 
+Eqn3:=(p /. newrules)==psample[Sequence@@newarglist]; Eqn3
+\
+\>", "Input"],
+
+Cell[BoxData[
+    \(\(l\^2\ p\ \[Rho]\)\/\[Mu]\^2 == psample[d\/l, Re]\)], "Output"]
+}, Open  ]],
+
+Cell[TextData[
+"All three recurring sets and their respective solutions are equally good \
+depending on what relationships are under study. For example, if the effect   \
+of viscosity is to be studied, Eqn. 1 or 3 are rather inconvinient, as \[Mu]  \
+ appears in both Re and in nondimensional pressure. For this purpose, Eqn 2   \
+where \[Mu] only appears in Re would be better. "], "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["On cooking and dimensional analysis", "Section"],
+
+Cell["\<\
+This example is taken from the paper \"On cooking a roast\" by \
+M.S.Klamkin (SIAM Review, 1961, Vol.3(2), 167-169).
+The main aim of the Klamkin's note is to establish how the \"proper\" time of \
+cooking depends on the weight of a roast. 
+General assumptions are first that the roasts form a homogeneous isotropic \
+homothetic family; secondly, that the oven is maintained at a fixed roasting \
+temperature; thirdly, that the roasts have the same initial temperature; and \
+that the roasts are considered to be properly cooked when the center \
+temperature reaches a certain fixed temperature. So, parameters defining the \
+problem are: \
+\>", "Text"],
+
+Cell[BoxData[
+    \(\(Parameters := {l, \ c, \ \[Rho], \ t, \ \[Gamma]}; \)\)], "Input"],
+
+Cell[TextData[
+"Here c is heat capacity, \[Gamma] is thermal conductivity, \[Rho] is \
+density, l is characteristic length (e.g. diameter of the piece of roast),  \
+and t is time to cook the roast till fixed temperature \[Theta]o. "], "Text"],
+
+Cell[TextData[
+"dimension[c]:=dimension[heatcapacity]; \n\
+dimension[\[Gamma]]:=dimension[thermalconductivity]; \n\
+dimension[\[Rho]]:=dimension[density]; \ndimension[l]:=dimension[length]; \n\
+dimension[t]:=dimension[time];\n"], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["dimensions:=dimension[#]&/@Parameters;dimensions", "Input"],
+
+Cell[BoxData[
+    \({L, L\^2\/\(K\ T\^2\), M\/L\^3, T, \(L\ M\)\/\(K\ T\^3\)}\)], "Output"]
+}, Open  ]],
+
+Cell[TextData[
+" The quantity of our primary interest is time and we want to know how it \
+depends on the size (or weight) of the roast. As the roas is considered to be \
+properly cooked at certain fixed temperature, \[Theta] is also excluded from \
+the recurring set. "], "Text"],
+
+Cell["RestrictedSet:={t};", "Input"],
+
+Cell[TextData[
+"According to \[CapitalPi] theorem, we start forming a recurring set  by  \
+finding parameters which involve each of the reference magnitudes from \
+CurrentBasicUnits:"], "Text"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+CommonBasicUnits:=ThermodynamicalBasicUnits; CommonBasicUnits\
+\>", 
+  "Input"],
+
+Cell[BoxData[
+    \({M, L, T, K}\)], "Output"]
+}, Open  ]],
+
+Cell["\<\
+For this problem there are many ways of formulating recurring sets:\
+\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+AllRecSets:=Evaluate[FindRecurringSet[Parameters]]; AllRecSets\
+\>",
+   "Input"],
+
+Cell[BoxData[
+    \({{c, l, \[Gamma], \[Rho]}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+AllNonDimRules:=Evaluate[NondimensionalRules[AllRecSets, \
+Parameters]]; 
+AllNonDimRules\
+\>", "Input"],
+
+Cell[BoxData[
+    \({{t \[Rule] \(t\ \[Gamma]\)\/\(c\ l\^2\ \[Rho]\)}}\)], "Output"]
+}, Open  ]],
+
+Cell["\<\
+Substitution of these nondimensionalization rules into the \
+(unknown) dependency of time on other roast parameters yields\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Partonondim:=Complement[Parameters, #]&/@AllRecSets; \
+Partonondim\
+\>", "Input"],
+
+Cell[BoxData[
+    \({{t}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+newrules:=AllNonDimRules[[1]];
+Eqn1:=(t==tsample[Sequence@@Complement[Partonondim[[1]], {t}]]) /. newrules; \
+Eqn1\
+\>", "Input"],
+
+Cell[BoxData[
+    \(\(t\ \[Gamma]\)\/\(c\ l\^2\ \[Rho]\) == tsample[]\)], "Output"]
+}, Open  ]],
+
+Cell["\<\
+As all roasts are assumed to have similar heat capacity, thermal \
+conductivity and density, we obtain from the previous that time to cook a \
+roast is simply proportional to the square of some characteristic length of \
+the roast:\
+\>", "Text"],
+
+Cell[BoxData[
+    \(t~l^2*\[Phi]sample[]\)], "Input"],
+
+Cell[TextData[
+"Here \[Phi]sample[] is a constant  (of dimension T*L^(-2)).   Weight of the \
+roast is proportional to the cube of the length w~l^3, thus resulting in a \
+very important conclusion. The proper time of cooking the proper roast is \
+proportional to the two-thirds power of its weight! This result has been \
+obtained by Murray Klamkin (1961) who argured with the cookbooks suggesting \
+that the time of cooking is simply proportional to its weight.   Excellent \
+example demonstrating dimensional analysis for cooks. SAY ABOUT TURKEY AS \
+WELL!!!"], "Text"]
+}, Open  ]]
+},
+FrontEndVersion->"X 3.0",
+ScreenRectangle->{{0, 1280}, {0, 1024}},
+WindowSize->{765, 913},
+WindowMargins->{{Automatic, 136}, {5, Automatic}}
+]
+
+
+(***********************************************************************
+Cached data follows.  If you edit this Notebook file directly, not using
+Mathematica, you must remove the line containing CacheID at the top of 
+the file.  The cache data will then be recreated when you save this file 
+from within Mathematica.
+***********************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1709, 49, 55, 0, 27, "Input"],
+Cell[1767, 51, 74, 3, 42, "Input"],
+
+Cell[CellGroupData[{
+Cell[1866, 58, 51, 4, 57, "Input"],
+Cell[1920, 64, 53, 1, 27, "Output"]
+}, Open  ]],
+Cell[1988, 68, 445, 7, 68, "Text"],
+
+Cell[CellGroupData[{
+Cell[2458, 79, 45, 0, 54, "Section"],
+Cell[2506, 81, 426, 11, 68, "Text"],
+Cell[2935, 94, 279, 5, 68, "Text"],
+Cell[3217, 101, 67, 0, 27, "Input"],
+Cell[3287, 103, 262, 4, 117, "Input"],
+
+Cell[CellGroupData[{
+Cell[3574, 111, 65, 0, 27, "Input"],
+Cell[3642, 113, 84, 1, 43, "Output"]
+}, Open  ]],
+Cell[3741, 117, 129, 3, 32, "Text"],
+Cell[3873, 122, 39, 0, 27, "Input"],
+Cell[3915, 124, 193, 3, 50, "Text"],
+Cell[4111, 129, 57, 0, 27, "Input"],
+Cell[4171, 131, 93, 3, 32, "Text"],
+
+Cell[CellGroupData[{
+Cell[4289, 138, 90, 3, 27, "Input"],
+Cell[4382, 143, 154, 2, 27, "Output"]
+}, Open  ]],
+Cell[4551, 148, 202, 6, 32, "Text"],
+
+Cell[CellGroupData[{
+Cell[4778, 158, 58, 1, 27, "Input"],
+Cell[4839, 161, 58, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4934, 167, 49, 1, 27, "Input"],
+Cell[4986, 170, 124, 2, 39, "Print"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5147, 177, 133, 3, 27, "Input"],
+Cell[5283, 182, 85, 1, 27, "Output"]
+}, Open  ]],
+Cell[5383, 186, 131, 3, 32, "Text"],
+
+Cell[CellGroupData[{
+Cell[5539, 193, 113, 4, 42, "Input"],
+Cell[5655, 199, 353, 6, 87, "Output"]
+}, Open  ]],
+Cell[6023, 208, 221, 6, 50, "Text"],
+
+Cell[CellGroupData[{
+Cell[6269, 218, 91, 3, 27, "Input"],
+Cell[6363, 223, 76, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[6476, 229, 139, 4, 42, "Input"],
+Cell[6618, 235, 101, 2, 46, "Output"]
+}, Open  ]],
+Cell[6734, 240, 294, 5, 68, "Text"],
+
+Cell[CellGroupData[{
+Cell[7053, 249, 44, 1, 27, "Input"],
+Cell[7100, 252, 584, 16, 59, "Output"]
+}, Open  ]],
+Cell[7699, 271, 280, 5, 68, "Text"],
+
+Cell[CellGroupData[{
+Cell[8004, 280, 113, 2, 27, "Input"],
+Cell[8120, 284, 65, 1, 46, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[8222, 290, 103, 2, 27, "Input"],
+Cell[8328, 294, 70, 1, 46, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[8435, 300, 84, 1, 27, "Input"],
+Cell[8522, 303, 44, 1, 44, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[8603, 309, 110, 2, 27, "Input"],
+Cell[8716, 313, 77, 1, 46, "Output"]
+}, Open  ]],
+Cell[8808, 317, 56, 0, 32, "Text"],
+
+Cell[CellGroupData[{
+Cell[8889, 321, 264, 7, 102, "Input"],
+Cell[9156, 330, 77, 1, 46, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[9270, 336, 263, 7, 102, "Input"],
+Cell[9536, 345, 84, 1, 47, "Output"]
+}, Open  ]],
+Cell[9635, 349, 390, 5, 68, "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+Cell[10062, 359, 54, 0, 34, "Section"],
+Cell[10119, 361, 662, 11, 104, "Text"],
+Cell[10784, 374, 88, 1, 27, "Input"],
+Cell[10875, 377, 242, 3, 50, "Text"],
+Cell[11120, 382, 238, 4, 102, "Input"],
+
+Cell[CellGroupData[{
+Cell[11383, 390, 65, 0, 27, "Input"],
+Cell[11451, 392, 91, 1, 45, "Output"]
+}, Open  ]],
+Cell[11557, 396, 280, 4, 50, "Text"],
+Cell[11840, 402, 36, 0, 27, "Input"],
+Cell[11879, 404, 193, 3, 50, "Text"],
+
+Cell[CellGroupData[{
+Cell[12097, 411, 89, 3, 27, "Input"],
+Cell[12189, 416, 46, 1, 27, "Output"]
+}, Open  ]],
+Cell[12250, 420, 93, 3, 32, "Text"],
+
+Cell[CellGroupData[{
+Cell[12368, 427, 90, 3, 27, "Input"],
+Cell[12461, 432, 60, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[12558, 438, 113, 4, 42, "Input"],
+Cell[12674, 444, 84, 1, 45, "Output"]
+}, Open  ]],
+Cell[12773, 448, 146, 3, 32, "Text"],
+
+Cell[CellGroupData[{
+Cell[12944, 455, 91, 3, 27, "Input"],
+Cell[13038, 460, 39, 1, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[13114, 466, 139, 4, 42, "Input"],
+Cell[13256, 472, 83, 1, 45, "Output"]
+}, Open  ]],
+Cell[13354, 476, 255, 5, 50, "Text"],
+Cell[13612, 483, 53, 1, 27, "Input"],
+Cell[13668, 486, 571, 8, 86, "Text"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+
+(***********************************************************************
+End of Mathematica Notebook file.
+***********************************************************************)
+

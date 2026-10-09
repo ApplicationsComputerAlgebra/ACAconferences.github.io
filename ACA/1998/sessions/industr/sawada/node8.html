@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Design variables whose values should be changed</TITLE>
+<META NAME="description" CONTENT="Design variables whose values should be changed">
+<META NAME="keywords" CONTENT="sawada">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="sawada.css">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+<BODY bgcolor=white>
+<!--Navigation Panel-->
+<A NAME="tex2html112"
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html110"
+ HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html106"
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html113"
+ HREF="node9.html">Numeric part</A>
+<B> Up:</B> <A NAME="tex2html111"
+ HREF="node6.html">Symbolic part</A>
+<B> Previous:</B> <A NAME="tex2html107"
+ HREF="node7.html">Reduction tree</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00024200000000000000">&#160;</A>
+<A NAME="subsubsec:variable-value">&#160;</A>
+<BR>
+Design variables whose values should be changed
+</H3>
+From the viewpoint of supporting design, detecting inconsistent inequalities is not sufficient help to a designer. Especically in embodiment design, it is quite important for a designer to know what variable values are not appropriate. This section describes the method of finding out design variables whose values should be changed. 
+
+<P>
+Suppose that 
+<!-- MATH: $c(t_{1},\ldots,t_{r})=0$ -->
+<IMG
+ WIDTH="120" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$c(t_{1},\ldots,t_{r})=0$">
+is an equation showing inconsistency among inequalities. Assignment of a concrete value to a design variable is expressed as a univariate linear equation. That is, univariate linear equation ``<B><I>x</I><SUB><I>k</I></SUB>=<I>a</I></B>'' means ``<B><I>a</I></B> is assigned to <B><I>x</I><SUB><I>k</I></SUB></B>''. Thus, by searching for univariate linear equations used for computing 
+<!-- MATH: $c(t_{1},\ldots,t_{r})=0$ -->
+<IMG
+ WIDTH="120" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$c(t_{1},\ldots,t_{r})=0$">,
+design variables whose values should be changed can be found out. If ``<B><I>x</I><SUB><I>k</I></SUB>=<I>a</I></B>'' is used to obtain 
+<!-- MATH: $c(t_{1},\ldots,t_{r})=0$ -->
+<IMG
+ WIDTH="120" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$c(t_{1},\ldots,t_{r})=0$">,
+``<B><I>x</I><SUB><I>k</I></SUB>=<I>a</I></B>'' has something to do with the inconsistency. Otherwise, ``<B><I>x</I><SUB><I>k</I></SUB>=<I>a</I></B>'' has nothing to do with it. 
+
+<P>
+Let <B><I>C</I></B> be the whole constraint set including univariate linear equations. Obviously, 
+<!-- MATH: $c(t_{1},\ldots,t_{r})=0$ -->
+<IMG
+ WIDTH="120" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$c(t_{1},\ldots,t_{r})=0$">
+belongs to the ideal defined by <B><I>C</I></B>. If 
+<!-- MATH: $c(t_{1},\ldots,t_{r})=0$ -->
+<IMG
+ WIDTH="120" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$c(t_{1},\ldots,t_{r})=0$">
+does not belong to the ideal defined by 
+<!-- MATH: $C\setminus\{x_{k}=a\}$ -->
+<IMG
+ WIDTH="99" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$C\setminus\{x_{k}=a\}$">,
+it is concluded that <B><I>x</I><SUB><I>k</I></SUB>=<I>a</I></B> is used to compute 
+<!-- MATH: $c(t_{1},\ldots,t_{r})=0$ -->
+<IMG
+ WIDTH="120" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$c(t_{1},\ldots,t_{r})=0$">.
+Otherwise, <B><I>x</I><SUB><I>k</I></SUB>=<I>a</I></B> is not necessary to obtain 
+<!-- MATH: $c(t_{1},\ldots,t_{r})=0$ -->
+<IMG
+ WIDTH="120" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$c(t_{1},\ldots,t_{r})=0$">.
+Therefore, design variables whose values should be changed are found out according to the following procedures.
+
+<P>
+<DIV ALIGN="LEFT">
+<B>Method of detecting design variables whose values should be changed</B>
+<DL COMPACT>
+<DT>1.
+<DD>Let <B><I>C</I></B> be the whole constraint set Eq.&nbsp;(<A HREF="node7.html#eq:constraint-se">2</A>), and <B><I>U</I></B> be a set of univariate linear equations included in <B><I>C</I></B>. Suppose that 
+<!-- MATH: $c(t_{1},\ldots,t_{r})=0$ -->
+<IMG
+ WIDTH="120" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$c(t_{1},\ldots,t_{r})=0$">
+is the equation which shows inconsistency among inequalities in Eq.&nbsp;(<A HREF="node7.html#eq:constraint">1</A>). Let <B><I>E</I></B> be an empty set. 
+<DT>2.
+<DD><A NAME="finish">&#160;</A> If <B><I>U</I></B> is empty, return <B><I>E</I></B>.
+<DT>3.
+<DD>Let <B><I>x</I><SUB><I>k</I></SUB>=<I>a</I></B> be the first element in <B><I>U</I></B>, and <B><I>U</I></B> be 
+<!-- MATH: $U\setminus\{x_{k}=a\}$ -->
+<IMG
+ WIDTH="99" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$U\setminus\{x_{k}=a\}$">.
+<DT>4.
+<DD>The Gr&#246;bner base <B><I>G</I></B> of 
+<!-- MATH: $C\setminus\{x_{k}=a\}$ -->
+<IMG
+ WIDTH="99" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$C\setminus\{x_{k}=a\}$">
+is computed. 
+<DT>5.
+<DD>Let 
+<!-- MATH: $c^{\prime}$ -->
+<IMG
+ WIDTH="17" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.gif"
+ ALT="$c^{\prime}$">
+be a normal form of 
+<!-- MATH: $c(t_{1},\ldots,t_{r})$ -->
+<IMG
+ WIDTH="89" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$c(t_{1},\ldots,t_{r})$">
+by <B><I>G</I></B>. If 
+<!-- MATH: $c^{\prime}$ -->
+<IMG
+ WIDTH="17" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.gif"
+ ALT="$c^{\prime}$">
+is not <B>0</B>, let <B><I>E</I></B> be 
+<!-- MATH: $E\cup\{x_{k}=a\}$ -->
+<IMG
+ WIDTH="102" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$E\cup\{x_{k}=a\}$">.
+<DT>6.
+<DD>Go back to Step&nbsp;<A HREF="node8.html#finish">2</A>.
+</DL><IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\Box$"></DIV>
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html112"
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html110"
+ HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html106"
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://www-troja.fjfi.cvut.cz/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html113"
+ HREF="node9.html">Numeric part</A>
+<B> Up:</B> <A NAME="tex2html111"
+ HREF="node6.html">Symbolic part</A>
+<B> Previous:</B> <A NAME="tex2html107"
+ HREF="node7.html">Reduction tree</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<A HREF=../../../proceedings.html> IMACS ACA'98 Electronic Proceedings</A>
+</ADDRESS>
+</BODY>
+</HTML>

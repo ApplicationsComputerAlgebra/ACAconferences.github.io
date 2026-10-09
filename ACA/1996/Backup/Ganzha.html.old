@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+<TITLE>IMACS ACA '96</TITLE>
+</HEAD>
+
+<BODY text="#302859"  alink="#403050" 
+         vlink="#704855" bgcolor="#f9c0a0">
+
+<H1 align="center">Numerical Problems of Mathematical Physics</H1>
+
+<h3>Organizers</h3>
+<ul>
+  <li> <ADDRESS>
+       V.G. Ganzha 
+	(<a href="mailto:ganzha@hrz.uni-kassel.de">ganzha@hrz.uni-kassel.de</a>)<br>
+	University of Kassel<br>
+	Kassel D-34127 <br>
+	Germany
+       </ADDRESS>
+  <li> <ADDRESS>
+       E.V. Vorozhtsov (<a href="mailto:adm@itam.nsk.su">adm@itam.nsk.su</a>)<br>
+       Institute of Theoretical and Applied Mechanics<br>
+       Russian Academy of Sciences<br>
+       Novosibirsk 630090<br>
+       Russia
+       </ADDRESS>
+</ul>
+<p>
+
+<h3>Description</h3>
+<p>
+    The computer algebra systems (CAS's) were previously developed mainly
+for ensuring a possibility for symbolic computations on a computer. However,
+the powerful CAS's developed in recent years have also a big set of built-in
+functions for high-precision numerical computations. In comparison with the
+conventional languages for numerical computations, such as FORTRAN and C,
+the CAS's have considerable advantages, since they enable one to perform
+numerical computations, necessary analytic investigations, and to visualize
+the obtained results within the framework of the same computer algebra system.
+
+<p>
+    The main purpose of the proposed session is the demonstration of the
+capabilities of advanced CAS when solving numerically the mathematics physics
+problems, in particular, the problems governed by partial differential 
+equations.
+
+
+<p>
+
+<h3>Talks</h3>
+
+<ul>
+  <li> The Use of Mathematica for Computation of
+               Stability Regions with Guaranteed Accuracy<br>
+      <a href="../participants.html#Ganzha">Victor G. Ganzha</a>
+       <a href="../participants.html#Schaub">K. Schaub</a> and
+       <a href="../participants.html#Vorozhtsov">Evgenii V. Vorozhtsov</a><br>
+       <em>Abstract:</em>
+     We present a symbolic-numerical algorithm for the stability investigation
+of difference schemes approximating the partial differential equations of
+hyperbolic or parabolic type. The use of a combination of rational arithmetic
+and the arithmetic of floating-point numbers available in the Mathematica
+system has enabled us to compute the stability region boundaries with
+guaranteed accuracy. Computational examples are given, in which we analyze a
+number of difference schemes for one- and two-dimensional partial differential
+equations.
+<p>
+  <li>	
+    Curvilinear Grid Topology Effect on 
+                the Stability of Difference Schemes<br>
+    <a href="../participants.html#Ganzha">Victor G. Ganzha</a>
+      and
+      <a href="../participants.html#Vorozhtsov">Evgenii
+      V. Vorozhtsov</a> <br>
+    <em>Abstract:</em>
+A general vector-matrix algorithm has been proposed and implemented with
+Mathematica for obtaining the characteristic equation of a difference scheme 
+on curvilinear grids approximating the Euler equations. All the known types
+(C,O,H) of curvilinear grids around the airfolis have been considered and it
+is shown how the grid topology affects the stability of difference schemes.
+
+  <li> Rapid Prototyping for the Construction of 
+      Higher Order Finite Element Methods
+      on Sparse Grids<br>
+      <a href="../participants.html#Bungartz">Hans-Joachim Bungartz</a><br>
+      <em>Abstract:</em> For the development of new algorithmic
+concepts in the area of numerical analysis or, more generally,
+scientific computing, modern tools for an efficient rapid prototyping
+like computer algebra programs like Maple or Mathematica and
+shell-script-type interpreter languages like Perl gain more and more
+in importance.  This is mainly due to the fact that the period of time
+from an idea to a first programmed version of the corresponding
+algorithm can be cut down significantly, since all the implementation
+and declaration overhead coming along with standard (numerical)
+programming languages can be avoided.  As an example for that, we
+present a new unidirectional approach for $d$-dimensional finite
+element methods of higher order on sparse grids that enables us to
+deal with problems of an arbitrary number $d$ of dimensions and to use
+polynomial bases of an arbitrary degree $p$ with the same storage
+requirements as and only a little bit more of computational work than
+in the usual piecewise linear case. The code consists of two parts: a
+kind of setup phase which is done in Maple and the iterative solver
+programmed in Perl.  We report on both numerical and implementational
+experiences and on interface problems resulting from the use of tools
+originating from different ``worlds''.
+      <p>
+  <li>      Symbolic Computation of Linear and
+   Nonlinear Modified (Partial Differential) Equations.<br>
+      <a href="../participants.html#Desideri">Jean-Antoine D&eacute;sid&eacute;ri</a> and 
+      <a href="../participants.html#Spiridonova">Margarita Spiridonova</a><br>
+      <em>Abstract:</em> 
+   The so-called ``equivalent'' (Lerat, Peyret, 1974) or ``modified''
+   (Warming, Hyett, 1974) partial differential equation is a very useful,
+   classical and basic tool of analysis of finite-difference schemes 
+   for time-dependent problems, mostly but not only, of hyperbolic type.
+   Although limited in  application to simple (usually scalar) model
+   equations, it allows in particular a rigorous analysis of the
+   truncation error, in which dispersive and diffusive errors are
+   identified. Thus new schemes are systematically compared with
+   well-known ones by this analysis applied to a test equation (often
+   the wave or heat equation). Furthermore,
+   the approach can be used constructively to build new
+   schemes in which particular types of error are absent (to a
+   certain order of accuracy). 
+
+      <p>
+   Originally, Warming and Hyett developed codes of symbolic computation
+   of modified equations using, to our knowledge, the language MACSYMA. 
+   We have developed a collection of programs of the same nature
+   for symbolic derivation of the modified equation  associated with a
+   given  finite-difference  equation defined in a rather general format
+   using   the   computer  algebra system  MAPLE.  
+
+      <p>
+   This contribution intends to report on the implementation of these
+   programs and their experimentation related to various
+   finite-difference  schemes. For the case of linear (hyperbolic or
+   parabolic) partial  differential equations, we have examined classical
+   schemes and less classical examples in which equations in one or two
+   space dimensions including a source term are approximated by upwind
+   schemes. For the case of nonlinear equations, the MacCormack
+   scheme applied to Burgers equation was studied as well as
+   Runge-Kutta-type methods applied to general hyperbolic equations.
+
+</ul>
+
+<P><img src="../line-risc.gif" align=middle alt="________________________________________________________"> <P>
+
+<A HREF="http://info.risc.uni-linz.ac.at:70/0/conference/IMACS96/program-plan.html"><img src="../up-button.gif" alt="Previous page"></A>
+
+<A HREF="http://info.risc.uni-linz.ac.at/local">
+<img alt="RISC", src="../risc-logo-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/">
+<img alt="SWP", src="../swp-button.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/linz/">
+<img alt="Linz", src="../burg.gif">
+</A>
+<A HREF="http://info.risc.uni-linz.ac.at/misc-info/austria/">
+<img alt="Austria", src="../austria-button.gif">
+</A>
+<P>
+</BODY>
+</HTML>
+

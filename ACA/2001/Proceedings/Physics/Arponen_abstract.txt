@@ -1,0 +1,14 @@
+The involutive form of a "higher index" DAE
+
+Teijo Arponen (Helsinki Univ. of Technology, Espoo, Finland)
+
+We present an algorithm to study the structure of polynomial DAEs.  Although
+there are already several such algorithms, we argue that they lack certain
+properties we consider important.  Our motivation is to get an algebraic analog
+to the geometrical approach to DAEs developed by prof. J. Tuomela.  We discuss
+about the needed properties of the algorithm and shortly compare it to other
+approaches in literature.  Usually DAEs are studied by people who work either
+on numerics or on symbolic computation, but not both.  We try to mix these: for
+a given DAE, by using symbolic computation we achieve a formulation which is
+suitable for doing numerical computations, in the sense that the biggest
+problems (drift-off and instability) in DAE numerics are avoided.

@@ -1,0 +1,30 @@
+Freshman Engineering Computation Lab
+
+Frederick W. Chapman, Bruce Char, and Jeremy Johnson
+
+fwchapman@alumni.uwaterloo.ca, bchar@cs.drexel.edu, and jjohnson@cs.drexel.edu
+
+Department of Computer Science
+College of Engineering
+Drexel University
+Philadelphia, PA 19104 USA
+
+This talk reports on our experience teaching freshman engineering students to  
+use the Maple computer algebra system to solve mathematics and engineering
+problems.  The course is taught as a sequence of three one credit computation
+labs.  Students alternate working on in class labs, given as Maple worksheets,
+and testing their knowledge of the concepts introduced in the labs through
+Maple TA, on online automatically graded quiz/exam system built on top of Maple.
+
+The goal of the Computation Lab is to impart the fundamental knowledge and
+practical skills needed to use Maple effectively as a computational tool, both
+in upper-level engineering courses and in the workplace after graduating.
+Students are introduced to some useful ideas from computer science and software
+engineering, such as elementary programming constructs, simple data structures
+and result testing.  The Computation Lab shows students how to use Maple's
+symbolic, numeric, and visualization features for modeling, simulation, and
+data analysis motivated by the problems of engineering. 
+
+We will report on our experience teaching nearly 700 engineering students using
+this setup; the lessons learned, difficulties encountered, and ideas for
+further refinement of the course.

@@ -1,0 +1,496 @@
+%Keywords: Newton polyhedron, algebraic equations, differential equations,
+%asymptotics, first approximation, singular perturbation, boundary layer.
+
+\documentstyle[12pt]{article}
+\setlength{\evensidemargin}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{16.cm}
+\setlength{\textheight}{8.5in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\itemsep}{-\parsep}
+\renewcommand{\topfraction}{.9}
+\renewcommand{\textfraction}{.1}
+\newcommand{\ol}{\setlength{\itemsep}{0pt.}\begin{enumerate}}
+\newcommand{\eol}{\end{enumerete}\setlength{\itemsep}{-\parsep}}
+\newcommand{\R}{{\rm{I\! R}}}
+\newcommand{\Q}{{\rm Q\!\!\! l}}
+\newcommand{\C}{{\rm{I\!\!\! C}}}
+\newcommand{\N}{{\rm{I\! N}}}
+\newcommand{\defi}{{\;\buildrel \rm def \over =}\;}
+\hyphenation{or-di-na-ry}
+\hyphenation{ap-pro-x-i-ma-t-i-o-n}
+\hyphenation{per-tur-ba-ti-on}
+\hyphenation{si-n-g-u-la-ri-ti-es}
+\hyphenation{di-f-fe-re-n-ti-al}
+
+\begin{document}
+\Large
+\centerline{\bf The Newton polyhedron in the nonlinear Analysis}
+
+\centerline{\bf Alexander D. Bruno}
+\centerline{Institute of Applied Mathematics, Moscow}
+\centerline{125047 Russia (bruno@applmat.msk.su)}
+\bigskip
+\bigskip
+
+\centerline{\bf Abstract}
+
+We give a simple presentation of an algorithm of selecting asymptotical
+first approximations of equations (algebraic and ordinary differential
+and partial differential). Here the first approximation of a solution
+of the initial equation is a solution of the corresponding first
+approximation of the  equation. The algorithm
+is based on the geometry of power exponents including the Newton
+polyhedron. We give also a surway of applications of the algorithm in
+problems of Celestial Mechanics and Hydrodynamics.
+
+{\bf Keywords:} Newton polyhedron, algebraic equations, differential equations,
+asymptotics, first approximation, singular perturbation, boundary layer.
+
+\bigskip
+
+\centerline{\bf Introduction}
+\bigskip
+
+Let $F(X)$ be a polynomial (may be vectorial) of some variables $x_1, ..., x_l$
+and their derivaties (ordinary or partial). Let $X=G(T)$ be a solution of the
+equation $F(X)=0$, where $T=(t_1,\dots, t_m)$ are some parameters. We are
+interested in solutions for which some of $x_i\to 0$ or $\infty$. And we want
+to find an asymptotics of such a solution $G(T)$.
+Let $\hat G(T)$ be the asymptotical first approximation of the solution
+$G(T)$ and let $\hat F(X)$ be the corresponding first approximation of the
+polynomial $F(X)$.
+
+{\bf General Statement:} {\it The first approximation $X=\hat G(T)$ of the
+solution $X=G(T)$ is a solution of the corresponding first approximation
+$\hat F(X)=0$ of the equation $F(X)=0$.}
+
+The aim of the talk is to explain the algorithm for selecting first
+approximations, to show how this approach works for algebraic equations and
+for differential equations, and to point out some applications.
+\bigskip
+
+\centerline {\bf 2.~A polyhedron and normal cones of its faces}
+\bigskip
+
+Let in the space $\R^{n}$ with Cartesian coordinates
+$q_{1}, \dots , q_{n}$ we have a finite set $D$ of points
+$Q_{j}=(q_{1j},\dots, q_{nj}),\: j=1, \dots, m$. Let ${\R}_*^{n}$
+denote the dual space such  that for $P=(p_{1},\dots, p_{n}) \in
+{\R}_*^{n}$ and $Q=(q_{1},\dots, q_{n}) \in \R^{n}$ there is the scalar
+product $\langle{P,\, Q}\rangle = p_{1}q_{1}+\dots+p_{n}q_{n}$. For a fixed
+vector $P\neq 0$ let $D_{P}$ denote such subset of the set $D$ on which
+the scalar product $\langle{P,\,Q}\rangle$ has the maximal value $c$, that is
+$$
+\begin{array}{l}
+\langle{P,\, Q_{j}}\rangle = c \;\;{\rm for}\;\; Q_{j} \in
+D_{P}\;\; {\rm and}\\
+\langle{P,\, Q_{j}}\rangle < c \;\;{\rm
+for}\;\; Q_{j} \in D\setminus D_{P}.
+\end{array}\eqno(1)
+$$
+
+Now for the given set $D$ and for each $P\neq 0$ we will find the
+corresponding set $D_P$.
+Let $M$ denote the convex null of the set $D$. The boundary $\partial M$ of
+the {\it polyhedron} $M$ consists of {\it faces} $\Gamma_k^{(d)}$ of
+different dimension $d$ $(0\leq d<n)$.  Zerodimensional faces
+$\Gamma_k^{(0)}$ are verteces of the polyhedron $M$, onedimensional faces are
+its edges etc.
+Accordingly (1) to each vector $P\in \R_*^n$ there corresponds in $\R^n$ a
+{\it supporting} to the set $ D$ {\it hyperplane} $L_P=\{Q:\langle
+P,Q\rangle=c\}$.
+It intersects the polyhedron $M$ along a face $\Gamma_k^{(d)}$. The set
+$U_k^{(d)}$  of all vectors $P\in \R^n_*$ such, that $L_P\cap
+M=\Gamma_k^{(d)}$, is called the {\it normal cone} of the face
+$\Gamma_k^{(d)}$.
+The normal cone $U_k^{(n-1)}$ of the hyperface $\Gamma_k^{(n-1)}$ is a ray
+ortogonal to the face and directed out of the polyhedron $M$. The normal cone
+$U_k^{(n-2)}$ is a sector bounded by rays $U_l^{(n-1)}$   and $U_m^{(n-1)}$
+if $\Gamma_k^{(n-2)}=\Gamma_l^{(n-1)}\cap\Gamma_m^{(n-1)}$ etc. The union of
+normal cones of all faces is $\R^n_*\setminus\{0\}$. Let us consider the {\it
+boundary subsets} $D_k^{(d)}=\Gamma_k^{(d)}\cap D$ of the set $D$.
+
+{\bf Theorem 1 [1].} {\it If $P\in U_k^{(d)}$, then $D_P=D_k^{(d)}$.}
+
+{\bf Example 1.} For $n=2$ and
+$$
+D=\{(3,0), (0,3), (1,1)\}\eqno(2)
+$$
+the polygon  $M$, faces $\Gamma_k^{(d)}$ and their normal cones are shown in
+Figures 6 and 7 of the book [1]. Here
+$$\begin{array}{lll}
+D_1^{(0)}=Q_1,&D_2^{(0)}=Q_3,&D_3^{(0)}=Q_2;\\
+D_1^{(1)}=\{Q_1,Q_3\},&D_2^{(1)}=\{Q_2,Q_3\},&D_3^{(1)}=\{Q_1,Q_2\};\\
+U_1^{(1)}=-\lambda(1,2),&U_2^{(1)}=-\lambda(2,1),&U_3^{(1)}=-\lambda(1,1)\;\; 
+(\lambda>0).
+\end{array}
+$$
+\bigskip
+
+\centerline{\bf 3.~Algebraic equations}
+\bigskip
+
+Let us consider a polynomial
+$$
+f(X) =  \sum\limits_{j=1}^{m} f_{j}X^{Q_j},
+$$
+where $X^{Q}=x_{1}^{q_1}\dots x_{n}^{q_n}$ and $D=\{Q_{1},\dots,Q_{m}\}$.
+The convex hull $M$ the set $D$ is called the {\it Newton polyhedron} of the
+polynomial $f$, and we can construct all accompanying objects as described
+abowe.
+Let $D_k^{(d)}$ is a boundary subset of the set $D$.
+The sum
+$$
+\hat f_{k}^{(d)}(X) = \sum f_{j}X^{Q_j}\;\;{\rm for}\; Q_{j} \in
+D_{k}^{(d)} \eqno(3)$$
+is called the {\it truncation} of the polynomial $f(X)$.
+Now we consider a curve of the form
+$$
+x_{i} = b_{i}\tau^{p_i}(1 + o(1)), \;\; b_i\neq 0, \;\;i =
+1,\dots,n,\eqno(4) $$
+where $\tau \to \infty$. On such curve a monomial
+$$
+X^{Q} = B^{Q}\tau^{\langle P,Q \rangle}(1+o(1)),
+$$
+where $B=(b_{1},\dots,b_{n})$ and $P=(p_{1},\dots,p_{n})$. If   $P\in
+U_{k}^{(d)}$, then on the curve (4)
+$$
+f(X) = \hat f_{k}^{(d)} (B)\tau ^{c} + \tau ^{c}o(1),
+$$
+where $c$ is from (1). Thus, the truncation (3) is the first approximation of
+the polynomial  $f(X)$ on curves (4) with  $P\in U_k^{(d)}$. If curve (4) is
+a solution of the equation $f(X)=0$ then
+$\hat f_{k}^{(d)}(B) = 0$. That is we have
+
+{\bf Theorem 2} [1,2,4]. {\it The first approximation
+$x_{i} = b_{i} \tau^ {p_i}, \;\; i=1,\dots, n$ of the solution (4) is a
+solution of the corresponding truncated equation
+ $\hat f_{k}^{(d)}(X)=0$.}
+
+This approach allows to  find solutions of the equation $f=0$ with any degree
+of accuracity [1,2,4].
+
+{\bf Example 2.} Let
+$f=x_1^3+x_2^3-2x_1x_2$, then the set $D$ is (2), and among truncations
+$\hat f_{k}^{(d)}$ there are
+$$
+\begin{array}{c}
+\hat f_{1}^{(0)}=x_1^3,\quad
+\hat f_{2}^{(0)}=-2x_1x_2,\quad
+\hat f_{3}^{(0)}=x_2^3;\\
+\hat f_{1}^{(1)}=x_1^3-2x_1x_2,
+\hat f_{2}^{(1)}=x_2^3-2x_1x_2.
+\end{array}
+$$
+If (4) is a solution of the equation $f=0$ with $P\neq 0$, then $P$ cannot ly
+in $U_k^{(0)}$ because $B^Q\neq 0$. If on the solution (4)
+ $x_1,x_2\to 0$ for
+$\tau\to\infty$, then $P\in U_1^{(1)}$ or $U_2^{(1)}$.  If
+$P\in U_1^{(1)}$, i.e. $2p_1=p_2<0$,
+then the first approximations $x_i=b_i\tau^{p_i}$ $(i=1,2)$ satisfies
+the truncated equation  $x_1^3-2x_1x_2=0$, i.e $x_2=x^2_1/2$.
+Similarly, if $P\in U_2^{(1)}$,
+then the first approximation of the solution (4) is $x_1=x_2^2/2$. That is
+two brauches of the curve $f=0$ go trough the zero $x_1=x_2=0$
+(see [1], Figure 19).
+Other applications of the Newton polyhedron for algebraic equations
+see in [1,2,4,20]
+\bigskip
+
+\centerline{\bf 4.~Ordinary differential equations}
+\bigskip
+
+Now we consider a differential polynomial
+$$
+g(z_{1},\dots,z_{n}) =\sum g_{R}Z^{R},\eqno(5)
+$$
+where $Z^{R} = z_{1}^{r_1}\dots z_{n}^{r_n}$ and
+$$
+z_{1} = x, \;\;z_2=y,\;\; z_{2+l} = d^{l}y/dx^{l}, \;\;
+l=1,\dots,n-2.\eqno(6)
+$$
+To calculate powers of variables $x$ and $y$ we shall consider
+$d^{l}y/dx^{l}$ as the ratio $y/x^l$. Hence, to each monomial $X^R$ we put in
+correspondance the vector power exponent
+$Q=(q_{1},q_{2})=Q(R)$ with  coordinates
+$$
+q_{1} = r_{1} - \sum_{l=1}\limits^{n-2} lr_{2+l},\;\; q_{2}=
+r_{2}+\dots+r_{n},\eqno(7)
+$$
+i.e. the point $Q$ of the plane $\R^2$. After the substitution
+$$
+x= z_1= \tau^{p_1},\;\; y=z_2=b\tau ^{p_2}
+$$
+we have  $Z^{R} = {\rm const}\cdot \tau ^{\langle P,Q \rangle}$, where
+$P=(p_1,p_2)$.
+Now the set $D=D(g)$ is the set of all points $Q(R)$ with $g_{R}\neq 0$.
+Using boundary subsets $D_k^{(d)}$ of the set $D$, we define {\it
+truncations
+$$
+ \hat g_{k}^{(d)}(Z) = \sum g_{R}Z^{R}\;\,\,\,{\rm for}\,\,\; R: Q(R)
+\subset D_{k}^{(d)}
+$$
+of the  differential polynomial (4).}
+
+{\bf Theorem 3 }[3]. {\it Let the differential equation $g(Z)=0$ have a
+solution of the form
+$$
+x_{1}=\tau ^{p_1},\; y = \tau ^{p_2}(b+\sum_{i=1}\limits ^{\infty}
+b_{i} \tau ^{s_i}),\quad b\neq 0,\eqno(9)
+$$
+where
+ $P=(p_1,p_2)\neq 0$, $\tau \rightarrow \infty$   and
+$0> s_i> s_{i+1}$.
+If  $P \in U_{k}^{(d)}$ ,  then the first approximation (8) of the solution
+(9)  is a solution of the corresponding truncated equation
+ $\hat f_{k}^{(d)}(X)=0$.
+ }
+
+ Examples and applications of the Newton polyhedron in ordinary differential
+ equations (including singular perturbations) see in [1, 3, 5--10, 13--19,
+ 21--25].
+
+\bigskip
+\centerline{\bf 5.~Partial differential equations}
+\bigskip
+
+Let us consider the partial differntial  polynomial
+$$
+h(W)=\sum h_R W^R,
+\eqno(10)
+$$
+where $W=(w_1,\dots, w_n)$, $w_1=x$, $w_2=y$ and $w_{j+2}$
+are partial derivations of the form
+ $(\partial^{k+l}\psi)/(\partial x^k\partial y^l)$
+To calculate the power exponents, we consider such a derivative as the
+monomial
+$x^{-k}y^{-l}\psi$, i.e. to it there corresponds the vector exponent
+$Q=(q_1,q_2,q_3) = (-k,-l,1)\in \R^3$.
+To a product of such derivatives there corresponds the sum of such vector
+exponents. Thus, to each monomial $W^R$ there corresponds a point
+$Q=Q(R)\in \R^3$, and to the polynomial (10) there corresponds a set $D$
+of such points $Q$. To each boundary subset
+$D_k^{(d)}$ there corresponds the {\it truncated polynomial}
+$$
+\hat h_k^{(d)} =\sum h_RW^R\quad {\rm for}\quad R:Q(R)\in D_k^{(d)}.
+$$
+It is the first approximation of the polynomial (10) when vector
+$(\log|x|, \log|y|, \log|\psi|)$ tends to infinity near the normal cone
+$U_{k}^{(d)}\subset \R^3_*$.
+
+For an expansion
+$\psi = f(x,y)$ and for a given vector $(p_1,p_2)$ we can define its first
+approximation
+$\hat f_{(p_1,p_2)}$ as in Section 3. On the curves (4) it has the order of
+magnitude
+const$\cdot\tau^{p_3}$.  To the vector  $P=(p_1,p_2,p_3)$ there corresponds
+the truncation
+$\hat h_P(W)$ of the differential polynomial  (10).
+
+{\bf Theorem 4} [3]. {\it If
+ $\psi=f(x,y)$ -- is a solution of the equation $h(W)=0$, then its first
+ approximation
+$\psi=\hat f_{(p_1,p_2)}$ is a solution of the corresponding truncated
+equation $\hat h_P(W) = 0$.}
+
+ {\bf Example 3 } [11]. The Navier-Stokes equations for the plane stationary
+ flow of a viscous fluid can be written in the Helmholtz form as one equation
+ for the  stream function $\psi$:
+$$
+{\partial\psi\over\partial y}
+{\partial^3\psi\over\partial x^3}+
+{\partial\psi\over\partial y}
+{\partial^3\psi\over\partial x\partial y^2}-
+{\partial\psi\over\partial x}
+{\partial^3\psi\over\partial x^2\partial y}-
+{\partial\psi\over\partial x}
+{\partial^3\psi\over\partial  y^3}=
+$$
+$$
+= \nu\left(
+{\partial^4\psi\over\partial x^4}+2
+{\partial^4\psi\over\partial x^2\partial y^2}+
+{\partial^4\psi\over\partial y^4}\right),
+\eqno(11)
+$$
+where the parameter $\nu$ is the cinematic viscous. To the  monomials of the
+equation there correspond in $\R^3$ the following points
+$$
+Q_1=(-3,-1,2),\quad
+Q_2=(-1-3,2),\quad
+Q_3=Q_1,\quad
+Q_4=Q_2,
+$$
+$$
+Q_5=(-4,0,1),\quad
+Q_6=(-2,-2,1),\quad
+Q_7=(0,-4,1).
+$$
+All they ly in the plane $q_1+q_2 =-4$. Their convex hull $M$  is a
+trapezoid.
+To each edge of the trapezoid there corresponds a first approximation of the
+equation (11). It turns out, that to the upper base
+$\Gamma_1^{(1)}$ with  $D_1^{(1)} = \{Q_1=Q_3, Q_2=Q_4\}$ there correspond
+the Euler equations for a nonviscous fluid. To the lower base
+$\Gamma_3^{(1)}$ with  $D_3^{(1)} = \{Q_5, Q_6, Q_7\}$ there correspond the
+Stokes equations for a creep flow. To the each side edge
+$\Gamma_2^{(1)}$ with $D_2^{(1)} = \{Q_2=Q_4, Q_7\}$ or
+$\Gamma_4^{(1)} $ with $D_4^{(1)} = \{Q_1=Q_3, Q_5\}$ there correspond the
+Prandtl equations for a boundary layer.
+
+Considering the boundary conditions from the geometry of powers point of
+view, we can obtain asymptoics of the viscous flow around some particular
+bodies [11].
+
+Other examples and applications of the method for partial differential
+equations see in [1, 3, 11, 19].
+\bigskip
+
+\centerline{\bf 6.~Conclusion}
+\bigskip
+
+This approach is applicable to  general systems of equations, which can be
+algebraic, ordinary differential and partial differential [4, 2, 3]. It uses
+methods of the geometry of power exponents developed in [1], see also [23].
+We have created a program to compute the polyhedron $M$, boundary subsets
+$D_k^{(d)}$ and their normal cones $U_k^{(d)}$ [12]. It was applied to a
+6-dimensional problem related to the water-wade problem [13, 18]. For a
+Hamiltonian system, we have given an algorithm for selecting all such its
+first approximations, which are Hamiltonian systems themselfs [14].
+
+Here we have considered an analysis of solutions: a selection of first
+approximations of an equation, each of which can give only a part of a
+singular solution. To obtain whole singular solution we must  match these
+parts (see Introduction to  [22]). Such synthesis will be a subject of
+future works.
+
+The Newton polygon was introduced by Briot and Bouquet (1856), Newton himself
+found one its edge only [26]. The Newton polyhedron was introduced in [21] for 
+a
+system of ODE. See its history in [1,4].
+
+The  work was partly supported by the International Science Foundation, Grant
+M3W300.
+
+\begin{thebibliography}{99}
+\bibitem{1}
+    Bruno, A.D. Local Methods in Nonlinear Differential Equations.
+   Springer -Verlag, Berlin, 1989.
+\bibitem{2}
+  Bruno, A.D. and  Soleev, A.  First approximations of algebraic equations //
+  Russian Ac. Sci. Doklady. Mathem. {\bf 49} (1994).
+
+\bibitem{3}
+  Bruno, A.D.   First approximations of differential equations //
+  Ibid.
+
+\bibitem{4}
+  Bruno, A.D. and  Soleev, A.  Local uniformization of branches of a space
+curve, and Newton polyhedra // St. Petersburg Math. J. {\bf 3}:1~(1992)~53--82. 
+
+\bibitem{5}
+  Bruno, A.D. and  Petrovich, V.Yu.  Regularization of oscillations of a
+  satellite on the very stretched orbit //Inst. Appl. Math., Preprint No.~4,
+  Moscow, 1994 (Russian).
+
+\bibitem{6}
+  Bruno, A.D. and  Petrovich, V.Yu.  Computation of periodic oscillations of a
+  satellite. Singular case//Ibid. No.~44, 1994 (Russian).
+
+\bibitem{7}
+  Sadov, S.Yu. Analysis of a function that defines rotational stability of
+  almort symmetric satellite // Ibid. No.~84, 1994 (R).
+
+\bibitem{8}
+  Sadov, S.Yu. Coefficients of an averaged equation of satellite oscillations
+  // Ibid. No.~27, 1995 (R).
+\bibitem{9}
+  Bruno, A.D. Singular perturbations in Hamiltonian Mechanics // Hamiltonian
+  Mechanics (J. Seimenis, ed.). Plenum Press: N.Y., 1994. 43--49.
+
+\bibitem{10}
+  Bruno, A.D. Simple (double, multiple) periodic solutions of the restricted
+  three-boody  problem in the Sun-Jupiter case //
+  Inst. Appl. Math., Preprints Nos.~66, 67, 68,
+  Moscow, 1993 (Russian).
+
+\bibitem{11}
+  Bruno, A.D. and  Vasil'ev,  M.M. Newton polyhedra and the asymptotic
+analysis of the viscous fluid flow around a flat plate // Ibid. No.~44, 1995 
+(R).
+
+
+\bibitem{12}
+ Soleev, A. and Aranson, A.B. Computation of a polyhedron and of
+ normal cones of its faces. // Ibid . No~36,  1994 (R).
+
+\bibitem{13}
+ Soleev, A. and Aranson, A.B. First approximations of an invertible ODE
+  system. // Ibid. No.~28,  1995 (R).
+
+
+\bibitem{14}
+  Bruno, A.D. and  Soleev, A. Hamiltonian truncations of a Hamiltonian system
+// Ibid. No.~55, 1995 (R) = Russian Ac. Sci. Doklady. Mathem. {\bf 51} (1995). 
+
+\bibitem{15}
+  Bruno, A.D.  Bifurcation of the periodic solutions in the  symmetric  case
+         of a multiple pair of  imaginary  eigenvalues // Selecta  Math.
+         formerly Sovietica {\bf 12}:1 (1993) 1-12.
+
+
+\bibitem{16}
+  Sadov, S.Yu. On a dynamical system, arised from a
+  finitedimensional aproximation of the Schr\"odinger equation // Mathematical
+  Notes {\bf 56}:3 (1994).
+
+\bibitem{16}
+  Bruno A.D. and Sadov, S.Yu. On a formal integral of a nondivergent system
+  // Ibid. {\bf 57}:6 (1995).
+
+\bibitem{18}
+  Bruno, A.D. and  Soleev, A.  Local analysis of a singularity of an
+invertible ODE system // Institute Appl. Mathem. Preprints Nos. 40, 47, 54. 
+ Moscow,
+  1995 (R).
+
+
+\bibitem{19}
+  Bruno, A.D. The Newton polyhedron in Nonlinear Aanalysis //Ibid.
+  No.~48, 1995 (R) = Vestnik of the Moscow University (1995).
+
+\bibitem{20}
+   Khovanskii, A.G. Newton polyhedra (resolution of singularities) // J.
+   Sov. Math. {\bf 27} (1984) 2811--2830.
+
+\bibitem{21}
+  Bruno, A.D. The asymptotic behavior of solutions of nonlinear systems
+  of differential equations // Soviet Math. Dokl. {\bf 3}(1962) 464--467.
+
+\bibitem{22}
+  Bruno, A.D. The Restricted 3-Body Problem. Walter de Gruyter, Berlin, 1994.
+
+\bibitem{23}
+  Bruno, A.D. The Geometry of power exponents // I.H.E.S., Preprint M/90/42,
+  Paris, 1990.
+
+\bibitem{24}
+  Bruno, A.D. On Periodic flybys of the moon //Celestial Mechanics {\bf 24}:3
+  (1981) 255--268.
+
+\bibitem{25}
+  Bruno, A.D. Local method of nonlinear analysis // Banach Center
+  Publications {\bf 20}(1988) 103--120.
+
+\bibitem{26}
+  Newton, I. A treatise of the method of fluxions and infinite series, with
+its application to the geometry of curve lines // The Mathematical Works of
+Isaac Newton (Harry Woolf, ed.), v.1, Johnson Reprint Corp., N.Y. and London,
+1964, pp.~27-137.
+
+\end{thebibliography}
+
+\end{document}
