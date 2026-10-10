@@ -51,8 +51,7 @@ Please avoid double submissions of the same paper.  It is up to the authors to
 decide which of the special issues they wish to submit.
 
 Calls for papers from JSC and this notice can be found at
-
-   http://math.unm.edu/~aca/ACA/Publish/publish.html
+   https://ApplicationsComputerAlgebra.github.io/ACAconferences.github.io/ACA/Publish/publish.html
 
 
 Submission Guidelines
