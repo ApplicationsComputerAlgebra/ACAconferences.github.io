@@ -104,7 +104,7 @@
 
 <div class="class2" style="padding-top:10px; padding-bottom:0px; text-indent:0px">
 <h4> Session Proposals</h4>
-We accept proposals for special sessions at ACA 2008. Session proposals must be sent to the <a href="?content=general&sub=committees#chairs">conference chairs</a> before June 1, 2008. Information on how to propose sessions is available at the <a href="http://math.unm.edu/aca.html">ACA website</a>.
+We accept proposals for special sessions at ACA 2008. Session proposals must be sent to the <a href="?content=general&sub=committees#chairs">conference chairs</a> before June 1, 2008. Information on how to propose sessions is available at the <a href="../../index.html">ACA website</a>.
 
 <a name="schedule"></a>
 <h4> Session Schedule</h4>
@@ -304,7 +304,7 @@ Salamanca.</li>
 <col width=20%><col width=80%>
 <tr>
 <td valign="top"><b>Session Title</b></td>
-<td><em><a href="http://math.unm.edu/~aca/ACA/2008/nonstandard.html">Nonstandard Applications of Computer Algebra</a></em></td>
+<td><em><a href="nonstandard.html">Nonstandard Applications of Computer Algebra</a></em></td>
 </tr>
 
 <tr>
@@ -312,7 +312,7 @@ Salamanca.</li>
 <td>
   <table>
   <tr><td><a href="mailto:eroanes@mat.ucm.es">Eugenio Roanes-Lozano</a>  </td></tr>
-  <tr><td><a href="mailto:wester@math.unm.edu">Michael Wester</a>  </td></tr>
+  <tr><td><a href="mailto:wester@unm.edu">Michael Wester</a>  </td></tr>
   <tr><td><a href="mailto:stanly@math.unm.edu">Stanly Steinberg</a>  </td></tr>
   </table>
 </td>
@@ -342,7 +342,7 @@ Salamanca.</li>
 <col width=20%><col width=80%>
 <tr>
 <td valign="top"><b>Session Title</b></td>
-<td><em><a href="http://math.unm.edu/~aca/ACA/2008/education.html">Computer Algebra in Education</a></em></td>
+<td><em><a href="education.html">Computer Algebra in Education</a></em></td>
 </tr>
 
 <tr>
@@ -350,7 +350,7 @@ Salamanca.</li>
 <td>
   <table>
   <tr><td><a href="mailto:akritas@uth.gr">Alkis Akritas </a>  </td></tr>
-  <tr><td><a href="mailto:wester@math.unm.edu">Michael Wester</a>  </td></tr>
+  <tr><td><a href="mailto:wester@unm.edu">Michael Wester</a>  </td></tr>
   <tr><td><a href="mailto:b.kutzler@aon.at">Berhnard Kutzler</a>  </td></tr>
   <tr><td><a href="mailto:bpletsch@cnm.edu">Bill Pletsch </a>  </td></tr>
   </table>
